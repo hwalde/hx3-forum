@@ -1,6 +1,6 @@
-#HX3 Forum
+# HX3 Forum
 
-##Development Guidelines
+## Development Guidelines
 As all in all software projects it is necessary to keep some order.
 
 Here are the guidlines we have established for this code base:
