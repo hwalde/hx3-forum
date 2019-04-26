@@ -1,0 +1,9 @@
+{
+  "minimum-stability" : "dev",
+  "require-dev": {
+    "hwalde/pooq": "dev-master"
+  },
+  "require": {
+    "ext-pdo": "*"
+  }
+}

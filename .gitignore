@@ -1,0 +1,17 @@
+.idea
+vendor
+resource
+gensrc/*
+!gensrc/.gitkeep
+view
+composer.lock
+composer.phar
+config.php
+detailwithsubforums.png
+detailwiththreads.png
+hx3.iml
+info.php
+overview.png
+thread.png
+usersystem.php
+deprecated

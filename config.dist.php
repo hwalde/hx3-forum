@@ -1,0 +1,16 @@
+<?php
+/**
+ * This file is part of HX3 Forum.
+ *
+ * (c) Herbert "Atomic" Walde <herbert.walde@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
+
+const APPLICATION_PATH = "/insert-application-url-path-here";
+const DB_NAME = "insert database name here";
+const DB_USERNAME = "insert database username here";
+const DB_PASSWORD = "insert database password here";
+const DB_HOSTNAME = "insert database hostname here";
+const DB_PORT = 3306;

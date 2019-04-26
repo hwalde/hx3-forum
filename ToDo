@@ -1,0 +1,20 @@
+Nächste Schritte:
+=================
+Technik:
+- User()-Funktion analog zu Database()-Funktion bauen plus Benutzerauthentifizierug gegen die hx3-Datenbank (Arma-Code schauen)
+- BBCode2Html-Converter
+- Try to generate Thread::forumId.eq($forumId) (The eq()-Method)
+
+Daten:
+- User-Daten inkl. Permissions laden
+- Forum-Detail-Page Daten laden
+- Aus Foren-Übersicht Foren wo die Permissions fehlen ausfiltern
+
+Design:
+- Foren-Übersicht designen
+- Forum-Detail-Seite designen
+- Post-Detail-Seite designen
+- Login/Logout hinzufügen
+
+Sonstiges:
+- Google SSO: https://developers.google.com/identity/one-tap/web/get-started oder https://developers.google.com/web/updates/2016/04/credential-management-api
