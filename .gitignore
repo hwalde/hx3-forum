@@ -1,8 +1,6 @@
 .idea
 vendor
 resource
-gensrc/*
-!gensrc/.gitkeep
 view
 composer.lock
 composer.phar
