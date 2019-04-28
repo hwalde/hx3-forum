@@ -24,7 +24,7 @@ $autoloader->addNamespace("util", __DIR__.'/src/util');
 $autoloader->register();
 
 \POOQ\POOQ::initilize(DB_NAME, DB_USERNAME,
-    DB_PASSWORD, DB_HOSTNAME);
+    DB_PASSWORD, DB_HOSTNAME, DB_PORT);
 
 if(!isset($_REQUEST["path"])) {
     $_REQUEST["path"] = "";
