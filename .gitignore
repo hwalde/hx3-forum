@@ -1,4 +1,5 @@
 .idea
+assets/css/.sass-cache
 vendor
 resource
 view
