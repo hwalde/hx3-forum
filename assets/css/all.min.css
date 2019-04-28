@@ -5,4 +5,4 @@
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
- */body{font-family:"Open Sans",serif;font-size:14pt}.header logo{font-size:16pt;margin:40px}
+ */body{font-family:"Open Sans",serif;font-size:14pt}.header logo{font-size:16pt;margin:40px}#forum-detail .sub-thread-list,#forum-detail .sub-forum-list{border-collapse:collapse;width:100%}#forum-detail .sub-thread-list td,#forum-detail .sub-thread-list th,#forum-detail .sub-forum-list td,#forum-detail .sub-forum-list th{border:1px solid #ddd;padding:8px}#forum-detail .sub-thread-list tr:nth-child(even),#forum-detail .sub-forum-list tr:nth-child(even){background-color:#f2f2f2}#forum-detail .sub-thread-list tr:hover,#forum-detail .sub-forum-list tr:hover{background-color:#ddd}#forum-detail .sub-thread-list th,#forum-detail .sub-forum-list th{padding-top:12px;padding-bottom:12px;text-align:left;background-color:#4caf50;color:white}

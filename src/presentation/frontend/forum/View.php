@@ -13,13 +13,13 @@ namespace presentation\frontend\forum;
 /**  @var $model Model */
 ?>
 <h2><?=$model->getDetail()->getForumTitle()?> (<?=$model->getDetail()->getForumId()?>)</h2>
-
+<div id="forum-detail">
 <?php
 $forumList = $model->getDetail()->getSubForumList();
 $hasForums = count($forumList)>0;
 if($hasForums) {
 ?>
-    <table>
+    <table class="sub-forum-list">
         <?php foreach ($forumList as $forum) { ?>
             <tr>
                 <td><?=$forum->getTitle()?></td>
@@ -32,7 +32,7 @@ $threadList = $model->getDetail()->getThreadList();
 $hasThreads = count($threadList)>0;
 if($hasThreads) {
 ?>
-    <table>
+    <table class="sub-thread-list">
         <?php foreach ($threadList as $thread) { ?>
             <tr>
                 <td><?=$thread->getTitle()?></td>
@@ -42,5 +42,7 @@ if($hasThreads) {
 <?php
 }
 ?>
+</div>
+<br>
 <a href="<?=createURL("")?>">Go to Overview</a>
 
