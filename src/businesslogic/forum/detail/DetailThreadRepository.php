@@ -37,7 +37,7 @@ class DetailThreadRepository
             $detail->setUrl('todo');
             $detail->setCreatorUserName($thread->getPostUserName());
             $detail->setLastPostUserName($thread->getLastPoster());
-            $list[] = $thread;
+            $list[] = $detail;
         }
         return $list;
     }
