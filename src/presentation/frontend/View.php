@@ -36,7 +36,7 @@ $assetPath = createPath("assets");
 
     <link rel="shortcut icon" href="<?=$assetPath?>/favicon.ico">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800">
-    <link rel="stylesheet" href="<?=$assetPath?>/css/main.min.css">
+    <link rel="stylesheet" href="<?=$assetPath?>/css/all.min.css">
 </head>
 <body>
     <div id="header">
