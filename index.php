@@ -34,6 +34,11 @@ if(!isset($pathParts[0])) {
     $pathParts[0] = null;
 }
 
+if($pathParts[0] === 'assets') {
+    http_response_code(404);
+    exit;
+}
+
 try {
     switch ($pathParts[0]) {
         case 'login':
