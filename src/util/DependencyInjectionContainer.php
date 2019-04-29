@@ -11,13 +11,13 @@
 namespace util;
 
 
-use businesslogic\forum\detail\DetailThreadRepository;
 use businesslogic\forum\ForumFacade;
 use businesslogic\forum\ForumPermissionRepository;
 use businesslogic\forum\ForumPermissionService;
 use businesslogic\forum\ForumRepository;
 use businesslogic\forum\overview\OverviewService as ForumOverviewService;
 use businesslogic\forum\detail\DetailService as ForumDetailService;
+use businesslogic\thread\ThreadRepository;
 
 class DependencyInjectionContainer
 {
@@ -70,16 +70,16 @@ class DependencyInjectionContainer
     {
         static $instance = null;
         if($instance === null) {
-            $instance = new ForumDetailService($this->getForumRepository(), $this->getForumDetailThreadRepository());
+            $instance = new ForumDetailService($this->getForumRepository(), $this->getThreadRepository());
         }
         return $instance;
     }
 
-    public function &getForumDetailThreadRepository() : DetailThreadRepository
+    public function &getThreadRepository() : ThreadRepository
     {
         static $instance = null;
         if($instance === null) {
-            $instance = new DetailThreadRepository();
+            $instance = new ThreadRepository();
         }
         return $instance;
     }

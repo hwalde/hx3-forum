@@ -86,4 +86,15 @@ class ForumRepository extends GeneratedForumRepository {
             ->fetchAll()
             ->into($f);
     }
+
+    /**
+     * @todo: Return reduces set
+     * @todo: Use interface as return type (to tell the user which fields are in the reduces set)
+     */
+    public function selectAllByParentId(int $forumId): ForumRecordList
+    {
+        $f = Forum::as('f');
+        $p = ForumPermission::as('p');
+        return $this->selectAllViewable($f, $p, $f->parentId()->eq(value($forumId)));
+    }
 }
