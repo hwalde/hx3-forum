@@ -3,9 +3,9 @@ Nächste Schritte:
 Technik:
 - User()-Funktion analog zu Database()-Funktion bauen plus Benutzerauthentifizierug gegen die hx3-Datenbank (Arma-Code schauen)
 - BBCode2Html-Converter
-- Try to generate Thread::forumId.eq($forumId) (The eq()-Method)
 
 Daten:
+- Posts anzeigen
 - User-Daten inkl. Permissions laden
 - Forum-Detail-Page Daten laden
 - Aus Foren-Übersicht Foren wo die Permissions fehlen ausfiltern
@@ -17,4 +17,6 @@ Design:
 - Login/Logout hinzufügen
 
 Sonstiges:
+- https für hx3-next.de
+- Readme.me aktualisieren und weitere Docs schreiben für Entwickler
 - Google SSO: https://developers.google.com/identity/one-tap/web/get-started oder https://developers.google.com/web/updates/2016/04/credential-management-api
