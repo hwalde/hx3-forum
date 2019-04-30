@@ -3,6 +3,7 @@ Nächste Schritte:
 Technik:
 - User()-Funktion analog zu Database()-Funktion bauen plus Benutzerauthentifizierug gegen die hx3-Datenbank (Arma-Code schauen)
 - BBCode2Html-Converter
+- Reduziertes Record Interface implementieren und verwenden
 
 Daten:
 - Posts anzeigen
@@ -17,6 +18,8 @@ Design:
 - Login/Logout hinzufügen
 
 Sonstiges:
+- Improve deployment (to generate css and deploy it)
+- Remove css (keep scss) from Repo
 - https für hx3-next.de
 - Readme.me aktualisieren und weitere Docs schreiben für Entwickler
 - Google SSO: https://developers.google.com/identity/one-tap/web/get-started oder https://developers.google.com/web/updates/2016/04/credential-management-api
