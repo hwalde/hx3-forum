@@ -13,7 +13,7 @@ namespace businesslogic\thread;
  
 use generated\GeneratedThreadRecord;
  
-class ThreadRecord extends GeneratedThreadRecord {
+class ThreadRecord extends GeneratedThreadRecord implements ReducedThreadRecord {
 
     // Place custom functionality here
 

@@ -3,7 +3,6 @@ Nächste Schritte:
 Technik:
 - User()-Funktion analog zu Database()-Funktion bauen plus Benutzerauthentifizierug gegen die hx3-Datenbank (Arma-Code schauen)
 - BBCode2Html-Converter
-- Reduziertes Record Interface implementieren und verwenden
 - Add improved List and Map Types from POOQ and migrate old code
 
 Daten:

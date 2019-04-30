@@ -19,15 +19,15 @@ use function POOQ\value;
 class ThreadRepository extends GeneratedThreadRepository {
 
     /**
-     * @todo: Use interface as return type (to tell the user which fields are in the reduces set)
      * @param int $forumId
-     * @return ThreadRecord[]
+     * @return ReducedThreadRecord[]
      */
-    public function selectOfForum(int $forumId) : ThreadRecordList
+    public function selectOfForum(int $forumId) : ReducedThreadRecordList
     {
         $t = Thread::as('t');
+
         /** @var ThreadRecord[] $threadList */
-        return select($t->title(), $t->lastPoster(), $t->postUserName(), $t->replyCount(), $t->threadId())
+        $threadRecordList = select($t->title(), $t->lastPoster(), $t->postUserName(), $t->replyCount(), $t->threadId())
             ->from($t)
             ->where($t->forumId()->eq(value($forumId)))
             ->order($t->threadId()->desc())
@@ -35,6 +35,8 @@ class ThreadRepository extends GeneratedThreadRepository {
             ->offset(0)
             ->fetchAll()
             ->into($t);
+
+        return new ReducedThreadRecordList($threadRecordList);
     }
 
 }

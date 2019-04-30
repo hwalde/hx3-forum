@@ -10,18 +10,12 @@
 
 namespace businesslogic\forum\detail;
 
-
 use businesslogic\forum\ForumRecord;
 use businesslogic\forum\ForumRecordList;
 use businesslogic\forum\ForumRepository;
-use businesslogic\thread\Thread;
-use businesslogic\thread\ThreadRecord;
-use businesslogic\thread\ThreadRecordList;
+use businesslogic\thread\ReducedThreadRecord;
+use businesslogic\thread\ReducedThreadRecordList;
 use businesslogic\thread\ThreadRepository;
-use generated\Forum;
-use generated\SubscribeForumRepository;
-use util\Limit;
-use util\Order;
 
 class DetailService
 {
@@ -83,9 +77,9 @@ class DetailService
         return $list;
     }
 
-    private function hydrateDetailThreadList(DetailThreadList $detailThreadList, ThreadRecordList $threadRecordList): void
+    private function hydrateDetailThreadList(DetailThreadList $detailThreadList, ReducedThreadRecordList $threadRecordList): void
     {
-        /** @var ThreadRecord $thread */
+        /** @var ReducedThreadRecord $thread */
         foreach ($threadRecordList as $thread) {
             $detail = new DetailThread();
             $this->hydrateDetailThread($detail, $thread);
@@ -93,7 +87,7 @@ class DetailService
         }
     }
 
-    private function hydrateDetailThread(DetailThread $detail, ThreadRecord $threadRecord): void
+    private function hydrateDetailThread(DetailThread $detail, ReducedThreadRecord $threadRecord): void
     {
         $detail->setTitle($threadRecord->getTitle());
         $detail->setUrl('todo');
