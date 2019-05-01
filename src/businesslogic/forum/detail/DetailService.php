@@ -64,7 +64,7 @@ class DetailService
     private function hydrateSubForum(DetailSubForum $detail, ForumRecord $forumRecord): void
     {
         $detail->setTitle($forumRecord->getTitle());
-        $detail->setUrl('todo');
+        $detail->setUrl($forumRecord->getUrlPath());
         $detail->setDescription($forumRecord->getDescription());
     }
 

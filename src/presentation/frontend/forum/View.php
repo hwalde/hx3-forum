@@ -19,13 +19,19 @@ $forumList = $model->getDetail()->getSubForumList();
 $hasForums = count($forumList)>0;
 if($hasForums) {
 ?>
-    <table class="sub-forum-list">
+    <div id="sub-forum-list">
+        <ul>
         <?php foreach ($forumList as $forum) { ?>
-            <tr>
-                <td><?=$forum->getTitle()?></td>
-            </tr>
+            <li>
+                <a href="<?=$forum->getUrl()?>">
+                    <div class="content">
+                        <?=$forum->getTitle()?>
+                    </div>
+                </a>
+            </li>
         <?php } ?>
-    </table>
+        </ul>
+    </div>
 <?php
 }
 $threadList = $model->getDetail()->getThreadList();

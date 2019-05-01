@@ -13,13 +13,15 @@ body {
     font-family: "Open Sans", serif;
     font-size: 14pt;
 }
+
 .header logo{
     font-size: 16pt;
     margin: 40px;
 
 }
+
 #forum-detail {
-    .sub-thread-list, .sub-forum-list {
+   .sub-thread-list {
         border-collapse: collapse;
         width: 100%;
 
@@ -40,5 +42,29 @@ body {
             background-color: #4CAF50;
             color: white;
         }
+    }
+}
+
+#sub-forum-list {
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        margin: 2px 0;
+    }
+
+    li .content {
+        padding: 5px;
+    }
+
+    li:nth-child(odd) .content {
+        background-color: #f7f7f7;
+    }
+
+    li .content:hover {
+        background-color: #ddd;
     }
 }
