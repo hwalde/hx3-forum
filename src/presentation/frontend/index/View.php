@@ -14,14 +14,14 @@ namespace presentation\frontend\index;
 ?>
 <h2>Foren</h2>
 <ul>
-    <?php foreach ($model->getOverview()->getGroupList() as $group) { ?>
+    <?php foreach ($model->getOverview()->getGroupList() as $group) : ?>
     <li>
         <a href="<?=$group->getUrl()?>"><?=$group->getTitle()?></a> (<?=$group->getForumId()?>)
         <ul>
-            <?php foreach ($group->getForumList() as $forum) { ?>
+            <?php foreach ($group->getForumList() as $forum) : ?>
                 <li><a href="<?=$forum->getUrl()?>"><?=$forum->getTitle()?></a> (<?=$forum->getId()?>)</li>
-            <?php } ?>
+            <?php endforeach; ?>
         </ul>
     </li>
-    <?php } ?>
+    <?php endforeach; ?>
 </ul>
