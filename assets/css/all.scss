@@ -10,39 +10,56 @@
 @import 'colors';
 
 body {
-    font-family: "Open Sans", serif;
-    font-size: 14pt;
+  box-sizing: border-box;
+  font-family: "Open Sans", serif;
+  font-size: 14pt;
+  background-color: $color-primary-1;
+  color:#efefef;
+  margin: 0;
+  padding: 0;
 }
 
-.header logo{
-    font-size: 16pt;
-    margin: 40px;
-
+a {
+  color:#efefef;
 }
 
 #forum-detail {
-   .sub-thread-list {
-        border-collapse: collapse;
-        width: 100%;
+  .sub-thread-list {
+    border-collapse: collapse;
+    width: 100%;
 
-        td, th{
-            border: 1px solid #ddd;
-            padding: 8px;
-        }
-        tr:nth-child(even){
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #ddd;
-        }
-        th {
-            padding-top: 12px;
-            padding-bottom: 12px;
-            text-align: left;
-            background-color: #4CAF50;
-            color: white;
-        }
+    td, th{
+      padding: 8px;
     }
+    tr {
+      //border-top: 1px solid $color-secondary;
+      //border-bottom: 1px solid $color-secondary;
+    }
+    tr:nth-child(odd){
+      background-color: $color-secondary;
+    }
+    tr:hover {
+      background-color: $color-secondary-2-4;
+      //background-color: #dce22e;
+      //color:#000;
+
+
+    }
+    tr:hover td {
+      //border-left: 1px solid #dce22e;
+      //border-right: 1px solid #dce22e;
+    }
+    tr:hover a {
+      //color:#000;
+    }
+    th {
+      padding-top: 12px;
+      padding-bottom: 12px;
+      text-align: left;
+      background-color: #4CAF50;
+      color: white;
+    }
+  }
 }
 
 #sub-forum-list {
@@ -61,10 +78,74 @@ body {
     }
 
     li:nth-child(odd) .content {
-        background-color: #f7f7f7;
+        background-color: $color-secondary;
     }
 
     li .content:hover {
-        background-color: #ddd;
+        background-color: $color-secondary-2-4;
     }
+}
+
+#header {
+  margin: 0;
+  padding: 0;
+}
+#page-title {
+  font-size: 24pt;
+  padding: 0;
+  margin: 1em;
+}
+#page-title a {
+  text-decoration: none;
+}
+
+#content {
+  margin: 1em;
+}
+
+.posts {
+  display:flex;
+  flex-direction: column;
+}
+
+.post {
+  background-color: #efefef;
+  color:#000;
+  margin-bottom: 1em;
+}
+
+.post-title, .post-content, .post-footer  {
+  padding: 1em;
+}
+
+.post-content {
+
+}
+
+.post-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: $color-secondary-1-1;
+  color: #fff;
+  padding: 0 1em 0 1em;
+}
+
+@media (min-width: 1000px) {
+  .post-content-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .post-content {
+    columns: 2;
+    column-gap: 3em;
+  }
+}
+
+
+@media (min-width: 1400px) {
+  .post-content {
+    columns: 3;
+    column-gap: 3em;
+  }
 }

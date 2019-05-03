@@ -40,22 +40,31 @@ if($pathParts[0] === 'assets') {
 }
 
 try {
-    switch ($pathParts[0]) {
-        case 'login':
-            $controller = new \presentation\frontend\login\Controller();
-            $controller->index();
-            break;
-        case '':
-        case '/':
-            $controller = new \presentation\frontend\index\Controller();
-            $controller->index();
-            break;
-        default:
-            $parts = explode('-', $pathParts[0]);
-            $forumId = end($parts);
-            $controller = new \presentation\frontend\forum\Controller();
-            $controller->index($forumId);
-            break;
+    $lastIndex = count($pathParts)-1;
+    if($pathParts[$lastIndex] === '') {
+        unset($pathParts[$lastIndex]);
+    }
+
+    if(!isset($pathParts[0]) || $pathParts[0] === '/') {
+        $controller = new \presentation\frontend\index\Controller();
+        $controller->index();
+    } else if($pathParts[0] === 'login') {
+        $controller = new \presentation\frontend\login\Controller();
+        $controller->index();
+    } else if(count($pathParts) === 1) {
+        $parts = explode('-', $pathParts[0]);
+        $forumId = end($parts);
+        $controller = new \presentation\frontend\forum\Controller();
+        $controller->index($forumId);
+    } else if(count($pathParts) === 2) {
+        $parts = explode('-', $pathParts[0]);
+        $forumId = end($parts);
+        $parts = explode('-', $pathParts[1]);
+        $threadId = end($parts);
+        $controller = new \presentation\frontend\thread\Controller();
+        $controller->index($forumId, $threadId);
+    } else {
+        throw new NotFoundException();
     }
     echo $controller->render();
 } catch (NotFoundException $e) {

@@ -17,6 +17,9 @@ use businesslogic\forum\ForumPermissionService;
 use businesslogic\forum\ForumRepository;
 use businesslogic\forum\overview\OverviewService as ForumOverviewService;
 use businesslogic\forum\detail\DetailService as ForumDetailService;
+use businesslogic\post\PostRepository;
+use businesslogic\thread\posts\ThreadPostsService;
+use businesslogic\thread\ThreadFacade;
 use businesslogic\thread\ThreadRepository;
 
 class DependencyInjectionContainer
@@ -80,6 +83,33 @@ class DependencyInjectionContainer
         static $instance = null;
         if($instance === null) {
             $instance = new ThreadRepository();
+        }
+        return $instance;
+    }
+
+    public function &getThreadFacade() : ThreadFacade
+    {
+        static $instance = null;
+        if($instance === null) {
+            $instance = new ThreadFacade($this->getThreadPostsService());
+        }
+        return $instance;
+    }
+
+    public function &getThreadPostsService() : ThreadPostsService
+    {
+        static $instance = null;
+        if($instance === null) {
+            $instance = new ThreadPostsService($this->getPostsRepository());
+        }
+        return $instance;
+    }
+
+    public function &getPostsRepository() : PostRepository
+    {
+        static $instance = null;
+        if($instance === null) {
+            $instance = new PostRepository();
         }
         return $instance;
     }

@@ -12,9 +12,14 @@
 namespace businesslogic\thread;
  
 use generated\GeneratedThreadRecord;
- 
+use util\SeoNameGenerator;
+
 class ThreadRecord extends GeneratedThreadRecord implements ReducedThreadRecord {
 
-    // Place custom functionality here
+    public function getUrlPathPart() : string
+    {
+        $nameGenerator = new SeoNameGenerator();
+        return $nameGenerator->generateName($this->getTitle(), $this->getThreadId());
+    }
 
 }

@@ -12,9 +12,33 @@
 namespace businesslogic\post;
  
 use generated\GeneratedPostRepository;
- 
+use generated\PostAlias;
+use function POOQ\select;
+use function POOQ\value;
+
 class PostRepository extends GeneratedPostRepository {
 
-    // Place custom functionality here
+    /**
+     * @param int $threadId
+     * @param int $limit
+     * @param int $offset
+     * @return PostRecord[]
+     */
+    public function selectAllFromThread(int $threadId, int $limit, int $offset) : PostRecordList
+    {
+        $p = new PostAlias('p');
+        $isVisible = $p->visible()->eq(value(1))->and(
+            $p->reportThreadId()->isNull()->or($p->reportThreadId()->eq(value(0)))
+        );
+        return select($p)
+            ->from($p)
+            ->where($p->threadId()->eq(value($threadId))->and($isVisible))
+            ->order($p->threadId()->desc())
+            ->limit($limit)
+            ->offset($offset)
+            ->fetchAll()
+            ->into($p);
+
+    }
 
 }

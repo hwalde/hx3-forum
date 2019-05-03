@@ -41,7 +41,7 @@ if($hasThreads) {
     <table class="sub-thread-list">
         <?php foreach ($threadList as $thread) { ?>
             <tr>
-                <td><?=$thread->getTitle()?></td>
+                <td><a href="<?=$thread->getUrl()?>"><?=$thread->getTitle()?></a></td>
             </tr>
         <?php } ?>
     </table>

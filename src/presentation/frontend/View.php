@@ -40,7 +40,7 @@ $assetPath = createPath("assets");
 </head>
 <body>
     <div id="header">
-        <logo>HX3 Forum</logo>
+        <h1 id="page-title"><a href="<?=createURL("")?>">HX3 Forum</a></h1>
     </div>
     <div id="content">
         <?=$model->getContent()?>

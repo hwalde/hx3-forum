@@ -38,7 +38,7 @@ class DetailService
         $detail->setForumId($forum->getForumId());
         $detail->setForumTitle($forum->getTitle());
         $detail->setSubForumList($this->getSubForumList($forum->getForumId()));
-        $detail->setThreadList($this->getThreadList($forum->getForumId()));
+        $detail->setThreadList($this->getThreadList($forum));
         return $detail;
     }
 
@@ -68,29 +68,33 @@ class DetailService
         $detail->setDescription($forumRecord->getDescription());
     }
 
-    private function getThreadList(int $forumId) : DetailThreadList
+    private function getThreadList(ForumRecord $forumRecord) : DetailThreadList
     {
-        $threadList = $this->threadRepository->selectOfForum($forumId);
+        $threadList = $this->threadRepository->selectOfForum($forumRecord->getForumId());
 
         $list = new DetailThreadList();
-        $this->hydrateDetailThreadList($list, $threadList);
+        $this->hydrateDetailThreadList($list, $threadList, $forumRecord);
         return $list;
     }
 
-    private function hydrateDetailThreadList(DetailThreadList $detailThreadList, ReducedThreadRecordList $threadRecordList): void
+    private function hydrateDetailThreadList(DetailThreadList $detailThreadList,
+                                             ReducedThreadRecordList $threadRecordList,
+                                             ForumRecord $forumRecord): void
     {
         /** @var ReducedThreadRecord $thread */
         foreach ($threadRecordList as $thread) {
             $detail = new DetailThread();
-            $this->hydrateDetailThread($detail, $thread);
+            $this->hydrateDetailThread($detail, $thread, $forumRecord);
             $detailThreadList[] = $detail;
         }
     }
 
-    private function hydrateDetailThread(DetailThread $detail, ReducedThreadRecord $threadRecord): void
+    private function hydrateDetailThread(DetailThread $detail,
+                                         ReducedThreadRecord $threadRecord,
+                                         ForumRecord $forumRecord): void
     {
         $detail->setTitle($threadRecord->getTitle());
-        $detail->setUrl('todo');
+        $detail->setUrl($forumRecord->getUrlPath().$threadRecord->getUrlPathPart());
         $detail->setCreatorUserName($threadRecord->getPostUserName());
         $detail->setLastPostUserName($threadRecord->getLastPoster());
     }

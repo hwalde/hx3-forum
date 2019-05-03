@@ -22,4 +22,6 @@ interface ReducedThreadRecord
     public function getReplyCount() : int;
 
     public function getThreadId() : int;
+
+    public function getUrlPathPart() : string;
 }
