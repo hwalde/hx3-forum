@@ -11,11 +11,12 @@
 namespace presentation\frontend\thread;
 
 /**  @var $model Model */
+$thread = $model->getThreadPage();
 ?>
-<h2><?php /*=$model->getThreadPage()->getForumTitle()?> (<?=$model->getDetail()->getForumId() */?></h2>
 <div id="thread-detail">
+    <h2><?=$thread->getThreadDetail()->getTitle()?></h2>
     <div class="posts">
-        <?php foreach ($model->getThreadPage()->getThreadPostList() as $post) : ?>
+        <?php foreach ($thread->getThreadPostList() as $post) : ?>
             <div class="post">
                 <?php if($post->getTitle()!='') : ?>
                 <h3 class="post-title"><?=$post->getTitle()?></h3>

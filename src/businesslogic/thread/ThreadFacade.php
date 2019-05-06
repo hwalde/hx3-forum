@@ -11,23 +11,32 @@
 namespace businesslogic\thread;
 
 
+use businesslogic\thread\detail\ThreadDetailService;
 use businesslogic\thread\posts\ThreadPostsService;
 
 class ThreadFacade
 {
+    /** @var ThreadDetailService */
+    private $threadDetailService;
+
     /** @var ThreadPostsService */
     private $threadPostsService;
 
-    public function __construct(ThreadPostsService $threadPostsService)
+    public function __construct(ThreadDetailService $threadDetailService, ThreadPostsService $threadPostsService)
     {
+        $this->threadDetailService = $threadDetailService;
         $this->threadPostsService = $threadPostsService;
     }
 
     public function getThreadPage(int $threadId, int $pageNumber) : ThreadPage
     {
         $page = new ThreadPage();
-        $threadPostList = $this->threadPostsService->getThreadPostList($threadId, $pageNumber);
-        $page->setThreadPostList($threadPostList);
+        $page->setThreadDetail(
+            $this->threadDetailService->getThreadDetail($threadId)
+        );
+        $page->setThreadPostList(
+            $this->threadPostsService->getThreadPostList($threadId, $pageNumber)
+        );
         return $page;
     }
 }

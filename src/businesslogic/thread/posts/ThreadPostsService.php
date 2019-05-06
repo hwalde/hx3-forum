@@ -12,18 +12,22 @@ namespace businesslogic\thread\posts;
 use businesslogic\post\PostRecord;
 use businesslogic\post\PostRecordList;
 use businesslogic\post\PostRepository;
+use util\Ubb2HtmlConverter;
 
 class ThreadPostsService
 {
     const MAXIMUM_POSTS_PER_PAGE = 10;
 
-
     /** @var PostRepository */
     private $postRepository;
 
-    public function __construct(PostRepository $postRepository)
+    /** @var Ubb2HtmlConverter */
+    private $ubb2HtmlConverter;
+
+    public function __construct(PostRepository $postRepository, Ubb2HtmlConverter $ubb2HtmlConverter)
     {
         $this->postRepository = $postRepository;
+        $this->ubb2HtmlConverter = $ubb2HtmlConverter;
     }
 
     /**
@@ -58,6 +62,11 @@ class ThreadPostsService
         $threadPost->setCreationDateTime(new \DateTime("@{$record->getDateLine()}"));
         $threadPost->setCreationUserName($record->getUserName());
         $threadPost->setTitle($record->getTitle());
-        $threadPost->setContent($record->getPageText());
+
+        $htmlContent = $this->ubb2HtmlConverter->convert(
+            $record->getPageText()
+        );
+
+        $threadPost->setContent($htmlContent);
     }
 }

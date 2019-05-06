@@ -39,4 +39,13 @@ class ThreadRepository extends GeneratedThreadRepository {
         return new ReducedThreadRecordList($threadRecordList);
     }
 
+    public function selectById(int $threadId): ThreadRecord
+    {
+        return select(Thread::class)
+            ->from(Thread::class)
+            ->where(Thread::threadId()->eq(value($threadId)))
+            ->fetch()
+            ->into(Thread::class);
+    }
+
 }

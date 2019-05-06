@@ -18,6 +18,7 @@ use businesslogic\forum\ForumRepository;
 use businesslogic\forum\overview\OverviewService as ForumOverviewService;
 use businesslogic\forum\detail\DetailService as ForumDetailService;
 use businesslogic\post\PostRepository;
+use businesslogic\thread\detail\ThreadDetailService;
 use businesslogic\thread\posts\ThreadPostsService;
 use businesslogic\thread\ThreadFacade;
 use businesslogic\thread\ThreadRepository;
@@ -91,7 +92,16 @@ class DependencyInjectionContainer
     {
         static $instance = null;
         if($instance === null) {
-            $instance = new ThreadFacade($this->getThreadPostsService());
+            $instance = new ThreadFacade($this->getThreadDetailService(), $this->getThreadPostsService());
+        }
+        return $instance;
+    }
+
+    public function &getThreadDetailService() : ThreadDetailService
+    {
+        static $instance = null;
+        if($instance === null) {
+            $instance = new ThreadDetailService($this->getThreadRepository());
         }
         return $instance;
     }
@@ -100,7 +110,7 @@ class DependencyInjectionContainer
     {
         static $instance = null;
         if($instance === null) {
-            $instance = new ThreadPostsService($this->getPostsRepository());
+            $instance = new ThreadPostsService($this->getPostsRepository(), $this->getUbb2HtmlConverter());
         }
         return $instance;
     }
@@ -110,6 +120,15 @@ class DependencyInjectionContainer
         static $instance = null;
         if($instance === null) {
             $instance = new PostRepository();
+        }
+        return $instance;
+    }
+
+    public function &getUbb2HtmlConverter() : Ubb2HtmlConverter
+    {
+        static $instance = null;
+        if($instance === null) {
+            $instance = new Ubb2HtmlConverter();
         }
         return $instance;
     }
