@@ -1,5 +1,4 @@
-<?php
-
+<?php  declare(strict_types=1);
 /**
  * This file is part of HX3 Forum.
  *
@@ -13,6 +12,8 @@ namespace businesslogic\thread;
  
 use generated\GeneratedThreadRepository;
 use generated\Thread;
+use generated\ThreadAlias;
+use POOQ\Condition;
 use function POOQ\select;
 use function POOQ\value;
 
@@ -26,10 +27,13 @@ class ThreadRepository extends GeneratedThreadRepository {
     {
         $t = Thread::as('t');
 
+        $threadIsVisible = $this->threadIsVisibleCondition($t);
+        $forumIdMatches = $t->forumId()->eq(value($forumId));
+
         /** @var ThreadRecord[] $threadList */
         $threadRecordList = select($t->title(), $t->lastPoster(), $t->postUserName(), $t->replyCount(), $t->threadId())
             ->from($t)
-            ->where($t->forumId()->eq(value($forumId)))
+            ->where($forumIdMatches ->and($threadIsVisible))
             ->order($t->threadId()->desc())
             ->limit(10)
             ->offset(0)
@@ -39,13 +43,26 @@ class ThreadRepository extends GeneratedThreadRepository {
         return new ReducedThreadRecordList($threadRecordList);
     }
 
+    private function threadIsVisibleCondition(ThreadAlias $thread): Condition
+    {
+        $isVisible = $thread->visible()->isNotNull()->and(
+            $thread->visible()->eq(value(1))
+        );
+        return $isVisible;
+    }
+
     public function selectById(int $threadId): ThreadRecord
     {
-        return select(Thread::class)
-            ->from(Thread::class)
-            ->where(Thread::threadId()->eq(value($threadId)))
+        $t = Thread::as('t');
+
+        $threadIdMatches = $t->threadId()->eq(value($threadId));
+        $threadIsVisible = $this->threadIsVisibleCondition($t);
+
+        return select($t)
+            ->from($t)
+            ->where($threadIdMatches->and($threadIsVisible))
             ->fetch()
-            ->into(Thread::class);
+            ->into($t);
     }
 
 }
