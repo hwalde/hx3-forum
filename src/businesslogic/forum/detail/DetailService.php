@@ -25,10 +25,14 @@ class DetailService
     /** @var ThreadRepository */
     private $threadRepository;
 
-    public function __construct(ForumRepository $forumRepository, ThreadRepository $threadRepository)
+    /** @var ForumPaginationService */
+    private $paginationService;
+
+    public function __construct(ForumRepository $forumRepository, ThreadRepository $threadRepository, ForumPaginationService $paginationService)
     {
         $this->forumRepository = $forumRepository;
         $this->threadRepository = $threadRepository;
+        $this->paginationService = $paginationService;
     }
 
     public function getDetail(int $id) : Detail
@@ -39,6 +43,7 @@ class DetailService
         $detail->setForumTitle($forum->getTitle());
         $detail->setSubForumList($this->getSubForumList($forum->getForumId()));
         $detail->setThreadList($this->getThreadList($forum));
+        $detail->setPaginationPageList($this->paginationService->getPageList($id));
         return $detail;
     }
 

@@ -11,10 +11,11 @@
  
 namespace businesslogic\forum;
  
+use businesslogic\forum\detail\ForumPaginationRecord;
 use generated\GeneratedForumRecord;
 use util\SeoNameGenerator;
 
-class ForumRecord extends GeneratedForumRecord {
+class ForumRecord extends GeneratedForumRecord implements ForumPaginationRecord {
 
     public function getUrlPath() : string
     {

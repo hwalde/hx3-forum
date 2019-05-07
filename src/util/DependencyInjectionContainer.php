@@ -11,6 +11,7 @@
 namespace util;
 
 
+use businesslogic\forum\detail\ForumPaginationService;
 use businesslogic\forum\ForumFacade;
 use businesslogic\forum\ForumPermissionRepository;
 use businesslogic\forum\ForumPermissionService;
@@ -74,7 +75,11 @@ class DependencyInjectionContainer
     {
         static $instance = null;
         if($instance === null) {
-            $instance = new ForumDetailService($this->getForumRepository(), $this->getThreadRepository());
+            $instance = new ForumDetailService(
+                $this->getForumRepository(),
+                $this->getThreadRepository(),
+                $this->getForumPaginationService()
+            );
         }
         return $instance;
     }
@@ -84,6 +89,15 @@ class DependencyInjectionContainer
         static $instance = null;
         if($instance === null) {
             $instance = new ThreadRepository();
+        }
+        return $instance;
+    }
+
+    public function &getForumPaginationService() : ForumPaginationService
+    {
+        static $instance = null;
+        if($instance === null) {
+            $instance = new ForumPaginationService($this->getForumRepository());
         }
         return $instance;
     }

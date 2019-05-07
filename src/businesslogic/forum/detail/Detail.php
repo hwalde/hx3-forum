@@ -11,6 +11,9 @@
 namespace businesslogic\forum\detail;
 
 
+use businesslogic\Page;
+use businesslogic\PageList;
+
 class Detail
 {
     /** @var int */
@@ -24,6 +27,9 @@ class Detail
 
     /** @var DetailThreadList */
     private $threadList;
+
+    /** @var PageList */
+    private $paginationPageList;
 
     public function __construct()
     {
@@ -74,5 +80,18 @@ class Detail
     public function setThreadList(DetailThreadList $threadList): void
     {
         $this->threadList = $threadList;
+    }
+
+    /**
+     * @return Page[]
+     */
+    public function getPaginationPageList(): PageList
+    {
+        return $this->paginationPageList;
+    }
+
+    public function setPaginationPageList(PageList $paginationList): void
+    {
+        $this->paginationPageList = $paginationList;
     }
 }

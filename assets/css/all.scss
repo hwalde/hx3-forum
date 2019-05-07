@@ -23,7 +23,45 @@ a {
   color:#efefef;
 }
 
+#footer {
+  font-size: 10pt;
+  margin-top: 3em;
+  margin: 2em;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
 #forum-detail {
+
+  h2 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1.5em;
+  }
+
+  .pagination {
+    text-align: center;
+
+    font-size:10pt;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline;
+    }
+
+    li+li:before {
+      content: "> ";
+    }
+  }
+
   .sub-thread-list {
     border-collapse: collapse;
     width: 100%;

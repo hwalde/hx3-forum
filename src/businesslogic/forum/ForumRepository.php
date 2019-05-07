@@ -11,12 +11,15 @@
  
 namespace businesslogic\forum;
  
+use businesslogic\forum\detail\ForumPaginationRecord;
+use businesslogic\forum\detail\ForumPaginationRecordList;
 use generated\Forum;
 use generated\ForumAlias;
 use generated\ForumPermission;
 use generated\ForumPermissionAlias;
 use generated\GeneratedForumRepository;
 use POOQ\Condition;
+use function POOQ\length;
 use function POOQ\select;
 use function POOQ\value;
 use util\exception\NotFoundException;
@@ -90,11 +93,41 @@ class ForumRepository extends GeneratedForumRepository {
     /**
      * @todo: Return reduces set
      * @todo: Use interface as return type (to tell the user which fields are in the reduces set)
+     * @return ForumRecord[]
      */
     public function selectAllByParentId(int $forumId): ForumRecordList
     {
         $f = Forum::as('f');
         $p = ForumPermission::as('p');
         return $this->selectAllViewable($f, $p, $f->parentId()->eq(value($forumId)));
+    }
+
+    /**
+     * @return ForumPaginationRecord[]
+     */
+    public function selectAllPaginationList(int $forumId): ForumPaginationRecordList
+    {
+        $f = Forum::as('f');
+
+        /** @var ForumRecord $forumRecord */
+        $forumRecord = select($f->forumId(), $f->title(), $f->parentList())
+            ->from($f)
+            ->where($f->forumId()->eq(value($forumId)))
+            ->fetch()
+            ->into($f);
+
+        $hasParents = strlen(trim($forumRecord->getParentList()))>0;
+        if(!$hasParents) {
+            return new ForumPaginationRecordList([$forumRecord]);
+        }
+
+        $parentIdList = explode(',', $forumRecord->getParentList());
+        $forumRecordList = select($f->forumId(), $f->title())
+            ->from($f)
+            ->where($f->forumId()->in($parentIdList))
+            ->order($f->parentList()->length()->asc())
+            ->fetchAll()
+            ->into($f);
+        return new ForumPaginationRecordList($forumRecordList);
     }
 }

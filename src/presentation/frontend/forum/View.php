@@ -12,43 +12,60 @@ namespace presentation\frontend\forum;
 
 /**  @var $model Model */
 ?>
-<h2><?=$model->getDetail()->getForumTitle()?> (<?=$model->getDetail()->getForumId()?>)</h2>
 <div id="forum-detail">
-<?php
-$forumList = $model->getDetail()->getSubForumList();
-$hasForums = count($forumList)>0;
-if($hasForums) {
-?>
-    <div id="sub-forum-list">
+    <!-- Pagination navigation -->
+    <div class="pagination">
         <ul>
-        <?php foreach ($forumList as $forum) { ?>
-            <li>
-                <a href="<?=$forum->getUrl()?>">
-                    <div class="content">
-                        <?=$forum->getTitle()?>
-                    </div>
-                </a>
-            </li>
-        <?php } ?>
+            <?php
+            $pageCount = count($model->getDetail()->getPaginationPageList());
+            foreach ($model->getDetail()->getPaginationPageList() as $index => $page) : ?>
+                <?php $isLastPage = $index == $pageCount - 1;
+                if (!$isLastPage) : ?>
+                    <li><a href="<?= $page->getUrl() ?>"><?= $page->getTitle() ?></a></li>
+                <?php else: ?>
+                    <!--li><?= $page->getTitle() ?></li-->
+                <?php endif ?>
+            <?php endforeach ?>
         </ul>
     </div>
-<?php
-}
-$threadList = $model->getDetail()->getThreadList();
-$hasThreads = count($threadList)>0;
-if($hasThreads) {
-?>
-    <table class="sub-thread-list">
-        <?php foreach ($threadList as $thread) { ?>
-            <tr>
-                <td><a href="<?=$thread->getUrl()?>"><?=$thread->getTitle()?></a></td>
-            </tr>
-        <?php } ?>
-    </table>
-<?php
-}
-?>
-</div>
-<br>
-<a href="<?=createURL("")?>">Go to Overview</a>
 
+    <!-- Page title -->
+    <h2><?= $model->getDetail()->getForumTitle() ?></h2>
+
+
+
+    <?php
+    $forumList = $model->getDetail()->getSubForumList();
+    $hasForums = count($forumList) > 0;
+    if ($hasForums) {
+        ?>
+        <div id="sub-forum-list">
+            <ul>
+                <?php foreach ($forumList as $forum) { ?>
+                    <li>
+                        <a href="<?= $forum->getUrl() ?>">
+                            <div class="content">
+                                <?= $forum->getTitle() ?>
+                            </div>
+                        </a>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
+        <?php
+    }
+    $threadList = $model->getDetail()->getThreadList();
+    $hasThreads = count($threadList) > 0;
+    if ($hasThreads) {
+        ?>
+        <table class="sub-thread-list">
+            <?php foreach ($threadList as $thread) { ?>
+                <tr>
+                    <td><a href="<?= $thread->getUrl() ?>"><?= $thread->getTitle() ?></a></td>
+                </tr>
+            <?php } ?>
+        </table>
+        <?php
+    }
+    ?>
+</div>

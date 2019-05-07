@@ -36,6 +36,37 @@ a {
   color: #efefef;
 }
 
+#footer {
+  font-size: 10pt;
+  margin-top: 3em;
+  margin: 2em;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#forum-detail h2 {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1.5em;
+}
+#forum-detail .pagination {
+  text-align: center;
+  font-size: 10pt;
+}
+#forum-detail .pagination ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#forum-detail .pagination li {
+  display: inline;
+}
+#forum-detail .pagination li + li:before {
+  content: "> ";
+}
 #forum-detail .sub-thread-list {
   border-collapse: collapse;
   width: 100%;
