@@ -2,15 +2,12 @@ Nächste Schritte:
 =================
 Technik:
 - User()-Funktion analog zu Database()-Funktion bauen plus Benutzerauthentifizierug gegen die hx3-Datenbank (Arma-Code schauen)
-- BBCode2Html-Converter
+- BBCode2Html-Converter (wip)
 - Add improved List and Map Types from POOQ and migrate old code
 
 Daten:
-- SubForums klickbar machen
-- Posts anzeigen
+- Posts anzeigen (wip)
 - User-Daten inkl. Permissions laden
-- Forum-Detail-Page Daten laden
-- Aus Foren-Übersicht Foren wo die Permissions fehlen ausfiltern
 
 Design:
 - Foren-Übersicht designen
@@ -24,3 +21,8 @@ Sonstiges:
 - https für hx3-next.de
 - Readme.me aktualisieren und weitere Docs schreiben für Entwickler
 - Google SSO: https://developers.google.com/identity/one-tap/web/get-started oder https://developers.google.com/web/updates/2016/04/credential-management-api
+
+Bugs:
+- http://localhost/hx3/action-shooter-27/arma-4---was-wissen-wir?-25720
+    "Fatal error: Uncaught TypeError: Argument 2 passed to POOQ\Result::__construct() must be of the type array, bool given, called in C:\xampp\htdocs\hx3\vendor\hwalde\pooq\src\SqlBuilding\Select\SelectQueryBuilder.php on line 151 and defined in C:\xampp\htdocs\hx3\vendor\hwalde\pooq\src\Result.php on line 25"
+
