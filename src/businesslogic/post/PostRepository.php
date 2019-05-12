@@ -33,7 +33,7 @@ class PostRepository extends GeneratedPostRepository {
         return select($p)
             ->from($p)
             ->where($p->threadId()->eq(value($threadId))->and($isVisible))
-            ->order($p->threadId()->desc())
+            ->order($p->postId()->asc())
             ->limit($limit)
             ->offset($offset)
             ->fetchAll()
