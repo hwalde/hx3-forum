@@ -12,16 +12,27 @@ namespace presentation\frontend\index;
 
 /**  @var $model Model */
 ?>
-<h2>Foren</h2>
-<ul>
+<div id="forum-overview">
+
     <?php foreach ($model->getOverview()->getGroupList() as $group) : ?>
-    <li>
-        <a href="<?=$group->getUrl()?>"><?=$group->getTitle()?></a> (<?=$group->getForumId()?>)
-        <ul>
-            <?php foreach ($group->getForumList() as $forum) : ?>
-                <li><a href="<?=$forum->getUrl()?>"><?=$forum->getTitle()?></a> (<?=$forum->getId()?>)</li>
-            <?php endforeach; ?>
-        </ul>
-    </li>
+        <h2>
+            <!--a href="<?=$group->getUrl()?>"-->
+                <?=$group->getTitle()?>
+            <!--/a-->
+        </h2>
+        <div id="sub-forum-list">
+            <ul>
+                <?php foreach ($group->getForumList() as $forum) : ?>
+                <li>
+                    <a href="<?= $forum->getUrl() ?>">
+                        <div class="content">
+                            <?= $forum->getTitle() ?>
+                        </div>
+                    </a>
+                </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
     <?php endforeach; ?>
-</ul>
+
+</div>

@@ -14,19 +14,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-/*
-
-
-
-
-
-
-*/
 body {
   box-sizing: border-box;
   font-family: "Open Sans", serif;
   font-size: 14pt;
-  background-color: #363E60;
+  background-color: #000000;
   color: #efefef;
   margin: 0;
   padding: 0;
@@ -38,8 +30,8 @@ a {
 
 #footer {
   font-size: 10pt;
-  margin-top: 3em;
   margin: 2em;
+  margin-top: 3em;
   text-align: center;
 }
 
@@ -47,10 +39,17 @@ h1 {
   text-align: center;
 }
 
-#forum-detail h2 {
+#forum-detail h2, #forum-overview h2 {
   text-align: center;
+  margin-bottom: 1em;
+  margin-top: 1.5em;
+}
+#forum-detail h2:first-child, #forum-overview h2:first-child {
   margin-top: 0;
-  margin-bottom: 1.5em;
+}
+
+#forum-detail h2 {
+  margin-top: 0;
 }
 #forum-detail .pagination {
   text-align: center;
@@ -67,43 +66,25 @@ h1 {
 #forum-detail .pagination li + li:before {
   content: "> ";
 }
-#forum-detail .sub-thread-list {
-  border-collapse: collapse;
-  width: 100%;
-}
-#forum-detail .sub-thread-list td, #forum-detail .sub-thread-list th {
-  padding: 8px;
-}
-#forum-detail .sub-thread-list tr:nth-child(odd) {
-  background-color: #7EA1C0;
-}
-#forum-detail .sub-thread-list tr:hover {
-  background-color: #0C0111;
-}
-#forum-detail .sub-thread-list th {
-  padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #4CAF50;
-  color: white;
-}
 
-#sub-forum-list ul {
+#sub-forum-list ul, #sub-thread-list ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-#sub-forum-list li {
+#sub-forum-list li, #sub-thread-list li {
   margin: 2px 0;
 }
-#sub-forum-list li .content {
+#sub-forum-list li .content, #sub-thread-list li .content {
   padding: 5px;
+  color: #000000;
+  background-color: #efefef;
 }
-#sub-forum-list li:nth-child(odd) .content {
-  background-color: #7EA1C0;
+#sub-forum-list li:nth-child(odd) .content, #sub-thread-list li:nth-child(odd) .content {
+  background-color: #dddddd;
 }
-#sub-forum-list li .content:hover {
-  background-color: #0C0111;
+#sub-forum-list li .content:hover, #sub-thread-list li .content:hover {
+  background-color: #ffffff;
 }
 
 #header {
@@ -134,7 +115,7 @@ h1 {
 
 .post {
   background-color: #efefef;
-  color: #000;
+  color: #000000;
   margin-bottom: 1em;
 }
 
@@ -147,24 +128,24 @@ h1 {
   margin-bottom: 0;
 }
 
-.post-content a {
-  color: #121937;
+.post-content, .post-content a {
+  color: #000000;
 }
 
 .post-footer {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background: #346745;
-  color: #fff;
+  background: #444;
+  color: #dddddd;
   padding: 0 1em 0 1em;
 }
 
 .quote {
   padding: 1em;
   margin: 1em;
-  border: 1px solid #b3b3b3;
-  background-color: #d6e0ef;
+  border: 1px solid white;
+  background-color: #dddddd;
   border-radius: 1em;
 }
 
@@ -191,11 +172,24 @@ code {
     columns: 2;
     column-gap: 3em;
   }
+
+  #sub-forum-list, #sub-thread-list {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  #sub-forum-list ul, #sub-thread-list ul {
+    columns: 2;
+    column-gap: 1em;
+  }
 }
 @media (min-width: 1400px) {
   .post-content {
     columns: 3;
-    column-gap: 3em;
+  }
+
+  #sub-forum-list ul, #sub-thread-list ul {
+    columns: 3;
   }
 }
 

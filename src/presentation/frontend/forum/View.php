@@ -58,13 +58,19 @@ namespace presentation\frontend\forum;
     $hasThreads = count($threadList) > 0;
     if ($hasThreads) {
         ?>
-        <table class="sub-thread-list">
-            <?php foreach ($threadList as $thread) { ?>
-                <tr>
-                    <td><a href="<?= $thread->getUrl() ?>"><?= $thread->getTitle() ?></a></td>
-                </tr>
-            <?php } ?>
-        </table>
+        <div id="sub-thread-list">
+            <ul>
+                <?php foreach ($threadList as $thread) { ?>
+                    <li>
+                        <a href="<?= $thread->getUrl() ?>">
+                            <div class="content">
+                                <?= $thread->getTitle() ?>
+                            </div>
+                        </a>
+                    </li>
+                <?php } ?>
+            </ul>
+        </div>
         <?php
     }
     ?>

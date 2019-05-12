@@ -35,7 +35,7 @@ class ThreadRepository extends GeneratedThreadRepository {
             ->from($t)
             ->where($forumIdMatches ->and($threadIsVisible))
             ->order($t->threadId()->desc())
-            ->limit(10)
+            ->limit(100)
             ->offset(0)
             ->fetchAll()
             ->into($t);

@@ -24,5 +24,7 @@ Sonstiges:
 
 Bugs:
 - http://localhost/hx3/action-shooter-27/arma-4---was-wissen-wir?-25720
+  http://localhost/hx3/offtopic-7/warum-ist-hier-im-forum-so-wenig-los-?-25722
+  http://localhost/hx3/community-173/[anf%C3%A4nger]-was-muss-ich-kaufen-um-arma3-auf-den-neusten-stand-zu-haben?-25633
     "Fatal error: Uncaught TypeError: Argument 2 passed to POOQ\Result::__construct() must be of the type array, bool given, called in C:\xampp\htdocs\hx3\vendor\hwalde\pooq\src\SqlBuilding\Select\SelectQueryBuilder.php on line 151 and defined in C:\xampp\htdocs\hx3\vendor\hwalde\pooq\src\Result.php on line 25"
-
+- Post-Links incorrect
