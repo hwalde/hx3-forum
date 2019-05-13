@@ -13,8 +13,16 @@ namespace businesslogic;
 
 class PageListBuilder
 {
+    /** @var int */
+    private $currentPageNumber;
+
     /** @var array */
     private $pageUrls = [];
+
+    public function __construct(int $currentPageNumber)
+    {
+        $this->currentPageNumber = $currentPageNumber;
+    }
 
     public function addPage(string $url) {
         $this->pageUrls[] = $url;
@@ -34,7 +42,8 @@ class PageListBuilder
     private function addAllPagesExceptLastPage(PageList $list) : void
     {
         for ($i = 0; $i < count($this->pageUrls) - 1; $i++) {
-            $list[] = new Page($i + 1, $this->pageUrls[$i]);
+            $isCurrent = ($i + 1) == $this->currentPageNumber;
+            $list[] = new Page($i + 1, $this->pageUrls[$i], $isCurrent);
         }
     }
 
@@ -45,7 +54,8 @@ class PageListBuilder
             $list[] = new Page('...');
             $list[] = new Page('Letzte Seite', end($this->pageUrls));
         } else if ($hasPages) {
-            $list[] = new Page(count($this->pageUrls), end($this->pageUrls));
+            $isCurrent = count($this->pageUrls) == $this->currentPageNumber;
+            $list[] = new Page(count($this->pageUrls), end($this->pageUrls), $isCurrent);
         }
     }
 }

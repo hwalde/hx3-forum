@@ -14,6 +14,7 @@ namespace businesslogic\post;
 use generated\GeneratedPostRepository;
 use generated\PostAlias;
 use function POOQ\select;
+use function POOQ\selectCount;
 use function POOQ\value;
 
 class PostRepository extends GeneratedPostRepository {
@@ -27,18 +28,33 @@ class PostRepository extends GeneratedPostRepository {
     public function selectAllFromThread(int $threadId, int $limit, int $offset) : PostRecordList
     {
         $p = new PostAlias('p');
-        $isVisible = $p->visible()->eq(value(1))->and(
-            $p->reportThreadId()->isNull()->or($p->reportThreadId()->eq(value(0)))
-        );
+        $postIsVisible = $this->getIsVisibleCondition($p);
         return select($p)
             ->from($p)
-            ->where($p->threadId()->eq(value($threadId))->and($isVisible))
+            ->where($p->threadId()->eq(value($threadId))->and($postIsVisible))
             ->order($p->postId()->asc())
             ->limit($limit)
             ->offset($offset)
             ->fetchAll()
             ->into($p);
 
+    }
+
+    public function countPostsOfThread(int $threadId): int
+    {
+        $p = new PostAlias('p');
+        $postIsVisible = $this->getIsVisibleCondition($p);
+        return selectCount()
+            ->from($p)
+            ->where($p->threadId()->eq(value($threadId))->and($postIsVisible))
+            ->fetchOne();
+    }
+
+    private function getIsVisibleCondition(PostAlias $p): \POOQ\Condition
+    {
+        return $p->visible()->eq(value(1))->and(
+            $p->reportThreadId()->isNull()->or($p->reportThreadId()->eq(value(0)))
+        );
     }
 
 }

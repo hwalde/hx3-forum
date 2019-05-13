@@ -18,6 +18,9 @@ class ThreadDetail
     /** @var string */
     private $title;
 
+    /** @var string */
+    private $url;
+
     public function getThreadId(): int
     {
         return $this->threadId;
@@ -36,5 +39,15 @@ class ThreadDetail
     public function setTitle(string $title): void
     {
         $this->title = $title;
+    }
+
+    public function getUrl(): string
+    {
+        return $this->url;
+    }
+
+    public function setUrl(string $url): void
+    {
+        $this->url = $url;
     }
 }

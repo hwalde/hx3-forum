@@ -9,6 +9,8 @@
  */
 namespace businesslogic\thread\posts;
 
+use businesslogic\PageList;
+use businesslogic\PageListBuilder;
 use businesslogic\post\PostRecord;
 use businesslogic\post\PostRecordList;
 use businesslogic\post\PostRepository;
@@ -68,5 +70,22 @@ class ThreadPostsService
         );
 
         $threadPost->setContent($htmlContent);
+    }
+
+    public function getPageList(int $threadId, string $threadUrl, int $pageNumber): PageList
+    {
+        $postCount = $this->postRepository->countPostsOfThread($threadId);
+        $pageCount = intdiv($postCount, self::MAXIMUM_POSTS_PER_PAGE);
+        if($postCount%self::MAXIMUM_POSTS_PER_PAGE > 0) {
+            $pageCount++;
+        }
+        $builder = new PageListBuilder($pageNumber);
+        if($pageCount>0) {
+            $builder->addPage($threadUrl);
+        }
+        for($i = 1; $i<$pageCount; $i++) {
+            $builder->addPage($threadUrl.'/'.($i+1));
+        }
+        return $builder->build();
     }
 }

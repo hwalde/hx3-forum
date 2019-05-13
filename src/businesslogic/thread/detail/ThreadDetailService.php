@@ -10,6 +10,8 @@
 
 namespace businesslogic\thread\detail;
 
+use businesslogic\forum\ForumRecord;
+use businesslogic\thread\ThreadRecord;
 use businesslogic\thread\ThreadRepository;
 
 class ThreadDetailService
@@ -24,12 +26,15 @@ class ThreadDetailService
 
     public function getThreadDetail(int $threadId) : ThreadDetail
     {
-        $record = $this->repository->selectById($threadId);
+        /** @var ThreadRecord $threadRecord */
+        /** @var ForumRecord $forumRecord */
+        list($threadRecord, $forumRecord) = $this->repository->selectById($threadId);
 
         $detail = new ThreadDetail();
 
-        $detail->setThreadId($record->getThreadId());
-        $detail->setTitle($record->getTitle());
+        $detail->setThreadId($threadRecord->getThreadId());
+        $detail->setTitle($threadRecord->getTitle());
+        $detail->setUrl($forumRecord->getUrlPath().$threadRecord->getUrlPathPart());
 
         return $detail;
     }

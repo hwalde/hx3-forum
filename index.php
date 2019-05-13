@@ -63,6 +63,14 @@ try {
         $threadId = end($parts);
         $controller = new \presentation\frontend\thread\Controller();
         $controller->index($forumId, $threadId);
+    } else if(count($pathParts) === 3) {
+        $parts = explode('-', $pathParts[0]);
+        $forumId = end($parts);
+        $parts = explode('-', $pathParts[1]);
+        $threadId = end($parts);
+        $pageNumber = $pathParts[2];
+        $controller = new \presentation\frontend\thread\Controller();
+        $controller->index($forumId, $threadId, $pageNumber);
     } else {
         throw new NotFoundException();
     }

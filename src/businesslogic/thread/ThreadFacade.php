@@ -31,11 +31,13 @@ class ThreadFacade
     public function getThreadPage(int $threadId, int $pageNumber) : ThreadPage
     {
         $page = new ThreadPage();
-        $page->setThreadDetail(
-            $this->threadDetailService->getThreadDetail($threadId)
-        );
+        $detail = $this->threadDetailService->getThreadDetail($threadId);
+        $page->setThreadDetail($detail);
         $page->setThreadPostList(
             $this->threadPostsService->getThreadPostList($threadId, $pageNumber)
+        );
+        $page->setPageList(
+            $this->threadPostsService->getPageList($threadId, $detail->getUrl(), $pageNumber)
         );
         return $page;
     }

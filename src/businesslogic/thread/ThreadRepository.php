@@ -10,6 +10,7 @@
  
 namespace businesslogic\thread;
  
+use generated\Forum;
 use generated\GeneratedThreadRepository;
 use generated\Thread;
 use generated\ThreadAlias;
@@ -51,18 +52,25 @@ class ThreadRepository extends GeneratedThreadRepository {
         return $isVisible;
     }
 
-    public function selectById(int $threadId): ThreadRecord
+    /**
+     * @param int $threadId
+     * @return array(ThreadRecord, ForumRecord)
+     */
+    public function selectById(int $threadId): array
     {
         $t = Thread::as('t');
+        $f = Forum::as('f');
 
         $threadIdMatches = $t->threadId()->eq(value($threadId));
         $threadIsVisible = $this->threadIsVisibleCondition($t);
 
-        return select($t)
+        $result =  select($t, $f->title(), $f->forumId())
             ->from($t)
+            ->innerJoin($f)->on($t->forumId()->eq($f->forumId()))
             ->where($threadIdMatches->and($threadIsVisible))
-            ->fetch()
-            ->into($t);
+            ->fetch();
+
+        return [$result->into($t), $result->into($f)];
     }
 
 }

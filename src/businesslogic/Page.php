@@ -19,10 +19,14 @@ class Page
     /** @var string|null */
     private $url;
 
-    public function __construct(string $title, ?string $url = null)
+    /** @var bool */
+    private $isActive;
+
+    public function __construct(string $title, ?string $url = null, bool $isActive = false)
     {
         $this->title = $title;
         $this->url = $url;
+        $this->isActive = $isActive;
     }
 
     public function getTitle(): string
@@ -47,5 +51,15 @@ class Page
     public function setUrl(?string $url): void
     {
         $this->url = $url;
+    }
+
+    public function isActive(): bool
+    {
+        return $this->isActive;
+    }
+
+    public function setIsActive(bool $isActive): void
+    {
+        $this->isActive = $isActive;
     }
 }

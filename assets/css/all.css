@@ -87,6 +87,28 @@ h1 {
   background-color: #ffffff;
 }
 
+.page-list {
+  text-align: center;
+}
+.page-list ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.page-list li {
+  display: inline;
+}
+.page-list li a {
+  text-decoration: underline;
+}
+.page-list li + li:before {
+  content: "| ";
+}
+.page-list .label {
+  font-size: 12pt;
+  padding-bottom: 5px;
+}
+
 #header {
   margin: 0;
   padding: 0;

@@ -37,8 +37,29 @@ $thread = $model->getThreadPage();
             </div>
         <?php endforeach; ?>
     </div>
-
+    <div class="page-list">
+        <?php if(count($thread->getPageList())>1): ?>
+            <div class="label">Seiten:</div>
+        <?php else: ?>
+            <div class="label">Seite:</div>
+        <?php endif; ?>
+        <ul>
+            <?php foreach ($thread->getPageList() as $page) : ?>
+                <li>
+                    <?php if($page->isActive()): ?>
+                        <strong>
+                            <?=$page->getTitle()?>
+                        </strong>
+                    <?php else: ?>
+                        <?php if($page->hasUrl()) : ?>
+                            <a href="<?=$page->getUrl()?>"><?=$page->getTitle()?></a>
+                        <?php else: ?>
+                            <?=$page->getTitle()?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
 </div>
-<br>
-<a href="<?=createURL("")?>">Go to Overview</a>
 

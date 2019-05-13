@@ -4,6 +4,8 @@
 namespace businesslogic\thread;
 
 
+use businesslogic\Page;
+use businesslogic\PageList;
 use businesslogic\thread\detail\ThreadDetail;
 use businesslogic\thread\posts\ThreadPost;
 use businesslogic\thread\posts\ThreadPostList;
@@ -15,6 +17,9 @@ class ThreadPage
 
     /** @var ThreadPostList */
     private $threadPostList;
+
+    /** @var PageList */
+    private $pageList;
 
     /**
      * @return ThreadPost[]
@@ -37,5 +42,18 @@ class ThreadPage
     public function setThreadDetail(ThreadDetail $threadDetail): void
     {
         $this->threadDetail = $threadDetail;
+    }
+
+    /**
+     * @return Page[]
+     */
+    public function getPageList(): PageList
+    {
+        return $this->pageList;
+    }
+
+    public function setPageList(PageList $pageList): void
+    {
+        $this->pageList = $pageList;
     }
 }

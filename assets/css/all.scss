@@ -91,6 +91,8 @@ h1 {
       padding: 5px;
       color: $color-dark;
       background-color: $color-light;
+      //box-shadow: 1px darken($color-light, 20);
+      //box-shadow: 2px 2px 2px 1px rgba(100, 100, 100, 0.2);
     }
 
     li:nth-child(odd) .content {
@@ -100,6 +102,33 @@ h1 {
     li .content:hover {
       background-color: $color-light-hover;
     }
+}
+
+.page-list {
+  text-align: center;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    display: inline;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  li+li:before {
+    content: "| ";
+  }
+
+  .label {
+    font-size: 12pt;
+    padding-bottom: 5px;
+  }
 }
 
 #header {
