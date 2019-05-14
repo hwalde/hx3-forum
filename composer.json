@@ -5,6 +5,7 @@
   },
   "require": {
     "ext-pdo": "*",
+    "ext-mbstring": "*",
     "hwalde/pooq": "dev-master"
   }
 }

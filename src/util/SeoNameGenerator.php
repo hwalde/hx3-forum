@@ -15,7 +15,7 @@ class SeoNameGenerator
 {
     public function generateName(string $title, int $id): string
     {
-        $title = strtolower($title);
+        $title = mb_strtolower($title);
 
         $stopWords = 'a|an|and|are|as|at|be|by|for|from|in|is|it|of|on|'.
             'or|that|the|this|to|was|which|with|aber|als|am|an|auch|auf|aus|'.
@@ -41,7 +41,7 @@ class SeoNameGenerator
         $title = str_replace(array_keys($charMapping), array_values($charMapping), $title);
 
         $title = str_replace(['&amp;', '.'], '-', $title);
-        $title = str_replace(['?', '"', '!'], '', $title);
+        $title = str_replace(['?', '"', '!', '[', ']', '^', '\'', ':'], '', $title);
 
         $title = preg_replace('#\s+#', '-', $title);
         $title = preg_replace('#-+#', '-', $title);

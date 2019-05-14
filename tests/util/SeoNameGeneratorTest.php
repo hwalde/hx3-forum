@@ -15,7 +15,9 @@ class SeoNameGeneratorTest extends \PHPUnit\Framework\TestCase
         $generator = new \util\SeoNameGenerator();
 
         $inputExpectedOutputMap = [
-            'EUROPA wie ist die Kiste zu retten?' => 'europa-kiste-retten'
+            'EUROPA wie ist die Kiste zu retten?' => 'europa-kiste-retten',
+            '[Anfänger] Was muss ich kaufen um Arma3 auf den neusten stand zu haben?' => 'anfaenger-muss-kaufen-um-arma3-neusten-stand-haben',
+            'Videoanleitung: Erfolgreich "dumme" Bomben abwerfen in ARMA III.'=>'videoanleitung-erfolgreich-dumme-bomben-abwerfen-arma-iii'
         ];
         foreach ($inputExpectedOutputMap as $input => $expectedOutput) {
             $result = $generator->generateName($input, 123);
