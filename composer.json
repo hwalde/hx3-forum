@@ -1,9 +1,10 @@
 {
   "minimum-stability" : "dev",
   "require-dev": {
-    "hwalde/pooq": "dev-master"
+    "phpunit/phpunit": "^8"
   },
   "require": {
-    "ext-pdo": "*"
+    "ext-pdo": "*",
+    "hwalde/pooq": "dev-master"
   }
 }

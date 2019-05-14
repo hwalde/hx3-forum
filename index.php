@@ -10,21 +10,7 @@
 
 use util\exception\NotFoundException;
 
-include "config.php";
-include "vendor/autoload.php";
-include "src/functions.php";
-include "src/util/Psr4AutoloaderClass.php";
-
-$autoloader = new \util\Psr4AutoloaderClass();
-$autoloader->addNamespace("businesslogic", __DIR__.'/src/businesslogic');
-$autoloader->addNamespace("generated", __DIR__.'/gensrc');
-$autoloader->addNamespace("presentation", __DIR__.'/src/presentation');
-$autoloader->addNamespace("restapi", __DIR__.'/src/restapi');
-$autoloader->addNamespace("util", __DIR__.'/src/util');
-$autoloader->register();
-
-\POOQ\POOQ::initilize(DB_NAME, DB_USERNAME,
-    DB_PASSWORD, DB_HOSTNAME, DB_PORT);
+include_once 'bootstrap.php';
 
 if(!isset($_REQUEST["path"])) {
     $_REQUEST["path"] = "";
