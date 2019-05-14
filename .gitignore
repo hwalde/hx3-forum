@@ -15,3 +15,4 @@ thread.png
 usersystem.php
 deprecated
 deploy.sh
+.phpunit.result.cache
