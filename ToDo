@@ -7,24 +7,20 @@ Technik:
 
 Daten:
 - Posts anzeigen (wip)
+- Pagination für Thread-Anzeige
 - User-Daten inkl. Permissions laden
 
 Design:
-- Foren-Übersicht designen
-- Forum-Detail-Seite designen
-- Post-Detail-Seite designen
 - Login/Logout hinzufügen
 
 Sonstiges:
-- Improve deployment (to generate css and deploy it)
+- Write an url crawler for hx3 forum to compare the urls with the new version
+- Improve deployment
+    - generate css and deploy it
+    - deploy vendor without dev-tools like PHPUnit
 - Remove css (keep scss) from Repo
 - https für hx3-next.de
 - Readme.me aktualisieren und weitere Docs schreiben für Entwickler
 - Google SSO: https://developers.google.com/identity/one-tap/web/get-started oder https://developers.google.com/web/updates/2016/04/credential-management-api
 
 Bugs:
-- http://localhost/hx3/action-shooter-27/arma-4---was-wissen-wir?-25720
-  http://localhost/hx3/offtopic-7/warum-ist-hier-im-forum-so-wenig-los-?-25722
-  http://localhost/hx3/community-173/[anf%C3%A4nger]-was-muss-ich-kaufen-um-arma3-auf-den-neusten-stand-zu-haben?-25633
-    "Fatal error: Uncaught TypeError: Argument 2 passed to POOQ\Result::__construct() must be of the type array, bool given, called in C:\xampp\htdocs\hx3\vendor\hwalde\pooq\src\SqlBuilding\Select\SelectQueryBuilder.php on line 151 and defined in C:\xampp\htdocs\hx3\vendor\hwalde\pooq\src\Result.php on line 25"
-- Post-Links incorrect
