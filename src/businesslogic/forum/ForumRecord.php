@@ -24,7 +24,7 @@ class ForumRecord extends GeneratedForumRecord implements ForumPaginationRecord 
         // http://hx3.de/software-hardware-80/
         // http://hx3.de/offtopic-7/
         $nameGenerator = new SeoNameGenerator();
-        $name = $nameGenerator->generateName($this->getTitle(), $this->getForumId());
+        $name = $nameGenerator->generateName($this->getTitle(), $this->getForumId(), true);
         return APPLICATION_PATH.'/'.$name.'/';
     }
 
