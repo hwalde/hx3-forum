@@ -49,7 +49,7 @@ class PageListBuilder
 
     private function addLastPage(PageList $list): void
     {
-        $hasPages = count($this->pageUrls) > 1;
+        $hasPages = count($this->pageUrls) > 0;
         if (count($this->pageUrls) > 3) {
             $list[] = new Page('...');
             $list[] = new Page('Letzte Seite', end($this->pageUrls));

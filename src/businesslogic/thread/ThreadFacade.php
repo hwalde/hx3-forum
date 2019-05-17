@@ -10,7 +10,6 @@
 
 namespace businesslogic\thread;
 
-
 use businesslogic\thread\detail\ThreadDetailService;
 use businesslogic\thread\posts\ThreadPostsService;
 
@@ -22,10 +21,16 @@ class ThreadFacade
     /** @var ThreadPostsService */
     private $threadPostsService;
 
-    public function __construct(ThreadDetailService $threadDetailService, ThreadPostsService $threadPostsService)
+    /** @var ThreadPaginationService */
+    private $threadPaginationService;
+
+    public function __construct(ThreadDetailService $threadDetailService,
+                                ThreadPostsService $threadPostsService,
+                                ThreadPaginationService $threadPaginationService)
     {
         $this->threadDetailService = $threadDetailService;
         $this->threadPostsService = $threadPostsService;
+        $this->threadPaginationService = $threadPaginationService;
     }
 
     public function getThreadPage(int $threadId, int $pageNumber) : ThreadPage
@@ -38,6 +43,9 @@ class ThreadFacade
         );
         $page->setPageList(
             $this->threadPostsService->getPageList($threadId, $detail->getUrl(), $pageNumber)
+        );
+        $page->setPaginationPageList(
+            $this->threadPaginationService->getPageList($threadId, $pageNumber)
         );
         return $page;
     }

@@ -21,6 +21,9 @@ class ThreadPage
     /** @var PageList */
     private $pageList;
 
+    /** @var PageList */
+    private $paginationPageList;
+
     /**
      * @return ThreadPost[]
      */
@@ -55,5 +58,18 @@ class ThreadPage
     public function setPageList(PageList $pageList): void
     {
         $this->pageList = $pageList;
+    }
+
+    /**
+     * @return Page[]
+     */
+    public function getPaginationPageList(): PageList
+    {
+        return $this->paginationPageList;
+    }
+
+    public function setPaginationPageList(PageList $paginationList): void
+    {
+        $this->paginationPageList = $paginationList;
     }
 }

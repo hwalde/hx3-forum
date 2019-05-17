@@ -14,6 +14,23 @@ namespace presentation\frontend\thread;
 $thread = $model->getThreadPage();
 ?>
 <div id="thread-detail">
+    <!-- Pagination navigation -->
+    <div class="pagination">
+        <ul>
+            <?php
+            $pageCount = count($thread->getPaginationPageList());
+            foreach ($thread->getPaginationPageList() as $index => $page) : ?>
+                <?php $isLastPage = $index == $pageCount - 1;
+                if (!$isLastPage) : ?>
+                    <li><a href="<?= $page->getUrl() ?>"><?= $page->getTitle() ?></a></li>
+                <?php else: ?>
+                    <!--li><?= $page->getTitle() ?></li-->
+                <?php endif ?>
+            <?php endforeach ?>
+        </ul>
+    </div>
+
+    <!-- Thread title -->
     <h2><?=$thread->getThreadDetail()->getTitle()?></h2>
     <div class="posts">
         <?php foreach ($thread->getThreadPostList() as $post) : ?>
@@ -27,11 +44,11 @@ $thread = $model->getThreadPage();
                 </div>
                 </div>
                 <div class="post-footer">
-                    <div class="post-date">
-                        <?=$post->getCreationDateTime()->format('d.m.Y - G:i')?> Uhr
-                    </div>
                     <div class="post-author">
                         <?=$post->getCreationUserName()?>
+                    </div>
+                    <div class="post-date">
+                        <?=$post->getCreationDateTime()->format('d.m.Y - G:i')?> Uhr
                     </div>
                 </div>
             </div>

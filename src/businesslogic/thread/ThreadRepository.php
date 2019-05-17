@@ -10,6 +10,8 @@
  
 namespace businesslogic\thread;
  
+use businesslogic\forum\detail\ForumPaginationRecordList;
+use businesslogic\forum\ForumRecord;
 use generated\Forum;
 use generated\GeneratedThreadRepository;
 use generated\Thread;

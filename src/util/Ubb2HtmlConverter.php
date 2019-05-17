@@ -10,7 +10,6 @@
 
 namespace util;
 
-
 class Ubb2HtmlConverter
 {
     public function convert(string $ubb): string

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * This file is part of HX3 Forum.
  *
@@ -9,7 +9,6 @@
  */
 
 namespace util;
-
 
 use businesslogic\forum\detail\ForumPaginationService;
 use businesslogic\forum\ForumFacade;
@@ -22,6 +21,7 @@ use businesslogic\post\PostRepository;
 use businesslogic\thread\detail\ThreadDetailService;
 use businesslogic\thread\posts\ThreadPostsService;
 use businesslogic\thread\ThreadFacade;
+use businesslogic\thread\ThreadPaginationService;
 use businesslogic\thread\ThreadRepository;
 
 class DependencyInjectionContainer
@@ -106,7 +106,11 @@ class DependencyInjectionContainer
     {
         static $instance = null;
         if($instance === null) {
-            $instance = new ThreadFacade($this->getThreadDetailService(), $this->getThreadPostsService());
+            $instance = new ThreadFacade(
+                $this->getThreadDetailService(),
+                $this->getThreadPostsService(),
+                $this->getThreadPaginationService()
+            );
         }
         return $instance;
     }
@@ -143,6 +147,18 @@ class DependencyInjectionContainer
         static $instance = null;
         if($instance === null) {
             $instance = new Ubb2HtmlConverter();
+        }
+        return $instance;
+    }
+
+    public function &getThreadPaginationService() : ThreadPaginationService
+    {
+        static $instance = null;
+        if($instance === null) {
+            $instance = new ThreadPaginationService(
+                $this->getForumPaginationService(),
+                $this->getThreadRepository()
+            );
         }
         return $instance;
     }
