@@ -20,6 +20,9 @@ class OverviewGroup
     private $title;
 
     /** @var string */
+    private $hashName;
+
+    /** @var string */
     private $url;
 
     /** @var OverviewForumList */
@@ -48,6 +51,16 @@ class OverviewGroup
     public function setTitle(string $title): void
     {
         $this->title = $title;
+    }
+
+    public function getHashName(): string
+    {
+        return $this->hashName;
+    }
+
+    public function setHashName(string $hashName): void
+    {
+        $this->hashName = $hashName;
     }
 
     public function getUrl(): string

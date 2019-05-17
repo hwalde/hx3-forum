@@ -116,7 +116,7 @@ class SeoNameGeneratorTest extends \PHPUnit\Framework\TestCase
 
         ];
         foreach ($inputExpectedOutputMap as $input => $expectedOutput) {
-            $result = $generator->generateName($input, 123);
+            $result = $generator->generateNameWithId($input, 123);
             $this->assertEquals($expectedOutput.'-123', $result);
         }
 
@@ -14325,7 +14325,7 @@ class SeoNameGeneratorTest extends \PHPUnit\Framework\TestCase
             if(is_int($input)) {
                 $input = (string)$input;
             }
-            $result = $generator->generateName($input, 123);
+            $result = $generator->generateNameWithId($input, 123);
 
             if($expectedOutput.'-123' != $result) {
                 $matches = null;

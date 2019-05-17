@@ -20,11 +20,19 @@ class ForumRecord extends GeneratedForumRecord implements ForumPaginationRecord 
     public function getUrlPath() : string
     {
         // Examples:
+        // http://hx3.de/#games
         // http://hx3.de/diskussionsplattform-29/
         // http://hx3.de/software-hardware-80/
         // http://hx3.de/offtopic-7/
+
         $nameGenerator = new SeoNameGenerator();
-        $name = $nameGenerator->generateName($this->getTitle(), $this->getForumId());
+
+        if(!$this->hasParentId()) {
+            $hash = $nameGenerator->generateForumGroupHash($this->getTitle());
+            return APPLICATION_PATH.'/'.$hash;
+        }
+
+        $name = $nameGenerator->generateNameWithId($this->getTitle(), $this->getForumId());
         return APPLICATION_PATH.'/'.$name.'/';
     }
 
@@ -37,5 +45,4 @@ class ForumRecord extends GeneratedForumRecord implements ForumPaginationRecord 
     {
         return new ForumOptions(parent::getOptions());
     }
-
 }

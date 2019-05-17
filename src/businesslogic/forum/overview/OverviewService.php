@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * This file is part of HX3 Forum.
  *
@@ -9,7 +9,6 @@
  */
 
 namespace businesslogic\forum\overview;
-
 
 use businesslogic\forum\ForumPermissionService;
 use businesslogic\forum\ForumRecord;
@@ -44,8 +43,6 @@ class OverviewService
             $topLevelForumList->extractForumIds()
         );
 
-        //$secondLevelForumList = $this->permissionService->removeNotPermittedForumsFromList($secondLevelForumList);
-
         $this->hydrateOverview($overview, $topLevelForumList, $secondLevelForumList);
 
         return $overview;
@@ -74,14 +71,18 @@ class OverviewService
     {
         $overviewGroup->setForumId($topLevelForum->getForumId());
         $overviewGroup->setTitle($topLevelForum->getTitle());
-        $overviewGroup->setUrl($this->generateGroupUrl($topLevelForum));
+
+        $nameGenerator = new SeoNameGenerator();
+        $overviewGroup->setHashName($nameGenerator->generateName($topLevelForum->getTitle()));
+        $overviewGroup->setUrl(
+            $this->generateGroupUrl($nameGenerator, $topLevelForum)
+        );
 
         $this->hydrateGroupForumList($overviewGroup, $andLevelForumList);
     }
 
-    private function generateGroupUrl(ForumRecord $topLevelForum): string
+    private function generateGroupUrl(SeoNameGenerator $nameGenerator, ForumRecord $topLevelForum): string
     {
-        $nameGenerator = new SeoNameGenerator();
         $hash = $nameGenerator->generateForumGroupHash(
             $topLevelForum->getTitle()
         );

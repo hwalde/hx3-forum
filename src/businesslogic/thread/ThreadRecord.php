@@ -19,7 +19,7 @@ class ThreadRecord extends GeneratedThreadRecord implements ReducedThreadRecord 
     public function getUrlPathPart() : string
     {
         $nameGenerator = new SeoNameGenerator();
-        return $nameGenerator->generateName($this->getTitle(), $this->getThreadId());
+        return $nameGenerator->generateNameWithId($this->getTitle(), $this->getThreadId());
     }
 
 }
