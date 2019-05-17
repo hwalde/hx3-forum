@@ -13,12 +13,16 @@ namespace businesslogic\forum\detail;
 use businesslogic\forum\ForumRecord;
 use businesslogic\forum\ForumRecordList;
 use businesslogic\forum\ForumRepository;
+use businesslogic\PageList;
+use businesslogic\PageListBuilder;
 use businesslogic\thread\ReducedThreadRecord;
 use businesslogic\thread\ReducedThreadRecordList;
 use businesslogic\thread\ThreadRepository;
 
 class DetailService
 {
+    const MAXIMUM_THREADS_PER_PAGE = 100;
+
     /** @var ForumRepository */
     private $forumRepository;
 
@@ -35,15 +39,16 @@ class DetailService
         $this->paginationService = $paginationService;
     }
 
-    public function getDetail(int $id) : Detail
+    public function getDetail(int $forumId, int $pageNumber) : Detail
     {
-        $forum = $this->forumRepository->selectById($id);
+        $forum = $this->forumRepository->selectById($forumId);
         $detail = new Detail();
         $detail->setForumId($forum->getForumId());
         $detail->setForumTitle($forum->getTitle());
         $detail->setSubForumList($this->getSubForumList($forum->getForumId()));
-        $detail->setThreadList($this->getThreadList($forum));
-        $detail->setPaginationPageList($this->paginationService->getPageList($id));
+        $detail->setThreadList($this->getThreadList($forum, $pageNumber));
+        $detail->setPageList($this->getPageList($forumId, $forum->getUrlPath(), $pageNumber));
+        $detail->setPaginationPageList($this->paginationService->getPageList($forumId));
         return $detail;
     }
 
@@ -73,9 +78,15 @@ class DetailService
         $detail->setDescription($forumRecord->getDescription());
     }
 
-    private function getThreadList(ForumRecord $forumRecord) : DetailThreadList
+    private function getThreadList(ForumRecord $forumRecord, int $pageNumber) : DetailThreadList
     {
-        $threadList = $this->threadRepository->selectOfForum($forumRecord->getForumId());
+        $pageNumber--;
+        if($pageNumber < 0) {
+            throw new \InvalidArgumentException('Minimum allowed pageNumber is 1');
+        }
+        $offset = self::MAXIMUM_THREADS_PER_PAGE*$pageNumber;
+        $limit = self::MAXIMUM_THREADS_PER_PAGE;
+        $threadList = $this->threadRepository->selectOfForum($forumRecord->getForumId(), $limit, $offset);
 
         $list = new DetailThreadList();
         $this->hydrateDetailThreadList($list, $threadList, $forumRecord);
@@ -102,5 +113,22 @@ class DetailService
         $detail->setUrl($forumRecord->getUrlPath().$threadRecord->getUrlPathPart());
         $detail->setCreatorUserName($threadRecord->getPostUserName());
         $detail->setLastPostUserName($threadRecord->getLastPoster());
+    }
+
+    public function getPageList(int $forumId, string $forumUrl, int $pageNumber): PageList
+    {
+        $threadCount = $this->threadRepository->countThreadsOfForum($forumId);
+        $pageCount = intdiv($threadCount, self::MAXIMUM_THREADS_PER_PAGE);
+        if($threadCount%self::MAXIMUM_THREADS_PER_PAGE > 0) {
+            $pageCount++;
+        }
+        $builder = new PageListBuilder($pageNumber);
+        if($pageCount>0) {
+            $builder->addPage($forumUrl);
+        }
+        for($i = 1; $i<$pageCount; $i++) {
+            $builder->addPage($forumUrl.'/'.($i+1));
+        }
+        return $builder->build();
     }
 }

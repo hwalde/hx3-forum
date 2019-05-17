@@ -135,10 +135,13 @@ h1 {
   flex-direction: column;
 }
 
+.post, #sub-thread-list {
+  margin-bottom: 1em;
+}
+
 .post {
   background-color: #efefef;
   color: #000000;
-  margin-bottom: 1em;
 }
 
 .post-title, .post-content, .post-footer {

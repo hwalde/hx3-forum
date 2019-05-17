@@ -45,10 +45,16 @@ try {
     } else if(count($pathParts) === 2) {
         $parts = explode('-', $pathParts[0]);
         $forumId = end($parts);
-        $parts = explode('-', $pathParts[1]);
-        $threadId = end($parts);
-        $controller = new \presentation\frontend\thread\Controller();
-        $controller->index($forumId, $threadId);
+        if(strstr($pathParts[1], '-')) {
+            $parts = explode('-', $pathParts[1]);
+            $threadId = end($parts);
+            $controller = new \presentation\frontend\thread\Controller();
+            $controller->index($forumId, $threadId);
+        } else {
+            $pageNumber = $pathParts[1];
+            $controller = new \presentation\frontend\forum\Controller();
+            $controller->index($forumId, $pageNumber);
+        }
     } else if(count($pathParts) === 3) {
         $parts = explode('-', $pathParts[0]);
         $forumId = end($parts);

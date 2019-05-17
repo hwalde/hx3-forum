@@ -13,6 +13,7 @@ namespace presentation\frontend\forum;
 /**  @var $model Model */
 ?>
 <div id="forum-detail">
+
     <!-- Pagination navigation -->
     <div class="pagination">
         <ul>
@@ -32,8 +33,7 @@ namespace presentation\frontend\forum;
     <!-- Page title -->
     <h2><?= $model->getDetail()->getForumTitle() ?></h2>
 
-
-
+    <!-- SubForums -->
     <?php
     $forumList = $model->getDetail()->getSubForumList();
     $hasForums = count($forumList) > 0;
@@ -52,6 +52,8 @@ namespace presentation\frontend\forum;
                 <?php } ?>
             </ul>
         </div>
+
+        <!-- Threads -->
         <?php
     }
     $threadList = $model->getDetail()->getThreadList();
@@ -74,4 +76,31 @@ namespace presentation\frontend\forum;
         <?php
     }
     ?>
+
+    <!-- Page list -->
+    <div class="page-list">
+        <?php if(count($model->getDetail()->getPageList())>1): ?>
+            <div class="label">Seiten:</div>
+        <?php else: ?>
+            <div class="label">Seite:</div>
+        <?php endif; ?>
+        <ul>
+            <?php foreach ($model->getDetail()->getPageList() as $page) : ?>
+                <li>
+                    <?php if($page->isActive()): ?>
+                        <strong>
+                            <?=$page->getTitle()?>
+                        </strong>
+                    <?php else: ?>
+                        <?php if($page->hasUrl()) : ?>
+                            <a href="<?=$page->getUrl()?>"><?=$page->getTitle()?></a>
+                        <?php else: ?>
+                            <?=$page->getTitle()?>
+                        <?php endif; ?>
+                    <?php endif; ?>
+                </li>
+            <?php endforeach; ?>
+        </ul>
+    </div>
+
 </div>

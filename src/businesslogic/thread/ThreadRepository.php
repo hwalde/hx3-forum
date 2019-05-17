@@ -14,10 +14,12 @@ use businesslogic\forum\detail\ForumPaginationRecordList;
 use businesslogic\forum\ForumRecord;
 use generated\Forum;
 use generated\GeneratedThreadRepository;
+use generated\PostAlias;
 use generated\Thread;
 use generated\ThreadAlias;
 use POOQ\Condition;
 use function POOQ\select;
+use function POOQ\selectCount;
 use function POOQ\value;
 
 class ThreadRepository extends GeneratedThreadRepository {
@@ -26,7 +28,7 @@ class ThreadRepository extends GeneratedThreadRepository {
      * @param int $forumId
      * @return ReducedThreadRecord[]
      */
-    public function selectOfForum(int $forumId) : ReducedThreadRecordList
+    public function selectOfForum(int $forumId, int $limit, int $offset) : ReducedThreadRecordList
     {
         $t = Thread::as('t');
 
@@ -38,8 +40,8 @@ class ThreadRepository extends GeneratedThreadRepository {
             ->from($t)
             ->where($forumIdMatches ->and($threadIsVisible))
             ->order($t->threadId()->desc())
-            ->limit(100)
-            ->offset(0)
+            ->limit($limit)
+            ->offset($offset)
             ->fetchAll()
             ->into($t);
 
@@ -73,6 +75,16 @@ class ThreadRepository extends GeneratedThreadRepository {
             ->fetch();
 
         return [$result->into($t), $result->into($f)];
+    }
+
+    public function countThreadsOfForum(int $forumId): int
+    {
+        $t = new ThreadAlias('t');
+        $postIsVisible = $this->threadIsVisibleCondition($t);
+        return (int)selectCount()
+            ->from($t)
+            ->where($t->forumId()->eq(value($forumId))->and($postIsVisible))
+            ->fetchOne();
     }
 
 }

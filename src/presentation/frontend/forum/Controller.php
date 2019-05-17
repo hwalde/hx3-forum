@@ -19,16 +19,20 @@ class Controller extends FrontendController
     /**
      * @throws NotFoundException
      */
-    public function index($index) {
-        if(intval($index) != $index) {
+    public function index($forumId, $pageNumber = 1) {
+        if(intval($forumId) != $forumId) {
             throw new NotFoundException();
         }
-        $index = intval($index);
+        if(intval($pageNumber) != $pageNumber) {
+            throw new NotFoundException();
+        }
+        $forumId = intval($forumId);
+        $pageNumber = intval($pageNumber);
 
         $model = new Model();
 
         $forumFacade = DiContainer()->getForumFacade();
-        $model->setDetail($forumFacade->getDetail($index));
+        $model->setDetail($forumFacade->getDetail($forumId, $pageNumber));
 
         $this->setContent(__DIR__."/View.php", $model);
     }

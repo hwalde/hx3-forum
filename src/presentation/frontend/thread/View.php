@@ -14,6 +14,7 @@ namespace presentation\frontend\thread;
 $thread = $model->getThreadPage();
 ?>
 <div id="thread-detail">
+
     <!-- Pagination navigation -->
     <div class="pagination">
         <ul>
@@ -32,6 +33,8 @@ $thread = $model->getThreadPage();
 
     <!-- Thread title -->
     <h2><?=$thread->getThreadDetail()->getTitle()?></h2>
+
+    <!-- Posts -->
     <div class="posts">
         <?php foreach ($thread->getThreadPostList() as $post) : ?>
             <div class="post">
@@ -54,6 +57,8 @@ $thread = $model->getThreadPage();
             </div>
         <?php endforeach; ?>
     </div>
+
+    <!-- Page list -->
     <div class="page-list">
         <?php if(count($thread->getPageList())>1): ?>
             <div class="label">Seiten:</div>
@@ -78,5 +83,6 @@ $thread = $model->getThreadPage();
             <?php endforeach; ?>
         </ul>
     </div>
+
 </div>
 

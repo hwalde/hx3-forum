@@ -29,6 +29,9 @@ class Detail
     private $threadList;
 
     /** @var PageList */
+    private $pageList;
+
+    /** @var PageList */
     private $paginationPageList;
 
     public function __construct()
@@ -80,6 +83,19 @@ class Detail
     public function setThreadList(DetailThreadList $threadList): void
     {
         $this->threadList = $threadList;
+    }
+
+    /**
+     * @return Page[]
+     */
+    public function getPageList(): PageList
+    {
+        return $this->pageList;
+    }
+
+    public function setPageList(PageList $pageList): void
+    {
+        $this->pageList = $pageList;
     }
 
     /**

@@ -18,9 +18,11 @@ use generated\ForumAlias;
 use generated\ForumPermission;
 use generated\ForumPermissionAlias;
 use generated\GeneratedForumRepository;
+use generated\ThreadAlias;
 use POOQ\Condition;
 use function POOQ\length;
 use function POOQ\select;
+use function POOQ\selectCount;
 use function POOQ\value;
 use util\exception\NotFoundException;
 
@@ -39,6 +41,38 @@ class ForumRepository extends GeneratedForumRepository {
             throw new NotFoundException();
         }
         return current($recordList);
+    }
+
+    private function selectAllViewable(ForumAlias $f, ForumPermissionAlias $p, Condition $furtherCondition): ForumRecordList
+    {
+        $canViewForum = $this->getCanViewForumCondition($f, $p);
+
+        return select($f)
+            ->from($f)
+            ->leftJoin($p)->on($p->forumId()->eq($f->forumId()))
+            ->where(
+                $furtherCondition
+                    ->and($canViewForum)
+            )
+            ->order($f->displayOrder()->asc())
+            ->fetchAll()
+            ->into($f);
+    }
+
+    private function getCanViewForumCondition(ForumAlias $f, ForumPermissionAlias $p): Condition
+    {
+        $isForumActive = $f->options()->bitAnd(value(ForumOptions::BITMASK_active));
+
+        $hasNoPermissionInfo = $p->forumPermissions()->isNull();
+        $hasPermissionToViewForum = $p->forumPermissions()->bitAnd(value(ForumPermissionRecord::BITMASK_canview));
+        $permissiomGroupIs1 = $p->userGroupId()->eq(value(1));
+
+        $canViewForum = $isForumActive->and(
+            $hasNoPermissionInfo->or(
+                $hasPermissionToViewForum->and($permissiomGroupIs1)
+            )
+        );
+        return $canViewForum;
     }
 
     /**
@@ -64,30 +98,6 @@ class ForumRepository extends GeneratedForumRepository {
 
         $isSecondLevel = $f->parentId()->in($forumIdList);
         return $this->selectAllViewable($f, $p, $isSecondLevel);
-    }
-
-    private function selectAllViewable(ForumAlias $f, ForumPermissionAlias $p, Condition $furtherCondition): ForumRecordList
-    {
-        $isForumActive = $f->options()->bitAnd(value(ForumOptions::BITMASK_active));
-
-        $hasNoPermissionInfo = $p->forumPermissions()->isNull();
-        $hasPermissionToViewForum = $p->forumPermissions()->bitAnd(value(ForumPermissionRecord::BITMASK_canview));
-        $permissiomGroupIs1 = $p->userGroupId()->eq(value(1));
-
-        $canViewForum = $hasNoPermissionInfo
-            ->or($hasPermissionToViewForum->and($permissiomGroupIs1));
-
-        return select($f)
-            ->from($f)
-            ->leftJoin($p)->on($p->forumId()->eq($f->forumId()))
-            ->where(
-                $furtherCondition
-                    ->and($isForumActive)
-                    ->and($canViewForum)
-            )
-            ->order($f->displayOrder()->asc())
-            ->fetchAll()
-            ->into($f);
     }
 
     /**

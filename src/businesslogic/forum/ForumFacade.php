@@ -35,8 +35,8 @@ class ForumFacade
         return $this->overviewService->getOverview();
     }
 
-    public function getDetail(int $id) : Detail
+    public function getDetail(int $forumId, int $pageNumber) : Detail
     {
-        return $this->detailService->getDetail($id);
+        return $this->detailService->getDetail($forumId, $pageNumber);
     }
 }
