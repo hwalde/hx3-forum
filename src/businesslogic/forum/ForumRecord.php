@@ -27,7 +27,7 @@ class ForumRecord extends GeneratedForumRecord implements ForumPaginationRecord 
 
         $nameGenerator = new SeoNameGenerator();
 
-        if(!$this->hasParentId()) {
+        if($this->getParentId()===-1) {
             $hash = $nameGenerator->generateForumGroupHash($this->getTitle());
             return APPLICATION_PATH.'/'.$hash;
         }

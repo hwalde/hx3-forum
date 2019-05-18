@@ -10,7 +10,6 @@
 
 namespace businesslogic\forum\overview;
 
-
 class OverviewGroup
 {
     /** @var int */

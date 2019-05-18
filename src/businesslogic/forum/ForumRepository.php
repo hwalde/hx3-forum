@@ -120,7 +120,7 @@ class ForumRepository extends GeneratedForumRepository {
         $f = Forum::as('f');
 
         /** @var ForumRecord $forumRecord */
-        $forumRecord = select($f->forumId(), $f->title(), $f->parentList())
+        $forumRecord = select($f->forumId(), $f->title(), $f->parentList(), $f->parentId())
             ->from($f)
             ->where($f->forumId()->eq(value($forumId)))
             ->fetch()
@@ -132,7 +132,7 @@ class ForumRepository extends GeneratedForumRepository {
         }
 
         $parentIdList = explode(',', $forumRecord->getParentList());
-        $forumRecordList = select($f->forumId(), $f->title())
+        $forumRecordList = select($f->forumId(), $f->title(), $f->parentId())
             ->from($f)
             ->where($f->forumId()->in($parentIdList))
             ->order($f->parentList()->length()->asc())

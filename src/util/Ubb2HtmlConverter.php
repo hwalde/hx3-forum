@@ -12,45 +12,23 @@ namespace util;
 
 class Ubb2HtmlConverter
 {
-    public function convert(string $ubb): string
+    /** @var \JBBCode\Parser */
+    private $parser;
+
+    public function __construct()
     {
+        $this->parser = new \JBBCode\Parser();
+        $this->parser->addCodeDefinitionSet(new \JBBCode\DefaultCodeDefinitionSet());
+        $this->parser->addBBCode('quote', '<div class="quote">{param}</div>', true);
+        $this->parser->addBBCode('quote', '<div class="quote">{param}</div>');
+        $this->parser->addBBCode('code', '<code>{param}</code>');
+        $this->parser->addBBCode('size', '<span style="font-size:{option}pt">{param}</span>', true);
 
-        // http://localhost/hx3/dayz-183/[ger]-nmk-overpoch-root-server-mit-vielen-features-25052
-        $search = [
-            // Bold
-            '#\[b\](.*)\[\/b\]#is',
-
-            // Url
-            '#\[url\](.+?)\[\/url\]#is',
-            '#\[url="(.+?)"\](.+?)\[\/url\]#is',
-            '#\[url=(.+?)\](.+?)\[\/url\]#is',
-
-            // Youtube
-            '#\[youtube\](.*)\[\/youtube\]#is',
-
-            // Images
-            '#\[img\](.+?)\[\/img\]#is',
-
-            // Quote
-            '#\[quote\](.+?)\[\/quote\]#is',
-
-            // Code
-            '#\[php\](.+?)\[\/php\]#is',
-        ];
-        $replace = [
-            // Bold
-            '<strong>\\1</strong>',
-
-            // Url
-            '<a href="\\1" target="_blank">\\1</a>',
-            '<a href="\\1" target="_blank">\\2</a>',
-            '<a href="\\1" target="_blank">\\2</a>',
-
-            <<<END
+        $youtubeReplacement = <<<END
 <table class="tborder" cellpadding="6" cellspacing="1" border="0" style="width:auto;margin:10px 0;"> <thead>  
 	<tr>
 		<td class="tcat" colspan="2" style="text-align:center">
-		<a href="http://www.youtube.com/watch?v=\\1" title="View this video at YouTube in a new window or tab" target="_blank">YouTube Video</a>  
+		<a href="http://www.youtube.com/watch?v={param}" title="View this video at YouTube in a new window or tab" target="_blank">YouTube Video</a>  
 		</td>  
 	</tr> 
 </thead> 
@@ -58,20 +36,23 @@ class Ubb2HtmlConverter
 	<tr>  
 		<td class="panelsurround" align="center">  
 
-			<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/\\1"></param><embed src="http://www.youtube.com/v/\\1" type="application/x-shockwave-flash" width="425" height="350"></embed></object>
+			<object width="425" height="350"><param name="movie" value="http://www.youtube.com/v/{param}"></param><embed src="http://www.youtube.com/v/{param}" type="application/x-shockwave-flash" width="425" height="350"></embed></object>
   
 		</td>  
 	</tr> 
 </tbody> 
 </table>
-END,
-            '<img src="\\1"/>',
+END;
+        $this->parser->addBBCode('youtube', $youtubeReplacement);
+    }
 
-            '<div class="quote">\\1</div>',
+    public function convert(string $ubb): string
+    {
+        // http://localhost/hx3/dayz-183/[ger]-nmk-overpoch-root-server-mit-vielen-features-25052
 
-            "<code>\n\r\\1</code>"
-        ];
-        $html = preg_replace($search, $replace, $ubb);
+        $this->parser->parse($ubb);
+        $html = $this->parser->getAsHtml();
+        // todo: remove more than one consecutive br-tag?
         return nl2br($html);
     }
 }

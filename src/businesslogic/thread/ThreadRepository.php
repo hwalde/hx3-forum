@@ -68,7 +68,7 @@ class ThreadRepository extends GeneratedThreadRepository {
         $threadIdMatches = $t->threadId()->eq(value($threadId));
         $threadIsVisible = $this->threadIsVisibleCondition($t);
 
-        $result =  select($t, $f->title(), $f->forumId())
+        $result =  select($t, $f->title(), $f->forumId(), $f->parentId())
             ->from($t)
             ->innerJoin($f)->on($t->forumId()->eq($f->forumId()))
             ->where($threadIdMatches->and($threadIsVisible))

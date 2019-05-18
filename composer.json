@@ -6,6 +6,7 @@
   "require": {
     "ext-pdo": "*",
     "ext-mbstring": "*",
-    "hwalde/pooq": "dev-master"
+    "hwalde/pooq": "dev-master",
+    "jbbcode/jbbcode": "1.3.*"
   }
 }

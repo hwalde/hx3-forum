@@ -7,10 +7,11 @@
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
-include "config.php";
-include "vendor/autoload.php";
-include "src/functions.php";
-include "src/util/Psr4AutoloaderClass.php";
+include_once "config.php";
+include_once "vendor/autoload.php";
+include_once "src/functions.php";
+include_once "src/util/Psr4AutoloaderClass.php";
+include_once "vendor/jbbcode/jbbcode/JBBCode/Parser.php";
 
 $autoloader = new \util\Psr4AutoloaderClass();
 $autoloader->addNamespace("businesslogic", __DIR__.'/src/businesslogic');

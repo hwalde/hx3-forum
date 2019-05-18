@@ -6,15 +6,15 @@ Technik:
 - Add improved List and Map Types from POOQ and migrate old code
 
 Daten:
-- Posts anzeigen (wip)
-- Pagination für Thread-Anzeige
 - User-Daten inkl. Permissions laden
+
+Bugs:
+- Page Listing http://localhost/hx3/offtopic-7/quasselecke-24931 (Zuviele Einträge und falsche Links)
 
 Design:
 - Login/Logout hinzufügen
 
 Sonstiges:
-- Write an url crawler for hx3 forum to compare the urls with the new version
 - Improve deployment
     - generate css and deploy it
     - deploy vendor without dev-tools like PHPUnit
