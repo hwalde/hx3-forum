@@ -25,11 +25,16 @@ class FrontendController implements Controller
     public function __construct()
     {
         $this->model = new Model();
+        $this->model->setTitle('HX3 Forum');
         $this->renderer = new Renderer(__DIR__);
     }
 
-    public function setContent(string $viewPath, $viewModel = null) {
+    protected function setContent(string $viewPath, $viewModel = null) {
         $this->model->setContent($this->renderer->renderView($viewPath, $viewModel));
+    }
+
+    protected function setTitle(string $title) {
+        $this->model->setTitle($title.' -  HX3 Forum');
     }
 
     public function render() : string

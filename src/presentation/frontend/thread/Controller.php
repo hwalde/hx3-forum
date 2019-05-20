@@ -36,8 +36,10 @@ class Controller extends FrontendController
         $model = new Model();
 
         $forumFacade = DiContainer()->getThreadFacade();
-        $model->setThreadPage($forumFacade->getThreadPage($threadId, $pageNumber));
+        $threadPage = $forumFacade->getThreadPage($threadId, $pageNumber);
+        $model->setThreadPage($threadPage);
 
         $this->setContent(__DIR__."/View.php", $model);
+        $this->setTitle($threadPage->getThreadDetail()->getTitle());
     }
 }
