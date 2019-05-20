@@ -1,5 +1,4 @@
-<?php
-
+<?php declare(strict_types=1);
 /**
  * This file is part of HX3 Forum.
  *
@@ -37,14 +36,13 @@ class PostRepository extends GeneratedPostRepository {
             ->offset($offset)
             ->fetchAll()
             ->into($p);
-
     }
 
     public function countPostsOfThread(int $threadId): int
     {
         $p = new PostAlias('p');
         $postIsVisible = $this->getIsVisibleCondition($p);
-        return selectCount()
+        return (int)selectCount()
             ->from($p)
             ->where($p->threadId()->eq(value($threadId))->and($postIsVisible))
             ->fetchOne();

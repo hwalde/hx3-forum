@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * This file is part of HX3 Forum.
  *
@@ -9,7 +9,6 @@
  */
 
 namespace businesslogic\forum\detail;
-
 
 use businesslogic\Page;
 use businesslogic\PageList;

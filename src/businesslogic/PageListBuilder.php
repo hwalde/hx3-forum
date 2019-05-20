@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * This file is part of HX3 Forum.
  *
@@ -51,23 +51,23 @@ class PageListBuilder
     {
         for ($i = 0; $i < count($this->pageUrls) - 1; $i++) {
             $isCurrent = ($i + 1) == $this->currentPageNumber;
-            $list[] = new Page($i + 1, $this->pageUrls[$i], $isCurrent);
+            $list[] = new Page((string)($i + 1), $this->pageUrls[$i], $isCurrent);
         }
     }
 
     private function addMostImportantPages(PageList $list) : void
     {
-        $list[] = new Page(1, $this->pageUrls[0], $this->currentPageNumber == 1);
-        $list[] = new Page(2, $this->pageUrls[1], $this->currentPageNumber == 2);
-        $list[] = new Page(3, $this->pageUrls[2], $this->currentPageNumber == 3);
+        $list[] = new Page("1", $this->pageUrls[0], $this->currentPageNumber == 1);
+        $list[] = new Page("2", $this->pageUrls[1], $this->currentPageNumber == 2);
+        $list[] = new Page("3", $this->pageUrls[2], $this->currentPageNumber == 3);
         if(count($this->pageUrls)>10) {
-            $list[] = new Page(10, $this->pageUrls[9], $this->currentPageNumber == 10);
+            $list[] = new Page("10", $this->pageUrls[9], $this->currentPageNumber == 10);
         }
         if(count($this->pageUrls)>50) {
-            $list[] = new Page(50, $this->pageUrls[49], $this->currentPageNumber == 50);
+            $list[] = new Page("50", $this->pageUrls[49], $this->currentPageNumber == 50);
         }
         if(count($this->pageUrls)>100) {
-            $list[] = new Page(100, $this->pageUrls[99], $this->currentPageNumber == 100);
+            $list[] = new Page("100", $this->pageUrls[99], $this->currentPageNumber == 100);
         }
     }
 
@@ -79,7 +79,7 @@ class PageListBuilder
             $list[] = new Page('Letzte Seite', end($this->pageUrls));
         } else if ($hasPages) {
             $isCurrent = count($this->pageUrls) == $this->currentPageNumber;
-            $list[] = new Page(count($this->pageUrls), end($this->pageUrls), $isCurrent);
+            $list[] = new Page((string)count($this->pageUrls), end($this->pageUrls), $isCurrent);
         }
     }
 }

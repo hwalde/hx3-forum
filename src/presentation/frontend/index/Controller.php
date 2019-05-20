@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * This file is part of HX3 Forum.
  *
@@ -10,10 +10,6 @@
 
 namespace presentation\frontend\index;
 
-
-use businesslogic\user\authentication\AuthenticationFailed;
-use businesslogic\user\authentication\standard\StandardAuthentication;
-use businesslogic\user\authentication\standard\StandardAuthenticationRequest;
 use presentation\frontend\FrontendController;
 
 class Controller extends FrontendController {

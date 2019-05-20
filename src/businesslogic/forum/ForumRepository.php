@@ -1,5 +1,4 @@
-<?php
-
+<?php declare(strict_types=1);
 /**
  * This file is part of HX3 Forum.
  *
@@ -18,11 +17,8 @@ use generated\ForumAlias;
 use generated\ForumPermission;
 use generated\ForumPermissionAlias;
 use generated\GeneratedForumRepository;
-use generated\ThreadAlias;
 use POOQ\Condition;
-use function POOQ\length;
 use function POOQ\select;
-use function POOQ\selectCount;
 use function POOQ\value;
 use util\exception\NotFoundException;
 

@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * This file is part of HX3 Forum.
  *
@@ -10,8 +10,6 @@
 
 namespace presentation\frontend\error404;
 
-
-use PhpMyAdmin\Di\NotFoundException;
 use presentation\Render;
 use presentation\frontend\FrontendController;
 

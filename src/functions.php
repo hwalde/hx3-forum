@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /**
  * This file is part of HX3 Forum.
  *
@@ -8,9 +8,6 @@
  * file that was distributed with this source code.
  */
 
-use POOQ\FieldOrTable;
-use POOQ\SelectFromPart;
-use POOQ\SelectQueryBuilder;
 use util\DependencyInjectionContainer;
 
 function createPath($path) : string

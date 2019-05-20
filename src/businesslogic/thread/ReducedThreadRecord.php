@@ -10,7 +10,6 @@
 
 namespace businesslogic\thread;
 
-
 interface ReducedThreadRecord
 {
     public function getTitle() : string;
