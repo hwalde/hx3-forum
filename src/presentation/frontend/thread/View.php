@@ -36,10 +36,10 @@ $thread = $model->getThreadPage();
 
     <!-- Posts -->
     <div class="posts">
-        <?php foreach ($thread->getThreadPostList() as $post) : ?>
+        <?php foreach ($thread->getThreadPostList() as $index => $post) : ?>
             <div class="post">
-                <?php if($post->getTitle()!='') : ?>
-                <h3 class="post-title"><?=$post->getTitle()?></h3>
+                <?php if($index>0 && $post->getTitle()!='') : ?>
+                    <h3 class="post-title"><?=$post->getTitle()?></h3>
                 <?php endif; ?>
                 <div class="post-content-wrap">
                 <div class="post-content">
