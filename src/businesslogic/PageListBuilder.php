@@ -10,7 +10,6 @@
 
 namespace businesslogic;
 
-
 class PageListBuilder
 {
     /** @var int */
@@ -34,9 +33,18 @@ class PageListBuilder
     public function build() : PageList
     {
         $list = new PageList();
-        $this->addAllPagesExceptLastPage($list);
+        $this->addPagesExceptLastPage($list);
         $this->addLastPage($list);
         return $list;
+    }
+
+    private function addPagesExceptLastPage(PageList $list) : void
+    {
+        if(count($this->pageUrls)<7) {
+            $this->addAllPagesExceptLastPage($list);
+        } else {
+            $this->addMostImportantPages($list);
+        }
     }
 
     private function addAllPagesExceptLastPage(PageList $list) : void
@@ -44,6 +52,22 @@ class PageListBuilder
         for ($i = 0; $i < count($this->pageUrls) - 1; $i++) {
             $isCurrent = ($i + 1) == $this->currentPageNumber;
             $list[] = new Page($i + 1, $this->pageUrls[$i], $isCurrent);
+        }
+    }
+
+    private function addMostImportantPages(PageList $list) : void
+    {
+        $list[] = new Page(1, $this->pageUrls[0], $this->currentPageNumber == 1);
+        $list[] = new Page(2, $this->pageUrls[1], $this->currentPageNumber == 2);
+        $list[] = new Page(3, $this->pageUrls[2], $this->currentPageNumber == 3);
+        if(count($this->pageUrls)>10) {
+            $list[] = new Page(10, $this->pageUrls[9], $this->currentPageNumber == 10);
+        }
+        if(count($this->pageUrls)>50) {
+            $list[] = new Page(50, $this->pageUrls[49], $this->currentPageNumber == 50);
+        }
+        if(count($this->pageUrls)>100) {
+            $list[] = new Page(100, $this->pageUrls[99], $this->currentPageNumber == 100);
         }
     }
 
