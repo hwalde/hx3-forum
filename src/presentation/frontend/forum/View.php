@@ -78,29 +78,31 @@ namespace presentation\frontend\forum;
     ?>
 
     <!-- Page list -->
-    <div class="page-list">
-        <?php if(count($model->getDetail()->getPageList())>1): ?>
-            <div class="label">Seiten:</div>
-        <?php else: ?>
-            <div class="label">Seite:</div>
-        <?php endif; ?>
-        <ul>
-            <?php foreach ($model->getDetail()->getPageList() as $page) : ?>
-                <li>
-                    <?php if($page->isActive()): ?>
-                        <strong>
-                            <?=$page->getTitle()?>
-                        </strong>
-                    <?php else: ?>
-                        <?php if($page->hasUrl()) : ?>
-                            <a href="<?=$page->getUrl()?>"><?=$page->getTitle()?></a>
+    <?php if(count($model->getDetail()->getPageList())>0) : ?>
+        <div class="page-list">
+            <?php if(count($model->getDetail()->getPageList())>1): ?>
+                <div class="label">Seiten:</div>
+            <?php else: ?>
+                <div class="label">Seite:</div>
+            <?php endif; ?>
+            <ul>
+                <?php foreach ($model->getDetail()->getPageList() as $page) : ?>
+                    <li>
+                        <?php if($page->isActive()): ?>
+                            <strong>
+                                <?=$page->getTitle()?>
+                            </strong>
                         <?php else: ?>
-                            <?=$page->getTitle()?>
+                            <?php if($page->hasUrl()) : ?>
+                                <a href="<?=$page->getUrl()?>"><?=$page->getTitle()?></a>
+                            <?php else: ?>
+                                <?=$page->getTitle()?>
+                            <?php endif; ?>
                         <?php endif; ?>
-                    <?php endif; ?>
-                </li>
-            <?php endforeach; ?>
-        </ul>
-    </div>
+                    </li>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+    <?php endif; ?>
 
 </div>
