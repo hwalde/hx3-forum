@@ -13,7 +13,7 @@ namespace businesslogic\forum\detail;
 use businesslogic\Page;
 use businesslogic\PageList;
 
-class DetailThread
+class ForumDetailThread
 {
     /** @var string */
     private $title;

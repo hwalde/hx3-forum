@@ -13,13 +13,14 @@ namespace businesslogic\forum\detail;
 use businesslogic\forum\ForumRecord;
 use businesslogic\forum\ForumRecordList;
 use businesslogic\forum\ForumRepository;
+use businesslogic\forum\pagination\ForumPaginationService;
 use businesslogic\PageList;
 use businesslogic\PageListBuilder;
 use businesslogic\thread\ReducedThreadRecord;
 use businesslogic\thread\ReducedThreadRecordList;
 use businesslogic\thread\ThreadRepository;
 
-class DetailService
+class ForumDetailService
 {
     const MAXIMUM_THREADS_PER_PAGE = 100;
 
@@ -29,56 +30,50 @@ class DetailService
     /** @var ThreadRepository */
     private $threadRepository;
 
-    /** @var ForumPaginationService */
-    private $paginationService;
-
-    public function __construct(ForumRepository $forumRepository, ThreadRepository $threadRepository, ForumPaginationService $paginationService)
+    public function __construct(ForumRepository $forumRepository,
+                                ThreadRepository $threadRepository)
     {
         $this->forumRepository = $forumRepository;
         $this->threadRepository = $threadRepository;
-        $this->paginationService = $paginationService;
     }
 
-    public function getDetail(int $forumId, int $pageNumber) : Detail
+    public function getDetail(int $forumId) : ForumDetail
     {
         $forum = $this->forumRepository->selectById($forumId);
-        $detail = new Detail();
+        $detail = new ForumDetail();
         $detail->setForumId($forum->getForumId());
         $detail->setForumTitle($forum->getTitle());
-        $detail->setSubForumList($this->getSubForumList($forum->getForumId()));
-        $detail->setThreadList($this->getThreadList($forum, $pageNumber));
-        $detail->setPageList($this->getPageList($forumId, $forum->getUrlPath(), $pageNumber));
-        $detail->setPaginationPageList($this->paginationService->getPageList($forumId));
+        $detail->setForumUrl($forum->getUrlPath());
         return $detail;
     }
 
-    private function getSubForumList(int $forumId) : DetailSubForumList
+    public function getSubForumList(int $forumId) : ForumDetailSubForumList
     {
         $threadList = $this->forumRepository->selectAllByParentId($forumId);
 
-        $list = new DetailSubForumList();
+        $list = new ForumDetailSubForumList();
         $this->hydrateSubForumList($list, $threadList);
         return $list;
     }
 
-    private function hydrateSubForumList(DetailSubForumList $subForumList, ForumRecordList $forumRecordList): void
+    private function hydrateSubForumList(ForumDetailSubForumList $subForumList, ForumRecordList $forumRecordList): void
     {
         /** @var ForumRecord $forumRecord */
         foreach ($forumRecordList as $forumRecord) {
-            $detail = new DetailSubForum();
+            $detail = new ForumDetailSubForum();
             $this->hydrateSubForum($detail, $forumRecord);
             $subForumList[] = $detail;
         }
     }
 
-    private function hydrateSubForum(DetailSubForum $detail, ForumRecord $forumRecord): void
+    private function hydrateSubForum(ForumDetailSubForum $detail, ForumRecord $forumRecord): void
     {
         $detail->setTitle($forumRecord->getTitle());
         $detail->setUrl($forumRecord->getUrlPath());
         $detail->setDescription($forumRecord->getDescription());
     }
 
-    private function getThreadList(ForumRecord $forumRecord, int $pageNumber) : DetailThreadList
+    public function getThreadList(int $forumId, string $forumUrl, int $pageNumber) : ForumDetailThreadList
     {
         $pageNumber--;
         if($pageNumber < 0) {
@@ -86,31 +81,31 @@ class DetailService
         }
         $offset = self::MAXIMUM_THREADS_PER_PAGE*$pageNumber;
         $limit = self::MAXIMUM_THREADS_PER_PAGE;
-        $threadList = $this->threadRepository->selectOfForum($forumRecord->getForumId(), $limit, $offset);
+        $threadList = $this->threadRepository->selectOfForum($forumId, $limit, $offset);
 
-        $list = new DetailThreadList();
-        $this->hydrateDetailThreadList($list, $threadList, $forumRecord);
+        $list = new ForumDetailThreadList();
+        $this->hydrateDetailThreadList($list, $threadList, $forumUrl);
         return $list;
     }
 
-    private function hydrateDetailThreadList(DetailThreadList $detailThreadList,
+    private function hydrateDetailThreadList(ForumDetailThreadList $detailThreadList,
                                              ReducedThreadRecordList $threadRecordList,
-                                             ForumRecord $forumRecord): void
+                                             string $forumUrl): void
     {
         /** @var ReducedThreadRecord $thread */
         foreach ($threadRecordList as $thread) {
-            $detail = new DetailThread();
-            $this->hydrateDetailThread($detail, $thread, $forumRecord);
+            $detail = new ForumDetailThread();
+            $this->hydrateDetailThread($detail, $thread, $forumUrl);
             $detailThreadList[] = $detail;
         }
     }
 
-    private function hydrateDetailThread(DetailThread $detail,
+    private function hydrateDetailThread(ForumDetailThread $detail,
                                          ReducedThreadRecord $threadRecord,
-                                         ForumRecord $forumRecord): void
+                                         string $forumUrl): void
     {
         $detail->setTitle($threadRecord->getTitle());
-        $detail->setUrl($forumRecord->getUrlPath().$threadRecord->getUrlPathPart());
+        $detail->setUrl($forumUrl.$threadRecord->getUrlPathPart());
         $detail->setCreatorUserName($threadRecord->getPostUserName());
         $detail->setLastPostUserName($threadRecord->getLastPoster());
     }

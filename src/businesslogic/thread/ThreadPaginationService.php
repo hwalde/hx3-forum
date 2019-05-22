@@ -10,14 +10,14 @@
 
 namespace businesslogic\thread;
 
-use businesslogic\forum\detail\ForumPaginationService;
+use businesslogic\forum\pagination\ForumPaginationService;
 use businesslogic\forum\ForumRecord;
 use businesslogic\Page;
 use businesslogic\PageList;
 
 class ThreadPaginationService
 {
-    /** @var ForumPaginationService */
+    /** @var \businesslogic\forum\pagination\ForumPaginationService */
     private $forumPaginationService;
 
     /** @var ThreadRepository */

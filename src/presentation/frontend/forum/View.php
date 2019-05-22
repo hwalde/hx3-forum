@@ -18,8 +18,8 @@ namespace presentation\frontend\forum;
     <div class="pagination">
         <ul>
             <?php
-            $pageCount = count($model->getDetail()->getPaginationPageList());
-            foreach ($model->getDetail()->getPaginationPageList() as $index => $page) : ?>
+            $pageCount = count($model->getDetailPage()->getPaginationPageList());
+            foreach ($model->getDetailPage()->getPaginationPageList() as $index => $page) : ?>
                 <?php $isLastPage = $index == $pageCount - 1;
                 if (!$isLastPage) : ?>
                     <li><a href="<?= $page->getUrl() ?>"><?= $page->getTitle() ?></a></li>
@@ -31,11 +31,11 @@ namespace presentation\frontend\forum;
     </div>
 
     <!-- Page title -->
-    <h2><?= $model->getDetail()->getForumTitle() ?></h2>
+    <h2><?= $model->getDetailPage()->getDetail()->getForumTitle() ?></h2>
 
     <!-- SubForums -->
     <?php
-    $forumList = $model->getDetail()->getSubForumList();
+    $forumList = $model->getDetailPage()->getSubForumList();
     $hasForums = count($forumList) > 0;
     if ($hasForums) {
         ?>
@@ -56,7 +56,7 @@ namespace presentation\frontend\forum;
         <!-- Threads -->
         <?php
     }
-    $threadList = $model->getDetail()->getThreadList();
+    $threadList = $model->getDetailPage()->getThreadList();
     $hasThreads = count($threadList) > 0;
     if ($hasThreads) {
         ?>
@@ -78,15 +78,15 @@ namespace presentation\frontend\forum;
     ?>
 
     <!-- Page list -->
-    <?php if(count($model->getDetail()->getPageList())>0) : ?>
+    <?php if(count($model->getDetailPage()->getPageList())>0) : ?>
         <div class="page-list">
-            <?php if(count($model->getDetail()->getPageList())>1): ?>
+            <?php if(count($model->getDetailPage()->getPageList())>1): ?>
                 <div class="label">Seiten:</div>
             <?php else: ?>
                 <div class="label">Seite:</div>
             <?php endif; ?>
             <ul>
-                <?php foreach ($model->getDetail()->getPageList() as $page) : ?>
+                <?php foreach ($model->getDetailPage()->getPageList() as $page) : ?>
                     <li>
                         <?php if($page->isActive()): ?>
                             <strong>

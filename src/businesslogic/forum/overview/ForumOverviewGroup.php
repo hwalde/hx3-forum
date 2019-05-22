@@ -10,7 +10,7 @@
 
 namespace businesslogic\forum\overview;
 
-class OverviewGroup
+class ForumOverviewGroup
 {
     /** @var int */
     private $forumId;
@@ -24,12 +24,12 @@ class OverviewGroup
     /** @var string */
     private $url;
 
-    /** @var OverviewForumList */
+    /** @var ForumOverviewForumList */
     private $forumList;
 
     public function __construct()
     {
-        $this->forumList = new OverviewForumList();
+        $this->forumList = new ForumOverviewForumList();
     }
 
     public function getForumId(): int
@@ -73,19 +73,19 @@ class OverviewGroup
     }
 
     /**
-     * @return OverviewForum[]
+     * @return ForumOverviewForum[]
      */
-    public function getForumList(): OverviewForumList
+    public function getForumList(): ForumOverviewForumList
     {
         return $this->forumList;
     }
 
-    public function setForumList(OverviewForumList $forumList): void
+    public function setForumList(ForumOverviewForumList $forumList): void
     {
         $this->forumList = $forumList;
     }
 
-    public function addForum(OverviewForum $forum): void
+    public function addForum(ForumOverviewForum $forum): void
     {
         $this->forumList[] = $forum;
     }

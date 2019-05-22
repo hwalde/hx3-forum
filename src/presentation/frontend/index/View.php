@@ -14,7 +14,7 @@ namespace presentation\frontend\index;
 ?>
 <div id="forum-overview">
 
-    <?php foreach ($model->getOverview()->getGroupList() as $group) : ?>
+    <?php foreach ($model->getOverviewPage()->getGroupList() as $group) : ?>
         <h2 id="<?=$group->getHashName()?>">
             <!--a href="<?=$group->getUrl()?>"-->
                 <?=$group->getTitle()?>

@@ -8,32 +8,31 @@
  * file that was distributed with this source code.
  */
 
-namespace businesslogic\forum\overview;
+namespace businesslogic\forum;
 
-class Overview
+use businesslogic\forum\overview\ForumOverviewGroup;
+use businesslogic\forum\overview\ForumOverviewGroupList;
+
+class ForumOverviewPage
 {
-    /** @var OverviewGroupList */
+    /** @var ForumOverviewGroupList */
     private $groupList;
 
     public function __construct()
     {
-        $this->groupList = new OverviewGroupList();
+        $this->groupList = new ForumOverviewGroupList();
     }
 
     /**
-     * @return OverviewGroup[]
+     * @return ForumOverviewGroup[]
      */
-    public function getGroupList(): OverviewGroupList
+    public function getGroupList(): ForumOverviewGroupList
     {
         return $this->groupList;
     }
 
-    public function setGroupList(OverviewGroupList $groupList): void
+    public function setGroupList(ForumOverviewGroupList $groupList): void
     {
         $this->groupList = $groupList;
-    }
-
-    public function addGroup(OverviewGroup $group) {
-        $this->groupList[] = $group;
     }
 }

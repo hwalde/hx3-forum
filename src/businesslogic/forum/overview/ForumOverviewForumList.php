@@ -8,13 +8,14 @@
  * file that was distributed with this source code.
  */
 
-namespace businesslogic\forum\detail;
+namespace businesslogic\forum\overview;
 
-interface ForumPaginationRecord
+use util\AbstractList;
+
+class ForumOverviewForumList extends AbstractList
 {
-    public function getUrlPath() : string;
-
-    public function getForumId() : int;
-
-    public function getTitle() : string;
+    function getListElementType()
+    {
+        return ForumOverviewForum::class;
+    }
 }

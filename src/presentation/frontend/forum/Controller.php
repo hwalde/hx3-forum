@@ -31,10 +31,10 @@ class Controller extends FrontendController
         $model = new Model();
 
         $forumFacade = DiContainer()->getForumFacade();
-        $forumDetail = $forumFacade->getDetail($forumId, $pageNumber);
-        $model->setDetail($forumDetail);
+        $forumDetail = $forumFacade->getDetailPage($forumId, $pageNumber);
+        $model->setDetailPage($forumDetail);
 
         $this->setContent(__DIR__."/View.php", $model);
-        $this->setTitle($forumDetail->getForumTitle());
+        $this->setTitle($forumDetail->getDetail()->getForumTitle());
     }
 }

@@ -10,7 +10,7 @@
  
 namespace businesslogic\forum;
  
-use businesslogic\forum\detail\ForumPaginationRecord;
+use businesslogic\forum\pagination\ForumPaginationRecord;
 use generated\GeneratedForumRecord;
 use util\SeoNameGenerator;
 

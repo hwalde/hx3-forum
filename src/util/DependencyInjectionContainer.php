@@ -10,13 +10,13 @@
 
 namespace util;
 
-use businesslogic\forum\detail\ForumPaginationService;
+use businesslogic\forum\pagination\ForumPaginationService;
 use businesslogic\forum\ForumFacade;
 use businesslogic\forum\ForumPermissionRepository;
 use businesslogic\forum\ForumPermissionService;
 use businesslogic\forum\ForumRepository;
-use businesslogic\forum\overview\OverviewService as ForumOverviewService;
-use businesslogic\forum\detail\DetailService as ForumDetailService;
+use businesslogic\forum\overview\ForumOverviewService;
+use businesslogic\forum\detail\ForumDetailService;
 use businesslogic\post\PostRepository;
 use businesslogic\thread\detail\ThreadDetailService;
 use businesslogic\thread\posts\ThreadPostsService;
@@ -30,7 +30,11 @@ class DependencyInjectionContainer
     {
         static $instance = null;
         if($instance === null) {
-            $instance = new ForumFacade($this->getForumOverviewService(), $this->getForumDetailService());
+            $instance = new ForumFacade(
+                $this->getForumOverviewService(),
+                $this->getForumDetailService(),
+                $this->getForumPaginationService()
+            );
         }
         return $instance;
     }
@@ -77,8 +81,7 @@ class DependencyInjectionContainer
         if($instance === null) {
             $instance = new ForumDetailService(
                 $this->getForumRepository(),
-                $this->getThreadRepository(),
-                $this->getForumPaginationService()
+                $this->getThreadRepository()
             );
         }
         return $instance;

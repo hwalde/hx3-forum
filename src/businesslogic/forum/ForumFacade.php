@@ -10,32 +10,44 @@
 
 namespace businesslogic\forum;
 
-use businesslogic\forum\detail\Detail;
-use businesslogic\forum\detail\DetailService;
-use businesslogic\forum\overview\Overview;
-use businesslogic\forum\overview\OverviewService;
+use businesslogic\forum\detail\ForumDetailService;
+use businesslogic\forum\pagination\ForumPaginationService;
+use businesslogic\forum\overview\ForumOverviewService;
 
 class ForumFacade
 {
-    /** @var OverviewService */
+    /** @var ForumOverviewService */
     private $overviewService;
 
-    /** @var DetailService */
+    /** @var ForumDetailService */
     private $detailService;
 
-    public function __construct(OverviewService $overviewService, DetailService $detailService)
+    /** @var ForumPaginationService */
+    private $paginationService;
+
+    public function __construct(ForumOverviewService $overviewService, ForumDetailService $detailService, ForumPaginationService $paginationService)
     {
         $this->overviewService = $overviewService;
         $this->detailService = $detailService;
+        $this->paginationService = $paginationService;
     }
 
-    public function getOverview() : Overview
+    public function getOverviewPage() : ForumOverviewPage
     {
-        return $this->overviewService->getOverview();
+        $page = new ForumOverviewPage();
+        $page->setGroupList($this->overviewService->getForumGroupList());
+        return $page;
     }
 
-    public function getDetail(int $forumId, int $pageNumber) : Detail
+    public function getDetailPage(int $forumId, int $pageNumber) : ForumDetailPage
     {
-        return $this->detailService->getDetail($forumId, $pageNumber);
+        $page = new ForumDetailPage();
+        $detail = $this->detailService->getDetail($forumId);
+        $page->setDetail($detail);
+        $page->setSubForumList($this->detailService->getSubForumList($forumId));
+        $page->setThreadList($this->detailService->getThreadList($forumId, $detail->getForumUrl(), $pageNumber));
+        $page->setPageList($this->detailService->getPageList($forumId, $detail->getForumUrl(), $pageNumber));
+        $page->setPaginationPageList($this->paginationService->getPageList($forumId));
+        return $page;
     }
 }

@@ -8,23 +8,25 @@
  * file that was distributed with this source code.
  */
 
-namespace businesslogic\forum\detail;
+namespace businesslogic\forum;
 
+use businesslogic\forum\detail\ForumDetail;
+use businesslogic\forum\detail\ForumDetailSubForum;
+use businesslogic\forum\detail\ForumDetailSubForumList;
+use businesslogic\forum\detail\ForumDetailThread;
+use businesslogic\forum\detail\ForumDetailThreadList;
 use businesslogic\Page;
 use businesslogic\PageList;
 
-class Detail
+class ForumDetailPage
 {
-    /** @var int */
-    private $forumId;
+    /** @var ForumDetail */
+    private $detail;
 
-    /** @var string */
-    private $forumTitle;
-
-    /** @var DetailSubForumList */
+    /** @var ForumDetailSubForumList */
     private $subForumList;
 
-    /** @var DetailThreadList */
+    /** @var ForumDetailThreadList */
     private $threadList;
 
     /** @var PageList */
@@ -35,51 +37,47 @@ class Detail
 
     public function __construct()
     {
-        $this->subForumList = new DetailSubForumList();
-    }
-
-    public function getForumId(): int
-    {
-        return $this->forumId;
-    }
-
-    public function setForumId(int $forumId): void
-    {
-        $this->forumId = $forumId;
-    }
-
-    public function getForumTitle(): string
-    {
-        return $this->forumTitle;
-    }
-
-    public function setForumTitle(string $forumTitle): void
-    {
-        $this->forumTitle = $forumTitle;
+        $this->subForumList = new ForumDetailSubForumList();
     }
 
     /**
-     * @return DetailSubForum[]
+     * @return ForumDetail
      */
-    public function getSubForumList(): DetailSubForumList
+    public function getDetail(): ForumDetail
+    {
+        return $this->detail;
+    }
+
+    /**
+     * @param ForumDetail $detail
+     */
+    public function setDetail(ForumDetail $detail): void
+    {
+        $this->detail = $detail;
+    }
+
+    /**
+     * @return ForumDetailSubForum[]
+     */
+    public function getSubForumList(): ForumDetailSubForumList
     {
         return $this->subForumList;
     }
 
-    public function setSubForumList(DetailSubForumList $subForumList): void
+    public function setSubForumList(ForumDetailSubForumList $subForumList): void
     {
         $this->subForumList = $subForumList;
     }
 
     /**
-     * @return DetailThread[]
+     * @return ForumDetailThread[]
      */
-    public function getThreadList(): DetailThreadList
+    public function getThreadList(): ForumDetailThreadList
     {
         return $this->threadList;
     }
 
-    public function setThreadList(DetailThreadList $threadList): void
+    public function setThreadList(ForumDetailThreadList $threadList): void
     {
         $this->threadList = $threadList;
     }

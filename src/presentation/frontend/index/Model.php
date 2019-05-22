@@ -10,7 +10,7 @@
 
 namespace presentation\frontend\index;
 
-use businesslogic\forum\overview\Overview;
+use businesslogic\forum\ForumOverviewPage;
 
 class Model
 {
@@ -23,8 +23,8 @@ class Model
     /** @var string|null */
     private $error;
 
-    /** @var Overview */
-    private $overview;
+    /** @var ForumOverviewPage */
+    private $overviewPage;
 
     /**
      * @return string
@@ -81,14 +81,14 @@ class Model
         return isset($this->error);
     }
 
-    public function getOverview(): Overview
+    public function getOverviewPage(): ForumOverviewPage
     {
-        return $this->overview;
+        return $this->overviewPage;
     }
 
-    public function setOverview(Overview $overview): void
+    public function setOverviewPage(ForumOverviewPage $overviewPage): void
     {
-        $this->overview = $overview;
+        $this->overviewPage = $overviewPage;
     }
 
 }

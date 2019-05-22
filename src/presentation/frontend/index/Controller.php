@@ -19,7 +19,7 @@ class Controller extends FrontendController {
         $model = new Model();
 
         $forumFacade = DiContainer()->getForumFacade();
-        $model->setOverview($forumFacade->getOverview());
+        $model->setOverviewPage($forumFacade->getOverviewPage());
 
         $this->setContent(__DIR__ . "/View.php", $model);
     }

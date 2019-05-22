@@ -8,14 +8,14 @@
  * file that was distributed with this source code.
  */
 
-namespace businesslogic\forum\detail;
+namespace businesslogic\forum\overview;
 
 use util\AbstractList;
 
-class DetailThreadList extends AbstractList
+class ForumOverviewGroupList extends AbstractList
 {
     function getListElementType()
     {
-        return DetailThread::class;
+        return ForumOverviewGroup::class;
     }
 }

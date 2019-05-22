@@ -8,7 +8,7 @@
  * file that was distributed with this source code.
  */
 
-namespace businesslogic\forum\detail;
+namespace businesslogic\forum\pagination;
 
 use businesslogic\forum\ForumRepository;
 use businesslogic\Page;

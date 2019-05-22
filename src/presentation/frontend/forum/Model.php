@@ -10,26 +10,26 @@
 
 namespace presentation\frontend\forum;
 
-use businesslogic\forum\detail\Detail;
+use businesslogic\forum\ForumDetailPage;
 
 class Model
 {
-    /** @var Detail */
-    private $detail;
+    /** @var ForumDetailPage */
+    private $detailPage;
 
     /**
-     * @return Detail
+     * @return ForumDetailPage
      */
-    public function getDetail(): Detail
+    public function getDetailPage(): ForumDetailPage
     {
-        return $this->detail;
+        return $this->detailPage;
     }
 
     /**
-     * @param Detail $detail
+     * @param ForumDetailPage $detailPage
      */
-    public function setDetail(Detail $detail): void
+    public function setDetailPage(ForumDetailPage $detailPage): void
     {
-        $this->detail = $detail;
+        $this->detailPage = $detailPage;
     }
 }

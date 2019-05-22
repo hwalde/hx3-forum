@@ -12,10 +12,10 @@ namespace businesslogic\forum\detail;
 
 use util\AbstractList;
 
-class DetailSubForumList extends AbstractList
+class ForumDetailSubForumList extends AbstractList
 {
     function getListElementType()
     {
-        return DetailSubForum::class;
+        return ForumDetailSubForum::class;
     }
 }

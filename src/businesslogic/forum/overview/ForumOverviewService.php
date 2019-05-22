@@ -16,7 +16,7 @@ use businesslogic\forum\ForumRecordList;
 use businesslogic\forum\ForumRepository;
 use util\SeoNameGenerator;
 
-class OverviewService
+class ForumOverviewService
 {
     /** @var ForumRepository */
     private $repository;
@@ -31,11 +31,11 @@ class OverviewService
     }
 
     /**
-     * @return Overview
+     * @return ForumOverviewGroupList
      */
-    public function getOverview() : Overview
+    public function getForumGroupList() : ForumOverviewGroupList
     {
-        $overview = new Overview();
+        $list = new ForumOverviewGroupList();
 
         $topLevelForumList = $this->repository->selectAllTopLevel();
 
@@ -43,31 +43,31 @@ class OverviewService
             $topLevelForumList->extractForumIds()
         );
 
-        $this->hydrateOverview($overview, $topLevelForumList, $secondLevelForumList);
+        $this->hydrateGroupList($list, $topLevelForumList, $secondLevelForumList);
 
-        return $overview;
+        return $list;
     }
 
     /**
-     * @param Overview $overview
+     * @param ForumOverviewGroup[] $groupList
      * @param ForumRecord[] $topLevelList
      * @param ForumRecord[] $subForumList
      */
-    private function hydrateOverview(Overview $overview, ForumRecordList $topLevelList, ForumRecordList $subForumList): void
+    private function hydrateGroupList(ForumOverviewGroupList $groupList, ForumRecordList $topLevelList, ForumRecordList $subForumList): void
     {
         foreach ($topLevelList as $forum) {
-            $group = new OverviewGroup();
+            $group = new ForumOverviewGroup();
             $this->hydrateGroup($group, $forum, $subForumList);
-            $overview->addGroup($group);
+            $groupList[] = $group;
         }
     }
 
     /**
-     * @param OverviewGroup $overviewGroup
+     * @param ForumOverviewGroup $overviewGroup
      * @param ForumRecord $topLevelForum
      * @param ForumRecord[] $andLevelForumList
      */
-    private function hydrateGroup(OverviewGroup $overviewGroup, ForumRecord $topLevelForum, ForumRecordList $andLevelForumList): void
+    private function hydrateGroup(ForumOverviewGroup $overviewGroup, ForumRecord $topLevelForum, ForumRecordList $andLevelForumList): void
     {
         $overviewGroup->setForumId($topLevelForum->getForumId());
         $overviewGroup->setTitle($topLevelForum->getTitle());
@@ -90,14 +90,14 @@ class OverviewService
     }
 
     /**
-     * @param OverviewGroup $overviewGroup
+     * @param ForumOverviewGroup $overviewGroup
      * @param ForumRecord[] $andLevelForumList
      */
-    private function hydrateGroupForumList(OverviewGroup $overviewGroup, ForumRecordList $andLevelForumList): void
+    private function hydrateGroupForumList(ForumOverviewGroup $overviewGroup, ForumRecordList $andLevelForumList): void
     {
         foreach ($andLevelForumList as $forum) {
             if ($forum->getParentid() == $overviewGroup->getForumId()) {
-                $overviewForum = new OverviewForum();
+                $overviewForum = new ForumOverviewForum();
                 $this->hydrateForum($overviewForum, $forum);
                 $overviewGroup->addForum($overviewForum);
             }
@@ -105,10 +105,10 @@ class OverviewService
     }
 
     /**
-     * @param OverviewForum $overviewForum
+     * @param ForumOverviewForum $overviewForum
      * @param ForumRecord $forum
      */
-    private function hydrateForum(OverviewForum $overviewForum, ForumRecord $forum): void
+    private function hydrateForum(ForumOverviewForum $overviewForum, ForumRecord $forum): void
     {
         $overviewForum->setId($forum->getForumId());
         $overviewForum->setTitle($forum->getTitle());

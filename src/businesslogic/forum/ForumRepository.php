@@ -10,8 +10,8 @@
  
 namespace businesslogic\forum;
  
-use businesslogic\forum\detail\ForumPaginationRecord;
-use businesslogic\forum\detail\ForumPaginationRecordList;
+use businesslogic\forum\pagination\ForumPaginationRecord;
+use businesslogic\forum\pagination\ForumPaginationRecordList;
 use generated\Forum;
 use generated\ForumAlias;
 use generated\ForumPermission;
@@ -109,7 +109,7 @@ class ForumRepository extends GeneratedForumRepository {
     }
 
     /**
-     * @return ForumPaginationRecord[]
+     * @return \businesslogic\forum\pagination\ForumPaginationRecord[]
      */
     public function selectAllPaginationList(int $forumId): ForumPaginationRecordList
     {
