@@ -55,7 +55,7 @@ From my experience the - by far - most important aspect of well crafted software
 
 Other valuable aspects are:
 - [Separation of concerns](https://en.wikipedia.org/wiki/Separation_of_concerns). Instead of writing complex files that do many things we write a class for every concern.
-- Use strict typing at all costs. Strict typing avoids almost all bugs. Plus it enables auto-completion and refactoring. To make not just the PHP code save but the SQL as well we use POOQ(https://github.com/hwalde/pooq) for writing type-safe sql-queries. And we use List and Map-Objects in combination with Annotations to upgrade PHP with Generics as best as we can.
+- Use strict typing at all costs. Strict typing avoids almost all bugs. Plus it enables auto-completion and refactoring. To make not just the PHP code save but the SQL as well we use [POOQ](https://github.com/hwalde/pooq) for writing type-safe sql-queries. And we use List and Map-Objects in combination with Annotations to upgrade PHP with Generics as best as we can.
 - Keeping it as simple as possible. Because every unnecessary feature adds adds complexity that needs to be maintained and understood.  
 - Using names that developers understand ([Design Patterns](https://en.wikipedia.org/wiki/Software_design_pattern)) and clean naming for the non-technical part (=> [Ubiquitous Language](https://martinfowler.com/bliki/UbiquitousLanguage.html))
 - Avoid the use of third party software - especially software with short update cycles such as frameworks - as you are bound to their update cycles. And their breaking changes break your application. Every library that is used needs to be behind an anti-corruption-layer.
