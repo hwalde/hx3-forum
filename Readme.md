@@ -89,51 +89,52 @@ Business logic contains all functionality that is directly related to what is sp
 
 Presentation is the web-layer above the business logic. 
 
-Util contains the "general" functionality, such as UBB2HTML-converter or the SEO-name-generator.
+Util contains the "general" functionality, such as UBB2HTML-converter or the Autoloader.
 
 #### Presentation
 We have three different types of classes/files:
 
-**Controller**<br>
+##### Controller
 Controllers take the input, validate it and decide what to do.
 Controllers does not contain business logic. Controllers communicate with the business-logic facades.
 Controllers fill the ViewModel-object and give that object to the View.
 In some cases the controller redirects to other controllers.
 
-**ViewModel**<br>
-This is a simple data-access-object that holds **all** information that the view needs to render the page.
+##### ViewModel
+This is a simple data-access-object that holds all information that the view needs to render the page.
 
-**View**<br>
-This is the template. Currently we use native PHP templates. (Did you know: PHP was once a template language for C.)
-That is why PHP is quite good at this task. However many people don't like PHP templates because they don't look as nice as other template languages do. And that is true. They look ugly. Really ugly.
-However they have a clear advantage that make up for that: They allow for auto-completion and refactoring.
-Since our sourcecode is strictly typed from beginning to end we have a very tight software. 
+##### View
+This is the template. Currently we use native PHP templates. 
+
+(Did you know: PHP was once a template language for C. That is why PHP is quite good at this task.
+However many people don't like PHP templates because they don't look as nice as other template languages do. And that is true. They look ugly. Really ugly.
+However they have a clear advantage that make up for that: They allow for auto-completion and semi-automatic refactoring.
+Since our sourcecode is strictly typed from beginning to end we have a very tight software.)
 
 #### Business logic
-
 We have the following class types:
 
-**Facade**<br>
+##### Facade
 Facades job is to take the information from many services and combine them.
 
-**Service**<br>
+##### Service
 Generate information. Provide business-specific functionality.
 A lot of times they need information from the database.
 To do that they ask the Repository for that information as they are not allowed to communicate with the database directly.
 
-**Repository**<br>
+##### Repository
 Communicate with database
 
-**Record**<br>
+##### Record
 Represent a row from a database table
 
-**RecordList**<br>
+##### RecordList
 A list of Records
 
-**Hydrator**<br>
-Fills an data-access-object with values. 
+##### Hydrator
+Fill a data-access-object with values. 
 
 <br>
-Most of the remaining classes are data-acces-objects and their corresponding list-objects.
+Most of the remaining classes are data-access-objects and their corresponding list-objects.
 
 
