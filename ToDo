@@ -1,26 +1,44 @@
-Nächste Schritte:
+Next steps:
 =================
-Technik:
-- User()-Funktion analog zu Database()-Funktion bauen plus Benutzerauthentifizierug gegen die hx3-Datenbank (Arma-Code schauen)
-- BBCode2Html-Converter (wip)
+
+Better contents:
+-------------------------
+- Add smilies
+- Add attachments
+- Add more ubb tags to BBCode2Html-Converter
+
+Users can login/logout:
+-------------------------
+- Add login-form to page layout
+- Add basic logged-in-information to page layout (incl. Logout link)
+- Add Session handling
+- Add Models(+Records,...) for basic User-data needed for Authorization
+- Add AuthenticationService (call ist UserService?) and implement authentication
+- Add User()-method for convenience
+- Make login/logout work
+
+Make contents writeable:
+-------------------------
+- Load user permissions and calculate whether current user has writing rights in current forum/thread and display that info on page (debug)
+- Enhance POOQ library to support insert/update/delete database operations
+- ...
+
+Improve quality:
+-------------------------
 - Add improved List and Map Types from POOQ and migrate old code
-
-Daten:
-- User-Daten inkl. Permissions laden
-
-Bugs:
-- Page Listing http://localhost/hx3/offtopic-7/quasselecke-24931 (Zuviele Einträge und falsche Links)
-
-Design:
-- Login/Logout hinzufügen
-
-Sonstiges:
+- Analyze why http://localhost/hx3/offtopic-7/quasselecke-24931 takes up too much loading time
 - Improve deployment
     - generate css and deploy it
     - deploy vendor without dev-tools like PHPUnit
 - Remove css (keep scss) from Repo
+
+Other tasks:
+------------------
 - https für hx3-next.de
-- Readme.me aktualisieren und weitere Docs schreiben für Entwickler
-- Google SSO: https://developers.google.com/identity/one-tap/web/get-started oder https://developers.google.com/web/updates/2016/04/credential-management-api
+- Analyze whether Google SSO: https://developers.google.com/identity/one-tap/web/get-started oder https://developers.google.com/web/updates/2016/04/credential-management-api is useful
 
 Bugs:
+----------
+N/A
+
+
