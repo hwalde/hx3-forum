@@ -52,51 +52,51 @@ class PictureComment implements Table {
     
     public static function commentId() : ColumnField
     {
-        return new ColumnField('picturecomment', 'commentid');
+        return new ColumnField('commentId', 'PictureComment', 'picturecomment', 'commentid');
     }
     public static function pictureId() : ColumnField
     {
-        return new ColumnField('picturecomment', 'pictureid');
+        return new ColumnField('pictureId', 'PictureComment', 'picturecomment', 'pictureid');
     }
     public static function postUserId() : ColumnField
     {
-        return new ColumnField('picturecomment', 'postuserid');
+        return new ColumnField('postUserId', 'PictureComment', 'picturecomment', 'postuserid');
     }
     public static function postUserName() : ColumnField
     {
-        return new ColumnField('picturecomment', 'postusername');
+        return new ColumnField('postUserName', 'PictureComment', 'picturecomment', 'postusername');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('picturecomment', 'dateline');
+        return new ColumnField('dateLine', 'PictureComment', 'picturecomment', 'dateline');
     }
     public static function state() : ColumnField
     {
-        return new ColumnField('picturecomment', 'state');
+        return new ColumnField('state', 'PictureComment', 'picturecomment', 'state');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('picturecomment', 'title');
+        return new ColumnField('title', 'PictureComment', 'picturecomment', 'title');
     }
     public static function pageText() : ColumnField
     {
-        return new ColumnField('picturecomment', 'pagetext');
+        return new ColumnField('pageText', 'PictureComment', 'picturecomment', 'pagetext');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('picturecomment', 'ipaddress');
+        return new ColumnField('ipAddress', 'PictureComment', 'picturecomment', 'ipaddress');
     }
     public static function allowSmilie() : ColumnField
     {
-        return new ColumnField('picturecomment', 'allowsmilie');
+        return new ColumnField('allowSmilie', 'PictureComment', 'picturecomment', 'allowsmilie');
     }
     public static function reportThreadId() : ColumnField
     {
-        return new ColumnField('picturecomment', 'reportthreadid');
+        return new ColumnField('reportThreadId', 'PictureComment', 'picturecomment', 'reportthreadid');
     }
     public static function messageRead() : ColumnField
     {
-        return new ColumnField('picturecomment', 'messageread');
+        return new ColumnField('messageRead', 'PictureComment', 'picturecomment', 'messageread');
     }
 
     public function getTableName(): string
@@ -107,6 +107,14 @@ class PictureComment implements Table {
     public function __listColumns() : array
     {
         return ['commentid', 'pictureid', 'postuserid', 'postusername', 'dateline', 'state', 'title', 'pagetext', 'ipaddress', 'allowsmilie', 'reportthreadid', 'messageread'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['commentid'];
     }
     
     public function __listNullableColumns() : array
@@ -149,5 +157,4 @@ class PictureComment implements Table {
 			'messageread' => 'messageRead'
 		];
     }
-
 }

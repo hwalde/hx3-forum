@@ -17,39 +17,39 @@ class AttachmentTypeAlias extends TableAlias {
    
     public function extension() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'extension', $this->getAliasName());
+        return new ColumnField('extension', 'AttachmentType', 'attachmenttype', 'extension', $this->getAliasName());
     }
     public function mimeType() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'mimetype', $this->getAliasName());
+        return new ColumnField('mimeType', 'AttachmentType', 'attachmenttype', 'mimetype', $this->getAliasName());
     }
     public function size() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'size', $this->getAliasName());
+        return new ColumnField('size', 'AttachmentType', 'attachmenttype', 'size', $this->getAliasName());
     }
     public function width() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'width', $this->getAliasName());
+        return new ColumnField('width', 'AttachmentType', 'attachmenttype', 'width', $this->getAliasName());
     }
     public function height() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'height', $this->getAliasName());
+        return new ColumnField('height', 'AttachmentType', 'attachmenttype', 'height', $this->getAliasName());
     }
     public function enabled() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'enabled', $this->getAliasName());
+        return new ColumnField('enabled', 'AttachmentType', 'attachmenttype', 'enabled', $this->getAliasName());
     }
     public function display() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'display', $this->getAliasName());
+        return new ColumnField('display', 'AttachmentType', 'attachmenttype', 'display', $this->getAliasName());
     }
     public function thumbnail() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'thumbnail', $this->getAliasName());
+        return new ColumnField('thumbnail', 'AttachmentType', 'attachmenttype', 'thumbnail', $this->getAliasName());
     }
     public function newWindow() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'newwindow', $this->getAliasName());
+        return new ColumnField('newWindow', 'AttachmentType', 'attachmenttype', 'newwindow', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -60,6 +60,14 @@ class AttachmentTypeAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['extension', 'mimetype', 'size', 'width', 'height', 'enabled', 'display', 'thumbnail', 'newwindow'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['extension'];
     }
     
     public function __listNullableColumns() : array

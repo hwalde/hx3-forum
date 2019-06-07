@@ -17,279 +17,279 @@ class UserAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('user', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'User', 'user', 'userid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('user', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'User', 'user', 'usergroupid', $this->getAliasName());
     }
     public function memberGroupIds() : ColumnField
     {
-        return new ColumnField('user', 'membergroupids', $this->getAliasName());
+        return new ColumnField('memberGroupIds', 'User', 'user', 'membergroupids', $this->getAliasName());
     }
     public function displayGroupId() : ColumnField
     {
-        return new ColumnField('user', 'displaygroupid', $this->getAliasName());
+        return new ColumnField('displayGroupId', 'User', 'user', 'displaygroupid', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('user', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'User', 'user', 'username', $this->getAliasName());
     }
     public function password() : ColumnField
     {
-        return new ColumnField('user', 'password', $this->getAliasName());
+        return new ColumnField('password', 'User', 'user', 'password', $this->getAliasName());
     }
     public function passwordDate() : ColumnField
     {
-        return new ColumnField('user', 'passworddate', $this->getAliasName());
+        return new ColumnField('passwordDate', 'User', 'user', 'passworddate', $this->getAliasName());
     }
     public function email() : ColumnField
     {
-        return new ColumnField('user', 'email', $this->getAliasName());
+        return new ColumnField('email', 'User', 'user', 'email', $this->getAliasName());
     }
     public function styleId() : ColumnField
     {
-        return new ColumnField('user', 'styleid', $this->getAliasName());
+        return new ColumnField('styleId', 'User', 'user', 'styleid', $this->getAliasName());
     }
     public function parentEmail() : ColumnField
     {
-        return new ColumnField('user', 'parentemail', $this->getAliasName());
+        return new ColumnField('parentEmail', 'User', 'user', 'parentemail', $this->getAliasName());
     }
     public function homePage() : ColumnField
     {
-        return new ColumnField('user', 'homepage', $this->getAliasName());
+        return new ColumnField('homePage', 'User', 'user', 'homepage', $this->getAliasName());
     }
     public function icq() : ColumnField
     {
-        return new ColumnField('user', 'icq', $this->getAliasName());
+        return new ColumnField('icq', 'User', 'user', 'icq', $this->getAliasName());
     }
     public function aim() : ColumnField
     {
-        return new ColumnField('user', 'aim', $this->getAliasName());
+        return new ColumnField('aim', 'User', 'user', 'aim', $this->getAliasName());
     }
     public function yahoo() : ColumnField
     {
-        return new ColumnField('user', 'yahoo', $this->getAliasName());
+        return new ColumnField('yahoo', 'User', 'user', 'yahoo', $this->getAliasName());
     }
     public function showVbCode() : ColumnField
     {
-        return new ColumnField('user', 'showvbcode', $this->getAliasName());
+        return new ColumnField('showVbCode', 'User', 'user', 'showvbcode', $this->getAliasName());
     }
     public function userTitle() : ColumnField
     {
-        return new ColumnField('user', 'usertitle', $this->getAliasName());
+        return new ColumnField('userTitle', 'User', 'user', 'usertitle', $this->getAliasName());
     }
     public function customTitle() : ColumnField
     {
-        return new ColumnField('user', 'customtitle', $this->getAliasName());
+        return new ColumnField('customTitle', 'User', 'user', 'customtitle', $this->getAliasName());
     }
     public function joinDate() : ColumnField
     {
-        return new ColumnField('user', 'joindate', $this->getAliasName());
+        return new ColumnField('joinDate', 'User', 'user', 'joindate', $this->getAliasName());
     }
     public function daysPrune() : ColumnField
     {
-        return new ColumnField('user', 'daysprune', $this->getAliasName());
+        return new ColumnField('daysPrune', 'User', 'user', 'daysprune', $this->getAliasName());
     }
     public function lastVisit() : ColumnField
     {
-        return new ColumnField('user', 'lastvisit', $this->getAliasName());
+        return new ColumnField('lastVisit', 'User', 'user', 'lastvisit', $this->getAliasName());
     }
     public function lastActivity() : ColumnField
     {
-        return new ColumnField('user', 'lastactivity', $this->getAliasName());
+        return new ColumnField('lastActivity', 'User', 'user', 'lastactivity', $this->getAliasName());
     }
     public function lastPost() : ColumnField
     {
-        return new ColumnField('user', 'lastpost', $this->getAliasName());
+        return new ColumnField('lastPost', 'User', 'user', 'lastpost', $this->getAliasName());
     }
     public function posts() : ColumnField
     {
-        return new ColumnField('user', 'posts', $this->getAliasName());
+        return new ColumnField('posts', 'User', 'user', 'posts', $this->getAliasName());
     }
     public function reputation() : ColumnField
     {
-        return new ColumnField('user', 'reputation', $this->getAliasName());
+        return new ColumnField('reputation', 'User', 'user', 'reputation', $this->getAliasName());
     }
     public function reputationLevelId() : ColumnField
     {
-        return new ColumnField('user', 'reputationlevelid', $this->getAliasName());
+        return new ColumnField('reputationLevelId', 'User', 'user', 'reputationlevelid', $this->getAliasName());
     }
     public function timeZoneOffset() : ColumnField
     {
-        return new ColumnField('user', 'timezoneoffset', $this->getAliasName());
+        return new ColumnField('timeZoneOffset', 'User', 'user', 'timezoneoffset', $this->getAliasName());
     }
     public function pmPopup() : ColumnField
     {
-        return new ColumnField('user', 'pmpopup', $this->getAliasName());
+        return new ColumnField('pmPopup', 'User', 'user', 'pmpopup', $this->getAliasName());
     }
     public function avatarId() : ColumnField
     {
-        return new ColumnField('user', 'avatarid', $this->getAliasName());
+        return new ColumnField('avatarId', 'User', 'user', 'avatarid', $this->getAliasName());
     }
     public function avatarRevision() : ColumnField
     {
-        return new ColumnField('user', 'avatarrevision', $this->getAliasName());
+        return new ColumnField('avatarRevision', 'User', 'user', 'avatarrevision', $this->getAliasName());
     }
     public function options() : ColumnField
     {
-        return new ColumnField('user', 'options', $this->getAliasName());
+        return new ColumnField('options', 'User', 'user', 'options', $this->getAliasName());
     }
     public function birthday() : ColumnField
     {
-        return new ColumnField('user', 'birthday', $this->getAliasName());
+        return new ColumnField('birthday', 'User', 'user', 'birthday', $this->getAliasName());
     }
     public function birthdaySearch() : ColumnField
     {
-        return new ColumnField('user', 'birthday_search', $this->getAliasName());
+        return new ColumnField('birthdaySearch', 'User', 'user', 'birthday_search', $this->getAliasName());
     }
     public function maxPosts() : ColumnField
     {
-        return new ColumnField('user', 'maxposts', $this->getAliasName());
+        return new ColumnField('maxPosts', 'User', 'user', 'maxposts', $this->getAliasName());
     }
     public function startOfWeek() : ColumnField
     {
-        return new ColumnField('user', 'startofweek', $this->getAliasName());
+        return new ColumnField('startOfWeek', 'User', 'user', 'startofweek', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('user', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'User', 'user', 'ipaddress', $this->getAliasName());
     }
     public function referrerId() : ColumnField
     {
-        return new ColumnField('user', 'referrerid', $this->getAliasName());
+        return new ColumnField('referrerId', 'User', 'user', 'referrerid', $this->getAliasName());
     }
     public function languageId() : ColumnField
     {
-        return new ColumnField('user', 'languageid', $this->getAliasName());
+        return new ColumnField('languageId', 'User', 'user', 'languageid', $this->getAliasName());
     }
     public function msn() : ColumnField
     {
-        return new ColumnField('user', 'msn', $this->getAliasName());
+        return new ColumnField('msn', 'User', 'user', 'msn', $this->getAliasName());
     }
     public function emailStamp() : ColumnField
     {
-        return new ColumnField('user', 'emailstamp', $this->getAliasName());
+        return new ColumnField('emailStamp', 'User', 'user', 'emailstamp', $this->getAliasName());
     }
     public function threadedMode() : ColumnField
     {
-        return new ColumnField('user', 'threadedmode', $this->getAliasName());
+        return new ColumnField('threadedMode', 'User', 'user', 'threadedmode', $this->getAliasName());
     }
     public function autoSubscribe() : ColumnField
     {
-        return new ColumnField('user', 'autosubscribe', $this->getAliasName());
+        return new ColumnField('autoSubscribe', 'User', 'user', 'autosubscribe', $this->getAliasName());
     }
     public function pmTotal() : ColumnField
     {
-        return new ColumnField('user', 'pmtotal', $this->getAliasName());
+        return new ColumnField('pmTotal', 'User', 'user', 'pmtotal', $this->getAliasName());
     }
     public function pmUnread() : ColumnField
     {
-        return new ColumnField('user', 'pmunread', $this->getAliasName());
+        return new ColumnField('pmUnread', 'User', 'user', 'pmunread', $this->getAliasName());
     }
     public function salt() : ColumnField
     {
-        return new ColumnField('user', 'salt', $this->getAliasName());
+        return new ColumnField('salt', 'User', 'user', 'salt', $this->getAliasName());
     }
     public function importUserId() : ColumnField
     {
-        return new ColumnField('user', 'importuserid', $this->getAliasName());
+        return new ColumnField('importUserId', 'User', 'user', 'importuserid', $this->getAliasName());
     }
     public function profilePicRevision() : ColumnField
     {
-        return new ColumnField('user', 'profilepicrevision', $this->getAliasName());
+        return new ColumnField('profilePicRevision', 'User', 'user', 'profilepicrevision', $this->getAliasName());
     }
     public function showBirthday() : ColumnField
     {
-        return new ColumnField('user', 'showbirthday', $this->getAliasName());
+        return new ColumnField('showBirthday', 'User', 'user', 'showbirthday', $this->getAliasName());
     }
     public function skype() : ColumnField
     {
-        return new ColumnField('user', 'skype', $this->getAliasName());
+        return new ColumnField('skype', 'User', 'user', 'skype', $this->getAliasName());
     }
     public function adminOptions() : ColumnField
     {
-        return new ColumnField('user', 'adminoptions', $this->getAliasName());
+        return new ColumnField('adminOptions', 'User', 'user', 'adminoptions', $this->getAliasName());
     }
     public function lastPostId() : ColumnField
     {
-        return new ColumnField('user', 'lastpostid', $this->getAliasName());
+        return new ColumnField('lastPostId', 'User', 'user', 'lastpostid', $this->getAliasName());
     }
     public function sigPicRevision() : ColumnField
     {
-        return new ColumnField('user', 'sigpicrevision', $this->getAliasName());
+        return new ColumnField('sigPicRevision', 'User', 'user', 'sigpicrevision', $this->getAliasName());
     }
     public function iPoints() : ColumnField
     {
-        return new ColumnField('user', 'ipoints', $this->getAliasName());
+        return new ColumnField('iPoints', 'User', 'user', 'ipoints', $this->getAliasName());
     }
     public function infractions() : ColumnField
     {
-        return new ColumnField('user', 'infractions', $this->getAliasName());
+        return new ColumnField('infractions', 'User', 'user', 'infractions', $this->getAliasName());
     }
     public function warnings() : ColumnField
     {
-        return new ColumnField('user', 'warnings', $this->getAliasName());
+        return new ColumnField('warnings', 'User', 'user', 'warnings', $this->getAliasName());
     }
     public function infractiongGoupids() : ColumnField
     {
-        return new ColumnField('user', 'infractiongroupids', $this->getAliasName());
+        return new ColumnField('infractiongGoupids', 'User', 'user', 'infractiongroupids', $this->getAliasName());
     }
     public function infractionGroupId() : ColumnField
     {
-        return new ColumnField('user', 'infractiongroupid', $this->getAliasName());
+        return new ColumnField('infractionGroupId', 'User', 'user', 'infractiongroupid', $this->getAliasName());
     }
     public function nCodeImageResizerMode() : ColumnField
     {
-        return new ColumnField('user', 'ncode_imageresizer_mode', $this->getAliasName());
+        return new ColumnField('nCodeImageResizerMode', 'User', 'user', 'ncode_imageresizer_mode', $this->getAliasName());
     }
     public function nCodeImageResizerMaxWidth() : ColumnField
     {
-        return new ColumnField('user', 'ncode_imageresizer_maxwidth', $this->getAliasName());
+        return new ColumnField('nCodeImageResizerMaxWidth', 'User', 'user', 'ncode_imageresizer_maxwidth', $this->getAliasName());
     }
     public function nCodeImageResizerMaxHeight() : ColumnField
     {
-        return new ColumnField('user', 'ncode_imageresizer_maxheight', $this->getAliasName());
+        return new ColumnField('nCodeImageResizerMaxHeight', 'User', 'user', 'ncode_imageresizer_maxheight', $this->getAliasName());
     }
     public function profileVisits() : ColumnField
     {
-        return new ColumnField('user', 'profilevisits', $this->getAliasName());
+        return new ColumnField('profileVisits', 'User', 'user', 'profilevisits', $this->getAliasName());
     }
     public function friendCount() : ColumnField
     {
-        return new ColumnField('user', 'friendcount', $this->getAliasName());
+        return new ColumnField('friendCount', 'User', 'user', 'friendcount', $this->getAliasName());
     }
     public function friendReqCount() : ColumnField
     {
-        return new ColumnField('user', 'friendreqcount', $this->getAliasName());
+        return new ColumnField('friendReqCount', 'User', 'user', 'friendreqcount', $this->getAliasName());
     }
     public function vmUnreadCount() : ColumnField
     {
-        return new ColumnField('user', 'vmunreadcount', $this->getAliasName());
+        return new ColumnField('vmUnreadCount', 'User', 'user', 'vmunreadcount', $this->getAliasName());
     }
     public function vmModeratedcount() : ColumnField
     {
-        return new ColumnField('user', 'vmmoderatedcount', $this->getAliasName());
+        return new ColumnField('vmModeratedcount', 'User', 'user', 'vmmoderatedcount', $this->getAliasName());
     }
     public function socGroupInviteCount() : ColumnField
     {
-        return new ColumnField('user', 'socgroupinvitecount', $this->getAliasName());
+        return new ColumnField('socGroupInviteCount', 'User', 'user', 'socgroupinvitecount', $this->getAliasName());
     }
     public function socGroupReqCount() : ColumnField
     {
-        return new ColumnField('user', 'socgroupreqcount', $this->getAliasName());
+        return new ColumnField('socGroupReqCount', 'User', 'user', 'socgroupreqcount', $this->getAliasName());
     }
     public function pcUnreadCount() : ColumnField
     {
-        return new ColumnField('user', 'pcunreadcount', $this->getAliasName());
+        return new ColumnField('pcUnreadCount', 'User', 'user', 'pcunreadcount', $this->getAliasName());
     }
     public function pcModeratedCount() : ColumnField
     {
-        return new ColumnField('user', 'pcmoderatedcount', $this->getAliasName());
+        return new ColumnField('pcModeratedCount', 'User', 'user', 'pcmoderatedcount', $this->getAliasName());
     }
     public function gmModeratedCount() : ColumnField
     {
-        return new ColumnField('user', 'gmmoderatedcount', $this->getAliasName());
+        return new ColumnField('gmModeratedCount', 'User', 'user', 'gmmoderatedcount', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -300,6 +300,14 @@ class UserAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'usergroupid', 'membergroupids', 'displaygroupid', 'username', 'password', 'passworddate', 'email', 'styleid', 'parentemail', 'homepage', 'icq', 'aim', 'yahoo', 'showvbcode', 'usertitle', 'customtitle', 'joindate', 'daysprune', 'lastvisit', 'lastactivity', 'lastpost', 'posts', 'reputation', 'reputationlevelid', 'timezoneoffset', 'pmpopup', 'avatarid', 'avatarrevision', 'options', 'birthday', 'birthday_search', 'maxposts', 'startofweek', 'ipaddress', 'referrerid', 'languageid', 'msn', 'emailstamp', 'threadedmode', 'autosubscribe', 'pmtotal', 'pmunread', 'salt', 'importuserid', 'profilepicrevision', 'showbirthday', 'skype', 'adminoptions', 'lastpostid', 'sigpicrevision', 'ipoints', 'infractions', 'warnings', 'infractiongroupids', 'infractiongroupid', 'ncode_imageresizer_mode', 'ncode_imageresizer_maxwidth', 'ncode_imageresizer_maxheight', 'profilevisits', 'friendcount', 'friendreqcount', 'vmunreadcount', 'vmmoderatedcount', 'socgroupinvitecount', 'socgroupreqcount', 'pcunreadcount', 'pcmoderatedcount', 'gmmoderatedcount'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array

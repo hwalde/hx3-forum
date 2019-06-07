@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedTachyForumCounterRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $threadCount int */
-    private $threadCount;
+    protected $threadCount;
     
     /** @var $replyCount int */
-    private $replyCount;
+    protected $replyCount;
     
     public function hasUserId(): bool
     {

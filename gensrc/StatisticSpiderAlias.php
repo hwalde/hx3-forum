@@ -17,23 +17,23 @@ class StatisticSpiderAlias extends TableAlias {
    
     public function id() : ColumnField
     {
-        return new ColumnField('statistik_spider', 'ID', $this->getAliasName());
+        return new ColumnField('id', 'StatisticSpider', 'statistik_spider', 'ID', $this->getAliasName());
     }
     public function spiderName() : ColumnField
     {
-        return new ColumnField('statistik_spider', 'Spidername', $this->getAliasName());
+        return new ColumnField('spiderName', 'StatisticSpider', 'statistik_spider', 'Spidername', $this->getAliasName());
     }
     public function spiderLink() : ColumnField
     {
-        return new ColumnField('statistik_spider', 'spider_link', $this->getAliasName());
+        return new ColumnField('spiderLink', 'StatisticSpider', 'statistik_spider', 'spider_link', $this->getAliasName());
     }
     public function balkenLink() : ColumnField
     {
-        return new ColumnField('statistik_spider', 'balken_link', $this->getAliasName());
+        return new ColumnField('balkenLink', 'StatisticSpider', 'statistik_spider', 'balken_link', $this->getAliasName());
     }
     public function zaehler() : ColumnField
     {
-        return new ColumnField('statistik_spider', 'Zaehler', $this->getAliasName());
+        return new ColumnField('zaehler', 'StatisticSpider', 'statistik_spider', 'Zaehler', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class StatisticSpiderAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['ID', 'Spidername', 'spider_link', 'balken_link', 'Zaehler'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['ID'];
     }
     
     public function __listNullableColumns() : array

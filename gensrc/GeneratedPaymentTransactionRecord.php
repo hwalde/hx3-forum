@@ -14,34 +14,34 @@ use POOQ\Record;
 class GeneratedPaymentTransactionRecord implements Record {
     
     /** @var $paymentTransactionId int */
-    private $paymentTransactionId;
+    protected $paymentTransactionId;
     
     /** @var $paymentInfoId int */
-    private $paymentInfoId;
+    protected $paymentInfoId;
     
     /** @var $transactionId string */
-    private $transactionId;
+    protected $transactionId;
     
     /** @var $state int */
-    private $state;
+    protected $state;
     
     /** @var $amount mixed */
-    private $amount;
+    protected $amount;
     
     /** @var $currency string */
-    private $currency;
+    protected $currency;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $paymentApiId int */
-    private $paymentApiId;
+    protected $paymentApiId;
     
     /** @var $request string|null */
-    private $request;
+    protected $request;
     
     /** @var $reversed int */
-    private $reversed;
+    protected $reversed;
     
     public function hasPaymentTransactionId(): bool
     {

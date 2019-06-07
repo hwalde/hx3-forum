@@ -17,75 +17,75 @@ class RssFeedAlias extends TableAlias {
    
     public function rssFeedId() : ColumnField
     {
-        return new ColumnField('rssfeed', 'rssfeedid', $this->getAliasName());
+        return new ColumnField('rssFeedId', 'RssFeed', 'rssfeed', 'rssfeedid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('rssfeed', 'title', $this->getAliasName());
+        return new ColumnField('title', 'RssFeed', 'rssfeed', 'title', $this->getAliasName());
     }
     public function url() : ColumnField
     {
-        return new ColumnField('rssfeed', 'url', $this->getAliasName());
+        return new ColumnField('url', 'RssFeed', 'rssfeed', 'url', $this->getAliasName());
     }
     public function port() : ColumnField
     {
-        return new ColumnField('rssfeed', 'port', $this->getAliasName());
+        return new ColumnField('port', 'RssFeed', 'rssfeed', 'port', $this->getAliasName());
     }
     public function ttl() : ColumnField
     {
-        return new ColumnField('rssfeed', 'ttl', $this->getAliasName());
+        return new ColumnField('ttl', 'RssFeed', 'rssfeed', 'ttl', $this->getAliasName());
     }
     public function maxResults() : ColumnField
     {
-        return new ColumnField('rssfeed', 'maxresults', $this->getAliasName());
+        return new ColumnField('maxResults', 'RssFeed', 'rssfeed', 'maxresults', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('rssfeed', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'RssFeed', 'rssfeed', 'userid', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('rssfeed', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'RssFeed', 'rssfeed', 'forumid', $this->getAliasName());
     }
     public function iconId() : ColumnField
     {
-        return new ColumnField('rssfeed', 'iconid', $this->getAliasName());
+        return new ColumnField('iconId', 'RssFeed', 'rssfeed', 'iconid', $this->getAliasName());
     }
     public function titleTemplate() : ColumnField
     {
-        return new ColumnField('rssfeed', 'titletemplate', $this->getAliasName());
+        return new ColumnField('titleTemplate', 'RssFeed', 'rssfeed', 'titletemplate', $this->getAliasName());
     }
     public function bodyTemplate() : ColumnField
     {
-        return new ColumnField('rssfeed', 'bodytemplate', $this->getAliasName());
+        return new ColumnField('bodyTemplate', 'RssFeed', 'rssfeed', 'bodytemplate', $this->getAliasName());
     }
     public function searchWords() : ColumnField
     {
-        return new ColumnField('rssfeed', 'searchwords', $this->getAliasName());
+        return new ColumnField('searchWords', 'RssFeed', 'rssfeed', 'searchwords', $this->getAliasName());
     }
     public function itemType() : ColumnField
     {
-        return new ColumnField('rssfeed', 'itemtype', $this->getAliasName());
+        return new ColumnField('itemType', 'RssFeed', 'rssfeed', 'itemtype', $this->getAliasName());
     }
     public function threadActionDelay() : ColumnField
     {
-        return new ColumnField('rssfeed', 'threadactiondelay', $this->getAliasName());
+        return new ColumnField('threadActionDelay', 'RssFeed', 'rssfeed', 'threadactiondelay', $this->getAliasName());
     }
     public function endAnnouncement() : ColumnField
     {
-        return new ColumnField('rssfeed', 'endannouncement', $this->getAliasName());
+        return new ColumnField('endAnnouncement', 'RssFeed', 'rssfeed', 'endannouncement', $this->getAliasName());
     }
     public function options() : ColumnField
     {
-        return new ColumnField('rssfeed', 'options', $this->getAliasName());
+        return new ColumnField('options', 'RssFeed', 'rssfeed', 'options', $this->getAliasName());
     }
     public function lastRun() : ColumnField
     {
-        return new ColumnField('rssfeed', 'lastrun', $this->getAliasName());
+        return new ColumnField('lastRun', 'RssFeed', 'rssfeed', 'lastrun', $this->getAliasName());
     }
     public function prefixId() : ColumnField
     {
-        return new ColumnField('rssfeed', 'prefixid', $this->getAliasName());
+        return new ColumnField('prefixId', 'RssFeed', 'rssfeed', 'prefixid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -96,6 +96,14 @@ class RssFeedAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['rssfeedid', 'title', 'url', 'port', 'ttl', 'maxresults', 'userid', 'forumid', 'iconid', 'titletemplate', 'bodytemplate', 'searchwords', 'itemtype', 'threadactiondelay', 'endannouncement', 'options', 'lastrun', 'prefixid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['rssfeedid'];
     }
     
     public function __listNullableColumns() : array

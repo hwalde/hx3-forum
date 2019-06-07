@@ -47,31 +47,31 @@ class UpgradeLog implements Table {
     
     public static function upgradeLogId() : ColumnField
     {
-        return new ColumnField('upgradelog', 'upgradelogid');
+        return new ColumnField('upgradeLogId', 'UpgradeLog', 'upgradelog', 'upgradelogid');
     }
     public static function script() : ColumnField
     {
-        return new ColumnField('upgradelog', 'script');
+        return new ColumnField('script', 'UpgradeLog', 'upgradelog', 'script');
     }
     public static function stepTitle() : ColumnField
     {
-        return new ColumnField('upgradelog', 'steptitle');
+        return new ColumnField('stepTitle', 'UpgradeLog', 'upgradelog', 'steptitle');
     }
     public static function step() : ColumnField
     {
-        return new ColumnField('upgradelog', 'step');
+        return new ColumnField('step', 'UpgradeLog', 'upgradelog', 'step');
     }
     public static function startAt() : ColumnField
     {
-        return new ColumnField('upgradelog', 'startat');
+        return new ColumnField('startAt', 'UpgradeLog', 'upgradelog', 'startat');
     }
     public static function perPage() : ColumnField
     {
-        return new ColumnField('upgradelog', 'perpage');
+        return new ColumnField('perPage', 'UpgradeLog', 'upgradelog', 'perpage');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('upgradelog', 'dateline');
+        return new ColumnField('dateLine', 'UpgradeLog', 'upgradelog', 'dateline');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class UpgradeLog implements Table {
     public function __listColumns() : array
     {
         return ['upgradelogid', 'script', 'steptitle', 'step', 'startat', 'perpage', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['upgradelogid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class UpgradeLog implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

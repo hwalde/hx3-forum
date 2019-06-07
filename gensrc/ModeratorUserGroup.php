@@ -44,19 +44,19 @@ class ModeratorUserGroup implements Table {
     
     public static function moderatorUserGroupId() : ColumnField
     {
-        return new ColumnField('moderatorusergroup', 'moderatorusergroupid');
+        return new ColumnField('moderatorUserGroupId', 'ModeratorUserGroup', 'moderatorusergroup', 'moderatorusergroupid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('moderatorusergroup', 'usergroupid');
+        return new ColumnField('userGroupId', 'ModeratorUserGroup', 'moderatorusergroup', 'usergroupid');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('moderatorusergroup', 'forumid');
+        return new ColumnField('forumId', 'ModeratorUserGroup', 'moderatorusergroup', 'forumid');
     }
     public static function permissions() : ColumnField
     {
-        return new ColumnField('moderatorusergroup', 'permissions');
+        return new ColumnField('permissions', 'ModeratorUserGroup', 'moderatorusergroup', 'permissions');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class ModeratorUserGroup implements Table {
     public function __listColumns() : array
     {
         return ['moderatorusergroupid', 'usergroupid', 'forumid', 'permissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['moderatorusergroupid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class ModeratorUserGroup implements Table {
 			'permissions' => 'permissions'
 		];
     }
-
 }

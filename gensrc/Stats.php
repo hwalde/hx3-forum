@@ -45,23 +45,23 @@ class Stats implements Table {
     
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('stats', 'dateline');
+        return new ColumnField('dateLine', 'Stats', 'stats', 'dateline');
     }
     public static function nUser() : ColumnField
     {
-        return new ColumnField('stats', 'nuser');
+        return new ColumnField('nUser', 'Stats', 'stats', 'nuser');
     }
     public static function nThread() : ColumnField
     {
-        return new ColumnField('stats', 'nthread');
+        return new ColumnField('nThread', 'Stats', 'stats', 'nthread');
     }
     public static function nPost() : ColumnField
     {
-        return new ColumnField('stats', 'npost');
+        return new ColumnField('nPost', 'Stats', 'stats', 'npost');
     }
     public static function ausers() : ColumnField
     {
-        return new ColumnField('stats', 'ausers');
+        return new ColumnField('ausers', 'Stats', 'stats', 'ausers');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class Stats implements Table {
     public function __listColumns() : array
     {
         return ['dateline', 'nuser', 'nthread', 'npost', 'ausers'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['dateline'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class Stats implements Table {
 			'ausers' => 'ausers'
 		];
     }
-
 }

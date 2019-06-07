@@ -48,35 +48,35 @@ class TemplateHistory implements Table {
     
     public static function templateHistoryId() : ColumnField
     {
-        return new ColumnField('templatehistory', 'templatehistoryid');
+        return new ColumnField('templateHistoryId', 'TemplateHistory', 'templatehistory', 'templatehistoryid');
     }
     public static function styleId() : ColumnField
     {
-        return new ColumnField('templatehistory', 'styleid');
+        return new ColumnField('styleId', 'TemplateHistory', 'templatehistory', 'styleid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('templatehistory', 'title');
+        return new ColumnField('title', 'TemplateHistory', 'templatehistory', 'title');
     }
     public static function template() : ColumnField
     {
-        return new ColumnField('templatehistory', 'template');
+        return new ColumnField('template', 'TemplateHistory', 'templatehistory', 'template');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('templatehistory', 'dateline');
+        return new ColumnField('dateLine', 'TemplateHistory', 'templatehistory', 'dateline');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('templatehistory', 'username');
+        return new ColumnField('userName', 'TemplateHistory', 'templatehistory', 'username');
     }
     public static function version() : ColumnField
     {
-        return new ColumnField('templatehistory', 'version');
+        return new ColumnField('version', 'TemplateHistory', 'templatehistory', 'version');
     }
     public static function comment() : ColumnField
     {
-        return new ColumnField('templatehistory', 'comment');
+        return new ColumnField('comment', 'TemplateHistory', 'templatehistory', 'comment');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class TemplateHistory implements Table {
     public function __listColumns() : array
     {
         return ['templatehistoryid', 'styleid', 'title', 'template', 'dateline', 'username', 'version', 'comment'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['templatehistoryid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class TemplateHistory implements Table {
 			'comment' => 'comment'
 		];
     }
-
 }

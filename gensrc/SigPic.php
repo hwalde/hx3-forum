@@ -48,35 +48,35 @@ class SigPic implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('sigpic', 'userid');
+        return new ColumnField('userId', 'SigPic', 'sigpic', 'userid');
     }
     public static function fileData() : ColumnField
     {
-        return new ColumnField('sigpic', 'filedata');
+        return new ColumnField('fileData', 'SigPic', 'sigpic', 'filedata');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('sigpic', 'dateline');
+        return new ColumnField('dateLine', 'SigPic', 'sigpic', 'dateline');
     }
     public static function fileName() : ColumnField
     {
-        return new ColumnField('sigpic', 'filename');
+        return new ColumnField('fileName', 'SigPic', 'sigpic', 'filename');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('sigpic', 'visible');
+        return new ColumnField('visible', 'SigPic', 'sigpic', 'visible');
     }
     public static function fileSize() : ColumnField
     {
-        return new ColumnField('sigpic', 'filesize');
+        return new ColumnField('fileSize', 'SigPic', 'sigpic', 'filesize');
     }
     public static function width() : ColumnField
     {
-        return new ColumnField('sigpic', 'width');
+        return new ColumnField('width', 'SigPic', 'sigpic', 'width');
     }
     public static function height() : ColumnField
     {
-        return new ColumnField('sigpic', 'height');
+        return new ColumnField('height', 'SigPic', 'sigpic', 'height');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class SigPic implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'filedata', 'dateline', 'filename', 'visible', 'filesize', 'width', 'height'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class SigPic implements Table {
 			'height' => 'height'
 		];
     }
-
 }

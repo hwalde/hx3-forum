@@ -14,34 +14,34 @@ use POOQ\Record;
 class GeneratedAlbumRecord implements Record {
     
     /** @var $albumId int */
-    private $albumId;
+    protected $albumId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $createDate int */
-    private $createDate;
+    protected $createDate;
     
     /** @var $lastPictureDate int */
-    private $lastPictureDate;
+    protected $lastPictureDate;
     
     /** @var $visible int */
-    private $visible;
+    protected $visible;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $description string|null */
-    private $description;
+    protected $description;
     
     /** @var $coverPictureId int */
-    private $coverPictureId;
+    protected $coverPictureId;
     
     /** @var $state string */
-    private $state;
+    protected $state;
     
     /** @var $moderation int */
-    private $moderation;
+    protected $moderation;
     
     public function hasAlbumId(): bool
     {

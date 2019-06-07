@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedSubscriptionPermissionRecord implements Record {
     
     /** @var $subscriptionPermissionId int */
-    private $subscriptionPermissionId;
+    protected $subscriptionPermissionId;
     
     /** @var $subscriptionId int */
-    private $subscriptionId;
+    protected $subscriptionId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     public function hasSubscriptionPermissionId(): bool
     {

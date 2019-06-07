@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedDataStoreRecord implements Record {
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $data string */
-    private $data;
+    protected $data;
     
     /** @var $unSerialize int */
-    private $unSerialize;
+    protected $unSerialize;
     
     public function hasTitle(): bool
     {

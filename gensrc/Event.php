@@ -55,63 +55,63 @@ class Event implements Table {
     
     public static function eventId() : ColumnField
     {
-        return new ColumnField('event', 'eventid');
+        return new ColumnField('eventId', 'Event', 'event', 'eventid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('event', 'userid');
+        return new ColumnField('userId', 'Event', 'event', 'userid');
     }
     public static function event() : ColumnField
     {
-        return new ColumnField('event', 'event');
+        return new ColumnField('event', 'Event', 'event', 'event');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('event', 'title');
+        return new ColumnField('title', 'Event', 'event', 'title');
     }
     public static function allowSmilies() : ColumnField
     {
-        return new ColumnField('event', 'allowsmilies');
+        return new ColumnField('allowSmilies', 'Event', 'event', 'allowsmilies');
     }
     public static function recurring() : ColumnField
     {
-        return new ColumnField('event', 'recurring');
+        return new ColumnField('recurring', 'Event', 'event', 'recurring');
     }
     public static function recurOption() : ColumnField
     {
-        return new ColumnField('event', 'recuroption');
+        return new ColumnField('recurOption', 'Event', 'event', 'recuroption');
     }
     public static function calendarId() : ColumnField
     {
-        return new ColumnField('event', 'calendarid');
+        return new ColumnField('calendarId', 'Event', 'event', 'calendarid');
     }
     public static function customFields() : ColumnField
     {
-        return new ColumnField('event', 'customfields');
+        return new ColumnField('customFields', 'Event', 'event', 'customfields');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('event', 'visible');
+        return new ColumnField('visible', 'Event', 'event', 'visible');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('event', 'dateline');
+        return new ColumnField('dateLine', 'Event', 'event', 'dateline');
     }
     public static function utc() : ColumnField
     {
-        return new ColumnField('event', 'utc');
+        return new ColumnField('utc', 'Event', 'event', 'utc');
     }
     public static function dateLineFrom() : ColumnField
     {
-        return new ColumnField('event', 'dateline_from');
+        return new ColumnField('dateLineFrom', 'Event', 'event', 'dateline_from');
     }
     public static function dateLineTo() : ColumnField
     {
-        return new ColumnField('event', 'dateline_to');
+        return new ColumnField('dateLineTo', 'Event', 'event', 'dateline_to');
     }
     public static function dst() : ColumnField
     {
-        return new ColumnField('event', 'dst');
+        return new ColumnField('dst', 'Event', 'event', 'dst');
     }
 
     public function getTableName(): string
@@ -122,6 +122,14 @@ class Event implements Table {
     public function __listColumns() : array
     {
         return ['eventid', 'userid', 'event', 'title', 'allowsmilies', 'recurring', 'recuroption', 'calendarid', 'customfields', 'visible', 'dateline', 'utc', 'dateline_from', 'dateline_to', 'dst'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['eventid'];
     }
     
     public function __listNullableColumns() : array
@@ -170,5 +178,4 @@ class Event implements Table {
 			'dst' => 'dst'
 		];
     }
-
 }

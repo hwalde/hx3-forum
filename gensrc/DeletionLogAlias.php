@@ -17,27 +17,27 @@ class DeletionLogAlias extends TableAlias {
    
     public function primaryId() : ColumnField
     {
-        return new ColumnField('deletionlog', 'primaryid', $this->getAliasName());
+        return new ColumnField('primaryId', 'DeletionLog', 'deletionlog', 'primaryid', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('deletionlog', 'type', $this->getAliasName());
+        return new ColumnField('type', 'DeletionLog', 'deletionlog', 'type', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('deletionlog', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'DeletionLog', 'deletionlog', 'userid', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('deletionlog', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'DeletionLog', 'deletionlog', 'username', $this->getAliasName());
     }
     public function reason() : ColumnField
     {
-        return new ColumnField('deletionlog', 'reason', $this->getAliasName());
+        return new ColumnField('reason', 'DeletionLog', 'deletionlog', 'reason', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('deletionlog', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'DeletionLog', 'deletionlog', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class DeletionLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['primaryid', 'type', 'userid', 'username', 'reason', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['primaryid', 'type'];
     }
     
     public function __listNullableColumns() : array

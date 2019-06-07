@@ -17,63 +17,63 @@ class InfractionAlias extends TableAlias {
    
     public function infractionId() : ColumnField
     {
-        return new ColumnField('infraction', 'infractionid', $this->getAliasName());
+        return new ColumnField('infractionId', 'Infraction', 'infraction', 'infractionid', $this->getAliasName());
     }
     public function infractionLevelId() : ColumnField
     {
-        return new ColumnField('infraction', 'infractionlevelid', $this->getAliasName());
+        return new ColumnField('infractionLevelId', 'Infraction', 'infraction', 'infractionlevelid', $this->getAliasName());
     }
     public function postId() : ColumnField
     {
-        return new ColumnField('infraction', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'Infraction', 'infraction', 'postid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('infraction', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Infraction', 'infraction', 'userid', $this->getAliasName());
     }
     public function whoAdded() : ColumnField
     {
-        return new ColumnField('infraction', 'whoadded', $this->getAliasName());
+        return new ColumnField('whoAdded', 'Infraction', 'infraction', 'whoadded', $this->getAliasName());
     }
     public function points() : ColumnField
     {
-        return new ColumnField('infraction', 'points', $this->getAliasName());
+        return new ColumnField('points', 'Infraction', 'infraction', 'points', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('infraction', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Infraction', 'infraction', 'dateline', $this->getAliasName());
     }
     public function note() : ColumnField
     {
-        return new ColumnField('infraction', 'note', $this->getAliasName());
+        return new ColumnField('note', 'Infraction', 'infraction', 'note', $this->getAliasName());
     }
     public function action() : ColumnField
     {
-        return new ColumnField('infraction', 'action', $this->getAliasName());
+        return new ColumnField('action', 'Infraction', 'infraction', 'action', $this->getAliasName());
     }
     public function actionDateline() : ColumnField
     {
-        return new ColumnField('infraction', 'actiondateline', $this->getAliasName());
+        return new ColumnField('actionDateline', 'Infraction', 'infraction', 'actiondateline', $this->getAliasName());
     }
     public function actionUserId() : ColumnField
     {
-        return new ColumnField('infraction', 'actionuserid', $this->getAliasName());
+        return new ColumnField('actionUserId', 'Infraction', 'infraction', 'actionuserid', $this->getAliasName());
     }
     public function actionReason() : ColumnField
     {
-        return new ColumnField('infraction', 'actionreason', $this->getAliasName());
+        return new ColumnField('actionReason', 'Infraction', 'infraction', 'actionreason', $this->getAliasName());
     }
     public function expires() : ColumnField
     {
-        return new ColumnField('infraction', 'expires', $this->getAliasName());
+        return new ColumnField('expires', 'Infraction', 'infraction', 'expires', $this->getAliasName());
     }
     public function threadId() : ColumnField
     {
-        return new ColumnField('infraction', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'Infraction', 'infraction', 'threadid', $this->getAliasName());
     }
     public function customReason() : ColumnField
     {
-        return new ColumnField('infraction', 'customreason', $this->getAliasName());
+        return new ColumnField('customReason', 'Infraction', 'infraction', 'customreason', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -84,6 +84,14 @@ class InfractionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['infractionid', 'infractionlevelid', 'postid', 'userid', 'whoadded', 'points', 'dateline', 'note', 'action', 'actiondateline', 'actionuserid', 'actionreason', 'expires', 'threadid', 'customreason'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['infractionid'];
     }
     
     public function __listNullableColumns() : array

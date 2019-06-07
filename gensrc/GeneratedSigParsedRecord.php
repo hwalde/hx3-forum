@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedSigParsedRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $styleId int */
-    private $styleId;
+    protected $styleId;
     
     /** @var $languageId int */
-    private $languageId;
+    protected $languageId;
     
     /** @var $signatureParsed string|null */
-    private $signatureParsed;
+    protected $signatureParsed;
     
     /** @var $hasImages int */
-    private $hasImages;
+    protected $hasImages;
     
     public function hasUserId(): bool
     {

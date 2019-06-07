@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedInfractionGroupRecord implements Record {
     
     /** @var $infractionGroupId int */
-    private $infractionGroupId;
+    protected $infractionGroupId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $oruserGroupId int */
-    private $oruserGroupId;
+    protected $oruserGroupId;
     
     /** @var $pointLevel int */
-    private $pointLevel;
+    protected $pointLevel;
     
     /** @var $override int */
-    private $override;
+    protected $override;
     
     public function hasInfractionGroupId(): bool
     {

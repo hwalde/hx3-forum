@@ -46,27 +46,27 @@ class EditLog implements Table {
     
     public static function postId() : ColumnField
     {
-        return new ColumnField('editlog', 'postid');
+        return new ColumnField('postId', 'EditLog', 'editlog', 'postid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('editlog', 'userid');
+        return new ColumnField('userId', 'EditLog', 'editlog', 'userid');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('editlog', 'username');
+        return new ColumnField('userName', 'EditLog', 'editlog', 'username');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('editlog', 'dateline');
+        return new ColumnField('dateLine', 'EditLog', 'editlog', 'dateline');
     }
     public static function reason() : ColumnField
     {
-        return new ColumnField('editlog', 'reason');
+        return new ColumnField('reason', 'EditLog', 'editlog', 'reason');
     }
     public static function hasHistory() : ColumnField
     {
-        return new ColumnField('editlog', 'hashistory');
+        return new ColumnField('hasHistory', 'EditLog', 'editlog', 'hashistory');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class EditLog implements Table {
     public function __listColumns() : array
     {
         return ['postid', 'userid', 'username', 'dateline', 'reason', 'hashistory'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class EditLog implements Table {
 			'hashistory' => 'hasHistory'
 		];
     }
-
 }

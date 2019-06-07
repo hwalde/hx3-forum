@@ -17,31 +17,31 @@ class AdminLogAlias extends TableAlias {
    
     public function adminLogId() : ColumnField
     {
-        return new ColumnField('adminlog', 'adminlogid', $this->getAliasName());
+        return new ColumnField('adminLogId', 'AdminLog', 'adminlog', 'adminlogid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('adminlog', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'AdminLog', 'adminlog', 'userid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('adminlog', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'AdminLog', 'adminlog', 'dateline', $this->getAliasName());
     }
     public function script() : ColumnField
     {
-        return new ColumnField('adminlog', 'script', $this->getAliasName());
+        return new ColumnField('script', 'AdminLog', 'adminlog', 'script', $this->getAliasName());
     }
     public function action() : ColumnField
     {
-        return new ColumnField('adminlog', 'action', $this->getAliasName());
+        return new ColumnField('action', 'AdminLog', 'adminlog', 'action', $this->getAliasName());
     }
     public function extraInfo() : ColumnField
     {
-        return new ColumnField('adminlog', 'extrainfo', $this->getAliasName());
+        return new ColumnField('extraInfo', 'AdminLog', 'adminlog', 'extrainfo', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('adminlog', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'AdminLog', 'adminlog', 'ipaddress', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class AdminLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['adminlogid', 'userid', 'dateline', 'script', 'action', 'extrainfo', 'ipaddress'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['adminlogid'];
     }
     
     public function __listNullableColumns() : array

@@ -14,31 +14,31 @@ use POOQ\Record;
 class GeneratedTachyForumPostRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $lastPost int */
-    private $lastPost;
+    protected $lastPost;
     
     /** @var $lastPoster string */
-    private $lastPoster;
+    protected $lastPoster;
     
     /** @var $lastThread string */
-    private $lastThread;
+    protected $lastThread;
     
     /** @var $lastThreadId int */
-    private $lastThreadId;
+    protected $lastThreadId;
     
     /** @var $lastIconId int */
-    private $lastIconId;
+    protected $lastIconId;
     
     /** @var $lastPostId int */
-    private $lastPostId;
+    protected $lastPostId;
     
     /** @var $lastPrefixId string */
-    private $lastPrefixId;
+    protected $lastPrefixId;
     
     public function hasUserId(): bool
     {

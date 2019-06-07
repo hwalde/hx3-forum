@@ -14,10 +14,10 @@ use POOQ\Record;
 class GeneratedStatisticCounterRecord implements Record {
     
     /** @var $forCounter string */
-    private $forCounter;
+    protected $forCounter;
     
     /** @var $summe int */
-    private $summe;
+    protected $summe;
     
     public function hasForCounter(): bool
     {

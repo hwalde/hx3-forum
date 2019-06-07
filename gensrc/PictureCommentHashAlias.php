@@ -17,19 +17,19 @@ class PictureCommentHashAlias extends TableAlias {
    
     public function postUserId() : ColumnField
     {
-        return new ColumnField('picturecomment_hash', 'postuserid', $this->getAliasName());
+        return new ColumnField('postUserId', 'PictureCommentHash', 'picturecomment_hash', 'postuserid', $this->getAliasName());
     }
     public function pictureId() : ColumnField
     {
-        return new ColumnField('picturecomment_hash', 'pictureid', $this->getAliasName());
+        return new ColumnField('pictureId', 'PictureCommentHash', 'picturecomment_hash', 'pictureid', $this->getAliasName());
     }
     public function dupeHash() : ColumnField
     {
-        return new ColumnField('picturecomment_hash', 'dupehash', $this->getAliasName());
+        return new ColumnField('dupeHash', 'PictureCommentHash', 'picturecomment_hash', 'dupehash', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('picturecomment_hash', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PictureCommentHash', 'picturecomment_hash', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class PictureCommentHashAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['postuserid', 'pictureid', 'dupehash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

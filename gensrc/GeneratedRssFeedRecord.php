@@ -14,58 +14,58 @@ use POOQ\Record;
 class GeneratedRssFeedRecord implements Record {
     
     /** @var $rssFeedId int */
-    private $rssFeedId;
+    protected $rssFeedId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $url string|null */
-    private $url;
+    protected $url;
     
     /** @var $port int */
-    private $port;
+    protected $port;
     
     /** @var $ttl int */
-    private $ttl;
+    protected $ttl;
     
     /** @var $maxResults int */
-    private $maxResults;
+    protected $maxResults;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $iconId int */
-    private $iconId;
+    protected $iconId;
     
     /** @var $titleTemplate string */
-    private $titleTemplate;
+    protected $titleTemplate;
     
     /** @var $bodyTemplate string */
-    private $bodyTemplate;
+    protected $bodyTemplate;
     
     /** @var $searchWords string */
-    private $searchWords;
+    protected $searchWords;
     
     /** @var $itemType string */
-    private $itemType;
+    protected $itemType;
     
     /** @var $threadActionDelay int */
-    private $threadActionDelay;
+    protected $threadActionDelay;
     
     /** @var $endAnnouncement int */
-    private $endAnnouncement;
+    protected $endAnnouncement;
     
     /** @var $options int */
-    private $options;
+    protected $options;
     
     /** @var $lastRun int */
-    private $lastRun;
+    protected $lastRun;
     
     /** @var $prefixId string */
-    private $prefixId;
+    protected $prefixId;
     
     public function hasRssFeedId(): bool
     {

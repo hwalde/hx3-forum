@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedSmilieRecord implements Record {
     
     /** @var $smilieId int */
-    private $smilieId;
+    protected $smilieId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $smilieText string */
-    private $smilieText;
+    protected $smilieText;
     
     /** @var $smiliePath string */
-    private $smiliePath;
+    protected $smiliePath;
     
     /** @var $imageCategoryId int */
-    private $imageCategoryId;
+    protected $imageCategoryId;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $importSmilieId int */
-    private $importSmilieId;
+    protected $importSmilieId;
     
     public function hasSmilieId(): bool
     {

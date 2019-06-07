@@ -17,15 +17,15 @@ class SubscriptionPermissionAlias extends TableAlias {
    
     public function subscriptionPermissionId() : ColumnField
     {
-        return new ColumnField('subscriptionpermission', 'subscriptionpermissionid', $this->getAliasName());
+        return new ColumnField('subscriptionPermissionId', 'SubscriptionPermission', 'subscriptionpermission', 'subscriptionpermissionid', $this->getAliasName());
     }
     public function subscriptionId() : ColumnField
     {
-        return new ColumnField('subscriptionpermission', 'subscriptionid', $this->getAliasName());
+        return new ColumnField('subscriptionId', 'SubscriptionPermission', 'subscriptionpermission', 'subscriptionid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('subscriptionpermission', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'SubscriptionPermission', 'subscriptionpermission', 'usergroupid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class SubscriptionPermissionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['subscriptionpermissionid', 'subscriptionid', 'usergroupid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscriptionpermissionid'];
     }
     
     public function __listNullableColumns() : array

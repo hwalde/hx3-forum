@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedRssLogRecord implements Record {
     
     /** @var $rssFeedId int */
-    private $rssFeedId;
+    protected $rssFeedId;
     
     /** @var $itemId int */
-    private $itemId;
+    protected $itemId;
     
     /** @var $itemType string */
-    private $itemType;
+    protected $itemType;
     
     /** @var $uniqueHash string */
-    private $uniqueHash;
+    protected $uniqueHash;
     
     /** @var $contentHash string */
-    private $contentHash;
+    protected $contentHash;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $threadActionTime int */
-    private $threadActionTime;
+    protected $threadActionTime;
     
     /** @var $threadActionComplete int */
-    private $threadActionComplete;
+    protected $threadActionComplete;
     
     public function hasRssFeedId(): bool
     {

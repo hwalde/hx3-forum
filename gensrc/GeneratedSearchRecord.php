@@ -14,64 +14,64 @@ use POOQ\Record;
 class GeneratedSearchRecord implements Record {
     
     /** @var $searchId int */
-    private $searchId;
+    protected $searchId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $ipAddress string */
-    private $ipAddress;
+    protected $ipAddress;
     
     /** @var $personal int */
-    private $personal;
+    protected $personal;
     
     /** @var $query string */
-    private $query;
+    protected $query;
     
     /** @var $searchUser string */
-    private $searchUser;
+    protected $searchUser;
     
     /** @var $forumChoice string */
-    private $forumChoice;
+    protected $forumChoice;
     
     /** @var $sortBy string */
-    private $sortBy;
+    protected $sortBy;
     
     /** @var $sortOrder string */
-    private $sortOrder;
+    protected $sortOrder;
     
     /** @var $searchTime mixed */
-    private $searchTime;
+    protected $searchTime;
     
     /** @var $showPosts int */
-    private $showPosts;
+    protected $showPosts;
     
     /** @var $orderedIds string */
-    private $orderedIds;
+    protected $orderedIds;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $searchTerms string */
-    private $searchTerms;
+    protected $searchTerms;
     
     /** @var $displayTerms string */
-    private $displayTerms;
+    protected $displayTerms;
     
     /** @var $searchHash string */
-    private $searchHash;
+    protected $searchHash;
     
     /** @var $titleOnly int */
-    private $titleOnly;
+    protected $titleOnly;
     
     /** @var $announceIds string|null */
-    private $announceIds;
+    protected $announceIds;
     
     /** @var $completed int */
-    private $completed;
+    protected $completed;
     
     /** @var $prefixChoice string|null */
-    private $prefixChoice;
+    protected $prefixChoice;
     
     public function hasSearchId(): bool
     {

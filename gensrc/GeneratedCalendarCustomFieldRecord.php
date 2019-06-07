@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedCalendarCustomFieldRecord implements Record {
     
     /** @var $calendarCustomFieldId int */
-    private $calendarCustomFieldId;
+    protected $calendarCustomFieldId;
     
     /** @var $calendarId int */
-    private $calendarId;
+    protected $calendarId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $description string */
-    private $description;
+    protected $description;
     
     /** @var $options string */
-    private $options;
+    protected $options;
     
     /** @var $allowEntry int */
-    private $allowEntry;
+    protected $allowEntry;
     
     /** @var $required int */
-    private $required;
+    protected $required;
     
     /** @var $length int */
-    private $length;
+    protected $length;
     
     public function hasCalendarCustomFieldId(): bool
     {

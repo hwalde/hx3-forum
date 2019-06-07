@@ -17,19 +17,19 @@ class PtProjectCategoryAlias extends TableAlias {
    
     public function projectCategoryId() : ColumnField
     {
-        return new ColumnField('pt_projectcategory', 'projectcategoryid', $this->getAliasName());
+        return new ColumnField('projectCategoryId', 'PtProjectCategory', 'pt_projectcategory', 'projectcategoryid', $this->getAliasName());
     }
     public function projectId() : ColumnField
     {
-        return new ColumnField('pt_projectcategory', 'projectid', $this->getAliasName());
+        return new ColumnField('projectId', 'PtProjectCategory', 'pt_projectcategory', 'projectid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('pt_projectcategory', 'title', $this->getAliasName());
+        return new ColumnField('title', 'PtProjectCategory', 'pt_projectcategory', 'title', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_projectcategory', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'PtProjectCategory', 'pt_projectcategory', 'displayorder', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class PtProjectCategoryAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['projectcategoryid', 'projectid', 'title', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['projectcategoryid'];
     }
     
     public function __listNullableColumns() : array

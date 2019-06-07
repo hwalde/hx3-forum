@@ -58,75 +58,75 @@ class ModeratorLog implements Table {
     
     public static function moderatorLogId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'moderatorlogid');
+        return new ColumnField('moderatorLogId', 'ModeratorLog', 'moderatorlog', 'moderatorlogid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'dateline');
+        return new ColumnField('dateLine', 'ModeratorLog', 'moderatorlog', 'dateline');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'userid');
+        return new ColumnField('userId', 'ModeratorLog', 'moderatorlog', 'userid');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'forumid');
+        return new ColumnField('forumId', 'ModeratorLog', 'moderatorlog', 'forumid');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'threadid');
+        return new ColumnField('threadId', 'ModeratorLog', 'moderatorlog', 'threadid');
     }
     public static function postId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'postid');
+        return new ColumnField('postId', 'ModeratorLog', 'moderatorlog', 'postid');
     }
     public static function pollId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'pollid');
+        return new ColumnField('pollId', 'ModeratorLog', 'moderatorlog', 'pollid');
     }
     public static function action() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'action');
+        return new ColumnField('action', 'ModeratorLog', 'moderatorlog', 'action');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'type');
+        return new ColumnField('type', 'ModeratorLog', 'moderatorlog', 'type');
     }
     public static function threadTitle() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'threadtitle');
+        return new ColumnField('threadTitle', 'ModeratorLog', 'moderatorlog', 'threadtitle');
     }
     public static function attachmentId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'attachmentid');
+        return new ColumnField('attachmentId', 'ModeratorLog', 'moderatorlog', 'attachmentid');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'ipaddress');
+        return new ColumnField('ipAddress', 'ModeratorLog', 'moderatorlog', 'ipaddress');
     }
     public static function id1() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'id1');
+        return new ColumnField('id1', 'ModeratorLog', 'moderatorlog', 'id1');
     }
     public static function id2() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'id2');
+        return new ColumnField('id2', 'ModeratorLog', 'moderatorlog', 'id2');
     }
     public static function id3() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'id3');
+        return new ColumnField('id3', 'ModeratorLog', 'moderatorlog', 'id3');
     }
     public static function id4() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'id4');
+        return new ColumnField('id4', 'ModeratorLog', 'moderatorlog', 'id4');
     }
     public static function id5() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'id5');
+        return new ColumnField('id5', 'ModeratorLog', 'moderatorlog', 'id5');
     }
     public static function product() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'product');
+        return new ColumnField('product', 'ModeratorLog', 'moderatorlog', 'product');
     }
 
     public function getTableName(): string
@@ -137,6 +137,14 @@ class ModeratorLog implements Table {
     public function __listColumns() : array
     {
         return ['moderatorlogid', 'dateline', 'userid', 'forumid', 'threadid', 'postid', 'pollid', 'action', 'type', 'threadtitle', 'attachmentid', 'ipaddress', 'id1', 'id2', 'id3', 'id4', 'id5', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['moderatorlogid'];
     }
     
     public function __listNullableColumns() : array
@@ -191,5 +199,4 @@ class ModeratorLog implements Table {
 			'product' => 'product'
 		];
     }
-
 }

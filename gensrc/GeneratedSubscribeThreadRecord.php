@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedSubscribeThreadRecord implements Record {
     
     /** @var $subscribeThreadId int */
-    private $subscribeThreadId;
+    protected $subscribeThreadId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $emailUpdate int */
-    private $emailUpdate;
+    protected $emailUpdate;
     
     /** @var $folderId int */
-    private $folderId;
+    protected $folderId;
     
     /** @var $canView int */
-    private $canView;
+    protected $canView;
     
     public function hasSubscribeThreadId(): bool
     {

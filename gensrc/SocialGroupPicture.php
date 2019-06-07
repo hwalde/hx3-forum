@@ -43,15 +43,15 @@ class SocialGroupPicture implements Table {
     
     public static function groupId() : ColumnField
     {
-        return new ColumnField('socialgrouppicture', 'groupid');
+        return new ColumnField('groupId', 'SocialGroupPicture', 'socialgrouppicture', 'groupid');
     }
     public static function pictureId() : ColumnField
     {
-        return new ColumnField('socialgrouppicture', 'pictureid');
+        return new ColumnField('pictureId', 'SocialGroupPicture', 'socialgrouppicture', 'pictureid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('socialgrouppicture', 'dateline');
+        return new ColumnField('dateLine', 'SocialGroupPicture', 'socialgrouppicture', 'dateline');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class SocialGroupPicture implements Table {
     public function __listColumns() : array
     {
         return ['groupid', 'pictureid', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['groupid', 'pictureid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class SocialGroupPicture implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

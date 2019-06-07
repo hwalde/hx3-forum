@@ -44,19 +44,19 @@ class ProfileVisitor implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('profilevisitor', 'userid');
+        return new ColumnField('userId', 'ProfileVisitor', 'profilevisitor', 'userid');
     }
     public static function visitorId() : ColumnField
     {
-        return new ColumnField('profilevisitor', 'visitorid');
+        return new ColumnField('visitorId', 'ProfileVisitor', 'profilevisitor', 'visitorid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('profilevisitor', 'dateline');
+        return new ColumnField('dateLine', 'ProfileVisitor', 'profilevisitor', 'dateline');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('profilevisitor', 'visible');
+        return new ColumnField('visible', 'ProfileVisitor', 'profilevisitor', 'visible');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class ProfileVisitor implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'visitorid', 'dateline', 'visible'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'visitorid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class ProfileVisitor implements Table {
 			'visible' => 'visible'
 		];
     }
-
 }

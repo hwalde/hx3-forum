@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedIconRecord implements Record {
     
     /** @var $iconId int */
-    private $iconId;
+    protected $iconId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $iconPath string */
-    private $iconPath;
+    protected $iconPath;
     
     /** @var $imageCategoryId int */
-    private $imageCategoryId;
+    protected $imageCategoryId;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     public function hasIconId(): bool
     {

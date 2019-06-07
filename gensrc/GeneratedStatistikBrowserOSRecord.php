@@ -9,18 +9,19 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedStatistikBrowserOSRecord implements Record {
+class GeneratedStatistikBrowserOSRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $typ string */
-    private $typ;
+    protected $typ;
     
     /** @var $system string */
-    private $system;
+    protected $system;
     
     /** @var $zaehler int */
-    private $zaehler;
+    protected $zaehler;
     
     public function hasTyp(): bool
     {

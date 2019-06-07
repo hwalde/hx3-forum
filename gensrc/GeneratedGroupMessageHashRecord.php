@@ -9,21 +9,22 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedGroupMessageHashRecord implements Record {
+class GeneratedGroupMessageHashRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $postUserId int */
-    private $postUserId;
+    protected $postUserId;
     
     /** @var $groupId int */
-    private $groupId;
+    protected $groupId;
     
     /** @var $dupeHash string */
-    private $dupeHash;
+    protected $dupeHash;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasPostUserId(): bool
     {

@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedPtIssueStatusRecord implements Record {
     
     /** @var $issueStatusId int */
-    private $issueStatusId;
+    protected $issueStatusId;
     
     /** @var $issueTypeId string */
-    private $issueTypeId;
+    protected $issueTypeId;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $canpetitionFrom int */
-    private $canpetitionFrom;
+    protected $canpetitionFrom;
     
     public function hasIssueStatusId(): bool
     {

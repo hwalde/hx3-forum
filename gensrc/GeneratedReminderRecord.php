@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedReminderRecord implements Record {
     
     /** @var $reminderId int */
-    private $reminderId;
+    protected $reminderId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $text string */
-    private $text;
+    protected $text;
     
     /** @var $dueDate int */
-    private $dueDate;
+    protected $dueDate;
     
     /** @var $adminOnly int */
-    private $adminOnly;
+    protected $adminOnly;
     
     /** @var $completedBy int */
-    private $completedBy;
+    protected $completedBy;
     
     /** @var $completedTime int */
-    private $completedTime;
+    protected $completedTime;
     
     public function hasReminderId(): bool
     {

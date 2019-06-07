@@ -42,11 +42,11 @@ class ForumPrefixSet implements Table {
     
     public static function forumId() : ColumnField
     {
-        return new ColumnField('forumprefixset', 'forumid');
+        return new ColumnField('forumId', 'ForumPrefixSet', 'forumprefixset', 'forumid');
     }
     public static function prefixSetId() : ColumnField
     {
-        return new ColumnField('forumprefixset', 'prefixsetid');
+        return new ColumnField('prefixSetId', 'ForumPrefixSet', 'forumprefixset', 'prefixsetid');
     }
 
     public function getTableName(): string
@@ -55,6 +55,14 @@ class ForumPrefixSet implements Table {
     }
     
     public function __listColumns() : array
+    {
+        return ['forumid', 'prefixsetid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
     {
         return ['forumid', 'prefixsetid'];
     }
@@ -79,5 +87,4 @@ class ForumPrefixSet implements Table {
 			'prefixsetid' => 'prefixSetId'
 		];
     }
-
 }

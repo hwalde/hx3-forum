@@ -17,11 +17,11 @@ class PrefixSetAlias extends TableAlias {
    
     public function prefixSetId() : ColumnField
     {
-        return new ColumnField('prefixset', 'prefixsetid', $this->getAliasName());
+        return new ColumnField('prefixSetId', 'PrefixSet', 'prefixset', 'prefixsetid', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('prefixset', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'PrefixSet', 'prefixset', 'displayorder', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -32,6 +32,14 @@ class PrefixSetAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['prefixsetid', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['prefixsetid'];
     }
     
     public function __listNullableColumns() : array

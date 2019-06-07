@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedInfractionLevelRecord implements Record {
     
     /** @var $infractionLevelId int */
-    private $infractionLevelId;
+    protected $infractionLevelId;
     
     /** @var $points int */
-    private $points;
+    protected $points;
     
     /** @var $expires int */
-    private $expires;
+    protected $expires;
     
     /** @var $period string */
-    private $period;
+    protected $period;
     
     /** @var $warning int|null */
-    private $warning;
+    protected $warning;
     
     /** @var $extend int */
-    private $extend;
+    protected $extend;
     
     public function hasInfractionLevelId(): bool
     {

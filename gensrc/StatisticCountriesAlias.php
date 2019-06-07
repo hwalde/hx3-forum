@@ -17,31 +17,31 @@ class StatisticCountriesAlias extends TableAlias {
    
     public function id() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'ID', $this->getAliasName());
+        return new ColumnField('id', 'StatisticCountries', 'statistik_laender', 'ID', $this->getAliasName());
     }
     public function countryCode() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'Kuerzel_Land', $this->getAliasName());
+        return new ColumnField('countryCode', 'StatisticCountries', 'statistik_laender', 'Kuerzel_Land', $this->getAliasName());
     }
     public function countryName() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'Name_Land', $this->getAliasName());
+        return new ColumnField('countryName', 'StatisticCountries', 'statistik_laender', 'Name_Land', $this->getAliasName());
     }
     public function flagLink() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'flagge_link', $this->getAliasName());
+        return new ColumnField('flagLink', 'StatisticCountries', 'statistik_laender', 'flagge_link', $this->getAliasName());
     }
     public function balkenLink() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'balken_link', $this->getAliasName());
+        return new ColumnField('balkenLink', 'StatisticCountries', 'statistik_laender', 'balken_link', $this->getAliasName());
     }
     public function hostCounter() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'Zaehler_Hoster', $this->getAliasName());
+        return new ColumnField('hostCounter', 'StatisticCountries', 'statistik_laender', 'Zaehler_Hoster', $this->getAliasName());
     }
     public function browserLanguageCounter() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'Zaehler_Browsersprache', $this->getAliasName());
+        return new ColumnField('browserLanguageCounter', 'StatisticCountries', 'statistik_laender', 'Zaehler_Browsersprache', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class StatisticCountriesAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['ID', 'Kuerzel_Land', 'Name_Land', 'flagge_link', 'balken_link', 'Zaehler_Hoster', 'Zaehler_Browsersprache'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['ID'];
     }
     
     public function __listNullableColumns() : array

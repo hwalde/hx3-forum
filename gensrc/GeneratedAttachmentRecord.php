@@ -14,52 +14,52 @@ use POOQ\Record;
 class GeneratedAttachmentRecord implements Record {
     
     /** @var $attachmentId int */
-    private $attachmentId;
+    protected $attachmentId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $thumbnailDateline int */
-    private $thumbnailDateline;
+    protected $thumbnailDateline;
     
     /** @var $fileName string */
-    private $fileName;
+    protected $fileName;
     
     /** @var $fileData string */
-    private $fileData;
+    protected $fileData;
     
     /** @var $visible int */
-    private $visible;
+    protected $visible;
     
     /** @var $counter int */
-    private $counter;
+    protected $counter;
     
     /** @var $fileSize int */
-    private $fileSize;
+    protected $fileSize;
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $fileHash string */
-    private $fileHash;
+    protected $fileHash;
     
     /** @var $postHash string */
-    private $postHash;
+    protected $postHash;
     
     /** @var $thumbnail string */
-    private $thumbnail;
+    protected $thumbnail;
     
     /** @var $thumbnailFileSize int */
-    private $thumbnailFileSize;
+    protected $thumbnailFileSize;
     
     /** @var $importAttachmentId int */
-    private $importAttachmentId;
+    protected $importAttachmentId;
     
     /** @var $extension string */
-    private $extension;
+    protected $extension;
     
     public function hasAttachmentId(): bool
     {

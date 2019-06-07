@@ -17,19 +17,19 @@ class SocialGroupMemberAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('socialgroupmember', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'SocialGroupMember', 'socialgroupmember', 'userid', $this->getAliasName());
     }
     public function groupId() : ColumnField
     {
-        return new ColumnField('socialgroupmember', 'groupid', $this->getAliasName());
+        return new ColumnField('groupId', 'SocialGroupMember', 'socialgroupmember', 'groupid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('socialgroupmember', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'SocialGroupMember', 'socialgroupmember', 'dateline', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('socialgroupmember', 'type', $this->getAliasName());
+        return new ColumnField('type', 'SocialGroupMember', 'socialgroupmember', 'type', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class SocialGroupMemberAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'groupid', 'dateline', 'type'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'groupid'];
     }
     
     public function __listNullableColumns() : array

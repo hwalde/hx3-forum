@@ -17,23 +17,23 @@ class SubscribeEventAlias extends TableAlias {
    
     public function subscribeEventId() : ColumnField
     {
-        return new ColumnField('subscribeevent', 'subscribeeventid', $this->getAliasName());
+        return new ColumnField('subscribeEventId', 'SubscribeEvent', 'subscribeevent', 'subscribeeventid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('subscribeevent', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'SubscribeEvent', 'subscribeevent', 'userid', $this->getAliasName());
     }
     public function eventId() : ColumnField
     {
-        return new ColumnField('subscribeevent', 'eventid', $this->getAliasName());
+        return new ColumnField('eventId', 'SubscribeEvent', 'subscribeevent', 'eventid', $this->getAliasName());
     }
     public function lastReminder() : ColumnField
     {
-        return new ColumnField('subscribeevent', 'lastreminder', $this->getAliasName());
+        return new ColumnField('lastReminder', 'SubscribeEvent', 'subscribeevent', 'lastreminder', $this->getAliasName());
     }
     public function reminder() : ColumnField
     {
-        return new ColumnField('subscribeevent', 'reminder', $this->getAliasName());
+        return new ColumnField('reminder', 'SubscribeEvent', 'subscribeevent', 'reminder', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class SubscribeEventAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['subscribeeventid', 'userid', 'eventid', 'lastreminder', 'reminder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscribeeventid'];
     }
     
     public function __listNullableColumns() : array

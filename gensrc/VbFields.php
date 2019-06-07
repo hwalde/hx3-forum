@@ -49,39 +49,39 @@ class VbFields implements Table {
     
     public static function fieldId() : ColumnField
     {
-        return new ColumnField('vbfields', 'fieldid');
+        return new ColumnField('fieldId', 'VbFields', 'vbfields', 'fieldid');
     }
     public static function fieldName() : ColumnField
     {
-        return new ColumnField('vbfields', 'fieldname');
+        return new ColumnField('fieldName', 'VbFields', 'vbfields', 'fieldname');
     }
     public static function fieldType() : ColumnField
     {
-        return new ColumnField('vbfields', 'fieldtype');
+        return new ColumnField('fieldType', 'VbFields', 'vbfields', 'fieldtype');
     }
     public static function isUnsigned() : ColumnField
     {
-        return new ColumnField('vbfields', 'isunsigned');
+        return new ColumnField('isUnsigned', 'VbFields', 'vbfields', 'isunsigned');
     }
     public static function tableName() : ColumnField
     {
-        return new ColumnField('vbfields', 'tablename');
+        return new ColumnField('tableName', 'VbFields', 'vbfields', 'tablename');
     }
     public static function createSql() : ColumnField
     {
-        return new ColumnField('vbfields', 'createsql');
+        return new ColumnField('createSql', 'VbFields', 'vbfields', 'createsql');
     }
     public static function vbMandatory() : ColumnField
     {
-        return new ColumnField('vbfields', 'vbmandatory');
+        return new ColumnField('vbMandatory', 'VbFields', 'vbfields', 'vbmandatory');
     }
     public static function defaultValue() : ColumnField
     {
-        return new ColumnField('vbfields', 'defaultvalue');
+        return new ColumnField('defaultValue', 'VbFields', 'vbfields', 'defaultvalue');
     }
     public static function dictionary() : ColumnField
     {
-        return new ColumnField('vbfields', 'dictionary');
+        return new ColumnField('dictionary', 'VbFields', 'vbfields', 'dictionary');
     }
 
     public function getTableName(): string
@@ -92,6 +92,14 @@ class VbFields implements Table {
     public function __listColumns() : array
     {
         return ['fieldid', 'fieldname', 'fieldtype', 'isunsigned', 'tablename', 'createsql', 'vbmandatory', 'defaultvalue', 'dictionary'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['fieldid'];
     }
     
     public function __listNullableColumns() : array
@@ -128,5 +136,4 @@ class VbFields implements Table {
 			'dictionary' => 'dictionary'
 		];
     }
-
 }

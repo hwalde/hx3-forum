@@ -17,11 +17,11 @@ class StatisticCounterAlias extends TableAlias {
    
     public function forCounter() : ColumnField
     {
-        return new ColumnField('statistik_zaehler', 'Zaehler_fuer', $this->getAliasName());
+        return new ColumnField('forCounter', 'StatisticCounter', 'statistik_zaehler', 'Zaehler_fuer', $this->getAliasName());
     }
     public function summe() : ColumnField
     {
-        return new ColumnField('statistik_zaehler', 'Summe', $this->getAliasName());
+        return new ColumnField('summe', 'StatisticCounter', 'statistik_zaehler', 'Summe', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -32,6 +32,14 @@ class StatisticCounterAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['Zaehler_fuer', 'Summe'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['Zaehler_fuer'];
     }
     
     public function __listNullableColumns() : array

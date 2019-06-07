@@ -44,19 +44,19 @@ class SettingGroup implements Table {
     
     public static function groupTitle() : ColumnField
     {
-        return new ColumnField('settinggroup', 'grouptitle');
+        return new ColumnField('groupTitle', 'SettingGroup', 'settinggroup', 'grouptitle');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('settinggroup', 'displayorder');
+        return new ColumnField('displayOrder', 'SettingGroup', 'settinggroup', 'displayorder');
     }
     public static function volatile() : ColumnField
     {
-        return new ColumnField('settinggroup', 'volatile');
+        return new ColumnField('volatile', 'SettingGroup', 'settinggroup', 'volatile');
     }
     public static function product() : ColumnField
     {
-        return new ColumnField('settinggroup', 'product');
+        return new ColumnField('product', 'SettingGroup', 'settinggroup', 'product');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class SettingGroup implements Table {
     public function __listColumns() : array
     {
         return ['grouptitle', 'displayorder', 'volatile', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['grouptitle'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class SettingGroup implements Table {
 			'product' => 'product'
 		];
     }
-
 }

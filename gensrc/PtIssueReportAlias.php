@@ -17,47 +17,47 @@ class PtIssueReportAlias extends TableAlias {
    
     public function issueReportId() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'issuereportid', $this->getAliasName());
+        return new ColumnField('issueReportId', 'PtIssueReport', 'pt_issuereport', 'issuereportid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'title', $this->getAliasName());
+        return new ColumnField('title', 'PtIssueReport', 'pt_issuereport', 'title', $this->getAliasName());
     }
     public function description() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'description', $this->getAliasName());
+        return new ColumnField('description', 'PtIssueReport', 'pt_issuereport', 'description', $this->getAliasName());
     }
     public function public() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'public', $this->getAliasName());
+        return new ColumnField('public', 'PtIssueReport', 'pt_issuereport', 'public', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PtIssueReport', 'pt_issuereport', 'userid', $this->getAliasName());
     }
     public function criteria() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'criteria', $this->getAliasName());
+        return new ColumnField('criteria', 'PtIssueReport', 'pt_issuereport', 'criteria', $this->getAliasName());
     }
     public function sortBy() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'sortby', $this->getAliasName());
+        return new ColumnField('sortBy', 'PtIssueReport', 'pt_issuereport', 'sortby', $this->getAliasName());
     }
     public function sortOrder() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'sortorder', $this->getAliasName());
+        return new ColumnField('sortOrder', 'PtIssueReport', 'pt_issuereport', 'sortorder', $this->getAliasName());
     }
     public function groupBy() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'groupby', $this->getAliasName());
+        return new ColumnField('groupBy', 'PtIssueReport', 'pt_issuereport', 'groupby', $this->getAliasName());
     }
     public function projectList() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'projectlist', $this->getAliasName());
+        return new ColumnField('projectList', 'PtIssueReport', 'pt_issuereport', 'projectlist', $this->getAliasName());
     }
     public function issueTypeList() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'issuetypelist', $this->getAliasName());
+        return new ColumnField('issueTypeList', 'PtIssueReport', 'pt_issuereport', 'issuetypelist', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -68,6 +68,14 @@ class PtIssueReportAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['issuereportid', 'title', 'description', 'public', 'userid', 'criteria', 'sortby', 'sortorder', 'groupby', 'projectlist', 'issuetypelist'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuereportid'];
     }
     
     public function __listNullableColumns() : array

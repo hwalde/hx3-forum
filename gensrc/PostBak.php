@@ -58,75 +58,75 @@ class PostBak implements Table {
     
     public static function postId() : ColumnField
     {
-        return new ColumnField('post_bak', 'postid');
+        return new ColumnField('postId', 'PostBak', 'post_bak', 'postid');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('post_bak', 'threadid');
+        return new ColumnField('threadId', 'PostBak', 'post_bak', 'threadid');
     }
     public static function parentId() : ColumnField
     {
-        return new ColumnField('post_bak', 'parentid');
+        return new ColumnField('parentId', 'PostBak', 'post_bak', 'parentid');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('post_bak', 'username');
+        return new ColumnField('userName', 'PostBak', 'post_bak', 'username');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('post_bak', 'userid');
+        return new ColumnField('userId', 'PostBak', 'post_bak', 'userid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('post_bak', 'title');
+        return new ColumnField('title', 'PostBak', 'post_bak', 'title');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('post_bak', 'dateline');
+        return new ColumnField('dateLine', 'PostBak', 'post_bak', 'dateline');
     }
     public static function pageText() : ColumnField
     {
-        return new ColumnField('post_bak', 'pagetext');
+        return new ColumnField('pageText', 'PostBak', 'post_bak', 'pagetext');
     }
     public static function allowSmilie() : ColumnField
     {
-        return new ColumnField('post_bak', 'allowsmilie');
+        return new ColumnField('allowSmilie', 'PostBak', 'post_bak', 'allowsmilie');
     }
     public static function showSignature() : ColumnField
     {
-        return new ColumnField('post_bak', 'showsignature');
+        return new ColumnField('showSignature', 'PostBak', 'post_bak', 'showsignature');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('post_bak', 'ipaddress');
+        return new ColumnField('ipAddress', 'PostBak', 'post_bak', 'ipaddress');
     }
     public static function iconId() : ColumnField
     {
-        return new ColumnField('post_bak', 'iconid');
+        return new ColumnField('iconId', 'PostBak', 'post_bak', 'iconid');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('post_bak', 'visible');
+        return new ColumnField('visible', 'PostBak', 'post_bak', 'visible');
     }
     public static function attach() : ColumnField
     {
-        return new ColumnField('post_bak', 'attach');
+        return new ColumnField('attach', 'PostBak', 'post_bak', 'attach');
     }
     public static function importThreadId() : ColumnField
     {
-        return new ColumnField('post_bak', 'importthreadid');
+        return new ColumnField('importThreadId', 'PostBak', 'post_bak', 'importthreadid');
     }
     public static function importpostId() : ColumnField
     {
-        return new ColumnField('post_bak', 'importpostid');
+        return new ColumnField('importpostId', 'PostBak', 'post_bak', 'importpostid');
     }
     public static function infraction() : ColumnField
     {
-        return new ColumnField('post_bak', 'infraction');
+        return new ColumnField('infraction', 'PostBak', 'post_bak', 'infraction');
     }
     public static function reportThreadId() : ColumnField
     {
-        return new ColumnField('post_bak', 'reportthreadid');
+        return new ColumnField('reportThreadId', 'PostBak', 'post_bak', 'reportthreadid');
     }
 
     public function getTableName(): string
@@ -137,6 +137,14 @@ class PostBak implements Table {
     public function __listColumns() : array
     {
         return ['postid', 'threadid', 'parentid', 'username', 'userid', 'title', 'dateline', 'pagetext', 'allowsmilie', 'showsignature', 'ipaddress', 'iconid', 'visible', 'attach', 'importthreadid', 'importpostid', 'infraction', 'reportthreadid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid'];
     }
     
     public function __listNullableColumns() : array
@@ -191,5 +199,4 @@ class PostBak implements Table {
 			'reportthreadid' => 'reportThreadId'
 		];
     }
-
 }

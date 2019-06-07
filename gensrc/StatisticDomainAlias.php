@@ -17,15 +17,15 @@ class StatisticDomainAlias extends TableAlias {
    
     public function id() : ColumnField
     {
-        return new ColumnField('statistik_domain', 'ID', $this->getAliasName());
+        return new ColumnField('id', 'StatisticDomain', 'statistik_domain', 'ID', $this->getAliasName());
     }
     public function domain() : ColumnField
     {
-        return new ColumnField('statistik_domain', 'domain', $this->getAliasName());
+        return new ColumnField('domain', 'StatisticDomain', 'statistik_domain', 'domain', $this->getAliasName());
     }
     public function zaehler() : ColumnField
     {
-        return new ColumnField('statistik_domain', 'Zaehler', $this->getAliasName());
+        return new ColumnField('zaehler', 'StatisticDomain', 'statistik_domain', 'Zaehler', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class StatisticDomainAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['ID', 'domain', 'Zaehler'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['ID'];
     }
     
     public function __listNullableColumns() : array

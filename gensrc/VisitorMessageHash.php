@@ -44,19 +44,19 @@ class VisitorMessageHash implements Table {
     
     public static function postUserId() : ColumnField
     {
-        return new ColumnField('visitormessage_hash', 'postuserid');
+        return new ColumnField('postUserId', 'VisitorMessageHash', 'visitormessage_hash', 'postuserid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('visitormessage_hash', 'userid');
+        return new ColumnField('userId', 'VisitorMessageHash', 'visitormessage_hash', 'userid');
     }
     public static function dupeHash() : ColumnField
     {
-        return new ColumnField('visitormessage_hash', 'dupehash');
+        return new ColumnField('dupeHash', 'VisitorMessageHash', 'visitormessage_hash', 'dupehash');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('visitormessage_hash', 'dateline');
+        return new ColumnField('dateLine', 'VisitorMessageHash', 'visitormessage_hash', 'dateline');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class VisitorMessageHash implements Table {
     public function __listColumns() : array
     {
         return ['postuserid', 'userid', 'dupehash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class VisitorMessageHash implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

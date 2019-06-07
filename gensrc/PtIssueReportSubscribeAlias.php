@@ -17,15 +17,15 @@ class PtIssueReportSubscribeAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('pt_issuereportsubscribe', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PtIssueReportSubscribe', 'pt_issuereportsubscribe', 'userid', $this->getAliasName());
     }
     public function issueReportId() : ColumnField
     {
-        return new ColumnField('pt_issuereportsubscribe', 'issuereportid', $this->getAliasName());
+        return new ColumnField('issueReportId', 'PtIssueReportSubscribe', 'pt_issuereportsubscribe', 'issuereportid', $this->getAliasName());
     }
     public function issueSearchId() : ColumnField
     {
-        return new ColumnField('pt_issuereportsubscribe', 'issuesearchid', $this->getAliasName());
+        return new ColumnField('issueSearchId', 'PtIssueReportSubscribe', 'pt_issuereportsubscribe', 'issuesearchid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class PtIssueReportSubscribeAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'issuereportid', 'issuesearchid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'issuereportid'];
     }
     
     public function __listNullableColumns() : array

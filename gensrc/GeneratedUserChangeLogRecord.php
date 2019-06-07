@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedUserChangeLogRecord implements Record {
     
     /** @var $changeId int */
-    private $changeId;
+    protected $changeId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $fieldName string */
-    private $fieldName;
+    protected $fieldName;
     
     /** @var $newValue string */
-    private $newValue;
+    protected $newValue;
     
     /** @var $oldValue string */
-    private $oldValue;
+    protected $oldValue;
     
     /** @var $adminId int */
-    private $adminId;
+    protected $adminId;
     
     /** @var $changeTime int */
-    private $changeTime;
+    protected $changeTime;
     
     /** @var $changeUnIq string */
-    private $changeUnIq;
+    protected $changeUnIq;
     
     public function hasChangeId(): bool
     {

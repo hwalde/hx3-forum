@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedUserTitleRecord implements Record {
     
     /** @var $userTitleId int */
-    private $userTitleId;
+    protected $userTitleId;
     
     /** @var $minPosts int */
-    private $minPosts;
+    protected $minPosts;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     public function hasUserTitleId(): bool
     {

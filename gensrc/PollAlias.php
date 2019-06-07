@@ -17,55 +17,55 @@ class PollAlias extends TableAlias {
    
     public function pollId() : ColumnField
     {
-        return new ColumnField('poll', 'pollid', $this->getAliasName());
+        return new ColumnField('pollId', 'Poll', 'poll', 'pollid', $this->getAliasName());
     }
     public function question() : ColumnField
     {
-        return new ColumnField('poll', 'question', $this->getAliasName());
+        return new ColumnField('question', 'Poll', 'poll', 'question', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('poll', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Poll', 'poll', 'dateline', $this->getAliasName());
     }
     public function options() : ColumnField
     {
-        return new ColumnField('poll', 'options', $this->getAliasName());
+        return new ColumnField('options', 'Poll', 'poll', 'options', $this->getAliasName());
     }
     public function votes() : ColumnField
     {
-        return new ColumnField('poll', 'votes', $this->getAliasName());
+        return new ColumnField('votes', 'Poll', 'poll', 'votes', $this->getAliasName());
     }
     public function active() : ColumnField
     {
-        return new ColumnField('poll', 'active', $this->getAliasName());
+        return new ColumnField('active', 'Poll', 'poll', 'active', $this->getAliasName());
     }
     public function numberOptions() : ColumnField
     {
-        return new ColumnField('poll', 'numberoptions', $this->getAliasName());
+        return new ColumnField('numberOptions', 'Poll', 'poll', 'numberoptions', $this->getAliasName());
     }
     public function timeout() : ColumnField
     {
-        return new ColumnField('poll', 'timeout', $this->getAliasName());
+        return new ColumnField('timeout', 'Poll', 'poll', 'timeout', $this->getAliasName());
     }
     public function multiple() : ColumnField
     {
-        return new ColumnField('poll', 'multiple', $this->getAliasName());
+        return new ColumnField('multiple', 'Poll', 'poll', 'multiple', $this->getAliasName());
     }
     public function voters() : ColumnField
     {
-        return new ColumnField('poll', 'voters', $this->getAliasName());
+        return new ColumnField('voters', 'Poll', 'poll', 'voters', $this->getAliasName());
     }
     public function public() : ColumnField
     {
-        return new ColumnField('poll', 'public', $this->getAliasName());
+        return new ColumnField('public', 'Poll', 'poll', 'public', $this->getAliasName());
     }
     public function lastVote() : ColumnField
     {
-        return new ColumnField('poll', 'lastvote', $this->getAliasName());
+        return new ColumnField('lastVote', 'Poll', 'poll', 'lastvote', $this->getAliasName());
     }
     public function importPollId() : ColumnField
     {
-        return new ColumnField('poll', 'importpollid', $this->getAliasName());
+        return new ColumnField('importPollId', 'Poll', 'poll', 'importpollid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -76,6 +76,14 @@ class PollAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['pollid', 'question', 'dateline', 'options', 'votes', 'active', 'numberoptions', 'timeout', 'multiple', 'voters', 'public', 'lastvote', 'importpollid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pollid'];
     }
     
     public function __listNullableColumns() : array

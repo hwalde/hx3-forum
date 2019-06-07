@@ -17,23 +17,23 @@ class PtIssueNoteHashAlias extends TableAlias {
    
     public function issueNoteId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehash', 'issuenoteid', $this->getAliasName());
+        return new ColumnField('issueNoteId', 'PtIssueNoteHash', 'pt_issuenotehash', 'issuenoteid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehash', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PtIssueNoteHash', 'pt_issuenotehash', 'userid', $this->getAliasName());
     }
     public function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehash', 'issueid', $this->getAliasName());
+        return new ColumnField('issueId', 'PtIssueNoteHash', 'pt_issuenotehash', 'issueid', $this->getAliasName());
     }
     public function dupeHash() : ColumnField
     {
-        return new ColumnField('pt_issuenotehash', 'dupehash', $this->getAliasName());
+        return new ColumnField('dupeHash', 'PtIssueNoteHash', 'pt_issuenotehash', 'dupehash', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuenotehash', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PtIssueNoteHash', 'pt_issuenotehash', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class PtIssueNoteHashAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['issuenoteid', 'userid', 'issueid', 'dupehash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuenoteid'];
     }
     
     public function __listNullableColumns() : array

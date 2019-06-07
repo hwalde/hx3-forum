@@ -14,37 +14,37 @@ use POOQ\Record;
 class GeneratedPmTextRecord implements Record {
     
     /** @var $pmTextId int */
-    private $pmTextId;
+    protected $pmTextId;
     
     /** @var $fromUserId int */
-    private $fromUserId;
+    protected $fromUserId;
     
     /** @var $fromUserName string */
-    private $fromUserName;
+    protected $fromUserName;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $message string */
-    private $message;
+    protected $message;
     
     /** @var $toUserArray string */
-    private $toUserArray;
+    protected $toUserArray;
     
     /** @var $iconId int */
-    private $iconId;
+    protected $iconId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $showSignature int */
-    private $showSignature;
+    protected $showSignature;
     
     /** @var $allowSmilie int */
-    private $allowSmilie;
+    protected $allowSmilie;
     
     /** @var $importPmId int */
-    private $importPmId;
+    protected $importPmId;
     
     public function hasPmTextId(): bool
     {

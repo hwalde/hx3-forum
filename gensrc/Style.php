@@ -53,55 +53,55 @@ class Style implements Table {
     
     public static function styleId() : ColumnField
     {
-        return new ColumnField('style', 'styleid');
+        return new ColumnField('styleId', 'Style', 'style', 'styleid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('style', 'title');
+        return new ColumnField('title', 'Style', 'style', 'title');
     }
     public static function parentId() : ColumnField
     {
-        return new ColumnField('style', 'parentid');
+        return new ColumnField('parentId', 'Style', 'style', 'parentid');
     }
     public static function parentList() : ColumnField
     {
-        return new ColumnField('style', 'parentlist');
+        return new ColumnField('parentList', 'Style', 'style', 'parentlist');
     }
     public static function templateList() : ColumnField
     {
-        return new ColumnField('style', 'templatelist');
+        return new ColumnField('templateList', 'Style', 'style', 'templatelist');
     }
     public static function cssColors() : ColumnField
     {
-        return new ColumnField('style', 'csscolors');
+        return new ColumnField('cssColors', 'Style', 'style', 'csscolors');
     }
     public static function css() : ColumnField
     {
-        return new ColumnField('style', 'css');
+        return new ColumnField('css', 'Style', 'style', 'css');
     }
     public static function styleVars() : ColumnField
     {
-        return new ColumnField('style', 'stylevars');
+        return new ColumnField('styleVars', 'Style', 'style', 'stylevars');
     }
     public static function replacements() : ColumnField
     {
-        return new ColumnField('style', 'replacements');
+        return new ColumnField('replacements', 'Style', 'style', 'replacements');
     }
     public static function editorStyles() : ColumnField
     {
-        return new ColumnField('style', 'editorstyles');
+        return new ColumnField('editorStyles', 'Style', 'style', 'editorstyles');
     }
     public static function userSelect() : ColumnField
     {
-        return new ColumnField('style', 'userselect');
+        return new ColumnField('userSelect', 'Style', 'style', 'userselect');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('style', 'displayorder');
+        return new ColumnField('displayOrder', 'Style', 'style', 'displayorder');
     }
     public static function importStyleId() : ColumnField
     {
-        return new ColumnField('style', 'importstyleid');
+        return new ColumnField('importStyleId', 'Style', 'style', 'importstyleid');
     }
 
     public function getTableName(): string
@@ -112,6 +112,14 @@ class Style implements Table {
     public function __listColumns() : array
     {
         return ['styleid', 'title', 'parentid', 'parentlist', 'templatelist', 'csscolors', 'css', 'stylevars', 'replacements', 'editorstyles', 'userselect', 'displayorder', 'importstyleid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['styleid'];
     }
     
     public function __listNullableColumns() : array
@@ -156,5 +164,4 @@ class Style implements Table {
 			'importstyleid' => 'importStyleId'
 		];
     }
-
 }

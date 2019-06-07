@@ -17,15 +17,15 @@ class SocialGroupPictureAlias extends TableAlias {
    
     public function groupId() : ColumnField
     {
-        return new ColumnField('socialgrouppicture', 'groupid', $this->getAliasName());
+        return new ColumnField('groupId', 'SocialGroupPicture', 'socialgrouppicture', 'groupid', $this->getAliasName());
     }
     public function pictureId() : ColumnField
     {
-        return new ColumnField('socialgrouppicture', 'pictureid', $this->getAliasName());
+        return new ColumnField('pictureId', 'SocialGroupPicture', 'socialgrouppicture', 'pictureid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('socialgrouppicture', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'SocialGroupPicture', 'socialgrouppicture', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class SocialGroupPictureAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['groupid', 'pictureid', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['groupid', 'pictureid'];
     }
     
     public function __listNullableColumns() : array

@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedUserTextFieldRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $subFolders string */
-    private $subFolders;
+    protected $subFolders;
     
     /** @var $pmFolders string */
-    private $pmFolders;
+    protected $pmFolders;
     
     /** @var $buddyList string */
-    private $buddyList;
+    protected $buddyList;
     
     /** @var $ignoreList string */
-    private $ignoreList;
+    protected $ignoreList;
     
     /** @var $signature string */
-    private $signature;
+    protected $signature;
     
     /** @var $searchPrefs string */
-    private $searchPrefs;
+    protected $searchPrefs;
     
     /** @var $rank string */
-    private $rank;
+    protected $rank;
     
     public function hasUserId(): bool
     {

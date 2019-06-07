@@ -59,75 +59,75 @@ class Post implements Table {
     
     public static function postId() : ColumnField
     {
-        return new ColumnField('post', 'postid');
+        return new ColumnField('postId', 'Post', 'post', 'postid');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('post', 'threadid');
+        return new ColumnField('threadId', 'Post', 'post', 'threadid');
     }
     public static function parentId() : ColumnField
     {
-        return new ColumnField('post', 'parentid');
+        return new ColumnField('parentId', 'Post', 'post', 'parentid');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('post', 'username');
+        return new ColumnField('userName', 'Post', 'post', 'username');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('post', 'userid');
+        return new ColumnField('userId', 'Post', 'post', 'userid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('post', 'title');
+        return new ColumnField('title', 'Post', 'post', 'title');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('post', 'dateline');
+        return new ColumnField('dateLine', 'Post', 'post', 'dateline');
     }
     public static function pageText() : ColumnField
     {
-        return new ColumnField('post', 'pagetext');
+        return new ColumnField('pageText', 'Post', 'post', 'pagetext');
     }
     public static function allowSmilie() : ColumnField
     {
-        return new ColumnField('post', 'allowsmilie');
+        return new ColumnField('allowSmilie', 'Post', 'post', 'allowsmilie');
     }
     public static function showSignature() : ColumnField
     {
-        return new ColumnField('post', 'showsignature');
+        return new ColumnField('showSignature', 'Post', 'post', 'showsignature');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('post', 'ipaddress');
+        return new ColumnField('ipAddress', 'Post', 'post', 'ipaddress');
     }
     public static function iconId() : ColumnField
     {
-        return new ColumnField('post', 'iconid');
+        return new ColumnField('iconId', 'Post', 'post', 'iconid');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('post', 'visible');
+        return new ColumnField('visible', 'Post', 'post', 'visible');
     }
     public static function attach() : ColumnField
     {
-        return new ColumnField('post', 'attach');
+        return new ColumnField('attach', 'Post', 'post', 'attach');
     }
     public static function importThreadId() : ColumnField
     {
-        return new ColumnField('post', 'importthreadid');
+        return new ColumnField('importThreadId', 'Post', 'post', 'importthreadid');
     }
     public static function importpostId() : ColumnField
     {
-        return new ColumnField('post', 'importpostid');
+        return new ColumnField('importpostId', 'Post', 'post', 'importpostid');
     }
     public static function infraction() : ColumnField
     {
-        return new ColumnField('post', 'infraction');
+        return new ColumnField('infraction', 'Post', 'post', 'infraction');
     }
     public static function reportThreadId() : ColumnField
     {
-        return new ColumnField('post', 'reportthreadid');
+        return new ColumnField('reportThreadId', 'Post', 'post', 'reportthreadid');
     }
 
     public function getTableName(): string
@@ -138,6 +138,14 @@ class Post implements Table {
     public function __listColumns() : array
     {
         return ['postid', 'threadid', 'parentid', 'username', 'userid', 'title', 'dateline', 'pagetext', 'allowsmilie', 'showsignature', 'ipaddress', 'iconid', 'visible', 'attach', 'importthreadid', 'importpostid', 'infraction', 'reportthreadid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid'];
     }
     
     public function __listNullableColumns() : array
@@ -192,5 +200,4 @@ class Post implements Table {
 			'reportthreadid' => 'reportThreadId'
 		];
     }
-
 }

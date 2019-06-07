@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedHolidayRecord implements Record {
     
     /** @var $holidayId int */
-    private $holidayId;
+    protected $holidayId;
     
     /** @var $recurring int */
-    private $recurring;
+    protected $recurring;
     
     /** @var $recurOption string */
-    private $recurOption;
+    protected $recurOption;
     
     /** @var $allowSmilies int */
-    private $allowSmilies;
+    protected $allowSmilies;
     
     public function hasHolidayId(): bool
     {

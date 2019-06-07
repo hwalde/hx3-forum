@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedNoticeCriteriaRecord implements Record {
     
     /** @var $noticeId int */
-    private $noticeId;
+    protected $noticeId;
     
     /** @var $criteriaId string */
-    private $criteriaId;
+    protected $criteriaId;
     
     /** @var $condition1 string */
-    private $condition1;
+    protected $condition1;
     
     /** @var $condition2 string */
-    private $condition2;
+    protected $condition2;
     
     /** @var $condition3 string */
-    private $condition3;
+    protected $condition3;
     
     public function hasNoticeId(): bool
     {

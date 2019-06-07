@@ -42,11 +42,11 @@ class PtTag implements Table {
     
     public static function tagId() : ColumnField
     {
-        return new ColumnField('pt_tag', 'tagid');
+        return new ColumnField('tagId', 'PtTag', 'pt_tag', 'tagid');
     }
     public static function tagText() : ColumnField
     {
-        return new ColumnField('pt_tag', 'tagtext');
+        return new ColumnField('tagText', 'PtTag', 'pt_tag', 'tagtext');
     }
 
     public function getTableName(): string
@@ -57,6 +57,14 @@ class PtTag implements Table {
     public function __listColumns() : array
     {
         return ['tagid', 'tagtext'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['tagid'];
     }
     
     public function __listNullableColumns() : array
@@ -79,5 +87,4 @@ class PtTag implements Table {
 			'tagtext' => 'tagText'
 		];
     }
-
 }

@@ -14,31 +14,31 @@ use POOQ\Record;
 class GeneratedPhraseRecord implements Record {
     
     /** @var $phraseId int */
-    private $phraseId;
+    protected $phraseId;
     
     /** @var $languageId int */
-    private $languageId;
+    protected $languageId;
     
     /** @var $varName string */
-    private $varName;
+    protected $varName;
     
     /** @var $text string */
-    private $text;
+    protected $text;
     
     /** @var $product string */
-    private $product;
+    protected $product;
     
     /** @var $fieldName string */
-    private $fieldName;
+    protected $fieldName;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $version string */
-    private $version;
+    protected $version;
     
     public function hasPhraseId(): bool
     {

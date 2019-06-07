@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedModeratorUserGroupRecord implements Record {
     
     /** @var $moderatorUserGroupId int */
-    private $moderatorUserGroupId;
+    protected $moderatorUserGroupId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $permissions int */
-    private $permissions;
+    protected $permissions;
     
     public function hasModeratorUserGroupId(): bool
     {

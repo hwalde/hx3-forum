@@ -45,23 +45,23 @@ class TachyThreadPost implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('tachythreadpost', 'userid');
+        return new ColumnField('userId', 'TachyThreadPost', 'tachythreadpost', 'userid');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('tachythreadpost', 'threadid');
+        return new ColumnField('threadId', 'TachyThreadPost', 'tachythreadpost', 'threadid');
     }
     public static function lastPost() : ColumnField
     {
-        return new ColumnField('tachythreadpost', 'lastpost');
+        return new ColumnField('lastPost', 'TachyThreadPost', 'tachythreadpost', 'lastpost');
     }
     public static function lastPoster() : ColumnField
     {
-        return new ColumnField('tachythreadpost', 'lastposter');
+        return new ColumnField('lastPoster', 'TachyThreadPost', 'tachythreadpost', 'lastposter');
     }
     public static function lastPostId() : ColumnField
     {
-        return new ColumnField('tachythreadpost', 'lastpostid');
+        return new ColumnField('lastPostId', 'TachyThreadPost', 'tachythreadpost', 'lastpostid');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class TachyThreadPost implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'threadid', 'lastpost', 'lastposter', 'lastpostid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'threadid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class TachyThreadPost implements Table {
 			'lastpostid' => 'lastPostId'
 		];
     }
-
 }

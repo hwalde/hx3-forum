@@ -17,15 +17,15 @@ class UserGroupLeaderAlias extends TableAlias {
    
     public function usergroupleaderid() : ColumnField
     {
-        return new ColumnField('usergroupleader', 'usergroupleaderid', $this->getAliasName());
+        return new ColumnField('usergroupleaderid', 'UserGroupLeader', 'usergroupleader', 'usergroupleaderid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('usergroupleader', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserGroupLeader', 'usergroupleader', 'userid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('usergroupleader', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'UserGroupLeader', 'usergroupleader', 'usergroupid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class UserGroupLeaderAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['usergroupleaderid', 'userid', 'usergroupid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usergroupleaderid'];
     }
     
     public function __listNullableColumns() : array

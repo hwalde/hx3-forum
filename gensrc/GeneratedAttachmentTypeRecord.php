@@ -14,31 +14,31 @@ use POOQ\Record;
 class GeneratedAttachmentTypeRecord implements Record {
     
     /** @var $extension string */
-    private $extension;
+    protected $extension;
     
     /** @var $mimeType string */
-    private $mimeType;
+    protected $mimeType;
     
     /** @var $size int */
-    private $size;
+    protected $size;
     
     /** @var $width int */
-    private $width;
+    protected $width;
     
     /** @var $height int */
-    private $height;
+    protected $height;
     
     /** @var $enabled int */
-    private $enabled;
+    protected $enabled;
     
     /** @var $display int */
-    private $display;
+    protected $display;
     
     /** @var $thumbnail int */
-    private $thumbnail;
+    protected $thumbnail;
     
     /** @var $newWindow int */
-    private $newWindow;
+    protected $newWindow;
     
     public function hasExtension(): bool
     {

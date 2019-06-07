@@ -17,19 +17,19 @@ class HumanVerifyAlias extends TableAlias {
    
     public function hash() : ColumnField
     {
-        return new ColumnField('humanverify', 'hash', $this->getAliasName());
+        return new ColumnField('hash', 'HumanVerify', 'humanverify', 'hash', $this->getAliasName());
     }
     public function answer() : ColumnField
     {
-        return new ColumnField('humanverify', 'answer', $this->getAliasName());
+        return new ColumnField('answer', 'HumanVerify', 'humanverify', 'answer', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('humanverify', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'HumanVerify', 'humanverify', 'dateline', $this->getAliasName());
     }
     public function viewed() : ColumnField
     {
-        return new ColumnField('humanverify', 'viewed', $this->getAliasName());
+        return new ColumnField('viewed', 'HumanVerify', 'humanverify', 'viewed', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class HumanVerifyAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['hash', 'answer', 'dateline', 'viewed'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

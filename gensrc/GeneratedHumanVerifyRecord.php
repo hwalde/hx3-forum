@@ -9,21 +9,22 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedHumanVerifyRecord implements Record {
+class GeneratedHumanVerifyRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $hash string */
-    private $hash;
+    protected $hash;
     
     /** @var $answer string|null */
-    private $answer;
+    protected $answer;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $viewed int */
-    private $viewed;
+    protected $viewed;
     
     public function hasHash(): bool
     {

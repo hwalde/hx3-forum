@@ -47,31 +47,31 @@ class MailQueue implements Table {
     
     public static function mailQueueId() : ColumnField
     {
-        return new ColumnField('mailqueue', 'mailqueueid');
+        return new ColumnField('mailQueueId', 'MailQueue', 'mailqueue', 'mailqueueid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('mailqueue', 'dateline');
+        return new ColumnField('dateLine', 'MailQueue', 'mailqueue', 'dateline');
     }
     public static function toEmail() : ColumnField
     {
-        return new ColumnField('mailqueue', 'toemail');
+        return new ColumnField('toEmail', 'MailQueue', 'mailqueue', 'toemail');
     }
     public static function subject() : ColumnField
     {
-        return new ColumnField('mailqueue', 'subject');
+        return new ColumnField('subject', 'MailQueue', 'mailqueue', 'subject');
     }
     public static function message() : ColumnField
     {
-        return new ColumnField('mailqueue', 'message');
+        return new ColumnField('message', 'MailQueue', 'mailqueue', 'message');
     }
     public static function header() : ColumnField
     {
-        return new ColumnField('mailqueue', 'header');
+        return new ColumnField('header', 'MailQueue', 'mailqueue', 'header');
     }
     public static function fromEmail() : ColumnField
     {
-        return new ColumnField('mailqueue', 'fromemail');
+        return new ColumnField('fromEmail', 'MailQueue', 'mailqueue', 'fromemail');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class MailQueue implements Table {
     public function __listColumns() : array
     {
         return ['mailqueueid', 'dateline', 'toemail', 'subject', 'message', 'header', 'fromemail'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['mailqueueid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class MailQueue implements Table {
 			'fromemail' => 'fromEmail'
 		];
     }
-
 }

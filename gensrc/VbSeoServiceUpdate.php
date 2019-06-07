@@ -44,19 +44,19 @@ class VbSeoServiceUpdate implements Table {
     
     public static function sThreadId() : ColumnField
     {
-        return new ColumnField('vbseo_serviceupdate', 's_threadid');
+        return new ColumnField('sThreadId', 'VbSeoServiceUpdate', 'vbseo_serviceupdate', 's_threadid');
     }
     public static function sUpdated() : ColumnField
     {
-        return new ColumnField('vbseo_serviceupdate', 's_updated');
+        return new ColumnField('sUpdated', 'VbSeoServiceUpdate', 'vbseo_serviceupdate', 's_updated');
     }
     public static function sDateLine() : ColumnField
     {
-        return new ColumnField('vbseo_serviceupdate', 's_dateline');
+        return new ColumnField('sDateLine', 'VbSeoServiceUpdate', 'vbseo_serviceupdate', 's_dateline');
     }
     public static function sType() : ColumnField
     {
-        return new ColumnField('vbseo_serviceupdate', 's_type');
+        return new ColumnField('sType', 'VbSeoServiceUpdate', 'vbseo_serviceupdate', 's_type');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class VbSeoServiceUpdate implements Table {
     public function __listColumns() : array
     {
         return ['s_threadid', 's_updated', 's_dateline', 's_type'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class VbSeoServiceUpdate implements Table {
 			's_type' => 'sType'
 		];
     }
-
 }

@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedCalendarModeratorRecord implements Record {
     
     /** @var $calendarModeratorId int */
-    private $calendarModeratorId;
+    protected $calendarModeratorId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $calendarId int */
-    private $calendarId;
+    protected $calendarId;
     
     /** @var $newEventEmail int */
-    private $newEventEmail;
+    protected $newEventEmail;
     
     /** @var $permissions int */
-    private $permissions;
+    protected $permissions;
     
     public function hasCalendarModeratorId(): bool
     {

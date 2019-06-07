@@ -46,27 +46,27 @@ class PtProjectPermission implements Table {
     
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'usergroupid');
+        return new ColumnField('userGroupId', 'PtProjectPermission', 'pt_projectpermission', 'usergroupid');
     }
     public static function projectId() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'projectid');
+        return new ColumnField('projectId', 'PtProjectPermission', 'pt_projectpermission', 'projectid');
     }
     public static function issueTypeId() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'issuetypeid');
+        return new ColumnField('issueTypeId', 'PtProjectPermission', 'pt_projectpermission', 'issuetypeid');
     }
     public static function generalPermissions() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'generalpermissions');
+        return new ColumnField('generalPermissions', 'PtProjectPermission', 'pt_projectpermission', 'generalpermissions');
     }
     public static function postPermissions() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'postpermissions');
+        return new ColumnField('postPermissions', 'PtProjectPermission', 'pt_projectpermission', 'postpermissions');
     }
     public static function attachPermissions() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'attachpermissions');
+        return new ColumnField('attachPermissions', 'PtProjectPermission', 'pt_projectpermission', 'attachpermissions');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class PtProjectPermission implements Table {
     public function __listColumns() : array
     {
         return ['usergroupid', 'projectid', 'issuetypeid', 'generalpermissions', 'postpermissions', 'attachpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usergroupid', 'projectid', 'issuetypeid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class PtProjectPermission implements Table {
 			'attachpermissions' => 'attachPermissions'
 		];
     }
-
 }

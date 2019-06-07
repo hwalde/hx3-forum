@@ -14,49 +14,49 @@ use POOQ\Record;
 class GeneratedInfractionRecord implements Record {
     
     /** @var $infractionId int */
-    private $infractionId;
+    protected $infractionId;
     
     /** @var $infractionLevelId int */
-    private $infractionLevelId;
+    protected $infractionLevelId;
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $whoAdded int */
-    private $whoAdded;
+    protected $whoAdded;
     
     /** @var $points int */
-    private $points;
+    protected $points;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $note string */
-    private $note;
+    protected $note;
     
     /** @var $action int */
-    private $action;
+    protected $action;
     
     /** @var $actionDateline int */
-    private $actionDateline;
+    protected $actionDateline;
     
     /** @var $actionUserId int */
-    private $actionUserId;
+    protected $actionUserId;
     
     /** @var $actionReason string */
-    private $actionReason;
+    protected $actionReason;
     
     /** @var $expires int */
-    private $expires;
+    protected $expires;
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $customReason string */
-    private $customReason;
+    protected $customReason;
     
     public function hasInfractionId(): bool
     {

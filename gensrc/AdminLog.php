@@ -47,31 +47,31 @@ class AdminLog implements Table {
     
     public static function adminLogId() : ColumnField
     {
-        return new ColumnField('adminlog', 'adminlogid');
+        return new ColumnField('adminLogId', 'AdminLog', 'adminlog', 'adminlogid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('adminlog', 'userid');
+        return new ColumnField('userId', 'AdminLog', 'adminlog', 'userid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('adminlog', 'dateline');
+        return new ColumnField('dateLine', 'AdminLog', 'adminlog', 'dateline');
     }
     public static function script() : ColumnField
     {
-        return new ColumnField('adminlog', 'script');
+        return new ColumnField('script', 'AdminLog', 'adminlog', 'script');
     }
     public static function action() : ColumnField
     {
-        return new ColumnField('adminlog', 'action');
+        return new ColumnField('action', 'AdminLog', 'adminlog', 'action');
     }
     public static function extraInfo() : ColumnField
     {
-        return new ColumnField('adminlog', 'extrainfo');
+        return new ColumnField('extraInfo', 'AdminLog', 'adminlog', 'extrainfo');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('adminlog', 'ipaddress');
+        return new ColumnField('ipAddress', 'AdminLog', 'adminlog', 'ipaddress');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class AdminLog implements Table {
     public function __listColumns() : array
     {
         return ['adminlogid', 'userid', 'dateline', 'script', 'action', 'extrainfo', 'ipaddress'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['adminlogid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class AdminLog implements Table {
 			'ipaddress' => 'ipAddress'
 		];
     }
-
 }

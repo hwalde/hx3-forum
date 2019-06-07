@@ -17,15 +17,15 @@ class StatistikBrowserOSAlias extends TableAlias {
    
     public function typ() : ColumnField
     {
-        return new ColumnField('statistik_browser_os', 'Typ', $this->getAliasName());
+        return new ColumnField('typ', 'StatistikBrowserOS', 'statistik_browser_os', 'Typ', $this->getAliasName());
     }
     public function system() : ColumnField
     {
-        return new ColumnField('statistik_browser_os', 'System', $this->getAliasName());
+        return new ColumnField('system', 'StatistikBrowserOS', 'statistik_browser_os', 'System', $this->getAliasName());
     }
     public function zaehler() : ColumnField
     {
-        return new ColumnField('statistik_browser_os', 'Zaehler', $this->getAliasName());
+        return new ColumnField('zaehler', 'StatistikBrowserOS', 'statistik_browser_os', 'Zaehler', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class StatistikBrowserOSAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['Typ', 'System', 'Zaehler'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

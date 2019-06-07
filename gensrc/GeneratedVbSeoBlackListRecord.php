@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedVbSeoBlackListRecord implements Record {
     
     /** @var $lDomain string */
-    private $lDomain;
+    protected $lDomain;
     
     /** @var $lType int */
-    private $lType;
+    protected $lType;
     
     /** @var $lDateLine int */
-    private $lDateLine;
+    protected $lDateLine;
     
     /** @var $lHits int */
-    private $lHits;
+    protected $lHits;
     
     /** @var $lDeleted int */
-    private $lDeleted;
+    protected $lDeleted;
     
     public function hasLDomain(): bool
     {

@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedPaymentInfoRecord implements Record {
     
     /** @var $paymentInfoId int */
-    private $paymentInfoId;
+    protected $paymentInfoId;
     
     /** @var $hash string */
-    private $hash;
+    protected $hash;
     
     /** @var $subscriptionId int */
-    private $subscriptionId;
+    protected $subscriptionId;
     
     /** @var $subscriptionSubId int */
-    private $subscriptionSubId;
+    protected $subscriptionSubId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $completed int */
-    private $completed;
+    protected $completed;
     
     public function hasPaymentInfoId(): bool
     {

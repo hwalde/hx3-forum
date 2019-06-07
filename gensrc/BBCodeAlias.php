@@ -17,39 +17,39 @@ class BBCodeAlias extends TableAlias {
    
     public function bbCodeId() : ColumnField
     {
-        return new ColumnField('bbcode', 'bbcodeid', $this->getAliasName());
+        return new ColumnField('bbCodeId', 'BBCode', 'bbcode', 'bbcodeid', $this->getAliasName());
     }
     public function bbBodeTag() : ColumnField
     {
-        return new ColumnField('bbcode', 'bbcodetag', $this->getAliasName());
+        return new ColumnField('bbBodeTag', 'BBCode', 'bbcode', 'bbcodetag', $this->getAliasName());
     }
     public function bbCodeReplacement() : ColumnField
     {
-        return new ColumnField('bbcode', 'bbcodereplacement', $this->getAliasName());
+        return new ColumnField('bbCodeReplacement', 'BBCode', 'bbcode', 'bbcodereplacement', $this->getAliasName());
     }
     public function bbCodeExample() : ColumnField
     {
-        return new ColumnField('bbcode', 'bbcodeexample', $this->getAliasName());
+        return new ColumnField('bbCodeExample', 'BBCode', 'bbcode', 'bbcodeexample', $this->getAliasName());
     }
     public function bbCodeExplanation() : ColumnField
     {
-        return new ColumnField('bbcode', 'bbcodeexplanation', $this->getAliasName());
+        return new ColumnField('bbCodeExplanation', 'BBCode', 'bbcode', 'bbcodeexplanation', $this->getAliasName());
     }
     public function twoParams() : ColumnField
     {
-        return new ColumnField('bbcode', 'twoparams', $this->getAliasName());
+        return new ColumnField('twoParams', 'BBCode', 'bbcode', 'twoparams', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('bbcode', 'title', $this->getAliasName());
+        return new ColumnField('title', 'BBCode', 'bbcode', 'title', $this->getAliasName());
     }
     public function buttonImage() : ColumnField
     {
-        return new ColumnField('bbcode', 'buttonimage', $this->getAliasName());
+        return new ColumnField('buttonImage', 'BBCode', 'bbcode', 'buttonimage', $this->getAliasName());
     }
     public function options() : ColumnField
     {
-        return new ColumnField('bbcode', 'options', $this->getAliasName());
+        return new ColumnField('options', 'BBCode', 'bbcode', 'options', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -60,6 +60,14 @@ class BBCodeAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['bbcodeid', 'bbcodetag', 'bbcodereplacement', 'bbcodeexample', 'bbcodeexplanation', 'twoparams', 'title', 'buttonimage', 'options'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['bbcodeid'];
     }
     
     public function __listNullableColumns() : array

@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedPtIssueSearchResultRecord implements Record {
     
     /** @var $issueSearchId int */
-    private $issueSearchId;
+    protected $issueSearchId;
     
     /** @var $issueId int */
-    private $issueId;
+    protected $issueId;
     
     /** @var $offset int */
-    private $offset;
+    protected $offset;
     
     /** @var $groupId string */
-    private $groupId;
+    protected $groupId;
     
     public function hasIssueSearchId(): bool
     {

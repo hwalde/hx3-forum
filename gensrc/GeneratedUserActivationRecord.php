@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedUserActivationRecord implements Record {
     
     /** @var $userActivationId int */
-    private $userActivationId;
+    protected $userActivationId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $activationId int */
-    private $activationId;
+    protected $activationId;
     
     /** @var $type int */
-    private $type;
+    protected $type;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $emailChange int */
-    private $emailChange;
+    protected $emailChange;
     
     public function hasUserActivationId(): bool
     {

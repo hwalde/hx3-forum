@@ -14,10 +14,10 @@ use POOQ\Record;
 class GeneratedPtIssueTagRecord implements Record {
     
     /** @var $issueId int */
-    private $issueId;
+    protected $issueId;
     
     /** @var $tagId int */
-    private $tagId;
+    protected $tagId;
     
     public function hasIssueId(): bool
     {

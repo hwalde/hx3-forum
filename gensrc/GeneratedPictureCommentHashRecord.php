@@ -9,21 +9,22 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedPictureCommentHashRecord implements Record {
+class GeneratedPictureCommentHashRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $postUserId int */
-    private $postUserId;
+    protected $postUserId;
     
     /** @var $pictureId int */
-    private $pictureId;
+    protected $pictureId;
     
     /** @var $dupeHash string */
-    private $dupeHash;
+    protected $dupeHash;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasPostUserId(): bool
     {

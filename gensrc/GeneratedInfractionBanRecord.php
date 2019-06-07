@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedInfractionBanRecord implements Record {
     
     /** @var $infractionBanId int */
-    private $infractionBanId;
+    protected $infractionBanId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $banuserGroupId int */
-    private $banuserGroupId;
+    protected $banuserGroupId;
     
     /** @var $amount int */
-    private $amount;
+    protected $amount;
     
     /** @var $period string */
-    private $period;
+    protected $period;
     
     /** @var $method string */
-    private $method;
+    protected $method;
     
     public function hasInfractionBanId(): bool
     {

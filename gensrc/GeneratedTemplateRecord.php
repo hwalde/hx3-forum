@@ -14,34 +14,34 @@ use POOQ\Record;
 class GeneratedTemplateRecord implements Record {
     
     /** @var $templateId int */
-    private $templateId;
+    protected $templateId;
     
     /** @var $styleId int */
-    private $styleId;
+    protected $styleId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $template string */
-    private $template;
+    protected $template;
     
     /** @var $templateUn string */
-    private $templateUn;
+    protected $templateUn;
     
     /** @var $templateType string */
-    private $templateType;
+    protected $templateType;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     /** @var $version string */
-    private $version;
+    protected $version;
     
     /** @var $product string */
-    private $product;
+    protected $product;
     
     public function hasTemplateId(): bool
     {

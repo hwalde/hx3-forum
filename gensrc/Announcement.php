@@ -49,39 +49,39 @@ class Announcement implements Table {
     
     public static function announcementId() : ColumnField
     {
-        return new ColumnField('announcement', 'announcementid');
+        return new ColumnField('announcementId', 'Announcement', 'announcement', 'announcementid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('announcement', 'title');
+        return new ColumnField('title', 'Announcement', 'announcement', 'title');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('announcement', 'userid');
+        return new ColumnField('userId', 'Announcement', 'announcement', 'userid');
     }
     public static function startDate() : ColumnField
     {
-        return new ColumnField('announcement', 'startdate');
+        return new ColumnField('startDate', 'Announcement', 'announcement', 'startdate');
     }
     public static function endDate() : ColumnField
     {
-        return new ColumnField('announcement', 'enddate');
+        return new ColumnField('endDate', 'Announcement', 'announcement', 'enddate');
     }
     public static function pageText() : ColumnField
     {
-        return new ColumnField('announcement', 'pagetext');
+        return new ColumnField('pageText', 'Announcement', 'announcement', 'pagetext');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('announcement', 'forumid');
+        return new ColumnField('forumId', 'Announcement', 'announcement', 'forumid');
     }
     public static function views() : ColumnField
     {
-        return new ColumnField('announcement', 'views');
+        return new ColumnField('views', 'Announcement', 'announcement', 'views');
     }
     public static function announcementOptions() : ColumnField
     {
-        return new ColumnField('announcement', 'announcementoptions');
+        return new ColumnField('announcementOptions', 'Announcement', 'announcement', 'announcementoptions');
     }
 
     public function getTableName(): string
@@ -92,6 +92,14 @@ class Announcement implements Table {
     public function __listColumns() : array
     {
         return ['announcementid', 'title', 'userid', 'startdate', 'enddate', 'pagetext', 'forumid', 'views', 'announcementoptions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['announcementid'];
     }
     
     public function __listNullableColumns() : array
@@ -128,5 +136,4 @@ class Announcement implements Table {
 			'announcementoptions' => 'announcementOptions'
 		];
     }
-
 }

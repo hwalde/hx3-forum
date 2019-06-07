@@ -51,47 +51,47 @@ class GroupMessage implements Table {
     
     public static function gmId() : ColumnField
     {
-        return new ColumnField('groupmessage', 'gmid');
+        return new ColumnField('gmId', 'GroupMessage', 'groupmessage', 'gmid');
     }
     public static function groupId() : ColumnField
     {
-        return new ColumnField('groupmessage', 'groupid');
+        return new ColumnField('groupId', 'GroupMessage', 'groupmessage', 'groupid');
     }
     public static function postUserId() : ColumnField
     {
-        return new ColumnField('groupmessage', 'postuserid');
+        return new ColumnField('postUserId', 'GroupMessage', 'groupmessage', 'postuserid');
     }
     public static function postUserName() : ColumnField
     {
-        return new ColumnField('groupmessage', 'postusername');
+        return new ColumnField('postUserName', 'GroupMessage', 'groupmessage', 'postusername');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('groupmessage', 'dateline');
+        return new ColumnField('dateLine', 'GroupMessage', 'groupmessage', 'dateline');
     }
     public static function state() : ColumnField
     {
-        return new ColumnField('groupmessage', 'state');
+        return new ColumnField('state', 'GroupMessage', 'groupmessage', 'state');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('groupmessage', 'title');
+        return new ColumnField('title', 'GroupMessage', 'groupmessage', 'title');
     }
     public static function pageText() : ColumnField
     {
-        return new ColumnField('groupmessage', 'pagetext');
+        return new ColumnField('pageText', 'GroupMessage', 'groupmessage', 'pagetext');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('groupmessage', 'ipaddress');
+        return new ColumnField('ipAddress', 'GroupMessage', 'groupmessage', 'ipaddress');
     }
     public static function allowSmilie() : ColumnField
     {
-        return new ColumnField('groupmessage', 'allowsmilie');
+        return new ColumnField('allowSmilie', 'GroupMessage', 'groupmessage', 'allowsmilie');
     }
     public static function reportThreadId() : ColumnField
     {
-        return new ColumnField('groupmessage', 'reportthreadid');
+        return new ColumnField('reportThreadId', 'GroupMessage', 'groupmessage', 'reportthreadid');
     }
 
     public function getTableName(): string
@@ -102,6 +102,14 @@ class GroupMessage implements Table {
     public function __listColumns() : array
     {
         return ['gmid', 'groupid', 'postuserid', 'postusername', 'dateline', 'state', 'title', 'pagetext', 'ipaddress', 'allowsmilie', 'reportthreadid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['gmid'];
     }
     
     public function __listNullableColumns() : array
@@ -142,5 +150,4 @@ class GroupMessage implements Table {
 			'reportthreadid' => 'reportThreadId'
 		];
     }
-
 }

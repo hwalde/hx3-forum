@@ -50,43 +50,43 @@ class PtProject implements Table {
     
     public static function projectId() : ColumnField
     {
-        return new ColumnField('pt_project', 'projectid');
+        return new ColumnField('projectId', 'PtProject', 'pt_project', 'projectid');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_project', 'displayorder');
+        return new ColumnField('displayOrder', 'PtProject', 'pt_project', 'displayorder');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('pt_project', 'title');
+        return new ColumnField('title', 'PtProject', 'pt_project', 'title');
     }
     public static function titleClean() : ColumnField
     {
-        return new ColumnField('pt_project', 'title_clean');
+        return new ColumnField('titleClean', 'PtProject', 'pt_project', 'title_clean');
     }
     public static function summary() : ColumnField
     {
-        return new ColumnField('pt_project', 'summary');
+        return new ColumnField('summary', 'PtProject', 'pt_project', 'summary');
     }
     public static function summaryClean() : ColumnField
     {
-        return new ColumnField('pt_project', 'summary_clean');
+        return new ColumnField('summaryClean', 'PtProject', 'pt_project', 'summary_clean');
     }
     public static function description() : ColumnField
     {
-        return new ColumnField('pt_project', 'description');
+        return new ColumnField('description', 'PtProject', 'pt_project', 'description');
     }
     public static function options() : ColumnField
     {
-        return new ColumnField('pt_project', 'options');
+        return new ColumnField('options', 'PtProject', 'pt_project', 'options');
     }
     public static function afterForumIds() : ColumnField
     {
-        return new ColumnField('pt_project', 'afterforumids');
+        return new ColumnField('afterForumIds', 'PtProject', 'pt_project', 'afterforumids');
     }
     public static function forumTitle() : ColumnField
     {
-        return new ColumnField('pt_project', 'forumtitle');
+        return new ColumnField('forumTitle', 'PtProject', 'pt_project', 'forumtitle');
     }
 
     public function getTableName(): string
@@ -97,6 +97,14 @@ class PtProject implements Table {
     public function __listColumns() : array
     {
         return ['projectid', 'displayorder', 'title', 'title_clean', 'summary', 'summary_clean', 'description', 'options', 'afterforumids', 'forumtitle'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['projectid'];
     }
     
     public function __listNullableColumns() : array
@@ -135,5 +143,4 @@ class PtProject implements Table {
 			'forumtitle' => 'forumTitle'
 		];
     }
-
 }

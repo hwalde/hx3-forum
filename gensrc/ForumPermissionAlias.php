@@ -18,19 +18,19 @@ class ForumPermissionAlias extends TableAlias {
    
     public function forumPermissionOd() : ColumnField
     {
-        return new ColumnField('forumpermission', 'forumpermissionid', $this->getAliasName());
+        return new ColumnField('forumPermissionOd', 'ForumPermission', 'forumpermission', 'forumpermissionid', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('forumpermission', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'ForumPermission', 'forumpermission', 'forumid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('forumpermission', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'ForumPermission', 'forumpermission', 'usergroupid', $this->getAliasName());
     }
     public function forumPermissions() : ColumnField
     {
-        return new ColumnField('forumpermission', 'forumpermissions', $this->getAliasName());
+        return new ColumnField('forumPermissions', 'ForumPermission', 'forumpermission', 'forumpermissions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -41,6 +41,14 @@ class ForumPermissionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['forumpermissionid', 'forumid', 'usergroupid', 'forumpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['forumpermissionid'];
     }
     
     public function __listNullableColumns() : array

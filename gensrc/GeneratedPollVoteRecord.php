@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedPollVoteRecord implements Record {
     
     /** @var $pollVoteId int */
-    private $pollVoteId;
+    protected $pollVoteId;
     
     /** @var $pollId int */
-    private $pollId;
+    protected $pollId;
     
     /** @var $userId int|null */
-    private $userId;
+    protected $userId;
     
     /** @var $voteDate int */
-    private $voteDate;
+    protected $voteDate;
     
     /** @var $voteOption int */
-    private $voteOption;
+    protected $voteOption;
     
     /** @var $voteType int */
-    private $voteType;
+    protected $voteType;
     
     public function hasPollVoteId(): bool
     {

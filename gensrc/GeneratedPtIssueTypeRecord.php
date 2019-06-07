@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedPtIssueTypeRecord implements Record {
     
     /** @var $issueTypeId string */
-    private $issueTypeId;
+    protected $issueTypeId;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $iconFile string */
-    private $iconFile;
+    protected $iconFile;
     
     public function hasIssueTypeId(): bool
     {

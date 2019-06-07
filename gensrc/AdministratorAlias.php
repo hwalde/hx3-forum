@@ -17,35 +17,35 @@ class AdministratorAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('administrator', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Administrator', 'administrator', 'userid', $this->getAliasName());
     }
     public function adminPermissions() : ColumnField
     {
-        return new ColumnField('administrator', 'adminpermissions', $this->getAliasName());
+        return new ColumnField('adminPermissions', 'Administrator', 'administrator', 'adminpermissions', $this->getAliasName());
     }
     public function navPrefs() : ColumnField
     {
-        return new ColumnField('administrator', 'navprefs', $this->getAliasName());
+        return new ColumnField('navPrefs', 'Administrator', 'administrator', 'navprefs', $this->getAliasName());
     }
     public function cssPrefs() : ColumnField
     {
-        return new ColumnField('administrator', 'cssprefs', $this->getAliasName());
+        return new ColumnField('cssPrefs', 'Administrator', 'administrator', 'cssprefs', $this->getAliasName());
     }
     public function notes() : ColumnField
     {
-        return new ColumnField('administrator', 'notes', $this->getAliasName());
+        return new ColumnField('notes', 'Administrator', 'administrator', 'notes', $this->getAliasName());
     }
     public function languageId() : ColumnField
     {
-        return new ColumnField('administrator', 'languageid', $this->getAliasName());
+        return new ColumnField('languageId', 'Administrator', 'administrator', 'languageid', $this->getAliasName());
     }
     public function dismissedNews() : ColumnField
     {
-        return new ColumnField('administrator', 'dismissednews', $this->getAliasName());
+        return new ColumnField('dismissedNews', 'Administrator', 'administrator', 'dismissednews', $this->getAliasName());
     }
     public function ptPermissions() : ColumnField
     {
-        return new ColumnField('administrator', 'ptpermissions', $this->getAliasName());
+        return new ColumnField('ptPermissions', 'Administrator', 'administrator', 'ptpermissions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class AdministratorAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'adminpermissions', 'navprefs', 'cssprefs', 'notes', 'languageid', 'dismissednews', 'ptpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array

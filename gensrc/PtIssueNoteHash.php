@@ -45,23 +45,23 @@ class PtIssueNoteHash implements Table {
     
     public static function issueNoteId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehash', 'issuenoteid');
+        return new ColumnField('issueNoteId', 'PtIssueNoteHash', 'pt_issuenotehash', 'issuenoteid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehash', 'userid');
+        return new ColumnField('userId', 'PtIssueNoteHash', 'pt_issuenotehash', 'userid');
     }
     public static function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehash', 'issueid');
+        return new ColumnField('issueId', 'PtIssueNoteHash', 'pt_issuenotehash', 'issueid');
     }
     public static function dupeHash() : ColumnField
     {
-        return new ColumnField('pt_issuenotehash', 'dupehash');
+        return new ColumnField('dupeHash', 'PtIssueNoteHash', 'pt_issuenotehash', 'dupehash');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuenotehash', 'dateline');
+        return new ColumnField('dateLine', 'PtIssueNoteHash', 'pt_issuenotehash', 'dateline');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class PtIssueNoteHash implements Table {
     public function __listColumns() : array
     {
         return ['issuenoteid', 'userid', 'issueid', 'dupehash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuenoteid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class PtIssueNoteHash implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

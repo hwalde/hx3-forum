@@ -52,51 +52,51 @@ class Cron implements Table {
     
     public static function cronId() : ColumnField
     {
-        return new ColumnField('cron', 'cronid');
+        return new ColumnField('cronId', 'Cron', 'cron', 'cronid');
     }
     public static function nextRun() : ColumnField
     {
-        return new ColumnField('cron', 'nextrun');
+        return new ColumnField('nextRun', 'Cron', 'cron', 'nextrun');
     }
     public static function weekDay() : ColumnField
     {
-        return new ColumnField('cron', 'weekday');
+        return new ColumnField('weekDay', 'Cron', 'cron', 'weekday');
     }
     public static function day() : ColumnField
     {
-        return new ColumnField('cron', 'day');
+        return new ColumnField('day', 'Cron', 'cron', 'day');
     }
     public static function hour() : ColumnField
     {
-        return new ColumnField('cron', 'hour');
+        return new ColumnField('hour', 'Cron', 'cron', 'hour');
     }
     public static function minute() : ColumnField
     {
-        return new ColumnField('cron', 'minute');
+        return new ColumnField('minute', 'Cron', 'cron', 'minute');
     }
     public static function fileName() : ColumnField
     {
-        return new ColumnField('cron', 'filename');
+        return new ColumnField('fileName', 'Cron', 'cron', 'filename');
     }
     public static function logLevel() : ColumnField
     {
-        return new ColumnField('cron', 'loglevel');
+        return new ColumnField('logLevel', 'Cron', 'cron', 'loglevel');
     }
     public static function active() : ColumnField
     {
-        return new ColumnField('cron', 'active');
+        return new ColumnField('active', 'Cron', 'cron', 'active');
     }
     public static function varName() : ColumnField
     {
-        return new ColumnField('cron', 'varname');
+        return new ColumnField('varName', 'Cron', 'cron', 'varname');
     }
     public static function volatile() : ColumnField
     {
-        return new ColumnField('cron', 'volatile');
+        return new ColumnField('volatile', 'Cron', 'cron', 'volatile');
     }
     public static function product() : ColumnField
     {
-        return new ColumnField('cron', 'product');
+        return new ColumnField('product', 'Cron', 'cron', 'product');
     }
 
     public function getTableName(): string
@@ -107,6 +107,14 @@ class Cron implements Table {
     public function __listColumns() : array
     {
         return ['cronid', 'nextrun', 'weekday', 'day', 'hour', 'minute', 'filename', 'loglevel', 'active', 'varname', 'volatile', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['cronid'];
     }
     
     public function __listNullableColumns() : array
@@ -149,5 +157,4 @@ class Cron implements Table {
 			'product' => 'product'
 		];
     }
-
 }

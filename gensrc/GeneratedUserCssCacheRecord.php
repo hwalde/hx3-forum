@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedUserCssCacheRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $cachedCss string|null */
-    private $cachedCss;
+    protected $cachedCss;
     
     /** @var $buildPermissions int */
-    private $buildPermissions;
+    protected $buildPermissions;
     
     public function hasUserId(): bool
     {

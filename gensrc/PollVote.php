@@ -46,27 +46,27 @@ class PollVote implements Table {
     
     public static function pollVoteId() : ColumnField
     {
-        return new ColumnField('pollvote', 'pollvoteid');
+        return new ColumnField('pollVoteId', 'PollVote', 'pollvote', 'pollvoteid');
     }
     public static function pollId() : ColumnField
     {
-        return new ColumnField('pollvote', 'pollid');
+        return new ColumnField('pollId', 'PollVote', 'pollvote', 'pollid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pollvote', 'userid');
+        return new ColumnField('userId', 'PollVote', 'pollvote', 'userid');
     }
     public static function voteDate() : ColumnField
     {
-        return new ColumnField('pollvote', 'votedate');
+        return new ColumnField('voteDate', 'PollVote', 'pollvote', 'votedate');
     }
     public static function voteOption() : ColumnField
     {
-        return new ColumnField('pollvote', 'voteoption');
+        return new ColumnField('voteOption', 'PollVote', 'pollvote', 'voteoption');
     }
     public static function voteType() : ColumnField
     {
-        return new ColumnField('pollvote', 'votetype');
+        return new ColumnField('voteType', 'PollVote', 'pollvote', 'votetype');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class PollVote implements Table {
     public function __listColumns() : array
     {
         return ['pollvoteid', 'pollid', 'userid', 'votedate', 'voteoption', 'votetype'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pollvoteid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class PollVote implements Table {
 			'votetype' => 'voteType'
 		];
     }
-
 }

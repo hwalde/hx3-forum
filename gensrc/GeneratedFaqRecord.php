@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedFaqRecord implements Record {
     
     /** @var $faqName string */
-    private $faqName;
+    protected $faqName;
     
     /** @var $faqParent string */
-    private $faqParent;
+    protected $faqParent;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $volatile int */
-    private $volatile;
+    protected $volatile;
     
     /** @var $product string */
-    private $product;
+    protected $product;
     
     public function hasFaqName(): bool
     {

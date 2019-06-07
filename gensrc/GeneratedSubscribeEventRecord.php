@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedSubscribeEventRecord implements Record {
     
     /** @var $subscribeEventId int */
-    private $subscribeEventId;
+    protected $subscribeEventId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $eventId int */
-    private $eventId;
+    protected $eventId;
     
     /** @var $lastReminder int */
-    private $lastReminder;
+    protected $lastReminder;
     
     /** @var $reminder int */
-    private $reminder;
+    protected $reminder;
     
     public function hasSubscribeEventId(): bool
     {

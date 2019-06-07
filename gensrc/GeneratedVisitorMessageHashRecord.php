@@ -9,21 +9,22 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedVisitorMessageHashRecord implements Record {
+class GeneratedVisitorMessageHashRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $postUserId int */
-    private $postUserId;
+    protected $postUserId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $dupeHash string */
-    private $dupeHash;
+    protected $dupeHash;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasPostUserId(): bool
     {

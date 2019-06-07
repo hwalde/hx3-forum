@@ -17,19 +17,19 @@ class ModeratorUserGroupAlias extends TableAlias {
    
     public function moderatorUserGroupId() : ColumnField
     {
-        return new ColumnField('moderatorusergroup', 'moderatorusergroupid', $this->getAliasName());
+        return new ColumnField('moderatorUserGroupId', 'ModeratorUserGroup', 'moderatorusergroup', 'moderatorusergroupid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('moderatorusergroup', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'ModeratorUserGroup', 'moderatorusergroup', 'usergroupid', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('moderatorusergroup', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'ModeratorUserGroup', 'moderatorusergroup', 'forumid', $this->getAliasName());
     }
     public function permissions() : ColumnField
     {
-        return new ColumnField('moderatorusergroup', 'permissions', $this->getAliasName());
+        return new ColumnField('permissions', 'ModeratorUserGroup', 'moderatorusergroup', 'permissions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class ModeratorUserGroupAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['moderatorusergroupid', 'usergroupid', 'forumid', 'permissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['moderatorusergroupid'];
     }
     
     public function __listNullableColumns() : array

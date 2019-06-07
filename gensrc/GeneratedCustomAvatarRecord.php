@@ -14,37 +14,37 @@ use POOQ\Record;
 class GeneratedCustomAvatarRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $fileData string */
-    private $fileData;
+    protected $fileData;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $fileName string */
-    private $fileName;
+    protected $fileName;
     
     /** @var $visible int */
-    private $visible;
+    protected $visible;
     
     /** @var $fileSize int */
-    private $fileSize;
+    protected $fileSize;
     
     /** @var $width int */
-    private $width;
+    protected $width;
     
     /** @var $height int */
-    private $height;
+    protected $height;
     
     /** @var $fileDataThumb string|null */
-    private $fileDataThumb;
+    protected $fileDataThumb;
     
     /** @var $widthThumb int */
-    private $widthThumb;
+    protected $widthThumb;
     
     /** @var $heightThumb int */
-    private $heightThumb;
+    protected $heightThumb;
     
     public function hasUserId(): bool
     {

@@ -50,43 +50,43 @@ class PostEditHistory implements Table {
     
     public static function postEditHistoryid() : ColumnField
     {
-        return new ColumnField('postedithistory', 'postedithistoryid');
+        return new ColumnField('postEditHistoryid', 'PostEditHistory', 'postedithistory', 'postedithistoryid');
     }
     public static function postId() : ColumnField
     {
-        return new ColumnField('postedithistory', 'postid');
+        return new ColumnField('postId', 'PostEditHistory', 'postedithistory', 'postid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('postedithistory', 'userid');
+        return new ColumnField('userId', 'PostEditHistory', 'postedithistory', 'userid');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('postedithistory', 'username');
+        return new ColumnField('userName', 'PostEditHistory', 'postedithistory', 'username');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('postedithistory', 'title');
+        return new ColumnField('title', 'PostEditHistory', 'postedithistory', 'title');
     }
     public static function iconId() : ColumnField
     {
-        return new ColumnField('postedithistory', 'iconid');
+        return new ColumnField('iconId', 'PostEditHistory', 'postedithistory', 'iconid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('postedithistory', 'dateline');
+        return new ColumnField('dateLine', 'PostEditHistory', 'postedithistory', 'dateline');
     }
     public static function reason() : ColumnField
     {
-        return new ColumnField('postedithistory', 'reason');
+        return new ColumnField('reason', 'PostEditHistory', 'postedithistory', 'reason');
     }
     public static function original() : ColumnField
     {
-        return new ColumnField('postedithistory', 'original');
+        return new ColumnField('original', 'PostEditHistory', 'postedithistory', 'original');
     }
     public static function pageText() : ColumnField
     {
-        return new ColumnField('postedithistory', 'pagetext');
+        return new ColumnField('pageText', 'PostEditHistory', 'postedithistory', 'pagetext');
     }
 
     public function getTableName(): string
@@ -97,6 +97,14 @@ class PostEditHistory implements Table {
     public function __listColumns() : array
     {
         return ['postedithistoryid', 'postid', 'userid', 'username', 'title', 'iconid', 'dateline', 'reason', 'original', 'pagetext'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postedithistoryid'];
     }
     
     public function __listNullableColumns() : array
@@ -135,5 +143,4 @@ class PostEditHistory implements Table {
 			'pagetext' => 'pageText'
 		];
     }
-
 }

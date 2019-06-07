@@ -14,10 +14,10 @@ use POOQ\Record;
 class GeneratedWordRecord implements Record {
     
     /** @var $wordId int */
-    private $wordId;
+    protected $wordId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     public function hasWordId(): bool
     {

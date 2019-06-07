@@ -17,11 +17,11 @@ class ReputationLevelAlias extends TableAlias {
    
     public function reputationLevelId() : ColumnField
     {
-        return new ColumnField('reputationlevel', 'reputationlevelid', $this->getAliasName());
+        return new ColumnField('reputationLevelId', 'ReputationLevel', 'reputationlevel', 'reputationlevelid', $this->getAliasName());
     }
     public function minimumReputation() : ColumnField
     {
-        return new ColumnField('reputationlevel', 'minimumreputation', $this->getAliasName());
+        return new ColumnField('minimumReputation', 'ReputationLevel', 'reputationlevel', 'minimumreputation', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -32,6 +32,14 @@ class ReputationLevelAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['reputationlevelid', 'minimumreputation'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['reputationlevelid'];
     }
     
     public function __listNullableColumns() : array

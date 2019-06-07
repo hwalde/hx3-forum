@@ -44,19 +44,19 @@ class UserCss implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('usercss', 'userid');
+        return new ColumnField('userId', 'UserCss', 'usercss', 'userid');
     }
     public static function selector() : ColumnField
     {
-        return new ColumnField('usercss', 'selector');
+        return new ColumnField('selector', 'UserCss', 'usercss', 'selector');
     }
     public static function property() : ColumnField
     {
-        return new ColumnField('usercss', 'property');
+        return new ColumnField('property', 'UserCss', 'usercss', 'property');
     }
     public static function value() : ColumnField
     {
-        return new ColumnField('usercss', 'value');
+        return new ColumnField('value', 'UserCss', 'usercss', 'value');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class UserCss implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'selector', 'property', 'value'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'selector', 'property'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class UserCss implements Table {
 			'value' => 'value'
 		];
     }
-
 }

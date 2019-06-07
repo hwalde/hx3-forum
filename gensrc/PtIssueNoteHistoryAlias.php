@@ -17,31 +17,31 @@ class PtIssueNoteHistoryAlias extends TableAlias {
    
     public function issueNoteHistoryId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'issuenotehistoryid', $this->getAliasName());
+        return new ColumnField('issueNoteHistoryId', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'issuenotehistoryid', $this->getAliasName());
     }
     public function issueNoteId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'issuenoteid', $this->getAliasName());
+        return new ColumnField('issueNoteId', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'issuenoteid', $this->getAliasName());
     }
     public function reason() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'reason', $this->getAliasName());
+        return new ColumnField('reason', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'reason', $this->getAliasName());
     }
     public function pageText() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'pagetext', $this->getAliasName());
+        return new ColumnField('pageText', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'pagetext', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'visible', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'dateline', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'userid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class PtIssueNoteHistoryAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['issuenotehistoryid', 'issuenoteid', 'reason', 'pagetext', 'visible', 'dateline', 'userid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuenotehistoryid'];
     }
     
     public function __listNullableColumns() : array

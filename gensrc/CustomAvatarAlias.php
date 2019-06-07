@@ -17,47 +17,47 @@ class CustomAvatarAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('customavatar', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'CustomAvatar', 'customavatar', 'userid', $this->getAliasName());
     }
     public function fileData() : ColumnField
     {
-        return new ColumnField('customavatar', 'filedata', $this->getAliasName());
+        return new ColumnField('fileData', 'CustomAvatar', 'customavatar', 'filedata', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('customavatar', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'CustomAvatar', 'customavatar', 'dateline', $this->getAliasName());
     }
     public function fileName() : ColumnField
     {
-        return new ColumnField('customavatar', 'filename', $this->getAliasName());
+        return new ColumnField('fileName', 'CustomAvatar', 'customavatar', 'filename', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('customavatar', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'CustomAvatar', 'customavatar', 'visible', $this->getAliasName());
     }
     public function fileSize() : ColumnField
     {
-        return new ColumnField('customavatar', 'filesize', $this->getAliasName());
+        return new ColumnField('fileSize', 'CustomAvatar', 'customavatar', 'filesize', $this->getAliasName());
     }
     public function width() : ColumnField
     {
-        return new ColumnField('customavatar', 'width', $this->getAliasName());
+        return new ColumnField('width', 'CustomAvatar', 'customavatar', 'width', $this->getAliasName());
     }
     public function height() : ColumnField
     {
-        return new ColumnField('customavatar', 'height', $this->getAliasName());
+        return new ColumnField('height', 'CustomAvatar', 'customavatar', 'height', $this->getAliasName());
     }
     public function fileDataThumb() : ColumnField
     {
-        return new ColumnField('customavatar', 'filedata_thumb', $this->getAliasName());
+        return new ColumnField('fileDataThumb', 'CustomAvatar', 'customavatar', 'filedata_thumb', $this->getAliasName());
     }
     public function widthThumb() : ColumnField
     {
-        return new ColumnField('customavatar', 'width_thumb', $this->getAliasName());
+        return new ColumnField('widthThumb', 'CustomAvatar', 'customavatar', 'width_thumb', $this->getAliasName());
     }
     public function heightThumb() : ColumnField
     {
-        return new ColumnField('customavatar', 'height_thumb', $this->getAliasName());
+        return new ColumnField('heightThumb', 'CustomAvatar', 'customavatar', 'height_thumb', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -68,6 +68,14 @@ class CustomAvatarAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'filedata', 'dateline', 'filename', 'visible', 'filesize', 'width', 'height', 'filedata_thumb', 'width_thumb', 'height_thumb'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array

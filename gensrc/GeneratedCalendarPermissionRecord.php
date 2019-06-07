@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedCalendarPermissionRecord implements Record {
     
     /** @var $calendarPermissionId int */
-    private $calendarPermissionId;
+    protected $calendarPermissionId;
     
     /** @var $calendarId int */
-    private $calendarId;
+    protected $calendarId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $calendarPermissions int */
-    private $calendarPermissions;
+    protected $calendarPermissions;
     
     public function hasCalendarPermissionId(): bool
     {

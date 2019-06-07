@@ -49,39 +49,39 @@ class BBCode implements Table {
     
     public static function bbCodeId() : ColumnField
     {
-        return new ColumnField('bbcode', 'bbcodeid');
+        return new ColumnField('bbCodeId', 'BBCode', 'bbcode', 'bbcodeid');
     }
     public static function bbBodeTag() : ColumnField
     {
-        return new ColumnField('bbcode', 'bbcodetag');
+        return new ColumnField('bbBodeTag', 'BBCode', 'bbcode', 'bbcodetag');
     }
     public static function bbCodeReplacement() : ColumnField
     {
-        return new ColumnField('bbcode', 'bbcodereplacement');
+        return new ColumnField('bbCodeReplacement', 'BBCode', 'bbcode', 'bbcodereplacement');
     }
     public static function bbCodeExample() : ColumnField
     {
-        return new ColumnField('bbcode', 'bbcodeexample');
+        return new ColumnField('bbCodeExample', 'BBCode', 'bbcode', 'bbcodeexample');
     }
     public static function bbCodeExplanation() : ColumnField
     {
-        return new ColumnField('bbcode', 'bbcodeexplanation');
+        return new ColumnField('bbCodeExplanation', 'BBCode', 'bbcode', 'bbcodeexplanation');
     }
     public static function twoParams() : ColumnField
     {
-        return new ColumnField('bbcode', 'twoparams');
+        return new ColumnField('twoParams', 'BBCode', 'bbcode', 'twoparams');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('bbcode', 'title');
+        return new ColumnField('title', 'BBCode', 'bbcode', 'title');
     }
     public static function buttonImage() : ColumnField
     {
-        return new ColumnField('bbcode', 'buttonimage');
+        return new ColumnField('buttonImage', 'BBCode', 'bbcode', 'buttonimage');
     }
     public static function options() : ColumnField
     {
-        return new ColumnField('bbcode', 'options');
+        return new ColumnField('options', 'BBCode', 'bbcode', 'options');
     }
 
     public function getTableName(): string
@@ -92,6 +92,14 @@ class BBCode implements Table {
     public function __listColumns() : array
     {
         return ['bbcodeid', 'bbcodetag', 'bbcodereplacement', 'bbcodeexample', 'bbcodeexplanation', 'twoparams', 'title', 'buttonimage', 'options'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['bbcodeid'];
     }
     
     public function __listNullableColumns() : array
@@ -128,5 +136,4 @@ class BBCode implements Table {
 			'options' => 'options'
 		];
     }
-
 }

@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedImageCategoryRecord implements Record {
     
     /** @var $imageCategoryId int */
-    private $imageCategoryId;
+    protected $imageCategoryId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $imageType int */
-    private $imageType;
+    protected $imageType;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     public function hasImageCategoryId(): bool
     {

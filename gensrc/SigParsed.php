@@ -45,23 +45,23 @@ class SigParsed implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('sigparsed', 'userid');
+        return new ColumnField('userId', 'SigParsed', 'sigparsed', 'userid');
     }
     public static function styleId() : ColumnField
     {
-        return new ColumnField('sigparsed', 'styleid');
+        return new ColumnField('styleId', 'SigParsed', 'sigparsed', 'styleid');
     }
     public static function languageId() : ColumnField
     {
-        return new ColumnField('sigparsed', 'languageid');
+        return new ColumnField('languageId', 'SigParsed', 'sigparsed', 'languageid');
     }
     public static function signatureParsed() : ColumnField
     {
-        return new ColumnField('sigparsed', 'signatureparsed');
+        return new ColumnField('signatureParsed', 'SigParsed', 'sigparsed', 'signatureparsed');
     }
     public static function hasImages() : ColumnField
     {
-        return new ColumnField('sigparsed', 'hasimages');
+        return new ColumnField('hasImages', 'SigParsed', 'sigparsed', 'hasimages');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class SigParsed implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'styleid', 'languageid', 'signatureparsed', 'hasimages'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'styleid', 'languageid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class SigParsed implements Table {
 			'hasimages' => 'hasImages'
 		];
     }
-
 }

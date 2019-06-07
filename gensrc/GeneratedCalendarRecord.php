@@ -14,46 +14,46 @@ use POOQ\Record;
 class GeneratedCalendarRecord implements Record {
     
     /** @var $calendarId int */
-    private $calendarId;
+    protected $calendarId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $description string */
-    private $description;
+    protected $description;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $newEventEmail string|null */
-    private $newEventEmail;
+    protected $newEventEmail;
     
     /** @var $moderateNew int */
-    private $moderateNew;
+    protected $moderateNew;
     
     /** @var $startOfWeek int */
-    private $startOfWeek;
+    protected $startOfWeek;
     
     /** @var $options int */
-    private $options;
+    protected $options;
     
     /** @var $cutOff int */
-    private $cutOff;
+    protected $cutOff;
     
     /** @var $eventCount int */
-    private $eventCount;
+    protected $eventCount;
     
     /** @var $birthdayCount int */
-    private $birthdayCount;
+    protected $birthdayCount;
     
     /** @var $startYear int */
-    private $startYear;
+    protected $startYear;
     
     /** @var $endYear int */
-    private $endYear;
+    protected $endYear;
     
     /** @var $holidays int */
-    private $holidays;
+    protected $holidays;
     
     public function hasCalendarId(): bool
     {

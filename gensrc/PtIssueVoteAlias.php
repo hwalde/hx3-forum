@@ -17,27 +17,27 @@ class PtIssueVoteAlias extends TableAlias {
    
     public function issueVoteId() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'issuevoteid', $this->getAliasName());
+        return new ColumnField('issueVoteId', 'PtIssueVote', 'pt_issuevote', 'issuevoteid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PtIssueVote', 'pt_issuevote', 'userid', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'PtIssueVote', 'pt_issuevote', 'ipaddress', $this->getAliasName());
     }
     public function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'issueid', $this->getAliasName());
+        return new ColumnField('issueId', 'PtIssueVote', 'pt_issuevote', 'issueid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PtIssueVote', 'pt_issuevote', 'dateline', $this->getAliasName());
     }
     public function vote() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'vote', $this->getAliasName());
+        return new ColumnField('vote', 'PtIssueVote', 'pt_issuevote', 'vote', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class PtIssueVoteAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['issuevoteid', 'userid', 'ipaddress', 'issueid', 'dateline', 'vote'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuevoteid'];
     }
     
     public function __listNullableColumns() : array

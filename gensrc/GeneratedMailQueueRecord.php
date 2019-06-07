@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedMailQueueRecord implements Record {
     
     /** @var $mailQueueId int */
-    private $mailQueueId;
+    protected $mailQueueId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $toEmail string */
-    private $toEmail;
+    protected $toEmail;
     
     /** @var $subject string */
-    private $subject;
+    protected $subject;
     
     /** @var $message string */
-    private $message;
+    protected $message;
     
     /** @var $header string */
-    private $header;
+    protected $header;
     
     /** @var $fromEmail string */
-    private $fromEmail;
+    protected $fromEmail;
     
     public function hasMailQueueId(): bool
     {

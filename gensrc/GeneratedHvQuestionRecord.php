@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedHvQuestionRecord implements Record {
     
     /** @var $questionId int */
-    private $questionId;
+    protected $questionId;
     
     /** @var $regex string */
-    private $regex;
+    protected $regex;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasQuestionId(): bool
     {

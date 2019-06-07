@@ -60,83 +60,83 @@ class Search implements Table {
     
     public static function searchId() : ColumnField
     {
-        return new ColumnField('search', 'searchid');
+        return new ColumnField('searchId', 'Search', 'search', 'searchid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('search', 'userid');
+        return new ColumnField('userId', 'Search', 'search', 'userid');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('search', 'ipaddress');
+        return new ColumnField('ipAddress', 'Search', 'search', 'ipaddress');
     }
     public static function personal() : ColumnField
     {
-        return new ColumnField('search', 'personal');
+        return new ColumnField('personal', 'Search', 'search', 'personal');
     }
     public static function query() : ColumnField
     {
-        return new ColumnField('search', 'query');
+        return new ColumnField('query', 'Search', 'search', 'query');
     }
     public static function searchUser() : ColumnField
     {
-        return new ColumnField('search', 'searchuser');
+        return new ColumnField('searchUser', 'Search', 'search', 'searchuser');
     }
     public static function forumChoice() : ColumnField
     {
-        return new ColumnField('search', 'forumchoice');
+        return new ColumnField('forumChoice', 'Search', 'search', 'forumchoice');
     }
     public static function sortBy() : ColumnField
     {
-        return new ColumnField('search', 'sortby');
+        return new ColumnField('sortBy', 'Search', 'search', 'sortby');
     }
     public static function sortOrder() : ColumnField
     {
-        return new ColumnField('search', 'sortorder');
+        return new ColumnField('sortOrder', 'Search', 'search', 'sortorder');
     }
     public static function searchTime() : ColumnField
     {
-        return new ColumnField('search', 'searchtime');
+        return new ColumnField('searchTime', 'Search', 'search', 'searchtime');
     }
     public static function showPosts() : ColumnField
     {
-        return new ColumnField('search', 'showposts');
+        return new ColumnField('showPosts', 'Search', 'search', 'showposts');
     }
     public static function orderedIds() : ColumnField
     {
-        return new ColumnField('search', 'orderedids');
+        return new ColumnField('orderedIds', 'Search', 'search', 'orderedids');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('search', 'dateline');
+        return new ColumnField('dateLine', 'Search', 'search', 'dateline');
     }
     public static function searchTerms() : ColumnField
     {
-        return new ColumnField('search', 'searchterms');
+        return new ColumnField('searchTerms', 'Search', 'search', 'searchterms');
     }
     public static function displayTerms() : ColumnField
     {
-        return new ColumnField('search', 'displayterms');
+        return new ColumnField('displayTerms', 'Search', 'search', 'displayterms');
     }
     public static function searchHash() : ColumnField
     {
-        return new ColumnField('search', 'searchhash');
+        return new ColumnField('searchHash', 'Search', 'search', 'searchhash');
     }
     public static function titleOnly() : ColumnField
     {
-        return new ColumnField('search', 'titleonly');
+        return new ColumnField('titleOnly', 'Search', 'search', 'titleonly');
     }
     public static function announceIds() : ColumnField
     {
-        return new ColumnField('search', 'announceids');
+        return new ColumnField('announceIds', 'Search', 'search', 'announceids');
     }
     public static function completed() : ColumnField
     {
-        return new ColumnField('search', 'completed');
+        return new ColumnField('completed', 'Search', 'search', 'completed');
     }
     public static function prefixChoice() : ColumnField
     {
-        return new ColumnField('search', 'prefixchoice');
+        return new ColumnField('prefixChoice', 'Search', 'search', 'prefixchoice');
     }
 
     public function getTableName(): string
@@ -147,6 +147,14 @@ class Search implements Table {
     public function __listColumns() : array
     {
         return ['searchid', 'userid', 'ipaddress', 'personal', 'query', 'searchuser', 'forumchoice', 'sortby', 'sortorder', 'searchtime', 'showposts', 'orderedids', 'dateline', 'searchterms', 'displayterms', 'searchhash', 'titleonly', 'announceids', 'completed', 'prefixchoice'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['searchid'];
     }
     
     public function __listNullableColumns() : array
@@ -205,5 +213,4 @@ class Search implements Table {
 			'prefixchoice' => 'prefixChoice'
 		];
     }
-
 }

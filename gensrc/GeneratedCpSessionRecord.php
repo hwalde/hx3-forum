@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedCpSessionRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $hash string */
-    private $hash;
+    protected $hash;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasUserId(): bool
     {

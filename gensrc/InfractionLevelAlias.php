@@ -17,27 +17,27 @@ class InfractionLevelAlias extends TableAlias {
    
     public function infractionLevelId() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'infractionlevelid', $this->getAliasName());
+        return new ColumnField('infractionLevelId', 'InfractionLevel', 'infractionlevel', 'infractionlevelid', $this->getAliasName());
     }
     public function points() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'points', $this->getAliasName());
+        return new ColumnField('points', 'InfractionLevel', 'infractionlevel', 'points', $this->getAliasName());
     }
     public function expires() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'expires', $this->getAliasName());
+        return new ColumnField('expires', 'InfractionLevel', 'infractionlevel', 'expires', $this->getAliasName());
     }
     public function period() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'period', $this->getAliasName());
+        return new ColumnField('period', 'InfractionLevel', 'infractionlevel', 'period', $this->getAliasName());
     }
     public function warning() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'warning', $this->getAliasName());
+        return new ColumnField('warning', 'InfractionLevel', 'infractionlevel', 'warning', $this->getAliasName());
     }
     public function extend() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'extend', $this->getAliasName());
+        return new ColumnField('extend', 'InfractionLevel', 'infractionlevel', 'extend', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class InfractionLevelAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['infractionlevelid', 'points', 'expires', 'period', 'warning', 'extend'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['infractionlevelid'];
     }
     
     public function __listNullableColumns() : array

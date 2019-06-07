@@ -17,35 +17,35 @@ class UserChangeLogAlias extends TableAlias {
    
     public function changeId() : ColumnField
     {
-        return new ColumnField('userchangelog', 'changeid', $this->getAliasName());
+        return new ColumnField('changeId', 'UserChangeLog', 'userchangelog', 'changeid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('userchangelog', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserChangeLog', 'userchangelog', 'userid', $this->getAliasName());
     }
     public function fieldName() : ColumnField
     {
-        return new ColumnField('userchangelog', 'fieldname', $this->getAliasName());
+        return new ColumnField('fieldName', 'UserChangeLog', 'userchangelog', 'fieldname', $this->getAliasName());
     }
     public function newValue() : ColumnField
     {
-        return new ColumnField('userchangelog', 'newvalue', $this->getAliasName());
+        return new ColumnField('newValue', 'UserChangeLog', 'userchangelog', 'newvalue', $this->getAliasName());
     }
     public function oldValue() : ColumnField
     {
-        return new ColumnField('userchangelog', 'oldvalue', $this->getAliasName());
+        return new ColumnField('oldValue', 'UserChangeLog', 'userchangelog', 'oldvalue', $this->getAliasName());
     }
     public function adminId() : ColumnField
     {
-        return new ColumnField('userchangelog', 'adminid', $this->getAliasName());
+        return new ColumnField('adminId', 'UserChangeLog', 'userchangelog', 'adminid', $this->getAliasName());
     }
     public function changeTime() : ColumnField
     {
-        return new ColumnField('userchangelog', 'change_time', $this->getAliasName());
+        return new ColumnField('changeTime', 'UserChangeLog', 'userchangelog', 'change_time', $this->getAliasName());
     }
     public function changeUnIq() : ColumnField
     {
-        return new ColumnField('userchangelog', 'change_uniq', $this->getAliasName());
+        return new ColumnField('changeUnIq', 'UserChangeLog', 'userchangelog', 'change_uniq', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class UserChangeLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['changeid', 'userid', 'fieldname', 'newvalue', 'oldvalue', 'adminid', 'change_time', 'change_uniq'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['changeid'];
     }
     
     public function __listNullableColumns() : array

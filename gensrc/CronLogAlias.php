@@ -17,23 +17,23 @@ class CronLogAlias extends TableAlias {
    
     public function cronLogId() : ColumnField
     {
-        return new ColumnField('cronlog', 'cronlogid', $this->getAliasName());
+        return new ColumnField('cronLogId', 'CronLog', 'cronlog', 'cronlogid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('cronlog', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'CronLog', 'cronlog', 'dateline', $this->getAliasName());
     }
     public function description() : ColumnField
     {
-        return new ColumnField('cronlog', 'description', $this->getAliasName());
+        return new ColumnField('description', 'CronLog', 'cronlog', 'description', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('cronlog', 'type', $this->getAliasName());
+        return new ColumnField('type', 'CronLog', 'cronlog', 'type', $this->getAliasName());
     }
     public function varName() : ColumnField
     {
-        return new ColumnField('cronlog', 'varname', $this->getAliasName());
+        return new ColumnField('varName', 'CronLog', 'cronlog', 'varname', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class CronLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['cronlogid', 'dateline', 'description', 'type', 'varname'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['cronlogid'];
     }
     
     public function __listNullableColumns() : array

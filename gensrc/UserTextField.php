@@ -48,35 +48,35 @@ class UserTextField implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('usertextfield', 'userid');
+        return new ColumnField('userId', 'UserTextField', 'usertextfield', 'userid');
     }
     public static function subFolders() : ColumnField
     {
-        return new ColumnField('usertextfield', 'subfolders');
+        return new ColumnField('subFolders', 'UserTextField', 'usertextfield', 'subfolders');
     }
     public static function pmFolders() : ColumnField
     {
-        return new ColumnField('usertextfield', 'pmfolders');
+        return new ColumnField('pmFolders', 'UserTextField', 'usertextfield', 'pmfolders');
     }
     public static function buddyList() : ColumnField
     {
-        return new ColumnField('usertextfield', 'buddylist');
+        return new ColumnField('buddyList', 'UserTextField', 'usertextfield', 'buddylist');
     }
     public static function ignoreList() : ColumnField
     {
-        return new ColumnField('usertextfield', 'ignorelist');
+        return new ColumnField('ignoreList', 'UserTextField', 'usertextfield', 'ignorelist');
     }
     public static function signature() : ColumnField
     {
-        return new ColumnField('usertextfield', 'signature');
+        return new ColumnField('signature', 'UserTextField', 'usertextfield', 'signature');
     }
     public static function searchPrefs() : ColumnField
     {
-        return new ColumnField('usertextfield', 'searchprefs');
+        return new ColumnField('searchPrefs', 'UserTextField', 'usertextfield', 'searchprefs');
     }
     public static function rank() : ColumnField
     {
-        return new ColumnField('usertextfield', 'rank');
+        return new ColumnField('rank', 'UserTextField', 'usertextfield', 'rank');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class UserTextField implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'subfolders', 'pmfolders', 'buddylist', 'ignorelist', 'signature', 'searchprefs', 'rank'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class UserTextField implements Table {
 			'rank' => 'rank'
 		];
     }
-
 }

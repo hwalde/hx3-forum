@@ -46,27 +46,27 @@ class DeletionLog implements Table {
     
     public static function primaryId() : ColumnField
     {
-        return new ColumnField('deletionlog', 'primaryid');
+        return new ColumnField('primaryId', 'DeletionLog', 'deletionlog', 'primaryid');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('deletionlog', 'type');
+        return new ColumnField('type', 'DeletionLog', 'deletionlog', 'type');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('deletionlog', 'userid');
+        return new ColumnField('userId', 'DeletionLog', 'deletionlog', 'userid');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('deletionlog', 'username');
+        return new ColumnField('userName', 'DeletionLog', 'deletionlog', 'username');
     }
     public static function reason() : ColumnField
     {
-        return new ColumnField('deletionlog', 'reason');
+        return new ColumnField('reason', 'DeletionLog', 'deletionlog', 'reason');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('deletionlog', 'dateline');
+        return new ColumnField('dateLine', 'DeletionLog', 'deletionlog', 'dateline');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class DeletionLog implements Table {
     public function __listColumns() : array
     {
         return ['primaryid', 'type', 'userid', 'username', 'reason', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['primaryid', 'type'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class DeletionLog implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

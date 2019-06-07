@@ -14,58 +14,58 @@ use POOQ\Record;
 class GeneratedPostBakRecord implements Record {
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $parentId int */
-    private $parentId;
+    protected $parentId;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $pageText string */
-    private $pageText;
+    protected $pageText;
     
     /** @var $allowSmilie int */
-    private $allowSmilie;
+    protected $allowSmilie;
     
     /** @var $showSignature int */
-    private $showSignature;
+    protected $showSignature;
     
     /** @var $ipAddress string */
-    private $ipAddress;
+    protected $ipAddress;
     
     /** @var $iconId int */
-    private $iconId;
+    protected $iconId;
     
     /** @var $visible int */
-    private $visible;
+    protected $visible;
     
     /** @var $attach int */
-    private $attach;
+    protected $attach;
     
     /** @var $importThreadId int */
-    private $importThreadId;
+    protected $importThreadId;
     
     /** @var $importpostId int */
-    private $importpostId;
+    protected $importpostId;
     
     /** @var $infraction int */
-    private $infraction;
+    protected $infraction;
     
     /** @var $reportThreadId int */
-    private $reportThreadId;
+    protected $reportThreadId;
     
     public function hasPostId(): bool
     {

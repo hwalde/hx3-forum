@@ -17,23 +17,23 @@ class NoticeAlias extends TableAlias {
    
     public function noticeId() : ColumnField
     {
-        return new ColumnField('notice', 'noticeid', $this->getAliasName());
+        return new ColumnField('noticeId', 'Notice', 'notice', 'noticeid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('notice', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Notice', 'notice', 'title', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('notice', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'Notice', 'notice', 'displayorder', $this->getAliasName());
     }
     public function persistent() : ColumnField
     {
-        return new ColumnField('notice', 'persistent', $this->getAliasName());
+        return new ColumnField('persistent', 'Notice', 'notice', 'persistent', $this->getAliasName());
     }
     public function active() : ColumnField
     {
-        return new ColumnField('notice', 'active', $this->getAliasName());
+        return new ColumnField('active', 'Notice', 'notice', 'active', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class NoticeAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['noticeid', 'title', 'displayorder', 'persistent', 'active'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['noticeid'];
     }
     
     public function __listNullableColumns() : array

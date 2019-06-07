@@ -53,55 +53,55 @@ class Poll implements Table {
     
     public static function pollId() : ColumnField
     {
-        return new ColumnField('poll', 'pollid');
+        return new ColumnField('pollId', 'Poll', 'poll', 'pollid');
     }
     public static function question() : ColumnField
     {
-        return new ColumnField('poll', 'question');
+        return new ColumnField('question', 'Poll', 'poll', 'question');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('poll', 'dateline');
+        return new ColumnField('dateLine', 'Poll', 'poll', 'dateline');
     }
     public static function options() : ColumnField
     {
-        return new ColumnField('poll', 'options');
+        return new ColumnField('options', 'Poll', 'poll', 'options');
     }
     public static function votes() : ColumnField
     {
-        return new ColumnField('poll', 'votes');
+        return new ColumnField('votes', 'Poll', 'poll', 'votes');
     }
     public static function active() : ColumnField
     {
-        return new ColumnField('poll', 'active');
+        return new ColumnField('active', 'Poll', 'poll', 'active');
     }
     public static function numberOptions() : ColumnField
     {
-        return new ColumnField('poll', 'numberoptions');
+        return new ColumnField('numberOptions', 'Poll', 'poll', 'numberoptions');
     }
     public static function timeout() : ColumnField
     {
-        return new ColumnField('poll', 'timeout');
+        return new ColumnField('timeout', 'Poll', 'poll', 'timeout');
     }
     public static function multiple() : ColumnField
     {
-        return new ColumnField('poll', 'multiple');
+        return new ColumnField('multiple', 'Poll', 'poll', 'multiple');
     }
     public static function voters() : ColumnField
     {
-        return new ColumnField('poll', 'voters');
+        return new ColumnField('voters', 'Poll', 'poll', 'voters');
     }
     public static function public() : ColumnField
     {
-        return new ColumnField('poll', 'public');
+        return new ColumnField('public', 'Poll', 'poll', 'public');
     }
     public static function lastVote() : ColumnField
     {
-        return new ColumnField('poll', 'lastvote');
+        return new ColumnField('lastVote', 'Poll', 'poll', 'lastvote');
     }
     public static function importPollId() : ColumnField
     {
-        return new ColumnField('poll', 'importpollid');
+        return new ColumnField('importPollId', 'Poll', 'poll', 'importpollid');
     }
 
     public function getTableName(): string
@@ -112,6 +112,14 @@ class Poll implements Table {
     public function __listColumns() : array
     {
         return ['pollid', 'question', 'dateline', 'options', 'votes', 'active', 'numberoptions', 'timeout', 'multiple', 'voters', 'public', 'lastvote', 'importpollid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pollid'];
     }
     
     public function __listNullableColumns() : array
@@ -156,5 +164,4 @@ class Poll implements Table {
 			'importpollid' => 'importPollId'
 		];
     }
-
 }

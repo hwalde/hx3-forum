@@ -17,15 +17,15 @@ class UserCssCacheAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('usercsscache', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserCssCache', 'usercsscache', 'userid', $this->getAliasName());
     }
     public function cachedCss() : ColumnField
     {
-        return new ColumnField('usercsscache', 'cachedcss', $this->getAliasName());
+        return new ColumnField('cachedCss', 'UserCssCache', 'usercsscache', 'cachedcss', $this->getAliasName());
     }
     public function buildPermissions() : ColumnField
     {
-        return new ColumnField('usercsscache', 'buildpermissions', $this->getAliasName());
+        return new ColumnField('buildPermissions', 'UserCssCache', 'usercsscache', 'buildpermissions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class UserCssCacheAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'cachedcss', 'buildpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array

@@ -49,39 +49,39 @@ class AttachmentType implements Table {
     
     public static function extension() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'extension');
+        return new ColumnField('extension', 'AttachmentType', 'attachmenttype', 'extension');
     }
     public static function mimeType() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'mimetype');
+        return new ColumnField('mimeType', 'AttachmentType', 'attachmenttype', 'mimetype');
     }
     public static function size() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'size');
+        return new ColumnField('size', 'AttachmentType', 'attachmenttype', 'size');
     }
     public static function width() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'width');
+        return new ColumnField('width', 'AttachmentType', 'attachmenttype', 'width');
     }
     public static function height() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'height');
+        return new ColumnField('height', 'AttachmentType', 'attachmenttype', 'height');
     }
     public static function enabled() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'enabled');
+        return new ColumnField('enabled', 'AttachmentType', 'attachmenttype', 'enabled');
     }
     public static function display() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'display');
+        return new ColumnField('display', 'AttachmentType', 'attachmenttype', 'display');
     }
     public static function thumbnail() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'thumbnail');
+        return new ColumnField('thumbnail', 'AttachmentType', 'attachmenttype', 'thumbnail');
     }
     public static function newWindow() : ColumnField
     {
-        return new ColumnField('attachmenttype', 'newwindow');
+        return new ColumnField('newWindow', 'AttachmentType', 'attachmenttype', 'newwindow');
     }
 
     public function getTableName(): string
@@ -92,6 +92,14 @@ class AttachmentType implements Table {
     public function __listColumns() : array
     {
         return ['extension', 'mimetype', 'size', 'width', 'height', 'enabled', 'display', 'thumbnail', 'newwindow'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['extension'];
     }
     
     public function __listNullableColumns() : array
@@ -128,5 +136,4 @@ class AttachmentType implements Table {
 			'newwindow' => 'newWindow'
 		];
     }
-
 }

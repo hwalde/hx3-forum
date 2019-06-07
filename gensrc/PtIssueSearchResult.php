@@ -44,19 +44,19 @@ class PtIssueSearchResult implements Table {
     
     public static function issueSearchId() : ColumnField
     {
-        return new ColumnField('pt_issuesearchresult', 'issuesearchid');
+        return new ColumnField('issueSearchId', 'PtIssueSearchResult', 'pt_issuesearchresult', 'issuesearchid');
     }
     public static function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuesearchresult', 'issueid');
+        return new ColumnField('issueId', 'PtIssueSearchResult', 'pt_issuesearchresult', 'issueid');
     }
     public static function offset() : ColumnField
     {
-        return new ColumnField('pt_issuesearchresult', 'offset');
+        return new ColumnField('offset', 'PtIssueSearchResult', 'pt_issuesearchresult', 'offset');
     }
     public static function groupId() : ColumnField
     {
-        return new ColumnField('pt_issuesearchresult', 'groupid');
+        return new ColumnField('groupId', 'PtIssueSearchResult', 'pt_issuesearchresult', 'groupid');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class PtIssueSearchResult implements Table {
     public function __listColumns() : array
     {
         return ['issuesearchid', 'issueid', 'offset', 'groupid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuesearchid', 'offset'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class PtIssueSearchResult implements Table {
 			'groupid' => 'groupId'
 		];
     }
-
 }

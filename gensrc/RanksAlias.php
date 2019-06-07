@@ -17,39 +17,39 @@ class RanksAlias extends TableAlias {
    
     public function rankId() : ColumnField
     {
-        return new ColumnField('ranks', 'rankid', $this->getAliasName());
+        return new ColumnField('rankId', 'Ranks', 'ranks', 'rankid', $this->getAliasName());
     }
     public function minPosts() : ColumnField
     {
-        return new ColumnField('ranks', 'minposts', $this->getAliasName());
+        return new ColumnField('minPosts', 'Ranks', 'ranks', 'minposts', $this->getAliasName());
     }
     public function rankLevel() : ColumnField
     {
-        return new ColumnField('ranks', 'ranklevel', $this->getAliasName());
+        return new ColumnField('rankLevel', 'Ranks', 'ranks', 'ranklevel', $this->getAliasName());
     }
     public function rankimg() : ColumnField
     {
-        return new ColumnField('ranks', 'rankimg', $this->getAliasName());
+        return new ColumnField('rankimg', 'Ranks', 'ranks', 'rankimg', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('ranks', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'Ranks', 'ranks', 'usergroupid', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('ranks', 'type', $this->getAliasName());
+        return new ColumnField('type', 'Ranks', 'ranks', 'type', $this->getAliasName());
     }
     public function importRanksId() : ColumnField
     {
-        return new ColumnField('ranks', 'importranksid', $this->getAliasName());
+        return new ColumnField('importRanksId', 'Ranks', 'ranks', 'importranksid', $this->getAliasName());
     }
     public function stack() : ColumnField
     {
-        return new ColumnField('ranks', 'stack', $this->getAliasName());
+        return new ColumnField('stack', 'Ranks', 'ranks', 'stack', $this->getAliasName());
     }
     public function display() : ColumnField
     {
-        return new ColumnField('ranks', 'display', $this->getAliasName());
+        return new ColumnField('display', 'Ranks', 'ranks', 'display', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -60,6 +60,14 @@ class RanksAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['rankid', 'minposts', 'ranklevel', 'rankimg', 'usergroupid', 'type', 'importranksid', 'stack', 'display'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['rankid'];
     }
     
     public function __listNullableColumns() : array

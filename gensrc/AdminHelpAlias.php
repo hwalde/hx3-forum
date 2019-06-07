@@ -17,31 +17,31 @@ class AdminHelpAlias extends TableAlias {
    
     public function adminHelpId() : ColumnField
     {
-        return new ColumnField('adminhelp', 'adminhelpid', $this->getAliasName());
+        return new ColumnField('adminHelpId', 'AdminHelp', 'adminhelp', 'adminhelpid', $this->getAliasName());
     }
     public function script() : ColumnField
     {
-        return new ColumnField('adminhelp', 'script', $this->getAliasName());
+        return new ColumnField('script', 'AdminHelp', 'adminhelp', 'script', $this->getAliasName());
     }
     public function action() : ColumnField
     {
-        return new ColumnField('adminhelp', 'action', $this->getAliasName());
+        return new ColumnField('action', 'AdminHelp', 'adminhelp', 'action', $this->getAliasName());
     }
     public function optionName() : ColumnField
     {
-        return new ColumnField('adminhelp', 'optionname', $this->getAliasName());
+        return new ColumnField('optionName', 'AdminHelp', 'adminhelp', 'optionname', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('adminhelp', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'AdminHelp', 'adminhelp', 'displayorder', $this->getAliasName());
     }
     public function volatile() : ColumnField
     {
-        return new ColumnField('adminhelp', 'volatile', $this->getAliasName());
+        return new ColumnField('volatile', 'AdminHelp', 'adminhelp', 'volatile', $this->getAliasName());
     }
     public function product() : ColumnField
     {
-        return new ColumnField('adminhelp', 'product', $this->getAliasName());
+        return new ColumnField('product', 'AdminHelp', 'adminhelp', 'product', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class AdminHelpAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['adminhelpid', 'script', 'action', 'optionname', 'displayorder', 'volatile', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['adminhelpid'];
     }
     
     public function __listNullableColumns() : array

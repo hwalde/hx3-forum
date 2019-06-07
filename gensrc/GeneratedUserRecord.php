@@ -14,211 +14,211 @@ use POOQ\Record;
 class GeneratedUserRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $memberGroupIds string */
-    private $memberGroupIds;
+    protected $memberGroupIds;
     
     /** @var $displayGroupId int */
-    private $displayGroupId;
+    protected $displayGroupId;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     /** @var $password string */
-    private $password;
+    protected $password;
     
     /** @var $passwordDate \DateTime */
-    private $passwordDate;
+    protected $passwordDate;
     
     /** @var $email string */
-    private $email;
+    protected $email;
     
     /** @var $styleId int */
-    private $styleId;
+    protected $styleId;
     
     /** @var $parentEmail string */
-    private $parentEmail;
+    protected $parentEmail;
     
     /** @var $homePage string */
-    private $homePage;
+    protected $homePage;
     
     /** @var $icq string */
-    private $icq;
+    protected $icq;
     
     /** @var $aim string */
-    private $aim;
+    protected $aim;
     
     /** @var $yahoo string */
-    private $yahoo;
+    protected $yahoo;
     
     /** @var $showVbCode int */
-    private $showVbCode;
+    protected $showVbCode;
     
     /** @var $userTitle string */
-    private $userTitle;
+    protected $userTitle;
     
     /** @var $customTitle int */
-    private $customTitle;
+    protected $customTitle;
     
     /** @var $joinDate int */
-    private $joinDate;
+    protected $joinDate;
     
     /** @var $daysPrune int */
-    private $daysPrune;
+    protected $daysPrune;
     
     /** @var $lastVisit int */
-    private $lastVisit;
+    protected $lastVisit;
     
     /** @var $lastActivity int */
-    private $lastActivity;
+    protected $lastActivity;
     
     /** @var $lastPost int */
-    private $lastPost;
+    protected $lastPost;
     
     /** @var $posts int */
-    private $posts;
+    protected $posts;
     
     /** @var $reputation int */
-    private $reputation;
+    protected $reputation;
     
     /** @var $reputationLevelId int */
-    private $reputationLevelId;
+    protected $reputationLevelId;
     
     /** @var $timeZoneOffset string */
-    private $timeZoneOffset;
+    protected $timeZoneOffset;
     
     /** @var $pmPopup int */
-    private $pmPopup;
+    protected $pmPopup;
     
     /** @var $avatarId int */
-    private $avatarId;
+    protected $avatarId;
     
     /** @var $avatarRevision int */
-    private $avatarRevision;
+    protected $avatarRevision;
     
     /** @var $options int */
-    private $options;
+    protected $options;
     
     /** @var $birthday string */
-    private $birthday;
+    protected $birthday;
     
     /** @var $birthdaySearch \DateTime */
-    private $birthdaySearch;
+    protected $birthdaySearch;
     
     /** @var $maxPosts int */
-    private $maxPosts;
+    protected $maxPosts;
     
     /** @var $startOfWeek int */
-    private $startOfWeek;
+    protected $startOfWeek;
     
     /** @var $ipAddress string */
-    private $ipAddress;
+    protected $ipAddress;
     
     /** @var $referrerId int */
-    private $referrerId;
+    protected $referrerId;
     
     /** @var $languageId int */
-    private $languageId;
+    protected $languageId;
     
     /** @var $msn string */
-    private $msn;
+    protected $msn;
     
     /** @var $emailStamp int */
-    private $emailStamp;
+    protected $emailStamp;
     
     /** @var $threadedMode int */
-    private $threadedMode;
+    protected $threadedMode;
     
     /** @var $autoSubscribe int */
-    private $autoSubscribe;
+    protected $autoSubscribe;
     
     /** @var $pmTotal int */
-    private $pmTotal;
+    protected $pmTotal;
     
     /** @var $pmUnread int */
-    private $pmUnread;
+    protected $pmUnread;
     
     /** @var $salt string */
-    private $salt;
+    protected $salt;
     
     /** @var $importUserId int */
-    private $importUserId;
+    protected $importUserId;
     
     /** @var $profilePicRevision int */
-    private $profilePicRevision;
+    protected $profilePicRevision;
     
     /** @var $showBirthday int */
-    private $showBirthday;
+    protected $showBirthday;
     
     /** @var $skype string */
-    private $skype;
+    protected $skype;
     
     /** @var $adminOptions int */
-    private $adminOptions;
+    protected $adminOptions;
     
     /** @var $lastPostId int */
-    private $lastPostId;
+    protected $lastPostId;
     
     /** @var $sigPicRevision int */
-    private $sigPicRevision;
+    protected $sigPicRevision;
     
     /** @var $iPoints int */
-    private $iPoints;
+    protected $iPoints;
     
     /** @var $infractions int */
-    private $infractions;
+    protected $infractions;
     
     /** @var $warnings int */
-    private $warnings;
+    protected $warnings;
     
     /** @var $infractiongGoupids string */
-    private $infractiongGoupids;
+    protected $infractiongGoupids;
     
     /** @var $infractionGroupId int */
-    private $infractionGroupId;
+    protected $infractionGroupId;
     
     /** @var $nCodeImageResizerMode string|null */
-    private $nCodeImageResizerMode;
+    protected $nCodeImageResizerMode;
     
     /** @var $nCodeImageResizerMaxWidth int|null */
-    private $nCodeImageResizerMaxWidth;
+    protected $nCodeImageResizerMaxWidth;
     
     /** @var $nCodeImageResizerMaxHeight int|null */
-    private $nCodeImageResizerMaxHeight;
+    protected $nCodeImageResizerMaxHeight;
     
     /** @var $profileVisits int */
-    private $profileVisits;
+    protected $profileVisits;
     
     /** @var $friendCount int */
-    private $friendCount;
+    protected $friendCount;
     
     /** @var $friendReqCount int */
-    private $friendReqCount;
+    protected $friendReqCount;
     
     /** @var $vmUnreadCount int */
-    private $vmUnreadCount;
+    protected $vmUnreadCount;
     
     /** @var $vmModeratedcount int */
-    private $vmModeratedcount;
+    protected $vmModeratedcount;
     
     /** @var $socGroupInviteCount int */
-    private $socGroupInviteCount;
+    protected $socGroupInviteCount;
     
     /** @var $socGroupReqCount int */
-    private $socGroupReqCount;
+    protected $socGroupReqCount;
     
     /** @var $pcUnreadCount int */
-    private $pcUnreadCount;
+    protected $pcUnreadCount;
     
     /** @var $pcModeratedCount int */
-    private $pcModeratedCount;
+    protected $pcModeratedCount;
     
     /** @var $gmModeratedCount int */
-    private $gmModeratedCount;
+    protected $gmModeratedCount;
     
     public function hasUserId(): bool
     {

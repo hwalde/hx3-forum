@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedTemplateHistoryRecord implements Record {
     
     /** @var $templateHistoryId int */
-    private $templateHistoryId;
+    protected $templateHistoryId;
     
     /** @var $styleId int */
-    private $styleId;
+    protected $styleId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $template string */
-    private $template;
+    protected $template;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     /** @var $version string */
-    private $version;
+    protected $version;
     
     /** @var $comment string */
-    private $comment;
+    protected $comment;
     
     public function hasTemplateHistoryId(): bool
     {

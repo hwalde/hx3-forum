@@ -70,119 +70,119 @@ class Thread implements Table {
     
     public static function threadId() : ColumnField
     {
-        return new ColumnField('thread', 'threadid');
+        return new ColumnField('threadId', 'Thread', 'thread', 'threadid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('thread', 'title');
+        return new ColumnField('title', 'Thread', 'thread', 'title');
     }
     public static function firstPostId() : ColumnField
     {
-        return new ColumnField('thread', 'firstpostid');
+        return new ColumnField('firstPostId', 'Thread', 'thread', 'firstpostid');
     }
     public static function lastPost() : ColumnField
     {
-        return new ColumnField('thread', 'lastpost');
+        return new ColumnField('lastPost', 'Thread', 'thread', 'lastpost');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('thread', 'forumid');
+        return new ColumnField('forumId', 'Thread', 'thread', 'forumid');
     }
     public static function pollId() : ColumnField
     {
-        return new ColumnField('thread', 'pollid');
+        return new ColumnField('pollId', 'Thread', 'thread', 'pollid');
     }
     public static function open() : ColumnField
     {
-        return new ColumnField('thread', 'open');
+        return new ColumnField('open', 'Thread', 'thread', 'open');
     }
     public static function replyCount() : ColumnField
     {
-        return new ColumnField('thread', 'replycount');
+        return new ColumnField('replyCount', 'Thread', 'thread', 'replycount');
     }
     public static function postUserName() : ColumnField
     {
-        return new ColumnField('thread', 'postusername');
+        return new ColumnField('postUserName', 'Thread', 'thread', 'postusername');
     }
     public static function postUserId() : ColumnField
     {
-        return new ColumnField('thread', 'postuserid');
+        return new ColumnField('postUserId', 'Thread', 'thread', 'postuserid');
     }
     public static function lastPoster() : ColumnField
     {
-        return new ColumnField('thread', 'lastposter');
+        return new ColumnField('lastPoster', 'Thread', 'thread', 'lastposter');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('thread', 'dateline');
+        return new ColumnField('dateLine', 'Thread', 'thread', 'dateline');
     }
     public static function views() : ColumnField
     {
-        return new ColumnField('thread', 'views');
+        return new ColumnField('views', 'Thread', 'thread', 'views');
     }
     public static function iconId() : ColumnField
     {
-        return new ColumnField('thread', 'iconid');
+        return new ColumnField('iconId', 'Thread', 'thread', 'iconid');
     }
     public static function notes() : ColumnField
     {
-        return new ColumnField('thread', 'notes');
+        return new ColumnField('notes', 'Thread', 'thread', 'notes');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('thread', 'visible');
+        return new ColumnField('visible', 'Thread', 'thread', 'visible');
     }
     public static function sticky() : ColumnField
     {
-        return new ColumnField('thread', 'sticky');
+        return new ColumnField('sticky', 'Thread', 'thread', 'sticky');
     }
     public static function voteNum() : ColumnField
     {
-        return new ColumnField('thread', 'votenum');
+        return new ColumnField('voteNum', 'Thread', 'thread', 'votenum');
     }
     public static function voteTotal() : ColumnField
     {
-        return new ColumnField('thread', 'votetotal');
+        return new ColumnField('voteTotal', 'Thread', 'thread', 'votetotal');
     }
     public static function attach() : ColumnField
     {
-        return new ColumnField('thread', 'attach');
+        return new ColumnField('attach', 'Thread', 'thread', 'attach');
     }
     public static function similar() : ColumnField
     {
-        return new ColumnField('thread', 'similar');
+        return new ColumnField('similar', 'Thread', 'thread', 'similar');
     }
     public static function importThreadId() : ColumnField
     {
-        return new ColumnField('thread', 'importthreadid');
+        return new ColumnField('importThreadId', 'Thread', 'thread', 'importthreadid');
     }
     public static function importForumId() : ColumnField
     {
-        return new ColumnField('thread', 'importforumid');
+        return new ColumnField('importForumId', 'Thread', 'thread', 'importforumid');
     }
     public static function hiddenCount() : ColumnField
     {
-        return new ColumnField('thread', 'hiddencount');
+        return new ColumnField('hiddenCount', 'Thread', 'thread', 'hiddencount');
     }
     public static function deletedCount() : ColumnField
     {
-        return new ColumnField('thread', 'deletedcount');
+        return new ColumnField('deletedCount', 'Thread', 'thread', 'deletedcount');
     }
     public static function lastPostId() : ColumnField
     {
-        return new ColumnField('thread', 'lastpostid');
+        return new ColumnField('lastPostId', 'Thread', 'thread', 'lastpostid');
     }
     public static function prefixId() : ColumnField
     {
-        return new ColumnField('thread', 'prefixid');
+        return new ColumnField('prefixId', 'Thread', 'thread', 'prefixid');
     }
     public static function tagList() : ColumnField
     {
-        return new ColumnField('thread', 'taglist');
+        return new ColumnField('tagList', 'Thread', 'thread', 'taglist');
     }
     public static function vbSeoLinkbacksNo() : ColumnField
     {
-        return new ColumnField('thread', 'vbseo_linkbacks_no');
+        return new ColumnField('vbSeoLinkbacksNo', 'Thread', 'thread', 'vbseo_linkbacks_no');
     }
 
     public function getTableName(): string
@@ -193,6 +193,14 @@ class Thread implements Table {
     public function __listColumns() : array
     {
         return ['threadid', 'title', 'firstpostid', 'lastpost', 'forumid', 'pollid', 'open', 'replycount', 'postusername', 'postuserid', 'lastposter', 'dateline', 'views', 'iconid', 'notes', 'visible', 'sticky', 'votenum', 'votetotal', 'attach', 'similar', 'importthreadid', 'importforumid', 'hiddencount', 'deletedcount', 'lastpostid', 'prefixid', 'taglist', 'vbseo_linkbacks_no'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['threadid'];
     }
     
     public function __listNullableColumns() : array
@@ -269,5 +277,4 @@ class Thread implements Table {
 			'vbseo_linkbacks_no' => 'vbSeoLinkbacksNo'
 		];
     }
-
 }

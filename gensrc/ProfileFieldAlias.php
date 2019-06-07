@@ -17,79 +17,79 @@ class ProfileFieldAlias extends TableAlias {
    
     public function profileFieldId() : ColumnField
     {
-        return new ColumnField('profilefield', 'profilefieldid', $this->getAliasName());
+        return new ColumnField('profileFieldId', 'ProfileField', 'profilefield', 'profilefieldid', $this->getAliasName());
     }
     public function required() : ColumnField
     {
-        return new ColumnField('profilefield', 'required', $this->getAliasName());
+        return new ColumnField('required', 'ProfileField', 'profilefield', 'required', $this->getAliasName());
     }
     public function hidden() : ColumnField
     {
-        return new ColumnField('profilefield', 'hidden', $this->getAliasName());
+        return new ColumnField('hidden', 'ProfileField', 'profilefield', 'hidden', $this->getAliasName());
     }
     public function maxLength() : ColumnField
     {
-        return new ColumnField('profilefield', 'maxlength', $this->getAliasName());
+        return new ColumnField('maxLength', 'ProfileField', 'profilefield', 'maxlength', $this->getAliasName());
     }
     public function size() : ColumnField
     {
-        return new ColumnField('profilefield', 'size', $this->getAliasName());
+        return new ColumnField('size', 'ProfileField', 'profilefield', 'size', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('profilefield', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'ProfileField', 'profilefield', 'displayorder', $this->getAliasName());
     }
     public function editable() : ColumnField
     {
-        return new ColumnField('profilefield', 'editable', $this->getAliasName());
+        return new ColumnField('editable', 'ProfileField', 'profilefield', 'editable', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('profilefield', 'type', $this->getAliasName());
+        return new ColumnField('type', 'ProfileField', 'profilefield', 'type', $this->getAliasName());
     }
     public function data() : ColumnField
     {
-        return new ColumnField('profilefield', 'data', $this->getAliasName());
+        return new ColumnField('data', 'ProfileField', 'profilefield', 'data', $this->getAliasName());
     }
     public function height() : ColumnField
     {
-        return new ColumnField('profilefield', 'height', $this->getAliasName());
+        return new ColumnField('height', 'ProfileField', 'profilefield', 'height', $this->getAliasName());
     }
     public function def() : ColumnField
     {
-        return new ColumnField('profilefield', 'def', $this->getAliasName());
+        return new ColumnField('def', 'ProfileField', 'profilefield', 'def', $this->getAliasName());
     }
     public function optional() : ColumnField
     {
-        return new ColumnField('profilefield', 'optional', $this->getAliasName());
+        return new ColumnField('optional', 'ProfileField', 'profilefield', 'optional', $this->getAliasName());
     }
     public function searchable() : ColumnField
     {
-        return new ColumnField('profilefield', 'searchable', $this->getAliasName());
+        return new ColumnField('searchable', 'ProfileField', 'profilefield', 'searchable', $this->getAliasName());
     }
     public function memberList() : ColumnField
     {
-        return new ColumnField('profilefield', 'memberlist', $this->getAliasName());
+        return new ColumnField('memberList', 'ProfileField', 'profilefield', 'memberlist', $this->getAliasName());
     }
     public function regex() : ColumnField
     {
-        return new ColumnField('profilefield', 'regex', $this->getAliasName());
+        return new ColumnField('regex', 'ProfileField', 'profilefield', 'regex', $this->getAliasName());
     }
     public function form() : ColumnField
     {
-        return new ColumnField('profilefield', 'form', $this->getAliasName());
+        return new ColumnField('form', 'ProfileField', 'profilefield', 'form', $this->getAliasName());
     }
     public function html() : ColumnField
     {
-        return new ColumnField('profilefield', 'html', $this->getAliasName());
+        return new ColumnField('html', 'ProfileField', 'profilefield', 'html', $this->getAliasName());
     }
     public function perLine() : ColumnField
     {
-        return new ColumnField('profilefield', 'perline', $this->getAliasName());
+        return new ColumnField('perLine', 'ProfileField', 'profilefield', 'perline', $this->getAliasName());
     }
     public function profileFieldCategoryId() : ColumnField
     {
-        return new ColumnField('profilefield', 'profilefieldcategoryid', $this->getAliasName());
+        return new ColumnField('profileFieldCategoryId', 'ProfileField', 'profilefield', 'profilefieldcategoryid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -100,6 +100,14 @@ class ProfileFieldAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['profilefieldid', 'required', 'hidden', 'maxlength', 'size', 'displayorder', 'editable', 'type', 'data', 'height', 'def', 'optional', 'searchable', 'memberlist', 'regex', 'form', 'html', 'perline', 'profilefieldcategoryid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['profilefieldid'];
     }
     
     public function __listNullableColumns() : array

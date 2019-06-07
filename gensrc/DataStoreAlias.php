@@ -17,15 +17,15 @@ class DataStoreAlias extends TableAlias {
    
     public function title() : ColumnField
     {
-        return new ColumnField('datastore', 'title', $this->getAliasName());
+        return new ColumnField('title', 'DataStore', 'datastore', 'title', $this->getAliasName());
     }
     public function data() : ColumnField
     {
-        return new ColumnField('datastore', 'data', $this->getAliasName());
+        return new ColumnField('data', 'DataStore', 'datastore', 'data', $this->getAliasName());
     }
     public function unSerialize() : ColumnField
     {
-        return new ColumnField('datastore', 'unserialize', $this->getAliasName());
+        return new ColumnField('unSerialize', 'DataStore', 'datastore', 'unserialize', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class DataStoreAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['title', 'data', 'unserialize'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['title'];
     }
     
     public function __listNullableColumns() : array

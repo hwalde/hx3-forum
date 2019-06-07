@@ -17,35 +17,35 @@ class RssLogAlias extends TableAlias {
    
     public function rssFeedId() : ColumnField
     {
-        return new ColumnField('rsslog', 'rssfeedid', $this->getAliasName());
+        return new ColumnField('rssFeedId', 'RssLog', 'rsslog', 'rssfeedid', $this->getAliasName());
     }
     public function itemId() : ColumnField
     {
-        return new ColumnField('rsslog', 'itemid', $this->getAliasName());
+        return new ColumnField('itemId', 'RssLog', 'rsslog', 'itemid', $this->getAliasName());
     }
     public function itemType() : ColumnField
     {
-        return new ColumnField('rsslog', 'itemtype', $this->getAliasName());
+        return new ColumnField('itemType', 'RssLog', 'rsslog', 'itemtype', $this->getAliasName());
     }
     public function uniqueHash() : ColumnField
     {
-        return new ColumnField('rsslog', 'uniquehash', $this->getAliasName());
+        return new ColumnField('uniqueHash', 'RssLog', 'rsslog', 'uniquehash', $this->getAliasName());
     }
     public function contentHash() : ColumnField
     {
-        return new ColumnField('rsslog', 'contenthash', $this->getAliasName());
+        return new ColumnField('contentHash', 'RssLog', 'rsslog', 'contenthash', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('rsslog', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'RssLog', 'rsslog', 'dateline', $this->getAliasName());
     }
     public function threadActionTime() : ColumnField
     {
-        return new ColumnField('rsslog', 'threadactiontime', $this->getAliasName());
+        return new ColumnField('threadActionTime', 'RssLog', 'rsslog', 'threadactiontime', $this->getAliasName());
     }
     public function threadActionComplete() : ColumnField
     {
-        return new ColumnField('rsslog', 'threadactioncomplete', $this->getAliasName());
+        return new ColumnField('threadActionComplete', 'RssLog', 'rsslog', 'threadactioncomplete', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class RssLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['rssfeedid', 'itemid', 'itemtype', 'uniquehash', 'contenthash', 'dateline', 'threadactiontime', 'threadactioncomplete'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['rssfeedid', 'itemid', 'itemtype'];
     }
     
     public function __listNullableColumns() : array

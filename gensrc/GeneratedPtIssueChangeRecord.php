@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedPtIssueChangeRecord implements Record {
     
     /** @var $issueChangeId int */
-    private $issueChangeId;
+    protected $issueChangeId;
     
     /** @var $issueId int */
-    private $issueId;
+    protected $issueId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $issueNoteId int */
-    private $issueNoteId;
+    protected $issueNoteId;
     
     /** @var $field string */
-    private $field;
+    protected $field;
     
     /** @var $oldValue string */
-    private $oldValue;
+    protected $oldValue;
     
     /** @var $newValue string */
-    private $newValue;
+    protected $newValue;
     
     public function hasIssueChangeId(): bool
     {

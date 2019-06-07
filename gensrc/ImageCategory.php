@@ -44,19 +44,19 @@ class ImageCategory implements Table {
     
     public static function imageCategoryId() : ColumnField
     {
-        return new ColumnField('imagecategory', 'imagecategoryid');
+        return new ColumnField('imageCategoryId', 'ImageCategory', 'imagecategory', 'imagecategoryid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('imagecategory', 'title');
+        return new ColumnField('title', 'ImageCategory', 'imagecategory', 'title');
     }
     public static function imageType() : ColumnField
     {
-        return new ColumnField('imagecategory', 'imagetype');
+        return new ColumnField('imageType', 'ImageCategory', 'imagecategory', 'imagetype');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('imagecategory', 'displayorder');
+        return new ColumnField('displayOrder', 'ImageCategory', 'imagecategory', 'displayorder');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class ImageCategory implements Table {
     public function __listColumns() : array
     {
         return ['imagecategoryid', 'title', 'imagetype', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['imagecategoryid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class ImageCategory implements Table {
 			'displayorder' => 'displayOrder'
 		];
     }
-
 }

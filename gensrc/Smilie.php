@@ -47,31 +47,31 @@ class Smilie implements Table {
     
     public static function smilieId() : ColumnField
     {
-        return new ColumnField('smilie', 'smilieid');
+        return new ColumnField('smilieId', 'Smilie', 'smilie', 'smilieid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('smilie', 'title');
+        return new ColumnField('title', 'Smilie', 'smilie', 'title');
     }
     public static function smilieText() : ColumnField
     {
-        return new ColumnField('smilie', 'smilietext');
+        return new ColumnField('smilieText', 'Smilie', 'smilie', 'smilietext');
     }
     public static function smiliePath() : ColumnField
     {
-        return new ColumnField('smilie', 'smiliepath');
+        return new ColumnField('smiliePath', 'Smilie', 'smilie', 'smiliepath');
     }
     public static function imageCategoryId() : ColumnField
     {
-        return new ColumnField('smilie', 'imagecategoryid');
+        return new ColumnField('imageCategoryId', 'Smilie', 'smilie', 'imagecategoryid');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('smilie', 'displayorder');
+        return new ColumnField('displayOrder', 'Smilie', 'smilie', 'displayorder');
     }
     public static function importSmilieId() : ColumnField
     {
-        return new ColumnField('smilie', 'importsmilieid');
+        return new ColumnField('importSmilieId', 'Smilie', 'smilie', 'importsmilieid');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class Smilie implements Table {
     public function __listColumns() : array
     {
         return ['smilieid', 'title', 'smilietext', 'smiliepath', 'imagecategoryid', 'displayorder', 'importsmilieid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['smilieid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class Smilie implements Table {
 			'importsmilieid' => 'importSmilieId'
 		];
     }
-
 }

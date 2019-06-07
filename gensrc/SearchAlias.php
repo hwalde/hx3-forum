@@ -17,83 +17,83 @@ class SearchAlias extends TableAlias {
    
     public function searchId() : ColumnField
     {
-        return new ColumnField('search', 'searchid', $this->getAliasName());
+        return new ColumnField('searchId', 'Search', 'search', 'searchid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('search', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Search', 'search', 'userid', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('search', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'Search', 'search', 'ipaddress', $this->getAliasName());
     }
     public function personal() : ColumnField
     {
-        return new ColumnField('search', 'personal', $this->getAliasName());
+        return new ColumnField('personal', 'Search', 'search', 'personal', $this->getAliasName());
     }
     public function query() : ColumnField
     {
-        return new ColumnField('search', 'query', $this->getAliasName());
+        return new ColumnField('query', 'Search', 'search', 'query', $this->getAliasName());
     }
     public function searchUser() : ColumnField
     {
-        return new ColumnField('search', 'searchuser', $this->getAliasName());
+        return new ColumnField('searchUser', 'Search', 'search', 'searchuser', $this->getAliasName());
     }
     public function forumChoice() : ColumnField
     {
-        return new ColumnField('search', 'forumchoice', $this->getAliasName());
+        return new ColumnField('forumChoice', 'Search', 'search', 'forumchoice', $this->getAliasName());
     }
     public function sortBy() : ColumnField
     {
-        return new ColumnField('search', 'sortby', $this->getAliasName());
+        return new ColumnField('sortBy', 'Search', 'search', 'sortby', $this->getAliasName());
     }
     public function sortOrder() : ColumnField
     {
-        return new ColumnField('search', 'sortorder', $this->getAliasName());
+        return new ColumnField('sortOrder', 'Search', 'search', 'sortorder', $this->getAliasName());
     }
     public function searchTime() : ColumnField
     {
-        return new ColumnField('search', 'searchtime', $this->getAliasName());
+        return new ColumnField('searchTime', 'Search', 'search', 'searchtime', $this->getAliasName());
     }
     public function showPosts() : ColumnField
     {
-        return new ColumnField('search', 'showposts', $this->getAliasName());
+        return new ColumnField('showPosts', 'Search', 'search', 'showposts', $this->getAliasName());
     }
     public function orderedIds() : ColumnField
     {
-        return new ColumnField('search', 'orderedids', $this->getAliasName());
+        return new ColumnField('orderedIds', 'Search', 'search', 'orderedids', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('search', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Search', 'search', 'dateline', $this->getAliasName());
     }
     public function searchTerms() : ColumnField
     {
-        return new ColumnField('search', 'searchterms', $this->getAliasName());
+        return new ColumnField('searchTerms', 'Search', 'search', 'searchterms', $this->getAliasName());
     }
     public function displayTerms() : ColumnField
     {
-        return new ColumnField('search', 'displayterms', $this->getAliasName());
+        return new ColumnField('displayTerms', 'Search', 'search', 'displayterms', $this->getAliasName());
     }
     public function searchHash() : ColumnField
     {
-        return new ColumnField('search', 'searchhash', $this->getAliasName());
+        return new ColumnField('searchHash', 'Search', 'search', 'searchhash', $this->getAliasName());
     }
     public function titleOnly() : ColumnField
     {
-        return new ColumnField('search', 'titleonly', $this->getAliasName());
+        return new ColumnField('titleOnly', 'Search', 'search', 'titleonly', $this->getAliasName());
     }
     public function announceIds() : ColumnField
     {
-        return new ColumnField('search', 'announceids', $this->getAliasName());
+        return new ColumnField('announceIds', 'Search', 'search', 'announceids', $this->getAliasName());
     }
     public function completed() : ColumnField
     {
-        return new ColumnField('search', 'completed', $this->getAliasName());
+        return new ColumnField('completed', 'Search', 'search', 'completed', $this->getAliasName());
     }
     public function prefixChoice() : ColumnField
     {
-        return new ColumnField('search', 'prefixchoice', $this->getAliasName());
+        return new ColumnField('prefixChoice', 'Search', 'search', 'prefixchoice', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -104,6 +104,14 @@ class SearchAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['searchid', 'userid', 'ipaddress', 'personal', 'query', 'searchuser', 'forumchoice', 'sortby', 'sortorder', 'searchtime', 'showposts', 'orderedids', 'dateline', 'searchterms', 'displayterms', 'searchhash', 'titleonly', 'announceids', 'completed', 'prefixchoice'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['searchid'];
     }
     
     public function __listNullableColumns() : array

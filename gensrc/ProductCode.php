@@ -45,23 +45,23 @@ class ProductCode implements Table {
     
     public static function productCodeId() : ColumnField
     {
-        return new ColumnField('productcode', 'productcodeid');
+        return new ColumnField('productCodeId', 'ProductCode', 'productcode', 'productcodeid');
     }
     public static function productId() : ColumnField
     {
-        return new ColumnField('productcode', 'productid');
+        return new ColumnField('productId', 'ProductCode', 'productcode', 'productid');
     }
     public static function version() : ColumnField
     {
-        return new ColumnField('productcode', 'version');
+        return new ColumnField('version', 'ProductCode', 'productcode', 'version');
     }
     public static function installCode() : ColumnField
     {
-        return new ColumnField('productcode', 'installcode');
+        return new ColumnField('installCode', 'ProductCode', 'productcode', 'installcode');
     }
     public static function uninstallCode() : ColumnField
     {
-        return new ColumnField('productcode', 'uninstallcode');
+        return new ColumnField('uninstallCode', 'ProductCode', 'productcode', 'uninstallcode');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class ProductCode implements Table {
     public function __listColumns() : array
     {
         return ['productcodeid', 'productid', 'version', 'installcode', 'uninstallcode'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['productcodeid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class ProductCode implements Table {
 			'uninstallcode' => 'uninstallCode'
 		];
     }
-
 }

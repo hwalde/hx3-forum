@@ -17,11 +17,11 @@ class PtTagAlias extends TableAlias {
    
     public function tagId() : ColumnField
     {
-        return new ColumnField('pt_tag', 'tagid', $this->getAliasName());
+        return new ColumnField('tagId', 'PtTag', 'pt_tag', 'tagid', $this->getAliasName());
     }
     public function tagText() : ColumnField
     {
-        return new ColumnField('pt_tag', 'tagtext', $this->getAliasName());
+        return new ColumnField('tagText', 'PtTag', 'pt_tag', 'tagtext', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -32,6 +32,14 @@ class PtTagAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['tagid', 'tagtext'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['tagid'];
     }
     
     public function __listNullableColumns() : array

@@ -45,23 +45,23 @@ class ExternalCache implements Table {
     
     public static function cacheHash() : ColumnField
     {
-        return new ColumnField('externalcache', 'cachehash');
+        return new ColumnField('cacheHash', 'ExternalCache', 'externalcache', 'cachehash');
     }
     public static function text() : ColumnField
     {
-        return new ColumnField('externalcache', 'text');
+        return new ColumnField('text', 'ExternalCache', 'externalcache', 'text');
     }
     public static function headers() : ColumnField
     {
-        return new ColumnField('externalcache', 'headers');
+        return new ColumnField('headers', 'ExternalCache', 'externalcache', 'headers');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('externalcache', 'dateline');
+        return new ColumnField('dateLine', 'ExternalCache', 'externalcache', 'dateline');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('externalcache', 'forumid');
+        return new ColumnField('forumId', 'ExternalCache', 'externalcache', 'forumid');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class ExternalCache implements Table {
     public function __listColumns() : array
     {
         return ['cachehash', 'text', 'headers', 'dateline', 'forumid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['cachehash'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class ExternalCache implements Table {
 			'forumid' => 'forumId'
 		];
     }
-
 }

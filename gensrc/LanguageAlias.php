@@ -17,295 +17,295 @@ class LanguageAlias extends TableAlias {
    
     public function languageId() : ColumnField
     {
-        return new ColumnField('language', 'languageid', $this->getAliasName());
+        return new ColumnField('languageId', 'Language', 'language', 'languageid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('language', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Language', 'language', 'title', $this->getAliasName());
     }
     public function userSelect() : ColumnField
     {
-        return new ColumnField('language', 'userselect', $this->getAliasName());
+        return new ColumnField('userSelect', 'Language', 'language', 'userselect', $this->getAliasName());
     }
     public function options() : ColumnField
     {
-        return new ColumnField('language', 'options', $this->getAliasName());
+        return new ColumnField('options', 'Language', 'language', 'options', $this->getAliasName());
     }
     public function languageCode() : ColumnField
     {
-        return new ColumnField('language', 'languagecode', $this->getAliasName());
+        return new ColumnField('languageCode', 'Language', 'language', 'languagecode', $this->getAliasName());
     }
     public function charset() : ColumnField
     {
-        return new ColumnField('language', 'charset', $this->getAliasName());
+        return new ColumnField('charset', 'Language', 'language', 'charset', $this->getAliasName());
     }
     public function imagesOverride() : ColumnField
     {
-        return new ColumnField('language', 'imagesoverride', $this->getAliasName());
+        return new ColumnField('imagesOverride', 'Language', 'language', 'imagesoverride', $this->getAliasName());
     }
     public function dateOverride() : ColumnField
     {
-        return new ColumnField('language', 'dateoverride', $this->getAliasName());
+        return new ColumnField('dateOverride', 'Language', 'language', 'dateoverride', $this->getAliasName());
     }
     public function timeOverride() : ColumnField
     {
-        return new ColumnField('language', 'timeoverride', $this->getAliasName());
+        return new ColumnField('timeOverride', 'Language', 'language', 'timeoverride', $this->getAliasName());
     }
     public function registeredDateOverride() : ColumnField
     {
-        return new ColumnField('language', 'registereddateoverride', $this->getAliasName());
+        return new ColumnField('registeredDateOverride', 'Language', 'language', 'registereddateoverride', $this->getAliasName());
     }
     public function calFormat1Override() : ColumnField
     {
-        return new ColumnField('language', 'calformat1override', $this->getAliasName());
+        return new ColumnField('calFormat1Override', 'Language', 'language', 'calformat1override', $this->getAliasName());
     }
     public function calFormat2Override() : ColumnField
     {
-        return new ColumnField('language', 'calformat2override', $this->getAliasName());
+        return new ColumnField('calFormat2Override', 'Language', 'language', 'calformat2override', $this->getAliasName());
     }
     public function logDateOverride() : ColumnField
     {
-        return new ColumnField('language', 'logdateoverride', $this->getAliasName());
+        return new ColumnField('logDateOverride', 'Language', 'language', 'logdateoverride', $this->getAliasName());
     }
     public function locale() : ColumnField
     {
-        return new ColumnField('language', 'locale', $this->getAliasName());
+        return new ColumnField('locale', 'Language', 'language', 'locale', $this->getAliasName());
     }
     public function decimalSep() : ColumnField
     {
-        return new ColumnField('language', 'decimalsep', $this->getAliasName());
+        return new ColumnField('decimalSep', 'Language', 'language', 'decimalsep', $this->getAliasName());
     }
     public function thousandSep() : ColumnField
     {
-        return new ColumnField('language', 'thousandsep', $this->getAliasName());
+        return new ColumnField('thousandSep', 'Language', 'language', 'thousandsep', $this->getAliasName());
     }
     public function phraseGroupGlobal() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_global', $this->getAliasName());
+        return new ColumnField('phraseGroupGlobal', 'Language', 'language', 'phrasegroup_global', $this->getAliasName());
     }
     public function phraseGroupOpGlobal() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cpglobal', $this->getAliasName());
+        return new ColumnField('phraseGroupOpGlobal', 'Language', 'language', 'phrasegroup_cpglobal', $this->getAliasName());
     }
     public function phraseGroupCpPermission() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cppermission', $this->getAliasName());
+        return new ColumnField('phraseGroupCpPermission', 'Language', 'language', 'phrasegroup_cppermission', $this->getAliasName());
     }
     public function phraseGroupForum() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_forum', $this->getAliasName());
+        return new ColumnField('phraseGroupForum', 'Language', 'language', 'phrasegroup_forum', $this->getAliasName());
     }
     public function phraseGroupCalendar() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_calendar', $this->getAliasName());
+        return new ColumnField('phraseGroupCalendar', 'Language', 'language', 'phrasegroup_calendar', $this->getAliasName());
     }
     public function phraseGroupAttachmentImage() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_attachment_image', $this->getAliasName());
+        return new ColumnField('phraseGroupAttachmentImage', 'Language', 'language', 'phrasegroup_attachment_image', $this->getAliasName());
     }
     public function phrasegGroupStyle() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_style', $this->getAliasName());
+        return new ColumnField('phrasegGroupStyle', 'Language', 'language', 'phrasegroup_style', $this->getAliasName());
     }
     public function phraseGroupLogging() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_logging', $this->getAliasName());
+        return new ColumnField('phraseGroupLogging', 'Language', 'language', 'phrasegroup_logging', $this->getAliasName());
     }
     public function phraseGroupCpHome() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cphome', $this->getAliasName());
+        return new ColumnField('phraseGroupCpHome', 'Language', 'language', 'phrasegroup_cphome', $this->getAliasName());
     }
     public function phraseGroupPromotion() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_promotion', $this->getAliasName());
+        return new ColumnField('phraseGroupPromotion', 'Language', 'language', 'phrasegroup_promotion', $this->getAliasName());
     }
     public function phraseGroupUser() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_user', $this->getAliasName());
+        return new ColumnField('phraseGroupUser', 'Language', 'language', 'phrasegroup_user', $this->getAliasName());
     }
     public function phraseGroupHelpFaq() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_help_faq', $this->getAliasName());
+        return new ColumnField('phraseGroupHelpFaq', 'Language', 'language', 'phrasegroup_help_faq', $this->getAliasName());
     }
     public function phraseGroupSql() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_sql', $this->getAliasName());
+        return new ColumnField('phraseGroupSql', 'Language', 'language', 'phrasegroup_sql', $this->getAliasName());
     }
     public function phraseGroupSubscription() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_subscription', $this->getAliasName());
+        return new ColumnField('phraseGroupSubscription', 'Language', 'language', 'phrasegroup_subscription', $this->getAliasName());
     }
     public function phraseGroupLanguage() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_language', $this->getAliasName());
+        return new ColumnField('phraseGroupLanguage', 'Language', 'language', 'phrasegroup_language', $this->getAliasName());
     }
     public function phraseGroupBBCode() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_bbcode', $this->getAliasName());
+        return new ColumnField('phraseGroupBBCode', 'Language', 'language', 'phrasegroup_bbcode', $this->getAliasName());
     }
     public function phraseGroupStats() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_stats', $this->getAliasName());
+        return new ColumnField('phraseGroupStats', 'Language', 'language', 'phrasegroup_stats', $this->getAliasName());
     }
     public function phraseGroupDiagnostic() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_diagnostic', $this->getAliasName());
+        return new ColumnField('phraseGroupDiagnostic', 'Language', 'language', 'phrasegroup_diagnostic', $this->getAliasName());
     }
     public function phraseGroupMaintenance() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_maintenance', $this->getAliasName());
+        return new ColumnField('phraseGroupMaintenance', 'Language', 'language', 'phrasegroup_maintenance', $this->getAliasName());
     }
     public function phraseGroupProfileField() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_profilefield', $this->getAliasName());
+        return new ColumnField('phraseGroupProfileField', 'Language', 'language', 'phrasegroup_profilefield', $this->getAliasName());
     }
     public function phraseGroupThread() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_thread', $this->getAliasName());
+        return new ColumnField('phraseGroupThread', 'Language', 'language', 'phrasegroup_thread', $this->getAliasName());
     }
     public function phraseGroupTimeZone() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_timezone', $this->getAliasName());
+        return new ColumnField('phraseGroupTimeZone', 'Language', 'language', 'phrasegroup_timezone', $this->getAliasName());
     }
     public function phraseGroupBanning() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_banning', $this->getAliasName());
+        return new ColumnField('phraseGroupBanning', 'Language', 'language', 'phrasegroup_banning', $this->getAliasName());
     }
     public function phraseGroupReputation() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_reputation', $this->getAliasName());
+        return new ColumnField('phraseGroupReputation', 'Language', 'language', 'phrasegroup_reputation', $this->getAliasName());
     }
     public function phraseGroupWol() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_wol', $this->getAliasName());
+        return new ColumnField('phraseGroupWol', 'Language', 'language', 'phrasegroup_wol', $this->getAliasName());
     }
     public function phraseGroupThreadManage() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_threadmanage', $this->getAliasName());
+        return new ColumnField('phraseGroupThreadManage', 'Language', 'language', 'phrasegroup_threadmanage', $this->getAliasName());
     }
     public function phraseGroupPm() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_pm', $this->getAliasName());
+        return new ColumnField('phraseGroupPm', 'Language', 'language', 'phrasegroup_pm', $this->getAliasName());
     }
     public function phraseGroupCpUser() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cpuser', $this->getAliasName());
+        return new ColumnField('phraseGroupCpUser', 'Language', 'language', 'phrasegroup_cpuser', $this->getAliasName());
     }
     public function phraseGroupAccessMask() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_accessmask', $this->getAliasName());
+        return new ColumnField('phraseGroupAccessMask', 'Language', 'language', 'phrasegroup_accessmask', $this->getAliasName());
     }
     public function phraseGroupCron() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cron', $this->getAliasName());
+        return new ColumnField('phraseGroupCron', 'Language', 'language', 'phrasegroup_cron', $this->getAliasName());
     }
     public function phrasegGoupModerator() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_moderator', $this->getAliasName());
+        return new ColumnField('phrasegGoupModerator', 'Language', 'language', 'phrasegroup_moderator', $this->getAliasName());
     }
     public function phraseGroupCpOption() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cpoption', $this->getAliasName());
+        return new ColumnField('phraseGroupCpOption', 'Language', 'language', 'phrasegroup_cpoption', $this->getAliasName());
     }
     public function phraseGroupCpRank() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cprank', $this->getAliasName());
+        return new ColumnField('phraseGroupCpRank', 'Language', 'language', 'phrasegroup_cprank', $this->getAliasName());
     }
     public function phraseGroupCpUserGroup() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cpusergroup', $this->getAliasName());
+        return new ColumnField('phraseGroupCpUserGroup', 'Language', 'language', 'phrasegroup_cpusergroup', $this->getAliasName());
     }
     public function phraseGroupHoliday() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_holiday', $this->getAliasName());
+        return new ColumnField('phraseGroupHoliday', 'Language', 'language', 'phrasegroup_holiday', $this->getAliasName());
     }
     public function phraseGroupPosting() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_posting', $this->getAliasName());
+        return new ColumnField('phraseGroupPosting', 'Language', 'language', 'phrasegroup_posting', $this->getAliasName());
     }
     public function phraseGroupPoll() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_poll', $this->getAliasName());
+        return new ColumnField('phraseGroupPoll', 'Language', 'language', 'phrasegroup_poll', $this->getAliasName());
     }
     public function phraseGroupFrontHelp() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_fronthelp', $this->getAliasName());
+        return new ColumnField('phraseGroupFrontHelp', 'Language', 'language', 'phrasegroup_fronthelp', $this->getAliasName());
     }
     public function phraseGroupRegister() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_register', $this->getAliasName());
+        return new ColumnField('phraseGroupRegister', 'Language', 'language', 'phrasegroup_register', $this->getAliasName());
     }
     public function phraseGroupSearch() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_search', $this->getAliasName());
+        return new ColumnField('phraseGroupSearch', 'Language', 'language', 'phrasegroup_search', $this->getAliasName());
     }
     public function phraseGroupShowThread() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_showthread', $this->getAliasName());
+        return new ColumnField('phraseGroupShowThread', 'Language', 'language', 'phrasegroup_showthread', $this->getAliasName());
     }
     public function phraseGroupPostBit() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_postbit', $this->getAliasName());
+        return new ColumnField('phraseGroupPostBit', 'Language', 'language', 'phrasegroup_postbit', $this->getAliasName());
     }
     public function phraseGroupForumDisplay() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_forumdisplay', $this->getAliasName());
+        return new ColumnField('phraseGroupForumDisplay', 'Language', 'language', 'phrasegroup_forumdisplay', $this->getAliasName());
     }
     public function phraseGroupMessaging() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_messaging', $this->getAliasName());
+        return new ColumnField('phraseGroupMessaging', 'Language', 'language', 'phrasegroup_messaging', $this->getAliasName());
     }
     public function phraseGroupInlineMod() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_inlinemod', $this->getAliasName());
+        return new ColumnField('phraseGroupInlineMod', 'Language', 'language', 'phrasegroup_inlinemod', $this->getAliasName());
     }
     public function phraseGroupPlugins() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_plugins', $this->getAliasName());
+        return new ColumnField('phraseGroupPlugins', 'Language', 'language', 'phrasegroup_plugins', $this->getAliasName());
     }
     public function phraseGroupCProfileField() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cprofilefield', $this->getAliasName());
+        return new ColumnField('phraseGroupCProfileField', 'Language', 'language', 'phrasegroup_cprofilefield', $this->getAliasName());
     }
     public function phraseGroupReputationLevel() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_reputationlevel', $this->getAliasName());
+        return new ColumnField('phraseGroupReputationLevel', 'Language', 'language', 'phrasegroup_reputationlevel', $this->getAliasName());
     }
     public function phraseGroupInfraction() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_infraction', $this->getAliasName());
+        return new ColumnField('phraseGroupInfraction', 'Language', 'language', 'phrasegroup_infraction', $this->getAliasName());
     }
     public function phraseGroupInfractionLevel() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_infractionlevel', $this->getAliasName());
+        return new ColumnField('phraseGroupInfractionLevel', 'Language', 'language', 'phrasegroup_infractionlevel', $this->getAliasName());
     }
     public function phraseGroupPrefix() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_prefix', $this->getAliasName());
+        return new ColumnField('phraseGroupPrefix', 'Language', 'language', 'phrasegroup_prefix', $this->getAliasName());
     }
     public function phraseGroupSocialGroups() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_socialgroups', $this->getAliasName());
+        return new ColumnField('phraseGroupSocialGroups', 'Language', 'language', 'phrasegroup_socialgroups', $this->getAliasName());
     }
     public function phraseGroupPrefixAdmin() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_prefixadmin', $this->getAliasName());
+        return new ColumnField('phraseGroupPrefixAdmin', 'Language', 'language', 'phrasegroup_prefixadmin', $this->getAliasName());
     }
     public function phraseGroupNotice() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_notice', $this->getAliasName());
+        return new ColumnField('phraseGroupNotice', 'Language', 'language', 'phrasegroup_notice', $this->getAliasName());
     }
     public function phraseGroupAlbum() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_album', $this->getAliasName());
+        return new ColumnField('phraseGroupAlbum', 'Language', 'language', 'phrasegroup_album', $this->getAliasName());
     }
     public function phraseGroupProjectTools() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_projecttools', $this->getAliasName());
+        return new ColumnField('phraseGroupProjectTools', 'Language', 'language', 'phrasegroup_projecttools', $this->getAliasName());
     }
     public function phraseGroupProjectToolsAdmin() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_projecttoolsadmin', $this->getAliasName());
+        return new ColumnField('phraseGroupProjectToolsAdmin', 'Language', 'language', 'phrasegroup_projecttoolsadmin', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -316,6 +316,14 @@ class LanguageAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['languageid', 'title', 'userselect', 'options', 'languagecode', 'charset', 'imagesoverride', 'dateoverride', 'timeoverride', 'registereddateoverride', 'calformat1override', 'calformat2override', 'logdateoverride', 'locale', 'decimalsep', 'thousandsep', 'phrasegroup_global', 'phrasegroup_cpglobal', 'phrasegroup_cppermission', 'phrasegroup_forum', 'phrasegroup_calendar', 'phrasegroup_attachment_image', 'phrasegroup_style', 'phrasegroup_logging', 'phrasegroup_cphome', 'phrasegroup_promotion', 'phrasegroup_user', 'phrasegroup_help_faq', 'phrasegroup_sql', 'phrasegroup_subscription', 'phrasegroup_language', 'phrasegroup_bbcode', 'phrasegroup_stats', 'phrasegroup_diagnostic', 'phrasegroup_maintenance', 'phrasegroup_profilefield', 'phrasegroup_thread', 'phrasegroup_timezone', 'phrasegroup_banning', 'phrasegroup_reputation', 'phrasegroup_wol', 'phrasegroup_threadmanage', 'phrasegroup_pm', 'phrasegroup_cpuser', 'phrasegroup_accessmask', 'phrasegroup_cron', 'phrasegroup_moderator', 'phrasegroup_cpoption', 'phrasegroup_cprank', 'phrasegroup_cpusergroup', 'phrasegroup_holiday', 'phrasegroup_posting', 'phrasegroup_poll', 'phrasegroup_fronthelp', 'phrasegroup_register', 'phrasegroup_search', 'phrasegroup_showthread', 'phrasegroup_postbit', 'phrasegroup_forumdisplay', 'phrasegroup_messaging', 'phrasegroup_inlinemod', 'phrasegroup_plugins', 'phrasegroup_cprofilefield', 'phrasegroup_reputationlevel', 'phrasegroup_infraction', 'phrasegroup_infractionlevel', 'phrasegroup_prefix', 'phrasegroup_socialgroups', 'phrasegroup_prefixadmin', 'phrasegroup_notice', 'phrasegroup_album', 'phrasegroup_projecttools', 'phrasegroup_projecttoolsadmin'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['languageid'];
     }
     
     public function __listNullableColumns() : array

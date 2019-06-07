@@ -17,11 +17,11 @@ class ImageCategoryPermissionAlias extends TableAlias {
    
     public function imageCategoryId() : ColumnField
     {
-        return new ColumnField('imagecategorypermission', 'imagecategoryid', $this->getAliasName());
+        return new ColumnField('imageCategoryId', 'ImageCategoryPermission', 'imagecategorypermission', 'imagecategoryid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('imagecategorypermission', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'ImageCategoryPermission', 'imagecategorypermission', 'usergroupid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -32,6 +32,14 @@ class ImageCategoryPermissionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['imagecategoryid', 'usergroupid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

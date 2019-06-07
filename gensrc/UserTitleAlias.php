@@ -17,15 +17,15 @@ class UserTitleAlias extends TableAlias {
    
     public function userTitleId() : ColumnField
     {
-        return new ColumnField('usertitle', 'usertitleid', $this->getAliasName());
+        return new ColumnField('userTitleId', 'UserTitle', 'usertitle', 'usertitleid', $this->getAliasName());
     }
     public function minPosts() : ColumnField
     {
-        return new ColumnField('usertitle', 'minposts', $this->getAliasName());
+        return new ColumnField('minPosts', 'UserTitle', 'usertitle', 'minposts', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('usertitle', 'title', $this->getAliasName());
+        return new ColumnField('title', 'UserTitle', 'usertitle', 'title', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class UserTitleAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['usertitleid', 'minposts', 'title'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usertitleid'];
     }
     
     public function __listNullableColumns() : array

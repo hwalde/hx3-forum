@@ -14,52 +14,52 @@ use POOQ\Record;
 class GeneratedPictureRecord implements Record {
     
     /** @var $pictureId int */
-    private $pictureId;
+    protected $pictureId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $caption string|null */
-    private $caption;
+    protected $caption;
     
     /** @var $extension string */
-    private $extension;
+    protected $extension;
     
     /** @var $fileData string|null */
-    private $fileData;
+    protected $fileData;
     
     /** @var $fileSize int */
-    private $fileSize;
+    protected $fileSize;
     
     /** @var $width int */
-    private $width;
+    protected $width;
     
     /** @var $height int */
-    private $height;
+    protected $height;
     
     /** @var $thumbnail string|null */
-    private $thumbnail;
+    protected $thumbnail;
     
     /** @var $thumbnailFileSize int */
-    private $thumbnailFileSize;
+    protected $thumbnailFileSize;
     
     /** @var $thumbnailWidth int */
-    private $thumbnailWidth;
+    protected $thumbnailWidth;
     
     /** @var $thumbnailHeight int */
-    private $thumbnailHeight;
+    protected $thumbnailHeight;
     
     /** @var $thumbnailDateline int */
-    private $thumbnailDateline;
+    protected $thumbnailDateline;
     
     /** @var $idHash string */
-    private $idHash;
+    protected $idHash;
     
     /** @var $reportThreadId int */
-    private $reportThreadId;
+    protected $reportThreadId;
     
     /** @var $state string */
-    private $state;
+    protected $state;
     
     public function hasPictureId(): bool
     {

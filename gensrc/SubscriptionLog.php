@@ -47,31 +47,31 @@ class SubscriptionLog implements Table {
     
     public static function subscriptionLogId() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'subscriptionlogid');
+        return new ColumnField('subscriptionLogId', 'SubscriptionLog', 'subscriptionlog', 'subscriptionlogid');
     }
     public static function subscriptionId() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'subscriptionid');
+        return new ColumnField('subscriptionId', 'SubscriptionLog', 'subscriptionlog', 'subscriptionid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'userid');
+        return new ColumnField('userId', 'SubscriptionLog', 'subscriptionlog', 'userid');
     }
     public static function pUserGroupId() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'pusergroupid');
+        return new ColumnField('pUserGroupId', 'SubscriptionLog', 'subscriptionlog', 'pusergroupid');
     }
     public static function status() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'status');
+        return new ColumnField('status', 'SubscriptionLog', 'subscriptionlog', 'status');
     }
     public static function regDate() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'regdate');
+        return new ColumnField('regDate', 'SubscriptionLog', 'subscriptionlog', 'regdate');
     }
     public static function expiryDate() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'expirydate');
+        return new ColumnField('expiryDate', 'SubscriptionLog', 'subscriptionlog', 'expirydate');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class SubscriptionLog implements Table {
     public function __listColumns() : array
     {
         return ['subscriptionlogid', 'subscriptionid', 'userid', 'pusergroupid', 'status', 'regdate', 'expirydate'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscriptionlogid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class SubscriptionLog implements Table {
 			'expirydate' => 'expiryDate'
 		];
     }
-
 }

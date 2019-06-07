@@ -43,15 +43,15 @@ class DataStore implements Table {
     
     public static function title() : ColumnField
     {
-        return new ColumnField('datastore', 'title');
+        return new ColumnField('title', 'DataStore', 'datastore', 'title');
     }
     public static function data() : ColumnField
     {
-        return new ColumnField('datastore', 'data');
+        return new ColumnField('data', 'DataStore', 'datastore', 'data');
     }
     public static function unSerialize() : ColumnField
     {
-        return new ColumnField('datastore', 'unserialize');
+        return new ColumnField('unSerialize', 'DataStore', 'datastore', 'unserialize');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class DataStore implements Table {
     public function __listColumns() : array
     {
         return ['title', 'data', 'unserialize'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['title'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class DataStore implements Table {
 			'unserialize' => 'unSerialize'
 		];
     }
-
 }

@@ -42,11 +42,11 @@ class ReputationLevel implements Table {
     
     public static function reputationLevelId() : ColumnField
     {
-        return new ColumnField('reputationlevel', 'reputationlevelid');
+        return new ColumnField('reputationLevelId', 'ReputationLevel', 'reputationlevel', 'reputationlevelid');
     }
     public static function minimumReputation() : ColumnField
     {
-        return new ColumnField('reputationlevel', 'minimumreputation');
+        return new ColumnField('minimumReputation', 'ReputationLevel', 'reputationlevel', 'minimumreputation');
     }
 
     public function getTableName(): string
@@ -57,6 +57,14 @@ class ReputationLevel implements Table {
     public function __listColumns() : array
     {
         return ['reputationlevelid', 'minimumreputation'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['reputationlevelid'];
     }
     
     public function __listNullableColumns() : array
@@ -79,5 +87,4 @@ class ReputationLevel implements Table {
 			'minimumreputation' => 'minimumReputation'
 		];
     }
-
 }

@@ -49,39 +49,39 @@ class TachyForumPost implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'userid');
+        return new ColumnField('userId', 'TachyForumPost', 'tachyforumpost', 'userid');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'forumid');
+        return new ColumnField('forumId', 'TachyForumPost', 'tachyforumpost', 'forumid');
     }
     public static function lastPost() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastpost');
+        return new ColumnField('lastPost', 'TachyForumPost', 'tachyforumpost', 'lastpost');
     }
     public static function lastPoster() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastposter');
+        return new ColumnField('lastPoster', 'TachyForumPost', 'tachyforumpost', 'lastposter');
     }
     public static function lastThread() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastthread');
+        return new ColumnField('lastThread', 'TachyForumPost', 'tachyforumpost', 'lastthread');
     }
     public static function lastThreadId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastthreadid');
+        return new ColumnField('lastThreadId', 'TachyForumPost', 'tachyforumpost', 'lastthreadid');
     }
     public static function lastIconId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lasticonid');
+        return new ColumnField('lastIconId', 'TachyForumPost', 'tachyforumpost', 'lasticonid');
     }
     public static function lastPostId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastpostid');
+        return new ColumnField('lastPostId', 'TachyForumPost', 'tachyforumpost', 'lastpostid');
     }
     public static function lastPrefixId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastprefixid');
+        return new ColumnField('lastPrefixId', 'TachyForumPost', 'tachyforumpost', 'lastprefixid');
     }
 
     public function getTableName(): string
@@ -92,6 +92,14 @@ class TachyForumPost implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'forumid', 'lastpost', 'lastposter', 'lastthread', 'lastthreadid', 'lasticonid', 'lastpostid', 'lastprefixid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'forumid'];
     }
     
     public function __listNullableColumns() : array
@@ -128,5 +136,4 @@ class TachyForumPost implements Table {
 			'lastprefixid' => 'lastPrefixId'
 		];
     }
-
 }

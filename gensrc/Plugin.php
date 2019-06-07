@@ -48,35 +48,35 @@ class Plugin implements Table {
     
     public static function pluginId() : ColumnField
     {
-        return new ColumnField('plugin', 'pluginid');
+        return new ColumnField('pluginId', 'Plugin', 'plugin', 'pluginid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('plugin', 'title');
+        return new ColumnField('title', 'Plugin', 'plugin', 'title');
     }
     public static function hookName() : ColumnField
     {
-        return new ColumnField('plugin', 'hookname');
+        return new ColumnField('hookName', 'Plugin', 'plugin', 'hookname');
     }
     public static function phpCode() : ColumnField
     {
-        return new ColumnField('plugin', 'phpcode');
+        return new ColumnField('phpCode', 'Plugin', 'plugin', 'phpcode');
     }
     public static function product() : ColumnField
     {
-        return new ColumnField('plugin', 'product');
+        return new ColumnField('product', 'Plugin', 'plugin', 'product');
     }
     public static function devKey() : ColumnField
     {
-        return new ColumnField('plugin', 'devkey');
+        return new ColumnField('devKey', 'Plugin', 'plugin', 'devkey');
     }
     public static function active() : ColumnField
     {
-        return new ColumnField('plugin', 'active');
+        return new ColumnField('active', 'Plugin', 'plugin', 'active');
     }
     public static function executionOrder() : ColumnField
     {
-        return new ColumnField('plugin', 'executionorder');
+        return new ColumnField('executionOrder', 'Plugin', 'plugin', 'executionorder');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class Plugin implements Table {
     public function __listColumns() : array
     {
         return ['pluginid', 'title', 'hookname', 'phpcode', 'product', 'devkey', 'active', 'executionorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pluginid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class Plugin implements Table {
 			'executionorder' => 'executionOrder'
 		];
     }
-
 }

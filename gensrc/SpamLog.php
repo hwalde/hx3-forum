@@ -41,7 +41,7 @@ class SpamLog implements Table {
     
     public static function postId() : ColumnField
     {
-        return new ColumnField('spamlog', 'postid');
+        return new ColumnField('postId', 'SpamLog', 'spamlog', 'postid');
     }
 
     public function getTableName(): string
@@ -50,6 +50,14 @@ class SpamLog implements Table {
     }
     
     public function __listColumns() : array
+    {
+        return ['postid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
     {
         return ['postid'];
     }
@@ -72,5 +80,4 @@ class SpamLog implements Table {
 			'postid' => 'postId'
 		];
     }
-
 }

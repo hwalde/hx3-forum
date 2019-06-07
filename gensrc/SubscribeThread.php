@@ -46,27 +46,27 @@ class SubscribeThread implements Table {
     
     public static function subscribeThreadId() : ColumnField
     {
-        return new ColumnField('subscribethread', 'subscribethreadid');
+        return new ColumnField('subscribeThreadId', 'SubscribeThread', 'subscribethread', 'subscribethreadid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('subscribethread', 'userid');
+        return new ColumnField('userId', 'SubscribeThread', 'subscribethread', 'userid');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('subscribethread', 'threadid');
+        return new ColumnField('threadId', 'SubscribeThread', 'subscribethread', 'threadid');
     }
     public static function emailUpdate() : ColumnField
     {
-        return new ColumnField('subscribethread', 'emailupdate');
+        return new ColumnField('emailUpdate', 'SubscribeThread', 'subscribethread', 'emailupdate');
     }
     public static function folderId() : ColumnField
     {
-        return new ColumnField('subscribethread', 'folderid');
+        return new ColumnField('folderId', 'SubscribeThread', 'subscribethread', 'folderid');
     }
     public static function canView() : ColumnField
     {
-        return new ColumnField('subscribethread', 'canview');
+        return new ColumnField('canView', 'SubscribeThread', 'subscribethread', 'canview');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class SubscribeThread implements Table {
     public function __listColumns() : array
     {
         return ['subscribethreadid', 'userid', 'threadid', 'emailupdate', 'folderid', 'canview'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscribethreadid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class SubscribeThread implements Table {
 			'canview' => 'canView'
 		];
     }
-
 }

@@ -9,21 +9,22 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedVbSeoServiceUpdateRecord implements Record {
+class GeneratedVbSeoServiceUpdateRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $sThreadId int */
-    private $sThreadId;
+    protected $sThreadId;
     
     /** @var $sUpdated int */
-    private $sUpdated;
+    protected $sUpdated;
     
     /** @var $sDateLine int|null */
-    private $sDateLine;
+    protected $sDateLine;
     
     /** @var $sType int */
-    private $sType;
+    protected $sType;
     
     public function hasSThreadId(): bool
     {

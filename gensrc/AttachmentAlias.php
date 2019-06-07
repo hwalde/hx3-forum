@@ -17,67 +17,67 @@ class AttachmentAlias extends TableAlias {
    
     public function attachmentId() : ColumnField
     {
-        return new ColumnField('attachment', 'attachmentid', $this->getAliasName());
+        return new ColumnField('attachmentId', 'Attachment', 'attachment', 'attachmentid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('attachment', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Attachment', 'attachment', 'userid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('attachment', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Attachment', 'attachment', 'dateline', $this->getAliasName());
     }
     public function thumbnailDateline() : ColumnField
     {
-        return new ColumnField('attachment', 'thumbnail_dateline', $this->getAliasName());
+        return new ColumnField('thumbnailDateline', 'Attachment', 'attachment', 'thumbnail_dateline', $this->getAliasName());
     }
     public function fileName() : ColumnField
     {
-        return new ColumnField('attachment', 'filename', $this->getAliasName());
+        return new ColumnField('fileName', 'Attachment', 'attachment', 'filename', $this->getAliasName());
     }
     public function fileData() : ColumnField
     {
-        return new ColumnField('attachment', 'filedata', $this->getAliasName());
+        return new ColumnField('fileData', 'Attachment', 'attachment', 'filedata', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('attachment', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'Attachment', 'attachment', 'visible', $this->getAliasName());
     }
     public function counter() : ColumnField
     {
-        return new ColumnField('attachment', 'counter', $this->getAliasName());
+        return new ColumnField('counter', 'Attachment', 'attachment', 'counter', $this->getAliasName());
     }
     public function fileSize() : ColumnField
     {
-        return new ColumnField('attachment', 'filesize', $this->getAliasName());
+        return new ColumnField('fileSize', 'Attachment', 'attachment', 'filesize', $this->getAliasName());
     }
     public function postId() : ColumnField
     {
-        return new ColumnField('attachment', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'Attachment', 'attachment', 'postid', $this->getAliasName());
     }
     public function fileHash() : ColumnField
     {
-        return new ColumnField('attachment', 'filehash', $this->getAliasName());
+        return new ColumnField('fileHash', 'Attachment', 'attachment', 'filehash', $this->getAliasName());
     }
     public function postHash() : ColumnField
     {
-        return new ColumnField('attachment', 'posthash', $this->getAliasName());
+        return new ColumnField('postHash', 'Attachment', 'attachment', 'posthash', $this->getAliasName());
     }
     public function thumbnail() : ColumnField
     {
-        return new ColumnField('attachment', 'thumbnail', $this->getAliasName());
+        return new ColumnField('thumbnail', 'Attachment', 'attachment', 'thumbnail', $this->getAliasName());
     }
     public function thumbnailFileSize() : ColumnField
     {
-        return new ColumnField('attachment', 'thumbnail_filesize', $this->getAliasName());
+        return new ColumnField('thumbnailFileSize', 'Attachment', 'attachment', 'thumbnail_filesize', $this->getAliasName());
     }
     public function importAttachmentId() : ColumnField
     {
-        return new ColumnField('attachment', 'importattachmentid', $this->getAliasName());
+        return new ColumnField('importAttachmentId', 'Attachment', 'attachment', 'importattachmentid', $this->getAliasName());
     }
     public function extension() : ColumnField
     {
-        return new ColumnField('attachment', 'extension', $this->getAliasName());
+        return new ColumnField('extension', 'Attachment', 'attachment', 'extension', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -88,6 +88,14 @@ class AttachmentAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['attachmentid', 'userid', 'dateline', 'thumbnail_dateline', 'filename', 'filedata', 'visible', 'counter', 'filesize', 'postid', 'filehash', 'posthash', 'thumbnail', 'thumbnail_filesize', 'importattachmentid', 'extension'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['attachmentid'];
     }
     
     public function __listNullableColumns() : array

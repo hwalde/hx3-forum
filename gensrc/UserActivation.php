@@ -47,31 +47,31 @@ class UserActivation implements Table {
     
     public static function userActivationId() : ColumnField
     {
-        return new ColumnField('useractivation', 'useractivationid');
+        return new ColumnField('userActivationId', 'UserActivation', 'useractivation', 'useractivationid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('useractivation', 'userid');
+        return new ColumnField('userId', 'UserActivation', 'useractivation', 'userid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('useractivation', 'dateline');
+        return new ColumnField('dateLine', 'UserActivation', 'useractivation', 'dateline');
     }
     public static function activationId() : ColumnField
     {
-        return new ColumnField('useractivation', 'activationid');
+        return new ColumnField('activationId', 'UserActivation', 'useractivation', 'activationid');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('useractivation', 'type');
+        return new ColumnField('type', 'UserActivation', 'useractivation', 'type');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('useractivation', 'usergroupid');
+        return new ColumnField('userGroupId', 'UserActivation', 'useractivation', 'usergroupid');
     }
     public static function emailChange() : ColumnField
     {
-        return new ColumnField('useractivation', 'emailchange');
+        return new ColumnField('emailChange', 'UserActivation', 'useractivation', 'emailchange');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class UserActivation implements Table {
     public function __listColumns() : array
     {
         return ['useractivationid', 'userid', 'dateline', 'activationid', 'type', 'usergroupid', 'emailchange'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['useractivationid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class UserActivation implements Table {
 			'emailchange' => 'emailChange'
 		];
     }
-
 }

@@ -43,15 +43,15 @@ class PtIssueReportSubscribe implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issuereportsubscribe', 'userid');
+        return new ColumnField('userId', 'PtIssueReportSubscribe', 'pt_issuereportsubscribe', 'userid');
     }
     public static function issueReportId() : ColumnField
     {
-        return new ColumnField('pt_issuereportsubscribe', 'issuereportid');
+        return new ColumnField('issueReportId', 'PtIssueReportSubscribe', 'pt_issuereportsubscribe', 'issuereportid');
     }
     public static function issueSearchId() : ColumnField
     {
-        return new ColumnField('pt_issuereportsubscribe', 'issuesearchid');
+        return new ColumnField('issueSearchId', 'PtIssueReportSubscribe', 'pt_issuereportsubscribe', 'issuesearchid');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class PtIssueReportSubscribe implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'issuereportid', 'issuesearchid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'issuereportid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class PtIssueReportSubscribe implements Table {
 			'issuesearchid' => 'issueSearchId'
 		];
     }
-
 }

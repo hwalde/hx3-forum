@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedAttachmentPermissionRecord implements Record {
     
     /** @var $attachmentPermissionId int */
-    private $attachmentPermissionId;
+    protected $attachmentPermissionId;
     
     /** @var $extension string */
-    private $extension;
+    protected $extension;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $size int */
-    private $size;
+    protected $size;
     
     /** @var $width int */
-    private $width;
+    protected $width;
     
     /** @var $height int */
-    private $height;
+    protected $height;
     
     /** @var $attachmentPermissions int */
-    private $attachmentPermissions;
+    protected $attachmentPermissions;
     
     public function hasAttachmentPermissionId(): bool
     {

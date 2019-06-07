@@ -17,31 +17,31 @@ class MailQueueAlias extends TableAlias {
    
     public function mailQueueId() : ColumnField
     {
-        return new ColumnField('mailqueue', 'mailqueueid', $this->getAliasName());
+        return new ColumnField('mailQueueId', 'MailQueue', 'mailqueue', 'mailqueueid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('mailqueue', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'MailQueue', 'mailqueue', 'dateline', $this->getAliasName());
     }
     public function toEmail() : ColumnField
     {
-        return new ColumnField('mailqueue', 'toemail', $this->getAliasName());
+        return new ColumnField('toEmail', 'MailQueue', 'mailqueue', 'toemail', $this->getAliasName());
     }
     public function subject() : ColumnField
     {
-        return new ColumnField('mailqueue', 'subject', $this->getAliasName());
+        return new ColumnField('subject', 'MailQueue', 'mailqueue', 'subject', $this->getAliasName());
     }
     public function message() : ColumnField
     {
-        return new ColumnField('mailqueue', 'message', $this->getAliasName());
+        return new ColumnField('message', 'MailQueue', 'mailqueue', 'message', $this->getAliasName());
     }
     public function header() : ColumnField
     {
-        return new ColumnField('mailqueue', 'header', $this->getAliasName());
+        return new ColumnField('header', 'MailQueue', 'mailqueue', 'header', $this->getAliasName());
     }
     public function fromEmail() : ColumnField
     {
-        return new ColumnField('mailqueue', 'fromemail', $this->getAliasName());
+        return new ColumnField('fromEmail', 'MailQueue', 'mailqueue', 'fromemail', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class MailQueueAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['mailqueueid', 'dateline', 'toemail', 'subject', 'message', 'header', 'fromemail'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['mailqueueid'];
     }
     
     public function __listNullableColumns() : array

@@ -17,35 +17,35 @@ class ModeratorAlias extends TableAlias {
    
     public function moderatorId() : ColumnField
     {
-        return new ColumnField('moderator', 'moderatorid', $this->getAliasName());
+        return new ColumnField('moderatorId', 'Moderator', 'moderator', 'moderatorid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('moderator', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Moderator', 'moderator', 'userid', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('moderator', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'Moderator', 'moderator', 'forumid', $this->getAliasName());
     }
     public function permissions() : ColumnField
     {
-        return new ColumnField('moderator', 'permissions', $this->getAliasName());
+        return new ColumnField('permissions', 'Moderator', 'moderator', 'permissions', $this->getAliasName());
     }
     public function importModeratorId() : ColumnField
     {
-        return new ColumnField('moderator', 'importmoderatorid', $this->getAliasName());
+        return new ColumnField('importModeratorId', 'Moderator', 'moderator', 'importmoderatorid', $this->getAliasName());
     }
     public function moderatorUserGroupId() : ColumnField
     {
-        return new ColumnField('moderator', 'moderatorusergroupid', $this->getAliasName());
+        return new ColumnField('moderatorUserGroupId', 'Moderator', 'moderator', 'moderatorusergroupid', $this->getAliasName());
     }
     public function modUserGroupId() : ColumnField
     {
-        return new ColumnField('moderator', 'modusergroupid', $this->getAliasName());
+        return new ColumnField('modUserGroupId', 'Moderator', 'moderator', 'modusergroupid', $this->getAliasName());
     }
     public function permissions2() : ColumnField
     {
-        return new ColumnField('moderator', 'permissions2', $this->getAliasName());
+        return new ColumnField('permissions2', 'Moderator', 'moderator', 'permissions2', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class ModeratorAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['moderatorid', 'userid', 'forumid', 'permissions', 'importmoderatorid', 'moderatorusergroupid', 'modusergroupid', 'permissions2'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['moderatorid'];
     }
     
     public function __listNullableColumns() : array

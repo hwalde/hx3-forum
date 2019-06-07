@@ -109,279 +109,279 @@ class User implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('user', 'userid');
+        return new ColumnField('userId', 'User', 'user', 'userid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('user', 'usergroupid');
+        return new ColumnField('userGroupId', 'User', 'user', 'usergroupid');
     }
     public static function memberGroupIds() : ColumnField
     {
-        return new ColumnField('user', 'membergroupids');
+        return new ColumnField('memberGroupIds', 'User', 'user', 'membergroupids');
     }
     public static function displayGroupId() : ColumnField
     {
-        return new ColumnField('user', 'displaygroupid');
+        return new ColumnField('displayGroupId', 'User', 'user', 'displaygroupid');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('user', 'username');
+        return new ColumnField('userName', 'User', 'user', 'username');
     }
     public static function password() : ColumnField
     {
-        return new ColumnField('user', 'password');
+        return new ColumnField('password', 'User', 'user', 'password');
     }
     public static function passwordDate() : ColumnField
     {
-        return new ColumnField('user', 'passworddate');
+        return new ColumnField('passwordDate', 'User', 'user', 'passworddate');
     }
     public static function email() : ColumnField
     {
-        return new ColumnField('user', 'email');
+        return new ColumnField('email', 'User', 'user', 'email');
     }
     public static function styleId() : ColumnField
     {
-        return new ColumnField('user', 'styleid');
+        return new ColumnField('styleId', 'User', 'user', 'styleid');
     }
     public static function parentEmail() : ColumnField
     {
-        return new ColumnField('user', 'parentemail');
+        return new ColumnField('parentEmail', 'User', 'user', 'parentemail');
     }
     public static function homePage() : ColumnField
     {
-        return new ColumnField('user', 'homepage');
+        return new ColumnField('homePage', 'User', 'user', 'homepage');
     }
     public static function icq() : ColumnField
     {
-        return new ColumnField('user', 'icq');
+        return new ColumnField('icq', 'User', 'user', 'icq');
     }
     public static function aim() : ColumnField
     {
-        return new ColumnField('user', 'aim');
+        return new ColumnField('aim', 'User', 'user', 'aim');
     }
     public static function yahoo() : ColumnField
     {
-        return new ColumnField('user', 'yahoo');
+        return new ColumnField('yahoo', 'User', 'user', 'yahoo');
     }
     public static function showVbCode() : ColumnField
     {
-        return new ColumnField('user', 'showvbcode');
+        return new ColumnField('showVbCode', 'User', 'user', 'showvbcode');
     }
     public static function userTitle() : ColumnField
     {
-        return new ColumnField('user', 'usertitle');
+        return new ColumnField('userTitle', 'User', 'user', 'usertitle');
     }
     public static function customTitle() : ColumnField
     {
-        return new ColumnField('user', 'customtitle');
+        return new ColumnField('customTitle', 'User', 'user', 'customtitle');
     }
     public static function joinDate() : ColumnField
     {
-        return new ColumnField('user', 'joindate');
+        return new ColumnField('joinDate', 'User', 'user', 'joindate');
     }
     public static function daysPrune() : ColumnField
     {
-        return new ColumnField('user', 'daysprune');
+        return new ColumnField('daysPrune', 'User', 'user', 'daysprune');
     }
     public static function lastVisit() : ColumnField
     {
-        return new ColumnField('user', 'lastvisit');
+        return new ColumnField('lastVisit', 'User', 'user', 'lastvisit');
     }
     public static function lastActivity() : ColumnField
     {
-        return new ColumnField('user', 'lastactivity');
+        return new ColumnField('lastActivity', 'User', 'user', 'lastactivity');
     }
     public static function lastPost() : ColumnField
     {
-        return new ColumnField('user', 'lastpost');
+        return new ColumnField('lastPost', 'User', 'user', 'lastpost');
     }
     public static function posts() : ColumnField
     {
-        return new ColumnField('user', 'posts');
+        return new ColumnField('posts', 'User', 'user', 'posts');
     }
     public static function reputation() : ColumnField
     {
-        return new ColumnField('user', 'reputation');
+        return new ColumnField('reputation', 'User', 'user', 'reputation');
     }
     public static function reputationLevelId() : ColumnField
     {
-        return new ColumnField('user', 'reputationlevelid');
+        return new ColumnField('reputationLevelId', 'User', 'user', 'reputationlevelid');
     }
     public static function timeZoneOffset() : ColumnField
     {
-        return new ColumnField('user', 'timezoneoffset');
+        return new ColumnField('timeZoneOffset', 'User', 'user', 'timezoneoffset');
     }
     public static function pmPopup() : ColumnField
     {
-        return new ColumnField('user', 'pmpopup');
+        return new ColumnField('pmPopup', 'User', 'user', 'pmpopup');
     }
     public static function avatarId() : ColumnField
     {
-        return new ColumnField('user', 'avatarid');
+        return new ColumnField('avatarId', 'User', 'user', 'avatarid');
     }
     public static function avatarRevision() : ColumnField
     {
-        return new ColumnField('user', 'avatarrevision');
+        return new ColumnField('avatarRevision', 'User', 'user', 'avatarrevision');
     }
     public static function options() : ColumnField
     {
-        return new ColumnField('user', 'options');
+        return new ColumnField('options', 'User', 'user', 'options');
     }
     public static function birthday() : ColumnField
     {
-        return new ColumnField('user', 'birthday');
+        return new ColumnField('birthday', 'User', 'user', 'birthday');
     }
     public static function birthdaySearch() : ColumnField
     {
-        return new ColumnField('user', 'birthday_search');
+        return new ColumnField('birthdaySearch', 'User', 'user', 'birthday_search');
     }
     public static function maxPosts() : ColumnField
     {
-        return new ColumnField('user', 'maxposts');
+        return new ColumnField('maxPosts', 'User', 'user', 'maxposts');
     }
     public static function startOfWeek() : ColumnField
     {
-        return new ColumnField('user', 'startofweek');
+        return new ColumnField('startOfWeek', 'User', 'user', 'startofweek');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('user', 'ipaddress');
+        return new ColumnField('ipAddress', 'User', 'user', 'ipaddress');
     }
     public static function referrerId() : ColumnField
     {
-        return new ColumnField('user', 'referrerid');
+        return new ColumnField('referrerId', 'User', 'user', 'referrerid');
     }
     public static function languageId() : ColumnField
     {
-        return new ColumnField('user', 'languageid');
+        return new ColumnField('languageId', 'User', 'user', 'languageid');
     }
     public static function msn() : ColumnField
     {
-        return new ColumnField('user', 'msn');
+        return new ColumnField('msn', 'User', 'user', 'msn');
     }
     public static function emailStamp() : ColumnField
     {
-        return new ColumnField('user', 'emailstamp');
+        return new ColumnField('emailStamp', 'User', 'user', 'emailstamp');
     }
     public static function threadedMode() : ColumnField
     {
-        return new ColumnField('user', 'threadedmode');
+        return new ColumnField('threadedMode', 'User', 'user', 'threadedmode');
     }
     public static function autoSubscribe() : ColumnField
     {
-        return new ColumnField('user', 'autosubscribe');
+        return new ColumnField('autoSubscribe', 'User', 'user', 'autosubscribe');
     }
     public static function pmTotal() : ColumnField
     {
-        return new ColumnField('user', 'pmtotal');
+        return new ColumnField('pmTotal', 'User', 'user', 'pmtotal');
     }
     public static function pmUnread() : ColumnField
     {
-        return new ColumnField('user', 'pmunread');
+        return new ColumnField('pmUnread', 'User', 'user', 'pmunread');
     }
     public static function salt() : ColumnField
     {
-        return new ColumnField('user', 'salt');
+        return new ColumnField('salt', 'User', 'user', 'salt');
     }
     public static function importUserId() : ColumnField
     {
-        return new ColumnField('user', 'importuserid');
+        return new ColumnField('importUserId', 'User', 'user', 'importuserid');
     }
     public static function profilePicRevision() : ColumnField
     {
-        return new ColumnField('user', 'profilepicrevision');
+        return new ColumnField('profilePicRevision', 'User', 'user', 'profilepicrevision');
     }
     public static function showBirthday() : ColumnField
     {
-        return new ColumnField('user', 'showbirthday');
+        return new ColumnField('showBirthday', 'User', 'user', 'showbirthday');
     }
     public static function skype() : ColumnField
     {
-        return new ColumnField('user', 'skype');
+        return new ColumnField('skype', 'User', 'user', 'skype');
     }
     public static function adminOptions() : ColumnField
     {
-        return new ColumnField('user', 'adminoptions');
+        return new ColumnField('adminOptions', 'User', 'user', 'adminoptions');
     }
     public static function lastPostId() : ColumnField
     {
-        return new ColumnField('user', 'lastpostid');
+        return new ColumnField('lastPostId', 'User', 'user', 'lastpostid');
     }
     public static function sigPicRevision() : ColumnField
     {
-        return new ColumnField('user', 'sigpicrevision');
+        return new ColumnField('sigPicRevision', 'User', 'user', 'sigpicrevision');
     }
     public static function iPoints() : ColumnField
     {
-        return new ColumnField('user', 'ipoints');
+        return new ColumnField('iPoints', 'User', 'user', 'ipoints');
     }
     public static function infractions() : ColumnField
     {
-        return new ColumnField('user', 'infractions');
+        return new ColumnField('infractions', 'User', 'user', 'infractions');
     }
     public static function warnings() : ColumnField
     {
-        return new ColumnField('user', 'warnings');
+        return new ColumnField('warnings', 'User', 'user', 'warnings');
     }
     public static function infractiongGoupids() : ColumnField
     {
-        return new ColumnField('user', 'infractiongroupids');
+        return new ColumnField('infractiongGoupids', 'User', 'user', 'infractiongroupids');
     }
     public static function infractionGroupId() : ColumnField
     {
-        return new ColumnField('user', 'infractiongroupid');
+        return new ColumnField('infractionGroupId', 'User', 'user', 'infractiongroupid');
     }
     public static function nCodeImageResizerMode() : ColumnField
     {
-        return new ColumnField('user', 'ncode_imageresizer_mode');
+        return new ColumnField('nCodeImageResizerMode', 'User', 'user', 'ncode_imageresizer_mode');
     }
     public static function nCodeImageResizerMaxWidth() : ColumnField
     {
-        return new ColumnField('user', 'ncode_imageresizer_maxwidth');
+        return new ColumnField('nCodeImageResizerMaxWidth', 'User', 'user', 'ncode_imageresizer_maxwidth');
     }
     public static function nCodeImageResizerMaxHeight() : ColumnField
     {
-        return new ColumnField('user', 'ncode_imageresizer_maxheight');
+        return new ColumnField('nCodeImageResizerMaxHeight', 'User', 'user', 'ncode_imageresizer_maxheight');
     }
     public static function profileVisits() : ColumnField
     {
-        return new ColumnField('user', 'profilevisits');
+        return new ColumnField('profileVisits', 'User', 'user', 'profilevisits');
     }
     public static function friendCount() : ColumnField
     {
-        return new ColumnField('user', 'friendcount');
+        return new ColumnField('friendCount', 'User', 'user', 'friendcount');
     }
     public static function friendReqCount() : ColumnField
     {
-        return new ColumnField('user', 'friendreqcount');
+        return new ColumnField('friendReqCount', 'User', 'user', 'friendreqcount');
     }
     public static function vmUnreadCount() : ColumnField
     {
-        return new ColumnField('user', 'vmunreadcount');
+        return new ColumnField('vmUnreadCount', 'User', 'user', 'vmunreadcount');
     }
     public static function vmModeratedcount() : ColumnField
     {
-        return new ColumnField('user', 'vmmoderatedcount');
+        return new ColumnField('vmModeratedcount', 'User', 'user', 'vmmoderatedcount');
     }
     public static function socGroupInviteCount() : ColumnField
     {
-        return new ColumnField('user', 'socgroupinvitecount');
+        return new ColumnField('socGroupInviteCount', 'User', 'user', 'socgroupinvitecount');
     }
     public static function socGroupReqCount() : ColumnField
     {
-        return new ColumnField('user', 'socgroupreqcount');
+        return new ColumnField('socGroupReqCount', 'User', 'user', 'socgroupreqcount');
     }
     public static function pcUnreadCount() : ColumnField
     {
-        return new ColumnField('user', 'pcunreadcount');
+        return new ColumnField('pcUnreadCount', 'User', 'user', 'pcunreadcount');
     }
     public static function pcModeratedCount() : ColumnField
     {
-        return new ColumnField('user', 'pcmoderatedcount');
+        return new ColumnField('pcModeratedCount', 'User', 'user', 'pcmoderatedcount');
     }
     public static function gmModeratedCount() : ColumnField
     {
-        return new ColumnField('user', 'gmmoderatedcount');
+        return new ColumnField('gmModeratedCount', 'User', 'user', 'gmmoderatedcount');
     }
 
     public function getTableName(): string
@@ -392,6 +392,14 @@ class User implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'usergroupid', 'membergroupids', 'displaygroupid', 'username', 'password', 'passworddate', 'email', 'styleid', 'parentemail', 'homepage', 'icq', 'aim', 'yahoo', 'showvbcode', 'usertitle', 'customtitle', 'joindate', 'daysprune', 'lastvisit', 'lastactivity', 'lastpost', 'posts', 'reputation', 'reputationlevelid', 'timezoneoffset', 'pmpopup', 'avatarid', 'avatarrevision', 'options', 'birthday', 'birthday_search', 'maxposts', 'startofweek', 'ipaddress', 'referrerid', 'languageid', 'msn', 'emailstamp', 'threadedmode', 'autosubscribe', 'pmtotal', 'pmunread', 'salt', 'importuserid', 'profilepicrevision', 'showbirthday', 'skype', 'adminoptions', 'lastpostid', 'sigpicrevision', 'ipoints', 'infractions', 'warnings', 'infractiongroupids', 'infractiongroupid', 'ncode_imageresizer_mode', 'ncode_imageresizer_maxwidth', 'ncode_imageresizer_maxheight', 'profilevisits', 'friendcount', 'friendreqcount', 'vmunreadcount', 'vmmoderatedcount', 'socgroupinvitecount', 'socgroupreqcount', 'pcunreadcount', 'pcmoderatedcount', 'gmmoderatedcount'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array
@@ -548,5 +556,4 @@ class User implements Table {
 			'gmmoderatedcount' => 'gmModeratedCount'
 		];
     }
-
 }

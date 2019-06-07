@@ -48,35 +48,35 @@ class UserChangeLog implements Table {
     
     public static function changeId() : ColumnField
     {
-        return new ColumnField('userchangelog', 'changeid');
+        return new ColumnField('changeId', 'UserChangeLog', 'userchangelog', 'changeid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('userchangelog', 'userid');
+        return new ColumnField('userId', 'UserChangeLog', 'userchangelog', 'userid');
     }
     public static function fieldName() : ColumnField
     {
-        return new ColumnField('userchangelog', 'fieldname');
+        return new ColumnField('fieldName', 'UserChangeLog', 'userchangelog', 'fieldname');
     }
     public static function newValue() : ColumnField
     {
-        return new ColumnField('userchangelog', 'newvalue');
+        return new ColumnField('newValue', 'UserChangeLog', 'userchangelog', 'newvalue');
     }
     public static function oldValue() : ColumnField
     {
-        return new ColumnField('userchangelog', 'oldvalue');
+        return new ColumnField('oldValue', 'UserChangeLog', 'userchangelog', 'oldvalue');
     }
     public static function adminId() : ColumnField
     {
-        return new ColumnField('userchangelog', 'adminid');
+        return new ColumnField('adminId', 'UserChangeLog', 'userchangelog', 'adminid');
     }
     public static function changeTime() : ColumnField
     {
-        return new ColumnField('userchangelog', 'change_time');
+        return new ColumnField('changeTime', 'UserChangeLog', 'userchangelog', 'change_time');
     }
     public static function changeUnIq() : ColumnField
     {
-        return new ColumnField('userchangelog', 'change_uniq');
+        return new ColumnField('changeUnIq', 'UserChangeLog', 'userchangelog', 'change_uniq');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class UserChangeLog implements Table {
     public function __listColumns() : array
     {
         return ['changeid', 'userid', 'fieldname', 'newvalue', 'oldvalue', 'adminid', 'change_time', 'change_uniq'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['changeid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class UserChangeLog implements Table {
 			'change_uniq' => 'changeUnIq'
 		];
     }
-
 }

@@ -14,10 +14,10 @@ use POOQ\Record;
 class GeneratedForumPrefixSetRecord implements Record {
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $prefixSetId string */
-    private $prefixSetId;
+    protected $prefixSetId;
     
     public function hasForumId(): bool
     {

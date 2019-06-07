@@ -17,23 +17,23 @@ class PtIssuePetitionAlias extends TableAlias {
    
     public function issueNoteId() : ColumnField
     {
-        return new ColumnField('pt_issuepetition', 'issuenoteid', $this->getAliasName());
+        return new ColumnField('issueNoteId', 'PtIssuePetition', 'pt_issuepetition', 'issuenoteid', $this->getAliasName());
     }
     public function petitionStatusId() : ColumnField
     {
-        return new ColumnField('pt_issuepetition', 'petitionstatusid', $this->getAliasName());
+        return new ColumnField('petitionStatusId', 'PtIssuePetition', 'pt_issuepetition', 'petitionstatusid', $this->getAliasName());
     }
     public function resolution() : ColumnField
     {
-        return new ColumnField('pt_issuepetition', 'resolution', $this->getAliasName());
+        return new ColumnField('resolution', 'PtIssuePetition', 'pt_issuepetition', 'resolution', $this->getAliasName());
     }
     public function resolveUserId() : ColumnField
     {
-        return new ColumnField('pt_issuepetition', 'resolveuserid', $this->getAliasName());
+        return new ColumnField('resolveUserId', 'PtIssuePetition', 'pt_issuepetition', 'resolveuserid', $this->getAliasName());
     }
     public function resolveDate() : ColumnField
     {
-        return new ColumnField('pt_issuepetition', 'resolvedate', $this->getAliasName());
+        return new ColumnField('resolveDate', 'PtIssuePetition', 'pt_issuepetition', 'resolvedate', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class PtIssuePetitionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['issuenoteid', 'petitionstatusid', 'resolution', 'resolveuserid', 'resolvedate'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuenoteid'];
     }
     
     public function __listNullableColumns() : array

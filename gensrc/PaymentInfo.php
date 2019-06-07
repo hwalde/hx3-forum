@@ -46,27 +46,27 @@ class PaymentInfo implements Table {
     
     public static function paymentInfoId() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'paymentinfoid');
+        return new ColumnField('paymentInfoId', 'PaymentInfo', 'paymentinfo', 'paymentinfoid');
     }
     public static function hash() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'hash');
+        return new ColumnField('hash', 'PaymentInfo', 'paymentinfo', 'hash');
     }
     public static function subscriptionId() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'subscriptionid');
+        return new ColumnField('subscriptionId', 'PaymentInfo', 'paymentinfo', 'subscriptionid');
     }
     public static function subscriptionSubId() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'subscriptionsubid');
+        return new ColumnField('subscriptionSubId', 'PaymentInfo', 'paymentinfo', 'subscriptionsubid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'userid');
+        return new ColumnField('userId', 'PaymentInfo', 'paymentinfo', 'userid');
     }
     public static function completed() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'completed');
+        return new ColumnField('completed', 'PaymentInfo', 'paymentinfo', 'completed');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class PaymentInfo implements Table {
     public function __listColumns() : array
     {
         return ['paymentinfoid', 'hash', 'subscriptionid', 'subscriptionsubid', 'userid', 'completed'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['paymentinfoid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class PaymentInfo implements Table {
 			'completed' => 'completed'
 		];
     }
-
 }

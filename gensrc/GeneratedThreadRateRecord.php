@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedThreadRateRecord implements Record {
     
     /** @var $threadRateId int */
-    private $threadRateId;
+    protected $threadRateId;
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $vote int */
-    private $vote;
+    protected $vote;
     
     /** @var $ipAddress string */
-    private $ipAddress;
+    protected $ipAddress;
     
     public function hasThreadRateId(): bool
     {

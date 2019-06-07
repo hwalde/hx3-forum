@@ -17,15 +17,15 @@ class ForumReadAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('forumread', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'ForumRead', 'forumread', 'userid', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('forumread', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'ForumRead', 'forumread', 'forumid', $this->getAliasName());
     }
     public function readTime() : ColumnField
     {
-        return new ColumnField('forumread', 'readtime', $this->getAliasName());
+        return new ColumnField('readTime', 'ForumRead', 'forumread', 'readtime', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class ForumReadAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'forumid', 'readtime'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'forumid'];
     }
     
     public function __listNullableColumns() : array

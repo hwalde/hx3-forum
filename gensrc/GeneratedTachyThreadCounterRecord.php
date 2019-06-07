@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedTachyThreadCounterRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $replyCount int */
-    private $replyCount;
+    protected $replyCount;
     
     public function hasUserId(): bool
     {

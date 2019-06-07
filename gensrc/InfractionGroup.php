@@ -45,23 +45,23 @@ class InfractionGroup implements Table {
     
     public static function infractionGroupId() : ColumnField
     {
-        return new ColumnField('infractiongroup', 'infractiongroupid');
+        return new ColumnField('infractionGroupId', 'InfractionGroup', 'infractiongroup', 'infractiongroupid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('infractiongroup', 'usergroupid');
+        return new ColumnField('userGroupId', 'InfractionGroup', 'infractiongroup', 'usergroupid');
     }
     public static function oruserGroupId() : ColumnField
     {
-        return new ColumnField('infractiongroup', 'orusergroupid');
+        return new ColumnField('oruserGroupId', 'InfractionGroup', 'infractiongroup', 'orusergroupid');
     }
     public static function pointLevel() : ColumnField
     {
-        return new ColumnField('infractiongroup', 'pointlevel');
+        return new ColumnField('pointLevel', 'InfractionGroup', 'infractiongroup', 'pointlevel');
     }
     public static function override() : ColumnField
     {
-        return new ColumnField('infractiongroup', 'override');
+        return new ColumnField('override', 'InfractionGroup', 'infractiongroup', 'override');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class InfractionGroup implements Table {
     public function __listColumns() : array
     {
         return ['infractiongroupid', 'usergroupid', 'orusergroupid', 'pointlevel', 'override'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['infractiongroupid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class InfractionGroup implements Table {
 			'override' => 'override'
 		];
     }
-
 }

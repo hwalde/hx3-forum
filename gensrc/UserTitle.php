@@ -43,15 +43,15 @@ class UserTitle implements Table {
     
     public static function userTitleId() : ColumnField
     {
-        return new ColumnField('usertitle', 'usertitleid');
+        return new ColumnField('userTitleId', 'UserTitle', 'usertitle', 'usertitleid');
     }
     public static function minPosts() : ColumnField
     {
-        return new ColumnField('usertitle', 'minposts');
+        return new ColumnField('minPosts', 'UserTitle', 'usertitle', 'minposts');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('usertitle', 'title');
+        return new ColumnField('title', 'UserTitle', 'usertitle', 'title');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class UserTitle implements Table {
     public function __listColumns() : array
     {
         return ['usertitleid', 'minposts', 'title'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usertitleid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class UserTitle implements Table {
 			'title' => 'title'
 		];
     }
-
 }

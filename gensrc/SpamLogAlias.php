@@ -17,7 +17,7 @@ class SpamLogAlias extends TableAlias {
    
     public function postId() : ColumnField
     {
-        return new ColumnField('spamlog', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'SpamLog', 'spamlog', 'postid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -26,6 +26,14 @@ class SpamLogAlias extends TableAlias {
     }
     
     public function __listColumns() : array
+    {
+        return ['postid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
     {
         return ['postid'];
     }

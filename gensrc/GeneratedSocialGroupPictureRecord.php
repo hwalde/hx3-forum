@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedSocialGroupPictureRecord implements Record {
     
     /** @var $groupId int */
-    private $groupId;
+    protected $groupId;
     
     /** @var $pictureId int */
-    private $pictureId;
+    protected $pictureId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasGroupId(): bool
     {

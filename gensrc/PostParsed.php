@@ -46,27 +46,27 @@ class PostParsed implements Table {
     
     public static function postId() : ColumnField
     {
-        return new ColumnField('postparsed', 'postid');
+        return new ColumnField('postId', 'PostParsed', 'postparsed', 'postid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('postparsed', 'dateline');
+        return new ColumnField('dateLine', 'PostParsed', 'postparsed', 'dateline');
     }
     public static function hasImages() : ColumnField
     {
-        return new ColumnField('postparsed', 'hasimages');
+        return new ColumnField('hasImages', 'PostParsed', 'postparsed', 'hasimages');
     }
     public static function pageTextHtml() : ColumnField
     {
-        return new ColumnField('postparsed', 'pagetext_html');
+        return new ColumnField('pageTextHtml', 'PostParsed', 'postparsed', 'pagetext_html');
     }
     public static function styleId() : ColumnField
     {
-        return new ColumnField('postparsed', 'styleid');
+        return new ColumnField('styleId', 'PostParsed', 'postparsed', 'styleid');
     }
     public static function languageId() : ColumnField
     {
-        return new ColumnField('postparsed', 'languageid');
+        return new ColumnField('languageId', 'PostParsed', 'postparsed', 'languageid');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class PostParsed implements Table {
     public function __listColumns() : array
     {
         return ['postid', 'dateline', 'hasimages', 'pagetext_html', 'styleid', 'languageid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid', 'styleid', 'languageid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class PostParsed implements Table {
 			'languageid' => 'languageId'
 		];
     }
-
 }

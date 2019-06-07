@@ -17,35 +17,35 @@ class UserTextFieldAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('usertextfield', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserTextField', 'usertextfield', 'userid', $this->getAliasName());
     }
     public function subFolders() : ColumnField
     {
-        return new ColumnField('usertextfield', 'subfolders', $this->getAliasName());
+        return new ColumnField('subFolders', 'UserTextField', 'usertextfield', 'subfolders', $this->getAliasName());
     }
     public function pmFolders() : ColumnField
     {
-        return new ColumnField('usertextfield', 'pmfolders', $this->getAliasName());
+        return new ColumnField('pmFolders', 'UserTextField', 'usertextfield', 'pmfolders', $this->getAliasName());
     }
     public function buddyList() : ColumnField
     {
-        return new ColumnField('usertextfield', 'buddylist', $this->getAliasName());
+        return new ColumnField('buddyList', 'UserTextField', 'usertextfield', 'buddylist', $this->getAliasName());
     }
     public function ignoreList() : ColumnField
     {
-        return new ColumnField('usertextfield', 'ignorelist', $this->getAliasName());
+        return new ColumnField('ignoreList', 'UserTextField', 'usertextfield', 'ignorelist', $this->getAliasName());
     }
     public function signature() : ColumnField
     {
-        return new ColumnField('usertextfield', 'signature', $this->getAliasName());
+        return new ColumnField('signature', 'UserTextField', 'usertextfield', 'signature', $this->getAliasName());
     }
     public function searchPrefs() : ColumnField
     {
-        return new ColumnField('usertextfield', 'searchprefs', $this->getAliasName());
+        return new ColumnField('searchPrefs', 'UserTextField', 'usertextfield', 'searchprefs', $this->getAliasName());
     }
     public function rank() : ColumnField
     {
-        return new ColumnField('usertextfield', 'rank', $this->getAliasName());
+        return new ColumnField('rank', 'UserTextField', 'usertextfield', 'rank', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class UserTextFieldAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'subfolders', 'pmfolders', 'buddylist', 'ignorelist', 'signature', 'searchprefs', 'rank'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array

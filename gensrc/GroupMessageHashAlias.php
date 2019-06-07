@@ -17,19 +17,19 @@ class GroupMessageHashAlias extends TableAlias {
    
     public function postUserId() : ColumnField
     {
-        return new ColumnField('groupmessage_hash', 'postuserid', $this->getAliasName());
+        return new ColumnField('postUserId', 'GroupMessageHash', 'groupmessage_hash', 'postuserid', $this->getAliasName());
     }
     public function groupId() : ColumnField
     {
-        return new ColumnField('groupmessage_hash', 'groupid', $this->getAliasName());
+        return new ColumnField('groupId', 'GroupMessageHash', 'groupmessage_hash', 'groupid', $this->getAliasName());
     }
     public function dupeHash() : ColumnField
     {
-        return new ColumnField('groupmessage_hash', 'dupehash', $this->getAliasName());
+        return new ColumnField('dupeHash', 'GroupMessageHash', 'groupmessage_hash', 'dupehash', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('groupmessage_hash', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'GroupMessageHash', 'groupmessage_hash', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class GroupMessageHashAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['postuserid', 'groupid', 'dupehash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

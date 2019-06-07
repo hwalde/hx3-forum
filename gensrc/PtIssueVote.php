@@ -46,27 +46,27 @@ class PtIssueVote implements Table {
     
     public static function issueVoteId() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'issuevoteid');
+        return new ColumnField('issueVoteId', 'PtIssueVote', 'pt_issuevote', 'issuevoteid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'userid');
+        return new ColumnField('userId', 'PtIssueVote', 'pt_issuevote', 'userid');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'ipaddress');
+        return new ColumnField('ipAddress', 'PtIssueVote', 'pt_issuevote', 'ipaddress');
     }
     public static function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'issueid');
+        return new ColumnField('issueId', 'PtIssueVote', 'pt_issuevote', 'issueid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'dateline');
+        return new ColumnField('dateLine', 'PtIssueVote', 'pt_issuevote', 'dateline');
     }
     public static function vote() : ColumnField
     {
-        return new ColumnField('pt_issuevote', 'vote');
+        return new ColumnField('vote', 'PtIssueVote', 'pt_issuevote', 'vote');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class PtIssueVote implements Table {
     public function __listColumns() : array
     {
         return ['issuevoteid', 'userid', 'ipaddress', 'issueid', 'dateline', 'vote'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuevoteid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class PtIssueVote implements Table {
 			'vote' => 'vote'
 		];
     }
-
 }

@@ -48,35 +48,35 @@ class Administrator implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('administrator', 'userid');
+        return new ColumnField('userId', 'Administrator', 'administrator', 'userid');
     }
     public static function adminPermissions() : ColumnField
     {
-        return new ColumnField('administrator', 'adminpermissions');
+        return new ColumnField('adminPermissions', 'Administrator', 'administrator', 'adminpermissions');
     }
     public static function navPrefs() : ColumnField
     {
-        return new ColumnField('administrator', 'navprefs');
+        return new ColumnField('navPrefs', 'Administrator', 'administrator', 'navprefs');
     }
     public static function cssPrefs() : ColumnField
     {
-        return new ColumnField('administrator', 'cssprefs');
+        return new ColumnField('cssPrefs', 'Administrator', 'administrator', 'cssprefs');
     }
     public static function notes() : ColumnField
     {
-        return new ColumnField('administrator', 'notes');
+        return new ColumnField('notes', 'Administrator', 'administrator', 'notes');
     }
     public static function languageId() : ColumnField
     {
-        return new ColumnField('administrator', 'languageid');
+        return new ColumnField('languageId', 'Administrator', 'administrator', 'languageid');
     }
     public static function dismissedNews() : ColumnField
     {
-        return new ColumnField('administrator', 'dismissednews');
+        return new ColumnField('dismissedNews', 'Administrator', 'administrator', 'dismissednews');
     }
     public static function ptPermissions() : ColumnField
     {
-        return new ColumnField('administrator', 'ptpermissions');
+        return new ColumnField('ptPermissions', 'Administrator', 'administrator', 'ptpermissions');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class Administrator implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'adminpermissions', 'navprefs', 'cssprefs', 'notes', 'languageid', 'dismissednews', 'ptpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class Administrator implements Table {
 			'ptpermissions' => 'ptPermissions'
 		];
     }
-
 }

@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedSubscriptionLogRecord implements Record {
     
     /** @var $subscriptionLogId int */
-    private $subscriptionLogId;
+    protected $subscriptionLogId;
     
     /** @var $subscriptionId int */
-    private $subscriptionId;
+    protected $subscriptionId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $pUserGroupId int */
-    private $pUserGroupId;
+    protected $pUserGroupId;
     
     /** @var $status int */
-    private $status;
+    protected $status;
     
     /** @var $regDate int */
-    private $regDate;
+    protected $regDate;
     
     /** @var $expiryDate int */
-    private $expiryDate;
+    protected $expiryDate;
     
     public function hasSubscriptionLogId(): bool
     {

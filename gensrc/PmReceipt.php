@@ -48,35 +48,35 @@ class PmReceipt implements Table {
     
     public static function pmId() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'pmid');
+        return new ColumnField('pmId', 'PmReceipt', 'pmreceipt', 'pmid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'userid');
+        return new ColumnField('userId', 'PmReceipt', 'pmreceipt', 'userid');
     }
     public static function toUserId() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'touserid');
+        return new ColumnField('toUserId', 'PmReceipt', 'pmreceipt', 'touserid');
     }
     public static function toUserName() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'tousername');
+        return new ColumnField('toUserName', 'PmReceipt', 'pmreceipt', 'tousername');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'title');
+        return new ColumnField('title', 'PmReceipt', 'pmreceipt', 'title');
     }
     public static function sendTime() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'sendtime');
+        return new ColumnField('sendTime', 'PmReceipt', 'pmreceipt', 'sendtime');
     }
     public static function readTime() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'readtime');
+        return new ColumnField('readTime', 'PmReceipt', 'pmreceipt', 'readtime');
     }
     public static function denied() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'denied');
+        return new ColumnField('denied', 'PmReceipt', 'pmreceipt', 'denied');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class PmReceipt implements Table {
     public function __listColumns() : array
     {
         return ['pmid', 'userid', 'touserid', 'tousername', 'title', 'sendtime', 'readtime', 'denied'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pmid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class PmReceipt implements Table {
 			'denied' => 'denied'
 		];
     }
-
 }

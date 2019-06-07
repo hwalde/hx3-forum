@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedPtProjectPermissionRecord implements Record {
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $projectId int */
-    private $projectId;
+    protected $projectId;
     
     /** @var $issueTypeId string */
-    private $issueTypeId;
+    protected $issueTypeId;
     
     /** @var $generalPermissions int */
-    private $generalPermissions;
+    protected $generalPermissions;
     
     /** @var $postPermissions int */
-    private $postPermissions;
+    protected $postPermissions;
     
     /** @var $attachPermissions int */
-    private $attachPermissions;
+    protected $attachPermissions;
     
     public function hasUserGroupId(): bool
     {

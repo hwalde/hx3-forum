@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedPrefixRecord implements Record {
     
     /** @var $prefixId string */
-    private $prefixId;
+    protected $prefixId;
     
     /** @var $prefixSetId string */
-    private $prefixSetId;
+    protected $prefixSetId;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     public function hasPrefixId(): bool
     {

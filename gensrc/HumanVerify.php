@@ -44,19 +44,19 @@ class HumanVerify implements Table {
     
     public static function hash() : ColumnField
     {
-        return new ColumnField('humanverify', 'hash');
+        return new ColumnField('hash', 'HumanVerify', 'humanverify', 'hash');
     }
     public static function answer() : ColumnField
     {
-        return new ColumnField('humanverify', 'answer');
+        return new ColumnField('answer', 'HumanVerify', 'humanverify', 'answer');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('humanverify', 'dateline');
+        return new ColumnField('dateLine', 'HumanVerify', 'humanverify', 'dateline');
     }
     public static function viewed() : ColumnField
     {
-        return new ColumnField('humanverify', 'viewed');
+        return new ColumnField('viewed', 'HumanVerify', 'humanverify', 'viewed');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class HumanVerify implements Table {
     public function __listColumns() : array
     {
         return ['hash', 'answer', 'dateline', 'viewed'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class HumanVerify implements Table {
 			'viewed' => 'viewed'
 		];
     }
-
 }

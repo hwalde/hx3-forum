@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedEditLogRecord implements Record {
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $reason string */
-    private $reason;
+    protected $reason;
     
     /** @var $hasHistory int */
-    private $hasHistory;
+    protected $hasHistory;
     
     public function hasPostId(): bool
     {

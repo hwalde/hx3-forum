@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedStatisticRefererRecord implements Record {
     
     /** @var $id int */
-    private $id;
+    protected $id;
     
     /** @var $referer string */
-    private $referer;
+    protected $referer;
     
     /** @var $zaehler int */
-    private $zaehler;
+    protected $zaehler;
     
     public function hasId(): bool
     {

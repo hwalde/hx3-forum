@@ -43,15 +43,15 @@ class SubscriptionPermission implements Table {
     
     public static function subscriptionPermissionId() : ColumnField
     {
-        return new ColumnField('subscriptionpermission', 'subscriptionpermissionid');
+        return new ColumnField('subscriptionPermissionId', 'SubscriptionPermission', 'subscriptionpermission', 'subscriptionpermissionid');
     }
     public static function subscriptionId() : ColumnField
     {
-        return new ColumnField('subscriptionpermission', 'subscriptionid');
+        return new ColumnField('subscriptionId', 'SubscriptionPermission', 'subscriptionpermission', 'subscriptionid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('subscriptionpermission', 'usergroupid');
+        return new ColumnField('userGroupId', 'SubscriptionPermission', 'subscriptionpermission', 'usergroupid');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class SubscriptionPermission implements Table {
     public function __listColumns() : array
     {
         return ['subscriptionpermissionid', 'subscriptionid', 'usergroupid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscriptionpermissionid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class SubscriptionPermission implements Table {
 			'usergroupid' => 'userGroupId'
 		];
     }
-
 }

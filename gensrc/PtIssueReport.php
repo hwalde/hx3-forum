@@ -51,47 +51,47 @@ class PtIssueReport implements Table {
     
     public static function issueReportId() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'issuereportid');
+        return new ColumnField('issueReportId', 'PtIssueReport', 'pt_issuereport', 'issuereportid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'title');
+        return new ColumnField('title', 'PtIssueReport', 'pt_issuereport', 'title');
     }
     public static function description() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'description');
+        return new ColumnField('description', 'PtIssueReport', 'pt_issuereport', 'description');
     }
     public static function public() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'public');
+        return new ColumnField('public', 'PtIssueReport', 'pt_issuereport', 'public');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'userid');
+        return new ColumnField('userId', 'PtIssueReport', 'pt_issuereport', 'userid');
     }
     public static function criteria() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'criteria');
+        return new ColumnField('criteria', 'PtIssueReport', 'pt_issuereport', 'criteria');
     }
     public static function sortBy() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'sortby');
+        return new ColumnField('sortBy', 'PtIssueReport', 'pt_issuereport', 'sortby');
     }
     public static function sortOrder() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'sortorder');
+        return new ColumnField('sortOrder', 'PtIssueReport', 'pt_issuereport', 'sortorder');
     }
     public static function groupBy() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'groupby');
+        return new ColumnField('groupBy', 'PtIssueReport', 'pt_issuereport', 'groupby');
     }
     public static function projectList() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'projectlist');
+        return new ColumnField('projectList', 'PtIssueReport', 'pt_issuereport', 'projectlist');
     }
     public static function issueTypeList() : ColumnField
     {
-        return new ColumnField('pt_issuereport', 'issuetypelist');
+        return new ColumnField('issueTypeList', 'PtIssueReport', 'pt_issuereport', 'issuetypelist');
     }
 
     public function getTableName(): string
@@ -102,6 +102,14 @@ class PtIssueReport implements Table {
     public function __listColumns() : array
     {
         return ['issuereportid', 'title', 'description', 'public', 'userid', 'criteria', 'sortby', 'sortorder', 'groupby', 'projectlist', 'issuetypelist'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuereportid'];
     }
     
     public function __listNullableColumns() : array
@@ -142,5 +150,4 @@ class PtIssueReport implements Table {
 			'issuetypelist' => 'issueTypeList'
 		];
     }
-
 }

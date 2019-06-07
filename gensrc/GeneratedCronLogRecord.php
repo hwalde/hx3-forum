@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedCronLogRecord implements Record {
     
     /** @var $cronLogId int */
-    private $cronLogId;
+    protected $cronLogId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $description string */
-    private $description;
+    protected $description;
     
     /** @var $type int */
-    private $type;
+    protected $type;
     
     /** @var $varName string */
-    private $varName;
+    protected $varName;
     
     public function hasCronLogId(): bool
     {

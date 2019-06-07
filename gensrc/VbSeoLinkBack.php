@@ -56,67 +56,67 @@ class VbSeoLinkBack implements Table {
     
     public static function tId() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_id');
+        return new ColumnField('tId', 'VbSeoLinkBack', 'vbseo_linkback', 't_id');
     }
     public static function tTime() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_time');
+        return new ColumnField('tTime', 'VbSeoLinkBack', 'vbseo_linkback', 't_time');
     }
     public static function tSrcUrl() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_src_url');
+        return new ColumnField('tSrcUrl', 'VbSeoLinkBack', 'vbseo_linkback', 't_src_url');
     }
     public static function tDestUrl() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_dest_url');
+        return new ColumnField('tDestUrl', 'VbSeoLinkBack', 'vbseo_linkback', 't_dest_url');
     }
     public static function tType() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_type');
+        return new ColumnField('tType', 'VbSeoLinkBack', 'vbseo_linkback', 't_type');
     }
     public static function tPostId() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_postid');
+        return new ColumnField('tPostId', 'VbSeoLinkBack', 'vbseo_linkback', 't_postid');
     }
     public static function tPostCount() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_postcount');
+        return new ColumnField('tPostCount', 'VbSeoLinkBack', 'vbseo_linkback', 't_postcount');
     }
     public static function tThreadId() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_threadid');
+        return new ColumnField('tThreadId', 'VbSeoLinkBack', 'vbseo_linkback', 't_threadid');
     }
     public static function tPage() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_page');
+        return new ColumnField('tPage', 'VbSeoLinkBack', 'vbseo_linkback', 't_page');
     }
     public static function tTitle() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_title');
+        return new ColumnField('tTitle', 'VbSeoLinkBack', 'vbseo_linkback', 't_title');
     }
     public static function tText() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_text');
+        return new ColumnField('tText', 'VbSeoLinkBack', 'vbseo_linkback', 't_text');
     }
     public static function tApprove() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_approve');
+        return new ColumnField('tApprove', 'VbSeoLinkBack', 'vbseo_linkback', 't_approve');
     }
     public static function tWait() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_wait');
+        return new ColumnField('tWait', 'VbSeoLinkBack', 'vbseo_linkback', 't_wait');
     }
     public static function tIncoming() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_incoming');
+        return new ColumnField('tIncoming', 'VbSeoLinkBack', 'vbseo_linkback', 't_incoming');
     }
     public static function tDeleted() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_deleted');
+        return new ColumnField('tDeleted', 'VbSeoLinkBack', 'vbseo_linkback', 't_deleted');
     }
     public static function tHits() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_hits');
+        return new ColumnField('tHits', 'VbSeoLinkBack', 'vbseo_linkback', 't_hits');
     }
 
     public function getTableName(): string
@@ -127,6 +127,14 @@ class VbSeoLinkBack implements Table {
     public function __listColumns() : array
     {
         return ['t_id', 't_time', 't_src_url', 't_dest_url', 't_type', 't_postid', 't_postcount', 't_threadid', 't_page', 't_title', 't_text', 't_approve', 't_wait', 't_incoming', 't_deleted', 't_hits'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['t_id'];
     }
     
     public function __listNullableColumns() : array
@@ -177,5 +185,4 @@ class VbSeoLinkBack implements Table {
 			't_hits' => 'tHits'
 		];
     }
-
 }

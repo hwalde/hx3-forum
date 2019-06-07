@@ -14,40 +14,40 @@ use POOQ\Record;
 class GeneratedPtIssueSearchRecord implements Record {
     
     /** @var $issueSearchId int */
-    private $issueSearchId;
+    protected $issueSearchId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $ipAddress string */
-    private $ipAddress;
+    protected $ipAddress;
     
     /** @var $criteria string */
-    private $criteria;
+    protected $criteria;
     
     /** @var $sortBy string */
-    private $sortBy;
+    protected $sortBy;
     
     /** @var $sortOrder string */
-    private $sortOrder;
+    protected $sortOrder;
     
     /** @var $groupBy string */
-    private $groupBy;
+    protected $groupBy;
     
     /** @var $searchTime mixed */
-    private $searchTime;
+    protected $searchTime;
     
     /** @var $resultCount int */
-    private $resultCount;
+    protected $resultCount;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $completed int */
-    private $completed;
+    protected $completed;
     
     /** @var $issueReportId int */
-    private $issueReportId;
+    protected $issueReportId;
     
     public function hasIssueSearchId(): bool
     {

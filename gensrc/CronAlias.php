@@ -17,51 +17,51 @@ class CronAlias extends TableAlias {
    
     public function cronId() : ColumnField
     {
-        return new ColumnField('cron', 'cronid', $this->getAliasName());
+        return new ColumnField('cronId', 'Cron', 'cron', 'cronid', $this->getAliasName());
     }
     public function nextRun() : ColumnField
     {
-        return new ColumnField('cron', 'nextrun', $this->getAliasName());
+        return new ColumnField('nextRun', 'Cron', 'cron', 'nextrun', $this->getAliasName());
     }
     public function weekDay() : ColumnField
     {
-        return new ColumnField('cron', 'weekday', $this->getAliasName());
+        return new ColumnField('weekDay', 'Cron', 'cron', 'weekday', $this->getAliasName());
     }
     public function day() : ColumnField
     {
-        return new ColumnField('cron', 'day', $this->getAliasName());
+        return new ColumnField('day', 'Cron', 'cron', 'day', $this->getAliasName());
     }
     public function hour() : ColumnField
     {
-        return new ColumnField('cron', 'hour', $this->getAliasName());
+        return new ColumnField('hour', 'Cron', 'cron', 'hour', $this->getAliasName());
     }
     public function minute() : ColumnField
     {
-        return new ColumnField('cron', 'minute', $this->getAliasName());
+        return new ColumnField('minute', 'Cron', 'cron', 'minute', $this->getAliasName());
     }
     public function fileName() : ColumnField
     {
-        return new ColumnField('cron', 'filename', $this->getAliasName());
+        return new ColumnField('fileName', 'Cron', 'cron', 'filename', $this->getAliasName());
     }
     public function logLevel() : ColumnField
     {
-        return new ColumnField('cron', 'loglevel', $this->getAliasName());
+        return new ColumnField('logLevel', 'Cron', 'cron', 'loglevel', $this->getAliasName());
     }
     public function active() : ColumnField
     {
-        return new ColumnField('cron', 'active', $this->getAliasName());
+        return new ColumnField('active', 'Cron', 'cron', 'active', $this->getAliasName());
     }
     public function varName() : ColumnField
     {
-        return new ColumnField('cron', 'varname', $this->getAliasName());
+        return new ColumnField('varName', 'Cron', 'cron', 'varname', $this->getAliasName());
     }
     public function volatile() : ColumnField
     {
-        return new ColumnField('cron', 'volatile', $this->getAliasName());
+        return new ColumnField('volatile', 'Cron', 'cron', 'volatile', $this->getAliasName());
     }
     public function product() : ColumnField
     {
-        return new ColumnField('cron', 'product', $this->getAliasName());
+        return new ColumnField('product', 'Cron', 'cron', 'product', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class CronAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['cronid', 'nextrun', 'weekday', 'day', 'hour', 'minute', 'filename', 'loglevel', 'active', 'varname', 'volatile', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['cronid'];
     }
     
     public function __listNullableColumns() : array

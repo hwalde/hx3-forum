@@ -17,23 +17,23 @@ class CalendarModeratorAlias extends TableAlias {
    
     public function calendarModeratorId() : ColumnField
     {
-        return new ColumnField('calendarmoderator', 'calendarmoderatorid', $this->getAliasName());
+        return new ColumnField('calendarModeratorId', 'CalendarModerator', 'calendarmoderator', 'calendarmoderatorid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('calendarmoderator', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'CalendarModerator', 'calendarmoderator', 'userid', $this->getAliasName());
     }
     public function calendarId() : ColumnField
     {
-        return new ColumnField('calendarmoderator', 'calendarid', $this->getAliasName());
+        return new ColumnField('calendarId', 'CalendarModerator', 'calendarmoderator', 'calendarid', $this->getAliasName());
     }
     public function newEventEmail() : ColumnField
     {
-        return new ColumnField('calendarmoderator', 'neweventemail', $this->getAliasName());
+        return new ColumnField('newEventEmail', 'CalendarModerator', 'calendarmoderator', 'neweventemail', $this->getAliasName());
     }
     public function permissions() : ColumnField
     {
-        return new ColumnField('calendarmoderator', 'permissions', $this->getAliasName());
+        return new ColumnField('permissions', 'CalendarModerator', 'calendarmoderator', 'permissions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class CalendarModeratorAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['calendarmoderatorid', 'userid', 'calendarid', 'neweventemail', 'permissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['calendarmoderatorid'];
     }
     
     public function __listNullableColumns() : array

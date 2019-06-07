@@ -55,63 +55,63 @@ class Infraction implements Table {
     
     public static function infractionId() : ColumnField
     {
-        return new ColumnField('infraction', 'infractionid');
+        return new ColumnField('infractionId', 'Infraction', 'infraction', 'infractionid');
     }
     public static function infractionLevelId() : ColumnField
     {
-        return new ColumnField('infraction', 'infractionlevelid');
+        return new ColumnField('infractionLevelId', 'Infraction', 'infraction', 'infractionlevelid');
     }
     public static function postId() : ColumnField
     {
-        return new ColumnField('infraction', 'postid');
+        return new ColumnField('postId', 'Infraction', 'infraction', 'postid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('infraction', 'userid');
+        return new ColumnField('userId', 'Infraction', 'infraction', 'userid');
     }
     public static function whoAdded() : ColumnField
     {
-        return new ColumnField('infraction', 'whoadded');
+        return new ColumnField('whoAdded', 'Infraction', 'infraction', 'whoadded');
     }
     public static function points() : ColumnField
     {
-        return new ColumnField('infraction', 'points');
+        return new ColumnField('points', 'Infraction', 'infraction', 'points');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('infraction', 'dateline');
+        return new ColumnField('dateLine', 'Infraction', 'infraction', 'dateline');
     }
     public static function note() : ColumnField
     {
-        return new ColumnField('infraction', 'note');
+        return new ColumnField('note', 'Infraction', 'infraction', 'note');
     }
     public static function action() : ColumnField
     {
-        return new ColumnField('infraction', 'action');
+        return new ColumnField('action', 'Infraction', 'infraction', 'action');
     }
     public static function actionDateline() : ColumnField
     {
-        return new ColumnField('infraction', 'actiondateline');
+        return new ColumnField('actionDateline', 'Infraction', 'infraction', 'actiondateline');
     }
     public static function actionUserId() : ColumnField
     {
-        return new ColumnField('infraction', 'actionuserid');
+        return new ColumnField('actionUserId', 'Infraction', 'infraction', 'actionuserid');
     }
     public static function actionReason() : ColumnField
     {
-        return new ColumnField('infraction', 'actionreason');
+        return new ColumnField('actionReason', 'Infraction', 'infraction', 'actionreason');
     }
     public static function expires() : ColumnField
     {
-        return new ColumnField('infraction', 'expires');
+        return new ColumnField('expires', 'Infraction', 'infraction', 'expires');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('infraction', 'threadid');
+        return new ColumnField('threadId', 'Infraction', 'infraction', 'threadid');
     }
     public static function customReason() : ColumnField
     {
-        return new ColumnField('infraction', 'customreason');
+        return new ColumnField('customReason', 'Infraction', 'infraction', 'customreason');
     }
 
     public function getTableName(): string
@@ -122,6 +122,14 @@ class Infraction implements Table {
     public function __listColumns() : array
     {
         return ['infractionid', 'infractionlevelid', 'postid', 'userid', 'whoadded', 'points', 'dateline', 'note', 'action', 'actiondateline', 'actionuserid', 'actionreason', 'expires', 'threadid', 'customreason'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['infractionid'];
     }
     
     public function __listNullableColumns() : array
@@ -170,5 +178,4 @@ class Infraction implements Table {
 			'customreason' => 'customReason'
 		];
     }
-
 }

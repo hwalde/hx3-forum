@@ -9,12 +9,13 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedThreadViewsRecord implements Record {
+class GeneratedThreadViewsRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     public function hasThreadId(): bool
     {

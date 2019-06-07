@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedPtIssueSubscribeRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $issueId int */
-    private $issueId;
+    protected $issueId;
     
     /** @var $subscribeType string */
-    private $subscribeType;
+    protected $subscribeType;
     
     public function hasUserId(): bool
     {

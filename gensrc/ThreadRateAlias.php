@@ -17,23 +17,23 @@ class ThreadRateAlias extends TableAlias {
    
     public function threadRateId() : ColumnField
     {
-        return new ColumnField('threadrate', 'threadrateid', $this->getAliasName());
+        return new ColumnField('threadRateId', 'ThreadRate', 'threadrate', 'threadrateid', $this->getAliasName());
     }
     public function threadId() : ColumnField
     {
-        return new ColumnField('threadrate', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'ThreadRate', 'threadrate', 'threadid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('threadrate', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'ThreadRate', 'threadrate', 'userid', $this->getAliasName());
     }
     public function vote() : ColumnField
     {
-        return new ColumnField('threadrate', 'vote', $this->getAliasName());
+        return new ColumnField('vote', 'ThreadRate', 'threadrate', 'vote', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('threadrate', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'ThreadRate', 'threadrate', 'ipaddress', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class ThreadRateAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['threadrateid', 'threadid', 'userid', 'vote', 'ipaddress'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['threadrateid'];
     }
     
     public function __listNullableColumns() : array

@@ -14,10 +14,10 @@ use POOQ\Record;
 class GeneratedReputationLevelRecord implements Record {
     
     /** @var $reputationLevelId int */
-    private $reputationLevelId;
+    protected $reputationLevelId;
     
     /** @var $minimumReputation int */
-    private $minimumReputation;
+    protected $minimumReputation;
     
     public function hasReputationLevelId(): bool
     {

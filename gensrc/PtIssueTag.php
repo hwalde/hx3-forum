@@ -42,11 +42,11 @@ class PtIssueTag implements Table {
     
     public static function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuetag', 'issueid');
+        return new ColumnField('issueId', 'PtIssueTag', 'pt_issuetag', 'issueid');
     }
     public static function tagId() : ColumnField
     {
-        return new ColumnField('pt_issuetag', 'tagid');
+        return new ColumnField('tagId', 'PtIssueTag', 'pt_issuetag', 'tagid');
     }
 
     public function getTableName(): string
@@ -55,6 +55,14 @@ class PtIssueTag implements Table {
     }
     
     public function __listColumns() : array
+    {
+        return ['issueid', 'tagid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
     {
         return ['issueid', 'tagid'];
     }
@@ -79,5 +87,4 @@ class PtIssueTag implements Table {
 			'tagid' => 'tagId'
 		];
     }
-
 }

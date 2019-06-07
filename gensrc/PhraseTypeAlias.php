@@ -17,23 +17,23 @@ class PhraseTypeAlias extends TableAlias {
    
     public function fieldName() : ColumnField
     {
-        return new ColumnField('phrasetype', 'fieldname', $this->getAliasName());
+        return new ColumnField('fieldName', 'PhraseType', 'phrasetype', 'fieldname', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('phrasetype', 'title', $this->getAliasName());
+        return new ColumnField('title', 'PhraseType', 'phrasetype', 'title', $this->getAliasName());
     }
     public function editRows() : ColumnField
     {
-        return new ColumnField('phrasetype', 'editrows', $this->getAliasName());
+        return new ColumnField('editRows', 'PhraseType', 'phrasetype', 'editrows', $this->getAliasName());
     }
     public function product() : ColumnField
     {
-        return new ColumnField('phrasetype', 'product', $this->getAliasName());
+        return new ColumnField('product', 'PhraseType', 'phrasetype', 'product', $this->getAliasName());
     }
     public function special() : ColumnField
     {
-        return new ColumnField('phrasetype', 'special', $this->getAliasName());
+        return new ColumnField('special', 'PhraseType', 'phrasetype', 'special', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class PhraseTypeAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['fieldname', 'title', 'editrows', 'product', 'special'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['fieldname'];
     }
     
     public function __listNullableColumns() : array

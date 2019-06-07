@@ -14,37 +14,37 @@ use POOQ\Record;
 class GeneratedPtIssueReportRecord implements Record {
     
     /** @var $issueReportId int */
-    private $issueReportId;
+    protected $issueReportId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $description string */
-    private $description;
+    protected $description;
     
     /** @var $public int */
-    private $public;
+    protected $public;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $criteria string */
-    private $criteria;
+    protected $criteria;
     
     /** @var $sortBy string */
-    private $sortBy;
+    protected $sortBy;
     
     /** @var $sortOrder string */
-    private $sortOrder;
+    protected $sortOrder;
     
     /** @var $groupBy string */
-    private $groupBy;
+    protected $groupBy;
     
     /** @var $projectList string */
-    private $projectList;
+    protected $projectList;
     
     /** @var $issueTypeList string */
-    private $issueTypeList;
+    protected $issueTypeList;
     
     public function hasIssueReportId(): bool
     {

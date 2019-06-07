@@ -45,23 +45,23 @@ class PostHash implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('posthash', 'userid');
+        return new ColumnField('userId', 'PostHash', 'posthash', 'userid');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('posthash', 'threadid');
+        return new ColumnField('threadId', 'PostHash', 'posthash', 'threadid');
     }
     public static function postId() : ColumnField
     {
-        return new ColumnField('posthash', 'postid');
+        return new ColumnField('postId', 'PostHash', 'posthash', 'postid');
     }
     public static function dupeHash() : ColumnField
     {
-        return new ColumnField('posthash', 'dupehash');
+        return new ColumnField('dupeHash', 'PostHash', 'posthash', 'dupehash');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('posthash', 'dateline');
+        return new ColumnField('dateLine', 'PostHash', 'posthash', 'dateline');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class PostHash implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'threadid', 'postid', 'dupehash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class PostHash implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

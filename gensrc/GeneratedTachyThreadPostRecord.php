@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedTachyThreadPostRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $lastPost int */
-    private $lastPost;
+    protected $lastPost;
     
     /** @var $lastPoster string */
-    private $lastPoster;
+    protected $lastPoster;
     
     /** @var $lastPostId int */
-    private $lastPostId;
+    protected $lastPostId;
     
     public function hasUserId(): bool
     {

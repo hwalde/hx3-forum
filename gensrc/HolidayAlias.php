@@ -17,19 +17,19 @@ class HolidayAlias extends TableAlias {
    
     public function holidayId() : ColumnField
     {
-        return new ColumnField('holiday', 'holidayid', $this->getAliasName());
+        return new ColumnField('holidayId', 'Holiday', 'holiday', 'holidayid', $this->getAliasName());
     }
     public function recurring() : ColumnField
     {
-        return new ColumnField('holiday', 'recurring', $this->getAliasName());
+        return new ColumnField('recurring', 'Holiday', 'holiday', 'recurring', $this->getAliasName());
     }
     public function recurOption() : ColumnField
     {
-        return new ColumnField('holiday', 'recuroption', $this->getAliasName());
+        return new ColumnField('recurOption', 'Holiday', 'holiday', 'recuroption', $this->getAliasName());
     }
     public function allowSmilies() : ColumnField
     {
-        return new ColumnField('holiday', 'allowsmilies', $this->getAliasName());
+        return new ColumnField('allowSmilies', 'Holiday', 'holiday', 'allowsmilies', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class HolidayAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['holidayid', 'recurring', 'recuroption', 'allowsmilies'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['holidayid'];
     }
     
     public function __listNullableColumns() : array

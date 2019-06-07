@@ -47,31 +47,31 @@ class PtIssueNoteHistory implements Table {
     
     public static function issueNoteHistoryId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'issuenotehistoryid');
+        return new ColumnField('issueNoteHistoryId', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'issuenotehistoryid');
     }
     public static function issueNoteId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'issuenoteid');
+        return new ColumnField('issueNoteId', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'issuenoteid');
     }
     public static function reason() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'reason');
+        return new ColumnField('reason', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'reason');
     }
     public static function pageText() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'pagetext');
+        return new ColumnField('pageText', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'pagetext');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'visible');
+        return new ColumnField('visible', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'visible');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'dateline');
+        return new ColumnField('dateLine', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'dateline');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issuenotehistory', 'userid');
+        return new ColumnField('userId', 'PtIssueNoteHistory', 'pt_issuenotehistory', 'userid');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class PtIssueNoteHistory implements Table {
     public function __listColumns() : array
     {
         return ['issuenotehistoryid', 'issuenoteid', 'reason', 'pagetext', 'visible', 'dateline', 'userid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuenotehistoryid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class PtIssueNoteHistory implements Table {
 			'userid' => 'userId'
 		];
     }
-
 }

@@ -17,11 +17,11 @@ class PtIssueTagAlias extends TableAlias {
    
     public function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuetag', 'issueid', $this->getAliasName());
+        return new ColumnField('issueId', 'PtIssueTag', 'pt_issuetag', 'issueid', $this->getAliasName());
     }
     public function tagId() : ColumnField
     {
-        return new ColumnField('pt_issuetag', 'tagid', $this->getAliasName());
+        return new ColumnField('tagId', 'PtIssueTag', 'pt_issuetag', 'tagid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -30,6 +30,14 @@ class PtIssueTagAlias extends TableAlias {
     }
     
     public function __listColumns() : array
+    {
+        return ['issueid', 'tagid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
     {
         return ['issueid', 'tagid'];
     }

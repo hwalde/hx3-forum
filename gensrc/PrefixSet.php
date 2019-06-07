@@ -42,11 +42,11 @@ class PrefixSet implements Table {
     
     public static function prefixSetId() : ColumnField
     {
-        return new ColumnField('prefixset', 'prefixsetid');
+        return new ColumnField('prefixSetId', 'PrefixSet', 'prefixset', 'prefixsetid');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('prefixset', 'displayorder');
+        return new ColumnField('displayOrder', 'PrefixSet', 'prefixset', 'displayorder');
     }
 
     public function getTableName(): string
@@ -57,6 +57,14 @@ class PrefixSet implements Table {
     public function __listColumns() : array
     {
         return ['prefixsetid', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['prefixsetid'];
     }
     
     public function __listNullableColumns() : array
@@ -79,5 +87,4 @@ class PrefixSet implements Table {
 			'displayorder' => 'displayOrder'
 		];
     }
-
 }

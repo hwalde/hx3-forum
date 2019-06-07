@@ -17,15 +17,15 @@ class ProfileFieldCategoryAlias extends TableAlias {
    
     public function profileFieldCategoryId() : ColumnField
     {
-        return new ColumnField('profilefieldcategory', 'profilefieldcategoryid', $this->getAliasName());
+        return new ColumnField('profileFieldCategoryId', 'ProfileFieldCategory', 'profilefieldcategory', 'profilefieldcategoryid', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('profilefieldcategory', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'ProfileFieldCategory', 'profilefieldcategory', 'displayorder', $this->getAliasName());
     }
     public function location() : ColumnField
     {
-        return new ColumnField('profilefieldcategory', 'location', $this->getAliasName());
+        return new ColumnField('location', 'ProfileFieldCategory', 'profilefieldcategory', 'location', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class ProfileFieldCategoryAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['profilefieldcategoryid', 'displayorder', 'location'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['profilefieldcategoryid'];
     }
     
     public function __listNullableColumns() : array

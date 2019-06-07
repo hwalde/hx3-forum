@@ -113,295 +113,295 @@ class Language implements Table {
     
     public static function languageId() : ColumnField
     {
-        return new ColumnField('language', 'languageid');
+        return new ColumnField('languageId', 'Language', 'language', 'languageid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('language', 'title');
+        return new ColumnField('title', 'Language', 'language', 'title');
     }
     public static function userSelect() : ColumnField
     {
-        return new ColumnField('language', 'userselect');
+        return new ColumnField('userSelect', 'Language', 'language', 'userselect');
     }
     public static function options() : ColumnField
     {
-        return new ColumnField('language', 'options');
+        return new ColumnField('options', 'Language', 'language', 'options');
     }
     public static function languageCode() : ColumnField
     {
-        return new ColumnField('language', 'languagecode');
+        return new ColumnField('languageCode', 'Language', 'language', 'languagecode');
     }
     public static function charset() : ColumnField
     {
-        return new ColumnField('language', 'charset');
+        return new ColumnField('charset', 'Language', 'language', 'charset');
     }
     public static function imagesOverride() : ColumnField
     {
-        return new ColumnField('language', 'imagesoverride');
+        return new ColumnField('imagesOverride', 'Language', 'language', 'imagesoverride');
     }
     public static function dateOverride() : ColumnField
     {
-        return new ColumnField('language', 'dateoverride');
+        return new ColumnField('dateOverride', 'Language', 'language', 'dateoverride');
     }
     public static function timeOverride() : ColumnField
     {
-        return new ColumnField('language', 'timeoverride');
+        return new ColumnField('timeOverride', 'Language', 'language', 'timeoverride');
     }
     public static function registeredDateOverride() : ColumnField
     {
-        return new ColumnField('language', 'registereddateoverride');
+        return new ColumnField('registeredDateOverride', 'Language', 'language', 'registereddateoverride');
     }
     public static function calFormat1Override() : ColumnField
     {
-        return new ColumnField('language', 'calformat1override');
+        return new ColumnField('calFormat1Override', 'Language', 'language', 'calformat1override');
     }
     public static function calFormat2Override() : ColumnField
     {
-        return new ColumnField('language', 'calformat2override');
+        return new ColumnField('calFormat2Override', 'Language', 'language', 'calformat2override');
     }
     public static function logDateOverride() : ColumnField
     {
-        return new ColumnField('language', 'logdateoverride');
+        return new ColumnField('logDateOverride', 'Language', 'language', 'logdateoverride');
     }
     public static function locale() : ColumnField
     {
-        return new ColumnField('language', 'locale');
+        return new ColumnField('locale', 'Language', 'language', 'locale');
     }
     public static function decimalSep() : ColumnField
     {
-        return new ColumnField('language', 'decimalsep');
+        return new ColumnField('decimalSep', 'Language', 'language', 'decimalsep');
     }
     public static function thousandSep() : ColumnField
     {
-        return new ColumnField('language', 'thousandsep');
+        return new ColumnField('thousandSep', 'Language', 'language', 'thousandsep');
     }
     public static function phraseGroupGlobal() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_global');
+        return new ColumnField('phraseGroupGlobal', 'Language', 'language', 'phrasegroup_global');
     }
     public static function phraseGroupOpGlobal() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cpglobal');
+        return new ColumnField('phraseGroupOpGlobal', 'Language', 'language', 'phrasegroup_cpglobal');
     }
     public static function phraseGroupCpPermission() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cppermission');
+        return new ColumnField('phraseGroupCpPermission', 'Language', 'language', 'phrasegroup_cppermission');
     }
     public static function phraseGroupForum() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_forum');
+        return new ColumnField('phraseGroupForum', 'Language', 'language', 'phrasegroup_forum');
     }
     public static function phraseGroupCalendar() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_calendar');
+        return new ColumnField('phraseGroupCalendar', 'Language', 'language', 'phrasegroup_calendar');
     }
     public static function phraseGroupAttachmentImage() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_attachment_image');
+        return new ColumnField('phraseGroupAttachmentImage', 'Language', 'language', 'phrasegroup_attachment_image');
     }
     public static function phrasegGroupStyle() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_style');
+        return new ColumnField('phrasegGroupStyle', 'Language', 'language', 'phrasegroup_style');
     }
     public static function phraseGroupLogging() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_logging');
+        return new ColumnField('phraseGroupLogging', 'Language', 'language', 'phrasegroup_logging');
     }
     public static function phraseGroupCpHome() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cphome');
+        return new ColumnField('phraseGroupCpHome', 'Language', 'language', 'phrasegroup_cphome');
     }
     public static function phraseGroupPromotion() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_promotion');
+        return new ColumnField('phraseGroupPromotion', 'Language', 'language', 'phrasegroup_promotion');
     }
     public static function phraseGroupUser() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_user');
+        return new ColumnField('phraseGroupUser', 'Language', 'language', 'phrasegroup_user');
     }
     public static function phraseGroupHelpFaq() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_help_faq');
+        return new ColumnField('phraseGroupHelpFaq', 'Language', 'language', 'phrasegroup_help_faq');
     }
     public static function phraseGroupSql() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_sql');
+        return new ColumnField('phraseGroupSql', 'Language', 'language', 'phrasegroup_sql');
     }
     public static function phraseGroupSubscription() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_subscription');
+        return new ColumnField('phraseGroupSubscription', 'Language', 'language', 'phrasegroup_subscription');
     }
     public static function phraseGroupLanguage() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_language');
+        return new ColumnField('phraseGroupLanguage', 'Language', 'language', 'phrasegroup_language');
     }
     public static function phraseGroupBBCode() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_bbcode');
+        return new ColumnField('phraseGroupBBCode', 'Language', 'language', 'phrasegroup_bbcode');
     }
     public static function phraseGroupStats() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_stats');
+        return new ColumnField('phraseGroupStats', 'Language', 'language', 'phrasegroup_stats');
     }
     public static function phraseGroupDiagnostic() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_diagnostic');
+        return new ColumnField('phraseGroupDiagnostic', 'Language', 'language', 'phrasegroup_diagnostic');
     }
     public static function phraseGroupMaintenance() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_maintenance');
+        return new ColumnField('phraseGroupMaintenance', 'Language', 'language', 'phrasegroup_maintenance');
     }
     public static function phraseGroupProfileField() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_profilefield');
+        return new ColumnField('phraseGroupProfileField', 'Language', 'language', 'phrasegroup_profilefield');
     }
     public static function phraseGroupThread() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_thread');
+        return new ColumnField('phraseGroupThread', 'Language', 'language', 'phrasegroup_thread');
     }
     public static function phraseGroupTimeZone() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_timezone');
+        return new ColumnField('phraseGroupTimeZone', 'Language', 'language', 'phrasegroup_timezone');
     }
     public static function phraseGroupBanning() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_banning');
+        return new ColumnField('phraseGroupBanning', 'Language', 'language', 'phrasegroup_banning');
     }
     public static function phraseGroupReputation() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_reputation');
+        return new ColumnField('phraseGroupReputation', 'Language', 'language', 'phrasegroup_reputation');
     }
     public static function phraseGroupWol() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_wol');
+        return new ColumnField('phraseGroupWol', 'Language', 'language', 'phrasegroup_wol');
     }
     public static function phraseGroupThreadManage() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_threadmanage');
+        return new ColumnField('phraseGroupThreadManage', 'Language', 'language', 'phrasegroup_threadmanage');
     }
     public static function phraseGroupPm() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_pm');
+        return new ColumnField('phraseGroupPm', 'Language', 'language', 'phrasegroup_pm');
     }
     public static function phraseGroupCpUser() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cpuser');
+        return new ColumnField('phraseGroupCpUser', 'Language', 'language', 'phrasegroup_cpuser');
     }
     public static function phraseGroupAccessMask() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_accessmask');
+        return new ColumnField('phraseGroupAccessMask', 'Language', 'language', 'phrasegroup_accessmask');
     }
     public static function phraseGroupCron() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cron');
+        return new ColumnField('phraseGroupCron', 'Language', 'language', 'phrasegroup_cron');
     }
     public static function phrasegGoupModerator() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_moderator');
+        return new ColumnField('phrasegGoupModerator', 'Language', 'language', 'phrasegroup_moderator');
     }
     public static function phraseGroupCpOption() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cpoption');
+        return new ColumnField('phraseGroupCpOption', 'Language', 'language', 'phrasegroup_cpoption');
     }
     public static function phraseGroupCpRank() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cprank');
+        return new ColumnField('phraseGroupCpRank', 'Language', 'language', 'phrasegroup_cprank');
     }
     public static function phraseGroupCpUserGroup() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cpusergroup');
+        return new ColumnField('phraseGroupCpUserGroup', 'Language', 'language', 'phrasegroup_cpusergroup');
     }
     public static function phraseGroupHoliday() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_holiday');
+        return new ColumnField('phraseGroupHoliday', 'Language', 'language', 'phrasegroup_holiday');
     }
     public static function phraseGroupPosting() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_posting');
+        return new ColumnField('phraseGroupPosting', 'Language', 'language', 'phrasegroup_posting');
     }
     public static function phraseGroupPoll() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_poll');
+        return new ColumnField('phraseGroupPoll', 'Language', 'language', 'phrasegroup_poll');
     }
     public static function phraseGroupFrontHelp() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_fronthelp');
+        return new ColumnField('phraseGroupFrontHelp', 'Language', 'language', 'phrasegroup_fronthelp');
     }
     public static function phraseGroupRegister() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_register');
+        return new ColumnField('phraseGroupRegister', 'Language', 'language', 'phrasegroup_register');
     }
     public static function phraseGroupSearch() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_search');
+        return new ColumnField('phraseGroupSearch', 'Language', 'language', 'phrasegroup_search');
     }
     public static function phraseGroupShowThread() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_showthread');
+        return new ColumnField('phraseGroupShowThread', 'Language', 'language', 'phrasegroup_showthread');
     }
     public static function phraseGroupPostBit() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_postbit');
+        return new ColumnField('phraseGroupPostBit', 'Language', 'language', 'phrasegroup_postbit');
     }
     public static function phraseGroupForumDisplay() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_forumdisplay');
+        return new ColumnField('phraseGroupForumDisplay', 'Language', 'language', 'phrasegroup_forumdisplay');
     }
     public static function phraseGroupMessaging() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_messaging');
+        return new ColumnField('phraseGroupMessaging', 'Language', 'language', 'phrasegroup_messaging');
     }
     public static function phraseGroupInlineMod() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_inlinemod');
+        return new ColumnField('phraseGroupInlineMod', 'Language', 'language', 'phrasegroup_inlinemod');
     }
     public static function phraseGroupPlugins() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_plugins');
+        return new ColumnField('phraseGroupPlugins', 'Language', 'language', 'phrasegroup_plugins');
     }
     public static function phraseGroupCProfileField() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_cprofilefield');
+        return new ColumnField('phraseGroupCProfileField', 'Language', 'language', 'phrasegroup_cprofilefield');
     }
     public static function phraseGroupReputationLevel() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_reputationlevel');
+        return new ColumnField('phraseGroupReputationLevel', 'Language', 'language', 'phrasegroup_reputationlevel');
     }
     public static function phraseGroupInfraction() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_infraction');
+        return new ColumnField('phraseGroupInfraction', 'Language', 'language', 'phrasegroup_infraction');
     }
     public static function phraseGroupInfractionLevel() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_infractionlevel');
+        return new ColumnField('phraseGroupInfractionLevel', 'Language', 'language', 'phrasegroup_infractionlevel');
     }
     public static function phraseGroupPrefix() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_prefix');
+        return new ColumnField('phraseGroupPrefix', 'Language', 'language', 'phrasegroup_prefix');
     }
     public static function phraseGroupSocialGroups() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_socialgroups');
+        return new ColumnField('phraseGroupSocialGroups', 'Language', 'language', 'phrasegroup_socialgroups');
     }
     public static function phraseGroupPrefixAdmin() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_prefixadmin');
+        return new ColumnField('phraseGroupPrefixAdmin', 'Language', 'language', 'phrasegroup_prefixadmin');
     }
     public static function phraseGroupNotice() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_notice');
+        return new ColumnField('phraseGroupNotice', 'Language', 'language', 'phrasegroup_notice');
     }
     public static function phraseGroupAlbum() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_album');
+        return new ColumnField('phraseGroupAlbum', 'Language', 'language', 'phrasegroup_album');
     }
     public static function phraseGroupProjectTools() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_projecttools');
+        return new ColumnField('phraseGroupProjectTools', 'Language', 'language', 'phrasegroup_projecttools');
     }
     public static function phraseGroupProjectToolsAdmin() : ColumnField
     {
-        return new ColumnField('language', 'phrasegroup_projecttoolsadmin');
+        return new ColumnField('phraseGroupProjectToolsAdmin', 'Language', 'language', 'phrasegroup_projecttoolsadmin');
     }
 
     public function getTableName(): string
@@ -412,6 +412,14 @@ class Language implements Table {
     public function __listColumns() : array
     {
         return ['languageid', 'title', 'userselect', 'options', 'languagecode', 'charset', 'imagesoverride', 'dateoverride', 'timeoverride', 'registereddateoverride', 'calformat1override', 'calformat2override', 'logdateoverride', 'locale', 'decimalsep', 'thousandsep', 'phrasegroup_global', 'phrasegroup_cpglobal', 'phrasegroup_cppermission', 'phrasegroup_forum', 'phrasegroup_calendar', 'phrasegroup_attachment_image', 'phrasegroup_style', 'phrasegroup_logging', 'phrasegroup_cphome', 'phrasegroup_promotion', 'phrasegroup_user', 'phrasegroup_help_faq', 'phrasegroup_sql', 'phrasegroup_subscription', 'phrasegroup_language', 'phrasegroup_bbcode', 'phrasegroup_stats', 'phrasegroup_diagnostic', 'phrasegroup_maintenance', 'phrasegroup_profilefield', 'phrasegroup_thread', 'phrasegroup_timezone', 'phrasegroup_banning', 'phrasegroup_reputation', 'phrasegroup_wol', 'phrasegroup_threadmanage', 'phrasegroup_pm', 'phrasegroup_cpuser', 'phrasegroup_accessmask', 'phrasegroup_cron', 'phrasegroup_moderator', 'phrasegroup_cpoption', 'phrasegroup_cprank', 'phrasegroup_cpusergroup', 'phrasegroup_holiday', 'phrasegroup_posting', 'phrasegroup_poll', 'phrasegroup_fronthelp', 'phrasegroup_register', 'phrasegroup_search', 'phrasegroup_showthread', 'phrasegroup_postbit', 'phrasegroup_forumdisplay', 'phrasegroup_messaging', 'phrasegroup_inlinemod', 'phrasegroup_plugins', 'phrasegroup_cprofilefield', 'phrasegroup_reputationlevel', 'phrasegroup_infraction', 'phrasegroup_infractionlevel', 'phrasegroup_prefix', 'phrasegroup_socialgroups', 'phrasegroup_prefixadmin', 'phrasegroup_notice', 'phrasegroup_album', 'phrasegroup_projecttools', 'phrasegroup_projecttoolsadmin'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['languageid'];
     }
     
     public function __listNullableColumns() : array
@@ -576,5 +584,4 @@ class Language implements Table {
 			'phrasegroup_projecttoolsadmin' => 'phraseGroupProjectToolsAdmin'
 		];
     }
-
 }

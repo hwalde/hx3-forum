@@ -17,59 +17,59 @@ class CalendarAlias extends TableAlias {
    
     public function calendarId() : ColumnField
     {
-        return new ColumnField('calendar', 'calendarid', $this->getAliasName());
+        return new ColumnField('calendarId', 'Calendar', 'calendar', 'calendarid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('calendar', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Calendar', 'calendar', 'title', $this->getAliasName());
     }
     public function description() : ColumnField
     {
-        return new ColumnField('calendar', 'description', $this->getAliasName());
+        return new ColumnField('description', 'Calendar', 'calendar', 'description', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('calendar', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'Calendar', 'calendar', 'displayorder', $this->getAliasName());
     }
     public function newEventEmail() : ColumnField
     {
-        return new ColumnField('calendar', 'neweventemail', $this->getAliasName());
+        return new ColumnField('newEventEmail', 'Calendar', 'calendar', 'neweventemail', $this->getAliasName());
     }
     public function moderateNew() : ColumnField
     {
-        return new ColumnField('calendar', 'moderatenew', $this->getAliasName());
+        return new ColumnField('moderateNew', 'Calendar', 'calendar', 'moderatenew', $this->getAliasName());
     }
     public function startOfWeek() : ColumnField
     {
-        return new ColumnField('calendar', 'startofweek', $this->getAliasName());
+        return new ColumnField('startOfWeek', 'Calendar', 'calendar', 'startofweek', $this->getAliasName());
     }
     public function options() : ColumnField
     {
-        return new ColumnField('calendar', 'options', $this->getAliasName());
+        return new ColumnField('options', 'Calendar', 'calendar', 'options', $this->getAliasName());
     }
     public function cutOff() : ColumnField
     {
-        return new ColumnField('calendar', 'cutoff', $this->getAliasName());
+        return new ColumnField('cutOff', 'Calendar', 'calendar', 'cutoff', $this->getAliasName());
     }
     public function eventCount() : ColumnField
     {
-        return new ColumnField('calendar', 'eventcount', $this->getAliasName());
+        return new ColumnField('eventCount', 'Calendar', 'calendar', 'eventcount', $this->getAliasName());
     }
     public function birthdayCount() : ColumnField
     {
-        return new ColumnField('calendar', 'birthdaycount', $this->getAliasName());
+        return new ColumnField('birthdayCount', 'Calendar', 'calendar', 'birthdaycount', $this->getAliasName());
     }
     public function startYear() : ColumnField
     {
-        return new ColumnField('calendar', 'startyear', $this->getAliasName());
+        return new ColumnField('startYear', 'Calendar', 'calendar', 'startyear', $this->getAliasName());
     }
     public function endYear() : ColumnField
     {
-        return new ColumnField('calendar', 'endyear', $this->getAliasName());
+        return new ColumnField('endYear', 'Calendar', 'calendar', 'endyear', $this->getAliasName());
     }
     public function holidays() : ColumnField
     {
-        return new ColumnField('calendar', 'holidays', $this->getAliasName());
+        return new ColumnField('holidays', 'Calendar', 'calendar', 'holidays', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -80,6 +80,14 @@ class CalendarAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['calendarid', 'title', 'description', 'displayorder', 'neweventemail', 'moderatenew', 'startofweek', 'options', 'cutoff', 'eventcount', 'birthdaycount', 'startyear', 'endyear', 'holidays'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['calendarid'];
     }
     
     public function __listNullableColumns() : array

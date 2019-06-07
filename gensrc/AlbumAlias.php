@@ -17,43 +17,43 @@ class AlbumAlias extends TableAlias {
    
     public function albumId() : ColumnField
     {
-        return new ColumnField('album', 'albumid', $this->getAliasName());
+        return new ColumnField('albumId', 'Album', 'album', 'albumid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('album', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Album', 'album', 'userid', $this->getAliasName());
     }
     public function createDate() : ColumnField
     {
-        return new ColumnField('album', 'createdate', $this->getAliasName());
+        return new ColumnField('createDate', 'Album', 'album', 'createdate', $this->getAliasName());
     }
     public function lastPictureDate() : ColumnField
     {
-        return new ColumnField('album', 'lastpicturedate', $this->getAliasName());
+        return new ColumnField('lastPictureDate', 'Album', 'album', 'lastpicturedate', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('album', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'Album', 'album', 'visible', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('album', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Album', 'album', 'title', $this->getAliasName());
     }
     public function description() : ColumnField
     {
-        return new ColumnField('album', 'description', $this->getAliasName());
+        return new ColumnField('description', 'Album', 'album', 'description', $this->getAliasName());
     }
     public function coverPictureId() : ColumnField
     {
-        return new ColumnField('album', 'coverpictureid', $this->getAliasName());
+        return new ColumnField('coverPictureId', 'Album', 'album', 'coverpictureid', $this->getAliasName());
     }
     public function state() : ColumnField
     {
-        return new ColumnField('album', 'state', $this->getAliasName());
+        return new ColumnField('state', 'Album', 'album', 'state', $this->getAliasName());
     }
     public function moderation() : ColumnField
     {
-        return new ColumnField('album', 'moderation', $this->getAliasName());
+        return new ColumnField('moderation', 'Album', 'album', 'moderation', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -64,6 +64,14 @@ class AlbumAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['albumid', 'userid', 'createdate', 'lastpicturedate', 'visible', 'title', 'description', 'coverpictureid', 'state', 'moderation'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['albumid'];
     }
     
     public function __listNullableColumns() : array

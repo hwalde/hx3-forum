@@ -17,27 +17,27 @@ class PollVoteAlias extends TableAlias {
    
     public function pollVoteId() : ColumnField
     {
-        return new ColumnField('pollvote', 'pollvoteid', $this->getAliasName());
+        return new ColumnField('pollVoteId', 'PollVote', 'pollvote', 'pollvoteid', $this->getAliasName());
     }
     public function pollId() : ColumnField
     {
-        return new ColumnField('pollvote', 'pollid', $this->getAliasName());
+        return new ColumnField('pollId', 'PollVote', 'pollvote', 'pollid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pollvote', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PollVote', 'pollvote', 'userid', $this->getAliasName());
     }
     public function voteDate() : ColumnField
     {
-        return new ColumnField('pollvote', 'votedate', $this->getAliasName());
+        return new ColumnField('voteDate', 'PollVote', 'pollvote', 'votedate', $this->getAliasName());
     }
     public function voteOption() : ColumnField
     {
-        return new ColumnField('pollvote', 'voteoption', $this->getAliasName());
+        return new ColumnField('voteOption', 'PollVote', 'pollvote', 'voteoption', $this->getAliasName());
     }
     public function voteType() : ColumnField
     {
-        return new ColumnField('pollvote', 'votetype', $this->getAliasName());
+        return new ColumnField('voteType', 'PollVote', 'pollvote', 'votetype', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class PollVoteAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['pollvoteid', 'pollid', 'userid', 'votedate', 'voteoption', 'votetype'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pollvoteid'];
     }
     
     public function __listNullableColumns() : array

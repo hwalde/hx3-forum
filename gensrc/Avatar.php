@@ -46,27 +46,27 @@ class Avatar implements Table {
     
     public static function avatarId() : ColumnField
     {
-        return new ColumnField('avatar', 'avatarid');
+        return new ColumnField('avatarId', 'Avatar', 'avatar', 'avatarid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('avatar', 'title');
+        return new ColumnField('title', 'Avatar', 'avatar', 'title');
     }
     public static function minimumPosts() : ColumnField
     {
-        return new ColumnField('avatar', 'minimumposts');
+        return new ColumnField('minimumPosts', 'Avatar', 'avatar', 'minimumposts');
     }
     public static function avatarPath() : ColumnField
     {
-        return new ColumnField('avatar', 'avatarpath');
+        return new ColumnField('avatarPath', 'Avatar', 'avatar', 'avatarpath');
     }
     public static function imageCategoryId() : ColumnField
     {
-        return new ColumnField('avatar', 'imagecategoryid');
+        return new ColumnField('imageCategoryId', 'Avatar', 'avatar', 'imagecategoryid');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('avatar', 'displayorder');
+        return new ColumnField('displayOrder', 'Avatar', 'avatar', 'displayorder');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class Avatar implements Table {
     public function __listColumns() : array
     {
         return ['avatarid', 'title', 'minimumposts', 'avatarpath', 'imagecategoryid', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['avatarid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class Avatar implements Table {
 			'displayorder' => 'displayOrder'
 		];
     }
-
 }

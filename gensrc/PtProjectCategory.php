@@ -44,19 +44,19 @@ class PtProjectCategory implements Table {
     
     public static function projectCategoryId() : ColumnField
     {
-        return new ColumnField('pt_projectcategory', 'projectcategoryid');
+        return new ColumnField('projectCategoryId', 'PtProjectCategory', 'pt_projectcategory', 'projectcategoryid');
     }
     public static function projectId() : ColumnField
     {
-        return new ColumnField('pt_projectcategory', 'projectid');
+        return new ColumnField('projectId', 'PtProjectCategory', 'pt_projectcategory', 'projectid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('pt_projectcategory', 'title');
+        return new ColumnField('title', 'PtProjectCategory', 'pt_projectcategory', 'title');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_projectcategory', 'displayorder');
+        return new ColumnField('displayOrder', 'PtProjectCategory', 'pt_projectcategory', 'displayorder');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class PtProjectCategory implements Table {
     public function __listColumns() : array
     {
         return ['projectcategoryid', 'projectid', 'title', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['projectcategoryid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class PtProjectCategory implements Table {
 			'displayorder' => 'displayOrder'
 		];
     }
-
 }

@@ -17,23 +17,23 @@ class ExternalCacheAlias extends TableAlias {
    
     public function cacheHash() : ColumnField
     {
-        return new ColumnField('externalcache', 'cachehash', $this->getAliasName());
+        return new ColumnField('cacheHash', 'ExternalCache', 'externalcache', 'cachehash', $this->getAliasName());
     }
     public function text() : ColumnField
     {
-        return new ColumnField('externalcache', 'text', $this->getAliasName());
+        return new ColumnField('text', 'ExternalCache', 'externalcache', 'text', $this->getAliasName());
     }
     public function headers() : ColumnField
     {
-        return new ColumnField('externalcache', 'headers', $this->getAliasName());
+        return new ColumnField('headers', 'ExternalCache', 'externalcache', 'headers', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('externalcache', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'ExternalCache', 'externalcache', 'dateline', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('externalcache', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'ExternalCache', 'externalcache', 'forumid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class ExternalCacheAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['cachehash', 'text', 'headers', 'dateline', 'forumid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['cachehash'];
     }
     
     public function __listNullableColumns() : array

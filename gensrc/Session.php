@@ -56,67 +56,67 @@ class Session implements Table {
     
     public static function sessionHash() : ColumnField
     {
-        return new ColumnField('session', 'sessionhash');
+        return new ColumnField('sessionHash', 'Session', 'session', 'sessionhash');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('session', 'userid');
+        return new ColumnField('userId', 'Session', 'session', 'userid');
     }
     public static function host() : ColumnField
     {
-        return new ColumnField('session', 'host');
+        return new ColumnField('host', 'Session', 'session', 'host');
     }
     public static function idHash() : ColumnField
     {
-        return new ColumnField('session', 'idhash');
+        return new ColumnField('idHash', 'Session', 'session', 'idhash');
     }
     public static function lastActivity() : ColumnField
     {
-        return new ColumnField('session', 'lastactivity');
+        return new ColumnField('lastActivity', 'Session', 'session', 'lastactivity');
     }
     public static function location() : ColumnField
     {
-        return new ColumnField('session', 'location');
+        return new ColumnField('location', 'Session', 'session', 'location');
     }
     public static function userAgent() : ColumnField
     {
-        return new ColumnField('session', 'useragent');
+        return new ColumnField('userAgent', 'Session', 'session', 'useragent');
     }
     public static function styleId() : ColumnField
     {
-        return new ColumnField('session', 'styleid');
+        return new ColumnField('styleId', 'Session', 'session', 'styleid');
     }
     public static function loggedIn() : ColumnField
     {
-        return new ColumnField('session', 'loggedin');
+        return new ColumnField('loggedIn', 'Session', 'session', 'loggedin');
     }
     public static function inForum() : ColumnField
     {
-        return new ColumnField('session', 'inforum');
+        return new ColumnField('inForum', 'Session', 'session', 'inforum');
     }
     public static function inThread() : ColumnField
     {
-        return new ColumnField('session', 'inthread');
+        return new ColumnField('inThread', 'Session', 'session', 'inthread');
     }
     public static function inCalendar() : ColumnField
     {
-        return new ColumnField('session', 'incalendar');
+        return new ColumnField('inCalendar', 'Session', 'session', 'incalendar');
     }
     public static function badLocation() : ColumnField
     {
-        return new ColumnField('session', 'badlocation');
+        return new ColumnField('badLocation', 'Session', 'session', 'badlocation');
     }
     public static function bypass() : ColumnField
     {
-        return new ColumnField('session', 'bypass');
+        return new ColumnField('bypass', 'Session', 'session', 'bypass');
     }
     public static function languageId() : ColumnField
     {
-        return new ColumnField('session', 'languageid');
+        return new ColumnField('languageId', 'Session', 'session', 'languageid');
     }
     public static function profileUpdate() : ColumnField
     {
-        return new ColumnField('session', 'profileupdate');
+        return new ColumnField('profileUpdate', 'Session', 'session', 'profileupdate');
     }
 
     public function getTableName(): string
@@ -127,6 +127,14 @@ class Session implements Table {
     public function __listColumns() : array
     {
         return ['sessionhash', 'userid', 'host', 'idhash', 'lastactivity', 'location', 'useragent', 'styleid', 'loggedin', 'inforum', 'inthread', 'incalendar', 'badlocation', 'bypass', 'languageid', 'profileupdate'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['sessionhash'];
     }
     
     public function __listNullableColumns() : array
@@ -177,5 +185,4 @@ class Session implements Table {
 			'profileupdate' => 'profileUpdate'
 		];
     }
-
 }

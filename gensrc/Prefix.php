@@ -43,15 +43,15 @@ class Prefix implements Table {
     
     public static function prefixId() : ColumnField
     {
-        return new ColumnField('prefix', 'prefixid');
+        return new ColumnField('prefixId', 'Prefix', 'prefix', 'prefixid');
     }
     public static function prefixSetId() : ColumnField
     {
-        return new ColumnField('prefix', 'prefixsetid');
+        return new ColumnField('prefixSetId', 'Prefix', 'prefix', 'prefixsetid');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('prefix', 'displayorder');
+        return new ColumnField('displayOrder', 'Prefix', 'prefix', 'displayorder');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class Prefix implements Table {
     public function __listColumns() : array
     {
         return ['prefixid', 'prefixsetid', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['prefixid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class Prefix implements Table {
 			'displayorder' => 'displayOrder'
 		];
     }
-
 }

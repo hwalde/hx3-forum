@@ -17,27 +17,27 @@ class SubscribeThreadAlias extends TableAlias {
    
     public function subscribeThreadId() : ColumnField
     {
-        return new ColumnField('subscribethread', 'subscribethreadid', $this->getAliasName());
+        return new ColumnField('subscribeThreadId', 'SubscribeThread', 'subscribethread', 'subscribethreadid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('subscribethread', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'SubscribeThread', 'subscribethread', 'userid', $this->getAliasName());
     }
     public function threadId() : ColumnField
     {
-        return new ColumnField('subscribethread', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'SubscribeThread', 'subscribethread', 'threadid', $this->getAliasName());
     }
     public function emailUpdate() : ColumnField
     {
-        return new ColumnField('subscribethread', 'emailupdate', $this->getAliasName());
+        return new ColumnField('emailUpdate', 'SubscribeThread', 'subscribethread', 'emailupdate', $this->getAliasName());
     }
     public function folderId() : ColumnField
     {
-        return new ColumnField('subscribethread', 'folderid', $this->getAliasName());
+        return new ColumnField('folderId', 'SubscribeThread', 'subscribethread', 'folderid', $this->getAliasName());
     }
     public function canView() : ColumnField
     {
-        return new ColumnField('subscribethread', 'canview', $this->getAliasName());
+        return new ColumnField('canView', 'SubscribeThread', 'subscribethread', 'canview', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class SubscribeThreadAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['subscribethreadid', 'userid', 'threadid', 'emailupdate', 'folderid', 'canview'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscribethreadid'];
     }
     
     public function __listNullableColumns() : array

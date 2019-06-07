@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedProfileFieldCategoryRecord implements Record {
     
     /** @var $profileFieldCategoryId int */
-    private $profileFieldCategoryId;
+    protected $profileFieldCategoryId;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $location string */
-    private $location;
+    protected $location;
     
     public function hasProfileFieldCategoryId(): bool
     {

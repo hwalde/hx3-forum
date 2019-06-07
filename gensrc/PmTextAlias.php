@@ -17,47 +17,47 @@ class PmTextAlias extends TableAlias {
    
     public function pmTextId() : ColumnField
     {
-        return new ColumnField('pmtext', 'pmtextid', $this->getAliasName());
+        return new ColumnField('pmTextId', 'PmText', 'pmtext', 'pmtextid', $this->getAliasName());
     }
     public function fromUserId() : ColumnField
     {
-        return new ColumnField('pmtext', 'fromuserid', $this->getAliasName());
+        return new ColumnField('fromUserId', 'PmText', 'pmtext', 'fromuserid', $this->getAliasName());
     }
     public function fromUserName() : ColumnField
     {
-        return new ColumnField('pmtext', 'fromusername', $this->getAliasName());
+        return new ColumnField('fromUserName', 'PmText', 'pmtext', 'fromusername', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('pmtext', 'title', $this->getAliasName());
+        return new ColumnField('title', 'PmText', 'pmtext', 'title', $this->getAliasName());
     }
     public function message() : ColumnField
     {
-        return new ColumnField('pmtext', 'message', $this->getAliasName());
+        return new ColumnField('message', 'PmText', 'pmtext', 'message', $this->getAliasName());
     }
     public function toUserArray() : ColumnField
     {
-        return new ColumnField('pmtext', 'touserarray', $this->getAliasName());
+        return new ColumnField('toUserArray', 'PmText', 'pmtext', 'touserarray', $this->getAliasName());
     }
     public function iconId() : ColumnField
     {
-        return new ColumnField('pmtext', 'iconid', $this->getAliasName());
+        return new ColumnField('iconId', 'PmText', 'pmtext', 'iconid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('pmtext', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PmText', 'pmtext', 'dateline', $this->getAliasName());
     }
     public function showSignature() : ColumnField
     {
-        return new ColumnField('pmtext', 'showsignature', $this->getAliasName());
+        return new ColumnField('showSignature', 'PmText', 'pmtext', 'showsignature', $this->getAliasName());
     }
     public function allowSmilie() : ColumnField
     {
-        return new ColumnField('pmtext', 'allowsmilie', $this->getAliasName());
+        return new ColumnField('allowSmilie', 'PmText', 'pmtext', 'allowsmilie', $this->getAliasName());
     }
     public function importPmId() : ColumnField
     {
-        return new ColumnField('pmtext', 'importpmid', $this->getAliasName());
+        return new ColumnField('importPmId', 'PmText', 'pmtext', 'importpmid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -68,6 +68,14 @@ class PmTextAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['pmtextid', 'fromuserid', 'fromusername', 'title', 'message', 'touserarray', 'iconid', 'dateline', 'showsignature', 'allowsmilie', 'importpmid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pmtextid'];
     }
     
     public function __listNullableColumns() : array

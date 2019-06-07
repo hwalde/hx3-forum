@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedProfileVisitorRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $visitorId int */
-    private $visitorId;
+    protected $visitorId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $visible int */
-    private $visible;
+    protected $visible;
     
     public function hasUserId(): bool
     {

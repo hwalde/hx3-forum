@@ -17,15 +17,15 @@ class PrefixAlias extends TableAlias {
    
     public function prefixId() : ColumnField
     {
-        return new ColumnField('prefix', 'prefixid', $this->getAliasName());
+        return new ColumnField('prefixId', 'Prefix', 'prefix', 'prefixid', $this->getAliasName());
     }
     public function prefixSetId() : ColumnField
     {
-        return new ColumnField('prefix', 'prefixsetid', $this->getAliasName());
+        return new ColumnField('prefixSetId', 'Prefix', 'prefix', 'prefixsetid', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('prefix', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'Prefix', 'prefix', 'displayorder', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class PrefixAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['prefixid', 'prefixsetid', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['prefixid'];
     }
     
     public function __listNullableColumns() : array

@@ -17,11 +17,11 @@ class WordAlias extends TableAlias {
    
     public function wordId() : ColumnField
     {
-        return new ColumnField('word', 'wordid', $this->getAliasName());
+        return new ColumnField('wordId', 'Word', 'word', 'wordid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('word', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Word', 'word', 'title', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -32,6 +32,14 @@ class WordAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['wordid', 'title'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['wordid'];
     }
     
     public function __listNullableColumns() : array

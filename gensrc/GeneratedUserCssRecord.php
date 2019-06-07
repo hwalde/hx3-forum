@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedUserCssRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $selector string */
-    private $selector;
+    protected $selector;
     
     /** @var $property string */
-    private $property;
+    protected $property;
     
     /** @var $value string */
-    private $value;
+    protected $value;
     
     public function hasUserId(): bool
     {

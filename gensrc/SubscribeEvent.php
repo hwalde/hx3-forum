@@ -45,23 +45,23 @@ class SubscribeEvent implements Table {
     
     public static function subscribeEventId() : ColumnField
     {
-        return new ColumnField('subscribeevent', 'subscribeeventid');
+        return new ColumnField('subscribeEventId', 'SubscribeEvent', 'subscribeevent', 'subscribeeventid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('subscribeevent', 'userid');
+        return new ColumnField('userId', 'SubscribeEvent', 'subscribeevent', 'userid');
     }
     public static function eventId() : ColumnField
     {
-        return new ColumnField('subscribeevent', 'eventid');
+        return new ColumnField('eventId', 'SubscribeEvent', 'subscribeevent', 'eventid');
     }
     public static function lastReminder() : ColumnField
     {
-        return new ColumnField('subscribeevent', 'lastreminder');
+        return new ColumnField('lastReminder', 'SubscribeEvent', 'subscribeevent', 'lastreminder');
     }
     public static function reminder() : ColumnField
     {
-        return new ColumnField('subscribeevent', 'reminder');
+        return new ColumnField('reminder', 'SubscribeEvent', 'subscribeevent', 'reminder');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class SubscribeEvent implements Table {
     public function __listColumns() : array
     {
         return ['subscribeeventid', 'userid', 'eventid', 'lastreminder', 'reminder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscribeeventid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class SubscribeEvent implements Table {
 			'reminder' => 'reminder'
 		];
     }
-
 }

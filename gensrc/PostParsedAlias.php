@@ -17,27 +17,27 @@ class PostParsedAlias extends TableAlias {
    
     public function postId() : ColumnField
     {
-        return new ColumnField('postparsed', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'PostParsed', 'postparsed', 'postid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('postparsed', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PostParsed', 'postparsed', 'dateline', $this->getAliasName());
     }
     public function hasImages() : ColumnField
     {
-        return new ColumnField('postparsed', 'hasimages', $this->getAliasName());
+        return new ColumnField('hasImages', 'PostParsed', 'postparsed', 'hasimages', $this->getAliasName());
     }
     public function pageTextHtml() : ColumnField
     {
-        return new ColumnField('postparsed', 'pagetext_html', $this->getAliasName());
+        return new ColumnField('pageTextHtml', 'PostParsed', 'postparsed', 'pagetext_html', $this->getAliasName());
     }
     public function styleId() : ColumnField
     {
-        return new ColumnField('postparsed', 'styleid', $this->getAliasName());
+        return new ColumnField('styleId', 'PostParsed', 'postparsed', 'styleid', $this->getAliasName());
     }
     public function languageId() : ColumnField
     {
-        return new ColumnField('postparsed', 'languageid', $this->getAliasName());
+        return new ColumnField('languageId', 'PostParsed', 'postparsed', 'languageid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class PostParsedAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['postid', 'dateline', 'hasimages', 'pagetext_html', 'styleid', 'languageid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid', 'styleid', 'languageid'];
     }
     
     public function __listNullableColumns() : array

@@ -43,15 +43,15 @@ class PtIssueAssign implements Table {
     
     public static function issueId() : ColumnField
     {
-        return new ColumnField('pt_issueassign', 'issueid');
+        return new ColumnField('issueId', 'PtIssueAssign', 'pt_issueassign', 'issueid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issueassign', 'userid');
+        return new ColumnField('userId', 'PtIssueAssign', 'pt_issueassign', 'userid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issueassign', 'dateline');
+        return new ColumnField('dateLine', 'PtIssueAssign', 'pt_issueassign', 'dateline');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class PtIssueAssign implements Table {
     public function __listColumns() : array
     {
         return ['issueid', 'userid', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issueid', 'userid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class PtIssueAssign implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

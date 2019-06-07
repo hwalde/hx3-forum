@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedSubscribeForumRecord implements Record {
     
     /** @var $subscribeForumId int */
-    private $subscribeForumId;
+    protected $subscribeForumId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $emailUpdate int */
-    private $emailUpdate;
+    protected $emailUpdate;
     
     public function hasSubscribeForumId(): bool
     {

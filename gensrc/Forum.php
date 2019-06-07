@@ -75,139 +75,139 @@ class Forum implements Table {
     
     public static function forumId() : ColumnField
     {
-        return new ColumnField('forum', 'forumid');
+        return new ColumnField('forumId', 'Forum', 'forum', 'forumid');
     }
     public static function styleId() : ColumnField
     {
-        return new ColumnField('forum', 'styleid');
+        return new ColumnField('styleId', 'Forum', 'forum', 'styleid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('forum', 'title');
+        return new ColumnField('title', 'Forum', 'forum', 'title');
     }
     public static function description() : ColumnField
     {
-        return new ColumnField('forum', 'description');
+        return new ColumnField('description', 'Forum', 'forum', 'description');
     }
     public static function options() : ColumnField
     {
-        return new ColumnField('forum', 'options');
+        return new ColumnField('options', 'Forum', 'forum', 'options');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('forum', 'displayorder');
+        return new ColumnField('displayOrder', 'Forum', 'forum', 'displayorder');
     }
     public static function replyCount() : ColumnField
     {
-        return new ColumnField('forum', 'replycount');
+        return new ColumnField('replyCount', 'Forum', 'forum', 'replycount');
     }
     public static function lastPost() : ColumnField
     {
-        return new ColumnField('forum', 'lastpost');
+        return new ColumnField('lastPost', 'Forum', 'forum', 'lastpost');
     }
     public static function lastPoster() : ColumnField
     {
-        return new ColumnField('forum', 'lastposter');
+        return new ColumnField('lastPoster', 'Forum', 'forum', 'lastposter');
     }
     public static function lastThread() : ColumnField
     {
-        return new ColumnField('forum', 'lastthread');
+        return new ColumnField('lastThread', 'Forum', 'forum', 'lastthread');
     }
     public static function lastThreadId() : ColumnField
     {
-        return new ColumnField('forum', 'lastthreadid');
+        return new ColumnField('lastThreadId', 'Forum', 'forum', 'lastthreadid');
     }
     public static function lastIconId() : ColumnField
     {
-        return new ColumnField('forum', 'lasticonid');
+        return new ColumnField('lastIconId', 'Forum', 'forum', 'lasticonid');
     }
     public static function threadCount() : ColumnField
     {
-        return new ColumnField('forum', 'threadcount');
+        return new ColumnField('threadCount', 'Forum', 'forum', 'threadcount');
     }
     public static function daysPrune() : ColumnField
     {
-        return new ColumnField('forum', 'daysprune');
+        return new ColumnField('daysPrune', 'Forum', 'forum', 'daysprune');
     }
     public static function newPostEmail() : ColumnField
     {
-        return new ColumnField('forum', 'newpostemail');
+        return new ColumnField('newPostEmail', 'Forum', 'forum', 'newpostemail');
     }
     public static function newThreadEmail() : ColumnField
     {
-        return new ColumnField('forum', 'newthreademail');
+        return new ColumnField('newThreadEmail', 'Forum', 'forum', 'newthreademail');
     }
     public static function parentId() : ColumnField
     {
-        return new ColumnField('forum', 'parentid');
+        return new ColumnField('parentId', 'Forum', 'forum', 'parentid');
     }
     public static function parentList() : ColumnField
     {
-        return new ColumnField('forum', 'parentlist');
+        return new ColumnField('parentList', 'Forum', 'forum', 'parentlist');
     }
     public static function password() : ColumnField
     {
-        return new ColumnField('forum', 'password');
+        return new ColumnField('password', 'Forum', 'forum', 'password');
     }
     public static function link() : ColumnField
     {
-        return new ColumnField('forum', 'link');
+        return new ColumnField('link', 'Forum', 'forum', 'link');
     }
     public static function childList() : ColumnField
     {
-        return new ColumnField('forum', 'childlist');
+        return new ColumnField('childList', 'Forum', 'forum', 'childlist');
     }
     public static function importForumId() : ColumnField
     {
-        return new ColumnField('forum', 'importforumid');
+        return new ColumnField('importForumId', 'Forum', 'forum', 'importforumid');
     }
     public static function importCategoryId() : ColumnField
     {
-        return new ColumnField('forum', 'importcategoryid');
+        return new ColumnField('importCategoryId', 'Forum', 'forum', 'importcategoryid');
     }
     public static function titleClean() : ColumnField
     {
-        return new ColumnField('forum', 'title_clean');
+        return new ColumnField('titleClean', 'Forum', 'forum', 'title_clean');
     }
     public static function descriptionClean() : ColumnField
     {
-        return new ColumnField('forum', 'description_clean');
+        return new ColumnField('descriptionClean', 'Forum', 'forum', 'description_clean');
     }
     public static function lastPostId() : ColumnField
     {
-        return new ColumnField('forum', 'lastpostid');
+        return new ColumnField('lastPostId', 'Forum', 'forum', 'lastpostid');
     }
     public static function showPrivate() : ColumnField
     {
-        return new ColumnField('forum', 'showprivate');
+        return new ColumnField('showPrivate', 'Forum', 'forum', 'showprivate');
     }
     public static function defaultSortField() : ColumnField
     {
-        return new ColumnField('forum', 'defaultsortfield');
+        return new ColumnField('defaultSortField', 'Forum', 'forum', 'defaultsortfield');
     }
     public static function defaultSortOrder() : ColumnField
     {
-        return new ColumnField('forum', 'defaultsortorder');
+        return new ColumnField('defaultSortOrder', 'Forum', 'forum', 'defaultsortorder');
     }
     public static function vbSeoModeratePingbacks() : ColumnField
     {
-        return new ColumnField('forum', 'vbseo_moderatepingbacks');
+        return new ColumnField('vbSeoModeratePingbacks', 'Forum', 'forum', 'vbseo_moderatepingbacks');
     }
     public static function vbSeoModerateTrackbacks() : ColumnField
     {
-        return new ColumnField('forum', 'vbseo_moderatetrackbacks');
+        return new ColumnField('vbSeoModerateTrackbacks', 'Forum', 'forum', 'vbseo_moderatetrackbacks');
     }
     public static function vbSeoModerateRefbacks() : ColumnField
     {
-        return new ColumnField('forum', 'vbseo_moderaterefbacks');
+        return new ColumnField('vbSeoModerateRefbacks', 'Forum', 'forum', 'vbseo_moderaterefbacks');
     }
     public static function lastPrefixId() : ColumnField
     {
-        return new ColumnField('forum', 'lastprefixid');
+        return new ColumnField('lastPrefixId', 'Forum', 'forum', 'lastprefixid');
     }
     public static function imagePrefix() : ColumnField
     {
-        return new ColumnField('forum', 'imageprefix');
+        return new ColumnField('imagePrefix', 'Forum', 'forum', 'imageprefix');
     }
 
     public function getTableName(): string
@@ -218,6 +218,14 @@ class Forum implements Table {
     public function __listColumns() : array
     {
         return ['forumid', 'styleid', 'title', 'description', 'options', 'displayorder', 'replycount', 'lastpost', 'lastposter', 'lastthread', 'lastthreadid', 'lasticonid', 'threadcount', 'daysprune', 'newpostemail', 'newthreademail', 'parentid', 'parentlist', 'password', 'link', 'childlist', 'importforumid', 'importcategoryid', 'title_clean', 'description_clean', 'lastpostid', 'showprivate', 'defaultsortfield', 'defaultsortorder', 'vbseo_moderatepingbacks', 'vbseo_moderatetrackbacks', 'vbseo_moderaterefbacks', 'lastprefixid', 'imageprefix'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['forumid'];
     }
     
     public function __listNullableColumns() : array
@@ -304,5 +312,4 @@ class Forum implements Table {
 			'imageprefix' => 'imagePrefix'
 		];
     }
-
 }

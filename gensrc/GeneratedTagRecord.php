@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedTagRecord implements Record {
     
     /** @var $tagId int */
-    private $tagId;
+    protected $tagId;
     
     /** @var $tagText string */
-    private $tagText;
+    protected $tagText;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasTagId(): bool
     {

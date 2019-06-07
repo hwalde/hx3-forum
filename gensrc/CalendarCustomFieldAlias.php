@@ -17,35 +17,35 @@ class CalendarCustomFieldAlias extends TableAlias {
    
     public function calendarCustomFieldId() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'calendarcustomfieldid', $this->getAliasName());
+        return new ColumnField('calendarCustomFieldId', 'CalendarCustomField', 'calendarcustomfield', 'calendarcustomfieldid', $this->getAliasName());
     }
     public function calendarId() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'calendarid', $this->getAliasName());
+        return new ColumnField('calendarId', 'CalendarCustomField', 'calendarcustomfield', 'calendarid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'title', $this->getAliasName());
+        return new ColumnField('title', 'CalendarCustomField', 'calendarcustomfield', 'title', $this->getAliasName());
     }
     public function description() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'description', $this->getAliasName());
+        return new ColumnField('description', 'CalendarCustomField', 'calendarcustomfield', 'description', $this->getAliasName());
     }
     public function options() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'options', $this->getAliasName());
+        return new ColumnField('options', 'CalendarCustomField', 'calendarcustomfield', 'options', $this->getAliasName());
     }
     public function allowEntry() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'allowentry', $this->getAliasName());
+        return new ColumnField('allowEntry', 'CalendarCustomField', 'calendarcustomfield', 'allowentry', $this->getAliasName());
     }
     public function required() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'required', $this->getAliasName());
+        return new ColumnField('required', 'CalendarCustomField', 'calendarcustomfield', 'required', $this->getAliasName());
     }
     public function length() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'length', $this->getAliasName());
+        return new ColumnField('length', 'CalendarCustomField', 'calendarcustomfield', 'length', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class CalendarCustomFieldAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['calendarcustomfieldid', 'calendarid', 'title', 'description', 'options', 'allowentry', 'required', 'length'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['calendarcustomfieldid'];
     }
     
     public function __listNullableColumns() : array

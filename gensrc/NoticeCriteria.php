@@ -45,23 +45,23 @@ class NoticeCriteria implements Table {
     
     public static function noticeId() : ColumnField
     {
-        return new ColumnField('noticecriteria', 'noticeid');
+        return new ColumnField('noticeId', 'NoticeCriteria', 'noticecriteria', 'noticeid');
     }
     public static function criteriaId() : ColumnField
     {
-        return new ColumnField('noticecriteria', 'criteriaid');
+        return new ColumnField('criteriaId', 'NoticeCriteria', 'noticecriteria', 'criteriaid');
     }
     public static function condition1() : ColumnField
     {
-        return new ColumnField('noticecriteria', 'condition1');
+        return new ColumnField('condition1', 'NoticeCriteria', 'noticecriteria', 'condition1');
     }
     public static function condition2() : ColumnField
     {
-        return new ColumnField('noticecriteria', 'condition2');
+        return new ColumnField('condition2', 'NoticeCriteria', 'noticecriteria', 'condition2');
     }
     public static function condition3() : ColumnField
     {
-        return new ColumnField('noticecriteria', 'condition3');
+        return new ColumnField('condition3', 'NoticeCriteria', 'noticecriteria', 'condition3');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class NoticeCriteria implements Table {
     public function __listColumns() : array
     {
         return ['noticeid', 'criteriaid', 'condition1', 'condition2', 'condition3'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['noticeid', 'criteriaid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class NoticeCriteria implements Table {
 			'condition3' => 'condition3'
 		];
     }
-
 }

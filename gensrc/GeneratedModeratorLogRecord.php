@@ -14,58 +14,58 @@ use POOQ\Record;
 class GeneratedModeratorLogRecord implements Record {
     
     /** @var $moderatorLogId int */
-    private $moderatorLogId;
+    protected $moderatorLogId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $pollId int */
-    private $pollId;
+    protected $pollId;
     
     /** @var $action string */
-    private $action;
+    protected $action;
     
     /** @var $type int */
-    private $type;
+    protected $type;
     
     /** @var $threadTitle string */
-    private $threadTitle;
+    protected $threadTitle;
     
     /** @var $attachmentId int */
-    private $attachmentId;
+    protected $attachmentId;
     
     /** @var $ipAddress string */
-    private $ipAddress;
+    protected $ipAddress;
     
     /** @var $id1 int */
-    private $id1;
+    protected $id1;
     
     /** @var $id2 int */
-    private $id2;
+    protected $id2;
     
     /** @var $id3 int */
-    private $id3;
+    protected $id3;
     
     /** @var $id4 int */
-    private $id4;
+    protected $id4;
     
     /** @var $id5 int */
-    private $id5;
+    protected $id5;
     
     /** @var $product string */
-    private $product;
+    protected $product;
     
     public function hasModeratorLogId(): bool
     {

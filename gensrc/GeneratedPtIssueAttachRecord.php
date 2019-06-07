@@ -14,49 +14,49 @@ use POOQ\Record;
 class GeneratedPtIssueAttachRecord implements Record {
     
     /** @var $attachmentId int */
-    private $attachmentId;
+    protected $attachmentId;
     
     /** @var $issueId int */
-    private $issueId;
+    protected $issueId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $fileName string */
-    private $fileName;
+    protected $fileName;
     
     /** @var $extension string */
-    private $extension;
+    protected $extension;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $visible int */
-    private $visible;
+    protected $visible;
     
     /** @var $status string */
-    private $status;
+    protected $status;
     
     /** @var $fileSize int */
-    private $fileSize;
+    protected $fileSize;
     
     /** @var $fileHash string */
-    private $fileHash;
+    protected $fileHash;
     
     /** @var $fileData string */
-    private $fileData;
+    protected $fileData;
     
     /** @var $thumbnail string */
-    private $thumbnail;
+    protected $thumbnail;
     
     /** @var $thumbnailFileSize int */
-    private $thumbnailFileSize;
+    protected $thumbnailFileSize;
     
     /** @var $thumbnailDateline int */
-    private $thumbnailDateline;
+    protected $thumbnailDateline;
     
     /** @var $isPatchFile int */
-    private $isPatchFile;
+    protected $isPatchFile;
     
     public function hasAttachmentId(): bool
     {

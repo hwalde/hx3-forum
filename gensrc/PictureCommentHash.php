@@ -44,19 +44,19 @@ class PictureCommentHash implements Table {
     
     public static function postUserId() : ColumnField
     {
-        return new ColumnField('picturecomment_hash', 'postuserid');
+        return new ColumnField('postUserId', 'PictureCommentHash', 'picturecomment_hash', 'postuserid');
     }
     public static function pictureId() : ColumnField
     {
-        return new ColumnField('picturecomment_hash', 'pictureid');
+        return new ColumnField('pictureId', 'PictureCommentHash', 'picturecomment_hash', 'pictureid');
     }
     public static function dupeHash() : ColumnField
     {
-        return new ColumnField('picturecomment_hash', 'dupehash');
+        return new ColumnField('dupeHash', 'PictureCommentHash', 'picturecomment_hash', 'dupehash');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('picturecomment_hash', 'dateline');
+        return new ColumnField('dateLine', 'PictureCommentHash', 'picturecomment_hash', 'dateline');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class PictureCommentHash implements Table {
     public function __listColumns() : array
     {
         return ['postuserid', 'pictureid', 'dupehash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class PictureCommentHash implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

@@ -44,19 +44,19 @@ class HvAnswer implements Table {
     
     public static function answerId() : ColumnField
     {
-        return new ColumnField('hvanswer', 'answerid');
+        return new ColumnField('answerId', 'HvAnswer', 'hvanswer', 'answerid');
     }
     public static function questionId() : ColumnField
     {
-        return new ColumnField('hvanswer', 'questionid');
+        return new ColumnField('questionId', 'HvAnswer', 'hvanswer', 'questionid');
     }
     public static function answer() : ColumnField
     {
-        return new ColumnField('hvanswer', 'answer');
+        return new ColumnField('answer', 'HvAnswer', 'hvanswer', 'answer');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('hvanswer', 'dateline');
+        return new ColumnField('dateLine', 'HvAnswer', 'hvanswer', 'dateline');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class HvAnswer implements Table {
     public function __listColumns() : array
     {
         return ['answerid', 'questionid', 'answer', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['answerid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class HvAnswer implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedPodcastItemRecord implements Record {
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $url string */
-    private $url;
+    protected $url;
     
     /** @var $length int */
-    private $length;
+    protected $length;
     
     /** @var $explicit int */
-    private $explicit;
+    protected $explicit;
     
     /** @var $keywords string */
-    private $keywords;
+    protected $keywords;
     
     /** @var $subTitle string */
-    private $subTitle;
+    protected $subTitle;
     
     /** @var $author string */
-    private $author;
+    protected $author;
     
     public function hasPostId(): bool
     {

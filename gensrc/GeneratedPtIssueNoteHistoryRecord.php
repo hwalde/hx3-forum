@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedPtIssueNoteHistoryRecord implements Record {
     
     /** @var $issueNoteHistoryId int */
-    private $issueNoteHistoryId;
+    protected $issueNoteHistoryId;
     
     /** @var $issueNoteId int */
-    private $issueNoteId;
+    protected $issueNoteId;
     
     /** @var $reason string */
-    private $reason;
+    protected $reason;
     
     /** @var $pageText string */
-    private $pageText;
+    protected $pageText;
     
     /** @var $visible string */
-    private $visible;
+    protected $visible;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     public function hasIssueNoteHistoryId(): bool
     {

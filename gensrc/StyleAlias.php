@@ -17,55 +17,55 @@ class StyleAlias extends TableAlias {
    
     public function styleId() : ColumnField
     {
-        return new ColumnField('style', 'styleid', $this->getAliasName());
+        return new ColumnField('styleId', 'Style', 'style', 'styleid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('style', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Style', 'style', 'title', $this->getAliasName());
     }
     public function parentId() : ColumnField
     {
-        return new ColumnField('style', 'parentid', $this->getAliasName());
+        return new ColumnField('parentId', 'Style', 'style', 'parentid', $this->getAliasName());
     }
     public function parentList() : ColumnField
     {
-        return new ColumnField('style', 'parentlist', $this->getAliasName());
+        return new ColumnField('parentList', 'Style', 'style', 'parentlist', $this->getAliasName());
     }
     public function templateList() : ColumnField
     {
-        return new ColumnField('style', 'templatelist', $this->getAliasName());
+        return new ColumnField('templateList', 'Style', 'style', 'templatelist', $this->getAliasName());
     }
     public function cssColors() : ColumnField
     {
-        return new ColumnField('style', 'csscolors', $this->getAliasName());
+        return new ColumnField('cssColors', 'Style', 'style', 'csscolors', $this->getAliasName());
     }
     public function css() : ColumnField
     {
-        return new ColumnField('style', 'css', $this->getAliasName());
+        return new ColumnField('css', 'Style', 'style', 'css', $this->getAliasName());
     }
     public function styleVars() : ColumnField
     {
-        return new ColumnField('style', 'stylevars', $this->getAliasName());
+        return new ColumnField('styleVars', 'Style', 'style', 'stylevars', $this->getAliasName());
     }
     public function replacements() : ColumnField
     {
-        return new ColumnField('style', 'replacements', $this->getAliasName());
+        return new ColumnField('replacements', 'Style', 'style', 'replacements', $this->getAliasName());
     }
     public function editorStyles() : ColumnField
     {
-        return new ColumnField('style', 'editorstyles', $this->getAliasName());
+        return new ColumnField('editorStyles', 'Style', 'style', 'editorstyles', $this->getAliasName());
     }
     public function userSelect() : ColumnField
     {
-        return new ColumnField('style', 'userselect', $this->getAliasName());
+        return new ColumnField('userSelect', 'Style', 'style', 'userselect', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('style', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'Style', 'style', 'displayorder', $this->getAliasName());
     }
     public function importStyleId() : ColumnField
     {
-        return new ColumnField('style', 'importstyleid', $this->getAliasName());
+        return new ColumnField('importStyleId', 'Style', 'style', 'importstyleid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -76,6 +76,14 @@ class StyleAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['styleid', 'title', 'parentid', 'parentlist', 'templatelist', 'csscolors', 'css', 'stylevars', 'replacements', 'editorstyles', 'userselect', 'displayorder', 'importstyleid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['styleid'];
     }
     
     public function __listNullableColumns() : array

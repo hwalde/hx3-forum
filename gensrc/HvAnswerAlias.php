@@ -17,19 +17,19 @@ class HvAnswerAlias extends TableAlias {
    
     public function answerId() : ColumnField
     {
-        return new ColumnField('hvanswer', 'answerid', $this->getAliasName());
+        return new ColumnField('answerId', 'HvAnswer', 'hvanswer', 'answerid', $this->getAliasName());
     }
     public function questionId() : ColumnField
     {
-        return new ColumnField('hvanswer', 'questionid', $this->getAliasName());
+        return new ColumnField('questionId', 'HvAnswer', 'hvanswer', 'questionid', $this->getAliasName());
     }
     public function answer() : ColumnField
     {
-        return new ColumnField('hvanswer', 'answer', $this->getAliasName());
+        return new ColumnField('answer', 'HvAnswer', 'hvanswer', 'answer', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('hvanswer', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'HvAnswer', 'hvanswer', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class HvAnswerAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['answerid', 'questionid', 'answer', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['answerid'];
     }
     
     public function __listNullableColumns() : array

@@ -17,51 +17,51 @@ class PictureCommentAlias extends TableAlias {
    
     public function commentId() : ColumnField
     {
-        return new ColumnField('picturecomment', 'commentid', $this->getAliasName());
+        return new ColumnField('commentId', 'PictureComment', 'picturecomment', 'commentid', $this->getAliasName());
     }
     public function pictureId() : ColumnField
     {
-        return new ColumnField('picturecomment', 'pictureid', $this->getAliasName());
+        return new ColumnField('pictureId', 'PictureComment', 'picturecomment', 'pictureid', $this->getAliasName());
     }
     public function postUserId() : ColumnField
     {
-        return new ColumnField('picturecomment', 'postuserid', $this->getAliasName());
+        return new ColumnField('postUserId', 'PictureComment', 'picturecomment', 'postuserid', $this->getAliasName());
     }
     public function postUserName() : ColumnField
     {
-        return new ColumnField('picturecomment', 'postusername', $this->getAliasName());
+        return new ColumnField('postUserName', 'PictureComment', 'picturecomment', 'postusername', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('picturecomment', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PictureComment', 'picturecomment', 'dateline', $this->getAliasName());
     }
     public function state() : ColumnField
     {
-        return new ColumnField('picturecomment', 'state', $this->getAliasName());
+        return new ColumnField('state', 'PictureComment', 'picturecomment', 'state', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('picturecomment', 'title', $this->getAliasName());
+        return new ColumnField('title', 'PictureComment', 'picturecomment', 'title', $this->getAliasName());
     }
     public function pageText() : ColumnField
     {
-        return new ColumnField('picturecomment', 'pagetext', $this->getAliasName());
+        return new ColumnField('pageText', 'PictureComment', 'picturecomment', 'pagetext', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('picturecomment', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'PictureComment', 'picturecomment', 'ipaddress', $this->getAliasName());
     }
     public function allowSmilie() : ColumnField
     {
-        return new ColumnField('picturecomment', 'allowsmilie', $this->getAliasName());
+        return new ColumnField('allowSmilie', 'PictureComment', 'picturecomment', 'allowsmilie', $this->getAliasName());
     }
     public function reportThreadId() : ColumnField
     {
-        return new ColumnField('picturecomment', 'reportthreadid', $this->getAliasName());
+        return new ColumnField('reportThreadId', 'PictureComment', 'picturecomment', 'reportthreadid', $this->getAliasName());
     }
     public function messageRead() : ColumnField
     {
-        return new ColumnField('picturecomment', 'messageread', $this->getAliasName());
+        return new ColumnField('messageRead', 'PictureComment', 'picturecomment', 'messageread', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class PictureCommentAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['commentid', 'pictureid', 'postuserid', 'postusername', 'dateline', 'state', 'title', 'pagetext', 'ipaddress', 'allowsmilie', 'reportthreadid', 'messageread'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['commentid'];
     }
     
     public function __listNullableColumns() : array

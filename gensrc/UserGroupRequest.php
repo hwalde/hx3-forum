@@ -45,23 +45,23 @@ class UserGroupRequest implements Table {
     
     public static function usergrouprequestid() : ColumnField
     {
-        return new ColumnField('usergrouprequest', 'usergrouprequestid');
+        return new ColumnField('usergrouprequestid', 'UserGroupRequest', 'usergrouprequest', 'usergrouprequestid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('usergrouprequest', 'userid');
+        return new ColumnField('userId', 'UserGroupRequest', 'usergrouprequest', 'userid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('usergrouprequest', 'usergroupid');
+        return new ColumnField('userGroupId', 'UserGroupRequest', 'usergrouprequest', 'usergroupid');
     }
     public static function reason() : ColumnField
     {
-        return new ColumnField('usergrouprequest', 'reason');
+        return new ColumnField('reason', 'UserGroupRequest', 'usergrouprequest', 'reason');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('usergrouprequest', 'dateline');
+        return new ColumnField('dateLine', 'UserGroupRequest', 'usergrouprequest', 'dateline');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class UserGroupRequest implements Table {
     public function __listColumns() : array
     {
         return ['usergrouprequestid', 'userid', 'usergroupid', 'reason', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usergrouprequestid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class UserGroupRequest implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

@@ -17,19 +17,19 @@ class SettingGroupAlias extends TableAlias {
    
     public function groupTitle() : ColumnField
     {
-        return new ColumnField('settinggroup', 'grouptitle', $this->getAliasName());
+        return new ColumnField('groupTitle', 'SettingGroup', 'settinggroup', 'grouptitle', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('settinggroup', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'SettingGroup', 'settinggroup', 'displayorder', $this->getAliasName());
     }
     public function volatile() : ColumnField
     {
-        return new ColumnField('settinggroup', 'volatile', $this->getAliasName());
+        return new ColumnField('volatile', 'SettingGroup', 'settinggroup', 'volatile', $this->getAliasName());
     }
     public function product() : ColumnField
     {
-        return new ColumnField('settinggroup', 'product', $this->getAliasName());
+        return new ColumnField('product', 'SettingGroup', 'settinggroup', 'product', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class SettingGroupAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['grouptitle', 'displayorder', 'volatile', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['grouptitle'];
     }
     
     public function __listNullableColumns() : array

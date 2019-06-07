@@ -17,51 +17,51 @@ class SettingAlias extends TableAlias {
    
     public function varName() : ColumnField
     {
-        return new ColumnField('setting', 'varname', $this->getAliasName());
+        return new ColumnField('varName', 'Setting', 'setting', 'varname', $this->getAliasName());
     }
     public function groupTitle() : ColumnField
     {
-        return new ColumnField('setting', 'grouptitle', $this->getAliasName());
+        return new ColumnField('groupTitle', 'Setting', 'setting', 'grouptitle', $this->getAliasName());
     }
     public function value() : ColumnField
     {
-        return new ColumnField('setting', 'value', $this->getAliasName());
+        return new ColumnField('value', 'Setting', 'setting', 'value', $this->getAliasName());
     }
     public function defaultValue() : ColumnField
     {
-        return new ColumnField('setting', 'defaultvalue', $this->getAliasName());
+        return new ColumnField('defaultValue', 'Setting', 'setting', 'defaultvalue', $this->getAliasName());
     }
     public function optionCode() : ColumnField
     {
-        return new ColumnField('setting', 'optioncode', $this->getAliasName());
+        return new ColumnField('optionCode', 'Setting', 'setting', 'optioncode', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('setting', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'Setting', 'setting', 'displayorder', $this->getAliasName());
     }
     public function advanced() : ColumnField
     {
-        return new ColumnField('setting', 'advanced', $this->getAliasName());
+        return new ColumnField('advanced', 'Setting', 'setting', 'advanced', $this->getAliasName());
     }
     public function volatile() : ColumnField
     {
-        return new ColumnField('setting', 'volatile', $this->getAliasName());
+        return new ColumnField('volatile', 'Setting', 'setting', 'volatile', $this->getAliasName());
     }
     public function product() : ColumnField
     {
-        return new ColumnField('setting', 'product', $this->getAliasName());
+        return new ColumnField('product', 'Setting', 'setting', 'product', $this->getAliasName());
     }
     public function dataType() : ColumnField
     {
-        return new ColumnField('setting', 'datatype', $this->getAliasName());
+        return new ColumnField('dataType', 'Setting', 'setting', 'datatype', $this->getAliasName());
     }
     public function blackList() : ColumnField
     {
-        return new ColumnField('setting', 'blacklist', $this->getAliasName());
+        return new ColumnField('blackList', 'Setting', 'setting', 'blacklist', $this->getAliasName());
     }
     public function validationCode() : ColumnField
     {
-        return new ColumnField('setting', 'validationcode', $this->getAliasName());
+        return new ColumnField('validationCode', 'Setting', 'setting', 'validationcode', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class SettingAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['varname', 'grouptitle', 'value', 'defaultvalue', 'optioncode', 'displayorder', 'advanced', 'volatile', 'product', 'datatype', 'blacklist', 'validationcode'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['varname'];
     }
     
     public function __listNullableColumns() : array

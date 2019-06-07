@@ -17,23 +17,23 @@ class IconAlias extends TableAlias {
    
     public function iconId() : ColumnField
     {
-        return new ColumnField('icon', 'iconid', $this->getAliasName());
+        return new ColumnField('iconId', 'Icon', 'icon', 'iconid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('icon', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Icon', 'icon', 'title', $this->getAliasName());
     }
     public function iconPath() : ColumnField
     {
-        return new ColumnField('icon', 'iconpath', $this->getAliasName());
+        return new ColumnField('iconPath', 'Icon', 'icon', 'iconpath', $this->getAliasName());
     }
     public function imageCategoryId() : ColumnField
     {
-        return new ColumnField('icon', 'imagecategoryid', $this->getAliasName());
+        return new ColumnField('imageCategoryId', 'Icon', 'icon', 'imagecategoryid', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('icon', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'Icon', 'icon', 'displayorder', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class IconAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['iconid', 'title', 'iconpath', 'imagecategoryid', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['iconid'];
     }
     
     public function __listNullableColumns() : array

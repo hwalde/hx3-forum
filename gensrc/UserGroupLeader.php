@@ -43,15 +43,15 @@ class UserGroupLeader implements Table {
     
     public static function usergroupleaderid() : ColumnField
     {
-        return new ColumnField('usergroupleader', 'usergroupleaderid');
+        return new ColumnField('usergroupleaderid', 'UserGroupLeader', 'usergroupleader', 'usergroupleaderid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('usergroupleader', 'userid');
+        return new ColumnField('userId', 'UserGroupLeader', 'usergroupleader', 'userid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('usergroupleader', 'usergroupid');
+        return new ColumnField('userGroupId', 'UserGroupLeader', 'usergroupleader', 'usergroupid');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class UserGroupLeader implements Table {
     public function __listColumns() : array
     {
         return ['usergroupleaderid', 'userid', 'usergroupid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usergroupleaderid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class UserGroupLeader implements Table {
 			'usergroupid' => 'userGroupId'
 		];
     }
-
 }

@@ -17,43 +17,43 @@ class AdminMessageAlias extends TableAlias {
    
     public function adminMessageId() : ColumnField
     {
-        return new ColumnField('adminmessage', 'adminmessageid', $this->getAliasName());
+        return new ColumnField('adminMessageId', 'AdminMessage', 'adminmessage', 'adminmessageid', $this->getAliasName());
     }
     public function varName() : ColumnField
     {
-        return new ColumnField('adminmessage', 'varname', $this->getAliasName());
+        return new ColumnField('varName', 'AdminMessage', 'adminmessage', 'varname', $this->getAliasName());
     }
     public function dismissable() : ColumnField
     {
-        return new ColumnField('adminmessage', 'dismissable', $this->getAliasName());
+        return new ColumnField('dismissable', 'AdminMessage', 'adminmessage', 'dismissable', $this->getAliasName());
     }
     public function script() : ColumnField
     {
-        return new ColumnField('adminmessage', 'script', $this->getAliasName());
+        return new ColumnField('script', 'AdminMessage', 'adminmessage', 'script', $this->getAliasName());
     }
     public function action() : ColumnField
     {
-        return new ColumnField('adminmessage', 'action', $this->getAliasName());
+        return new ColumnField('action', 'AdminMessage', 'adminmessage', 'action', $this->getAliasName());
     }
     public function execUrl() : ColumnField
     {
-        return new ColumnField('adminmessage', 'execurl', $this->getAliasName());
+        return new ColumnField('execUrl', 'AdminMessage', 'adminmessage', 'execurl', $this->getAliasName());
     }
     public function method() : ColumnField
     {
-        return new ColumnField('adminmessage', 'method', $this->getAliasName());
+        return new ColumnField('method', 'AdminMessage', 'adminmessage', 'method', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('adminmessage', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'AdminMessage', 'adminmessage', 'dateline', $this->getAliasName());
     }
     public function status() : ColumnField
     {
-        return new ColumnField('adminmessage', 'status', $this->getAliasName());
+        return new ColumnField('status', 'AdminMessage', 'adminmessage', 'status', $this->getAliasName());
     }
     public function statusUserId() : ColumnField
     {
-        return new ColumnField('adminmessage', 'statususerid', $this->getAliasName());
+        return new ColumnField('statusUserId', 'AdminMessage', 'adminmessage', 'statususerid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -64,6 +64,14 @@ class AdminMessageAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['adminmessageid', 'varname', 'dismissable', 'script', 'action', 'execurl', 'method', 'dateline', 'status', 'statususerid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['adminmessageid'];
     }
     
     public function __listNullableColumns() : array

@@ -55,63 +55,63 @@ class PtIssueAttach implements Table {
     
     public static function attachmentId() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'attachmentid');
+        return new ColumnField('attachmentId', 'PtIssueAttach', 'pt_issueattach', 'attachmentid');
     }
     public static function issueId() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'issueid');
+        return new ColumnField('issueId', 'PtIssueAttach', 'pt_issueattach', 'issueid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'userid');
+        return new ColumnField('userId', 'PtIssueAttach', 'pt_issueattach', 'userid');
     }
     public static function fileName() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'filename');
+        return new ColumnField('fileName', 'PtIssueAttach', 'pt_issueattach', 'filename');
     }
     public static function extension() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'extension');
+        return new ColumnField('extension', 'PtIssueAttach', 'pt_issueattach', 'extension');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'dateline');
+        return new ColumnField('dateLine', 'PtIssueAttach', 'pt_issueattach', 'dateline');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'visible');
+        return new ColumnField('visible', 'PtIssueAttach', 'pt_issueattach', 'visible');
     }
     public static function status() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'status');
+        return new ColumnField('status', 'PtIssueAttach', 'pt_issueattach', 'status');
     }
     public static function fileSize() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'filesize');
+        return new ColumnField('fileSize', 'PtIssueAttach', 'pt_issueattach', 'filesize');
     }
     public static function fileHash() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'filehash');
+        return new ColumnField('fileHash', 'PtIssueAttach', 'pt_issueattach', 'filehash');
     }
     public static function fileData() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'filedata');
+        return new ColumnField('fileData', 'PtIssueAttach', 'pt_issueattach', 'filedata');
     }
     public static function thumbnail() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'thumbnail');
+        return new ColumnField('thumbnail', 'PtIssueAttach', 'pt_issueattach', 'thumbnail');
     }
     public static function thumbnailFileSize() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'thumbnail_filesize');
+        return new ColumnField('thumbnailFileSize', 'PtIssueAttach', 'pt_issueattach', 'thumbnail_filesize');
     }
     public static function thumbnailDateline() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'thumbnail_dateline');
+        return new ColumnField('thumbnailDateline', 'PtIssueAttach', 'pt_issueattach', 'thumbnail_dateline');
     }
     public static function isPatchFile() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'ispatchfile');
+        return new ColumnField('isPatchFile', 'PtIssueAttach', 'pt_issueattach', 'ispatchfile');
     }
 
     public function getTableName(): string
@@ -122,6 +122,14 @@ class PtIssueAttach implements Table {
     public function __listColumns() : array
     {
         return ['attachmentid', 'issueid', 'userid', 'filename', 'extension', 'dateline', 'visible', 'status', 'filesize', 'filehash', 'filedata', 'thumbnail', 'thumbnail_filesize', 'thumbnail_dateline', 'ispatchfile'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['attachmentid'];
     }
     
     public function __listNullableColumns() : array
@@ -170,5 +178,4 @@ class PtIssueAttach implements Table {
 			'ispatchfile' => 'isPatchFile'
 		];
     }
-
 }

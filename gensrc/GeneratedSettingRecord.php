@@ -14,40 +14,40 @@ use POOQ\Record;
 class GeneratedSettingRecord implements Record {
     
     /** @var $varName string */
-    private $varName;
+    protected $varName;
     
     /** @var $groupTitle string */
-    private $groupTitle;
+    protected $groupTitle;
     
     /** @var $value string */
-    private $value;
+    protected $value;
     
     /** @var $defaultValue string */
-    private $defaultValue;
+    protected $defaultValue;
     
     /** @var $optionCode string */
-    private $optionCode;
+    protected $optionCode;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $advanced int */
-    private $advanced;
+    protected $advanced;
     
     /** @var $volatile int */
-    private $volatile;
+    protected $volatile;
     
     /** @var $product string */
-    private $product;
+    protected $product;
     
     /** @var $dataType string */
-    private $dataType;
+    protected $dataType;
     
     /** @var $blackList int */
-    private $blackList;
+    protected $blackList;
     
     /** @var $validationCode string|null */
-    private $validationCode;
+    protected $validationCode;
     
     public function hasVarName(): bool
     {

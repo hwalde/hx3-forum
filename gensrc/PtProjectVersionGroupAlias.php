@@ -17,19 +17,19 @@ class PtProjectVersionGroupAlias extends TableAlias {
    
     public function projectVersionGroupId() : ColumnField
     {
-        return new ColumnField('pt_projectversiongroup', 'projectversiongroupid', $this->getAliasName());
+        return new ColumnField('projectVersionGroupId', 'PtProjectVersionGroup', 'pt_projectversiongroup', 'projectversiongroupid', $this->getAliasName());
     }
     public function projectId() : ColumnField
     {
-        return new ColumnField('pt_projectversiongroup', 'projectid', $this->getAliasName());
+        return new ColumnField('projectId', 'PtProjectVersionGroup', 'pt_projectversiongroup', 'projectid', $this->getAliasName());
     }
     public function groupName() : ColumnField
     {
-        return new ColumnField('pt_projectversiongroup', 'groupname', $this->getAliasName());
+        return new ColumnField('groupName', 'PtProjectVersionGroup', 'pt_projectversiongroup', 'groupname', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_projectversiongroup', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'PtProjectVersionGroup', 'pt_projectversiongroup', 'displayorder', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class PtProjectVersionGroupAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['projectversiongroupid', 'projectid', 'groupname', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['projectversiongroupid'];
     }
     
     public function __listNullableColumns() : array

@@ -43,15 +43,15 @@ class StatisticDomain implements Table {
     
     public static function id() : ColumnField
     {
-        return new ColumnField('statistik_domain', 'ID');
+        return new ColumnField('id', 'StatisticDomain', 'statistik_domain', 'ID');
     }
     public static function domain() : ColumnField
     {
-        return new ColumnField('statistik_domain', 'domain');
+        return new ColumnField('domain', 'StatisticDomain', 'statistik_domain', 'domain');
     }
     public static function zaehler() : ColumnField
     {
-        return new ColumnField('statistik_domain', 'Zaehler');
+        return new ColumnField('zaehler', 'StatisticDomain', 'statistik_domain', 'Zaehler');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class StatisticDomain implements Table {
     public function __listColumns() : array
     {
         return ['ID', 'domain', 'Zaehler'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['ID'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class StatisticDomain implements Table {
 			'Zaehler' => 'zaehler'
 		];
     }
-
 }

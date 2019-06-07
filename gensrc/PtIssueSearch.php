@@ -52,51 +52,51 @@ class PtIssueSearch implements Table {
     
     public static function issueSearchId() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'issuesearchid');
+        return new ColumnField('issueSearchId', 'PtIssueSearch', 'pt_issuesearch', 'issuesearchid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'userid');
+        return new ColumnField('userId', 'PtIssueSearch', 'pt_issuesearch', 'userid');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'ipaddress');
+        return new ColumnField('ipAddress', 'PtIssueSearch', 'pt_issuesearch', 'ipaddress');
     }
     public static function criteria() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'criteria');
+        return new ColumnField('criteria', 'PtIssueSearch', 'pt_issuesearch', 'criteria');
     }
     public static function sortBy() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'sortby');
+        return new ColumnField('sortBy', 'PtIssueSearch', 'pt_issuesearch', 'sortby');
     }
     public static function sortOrder() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'sortorder');
+        return new ColumnField('sortOrder', 'PtIssueSearch', 'pt_issuesearch', 'sortorder');
     }
     public static function groupBy() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'groupby');
+        return new ColumnField('groupBy', 'PtIssueSearch', 'pt_issuesearch', 'groupby');
     }
     public static function searchTime() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'searchtime');
+        return new ColumnField('searchTime', 'PtIssueSearch', 'pt_issuesearch', 'searchtime');
     }
     public static function resultCount() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'resultcount');
+        return new ColumnField('resultCount', 'PtIssueSearch', 'pt_issuesearch', 'resultcount');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'dateline');
+        return new ColumnField('dateLine', 'PtIssueSearch', 'pt_issuesearch', 'dateline');
     }
     public static function completed() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'completed');
+        return new ColumnField('completed', 'PtIssueSearch', 'pt_issuesearch', 'completed');
     }
     public static function issueReportId() : ColumnField
     {
-        return new ColumnField('pt_issuesearch', 'issuereportid');
+        return new ColumnField('issueReportId', 'PtIssueSearch', 'pt_issuesearch', 'issuereportid');
     }
 
     public function getTableName(): string
@@ -107,6 +107,14 @@ class PtIssueSearch implements Table {
     public function __listColumns() : array
     {
         return ['issuesearchid', 'userid', 'ipaddress', 'criteria', 'sortby', 'sortorder', 'groupby', 'searchtime', 'resultcount', 'dateline', 'completed', 'issuereportid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuesearchid'];
     }
     
     public function __listNullableColumns() : array
@@ -149,5 +157,4 @@ class PtIssueSearch implements Table {
 			'issuereportid' => 'issueReportId'
 		];
     }
-
 }

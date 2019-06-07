@@ -58,75 +58,75 @@ class StatisticSettings implements Table {
     
     public static function reset() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'RESET');
+        return new ColumnField('reset', 'StatisticSettings', 'statistik_einstellungen', 'RESET');
     }
     public static function logTime() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'LOGTIME');
+        return new ColumnField('logTime', 'StatisticSettings', 'statistik_einstellungen', 'LOGTIME');
     }
     public static function DOMAIN() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'DOMAIN');
+        return new ColumnField('DOMAIN', 'StatisticSettings', 'statistik_einstellungen', 'DOMAIN');
     }
     public static function topThread() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'TOPTHREAD');
+        return new ColumnField('topThread', 'StatisticSettings', 'statistik_einstellungen', 'TOPTHREAD');
     }
     public static function popThread() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'POPTHREAD');
+        return new ColumnField('popThread', 'StatisticSettings', 'statistik_einstellungen', 'POPTHREAD');
     }
     public static function popForum() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'POPFORUM');
+        return new ColumnField('popForum', 'StatisticSettings', 'statistik_einstellungen', 'POPFORUM');
     }
     public static function newRegister() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'NEWREGISTER');
+        return new ColumnField('newRegister', 'StatisticSettings', 'statistik_einstellungen', 'NEWREGISTER');
     }
     public static function visit() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'VISIT');
+        return new ColumnField('visit', 'StatisticSettings', 'statistik_einstellungen', 'VISIT');
     }
     public static function writtenThreads() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'WRITTENTHREADS');
+        return new ColumnField('writtenThreads', 'StatisticSettings', 'statistik_einstellungen', 'WRITTENTHREADS');
     }
     public static function writtenPost() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'WRITTENPOST');
+        return new ColumnField('writtenPost', 'StatisticSettings', 'statistik_einstellungen', 'WRITTENPOST');
     }
     public static function topPoster() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'TOPPOSTER');
+        return new ColumnField('topPoster', 'StatisticSettings', 'statistik_einstellungen', 'TOPPOSTER');
     }
     public static function xDays() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'XDAYS');
+        return new ColumnField('xDays', 'StatisticSettings', 'statistik_einstellungen', 'XDAYS');
     }
     public static function xThreads() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'XTHREADS');
+        return new ColumnField('xThreads', 'StatisticSettings', 'statistik_einstellungen', 'XTHREADS');
     }
     public static function polls() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'POLLS');
+        return new ColumnField('polls', 'StatisticSettings', 'statistik_einstellungen', 'POLLS');
     }
     public static function sticky() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'STICKY');
+        return new ColumnField('sticky', 'StatisticSettings', 'statistik_einstellungen', 'STICKY');
     }
     public static function search() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'SEARCH');
+        return new ColumnField('search', 'StatisticSettings', 'statistik_einstellungen', 'SEARCH');
     }
     public static function topref() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'TOPREF');
+        return new ColumnField('topref', 'StatisticSettings', 'statistik_einstellungen', 'TOPREF');
     }
     public static function topld() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'TOPLD');
+        return new ColumnField('topld', 'StatisticSettings', 'statistik_einstellungen', 'TOPLD');
     }
 
     public function getTableName(): string
@@ -137,6 +137,14 @@ class StatisticSettings implements Table {
     public function __listColumns() : array
     {
         return ['RESET', 'LOGTIME', 'DOMAIN', 'TOPTHREAD', 'POPTHREAD', 'POPFORUM', 'NEWREGISTER', 'VISIT', 'WRITTENTHREADS', 'WRITTENPOST', 'TOPPOSTER', 'XDAYS', 'XTHREADS', 'POLLS', 'STICKY', 'SEARCH', 'TOPREF', 'TOPLD'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -191,5 +199,4 @@ class StatisticSettings implements Table {
 			'TOPLD' => 'topld'
 		];
     }
-
 }

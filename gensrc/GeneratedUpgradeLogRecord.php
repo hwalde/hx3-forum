@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedUpgradeLogRecord implements Record {
     
     /** @var $upgradeLogId int */
-    private $upgradeLogId;
+    protected $upgradeLogId;
     
     /** @var $script string */
-    private $script;
+    protected $script;
     
     /** @var $stepTitle string */
-    private $stepTitle;
+    protected $stepTitle;
     
     /** @var $step int */
-    private $step;
+    protected $step;
     
     /** @var $startAt int */
-    private $startAt;
+    protected $startAt;
     
     /** @var $perPage int */
-    private $perPage;
+    protected $perPage;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasUpgradeLogId(): bool
     {

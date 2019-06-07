@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedDeletionLogRecord implements Record {
     
     /** @var $primaryId int */
-    private $primaryId;
+    protected $primaryId;
     
     /** @var $type string */
-    private $type;
+    protected $type;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     /** @var $reason string */
-    private $reason;
+    protected $reason;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasPrimaryId(): bool
     {

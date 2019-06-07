@@ -17,43 +17,43 @@ class PostEditHistoryAlias extends TableAlias {
    
     public function postEditHistoryid() : ColumnField
     {
-        return new ColumnField('postedithistory', 'postedithistoryid', $this->getAliasName());
+        return new ColumnField('postEditHistoryid', 'PostEditHistory', 'postedithistory', 'postedithistoryid', $this->getAliasName());
     }
     public function postId() : ColumnField
     {
-        return new ColumnField('postedithistory', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'PostEditHistory', 'postedithistory', 'postid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('postedithistory', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PostEditHistory', 'postedithistory', 'userid', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('postedithistory', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'PostEditHistory', 'postedithistory', 'username', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('postedithistory', 'title', $this->getAliasName());
+        return new ColumnField('title', 'PostEditHistory', 'postedithistory', 'title', $this->getAliasName());
     }
     public function iconId() : ColumnField
     {
-        return new ColumnField('postedithistory', 'iconid', $this->getAliasName());
+        return new ColumnField('iconId', 'PostEditHistory', 'postedithistory', 'iconid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('postedithistory', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PostEditHistory', 'postedithistory', 'dateline', $this->getAliasName());
     }
     public function reason() : ColumnField
     {
-        return new ColumnField('postedithistory', 'reason', $this->getAliasName());
+        return new ColumnField('reason', 'PostEditHistory', 'postedithistory', 'reason', $this->getAliasName());
     }
     public function original() : ColumnField
     {
-        return new ColumnField('postedithistory', 'original', $this->getAliasName());
+        return new ColumnField('original', 'PostEditHistory', 'postedithistory', 'original', $this->getAliasName());
     }
     public function pageText() : ColumnField
     {
-        return new ColumnField('postedithistory', 'pagetext', $this->getAliasName());
+        return new ColumnField('pageText', 'PostEditHistory', 'postedithistory', 'pagetext', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -64,6 +64,14 @@ class PostEditHistoryAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['postedithistoryid', 'postid', 'userid', 'username', 'title', 'iconid', 'dateline', 'reason', 'original', 'pagetext'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postedithistoryid'];
     }
     
     public function __listNullableColumns() : array

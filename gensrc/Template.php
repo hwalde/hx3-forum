@@ -50,43 +50,43 @@ class Template implements Table {
     
     public static function templateId() : ColumnField
     {
-        return new ColumnField('template', 'templateid');
+        return new ColumnField('templateId', 'Template', 'template', 'templateid');
     }
     public static function styleId() : ColumnField
     {
-        return new ColumnField('template', 'styleid');
+        return new ColumnField('styleId', 'Template', 'template', 'styleid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('template', 'title');
+        return new ColumnField('title', 'Template', 'template', 'title');
     }
     public static function template() : ColumnField
     {
-        return new ColumnField('template', 'template');
+        return new ColumnField('template', 'Template', 'template', 'template');
     }
     public static function templateUn() : ColumnField
     {
-        return new ColumnField('template', 'template_un');
+        return new ColumnField('templateUn', 'Template', 'template', 'template_un');
     }
     public static function templateType() : ColumnField
     {
-        return new ColumnField('template', 'templatetype');
+        return new ColumnField('templateType', 'Template', 'template', 'templatetype');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('template', 'dateline');
+        return new ColumnField('dateLine', 'Template', 'template', 'dateline');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('template', 'username');
+        return new ColumnField('userName', 'Template', 'template', 'username');
     }
     public static function version() : ColumnField
     {
-        return new ColumnField('template', 'version');
+        return new ColumnField('version', 'Template', 'template', 'version');
     }
     public static function product() : ColumnField
     {
-        return new ColumnField('template', 'product');
+        return new ColumnField('product', 'Template', 'template', 'product');
     }
 
     public function getTableName(): string
@@ -97,6 +97,14 @@ class Template implements Table {
     public function __listColumns() : array
     {
         return ['templateid', 'styleid', 'title', 'template', 'template_un', 'templatetype', 'dateline', 'username', 'version', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['templateid'];
     }
     
     public function __listNullableColumns() : array
@@ -135,5 +143,4 @@ class Template implements Table {
 			'product' => 'product'
 		];
     }
-
 }

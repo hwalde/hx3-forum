@@ -17,19 +17,19 @@ class TagThreadAlias extends TableAlias {
    
     public function tagId() : ColumnField
     {
-        return new ColumnField('tagthread', 'tagid', $this->getAliasName());
+        return new ColumnField('tagId', 'TagThread', 'tagthread', 'tagid', $this->getAliasName());
     }
     public function threadId() : ColumnField
     {
-        return new ColumnField('tagthread', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'TagThread', 'tagthread', 'threadid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('tagthread', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'TagThread', 'tagthread', 'userid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('tagthread', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'TagThread', 'tagthread', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class TagThreadAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['tagid', 'threadid', 'userid', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['tagid', 'threadid'];
     }
     
     public function __listNullableColumns() : array

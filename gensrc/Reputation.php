@@ -47,31 +47,31 @@ class Reputation implements Table {
     
     public static function reputationId() : ColumnField
     {
-        return new ColumnField('reputation', 'reputationid');
+        return new ColumnField('reputationId', 'Reputation', 'reputation', 'reputationid');
     }
     public static function postId() : ColumnField
     {
-        return new ColumnField('reputation', 'postid');
+        return new ColumnField('postId', 'Reputation', 'reputation', 'postid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('reputation', 'userid');
+        return new ColumnField('userId', 'Reputation', 'reputation', 'userid');
     }
     public static function reputation() : ColumnField
     {
-        return new ColumnField('reputation', 'reputation');
+        return new ColumnField('reputation', 'Reputation', 'reputation', 'reputation');
     }
     public static function whoAdded() : ColumnField
     {
-        return new ColumnField('reputation', 'whoadded');
+        return new ColumnField('whoAdded', 'Reputation', 'reputation', 'whoadded');
     }
     public static function reason() : ColumnField
     {
-        return new ColumnField('reputation', 'reason');
+        return new ColumnField('reason', 'Reputation', 'reputation', 'reason');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('reputation', 'dateline');
+        return new ColumnField('dateLine', 'Reputation', 'reputation', 'dateline');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class Reputation implements Table {
     public function __listColumns() : array
     {
         return ['reputationid', 'postid', 'userid', 'reputation', 'whoadded', 'reason', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['reputationid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class Reputation implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

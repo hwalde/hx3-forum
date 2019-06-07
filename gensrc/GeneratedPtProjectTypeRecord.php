@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedPtProjectTypeRecord implements Record {
     
     /** @var $projectId int */
-    private $projectId;
+    protected $projectId;
     
     /** @var $issueTypeId string */
-    private $issueTypeId;
+    protected $issueTypeId;
     
     /** @var $startStatusId int */
-    private $startStatusId;
+    protected $startStatusId;
     
     /** @var $issueCount int */
-    private $issueCount;
+    protected $issueCount;
     
     /** @var $lastActivity int */
-    private $lastActivity;
+    protected $lastActivity;
     
     public function hasProjectId(): bool
     {

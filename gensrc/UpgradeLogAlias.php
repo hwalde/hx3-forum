@@ -17,31 +17,31 @@ class UpgradeLogAlias extends TableAlias {
    
     public function upgradeLogId() : ColumnField
     {
-        return new ColumnField('upgradelog', 'upgradelogid', $this->getAliasName());
+        return new ColumnField('upgradeLogId', 'UpgradeLog', 'upgradelog', 'upgradelogid', $this->getAliasName());
     }
     public function script() : ColumnField
     {
-        return new ColumnField('upgradelog', 'script', $this->getAliasName());
+        return new ColumnField('script', 'UpgradeLog', 'upgradelog', 'script', $this->getAliasName());
     }
     public function stepTitle() : ColumnField
     {
-        return new ColumnField('upgradelog', 'steptitle', $this->getAliasName());
+        return new ColumnField('stepTitle', 'UpgradeLog', 'upgradelog', 'steptitle', $this->getAliasName());
     }
     public function step() : ColumnField
     {
-        return new ColumnField('upgradelog', 'step', $this->getAliasName());
+        return new ColumnField('step', 'UpgradeLog', 'upgradelog', 'step', $this->getAliasName());
     }
     public function startAt() : ColumnField
     {
-        return new ColumnField('upgradelog', 'startat', $this->getAliasName());
+        return new ColumnField('startAt', 'UpgradeLog', 'upgradelog', 'startat', $this->getAliasName());
     }
     public function perPage() : ColumnField
     {
-        return new ColumnField('upgradelog', 'perpage', $this->getAliasName());
+        return new ColumnField('perPage', 'UpgradeLog', 'upgradelog', 'perpage', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('upgradelog', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'UpgradeLog', 'upgradelog', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class UpgradeLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['upgradelogid', 'script', 'steptitle', 'step', 'startat', 'perpage', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['upgradelogid'];
     }
     
     public function __listNullableColumns() : array

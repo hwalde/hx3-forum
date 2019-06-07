@@ -42,11 +42,11 @@ class TagSearch implements Table {
     
     public static function tagId() : ColumnField
     {
-        return new ColumnField('tagsearch', 'tagid');
+        return new ColumnField('tagId', 'TagSearch', 'tagsearch', 'tagid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('tagsearch', 'dateline');
+        return new ColumnField('dateLine', 'TagSearch', 'tagsearch', 'dateline');
     }
 
     public function getTableName(): string
@@ -57,6 +57,14 @@ class TagSearch implements Table {
     public function __listColumns() : array
     {
         return ['tagid', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -79,5 +87,4 @@ class TagSearch implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

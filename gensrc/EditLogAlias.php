@@ -17,27 +17,27 @@ class EditLogAlias extends TableAlias {
    
     public function postId() : ColumnField
     {
-        return new ColumnField('editlog', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'EditLog', 'editlog', 'postid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('editlog', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'EditLog', 'editlog', 'userid', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('editlog', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'EditLog', 'editlog', 'username', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('editlog', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'EditLog', 'editlog', 'dateline', $this->getAliasName());
     }
     public function reason() : ColumnField
     {
-        return new ColumnField('editlog', 'reason', $this->getAliasName());
+        return new ColumnField('reason', 'EditLog', 'editlog', 'reason', $this->getAliasName());
     }
     public function hasHistory() : ColumnField
     {
-        return new ColumnField('editlog', 'hashistory', $this->getAliasName());
+        return new ColumnField('hasHistory', 'EditLog', 'editlog', 'hashistory', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class EditLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['postid', 'userid', 'username', 'dateline', 'reason', 'hashistory'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid'];
     }
     
     public function __listNullableColumns() : array

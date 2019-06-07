@@ -44,19 +44,19 @@ class PtProjectVersionGroup implements Table {
     
     public static function projectVersionGroupId() : ColumnField
     {
-        return new ColumnField('pt_projectversiongroup', 'projectversiongroupid');
+        return new ColumnField('projectVersionGroupId', 'PtProjectVersionGroup', 'pt_projectversiongroup', 'projectversiongroupid');
     }
     public static function projectId() : ColumnField
     {
-        return new ColumnField('pt_projectversiongroup', 'projectid');
+        return new ColumnField('projectId', 'PtProjectVersionGroup', 'pt_projectversiongroup', 'projectid');
     }
     public static function groupName() : ColumnField
     {
-        return new ColumnField('pt_projectversiongroup', 'groupname');
+        return new ColumnField('groupName', 'PtProjectVersionGroup', 'pt_projectversiongroup', 'groupname');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_projectversiongroup', 'displayorder');
+        return new ColumnField('displayOrder', 'PtProjectVersionGroup', 'pt_projectversiongroup', 'displayorder');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class PtProjectVersionGroup implements Table {
     public function __listColumns() : array
     {
         return ['projectversiongroupid', 'projectid', 'groupname', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['projectversiongroupid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class PtProjectVersionGroup implements Table {
 			'displayorder' => 'displayOrder'
 		];
     }
-
 }

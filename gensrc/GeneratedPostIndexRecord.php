@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedPostIndexRecord implements Record {
     
     /** @var $wordId int */
-    private $wordId;
+    protected $wordId;
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $inTitle int */
-    private $inTitle;
+    protected $inTitle;
     
     /** @var $score int */
-    private $score;
+    protected $score;
     
     public function hasWordId(): bool
     {

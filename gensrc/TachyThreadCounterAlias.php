@@ -17,15 +17,15 @@ class TachyThreadCounterAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('tachythreadcounter', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'TachyThreadCounter', 'tachythreadcounter', 'userid', $this->getAliasName());
     }
     public function threadId() : ColumnField
     {
-        return new ColumnField('tachythreadcounter', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'TachyThreadCounter', 'tachythreadcounter', 'threadid', $this->getAliasName());
     }
     public function replyCount() : ColumnField
     {
-        return new ColumnField('tachythreadcounter', 'replycount', $this->getAliasName());
+        return new ColumnField('replyCount', 'TachyThreadCounter', 'tachythreadcounter', 'replycount', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class TachyThreadCounterAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'threadid', 'replycount'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'threadid'];
     }
     
     public function __listNullableColumns() : array

@@ -17,19 +17,19 @@ class SubscribeForumAlias extends TableAlias {
    
     public function subscribeForumId() : ColumnField
     {
-        return new ColumnField('subscribeforum', 'subscribeforumid', $this->getAliasName());
+        return new ColumnField('subscribeForumId', 'SubscribeForum', 'subscribeforum', 'subscribeforumid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('subscribeforum', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'SubscribeForum', 'subscribeforum', 'userid', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('subscribeforum', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'SubscribeForum', 'subscribeforum', 'forumid', $this->getAliasName());
     }
     public function emailUpdate() : ColumnField
     {
-        return new ColumnField('subscribeforum', 'emailupdate', $this->getAliasName());
+        return new ColumnField('emailUpdate', 'SubscribeForum', 'subscribeforum', 'emailupdate', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class SubscribeForumAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['subscribeforumid', 'userid', 'forumid', 'emailupdate'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscribeforumid'];
     }
     
     public function __listNullableColumns() : array

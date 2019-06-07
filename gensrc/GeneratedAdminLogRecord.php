@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedAdminLogRecord implements Record {
     
     /** @var $adminLogId int */
-    private $adminLogId;
+    protected $adminLogId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $script string */
-    private $script;
+    protected $script;
     
     /** @var $action string */
-    private $action;
+    protected $action;
     
     /** @var $extraInfo string */
-    private $extraInfo;
+    protected $extraInfo;
     
     /** @var $ipAddress string */
-    private $ipAddress;
+    protected $ipAddress;
     
     public function hasAdminLogId(): bool
     {

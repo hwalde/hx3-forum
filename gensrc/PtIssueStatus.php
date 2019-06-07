@@ -44,19 +44,19 @@ class PtIssueStatus implements Table {
     
     public static function issueStatusId() : ColumnField
     {
-        return new ColumnField('pt_issuestatus', 'issuestatusid');
+        return new ColumnField('issueStatusId', 'PtIssueStatus', 'pt_issuestatus', 'issuestatusid');
     }
     public static function issueTypeId() : ColumnField
     {
-        return new ColumnField('pt_issuestatus', 'issuetypeid');
+        return new ColumnField('issueTypeId', 'PtIssueStatus', 'pt_issuestatus', 'issuetypeid');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_issuestatus', 'displayorder');
+        return new ColumnField('displayOrder', 'PtIssueStatus', 'pt_issuestatus', 'displayorder');
     }
     public static function canpetitionFrom() : ColumnField
     {
-        return new ColumnField('pt_issuestatus', 'canpetitionfrom');
+        return new ColumnField('canpetitionFrom', 'PtIssueStatus', 'pt_issuestatus', 'canpetitionfrom');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class PtIssueStatus implements Table {
     public function __listColumns() : array
     {
         return ['issuestatusid', 'issuetypeid', 'displayorder', 'canpetitionfrom'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuestatusid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class PtIssueStatus implements Table {
 			'canpetitionfrom' => 'canpetitionFrom'
 		];
     }
-
 }

@@ -47,31 +47,31 @@ class AdminHelp implements Table {
     
     public static function adminHelpId() : ColumnField
     {
-        return new ColumnField('adminhelp', 'adminhelpid');
+        return new ColumnField('adminHelpId', 'AdminHelp', 'adminhelp', 'adminhelpid');
     }
     public static function script() : ColumnField
     {
-        return new ColumnField('adminhelp', 'script');
+        return new ColumnField('script', 'AdminHelp', 'adminhelp', 'script');
     }
     public static function action() : ColumnField
     {
-        return new ColumnField('adminhelp', 'action');
+        return new ColumnField('action', 'AdminHelp', 'adminhelp', 'action');
     }
     public static function optionName() : ColumnField
     {
-        return new ColumnField('adminhelp', 'optionname');
+        return new ColumnField('optionName', 'AdminHelp', 'adminhelp', 'optionname');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('adminhelp', 'displayorder');
+        return new ColumnField('displayOrder', 'AdminHelp', 'adminhelp', 'displayorder');
     }
     public static function volatile() : ColumnField
     {
-        return new ColumnField('adminhelp', 'volatile');
+        return new ColumnField('volatile', 'AdminHelp', 'adminhelp', 'volatile');
     }
     public static function product() : ColumnField
     {
-        return new ColumnField('adminhelp', 'product');
+        return new ColumnField('product', 'AdminHelp', 'adminhelp', 'product');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class AdminHelp implements Table {
     public function __listColumns() : array
     {
         return ['adminhelpid', 'script', 'action', 'optionname', 'displayorder', 'volatile', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['adminhelpid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class AdminHelp implements Table {
 			'product' => 'product'
 		];
     }
-
 }

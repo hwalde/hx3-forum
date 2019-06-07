@@ -14,31 +14,31 @@ use POOQ\Record;
 class GeneratedRanksRecord implements Record {
     
     /** @var $rankId int */
-    private $rankId;
+    protected $rankId;
     
     /** @var $minPosts int */
-    private $minPosts;
+    protected $minPosts;
     
     /** @var $rankLevel int */
-    private $rankLevel;
+    protected $rankLevel;
     
     /** @var $rankimg string */
-    private $rankimg;
+    protected $rankimg;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $type int */
-    private $type;
+    protected $type;
     
     /** @var $importRanksId int */
-    private $importRanksId;
+    protected $importRanksId;
     
     /** @var $stack int */
-    private $stack;
+    protected $stack;
     
     /** @var $display int */
-    private $display;
+    protected $display;
     
     public function hasRankId(): bool
     {

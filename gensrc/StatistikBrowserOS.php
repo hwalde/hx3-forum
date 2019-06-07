@@ -43,15 +43,15 @@ class StatistikBrowserOS implements Table {
     
     public static function typ() : ColumnField
     {
-        return new ColumnField('statistik_browser_os', 'Typ');
+        return new ColumnField('typ', 'StatistikBrowserOS', 'statistik_browser_os', 'Typ');
     }
     public static function system() : ColumnField
     {
-        return new ColumnField('statistik_browser_os', 'System');
+        return new ColumnField('system', 'StatistikBrowserOS', 'statistik_browser_os', 'System');
     }
     public static function zaehler() : ColumnField
     {
-        return new ColumnField('statistik_browser_os', 'Zaehler');
+        return new ColumnField('zaehler', 'StatistikBrowserOS', 'statistik_browser_os', 'Zaehler');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class StatistikBrowserOS implements Table {
     public function __listColumns() : array
     {
         return ['Typ', 'System', 'Zaehler'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class StatistikBrowserOS implements Table {
 			'Zaehler' => 'zaehler'
 		];
     }
-
 }

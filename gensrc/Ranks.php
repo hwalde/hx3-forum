@@ -49,39 +49,39 @@ class Ranks implements Table {
     
     public static function rankId() : ColumnField
     {
-        return new ColumnField('ranks', 'rankid');
+        return new ColumnField('rankId', 'Ranks', 'ranks', 'rankid');
     }
     public static function minPosts() : ColumnField
     {
-        return new ColumnField('ranks', 'minposts');
+        return new ColumnField('minPosts', 'Ranks', 'ranks', 'minposts');
     }
     public static function rankLevel() : ColumnField
     {
-        return new ColumnField('ranks', 'ranklevel');
+        return new ColumnField('rankLevel', 'Ranks', 'ranks', 'ranklevel');
     }
     public static function rankimg() : ColumnField
     {
-        return new ColumnField('ranks', 'rankimg');
+        return new ColumnField('rankimg', 'Ranks', 'ranks', 'rankimg');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('ranks', 'usergroupid');
+        return new ColumnField('userGroupId', 'Ranks', 'ranks', 'usergroupid');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('ranks', 'type');
+        return new ColumnField('type', 'Ranks', 'ranks', 'type');
     }
     public static function importRanksId() : ColumnField
     {
-        return new ColumnField('ranks', 'importranksid');
+        return new ColumnField('importRanksId', 'Ranks', 'ranks', 'importranksid');
     }
     public static function stack() : ColumnField
     {
-        return new ColumnField('ranks', 'stack');
+        return new ColumnField('stack', 'Ranks', 'ranks', 'stack');
     }
     public static function display() : ColumnField
     {
-        return new ColumnField('ranks', 'display');
+        return new ColumnField('display', 'Ranks', 'ranks', 'display');
     }
 
     public function getTableName(): string
@@ -92,6 +92,14 @@ class Ranks implements Table {
     public function __listColumns() : array
     {
         return ['rankid', 'minposts', 'ranklevel', 'rankimg', 'usergroupid', 'type', 'importranksid', 'stack', 'display'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['rankid'];
     }
     
     public function __listNullableColumns() : array
@@ -128,5 +136,4 @@ class Ranks implements Table {
 			'display' => 'display'
 		];
     }
-
 }

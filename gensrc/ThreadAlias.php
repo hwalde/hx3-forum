@@ -18,119 +18,119 @@ class ThreadAlias extends TableAlias {
    
     public function threadId() : ColumnField
     {
-        return new ColumnField('thread', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'Thread', 'thread', 'threadid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('thread', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Thread', 'thread', 'title', $this->getAliasName());
     }
     public function firstPostId() : ColumnField
     {
-        return new ColumnField('thread', 'firstpostid', $this->getAliasName());
+        return new ColumnField('firstPostId', 'Thread', 'thread', 'firstpostid', $this->getAliasName());
     }
     public function lastPost() : ColumnField
     {
-        return new ColumnField('thread', 'lastpost', $this->getAliasName());
+        return new ColumnField('lastPost', 'Thread', 'thread', 'lastpost', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('thread', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'Thread', 'thread', 'forumid', $this->getAliasName());
     }
     public function pollId() : ColumnField
     {
-        return new ColumnField('thread', 'pollid', $this->getAliasName());
+        return new ColumnField('pollId', 'Thread', 'thread', 'pollid', $this->getAliasName());
     }
     public function open() : ColumnField
     {
-        return new ColumnField('thread', 'open', $this->getAliasName());
+        return new ColumnField('open', 'Thread', 'thread', 'open', $this->getAliasName());
     }
     public function replyCount() : ColumnField
     {
-        return new ColumnField('thread', 'replycount', $this->getAliasName());
+        return new ColumnField('replyCount', 'Thread', 'thread', 'replycount', $this->getAliasName());
     }
     public function postUserName() : ColumnField
     {
-        return new ColumnField('thread', 'postusername', $this->getAliasName());
+        return new ColumnField('postUserName', 'Thread', 'thread', 'postusername', $this->getAliasName());
     }
     public function postUserId() : ColumnField
     {
-        return new ColumnField('thread', 'postuserid', $this->getAliasName());
+        return new ColumnField('postUserId', 'Thread', 'thread', 'postuserid', $this->getAliasName());
     }
     public function lastPoster() : ColumnField
     {
-        return new ColumnField('thread', 'lastposter', $this->getAliasName());
+        return new ColumnField('lastPoster', 'Thread', 'thread', 'lastposter', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('thread', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Thread', 'thread', 'dateline', $this->getAliasName());
     }
     public function views() : ColumnField
     {
-        return new ColumnField('thread', 'views', $this->getAliasName());
+        return new ColumnField('views', 'Thread', 'thread', 'views', $this->getAliasName());
     }
     public function iconId() : ColumnField
     {
-        return new ColumnField('thread', 'iconid', $this->getAliasName());
+        return new ColumnField('iconId', 'Thread', 'thread', 'iconid', $this->getAliasName());
     }
     public function notes() : ColumnField
     {
-        return new ColumnField('thread', 'notes', $this->getAliasName());
+        return new ColumnField('notes', 'Thread', 'thread', 'notes', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('thread', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'Thread', 'thread', 'visible', $this->getAliasName());
     }
     public function sticky() : ColumnField
     {
-        return new ColumnField('thread', 'sticky', $this->getAliasName());
+        return new ColumnField('sticky', 'Thread', 'thread', 'sticky', $this->getAliasName());
     }
     public function voteNum() : ColumnField
     {
-        return new ColumnField('thread', 'votenum', $this->getAliasName());
+        return new ColumnField('voteNum', 'Thread', 'thread', 'votenum', $this->getAliasName());
     }
     public function voteTotal() : ColumnField
     {
-        return new ColumnField('thread', 'votetotal', $this->getAliasName());
+        return new ColumnField('voteTotal', 'Thread', 'thread', 'votetotal', $this->getAliasName());
     }
     public function attach() : ColumnField
     {
-        return new ColumnField('thread', 'attach', $this->getAliasName());
+        return new ColumnField('attach', 'Thread', 'thread', 'attach', $this->getAliasName());
     }
     public function similar() : ColumnField
     {
-        return new ColumnField('thread', 'similar', $this->getAliasName());
+        return new ColumnField('similar', 'Thread', 'thread', 'similar', $this->getAliasName());
     }
     public function importThreadId() : ColumnField
     {
-        return new ColumnField('thread', 'importthreadid', $this->getAliasName());
+        return new ColumnField('importThreadId', 'Thread', 'thread', 'importthreadid', $this->getAliasName());
     }
     public function importForumId() : ColumnField
     {
-        return new ColumnField('thread', 'importforumid', $this->getAliasName());
+        return new ColumnField('importForumId', 'Thread', 'thread', 'importforumid', $this->getAliasName());
     }
     public function hiddenCount() : ColumnField
     {
-        return new ColumnField('thread', 'hiddencount', $this->getAliasName());
+        return new ColumnField('hiddenCount', 'Thread', 'thread', 'hiddencount', $this->getAliasName());
     }
     public function deletedCount() : ColumnField
     {
-        return new ColumnField('thread', 'deletedcount', $this->getAliasName());
+        return new ColumnField('deletedCount', 'Thread', 'thread', 'deletedcount', $this->getAliasName());
     }
     public function lastPostId() : ColumnField
     {
-        return new ColumnField('thread', 'lastpostid', $this->getAliasName());
+        return new ColumnField('lastPostId', 'Thread', 'thread', 'lastpostid', $this->getAliasName());
     }
     public function prefixId() : ColumnField
     {
-        return new ColumnField('thread', 'prefixid', $this->getAliasName());
+        return new ColumnField('prefixId', 'Thread', 'thread', 'prefixid', $this->getAliasName());
     }
     public function tagList() : ColumnField
     {
-        return new ColumnField('thread', 'taglist', $this->getAliasName());
+        return new ColumnField('tagList', 'Thread', 'thread', 'taglist', $this->getAliasName());
     }
     public function vbSeoLinkbacksNo() : ColumnField
     {
-        return new ColumnField('thread', 'vbseo_linkbacks_no', $this->getAliasName());
+        return new ColumnField('vbSeoLinkbacksNo', 'Thread', 'thread', 'vbseo_linkbacks_no', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -141,6 +141,14 @@ class ThreadAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['threadid', 'title', 'firstpostid', 'lastpost', 'forumid', 'pollid', 'open', 'replycount', 'postusername', 'postuserid', 'lastposter', 'dateline', 'views', 'iconid', 'notes', 'visible', 'sticky', 'votenum', 'votetotal', 'attach', 'similar', 'importthreadid', 'importforumid', 'hiddencount', 'deletedcount', 'lastpostid', 'prefixid', 'taglist', 'vbseo_linkbacks_no'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['threadid'];
     }
     
     public function __listNullableColumns() : array

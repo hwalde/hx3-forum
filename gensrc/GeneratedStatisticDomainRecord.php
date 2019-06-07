@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedStatisticDomainRecord implements Record {
     
     /** @var $id int */
-    private $id;
+    protected $id;
     
     /** @var $domain string */
-    private $domain;
+    protected $domain;
     
     /** @var $zaehler int */
-    private $zaehler;
+    protected $zaehler;
     
     public function hasId(): bool
     {

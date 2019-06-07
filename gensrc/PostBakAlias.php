@@ -17,75 +17,75 @@ class PostBakAlias extends TableAlias {
    
     public function postId() : ColumnField
     {
-        return new ColumnField('post_bak', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'PostBak', 'post_bak', 'postid', $this->getAliasName());
     }
     public function threadId() : ColumnField
     {
-        return new ColumnField('post_bak', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'PostBak', 'post_bak', 'threadid', $this->getAliasName());
     }
     public function parentId() : ColumnField
     {
-        return new ColumnField('post_bak', 'parentid', $this->getAliasName());
+        return new ColumnField('parentId', 'PostBak', 'post_bak', 'parentid', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('post_bak', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'PostBak', 'post_bak', 'username', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('post_bak', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PostBak', 'post_bak', 'userid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('post_bak', 'title', $this->getAliasName());
+        return new ColumnField('title', 'PostBak', 'post_bak', 'title', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('post_bak', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PostBak', 'post_bak', 'dateline', $this->getAliasName());
     }
     public function pageText() : ColumnField
     {
-        return new ColumnField('post_bak', 'pagetext', $this->getAliasName());
+        return new ColumnField('pageText', 'PostBak', 'post_bak', 'pagetext', $this->getAliasName());
     }
     public function allowSmilie() : ColumnField
     {
-        return new ColumnField('post_bak', 'allowsmilie', $this->getAliasName());
+        return new ColumnField('allowSmilie', 'PostBak', 'post_bak', 'allowsmilie', $this->getAliasName());
     }
     public function showSignature() : ColumnField
     {
-        return new ColumnField('post_bak', 'showsignature', $this->getAliasName());
+        return new ColumnField('showSignature', 'PostBak', 'post_bak', 'showsignature', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('post_bak', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'PostBak', 'post_bak', 'ipaddress', $this->getAliasName());
     }
     public function iconId() : ColumnField
     {
-        return new ColumnField('post_bak', 'iconid', $this->getAliasName());
+        return new ColumnField('iconId', 'PostBak', 'post_bak', 'iconid', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('post_bak', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'PostBak', 'post_bak', 'visible', $this->getAliasName());
     }
     public function attach() : ColumnField
     {
-        return new ColumnField('post_bak', 'attach', $this->getAliasName());
+        return new ColumnField('attach', 'PostBak', 'post_bak', 'attach', $this->getAliasName());
     }
     public function importThreadId() : ColumnField
     {
-        return new ColumnField('post_bak', 'importthreadid', $this->getAliasName());
+        return new ColumnField('importThreadId', 'PostBak', 'post_bak', 'importthreadid', $this->getAliasName());
     }
     public function importpostId() : ColumnField
     {
-        return new ColumnField('post_bak', 'importpostid', $this->getAliasName());
+        return new ColumnField('importpostId', 'PostBak', 'post_bak', 'importpostid', $this->getAliasName());
     }
     public function infraction() : ColumnField
     {
-        return new ColumnField('post_bak', 'infraction', $this->getAliasName());
+        return new ColumnField('infraction', 'PostBak', 'post_bak', 'infraction', $this->getAliasName());
     }
     public function reportThreadId() : ColumnField
     {
-        return new ColumnField('post_bak', 'reportthreadid', $this->getAliasName());
+        return new ColumnField('reportThreadId', 'PostBak', 'post_bak', 'reportthreadid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -96,6 +96,14 @@ class PostBakAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['postid', 'threadid', 'parentid', 'username', 'userid', 'title', 'dateline', 'pagetext', 'allowsmilie', 'showsignature', 'ipaddress', 'iconid', 'visible', 'attach', 'importthreadid', 'importpostid', 'infraction', 'reportthreadid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid'];
     }
     
     public function __listNullableColumns() : array

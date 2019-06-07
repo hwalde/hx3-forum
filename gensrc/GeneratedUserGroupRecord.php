@@ -14,145 +14,145 @@ use POOQ\Record;
 class GeneratedUserGroupRecord implements Record {
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $description string */
-    private $description;
+    protected $description;
     
     /** @var $userTitle string */
-    private $userTitle;
+    protected $userTitle;
     
     /** @var $passwordExpires int */
-    private $passwordExpires;
+    protected $passwordExpires;
     
     /** @var $passwordHistory int */
-    private $passwordHistory;
+    protected $passwordHistory;
     
     /** @var $pmQuota int */
-    private $pmQuota;
+    protected $pmQuota;
     
     /** @var $pmSendmax int */
-    private $pmSendmax;
+    protected $pmSendmax;
     
     /** @var $openTag string */
-    private $openTag;
+    protected $openTag;
     
     /** @var $closeTag string */
-    private $closeTag;
+    protected $closeTag;
     
     /** @var $canOverride int */
-    private $canOverride;
+    protected $canOverride;
     
     /** @var $isPublicGroup int */
-    private $isPublicGroup;
+    protected $isPublicGroup;
     
     /** @var $forumPermissions int */
-    private $forumPermissions;
+    protected $forumPermissions;
     
     /** @var $pmPermissions int */
-    private $pmPermissions;
+    protected $pmPermissions;
     
     /** @var $calendarPermissions int */
-    private $calendarPermissions;
+    protected $calendarPermissions;
     
     /** @var $wolPermissions int */
-    private $wolPermissions;
+    protected $wolPermissions;
     
     /** @var $adminPermissions int */
-    private $adminPermissions;
+    protected $adminPermissions;
     
     /** @var $genericPermissions int */
-    private $genericPermissions;
+    protected $genericPermissions;
     
     /** @var $genericOptions int */
-    private $genericOptions;
+    protected $genericOptions;
     
     /** @var $attachLimit int */
-    private $attachLimit;
+    protected $attachLimit;
     
     /** @var $avatarMaxWidth int */
-    private $avatarMaxWidth;
+    protected $avatarMaxWidth;
     
     /** @var $avatarMaxHeight int */
-    private $avatarMaxHeight;
+    protected $avatarMaxHeight;
     
     /** @var $avatarMaxSize int */
-    private $avatarMaxSize;
+    protected $avatarMaxSize;
     
     /** @var $profilePicMaxWidth int */
-    private $profilePicMaxWidth;
+    protected $profilePicMaxWidth;
     
     /** @var $profilePicMaxHeight int */
-    private $profilePicMaxHeight;
+    protected $profilePicMaxHeight;
     
     /** @var $profilePicMaxSize int */
-    private $profilePicMaxSize;
+    protected $profilePicMaxSize;
     
     /** @var $importUserGroupId int */
-    private $importUserGroupId;
+    protected $importUserGroupId;
     
     /** @var $signaturePermissions int */
-    private $signaturePermissions;
+    protected $signaturePermissions;
     
     /** @var $sigPicMaxWidth int */
-    private $sigPicMaxWidth;
+    protected $sigPicMaxWidth;
     
     /** @var $sigPicMaxheight int */
-    private $sigPicMaxheight;
+    protected $sigPicMaxheight;
     
     /** @var $sigPicMaxSize int */
-    private $sigPicMaxSize;
+    protected $sigPicMaxSize;
     
     /** @var $sigMaxImages int */
-    private $sigMaxImages;
+    protected $sigMaxImages;
     
     /** @var $sigMaxSizeBBCode int */
-    private $sigMaxSizeBBCode;
+    protected $sigMaxSizeBBCode;
     
     /** @var $sigMaxChars int */
-    private $sigMaxChars;
+    protected $sigMaxChars;
     
     /** @var $sigMaxRawChars int */
-    private $sigMaxRawChars;
+    protected $sigMaxRawChars;
     
     /** @var $sigMaxLines int */
-    private $sigMaxLines;
+    protected $sigMaxLines;
     
     /** @var $visitorMessagePermissions int */
-    private $visitorMessagePermissions;
+    protected $visitorMessagePermissions;
     
     /** @var $socialGroupPermissions int */
-    private $socialGroupPermissions;
+    protected $socialGroupPermissions;
     
     /** @var $userCssPermissions int */
-    private $userCssPermissions;
+    protected $userCssPermissions;
     
     /** @var $albumPermissions int */
-    private $albumPermissions;
+    protected $albumPermissions;
     
     /** @var $albumPicMaxWidth int */
-    private $albumPicMaxWidth;
+    protected $albumPicMaxWidth;
     
     /** @var $albumPicMaxHeight int */
-    private $albumPicMaxHeight;
+    protected $albumPicMaxHeight;
     
     /** @var $albumPicMaxSize int */
-    private $albumPicMaxSize;
+    protected $albumPicMaxSize;
     
     /** @var $albumMaxPics int */
-    private $albumMaxPics;
+    protected $albumMaxPics;
     
     /** @var $albumMaxSize int */
-    private $albumMaxSize;
+    protected $albumMaxSize;
     
     /** @var $genericpermissions2 int */
-    private $genericpermissions2;
+    protected $genericpermissions2;
     
     /** @var $ptPermissions int */
-    private $ptPermissions;
+    protected $ptPermissions;
     
     public function hasUserGroupId(): bool
     {

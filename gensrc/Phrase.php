@@ -49,39 +49,39 @@ class Phrase implements Table {
     
     public static function phraseId() : ColumnField
     {
-        return new ColumnField('phrase', 'phraseid');
+        return new ColumnField('phraseId', 'Phrase', 'phrase', 'phraseid');
     }
     public static function languageId() : ColumnField
     {
-        return new ColumnField('phrase', 'languageid');
+        return new ColumnField('languageId', 'Phrase', 'phrase', 'languageid');
     }
     public static function varName() : ColumnField
     {
-        return new ColumnField('phrase', 'varname');
+        return new ColumnField('varName', 'Phrase', 'phrase', 'varname');
     }
     public static function text() : ColumnField
     {
-        return new ColumnField('phrase', 'text');
+        return new ColumnField('text', 'Phrase', 'phrase', 'text');
     }
     public static function product() : ColumnField
     {
-        return new ColumnField('phrase', 'product');
+        return new ColumnField('product', 'Phrase', 'phrase', 'product');
     }
     public static function fieldName() : ColumnField
     {
-        return new ColumnField('phrase', 'fieldname');
+        return new ColumnField('fieldName', 'Phrase', 'phrase', 'fieldname');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('phrase', 'username');
+        return new ColumnField('userName', 'Phrase', 'phrase', 'username');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('phrase', 'dateline');
+        return new ColumnField('dateLine', 'Phrase', 'phrase', 'dateline');
     }
     public static function version() : ColumnField
     {
-        return new ColumnField('phrase', 'version');
+        return new ColumnField('version', 'Phrase', 'phrase', 'version');
     }
 
     public function getTableName(): string
@@ -92,6 +92,14 @@ class Phrase implements Table {
     public function __listColumns() : array
     {
         return ['phraseid', 'languageid', 'varname', 'text', 'product', 'fieldname', 'username', 'dateline', 'version'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['phraseid'];
     }
     
     public function __listNullableColumns() : array
@@ -128,5 +136,4 @@ class Phrase implements Table {
 			'version' => 'version'
 		];
     }
-
 }

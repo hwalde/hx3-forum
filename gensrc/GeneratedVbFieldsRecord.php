@@ -14,31 +14,31 @@ use POOQ\Record;
 class GeneratedVbFieldsRecord implements Record {
     
     /** @var $fieldId int */
-    private $fieldId;
+    protected $fieldId;
     
     /** @var $fieldName string */
-    private $fieldName;
+    protected $fieldName;
     
     /** @var $fieldType string */
-    private $fieldType;
+    protected $fieldType;
     
     /** @var $isUnsigned string */
-    private $isUnsigned;
+    protected $isUnsigned;
     
     /** @var $tableName string */
-    private $tableName;
+    protected $tableName;
     
     /** @var $createSql string */
-    private $createSql;
+    protected $createSql;
     
     /** @var $vbMandatory string */
-    private $vbMandatory;
+    protected $vbMandatory;
     
     /** @var $defaultValue string|null */
-    private $defaultValue;
+    protected $defaultValue;
     
     /** @var $dictionary string */
-    private $dictionary;
+    protected $dictionary;
     
     public function hasFieldId(): bool
     {

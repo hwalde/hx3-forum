@@ -42,11 +42,11 @@ class AnnouncementRead implements Table {
     
     public static function announcementId() : ColumnField
     {
-        return new ColumnField('announcementread', 'announcementid');
+        return new ColumnField('announcementId', 'AnnouncementRead', 'announcementread', 'announcementid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('announcementread', 'userid');
+        return new ColumnField('userId', 'AnnouncementRead', 'announcementread', 'userid');
     }
 
     public function getTableName(): string
@@ -55,6 +55,14 @@ class AnnouncementRead implements Table {
     }
     
     public function __listColumns() : array
+    {
+        return ['announcementid', 'userid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
     {
         return ['announcementid', 'userid'];
     }
@@ -79,5 +87,4 @@ class AnnouncementRead implements Table {
 			'userid' => 'userId'
 		];
     }
-
 }

@@ -59,79 +59,79 @@ class ProfileField implements Table {
     
     public static function profileFieldId() : ColumnField
     {
-        return new ColumnField('profilefield', 'profilefieldid');
+        return new ColumnField('profileFieldId', 'ProfileField', 'profilefield', 'profilefieldid');
     }
     public static function required() : ColumnField
     {
-        return new ColumnField('profilefield', 'required');
+        return new ColumnField('required', 'ProfileField', 'profilefield', 'required');
     }
     public static function hidden() : ColumnField
     {
-        return new ColumnField('profilefield', 'hidden');
+        return new ColumnField('hidden', 'ProfileField', 'profilefield', 'hidden');
     }
     public static function maxLength() : ColumnField
     {
-        return new ColumnField('profilefield', 'maxlength');
+        return new ColumnField('maxLength', 'ProfileField', 'profilefield', 'maxlength');
     }
     public static function size() : ColumnField
     {
-        return new ColumnField('profilefield', 'size');
+        return new ColumnField('size', 'ProfileField', 'profilefield', 'size');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('profilefield', 'displayorder');
+        return new ColumnField('displayOrder', 'ProfileField', 'profilefield', 'displayorder');
     }
     public static function editable() : ColumnField
     {
-        return new ColumnField('profilefield', 'editable');
+        return new ColumnField('editable', 'ProfileField', 'profilefield', 'editable');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('profilefield', 'type');
+        return new ColumnField('type', 'ProfileField', 'profilefield', 'type');
     }
     public static function data() : ColumnField
     {
-        return new ColumnField('profilefield', 'data');
+        return new ColumnField('data', 'ProfileField', 'profilefield', 'data');
     }
     public static function height() : ColumnField
     {
-        return new ColumnField('profilefield', 'height');
+        return new ColumnField('height', 'ProfileField', 'profilefield', 'height');
     }
     public static function def() : ColumnField
     {
-        return new ColumnField('profilefield', 'def');
+        return new ColumnField('def', 'ProfileField', 'profilefield', 'def');
     }
     public static function optional() : ColumnField
     {
-        return new ColumnField('profilefield', 'optional');
+        return new ColumnField('optional', 'ProfileField', 'profilefield', 'optional');
     }
     public static function searchable() : ColumnField
     {
-        return new ColumnField('profilefield', 'searchable');
+        return new ColumnField('searchable', 'ProfileField', 'profilefield', 'searchable');
     }
     public static function memberList() : ColumnField
     {
-        return new ColumnField('profilefield', 'memberlist');
+        return new ColumnField('memberList', 'ProfileField', 'profilefield', 'memberlist');
     }
     public static function regex() : ColumnField
     {
-        return new ColumnField('profilefield', 'regex');
+        return new ColumnField('regex', 'ProfileField', 'profilefield', 'regex');
     }
     public static function form() : ColumnField
     {
-        return new ColumnField('profilefield', 'form');
+        return new ColumnField('form', 'ProfileField', 'profilefield', 'form');
     }
     public static function html() : ColumnField
     {
-        return new ColumnField('profilefield', 'html');
+        return new ColumnField('html', 'ProfileField', 'profilefield', 'html');
     }
     public static function perLine() : ColumnField
     {
-        return new ColumnField('profilefield', 'perline');
+        return new ColumnField('perLine', 'ProfileField', 'profilefield', 'perline');
     }
     public static function profileFieldCategoryId() : ColumnField
     {
-        return new ColumnField('profilefield', 'profilefieldcategoryid');
+        return new ColumnField('profileFieldCategoryId', 'ProfileField', 'profilefield', 'profilefieldcategoryid');
     }
 
     public function getTableName(): string
@@ -142,6 +142,14 @@ class ProfileField implements Table {
     public function __listColumns() : array
     {
         return ['profilefieldid', 'required', 'hidden', 'maxlength', 'size', 'displayorder', 'editable', 'type', 'data', 'height', 'def', 'optional', 'searchable', 'memberlist', 'regex', 'form', 'html', 'perline', 'profilefieldcategoryid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['profilefieldid'];
     }
     
     public function __listNullableColumns() : array
@@ -198,5 +206,4 @@ class ProfileField implements Table {
 			'profilefieldcategoryid' => 'profileFieldCategoryId'
 		];
     }
-
 }

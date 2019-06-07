@@ -14,37 +14,37 @@ use POOQ\Record;
 class GeneratedGroupMessageRecord implements Record {
     
     /** @var $gmId int */
-    private $gmId;
+    protected $gmId;
     
     /** @var $groupId int */
-    private $groupId;
+    protected $groupId;
     
     /** @var $postUserId int */
-    private $postUserId;
+    protected $postUserId;
     
     /** @var $postUserName string */
-    private $postUserName;
+    protected $postUserName;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $state string */
-    private $state;
+    protected $state;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $pageText string|null */
-    private $pageText;
+    protected $pageText;
     
     /** @var $ipAddress int */
-    private $ipAddress;
+    protected $ipAddress;
     
     /** @var $allowSmilie int */
-    private $allowSmilie;
+    protected $allowSmilie;
     
     /** @var $reportThreadId int */
-    private $reportThreadId;
+    protected $reportThreadId;
     
     public function hasGmId(): bool
     {

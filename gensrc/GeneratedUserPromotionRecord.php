@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedUserPromotionRecord implements Record {
     
     /** @var $userpromotionid int */
-    private $userpromotionid;
+    protected $userpromotionid;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $joinUserGroupId int */
-    private $joinUserGroupId;
+    protected $joinUserGroupId;
     
     /** @var $reputation int */
-    private $reputation;
+    protected $reputation;
     
     /** @var $date int */
-    private $date;
+    protected $date;
     
     /** @var $posts int */
-    private $posts;
+    protected $posts;
     
     /** @var $strategy int */
-    private $strategy;
+    protected $strategy;
     
     /** @var $type int */
-    private $type;
+    protected $type;
     
     public function hasUserpromotionid(): bool
     {

@@ -17,35 +17,35 @@ class CustomProfilePicAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'CustomProfilePic', 'customprofilepic', 'userid', $this->getAliasName());
     }
     public function fileData() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'filedata', $this->getAliasName());
+        return new ColumnField('fileData', 'CustomProfilePic', 'customprofilepic', 'filedata', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'CustomProfilePic', 'customprofilepic', 'dateline', $this->getAliasName());
     }
     public function fileName() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'filename', $this->getAliasName());
+        return new ColumnField('fileName', 'CustomProfilePic', 'customprofilepic', 'filename', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'CustomProfilePic', 'customprofilepic', 'visible', $this->getAliasName());
     }
     public function fileSize() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'filesize', $this->getAliasName());
+        return new ColumnField('fileSize', 'CustomProfilePic', 'customprofilepic', 'filesize', $this->getAliasName());
     }
     public function width() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'width', $this->getAliasName());
+        return new ColumnField('width', 'CustomProfilePic', 'customprofilepic', 'width', $this->getAliasName());
     }
     public function height() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'height', $this->getAliasName());
+        return new ColumnField('height', 'CustomProfilePic', 'customprofilepic', 'height', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class CustomProfilePicAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'filedata', 'dateline', 'filename', 'visible', 'filesize', 'width', 'height'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array

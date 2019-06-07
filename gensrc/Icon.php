@@ -45,23 +45,23 @@ class Icon implements Table {
     
     public static function iconId() : ColumnField
     {
-        return new ColumnField('icon', 'iconid');
+        return new ColumnField('iconId', 'Icon', 'icon', 'iconid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('icon', 'title');
+        return new ColumnField('title', 'Icon', 'icon', 'title');
     }
     public static function iconPath() : ColumnField
     {
-        return new ColumnField('icon', 'iconpath');
+        return new ColumnField('iconPath', 'Icon', 'icon', 'iconpath');
     }
     public static function imageCategoryId() : ColumnField
     {
-        return new ColumnField('icon', 'imagecategoryid');
+        return new ColumnField('imageCategoryId', 'Icon', 'icon', 'imagecategoryid');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('icon', 'displayorder');
+        return new ColumnField('displayOrder', 'Icon', 'icon', 'displayorder');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class Icon implements Table {
     public function __listColumns() : array
     {
         return ['iconid', 'title', 'iconpath', 'imagecategoryid', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['iconid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class Icon implements Table {
 			'displayorder' => 'displayOrder'
 		];
     }
-
 }

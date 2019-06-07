@@ -14,61 +14,61 @@ use POOQ\Record;
 class GeneratedProfileFieldRecord implements Record {
     
     /** @var $profileFieldId int */
-    private $profileFieldId;
+    protected $profileFieldId;
     
     /** @var $required int */
-    private $required;
+    protected $required;
     
     /** @var $hidden int */
-    private $hidden;
+    protected $hidden;
     
     /** @var $maxLength int */
-    private $maxLength;
+    protected $maxLength;
     
     /** @var $size int */
-    private $size;
+    protected $size;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $editable int */
-    private $editable;
+    protected $editable;
     
     /** @var $type string */
-    private $type;
+    protected $type;
     
     /** @var $data string */
-    private $data;
+    protected $data;
     
     /** @var $height int */
-    private $height;
+    protected $height;
     
     /** @var $def int */
-    private $def;
+    protected $def;
     
     /** @var $optional int */
-    private $optional;
+    protected $optional;
     
     /** @var $searchable int */
-    private $searchable;
+    protected $searchable;
     
     /** @var $memberList int */
-    private $memberList;
+    protected $memberList;
     
     /** @var $regex string */
-    private $regex;
+    protected $regex;
     
     /** @var $form int */
-    private $form;
+    protected $form;
     
     /** @var $html int */
-    private $html;
+    protected $html;
     
     /** @var $perLine int */
-    private $perLine;
+    protected $perLine;
     
     /** @var $profileFieldCategoryId int */
-    private $profileFieldCategoryId;
+    protected $profileFieldCategoryId;
     
     public function hasProfileFieldId(): bool
     {

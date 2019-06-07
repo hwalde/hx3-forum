@@ -17,19 +17,19 @@ class VbSeoServiceUpdateAlias extends TableAlias {
    
     public function sThreadId() : ColumnField
     {
-        return new ColumnField('vbseo_serviceupdate', 's_threadid', $this->getAliasName());
+        return new ColumnField('sThreadId', 'VbSeoServiceUpdate', 'vbseo_serviceupdate', 's_threadid', $this->getAliasName());
     }
     public function sUpdated() : ColumnField
     {
-        return new ColumnField('vbseo_serviceupdate', 's_updated', $this->getAliasName());
+        return new ColumnField('sUpdated', 'VbSeoServiceUpdate', 'vbseo_serviceupdate', 's_updated', $this->getAliasName());
     }
     public function sDateLine() : ColumnField
     {
-        return new ColumnField('vbseo_serviceupdate', 's_dateline', $this->getAliasName());
+        return new ColumnField('sDateLine', 'VbSeoServiceUpdate', 'vbseo_serviceupdate', 's_dateline', $this->getAliasName());
     }
     public function sType() : ColumnField
     {
-        return new ColumnField('vbseo_serviceupdate', 's_type', $this->getAliasName());
+        return new ColumnField('sType', 'VbSeoServiceUpdate', 'vbseo_serviceupdate', 's_type', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class VbSeoServiceUpdateAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['s_threadid', 's_updated', 's_dateline', 's_type'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

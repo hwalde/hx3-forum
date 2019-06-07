@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedUserListRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $relationid int */
-    private $relationid;
+    protected $relationid;
     
     /** @var $type string */
-    private $type;
+    protected $type;
     
     /** @var $friend string */
-    private $friend;
+    protected $friend;
     
     public function hasUserId(): bool
     {

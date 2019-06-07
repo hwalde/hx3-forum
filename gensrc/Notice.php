@@ -45,23 +45,23 @@ class Notice implements Table {
     
     public static function noticeId() : ColumnField
     {
-        return new ColumnField('notice', 'noticeid');
+        return new ColumnField('noticeId', 'Notice', 'notice', 'noticeid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('notice', 'title');
+        return new ColumnField('title', 'Notice', 'notice', 'title');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('notice', 'displayorder');
+        return new ColumnField('displayOrder', 'Notice', 'notice', 'displayorder');
     }
     public static function persistent() : ColumnField
     {
-        return new ColumnField('notice', 'persistent');
+        return new ColumnField('persistent', 'Notice', 'notice', 'persistent');
     }
     public static function active() : ColumnField
     {
-        return new ColumnField('notice', 'active');
+        return new ColumnField('active', 'Notice', 'notice', 'active');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class Notice implements Table {
     public function __listColumns() : array
     {
         return ['noticeid', 'title', 'displayorder', 'persistent', 'active'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['noticeid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class Notice implements Table {
 			'active' => 'active'
 		];
     }
-
 }

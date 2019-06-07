@@ -44,19 +44,19 @@ class StatisticLog implements Table {
     
     public static function id() : ColumnField
     {
-        return new ColumnField('statistik_log', 'ID');
+        return new ColumnField('id', 'StatisticLog', 'statistik_log', 'ID');
     }
     public static function IP() : ColumnField
     {
-        return new ColumnField('statistik_log', 'IP');
+        return new ColumnField('IP', 'StatisticLog', 'statistik_log', 'IP');
     }
     public static function loggedInSince() : ColumnField
     {
-        return new ColumnField('statistik_log', 'eingelogt_seit');
+        return new ColumnField('loggedInSince', 'StatisticLog', 'statistik_log', 'eingelogt_seit');
     }
     public static function browserStamp() : ColumnField
     {
-        return new ColumnField('statistik_log', 'Browserstamp');
+        return new ColumnField('browserStamp', 'StatisticLog', 'statistik_log', 'Browserstamp');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class StatisticLog implements Table {
     public function __listColumns() : array
     {
         return ['ID', 'IP', 'eingelogt_seit', 'Browserstamp'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['ID'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class StatisticLog implements Table {
 			'Browserstamp' => 'browserStamp'
 		];
     }
-
 }

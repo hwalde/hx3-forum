@@ -58,75 +58,75 @@ class RssFeed implements Table {
     
     public static function rssFeedId() : ColumnField
     {
-        return new ColumnField('rssfeed', 'rssfeedid');
+        return new ColumnField('rssFeedId', 'RssFeed', 'rssfeed', 'rssfeedid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('rssfeed', 'title');
+        return new ColumnField('title', 'RssFeed', 'rssfeed', 'title');
     }
     public static function url() : ColumnField
     {
-        return new ColumnField('rssfeed', 'url');
+        return new ColumnField('url', 'RssFeed', 'rssfeed', 'url');
     }
     public static function port() : ColumnField
     {
-        return new ColumnField('rssfeed', 'port');
+        return new ColumnField('port', 'RssFeed', 'rssfeed', 'port');
     }
     public static function ttl() : ColumnField
     {
-        return new ColumnField('rssfeed', 'ttl');
+        return new ColumnField('ttl', 'RssFeed', 'rssfeed', 'ttl');
     }
     public static function maxResults() : ColumnField
     {
-        return new ColumnField('rssfeed', 'maxresults');
+        return new ColumnField('maxResults', 'RssFeed', 'rssfeed', 'maxresults');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('rssfeed', 'userid');
+        return new ColumnField('userId', 'RssFeed', 'rssfeed', 'userid');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('rssfeed', 'forumid');
+        return new ColumnField('forumId', 'RssFeed', 'rssfeed', 'forumid');
     }
     public static function iconId() : ColumnField
     {
-        return new ColumnField('rssfeed', 'iconid');
+        return new ColumnField('iconId', 'RssFeed', 'rssfeed', 'iconid');
     }
     public static function titleTemplate() : ColumnField
     {
-        return new ColumnField('rssfeed', 'titletemplate');
+        return new ColumnField('titleTemplate', 'RssFeed', 'rssfeed', 'titletemplate');
     }
     public static function bodyTemplate() : ColumnField
     {
-        return new ColumnField('rssfeed', 'bodytemplate');
+        return new ColumnField('bodyTemplate', 'RssFeed', 'rssfeed', 'bodytemplate');
     }
     public static function searchWords() : ColumnField
     {
-        return new ColumnField('rssfeed', 'searchwords');
+        return new ColumnField('searchWords', 'RssFeed', 'rssfeed', 'searchwords');
     }
     public static function itemType() : ColumnField
     {
-        return new ColumnField('rssfeed', 'itemtype');
+        return new ColumnField('itemType', 'RssFeed', 'rssfeed', 'itemtype');
     }
     public static function threadActionDelay() : ColumnField
     {
-        return new ColumnField('rssfeed', 'threadactiondelay');
+        return new ColumnField('threadActionDelay', 'RssFeed', 'rssfeed', 'threadactiondelay');
     }
     public static function endAnnouncement() : ColumnField
     {
-        return new ColumnField('rssfeed', 'endannouncement');
+        return new ColumnField('endAnnouncement', 'RssFeed', 'rssfeed', 'endannouncement');
     }
     public static function options() : ColumnField
     {
-        return new ColumnField('rssfeed', 'options');
+        return new ColumnField('options', 'RssFeed', 'rssfeed', 'options');
     }
     public static function lastRun() : ColumnField
     {
-        return new ColumnField('rssfeed', 'lastrun');
+        return new ColumnField('lastRun', 'RssFeed', 'rssfeed', 'lastrun');
     }
     public static function prefixId() : ColumnField
     {
-        return new ColumnField('rssfeed', 'prefixid');
+        return new ColumnField('prefixId', 'RssFeed', 'rssfeed', 'prefixid');
     }
 
     public function getTableName(): string
@@ -137,6 +137,14 @@ class RssFeed implements Table {
     public function __listColumns() : array
     {
         return ['rssfeedid', 'title', 'url', 'port', 'ttl', 'maxresults', 'userid', 'forumid', 'iconid', 'titletemplate', 'bodytemplate', 'searchwords', 'itemtype', 'threadactiondelay', 'endannouncement', 'options', 'lastrun', 'prefixid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['rssfeedid'];
     }
     
     public function __listNullableColumns() : array
@@ -191,5 +199,4 @@ class RssFeed implements Table {
 			'prefixid' => 'prefixId'
 		];
     }
-
 }

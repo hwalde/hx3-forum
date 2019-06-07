@@ -17,23 +17,23 @@ class VbSeoBlackListAlias extends TableAlias {
    
     public function lDomain() : ColumnField
     {
-        return new ColumnField('vbseo_blacklist', 'l_domain', $this->getAliasName());
+        return new ColumnField('lDomain', 'VbSeoBlackList', 'vbseo_blacklist', 'l_domain', $this->getAliasName());
     }
     public function lType() : ColumnField
     {
-        return new ColumnField('vbseo_blacklist', 'l_type', $this->getAliasName());
+        return new ColumnField('lType', 'VbSeoBlackList', 'vbseo_blacklist', 'l_type', $this->getAliasName());
     }
     public function lDateLine() : ColumnField
     {
-        return new ColumnField('vbseo_blacklist', 'l_dateline', $this->getAliasName());
+        return new ColumnField('lDateLine', 'VbSeoBlackList', 'vbseo_blacklist', 'l_dateline', $this->getAliasName());
     }
     public function lHits() : ColumnField
     {
-        return new ColumnField('vbseo_blacklist', 'l_hits', $this->getAliasName());
+        return new ColumnField('lHits', 'VbSeoBlackList', 'vbseo_blacklist', 'l_hits', $this->getAliasName());
     }
     public function lDeleted() : ColumnField
     {
-        return new ColumnField('vbseo_blacklist', 'l_deleted', $this->getAliasName());
+        return new ColumnField('lDeleted', 'VbSeoBlackList', 'vbseo_blacklist', 'l_deleted', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class VbSeoBlackListAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['l_domain', 'l_type', 'l_dateline', 'l_hits', 'l_deleted'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['l_domain', 'l_type'];
     }
     
     public function __listNullableColumns() : array

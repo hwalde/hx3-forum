@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedBookmarkSiteRecord implements Record {
     
     /** @var $bookmarkSiteId int */
-    private $bookmarkSiteId;
+    protected $bookmarkSiteId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $iconPath string */
-    private $iconPath;
+    protected $iconPath;
     
     /** @var $active int */
-    private $active;
+    protected $active;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $url string */
-    private $url;
+    protected $url;
     
     public function hasBookmarkSiteId(): bool
     {

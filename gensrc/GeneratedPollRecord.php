@@ -14,43 +14,43 @@ use POOQ\Record;
 class GeneratedPollRecord implements Record {
     
     /** @var $pollId int */
-    private $pollId;
+    protected $pollId;
     
     /** @var $question string */
-    private $question;
+    protected $question;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $options string */
-    private $options;
+    protected $options;
     
     /** @var $votes string */
-    private $votes;
+    protected $votes;
     
     /** @var $active int */
-    private $active;
+    protected $active;
     
     /** @var $numberOptions int */
-    private $numberOptions;
+    protected $numberOptions;
     
     /** @var $timeout int */
-    private $timeout;
+    protected $timeout;
     
     /** @var $multiple int */
-    private $multiple;
+    protected $multiple;
     
     /** @var $voters int */
-    private $voters;
+    protected $voters;
     
     /** @var $public int */
-    private $public;
+    protected $public;
     
     /** @var $lastVote int */
-    private $lastVote;
+    protected $lastVote;
     
     /** @var $importPollId int */
-    private $importPollId;
+    protected $importPollId;
     
     public function hasPollId(): bool
     {

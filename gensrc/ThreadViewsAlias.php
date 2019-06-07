@@ -17,7 +17,7 @@ class ThreadViewsAlias extends TableAlias {
    
     public function threadId() : ColumnField
     {
-        return new ColumnField('threadviews', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'ThreadViews', 'threadviews', 'threadid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -28,6 +28,14 @@ class ThreadViewsAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['threadid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

@@ -47,31 +47,31 @@ class Product implements Table {
     
     public static function productId() : ColumnField
     {
-        return new ColumnField('product', 'productid');
+        return new ColumnField('productId', 'Product', 'product', 'productid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('product', 'title');
+        return new ColumnField('title', 'Product', 'product', 'title');
     }
     public static function description() : ColumnField
     {
-        return new ColumnField('product', 'description');
+        return new ColumnField('description', 'Product', 'product', 'description');
     }
     public static function version() : ColumnField
     {
-        return new ColumnField('product', 'version');
+        return new ColumnField('version', 'Product', 'product', 'version');
     }
     public static function active() : ColumnField
     {
-        return new ColumnField('product', 'active');
+        return new ColumnField('active', 'Product', 'product', 'active');
     }
     public static function url() : ColumnField
     {
-        return new ColumnField('product', 'url');
+        return new ColumnField('url', 'Product', 'product', 'url');
     }
     public static function versioncheckurl() : ColumnField
     {
-        return new ColumnField('product', 'versioncheckurl');
+        return new ColumnField('versioncheckurl', 'Product', 'product', 'versioncheckurl');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class Product implements Table {
     public function __listColumns() : array
     {
         return ['productid', 'title', 'description', 'version', 'active', 'url', 'versioncheckurl'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['productid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class Product implements Table {
 			'versioncheckurl' => 'versioncheckurl'
 		];
     }
-
 }

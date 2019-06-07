@@ -17,39 +17,39 @@ class PhraseAlias extends TableAlias {
    
     public function phraseId() : ColumnField
     {
-        return new ColumnField('phrase', 'phraseid', $this->getAliasName());
+        return new ColumnField('phraseId', 'Phrase', 'phrase', 'phraseid', $this->getAliasName());
     }
     public function languageId() : ColumnField
     {
-        return new ColumnField('phrase', 'languageid', $this->getAliasName());
+        return new ColumnField('languageId', 'Phrase', 'phrase', 'languageid', $this->getAliasName());
     }
     public function varName() : ColumnField
     {
-        return new ColumnField('phrase', 'varname', $this->getAliasName());
+        return new ColumnField('varName', 'Phrase', 'phrase', 'varname', $this->getAliasName());
     }
     public function text() : ColumnField
     {
-        return new ColumnField('phrase', 'text', $this->getAliasName());
+        return new ColumnField('text', 'Phrase', 'phrase', 'text', $this->getAliasName());
     }
     public function product() : ColumnField
     {
-        return new ColumnField('phrase', 'product', $this->getAliasName());
+        return new ColumnField('product', 'Phrase', 'phrase', 'product', $this->getAliasName());
     }
     public function fieldName() : ColumnField
     {
-        return new ColumnField('phrase', 'fieldname', $this->getAliasName());
+        return new ColumnField('fieldName', 'Phrase', 'phrase', 'fieldname', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('phrase', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'Phrase', 'phrase', 'username', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('phrase', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Phrase', 'phrase', 'dateline', $this->getAliasName());
     }
     public function version() : ColumnField
     {
-        return new ColumnField('phrase', 'version', $this->getAliasName());
+        return new ColumnField('version', 'Phrase', 'phrase', 'version', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -60,6 +60,14 @@ class PhraseAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['phraseid', 'languageid', 'varname', 'text', 'product', 'fieldname', 'username', 'dateline', 'version'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['phraseid'];
     }
     
     public function __listNullableColumns() : array

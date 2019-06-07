@@ -14,49 +14,49 @@ use POOQ\Record;
 class GeneratedEventRecord implements Record {
     
     /** @var $eventId int */
-    private $eventId;
+    protected $eventId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $event string */
-    private $event;
+    protected $event;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $allowSmilies int */
-    private $allowSmilies;
+    protected $allowSmilies;
     
     /** @var $recurring int */
-    private $recurring;
+    protected $recurring;
     
     /** @var $recurOption string */
-    private $recurOption;
+    protected $recurOption;
     
     /** @var $calendarId int */
-    private $calendarId;
+    protected $calendarId;
     
     /** @var $customFields string */
-    private $customFields;
+    protected $customFields;
     
     /** @var $visible int */
-    private $visible;
+    protected $visible;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $utc mixed */
-    private $utc;
+    protected $utc;
     
     /** @var $dateLineFrom int */
-    private $dateLineFrom;
+    protected $dateLineFrom;
     
     /** @var $dateLineTo int */
-    private $dateLineTo;
+    protected $dateLineTo;
     
     /** @var $dst int */
-    private $dst;
+    protected $dst;
     
     public function hasEventId(): bool
     {

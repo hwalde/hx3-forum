@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedAlbumPictureRecord implements Record {
     
     /** @var $albumId int */
-    private $albumId;
+    protected $albumId;
     
     /** @var $pictureId int */
-    private $pictureId;
+    protected $pictureId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasAlbumId(): bool
     {

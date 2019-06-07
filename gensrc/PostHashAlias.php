@@ -17,23 +17,23 @@ class PostHashAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('posthash', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PostHash', 'posthash', 'userid', $this->getAliasName());
     }
     public function threadId() : ColumnField
     {
-        return new ColumnField('posthash', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'PostHash', 'posthash', 'threadid', $this->getAliasName());
     }
     public function postId() : ColumnField
     {
-        return new ColumnField('posthash', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'PostHash', 'posthash', 'postid', $this->getAliasName());
     }
     public function dupeHash() : ColumnField
     {
-        return new ColumnField('posthash', 'dupehash', $this->getAliasName());
+        return new ColumnField('dupeHash', 'PostHash', 'posthash', 'dupehash', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('posthash', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PostHash', 'posthash', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class PostHashAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'threadid', 'postid', 'dupehash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

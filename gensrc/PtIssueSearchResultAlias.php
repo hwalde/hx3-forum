@@ -17,19 +17,19 @@ class PtIssueSearchResultAlias extends TableAlias {
    
     public function issueSearchId() : ColumnField
     {
-        return new ColumnField('pt_issuesearchresult', 'issuesearchid', $this->getAliasName());
+        return new ColumnField('issueSearchId', 'PtIssueSearchResult', 'pt_issuesearchresult', 'issuesearchid', $this->getAliasName());
     }
     public function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuesearchresult', 'issueid', $this->getAliasName());
+        return new ColumnField('issueId', 'PtIssueSearchResult', 'pt_issuesearchresult', 'issueid', $this->getAliasName());
     }
     public function offset() : ColumnField
     {
-        return new ColumnField('pt_issuesearchresult', 'offset', $this->getAliasName());
+        return new ColumnField('offset', 'PtIssueSearchResult', 'pt_issuesearchresult', 'offset', $this->getAliasName());
     }
     public function groupId() : ColumnField
     {
-        return new ColumnField('pt_issuesearchresult', 'groupid', $this->getAliasName());
+        return new ColumnField('groupId', 'PtIssueSearchResult', 'pt_issuesearchresult', 'groupid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class PtIssueSearchResultAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['issuesearchid', 'issueid', 'offset', 'groupid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuesearchid', 'offset'];
     }
     
     public function __listNullableColumns() : array

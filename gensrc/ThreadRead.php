@@ -43,15 +43,15 @@ class ThreadRead implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('threadread', 'userid');
+        return new ColumnField('userId', 'ThreadRead', 'threadread', 'userid');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('threadread', 'threadid');
+        return new ColumnField('threadId', 'ThreadRead', 'threadread', 'threadid');
     }
     public static function readTime() : ColumnField
     {
-        return new ColumnField('threadread', 'readtime');
+        return new ColumnField('readTime', 'ThreadRead', 'threadread', 'readtime');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class ThreadRead implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'threadid', 'readtime'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'threadid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class ThreadRead implements Table {
 			'readtime' => 'readTime'
 		];
     }
-
 }

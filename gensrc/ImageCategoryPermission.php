@@ -42,11 +42,11 @@ class ImageCategoryPermission implements Table {
     
     public static function imageCategoryId() : ColumnField
     {
-        return new ColumnField('imagecategorypermission', 'imagecategoryid');
+        return new ColumnField('imageCategoryId', 'ImageCategoryPermission', 'imagecategorypermission', 'imagecategoryid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('imagecategorypermission', 'usergroupid');
+        return new ColumnField('userGroupId', 'ImageCategoryPermission', 'imagecategorypermission', 'usergroupid');
     }
 
     public function getTableName(): string
@@ -57,6 +57,14 @@ class ImageCategoryPermission implements Table {
     public function __listColumns() : array
     {
         return ['imagecategoryid', 'usergroupid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -79,5 +87,4 @@ class ImageCategoryPermission implements Table {
 			'usergroupid' => 'userGroupId'
 		];
     }
-
 }

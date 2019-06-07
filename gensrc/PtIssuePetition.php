@@ -45,23 +45,23 @@ class PtIssuePetition implements Table {
     
     public static function issueNoteId() : ColumnField
     {
-        return new ColumnField('pt_issuepetition', 'issuenoteid');
+        return new ColumnField('issueNoteId', 'PtIssuePetition', 'pt_issuepetition', 'issuenoteid');
     }
     public static function petitionStatusId() : ColumnField
     {
-        return new ColumnField('pt_issuepetition', 'petitionstatusid');
+        return new ColumnField('petitionStatusId', 'PtIssuePetition', 'pt_issuepetition', 'petitionstatusid');
     }
     public static function resolution() : ColumnField
     {
-        return new ColumnField('pt_issuepetition', 'resolution');
+        return new ColumnField('resolution', 'PtIssuePetition', 'pt_issuepetition', 'resolution');
     }
     public static function resolveUserId() : ColumnField
     {
-        return new ColumnField('pt_issuepetition', 'resolveuserid');
+        return new ColumnField('resolveUserId', 'PtIssuePetition', 'pt_issuepetition', 'resolveuserid');
     }
     public static function resolveDate() : ColumnField
     {
-        return new ColumnField('pt_issuepetition', 'resolvedate');
+        return new ColumnField('resolveDate', 'PtIssuePetition', 'pt_issuepetition', 'resolvedate');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class PtIssuePetition implements Table {
     public function __listColumns() : array
     {
         return ['issuenoteid', 'petitionstatusid', 'resolution', 'resolveuserid', 'resolvedate'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuenoteid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class PtIssuePetition implements Table {
 			'resolvedate' => 'resolveDate'
 		];
     }
-
 }

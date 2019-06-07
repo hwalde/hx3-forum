@@ -48,35 +48,35 @@ class Reminder implements Table {
     
     public static function reminderId() : ColumnField
     {
-        return new ColumnField('reminder', 'reminderid');
+        return new ColumnField('reminderId', 'Reminder', 'reminder', 'reminderid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('reminder', 'userid');
+        return new ColumnField('userId', 'Reminder', 'reminder', 'userid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('reminder', 'title');
+        return new ColumnField('title', 'Reminder', 'reminder', 'title');
     }
     public static function text() : ColumnField
     {
-        return new ColumnField('reminder', 'text');
+        return new ColumnField('text', 'Reminder', 'reminder', 'text');
     }
     public static function dueDate() : ColumnField
     {
-        return new ColumnField('reminder', 'duedate');
+        return new ColumnField('dueDate', 'Reminder', 'reminder', 'duedate');
     }
     public static function adminOnly() : ColumnField
     {
-        return new ColumnField('reminder', 'adminonly');
+        return new ColumnField('adminOnly', 'Reminder', 'reminder', 'adminonly');
     }
     public static function completedBy() : ColumnField
     {
-        return new ColumnField('reminder', 'completedby');
+        return new ColumnField('completedBy', 'Reminder', 'reminder', 'completedby');
     }
     public static function completedTime() : ColumnField
     {
-        return new ColumnField('reminder', 'completedtime');
+        return new ColumnField('completedTime', 'Reminder', 'reminder', 'completedtime');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class Reminder implements Table {
     public function __listColumns() : array
     {
         return ['reminderid', 'userid', 'title', 'text', 'duedate', 'adminonly', 'completedby', 'completedtime'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['reminderid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class Reminder implements Table {
 			'completedtime' => 'completedTime'
 		];
     }
-
 }

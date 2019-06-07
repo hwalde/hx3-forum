@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedSettingGroupRecord implements Record {
     
     /** @var $groupTitle string */
-    private $groupTitle;
+    protected $groupTitle;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $volatile int */
-    private $volatile;
+    protected $volatile;
     
     /** @var $product string */
-    private $product;
+    protected $product;
     
     public function hasGroupTitle(): bool
     {

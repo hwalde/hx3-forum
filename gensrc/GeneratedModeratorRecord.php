@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedModeratorRecord implements Record {
     
     /** @var $moderatorId int */
-    private $moderatorId;
+    protected $moderatorId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $permissions int */
-    private $permissions;
+    protected $permissions;
     
     /** @var $importModeratorId int */
-    private $importModeratorId;
+    protected $importModeratorId;
     
     /** @var $moderatorUserGroupId int */
-    private $moderatorUserGroupId;
+    protected $moderatorUserGroupId;
     
     /** @var $modUserGroupId int */
-    private $modUserGroupId;
+    protected $modUserGroupId;
     
     /** @var $permissions2 int */
-    private $permissions2;
+    protected $permissions2;
     
     public function hasModeratorId(): bool
     {

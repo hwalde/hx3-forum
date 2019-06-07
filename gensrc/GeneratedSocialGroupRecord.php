@@ -14,55 +14,55 @@ use POOQ\Record;
 class GeneratedSocialGroupRecord implements Record {
     
     /** @var $groupId int */
-    private $groupId;
+    protected $groupId;
     
     /** @var $name string */
-    private $name;
+    protected $name;
     
     /** @var $description string|null */
-    private $description;
+    protected $description;
     
     /** @var $creatorUserId int */
-    private $creatorUserId;
+    protected $creatorUserId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $members int */
-    private $members;
+    protected $members;
     
     /** @var $pictureCount int */
-    private $pictureCount;
+    protected $pictureCount;
     
     /** @var $lastPost int */
-    private $lastPost;
+    protected $lastPost;
     
     /** @var $lastPoster string */
-    private $lastPoster;
+    protected $lastPoster;
     
     /** @var $lastPosterId int */
-    private $lastPosterId;
+    protected $lastPosterId;
     
     /** @var $lastGmId int */
-    private $lastGmId;
+    protected $lastGmId;
     
     /** @var $visible int */
-    private $visible;
+    protected $visible;
     
     /** @var $deleted int */
-    private $deleted;
+    protected $deleted;
     
     /** @var $moderation int */
-    private $moderation;
+    protected $moderation;
     
     /** @var $type string */
-    private $type;
+    protected $type;
     
     /** @var $moderatedMembers int */
-    private $moderatedMembers;
+    protected $moderatedMembers;
     
     /** @var $options int */
-    private $options;
+    protected $options;
     
     public function hasGroupId(): bool
     {

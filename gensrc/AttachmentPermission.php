@@ -47,31 +47,31 @@ class AttachmentPermission implements Table {
     
     public static function attachmentPermissionId() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'attachmentpermissionid');
+        return new ColumnField('attachmentPermissionId', 'AttachmentPermission', 'attachmentpermission', 'attachmentpermissionid');
     }
     public static function extension() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'extension');
+        return new ColumnField('extension', 'AttachmentPermission', 'attachmentpermission', 'extension');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'usergroupid');
+        return new ColumnField('userGroupId', 'AttachmentPermission', 'attachmentpermission', 'usergroupid');
     }
     public static function size() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'size');
+        return new ColumnField('size', 'AttachmentPermission', 'attachmentpermission', 'size');
     }
     public static function width() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'width');
+        return new ColumnField('width', 'AttachmentPermission', 'attachmentpermission', 'width');
     }
     public static function height() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'height');
+        return new ColumnField('height', 'AttachmentPermission', 'attachmentpermission', 'height');
     }
     public static function attachmentPermissions() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'attachmentpermissions');
+        return new ColumnField('attachmentPermissions', 'AttachmentPermission', 'attachmentpermission', 'attachmentpermissions');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class AttachmentPermission implements Table {
     public function __listColumns() : array
     {
         return ['attachmentpermissionid', 'extension', 'usergroupid', 'size', 'width', 'height', 'attachmentpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['attachmentpermissionid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class AttachmentPermission implements Table {
 			'attachmentpermissions' => 'attachmentPermissions'
 		];
     }
-
 }

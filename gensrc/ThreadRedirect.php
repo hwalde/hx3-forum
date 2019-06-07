@@ -42,11 +42,11 @@ class ThreadRedirect implements Table {
     
     public static function threadId() : ColumnField
     {
-        return new ColumnField('threadredirect', 'threadid');
+        return new ColumnField('threadId', 'ThreadRedirect', 'threadredirect', 'threadid');
     }
     public static function expires() : ColumnField
     {
-        return new ColumnField('threadredirect', 'expires');
+        return new ColumnField('expires', 'ThreadRedirect', 'threadredirect', 'expires');
     }
 
     public function getTableName(): string
@@ -57,6 +57,14 @@ class ThreadRedirect implements Table {
     public function __listColumns() : array
     {
         return ['threadid', 'expires'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['threadid'];
     }
     
     public function __listNullableColumns() : array
@@ -79,5 +87,4 @@ class ThreadRedirect implements Table {
 			'expires' => 'expires'
 		];
     }
-
 }

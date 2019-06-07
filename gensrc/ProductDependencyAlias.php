@@ -17,27 +17,27 @@ class ProductDependencyAlias extends TableAlias {
    
     public function productDependencyId() : ColumnField
     {
-        return new ColumnField('productdependency', 'productdependencyid', $this->getAliasName());
+        return new ColumnField('productDependencyId', 'ProductDependency', 'productdependency', 'productdependencyid', $this->getAliasName());
     }
     public function productId() : ColumnField
     {
-        return new ColumnField('productdependency', 'productid', $this->getAliasName());
+        return new ColumnField('productId', 'ProductDependency', 'productdependency', 'productid', $this->getAliasName());
     }
     public function dependencyType() : ColumnField
     {
-        return new ColumnField('productdependency', 'dependencytype', $this->getAliasName());
+        return new ColumnField('dependencyType', 'ProductDependency', 'productdependency', 'dependencytype', $this->getAliasName());
     }
     public function parentProductId() : ColumnField
     {
-        return new ColumnField('productdependency', 'parentproductid', $this->getAliasName());
+        return new ColumnField('parentProductId', 'ProductDependency', 'productdependency', 'parentproductid', $this->getAliasName());
     }
     public function minVersion() : ColumnField
     {
-        return new ColumnField('productdependency', 'minversion', $this->getAliasName());
+        return new ColumnField('minVersion', 'ProductDependency', 'productdependency', 'minversion', $this->getAliasName());
     }
     public function maxVersion() : ColumnField
     {
-        return new ColumnField('productdependency', 'maxversion', $this->getAliasName());
+        return new ColumnField('maxVersion', 'ProductDependency', 'productdependency', 'maxversion', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class ProductDependencyAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['productdependencyid', 'productid', 'dependencytype', 'parentproductid', 'minversion', 'maxversion'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['productdependencyid'];
     }
     
     public function __listNullableColumns() : array

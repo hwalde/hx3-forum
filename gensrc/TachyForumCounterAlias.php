@@ -17,19 +17,19 @@ class TachyForumCounterAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('tachyforumcounter', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'TachyForumCounter', 'tachyforumcounter', 'userid', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('tachyforumcounter', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'TachyForumCounter', 'tachyforumcounter', 'forumid', $this->getAliasName());
     }
     public function threadCount() : ColumnField
     {
-        return new ColumnField('tachyforumcounter', 'threadcount', $this->getAliasName());
+        return new ColumnField('threadCount', 'TachyForumCounter', 'tachyforumcounter', 'threadcount', $this->getAliasName());
     }
     public function replyCount() : ColumnField
     {
-        return new ColumnField('tachyforumcounter', 'replycount', $this->getAliasName());
+        return new ColumnField('replyCount', 'TachyForumCounter', 'tachyforumcounter', 'replycount', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class TachyForumCounterAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'forumid', 'threadcount', 'replycount'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'forumid'];
     }
     
     public function __listNullableColumns() : array

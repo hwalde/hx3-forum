@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedSocialGroupMemberRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $groupId int */
-    private $groupId;
+    protected $groupId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $type string */
-    private $type;
+    protected $type;
     
     public function hasUserId(): bool
     {

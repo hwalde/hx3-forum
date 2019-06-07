@@ -17,15 +17,15 @@ class PasswordHistoryAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('passwordhistory', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PasswordHistory', 'passwordhistory', 'userid', $this->getAliasName());
     }
     public function password() : ColumnField
     {
-        return new ColumnField('passwordhistory', 'password', $this->getAliasName());
+        return new ColumnField('password', 'PasswordHistory', 'passwordhistory', 'password', $this->getAliasName());
     }
     public function passwordDate() : ColumnField
     {
-        return new ColumnField('passwordhistory', 'passworddate', $this->getAliasName());
+        return new ColumnField('passwordDate', 'PasswordHistory', 'passwordhistory', 'passworddate', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class PasswordHistoryAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'password', 'passworddate'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

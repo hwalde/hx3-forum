@@ -44,19 +44,19 @@ class SubscribeForum implements Table {
     
     public static function subscribeForumId() : ColumnField
     {
-        return new ColumnField('subscribeforum', 'subscribeforumid');
+        return new ColumnField('subscribeForumId', 'SubscribeForum', 'subscribeforum', 'subscribeforumid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('subscribeforum', 'userid');
+        return new ColumnField('userId', 'SubscribeForum', 'subscribeforum', 'userid');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('subscribeforum', 'forumid');
+        return new ColumnField('forumId', 'SubscribeForum', 'subscribeforum', 'forumid');
     }
     public static function emailUpdate() : ColumnField
     {
-        return new ColumnField('subscribeforum', 'emailupdate');
+        return new ColumnField('emailUpdate', 'SubscribeForum', 'subscribeforum', 'emailupdate');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class SubscribeForum implements Table {
     public function __listColumns() : array
     {
         return ['subscribeforumid', 'userid', 'forumid', 'emailupdate'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscribeforumid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class SubscribeForum implements Table {
 			'emailupdate' => 'emailUpdate'
 		];
     }
-
 }

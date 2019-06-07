@@ -14,106 +14,106 @@ use POOQ\Record;
 class GeneratedForumRecord implements Record {
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $styleId int */
-    private $styleId;
+    protected $styleId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $description string */
-    private $description;
+    protected $description;
     
     /** @var $options int */
-    private $options;
+    protected $options;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $replyCount int */
-    private $replyCount;
+    protected $replyCount;
     
     /** @var $lastPost int */
-    private $lastPost;
+    protected $lastPost;
     
     /** @var $lastPoster string */
-    private $lastPoster;
+    protected $lastPoster;
     
     /** @var $lastThread string */
-    private $lastThread;
+    protected $lastThread;
     
     /** @var $lastThreadId int */
-    private $lastThreadId;
+    protected $lastThreadId;
     
     /** @var $lastIconId int */
-    private $lastIconId;
+    protected $lastIconId;
     
     /** @var $threadCount int */
-    private $threadCount;
+    protected $threadCount;
     
     /** @var $daysPrune int */
-    private $daysPrune;
+    protected $daysPrune;
     
     /** @var $newPostEmail string|null */
-    private $newPostEmail;
+    protected $newPostEmail;
     
     /** @var $newThreadEmail string|null */
-    private $newThreadEmail;
+    protected $newThreadEmail;
     
     /** @var $parentId int */
-    private $parentId;
+    protected $parentId;
     
     /** @var $parentList string */
-    private $parentList;
+    protected $parentList;
     
     /** @var $password string */
-    private $password;
+    protected $password;
     
     /** @var $link string */
-    private $link;
+    protected $link;
     
     /** @var $childList string|null */
-    private $childList;
+    protected $childList;
     
     /** @var $importForumId int */
-    private $importForumId;
+    protected $importForumId;
     
     /** @var $importCategoryId int */
-    private $importCategoryId;
+    protected $importCategoryId;
     
     /** @var $titleClean string */
-    private $titleClean;
+    protected $titleClean;
     
     /** @var $descriptionClean string */
-    private $descriptionClean;
+    protected $descriptionClean;
     
     /** @var $lastPostId int */
-    private $lastPostId;
+    protected $lastPostId;
     
     /** @var $showPrivate int */
-    private $showPrivate;
+    protected $showPrivate;
     
     /** @var $defaultSortField string */
-    private $defaultSortField;
+    protected $defaultSortField;
     
     /** @var $defaultSortOrder string */
-    private $defaultSortOrder;
+    protected $defaultSortOrder;
     
     /** @var $vbSeoModeratePingbacks int */
-    private $vbSeoModeratePingbacks;
+    protected $vbSeoModeratePingbacks;
     
     /** @var $vbSeoModerateTrackbacks int */
-    private $vbSeoModerateTrackbacks;
+    protected $vbSeoModerateTrackbacks;
     
     /** @var $vbSeoModerateRefbacks int */
-    private $vbSeoModerateRefbacks;
+    protected $vbSeoModerateRefbacks;
     
     /** @var $lastPrefixId string */
-    private $lastPrefixId;
+    protected $lastPrefixId;
     
     /** @var $imagePrefix string */
-    private $imagePrefix;
+    protected $imagePrefix;
     
     public function hasForumId(): bool
     {

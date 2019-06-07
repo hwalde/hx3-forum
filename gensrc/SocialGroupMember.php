@@ -44,19 +44,19 @@ class SocialGroupMember implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('socialgroupmember', 'userid');
+        return new ColumnField('userId', 'SocialGroupMember', 'socialgroupmember', 'userid');
     }
     public static function groupId() : ColumnField
     {
-        return new ColumnField('socialgroupmember', 'groupid');
+        return new ColumnField('groupId', 'SocialGroupMember', 'socialgroupmember', 'groupid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('socialgroupmember', 'dateline');
+        return new ColumnField('dateLine', 'SocialGroupMember', 'socialgroupmember', 'dateline');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('socialgroupmember', 'type');
+        return new ColumnField('type', 'SocialGroupMember', 'socialgroupmember', 'type');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class SocialGroupMember implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'groupid', 'dateline', 'type'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'groupid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class SocialGroupMember implements Table {
 			'type' => 'type'
 		];
     }
-
 }

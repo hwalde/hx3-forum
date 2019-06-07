@@ -17,15 +17,15 @@ class TagAlias extends TableAlias {
    
     public function tagId() : ColumnField
     {
-        return new ColumnField('tag', 'tagid', $this->getAliasName());
+        return new ColumnField('tagId', 'Tag', 'tag', 'tagid', $this->getAliasName());
     }
     public function tagText() : ColumnField
     {
-        return new ColumnField('tag', 'tagtext', $this->getAliasName());
+        return new ColumnField('tagText', 'Tag', 'tag', 'tagtext', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('tag', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Tag', 'tag', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class TagAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['tagid', 'tagtext', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['tagid'];
     }
     
     public function __listNullableColumns() : array

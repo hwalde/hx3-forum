@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedProductDependencyRecord implements Record {
     
     /** @var $productDependencyId int */
-    private $productDependencyId;
+    protected $productDependencyId;
     
     /** @var $productId string */
-    private $productId;
+    protected $productId;
     
     /** @var $dependencyType string */
-    private $dependencyType;
+    protected $dependencyType;
     
     /** @var $parentProductId string */
-    private $parentProductId;
+    protected $parentProductId;
     
     /** @var $minVersion string */
-    private $minVersion;
+    protected $minVersion;
     
     /** @var $maxVersion string */
-    private $maxVersion;
+    protected $maxVersion;
     
     public function hasProductDependencyId(): bool
     {

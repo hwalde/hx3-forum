@@ -56,67 +56,67 @@ class Attachment implements Table {
     
     public static function attachmentId() : ColumnField
     {
-        return new ColumnField('attachment', 'attachmentid');
+        return new ColumnField('attachmentId', 'Attachment', 'attachment', 'attachmentid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('attachment', 'userid');
+        return new ColumnField('userId', 'Attachment', 'attachment', 'userid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('attachment', 'dateline');
+        return new ColumnField('dateLine', 'Attachment', 'attachment', 'dateline');
     }
     public static function thumbnailDateline() : ColumnField
     {
-        return new ColumnField('attachment', 'thumbnail_dateline');
+        return new ColumnField('thumbnailDateline', 'Attachment', 'attachment', 'thumbnail_dateline');
     }
     public static function fileName() : ColumnField
     {
-        return new ColumnField('attachment', 'filename');
+        return new ColumnField('fileName', 'Attachment', 'attachment', 'filename');
     }
     public static function fileData() : ColumnField
     {
-        return new ColumnField('attachment', 'filedata');
+        return new ColumnField('fileData', 'Attachment', 'attachment', 'filedata');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('attachment', 'visible');
+        return new ColumnField('visible', 'Attachment', 'attachment', 'visible');
     }
     public static function counter() : ColumnField
     {
-        return new ColumnField('attachment', 'counter');
+        return new ColumnField('counter', 'Attachment', 'attachment', 'counter');
     }
     public static function fileSize() : ColumnField
     {
-        return new ColumnField('attachment', 'filesize');
+        return new ColumnField('fileSize', 'Attachment', 'attachment', 'filesize');
     }
     public static function postId() : ColumnField
     {
-        return new ColumnField('attachment', 'postid');
+        return new ColumnField('postId', 'Attachment', 'attachment', 'postid');
     }
     public static function fileHash() : ColumnField
     {
-        return new ColumnField('attachment', 'filehash');
+        return new ColumnField('fileHash', 'Attachment', 'attachment', 'filehash');
     }
     public static function postHash() : ColumnField
     {
-        return new ColumnField('attachment', 'posthash');
+        return new ColumnField('postHash', 'Attachment', 'attachment', 'posthash');
     }
     public static function thumbnail() : ColumnField
     {
-        return new ColumnField('attachment', 'thumbnail');
+        return new ColumnField('thumbnail', 'Attachment', 'attachment', 'thumbnail');
     }
     public static function thumbnailFileSize() : ColumnField
     {
-        return new ColumnField('attachment', 'thumbnail_filesize');
+        return new ColumnField('thumbnailFileSize', 'Attachment', 'attachment', 'thumbnail_filesize');
     }
     public static function importAttachmentId() : ColumnField
     {
-        return new ColumnField('attachment', 'importattachmentid');
+        return new ColumnField('importAttachmentId', 'Attachment', 'attachment', 'importattachmentid');
     }
     public static function extension() : ColumnField
     {
-        return new ColumnField('attachment', 'extension');
+        return new ColumnField('extension', 'Attachment', 'attachment', 'extension');
     }
 
     public function getTableName(): string
@@ -127,6 +127,14 @@ class Attachment implements Table {
     public function __listColumns() : array
     {
         return ['attachmentid', 'userid', 'dateline', 'thumbnail_dateline', 'filename', 'filedata', 'visible', 'counter', 'filesize', 'postid', 'filehash', 'posthash', 'thumbnail', 'thumbnail_filesize', 'importattachmentid', 'extension'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['attachmentid'];
     }
     
     public function __listNullableColumns() : array
@@ -177,5 +185,4 @@ class Attachment implements Table {
 			'extension' => 'extension'
 		];
     }
-
 }

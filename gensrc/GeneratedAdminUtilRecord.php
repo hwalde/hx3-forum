@@ -14,10 +14,10 @@ use POOQ\Record;
 class GeneratedAdminUtilRecord implements Record {
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $text string */
-    private $text;
+    protected $text;
     
     public function hasTitle(): bool
     {

@@ -14,10 +14,10 @@ use POOQ\Record;
 class GeneratedPtTagRecord implements Record {
     
     /** @var $tagId int */
-    private $tagId;
+    protected $tagId;
     
     /** @var $tagText string */
-    private $tagText;
+    protected $tagText;
     
     public function hasTagId(): bool
     {

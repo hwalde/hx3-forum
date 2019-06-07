@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedAdministratorRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $adminPermissions int */
-    private $adminPermissions;
+    protected $adminPermissions;
     
     /** @var $navPrefs string */
-    private $navPrefs;
+    protected $navPrefs;
     
     /** @var $cssPrefs string */
-    private $cssPrefs;
+    protected $cssPrefs;
     
     /** @var $notes string */
-    private $notes;
+    protected $notes;
     
     /** @var $languageId int */
-    private $languageId;
+    protected $languageId;
     
     /** @var $dismissedNews string|null */
-    private $dismissedNews;
+    protected $dismissedNews;
     
     /** @var $ptPermissions int */
-    private $ptPermissions;
+    protected $ptPermissions;
     
     public function hasUserId(): bool
     {

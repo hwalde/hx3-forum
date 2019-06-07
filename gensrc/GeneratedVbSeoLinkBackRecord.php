@@ -14,52 +14,52 @@ use POOQ\Record;
 class GeneratedVbSeoLinkBackRecord implements Record {
     
     /** @var $tId int */
-    private $tId;
+    protected $tId;
     
     /** @var $tTime int */
-    private $tTime;
+    protected $tTime;
     
     /** @var $tSrcUrl string */
-    private $tSrcUrl;
+    protected $tSrcUrl;
     
     /** @var $tDestUrl string */
-    private $tDestUrl;
+    protected $tDestUrl;
     
     /** @var $tType int */
-    private $tType;
+    protected $tType;
     
     /** @var $tPostId int */
-    private $tPostId;
+    protected $tPostId;
     
     /** @var $tPostCount int */
-    private $tPostCount;
+    protected $tPostCount;
     
     /** @var $tThreadId int */
-    private $tThreadId;
+    protected $tThreadId;
     
     /** @var $tPage int */
-    private $tPage;
+    protected $tPage;
     
     /** @var $tTitle string */
-    private $tTitle;
+    protected $tTitle;
     
     /** @var $tText string */
-    private $tText;
+    protected $tText;
     
     /** @var $tApprove int */
-    private $tApprove;
+    protected $tApprove;
     
     /** @var $tWait int */
-    private $tWait;
+    protected $tWait;
     
     /** @var $tIncoming int */
-    private $tIncoming;
+    protected $tIncoming;
     
     /** @var $tDeleted int */
-    private $tDeleted;
+    protected $tDeleted;
     
     /** @var $tHits int */
-    private $tHits;
+    protected $tHits;
     
     public function hasTId(): bool
     {

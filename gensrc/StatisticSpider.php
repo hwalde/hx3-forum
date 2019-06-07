@@ -45,23 +45,23 @@ class StatisticSpider implements Table {
     
     public static function id() : ColumnField
     {
-        return new ColumnField('statistik_spider', 'ID');
+        return new ColumnField('id', 'StatisticSpider', 'statistik_spider', 'ID');
     }
     public static function spiderName() : ColumnField
     {
-        return new ColumnField('statistik_spider', 'Spidername');
+        return new ColumnField('spiderName', 'StatisticSpider', 'statistik_spider', 'Spidername');
     }
     public static function spiderLink() : ColumnField
     {
-        return new ColumnField('statistik_spider', 'spider_link');
+        return new ColumnField('spiderLink', 'StatisticSpider', 'statistik_spider', 'spider_link');
     }
     public static function balkenLink() : ColumnField
     {
-        return new ColumnField('statistik_spider', 'balken_link');
+        return new ColumnField('balkenLink', 'StatisticSpider', 'statistik_spider', 'balken_link');
     }
     public static function zaehler() : ColumnField
     {
-        return new ColumnField('statistik_spider', 'Zaehler');
+        return new ColumnField('zaehler', 'StatisticSpider', 'statistik_spider', 'Zaehler');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class StatisticSpider implements Table {
     public function __listColumns() : array
     {
         return ['ID', 'Spidername', 'spider_link', 'balken_link', 'Zaehler'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['ID'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class StatisticSpider implements Table {
 			'Zaehler' => 'zaehler'
 		];
     }
-
 }

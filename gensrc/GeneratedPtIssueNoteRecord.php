@@ -14,40 +14,40 @@ use POOQ\Record;
 class GeneratedPtIssueNoteRecord implements Record {
     
     /** @var $issueNoteId int */
-    private $issueNoteId;
+    protected $issueNoteId;
     
     /** @var $issueId int */
-    private $issueId;
+    protected $issueId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $pageText string */
-    private $pageText;
+    protected $pageText;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     /** @var $type string */
-    private $type;
+    protected $type;
     
     /** @var $isPending int */
-    private $isPending;
+    protected $isPending;
     
     /** @var $visible string */
-    private $visible;
+    protected $visible;
     
     /** @var $lastEditDate int */
-    private $lastEditDate;
+    protected $lastEditDate;
     
     /** @var $isFirstNote int */
-    private $isFirstNote;
+    protected $isFirstNote;
     
     /** @var $ipAddress int */
-    private $ipAddress;
+    protected $ipAddress;
     
     public function hasIssueNoteId(): bool
     {

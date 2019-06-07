@@ -9,12 +9,13 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedAttachmentViewsRecord implements Record {
+class GeneratedAttachmentViewsRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $attachmentId int */
-    private $attachmentId;
+    protected $attachmentId;
     
     public function hasAttachmentId(): bool
     {

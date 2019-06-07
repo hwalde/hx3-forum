@@ -14,43 +14,43 @@ use POOQ\Record;
 class GeneratedStyleRecord implements Record {
     
     /** @var $styleId int */
-    private $styleId;
+    protected $styleId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $parentId int */
-    private $parentId;
+    protected $parentId;
     
     /** @var $parentList string */
-    private $parentList;
+    protected $parentList;
     
     /** @var $templateList string */
-    private $templateList;
+    protected $templateList;
     
     /** @var $cssColors string */
-    private $cssColors;
+    protected $cssColors;
     
     /** @var $css string */
-    private $css;
+    protected $css;
     
     /** @var $styleVars string */
-    private $styleVars;
+    protected $styleVars;
     
     /** @var $replacements string */
-    private $replacements;
+    protected $replacements;
     
     /** @var $editorStyles string */
-    private $editorStyles;
+    protected $editorStyles;
     
     /** @var $userSelect int */
-    private $userSelect;
+    protected $userSelect;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $importStyleId int */
-    private $importStyleId;
+    protected $importStyleId;
     
     public function hasStyleId(): bool
     {

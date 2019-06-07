@@ -14,223 +14,223 @@ use POOQ\Record;
 class GeneratedLanguageRecord implements Record {
     
     /** @var $languageId int */
-    private $languageId;
+    protected $languageId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $userSelect int */
-    private $userSelect;
+    protected $userSelect;
     
     /** @var $options int */
-    private $options;
+    protected $options;
     
     /** @var $languageCode string */
-    private $languageCode;
+    protected $languageCode;
     
     /** @var $charset string */
-    private $charset;
+    protected $charset;
     
     /** @var $imagesOverride string */
-    private $imagesOverride;
+    protected $imagesOverride;
     
     /** @var $dateOverride string */
-    private $dateOverride;
+    protected $dateOverride;
     
     /** @var $timeOverride string */
-    private $timeOverride;
+    protected $timeOverride;
     
     /** @var $registeredDateOverride string */
-    private $registeredDateOverride;
+    protected $registeredDateOverride;
     
     /** @var $calFormat1Override string */
-    private $calFormat1Override;
+    protected $calFormat1Override;
     
     /** @var $calFormat2Override string */
-    private $calFormat2Override;
+    protected $calFormat2Override;
     
     /** @var $logDateOverride string */
-    private $logDateOverride;
+    protected $logDateOverride;
     
     /** @var $locale string */
-    private $locale;
+    protected $locale;
     
     /** @var $decimalSep string */
-    private $decimalSep;
+    protected $decimalSep;
     
     /** @var $thousandSep string */
-    private $thousandSep;
+    protected $thousandSep;
     
     /** @var $phraseGroupGlobal string */
-    private $phraseGroupGlobal;
+    protected $phraseGroupGlobal;
     
     /** @var $phraseGroupOpGlobal string */
-    private $phraseGroupOpGlobal;
+    protected $phraseGroupOpGlobal;
     
     /** @var $phraseGroupCpPermission string */
-    private $phraseGroupCpPermission;
+    protected $phraseGroupCpPermission;
     
     /** @var $phraseGroupForum string */
-    private $phraseGroupForum;
+    protected $phraseGroupForum;
     
     /** @var $phraseGroupCalendar string */
-    private $phraseGroupCalendar;
+    protected $phraseGroupCalendar;
     
     /** @var $phraseGroupAttachmentImage string */
-    private $phraseGroupAttachmentImage;
+    protected $phraseGroupAttachmentImage;
     
     /** @var $phrasegGroupStyle string */
-    private $phrasegGroupStyle;
+    protected $phrasegGroupStyle;
     
     /** @var $phraseGroupLogging string */
-    private $phraseGroupLogging;
+    protected $phraseGroupLogging;
     
     /** @var $phraseGroupCpHome string */
-    private $phraseGroupCpHome;
+    protected $phraseGroupCpHome;
     
     /** @var $phraseGroupPromotion string */
-    private $phraseGroupPromotion;
+    protected $phraseGroupPromotion;
     
     /** @var $phraseGroupUser string */
-    private $phraseGroupUser;
+    protected $phraseGroupUser;
     
     /** @var $phraseGroupHelpFaq string */
-    private $phraseGroupHelpFaq;
+    protected $phraseGroupHelpFaq;
     
     /** @var $phraseGroupSql string */
-    private $phraseGroupSql;
+    protected $phraseGroupSql;
     
     /** @var $phraseGroupSubscription string */
-    private $phraseGroupSubscription;
+    protected $phraseGroupSubscription;
     
     /** @var $phraseGroupLanguage string */
-    private $phraseGroupLanguage;
+    protected $phraseGroupLanguage;
     
     /** @var $phraseGroupBBCode string */
-    private $phraseGroupBBCode;
+    protected $phraseGroupBBCode;
     
     /** @var $phraseGroupStats string */
-    private $phraseGroupStats;
+    protected $phraseGroupStats;
     
     /** @var $phraseGroupDiagnostic string */
-    private $phraseGroupDiagnostic;
+    protected $phraseGroupDiagnostic;
     
     /** @var $phraseGroupMaintenance string */
-    private $phraseGroupMaintenance;
+    protected $phraseGroupMaintenance;
     
     /** @var $phraseGroupProfileField string */
-    private $phraseGroupProfileField;
+    protected $phraseGroupProfileField;
     
     /** @var $phraseGroupThread string */
-    private $phraseGroupThread;
+    protected $phraseGroupThread;
     
     /** @var $phraseGroupTimeZone string */
-    private $phraseGroupTimeZone;
+    protected $phraseGroupTimeZone;
     
     /** @var $phraseGroupBanning string */
-    private $phraseGroupBanning;
+    protected $phraseGroupBanning;
     
     /** @var $phraseGroupReputation string */
-    private $phraseGroupReputation;
+    protected $phraseGroupReputation;
     
     /** @var $phraseGroupWol string */
-    private $phraseGroupWol;
+    protected $phraseGroupWol;
     
     /** @var $phraseGroupThreadManage string */
-    private $phraseGroupThreadManage;
+    protected $phraseGroupThreadManage;
     
     /** @var $phraseGroupPm string */
-    private $phraseGroupPm;
+    protected $phraseGroupPm;
     
     /** @var $phraseGroupCpUser string */
-    private $phraseGroupCpUser;
+    protected $phraseGroupCpUser;
     
     /** @var $phraseGroupAccessMask string */
-    private $phraseGroupAccessMask;
+    protected $phraseGroupAccessMask;
     
     /** @var $phraseGroupCron string */
-    private $phraseGroupCron;
+    protected $phraseGroupCron;
     
     /** @var $phrasegGoupModerator string */
-    private $phrasegGoupModerator;
+    protected $phrasegGoupModerator;
     
     /** @var $phraseGroupCpOption string */
-    private $phraseGroupCpOption;
+    protected $phraseGroupCpOption;
     
     /** @var $phraseGroupCpRank string */
-    private $phraseGroupCpRank;
+    protected $phraseGroupCpRank;
     
     /** @var $phraseGroupCpUserGroup string */
-    private $phraseGroupCpUserGroup;
+    protected $phraseGroupCpUserGroup;
     
     /** @var $phraseGroupHoliday string */
-    private $phraseGroupHoliday;
+    protected $phraseGroupHoliday;
     
     /** @var $phraseGroupPosting string */
-    private $phraseGroupPosting;
+    protected $phraseGroupPosting;
     
     /** @var $phraseGroupPoll string */
-    private $phraseGroupPoll;
+    protected $phraseGroupPoll;
     
     /** @var $phraseGroupFrontHelp string */
-    private $phraseGroupFrontHelp;
+    protected $phraseGroupFrontHelp;
     
     /** @var $phraseGroupRegister string */
-    private $phraseGroupRegister;
+    protected $phraseGroupRegister;
     
     /** @var $phraseGroupSearch string */
-    private $phraseGroupSearch;
+    protected $phraseGroupSearch;
     
     /** @var $phraseGroupShowThread string */
-    private $phraseGroupShowThread;
+    protected $phraseGroupShowThread;
     
     /** @var $phraseGroupPostBit string */
-    private $phraseGroupPostBit;
+    protected $phraseGroupPostBit;
     
     /** @var $phraseGroupForumDisplay string */
-    private $phraseGroupForumDisplay;
+    protected $phraseGroupForumDisplay;
     
     /** @var $phraseGroupMessaging string */
-    private $phraseGroupMessaging;
+    protected $phraseGroupMessaging;
     
     /** @var $phraseGroupInlineMod string */
-    private $phraseGroupInlineMod;
+    protected $phraseGroupInlineMod;
     
     /** @var $phraseGroupPlugins string */
-    private $phraseGroupPlugins;
+    protected $phraseGroupPlugins;
     
     /** @var $phraseGroupCProfileField string|null */
-    private $phraseGroupCProfileField;
+    protected $phraseGroupCProfileField;
     
     /** @var $phraseGroupReputationLevel string|null */
-    private $phraseGroupReputationLevel;
+    protected $phraseGroupReputationLevel;
     
     /** @var $phraseGroupInfraction string|null */
-    private $phraseGroupInfraction;
+    protected $phraseGroupInfraction;
     
     /** @var $phraseGroupInfractionLevel string|null */
-    private $phraseGroupInfractionLevel;
+    protected $phraseGroupInfractionLevel;
     
     /** @var $phraseGroupPrefix string|null */
-    private $phraseGroupPrefix;
+    protected $phraseGroupPrefix;
     
     /** @var $phraseGroupSocialGroups string|null */
-    private $phraseGroupSocialGroups;
+    protected $phraseGroupSocialGroups;
     
     /** @var $phraseGroupPrefixAdmin string|null */
-    private $phraseGroupPrefixAdmin;
+    protected $phraseGroupPrefixAdmin;
     
     /** @var $phraseGroupNotice string|null */
-    private $phraseGroupNotice;
+    protected $phraseGroupNotice;
     
     /** @var $phraseGroupAlbum string|null */
-    private $phraseGroupAlbum;
+    protected $phraseGroupAlbum;
     
     /** @var $phraseGroupProjectTools string */
-    private $phraseGroupProjectTools;
+    protected $phraseGroupProjectTools;
     
     /** @var $phraseGroupProjectToolsAdmin string */
-    private $phraseGroupProjectToolsAdmin;
+    protected $phraseGroupProjectToolsAdmin;
     
     public function hasLanguageId(): bool
     {

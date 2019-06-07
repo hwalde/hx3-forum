@@ -45,23 +45,23 @@ class Pm implements Table {
     
     public static function pmId() : ColumnField
     {
-        return new ColumnField('pm', 'pmid');
+        return new ColumnField('pmId', 'Pm', 'pm', 'pmid');
     }
     public static function pmTextId() : ColumnField
     {
-        return new ColumnField('pm', 'pmtextid');
+        return new ColumnField('pmTextId', 'Pm', 'pm', 'pmtextid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pm', 'userid');
+        return new ColumnField('userId', 'Pm', 'pm', 'userid');
     }
     public static function folderId() : ColumnField
     {
-        return new ColumnField('pm', 'folderid');
+        return new ColumnField('folderId', 'Pm', 'pm', 'folderid');
     }
     public static function messageRead() : ColumnField
     {
-        return new ColumnField('pm', 'messageread');
+        return new ColumnField('messageRead', 'Pm', 'pm', 'messageread');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class Pm implements Table {
     public function __listColumns() : array
     {
         return ['pmid', 'pmtextid', 'userid', 'folderid', 'messageread'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pmid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class Pm implements Table {
 			'messageread' => 'messageRead'
 		];
     }
-
 }

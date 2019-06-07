@@ -14,34 +14,34 @@ use POOQ\Record;
 class GeneratedPostEditHistoryRecord implements Record {
     
     /** @var $postEditHistoryid int */
-    private $postEditHistoryid;
+    protected $postEditHistoryid;
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $iconId int */
-    private $iconId;
+    protected $iconId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $reason string */
-    private $reason;
+    protected $reason;
     
     /** @var $original int */
-    private $original;
+    protected $original;
     
     /** @var $pageText string|null */
-    private $pageText;
+    protected $pageText;
     
     public function hasPostEditHistoryid(): bool
     {

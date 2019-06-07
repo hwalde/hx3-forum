@@ -17,75 +17,75 @@ class StatisticSettingsAlias extends TableAlias {
    
     public function reset() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'RESET', $this->getAliasName());
+        return new ColumnField('reset', 'StatisticSettings', 'statistik_einstellungen', 'RESET', $this->getAliasName());
     }
     public function logTime() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'LOGTIME', $this->getAliasName());
+        return new ColumnField('logTime', 'StatisticSettings', 'statistik_einstellungen', 'LOGTIME', $this->getAliasName());
     }
     public function DOMAIN() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'DOMAIN', $this->getAliasName());
+        return new ColumnField('DOMAIN', 'StatisticSettings', 'statistik_einstellungen', 'DOMAIN', $this->getAliasName());
     }
     public function topThread() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'TOPTHREAD', $this->getAliasName());
+        return new ColumnField('topThread', 'StatisticSettings', 'statistik_einstellungen', 'TOPTHREAD', $this->getAliasName());
     }
     public function popThread() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'POPTHREAD', $this->getAliasName());
+        return new ColumnField('popThread', 'StatisticSettings', 'statistik_einstellungen', 'POPTHREAD', $this->getAliasName());
     }
     public function popForum() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'POPFORUM', $this->getAliasName());
+        return new ColumnField('popForum', 'StatisticSettings', 'statistik_einstellungen', 'POPFORUM', $this->getAliasName());
     }
     public function newRegister() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'NEWREGISTER', $this->getAliasName());
+        return new ColumnField('newRegister', 'StatisticSettings', 'statistik_einstellungen', 'NEWREGISTER', $this->getAliasName());
     }
     public function visit() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'VISIT', $this->getAliasName());
+        return new ColumnField('visit', 'StatisticSettings', 'statistik_einstellungen', 'VISIT', $this->getAliasName());
     }
     public function writtenThreads() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'WRITTENTHREADS', $this->getAliasName());
+        return new ColumnField('writtenThreads', 'StatisticSettings', 'statistik_einstellungen', 'WRITTENTHREADS', $this->getAliasName());
     }
     public function writtenPost() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'WRITTENPOST', $this->getAliasName());
+        return new ColumnField('writtenPost', 'StatisticSettings', 'statistik_einstellungen', 'WRITTENPOST', $this->getAliasName());
     }
     public function topPoster() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'TOPPOSTER', $this->getAliasName());
+        return new ColumnField('topPoster', 'StatisticSettings', 'statistik_einstellungen', 'TOPPOSTER', $this->getAliasName());
     }
     public function xDays() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'XDAYS', $this->getAliasName());
+        return new ColumnField('xDays', 'StatisticSettings', 'statistik_einstellungen', 'XDAYS', $this->getAliasName());
     }
     public function xThreads() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'XTHREADS', $this->getAliasName());
+        return new ColumnField('xThreads', 'StatisticSettings', 'statistik_einstellungen', 'XTHREADS', $this->getAliasName());
     }
     public function polls() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'POLLS', $this->getAliasName());
+        return new ColumnField('polls', 'StatisticSettings', 'statistik_einstellungen', 'POLLS', $this->getAliasName());
     }
     public function sticky() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'STICKY', $this->getAliasName());
+        return new ColumnField('sticky', 'StatisticSettings', 'statistik_einstellungen', 'STICKY', $this->getAliasName());
     }
     public function search() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'SEARCH', $this->getAliasName());
+        return new ColumnField('search', 'StatisticSettings', 'statistik_einstellungen', 'SEARCH', $this->getAliasName());
     }
     public function topref() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'TOPREF', $this->getAliasName());
+        return new ColumnField('topref', 'StatisticSettings', 'statistik_einstellungen', 'TOPREF', $this->getAliasName());
     }
     public function topld() : ColumnField
     {
-        return new ColumnField('statistik_einstellungen', 'TOPLD', $this->getAliasName());
+        return new ColumnField('topld', 'StatisticSettings', 'statistik_einstellungen', 'TOPLD', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -96,6 +96,14 @@ class StatisticSettingsAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['RESET', 'LOGTIME', 'DOMAIN', 'TOPTHREAD', 'POPTHREAD', 'POPFORUM', 'NEWREGISTER', 'VISIT', 'WRITTENTHREADS', 'WRITTENPOST', 'TOPPOSTER', 'XDAYS', 'XTHREADS', 'POLLS', 'STICKY', 'SEARCH', 'TOPREF', 'TOPLD'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

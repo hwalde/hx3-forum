@@ -17,31 +17,31 @@ class PaymentApiAlias extends TableAlias {
    
     public function paymentApiId() : ColumnField
     {
-        return new ColumnField('paymentapi', 'paymentapiid', $this->getAliasName());
+        return new ColumnField('paymentApiId', 'PaymentApi', 'paymentapi', 'paymentapiid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('paymentapi', 'title', $this->getAliasName());
+        return new ColumnField('title', 'PaymentApi', 'paymentapi', 'title', $this->getAliasName());
     }
     public function currency() : ColumnField
     {
-        return new ColumnField('paymentapi', 'currency', $this->getAliasName());
+        return new ColumnField('currency', 'PaymentApi', 'paymentapi', 'currency', $this->getAliasName());
     }
     public function recurring() : ColumnField
     {
-        return new ColumnField('paymentapi', 'recurring', $this->getAliasName());
+        return new ColumnField('recurring', 'PaymentApi', 'paymentapi', 'recurring', $this->getAliasName());
     }
     public function className() : ColumnField
     {
-        return new ColumnField('paymentapi', 'classname', $this->getAliasName());
+        return new ColumnField('className', 'PaymentApi', 'paymentapi', 'classname', $this->getAliasName());
     }
     public function active() : ColumnField
     {
-        return new ColumnField('paymentapi', 'active', $this->getAliasName());
+        return new ColumnField('active', 'PaymentApi', 'paymentapi', 'active', $this->getAliasName());
     }
     public function settings() : ColumnField
     {
-        return new ColumnField('paymentapi', 'settings', $this->getAliasName());
+        return new ColumnField('settings', 'PaymentApi', 'paymentapi', 'settings', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class PaymentApiAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['paymentapiid', 'title', 'currency', 'recurring', 'classname', 'active', 'settings'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['paymentapiid'];
     }
     
     public function __listNullableColumns() : array

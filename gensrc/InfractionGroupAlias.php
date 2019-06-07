@@ -17,23 +17,23 @@ class InfractionGroupAlias extends TableAlias {
    
     public function infractionGroupId() : ColumnField
     {
-        return new ColumnField('infractiongroup', 'infractiongroupid', $this->getAliasName());
+        return new ColumnField('infractionGroupId', 'InfractionGroup', 'infractiongroup', 'infractiongroupid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('infractiongroup', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'InfractionGroup', 'infractiongroup', 'usergroupid', $this->getAliasName());
     }
     public function oruserGroupId() : ColumnField
     {
-        return new ColumnField('infractiongroup', 'orusergroupid', $this->getAliasName());
+        return new ColumnField('oruserGroupId', 'InfractionGroup', 'infractiongroup', 'orusergroupid', $this->getAliasName());
     }
     public function pointLevel() : ColumnField
     {
-        return new ColumnField('infractiongroup', 'pointlevel', $this->getAliasName());
+        return new ColumnField('pointLevel', 'InfractionGroup', 'infractiongroup', 'pointlevel', $this->getAliasName());
     }
     public function override() : ColumnField
     {
-        return new ColumnField('infractiongroup', 'override', $this->getAliasName());
+        return new ColumnField('override', 'InfractionGroup', 'infractiongroup', 'override', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class InfractionGroupAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['infractiongroupid', 'usergroupid', 'orusergroupid', 'pointlevel', 'override'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['infractiongroupid'];
     }
     
     public function __listNullableColumns() : array

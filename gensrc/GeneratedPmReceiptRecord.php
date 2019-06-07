@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedPmReceiptRecord implements Record {
     
     /** @var $pmId int */
-    private $pmId;
+    protected $pmId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $toUserId int */
-    private $toUserId;
+    protected $toUserId;
     
     /** @var $toUserName string */
-    private $toUserName;
+    protected $toUserName;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $sendTime int */
-    private $sendTime;
+    protected $sendTime;
     
     /** @var $readTime int */
-    private $readTime;
+    protected $readTime;
     
     /** @var $denied int */
-    private $denied;
+    protected $denied;
     
     public function hasPmId(): bool
     {

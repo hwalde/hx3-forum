@@ -43,15 +43,15 @@ class ForumRead implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('forumread', 'userid');
+        return new ColumnField('userId', 'ForumRead', 'forumread', 'userid');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('forumread', 'forumid');
+        return new ColumnField('forumId', 'ForumRead', 'forumread', 'forumid');
     }
     public static function readTime() : ColumnField
     {
-        return new ColumnField('forumread', 'readtime');
+        return new ColumnField('readTime', 'ForumRead', 'forumread', 'readtime');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class ForumRead implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'forumid', 'readtime'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'forumid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class ForumRead implements Table {
 			'readtime' => 'readTime'
 		];
     }
-
 }

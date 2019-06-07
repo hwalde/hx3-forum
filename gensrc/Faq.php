@@ -45,23 +45,23 @@ class Faq implements Table {
     
     public static function faqName() : ColumnField
     {
-        return new ColumnField('faq', 'faqname');
+        return new ColumnField('faqName', 'Faq', 'faq', 'faqname');
     }
     public static function faqParent() : ColumnField
     {
-        return new ColumnField('faq', 'faqparent');
+        return new ColumnField('faqParent', 'Faq', 'faq', 'faqparent');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('faq', 'displayorder');
+        return new ColumnField('displayOrder', 'Faq', 'faq', 'displayorder');
     }
     public static function volatile() : ColumnField
     {
-        return new ColumnField('faq', 'volatile');
+        return new ColumnField('volatile', 'Faq', 'faq', 'volatile');
     }
     public static function product() : ColumnField
     {
-        return new ColumnField('faq', 'product');
+        return new ColumnField('product', 'Faq', 'faq', 'product');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class Faq implements Table {
     public function __listColumns() : array
     {
         return ['faqname', 'faqparent', 'displayorder', 'volatile', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['faqname'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class Faq implements Table {
 			'product' => 'product'
 		];
     }
-
 }

@@ -17,35 +17,35 @@ class UserNoteAlias extends TableAlias {
    
     public function usernoteid() : ColumnField
     {
-        return new ColumnField('usernote', 'usernoteid', $this->getAliasName());
+        return new ColumnField('usernoteid', 'UserNote', 'usernote', 'usernoteid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('usernote', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserNote', 'usernote', 'userid', $this->getAliasName());
     }
     public function posterid() : ColumnField
     {
-        return new ColumnField('usernote', 'posterid', $this->getAliasName());
+        return new ColumnField('posterid', 'UserNote', 'usernote', 'posterid', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('usernote', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'UserNote', 'usernote', 'username', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('usernote', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'UserNote', 'usernote', 'dateline', $this->getAliasName());
     }
     public function message() : ColumnField
     {
-        return new ColumnField('usernote', 'message', $this->getAliasName());
+        return new ColumnField('message', 'UserNote', 'usernote', 'message', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('usernote', 'title', $this->getAliasName());
+        return new ColumnField('title', 'UserNote', 'usernote', 'title', $this->getAliasName());
     }
     public function allowSmilies() : ColumnField
     {
-        return new ColumnField('usernote', 'allowsmilies', $this->getAliasName());
+        return new ColumnField('allowSmilies', 'UserNote', 'usernote', 'allowsmilies', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class UserNoteAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['usernoteid', 'userid', 'posterid', 'username', 'dateline', 'message', 'title', 'allowsmilies'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usernoteid'];
     }
     
     public function __listNullableColumns() : array

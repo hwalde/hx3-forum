@@ -17,39 +17,39 @@ class TachyForumPostAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'TachyForumPost', 'tachyforumpost', 'userid', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'TachyForumPost', 'tachyforumpost', 'forumid', $this->getAliasName());
     }
     public function lastPost() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastpost', $this->getAliasName());
+        return new ColumnField('lastPost', 'TachyForumPost', 'tachyforumpost', 'lastpost', $this->getAliasName());
     }
     public function lastPoster() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastposter', $this->getAliasName());
+        return new ColumnField('lastPoster', 'TachyForumPost', 'tachyforumpost', 'lastposter', $this->getAliasName());
     }
     public function lastThread() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastthread', $this->getAliasName());
+        return new ColumnField('lastThread', 'TachyForumPost', 'tachyforumpost', 'lastthread', $this->getAliasName());
     }
     public function lastThreadId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastthreadid', $this->getAliasName());
+        return new ColumnField('lastThreadId', 'TachyForumPost', 'tachyforumpost', 'lastthreadid', $this->getAliasName());
     }
     public function lastIconId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lasticonid', $this->getAliasName());
+        return new ColumnField('lastIconId', 'TachyForumPost', 'tachyforumpost', 'lasticonid', $this->getAliasName());
     }
     public function lastPostId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastpostid', $this->getAliasName());
+        return new ColumnField('lastPostId', 'TachyForumPost', 'tachyforumpost', 'lastpostid', $this->getAliasName());
     }
     public function lastPrefixId() : ColumnField
     {
-        return new ColumnField('tachyforumpost', 'lastprefixid', $this->getAliasName());
+        return new ColumnField('lastPrefixId', 'TachyForumPost', 'tachyforumpost', 'lastprefixid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -60,6 +60,14 @@ class TachyForumPostAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'forumid', 'lastpost', 'lastposter', 'lastthread', 'lastthreadid', 'lasticonid', 'lastpostid', 'lastprefixid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'forumid'];
     }
     
     public function __listNullableColumns() : array

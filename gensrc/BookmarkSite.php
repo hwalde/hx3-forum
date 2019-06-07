@@ -46,27 +46,27 @@ class BookmarkSite implements Table {
     
     public static function bookmarkSiteId() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'bookmarksiteid');
+        return new ColumnField('bookmarkSiteId', 'BookmarkSite', 'bookmarksite', 'bookmarksiteid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'title');
+        return new ColumnField('title', 'BookmarkSite', 'bookmarksite', 'title');
     }
     public static function iconPath() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'iconpath');
+        return new ColumnField('iconPath', 'BookmarkSite', 'bookmarksite', 'iconpath');
     }
     public static function active() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'active');
+        return new ColumnField('active', 'BookmarkSite', 'bookmarksite', 'active');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'displayorder');
+        return new ColumnField('displayOrder', 'BookmarkSite', 'bookmarksite', 'displayorder');
     }
     public static function url() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'url');
+        return new ColumnField('url', 'BookmarkSite', 'bookmarksite', 'url');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class BookmarkSite implements Table {
     public function __listColumns() : array
     {
         return ['bookmarksiteid', 'title', 'iconpath', 'active', 'displayorder', 'url'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['bookmarksiteid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class BookmarkSite implements Table {
 			'url' => 'url'
 		];
     }
-
 }

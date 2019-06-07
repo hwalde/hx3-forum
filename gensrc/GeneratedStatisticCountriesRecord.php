@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedStatisticCountriesRecord implements Record {
     
     /** @var $id int */
-    private $id;
+    protected $id;
     
     /** @var $countryCode string */
-    private $countryCode;
+    protected $countryCode;
     
     /** @var $countryName string */
-    private $countryName;
+    protected $countryName;
     
     /** @var $flagLink string */
-    private $flagLink;
+    protected $flagLink;
     
     /** @var $balkenLink string */
-    private $balkenLink;
+    protected $balkenLink;
     
     /** @var $hostCounter int */
-    private $hostCounter;
+    protected $hostCounter;
     
     /** @var $browserLanguageCounter int */
-    private $browserLanguageCounter;
+    protected $browserLanguageCounter;
     
     public function hasId(): bool
     {

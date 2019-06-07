@@ -17,35 +17,35 @@ class SigPicAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('sigpic', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'SigPic', 'sigpic', 'userid', $this->getAliasName());
     }
     public function fileData() : ColumnField
     {
-        return new ColumnField('sigpic', 'filedata', $this->getAliasName());
+        return new ColumnField('fileData', 'SigPic', 'sigpic', 'filedata', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('sigpic', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'SigPic', 'sigpic', 'dateline', $this->getAliasName());
     }
     public function fileName() : ColumnField
     {
-        return new ColumnField('sigpic', 'filename', $this->getAliasName());
+        return new ColumnField('fileName', 'SigPic', 'sigpic', 'filename', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('sigpic', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'SigPic', 'sigpic', 'visible', $this->getAliasName());
     }
     public function fileSize() : ColumnField
     {
-        return new ColumnField('sigpic', 'filesize', $this->getAliasName());
+        return new ColumnField('fileSize', 'SigPic', 'sigpic', 'filesize', $this->getAliasName());
     }
     public function width() : ColumnField
     {
-        return new ColumnField('sigpic', 'width', $this->getAliasName());
+        return new ColumnField('width', 'SigPic', 'sigpic', 'width', $this->getAliasName());
     }
     public function height() : ColumnField
     {
-        return new ColumnField('sigpic', 'height', $this->getAliasName());
+        return new ColumnField('height', 'SigPic', 'sigpic', 'height', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class SigPicAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'filedata', 'dateline', 'filename', 'visible', 'filesize', 'width', 'height'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array

@@ -17,15 +17,15 @@ class AccessAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('access', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Access', 'access', 'userid', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('access', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'Access', 'access', 'forumid', $this->getAliasName());
     }
     public function accessMask() : ColumnField
     {
-        return new ColumnField('access', 'accessmask', $this->getAliasName());
+        return new ColumnField('accessMask', 'Access', 'access', 'accessmask', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class AccessAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'forumid', 'accessmask'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'forumid'];
     }
     
     public function __listNullableColumns() : array

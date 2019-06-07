@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedHvAnswerRecord implements Record {
     
     /** @var $answerId int */
-    private $answerId;
+    protected $answerId;
     
     /** @var $questionId int */
-    private $questionId;
+    protected $questionId;
     
     /** @var $answer string */
-    private $answer;
+    protected $answer;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasAnswerId(): bool
     {

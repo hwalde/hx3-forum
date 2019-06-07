@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedProductCodeRecord implements Record {
     
     /** @var $productCodeId int */
-    private $productCodeId;
+    protected $productCodeId;
     
     /** @var $productId string */
-    private $productId;
+    protected $productId;
     
     /** @var $version string */
-    private $version;
+    protected $version;
     
     /** @var $installCode string */
-    private $installCode;
+    protected $installCode;
     
     /** @var $uninstallCode string */
-    private $uninstallCode;
+    protected $uninstallCode;
     
     public function hasProductCodeId(): bool
     {

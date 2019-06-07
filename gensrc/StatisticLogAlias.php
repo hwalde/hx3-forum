@@ -17,19 +17,19 @@ class StatisticLogAlias extends TableAlias {
    
     public function id() : ColumnField
     {
-        return new ColumnField('statistik_log', 'ID', $this->getAliasName());
+        return new ColumnField('id', 'StatisticLog', 'statistik_log', 'ID', $this->getAliasName());
     }
     public function IP() : ColumnField
     {
-        return new ColumnField('statistik_log', 'IP', $this->getAliasName());
+        return new ColumnField('IP', 'StatisticLog', 'statistik_log', 'IP', $this->getAliasName());
     }
     public function loggedInSince() : ColumnField
     {
-        return new ColumnField('statistik_log', 'eingelogt_seit', $this->getAliasName());
+        return new ColumnField('loggedInSince', 'StatisticLog', 'statistik_log', 'eingelogt_seit', $this->getAliasName());
     }
     public function browserStamp() : ColumnField
     {
-        return new ColumnField('statistik_log', 'Browserstamp', $this->getAliasName());
+        return new ColumnField('browserStamp', 'StatisticLog', 'statistik_log', 'Browserstamp', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class StatisticLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['ID', 'IP', 'eingelogt_seit', 'Browserstamp'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['ID'];
     }
     
     public function __listNullableColumns() : array

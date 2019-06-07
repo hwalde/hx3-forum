@@ -17,11 +17,11 @@ class TagSearchAlias extends TableAlias {
    
     public function tagId() : ColumnField
     {
-        return new ColumnField('tagsearch', 'tagid', $this->getAliasName());
+        return new ColumnField('tagId', 'TagSearch', 'tagsearch', 'tagid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('tagsearch', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'TagSearch', 'tagsearch', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -32,6 +32,14 @@ class TagSearchAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['tagid', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

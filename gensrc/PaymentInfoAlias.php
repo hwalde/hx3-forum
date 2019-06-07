@@ -17,27 +17,27 @@ class PaymentInfoAlias extends TableAlias {
    
     public function paymentInfoId() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'paymentinfoid', $this->getAliasName());
+        return new ColumnField('paymentInfoId', 'PaymentInfo', 'paymentinfo', 'paymentinfoid', $this->getAliasName());
     }
     public function hash() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'hash', $this->getAliasName());
+        return new ColumnField('hash', 'PaymentInfo', 'paymentinfo', 'hash', $this->getAliasName());
     }
     public function subscriptionId() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'subscriptionid', $this->getAliasName());
+        return new ColumnField('subscriptionId', 'PaymentInfo', 'paymentinfo', 'subscriptionid', $this->getAliasName());
     }
     public function subscriptionSubId() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'subscriptionsubid', $this->getAliasName());
+        return new ColumnField('subscriptionSubId', 'PaymentInfo', 'paymentinfo', 'subscriptionsubid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PaymentInfo', 'paymentinfo', 'userid', $this->getAliasName());
     }
     public function completed() : ColumnField
     {
-        return new ColumnField('paymentinfo', 'completed', $this->getAliasName());
+        return new ColumnField('completed', 'PaymentInfo', 'paymentinfo', 'completed', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class PaymentInfoAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['paymentinfoid', 'hash', 'subscriptionid', 'subscriptionsubid', 'userid', 'completed'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['paymentinfoid'];
     }
     
     public function __listNullableColumns() : array

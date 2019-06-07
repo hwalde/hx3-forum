@@ -44,19 +44,19 @@ class UserList implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('userlist', 'userid');
+        return new ColumnField('userId', 'UserList', 'userlist', 'userid');
     }
     public static function relationid() : ColumnField
     {
-        return new ColumnField('userlist', 'relationid');
+        return new ColumnField('relationid', 'UserList', 'userlist', 'relationid');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('userlist', 'type');
+        return new ColumnField('type', 'UserList', 'userlist', 'type');
     }
     public static function friend() : ColumnField
     {
-        return new ColumnField('userlist', 'friend');
+        return new ColumnField('friend', 'UserList', 'userlist', 'friend');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class UserList implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'relationid', 'type', 'friend'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'relationid', 'type'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class UserList implements Table {
 			'friend' => 'friend'
 		];
     }
-
 }

@@ -17,11 +17,11 @@ class AnnouncementReadAlias extends TableAlias {
    
     public function announcementId() : ColumnField
     {
-        return new ColumnField('announcementread', 'announcementid', $this->getAliasName());
+        return new ColumnField('announcementId', 'AnnouncementRead', 'announcementread', 'announcementid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('announcementread', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'AnnouncementRead', 'announcementread', 'userid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -30,6 +30,14 @@ class AnnouncementReadAlias extends TableAlias {
     }
     
     public function __listColumns() : array
+    {
+        return ['announcementid', 'userid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
     {
         return ['announcementid', 'userid'];
     }

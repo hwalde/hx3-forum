@@ -17,51 +17,51 @@ class PtIssueNoteAlias extends TableAlias {
    
     public function issueNoteId() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'issuenoteid', $this->getAliasName());
+        return new ColumnField('issueNoteId', 'PtIssueNote', 'pt_issuenote', 'issuenoteid', $this->getAliasName());
     }
     public function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'issueid', $this->getAliasName());
+        return new ColumnField('issueId', 'PtIssueNote', 'pt_issuenote', 'issueid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PtIssueNote', 'pt_issuenote', 'dateline', $this->getAliasName());
     }
     public function pageText() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'pagetext', $this->getAliasName());
+        return new ColumnField('pageText', 'PtIssueNote', 'pt_issuenote', 'pagetext', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PtIssueNote', 'pt_issuenote', 'userid', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'PtIssueNote', 'pt_issuenote', 'username', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'type', $this->getAliasName());
+        return new ColumnField('type', 'PtIssueNote', 'pt_issuenote', 'type', $this->getAliasName());
     }
     public function isPending() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'ispending', $this->getAliasName());
+        return new ColumnField('isPending', 'PtIssueNote', 'pt_issuenote', 'ispending', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'PtIssueNote', 'pt_issuenote', 'visible', $this->getAliasName());
     }
     public function lastEditDate() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'lasteditdate', $this->getAliasName());
+        return new ColumnField('lastEditDate', 'PtIssueNote', 'pt_issuenote', 'lasteditdate', $this->getAliasName());
     }
     public function isFirstNote() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'isfirstnote', $this->getAliasName());
+        return new ColumnField('isFirstNote', 'PtIssueNote', 'pt_issuenote', 'isfirstnote', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'PtIssueNote', 'pt_issuenote', 'ipaddress', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class PtIssueNoteAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['issuenoteid', 'issueid', 'dateline', 'pagetext', 'userid', 'username', 'type', 'ispending', 'visible', 'lasteditdate', 'isfirstnote', 'ipaddress'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuenoteid'];
     }
     
     public function __listNullableColumns() : array

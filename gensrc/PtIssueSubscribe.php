@@ -43,15 +43,15 @@ class PtIssueSubscribe implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issuesubscribe', 'userid');
+        return new ColumnField('userId', 'PtIssueSubscribe', 'pt_issuesubscribe', 'userid');
     }
     public static function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuesubscribe', 'issueid');
+        return new ColumnField('issueId', 'PtIssueSubscribe', 'pt_issuesubscribe', 'issueid');
     }
     public static function subscribeType() : ColumnField
     {
-        return new ColumnField('pt_issuesubscribe', 'subscribetype');
+        return new ColumnField('subscribeType', 'PtIssueSubscribe', 'pt_issuesubscribe', 'subscribetype');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class PtIssueSubscribe implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'issueid', 'subscribetype'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'issueid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class PtIssueSubscribe implements Table {
 			'subscribetype' => 'subscribeType'
 		];
     }
-
 }

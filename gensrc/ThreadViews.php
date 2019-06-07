@@ -41,7 +41,7 @@ class ThreadViews implements Table {
     
     public static function threadId() : ColumnField
     {
-        return new ColumnField('threadviews', 'threadid');
+        return new ColumnField('threadId', 'ThreadViews', 'threadviews', 'threadid');
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class ThreadViews implements Table {
     public function __listColumns() : array
     {
         return ['threadid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -72,5 +80,4 @@ class ThreadViews implements Table {
 			'threadid' => 'threadId'
 		];
     }
-
 }

@@ -17,35 +17,35 @@ class TemplateHistoryAlias extends TableAlias {
    
     public function templateHistoryId() : ColumnField
     {
-        return new ColumnField('templatehistory', 'templatehistoryid', $this->getAliasName());
+        return new ColumnField('templateHistoryId', 'TemplateHistory', 'templatehistory', 'templatehistoryid', $this->getAliasName());
     }
     public function styleId() : ColumnField
     {
-        return new ColumnField('templatehistory', 'styleid', $this->getAliasName());
+        return new ColumnField('styleId', 'TemplateHistory', 'templatehistory', 'styleid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('templatehistory', 'title', $this->getAliasName());
+        return new ColumnField('title', 'TemplateHistory', 'templatehistory', 'title', $this->getAliasName());
     }
     public function template() : ColumnField
     {
-        return new ColumnField('templatehistory', 'template', $this->getAliasName());
+        return new ColumnField('template', 'TemplateHistory', 'templatehistory', 'template', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('templatehistory', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'TemplateHistory', 'templatehistory', 'dateline', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('templatehistory', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'TemplateHistory', 'templatehistory', 'username', $this->getAliasName());
     }
     public function version() : ColumnField
     {
-        return new ColumnField('templatehistory', 'version', $this->getAliasName());
+        return new ColumnField('version', 'TemplateHistory', 'templatehistory', 'version', $this->getAliasName());
     }
     public function comment() : ColumnField
     {
-        return new ColumnField('templatehistory', 'comment', $this->getAliasName());
+        return new ColumnField('comment', 'TemplateHistory', 'templatehistory', 'comment', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class TemplateHistoryAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['templatehistoryid', 'styleid', 'title', 'template', 'dateline', 'username', 'version', 'comment'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['templatehistoryid'];
     }
     
     public function __listNullableColumns() : array

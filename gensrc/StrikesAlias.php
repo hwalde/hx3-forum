@@ -17,15 +17,15 @@ class StrikesAlias extends TableAlias {
    
     public function strikeTime() : ColumnField
     {
-        return new ColumnField('strikes', 'striketime', $this->getAliasName());
+        return new ColumnField('strikeTime', 'Strikes', 'strikes', 'striketime', $this->getAliasName());
     }
     public function strikeIp() : ColumnField
     {
-        return new ColumnField('strikes', 'strikeip', $this->getAliasName());
+        return new ColumnField('strikeIp', 'Strikes', 'strikes', 'strikeip', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('strikes', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'Strikes', 'strikes', 'username', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class StrikesAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['striketime', 'strikeip', 'username'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

@@ -17,43 +17,43 @@ class PaymentTransactionAlias extends TableAlias {
    
     public function paymentTransactionId() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'paymenttransactionid', $this->getAliasName());
+        return new ColumnField('paymentTransactionId', 'PaymentTransaction', 'paymenttransaction', 'paymenttransactionid', $this->getAliasName());
     }
     public function paymentInfoId() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'paymentinfoid', $this->getAliasName());
+        return new ColumnField('paymentInfoId', 'PaymentTransaction', 'paymenttransaction', 'paymentinfoid', $this->getAliasName());
     }
     public function transactionId() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'transactionid', $this->getAliasName());
+        return new ColumnField('transactionId', 'PaymentTransaction', 'paymenttransaction', 'transactionid', $this->getAliasName());
     }
     public function state() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'state', $this->getAliasName());
+        return new ColumnField('state', 'PaymentTransaction', 'paymenttransaction', 'state', $this->getAliasName());
     }
     public function amount() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'amount', $this->getAliasName());
+        return new ColumnField('amount', 'PaymentTransaction', 'paymenttransaction', 'amount', $this->getAliasName());
     }
     public function currency() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'currency', $this->getAliasName());
+        return new ColumnField('currency', 'PaymentTransaction', 'paymenttransaction', 'currency', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PaymentTransaction', 'paymenttransaction', 'dateline', $this->getAliasName());
     }
     public function paymentApiId() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'paymentapiid', $this->getAliasName());
+        return new ColumnField('paymentApiId', 'PaymentTransaction', 'paymenttransaction', 'paymentapiid', $this->getAliasName());
     }
     public function request() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'request', $this->getAliasName());
+        return new ColumnField('request', 'PaymentTransaction', 'paymenttransaction', 'request', $this->getAliasName());
     }
     public function reversed() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'reversed', $this->getAliasName());
+        return new ColumnField('reversed', 'PaymentTransaction', 'paymenttransaction', 'reversed', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -64,6 +64,14 @@ class PaymentTransactionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['paymenttransactionid', 'paymentinfoid', 'transactionid', 'state', 'amount', 'currency', 'dateline', 'paymentapiid', 'request', 'reversed'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['paymenttransactionid'];
     }
     
     public function __listNullableColumns() : array

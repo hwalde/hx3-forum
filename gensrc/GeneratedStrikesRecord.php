@@ -9,18 +9,19 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedStrikesRecord implements Record {
+class GeneratedStrikesRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $strikeTime int */
-    private $strikeTime;
+    protected $strikeTime;
     
     /** @var $strikeIp string */
-    private $strikeIp;
+    protected $strikeIp;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     public function hasStrikeTime(): bool
     {

@@ -14,85 +14,85 @@ use POOQ\Record;
 class GeneratedPtIssueRecord implements Record {
     
     /** @var $issueId int */
-    private $issueId;
+    protected $issueId;
     
     /** @var $projectId int */
-    private $projectId;
+    protected $projectId;
     
     /** @var $issueStatusId int */
-    private $issueStatusId;
+    protected $issueStatusId;
     
     /** @var $issueTypeId string */
-    private $issueTypeId;
+    protected $issueTypeId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $summary string */
-    private $summary;
+    protected $summary;
     
     /** @var $submitUserId int */
-    private $submitUserId;
+    protected $submitUserId;
     
     /** @var $submitUserName string */
-    private $submitUserName;
+    protected $submitUserName;
     
     /** @var $submitDate int */
-    private $submitDate;
+    protected $submitDate;
     
     /** @var $appliesVersionId int */
-    private $appliesVersionId;
+    protected $appliesVersionId;
     
     /** @var $isAddressed int */
-    private $isAddressed;
+    protected $isAddressed;
     
     /** @var $addressedVersionId int */
-    private $addressedVersionId;
+    protected $addressedVersionId;
     
     /** @var $priority int */
-    private $priority;
+    protected $priority;
     
     /** @var $visible string */
-    private $visible;
+    protected $visible;
     
     /** @var $lastPost int */
-    private $lastPost;
+    protected $lastPost;
     
     /** @var $lastActivity int */
-    private $lastActivity;
+    protected $lastActivity;
     
     /** @var $lastPostUserId int */
-    private $lastPostUserId;
+    protected $lastPostUserId;
     
     /** @var $lastPostUserName string */
-    private $lastPostUserName;
+    protected $lastPostUserName;
     
     /** @var $firstNoteId int */
-    private $firstNoteId;
+    protected $firstNoteId;
     
     /** @var $lastNoteId int */
-    private $lastNoteId;
+    protected $lastNoteId;
     
     /** @var $attachCount int */
-    private $attachCount;
+    protected $attachCount;
     
     /** @var $pendingPetitions int */
-    private $pendingPetitions;
+    protected $pendingPetitions;
     
     /** @var $replyCount int */
-    private $replyCount;
+    protected $replyCount;
     
     /** @var $votePositive int */
-    private $votePositive;
+    protected $votePositive;
     
     /** @var $voteNegative int */
-    private $voteNegative;
+    protected $voteNegative;
     
     /** @var $projectCategoryId int */
-    private $projectCategoryId;
+    protected $projectCategoryId;
     
     /** @var $assignedUsers int */
-    private $assignedUsers;
+    protected $assignedUsers;
     
     public function hasIssueId(): bool
     {

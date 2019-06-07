@@ -17,35 +17,35 @@ class PmReceiptAlias extends TableAlias {
    
     public function pmId() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'pmid', $this->getAliasName());
+        return new ColumnField('pmId', 'PmReceipt', 'pmreceipt', 'pmid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PmReceipt', 'pmreceipt', 'userid', $this->getAliasName());
     }
     public function toUserId() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'touserid', $this->getAliasName());
+        return new ColumnField('toUserId', 'PmReceipt', 'pmreceipt', 'touserid', $this->getAliasName());
     }
     public function toUserName() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'tousername', $this->getAliasName());
+        return new ColumnField('toUserName', 'PmReceipt', 'pmreceipt', 'tousername', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'title', $this->getAliasName());
+        return new ColumnField('title', 'PmReceipt', 'pmreceipt', 'title', $this->getAliasName());
     }
     public function sendTime() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'sendtime', $this->getAliasName());
+        return new ColumnField('sendTime', 'PmReceipt', 'pmreceipt', 'sendtime', $this->getAliasName());
     }
     public function readTime() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'readtime', $this->getAliasName());
+        return new ColumnField('readTime', 'PmReceipt', 'pmreceipt', 'readtime', $this->getAliasName());
     }
     public function denied() : ColumnField
     {
-        return new ColumnField('pmreceipt', 'denied', $this->getAliasName());
+        return new ColumnField('denied', 'PmReceipt', 'pmreceipt', 'denied', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class PmReceiptAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['pmid', 'userid', 'touserid', 'tousername', 'title', 'sendtime', 'readtime', 'denied'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pmid'];
     }
     
     public function __listNullableColumns() : array

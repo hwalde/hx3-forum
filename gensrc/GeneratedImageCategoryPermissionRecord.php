@@ -9,15 +9,16 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedImageCategoryPermissionRecord implements Record {
+class GeneratedImageCategoryPermissionRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $imageCategoryId int */
-    private $imageCategoryId;
+    protected $imageCategoryId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     public function hasImageCategoryId(): bool
     {

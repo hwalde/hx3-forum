@@ -17,23 +17,23 @@ class UserGroupRequestAlias extends TableAlias {
    
     public function usergrouprequestid() : ColumnField
     {
-        return new ColumnField('usergrouprequest', 'usergrouprequestid', $this->getAliasName());
+        return new ColumnField('usergrouprequestid', 'UserGroupRequest', 'usergrouprequest', 'usergrouprequestid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('usergrouprequest', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserGroupRequest', 'usergrouprequest', 'userid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('usergrouprequest', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'UserGroupRequest', 'usergrouprequest', 'usergroupid', $this->getAliasName());
     }
     public function reason() : ColumnField
     {
-        return new ColumnField('usergrouprequest', 'reason', $this->getAliasName());
+        return new ColumnField('reason', 'UserGroupRequest', 'usergrouprequest', 'reason', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('usergrouprequest', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'UserGroupRequest', 'usergrouprequest', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class UserGroupRequestAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['usergrouprequestid', 'userid', 'usergroupid', 'reason', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usergrouprequestid'];
     }
     
     public function __listNullableColumns() : array

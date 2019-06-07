@@ -44,19 +44,19 @@ class PostLog implements Table {
     
     public static function postId() : ColumnField
     {
-        return new ColumnField('postlog', 'postid');
+        return new ColumnField('postId', 'PostLog', 'postlog', 'postid');
     }
     public static function userAgent() : ColumnField
     {
-        return new ColumnField('postlog', 'useragent');
+        return new ColumnField('userAgent', 'PostLog', 'postlog', 'useragent');
     }
     public static function ip() : ColumnField
     {
-        return new ColumnField('postlog', 'ip');
+        return new ColumnField('ip', 'PostLog', 'postlog', 'ip');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('postlog', 'dateline');
+        return new ColumnField('dateLine', 'PostLog', 'postlog', 'dateline');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class PostLog implements Table {
     public function __listColumns() : array
     {
         return ['postid', 'useragent', 'ip', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class PostLog implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

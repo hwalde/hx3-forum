@@ -9,63 +9,64 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedStatisticSettingsRecord implements Record {
+class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $reset int */
-    private $reset;
+    protected $reset;
     
     /** @var $logTime int */
-    private $logTime;
+    protected $logTime;
     
     /** @var $DOMAIN string */
-    private $DOMAIN;
+    protected $DOMAIN;
     
     /** @var $topThread int */
-    private $topThread;
+    protected $topThread;
     
     /** @var $popThread int */
-    private $popThread;
+    protected $popThread;
     
     /** @var $popForum int */
-    private $popForum;
+    protected $popForum;
     
     /** @var $newRegister int */
-    private $newRegister;
+    protected $newRegister;
     
     /** @var $visit int */
-    private $visit;
+    protected $visit;
     
     /** @var $writtenThreads int */
-    private $writtenThreads;
+    protected $writtenThreads;
     
     /** @var $writtenPost int */
-    private $writtenPost;
+    protected $writtenPost;
     
     /** @var $topPoster int */
-    private $topPoster;
+    protected $topPoster;
     
     /** @var $xDays int */
-    private $xDays;
+    protected $xDays;
     
     /** @var $xThreads int */
-    private $xThreads;
+    protected $xThreads;
     
     /** @var $polls int */
-    private $polls;
+    protected $polls;
     
     /** @var $sticky int */
-    private $sticky;
+    protected $sticky;
     
     /** @var $search int */
-    private $search;
+    protected $search;
     
     /** @var $topref int */
-    private $topref;
+    protected $topref;
     
     /** @var $topld int */
-    private $topld;
+    protected $topld;
     
     public function hasReset(): bool
     {

@@ -17,39 +17,39 @@ class AnnouncementAlias extends TableAlias {
    
     public function announcementId() : ColumnField
     {
-        return new ColumnField('announcement', 'announcementid', $this->getAliasName());
+        return new ColumnField('announcementId', 'Announcement', 'announcement', 'announcementid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('announcement', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Announcement', 'announcement', 'title', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('announcement', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Announcement', 'announcement', 'userid', $this->getAliasName());
     }
     public function startDate() : ColumnField
     {
-        return new ColumnField('announcement', 'startdate', $this->getAliasName());
+        return new ColumnField('startDate', 'Announcement', 'announcement', 'startdate', $this->getAliasName());
     }
     public function endDate() : ColumnField
     {
-        return new ColumnField('announcement', 'enddate', $this->getAliasName());
+        return new ColumnField('endDate', 'Announcement', 'announcement', 'enddate', $this->getAliasName());
     }
     public function pageText() : ColumnField
     {
-        return new ColumnField('announcement', 'pagetext', $this->getAliasName());
+        return new ColumnField('pageText', 'Announcement', 'announcement', 'pagetext', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('announcement', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'Announcement', 'announcement', 'forumid', $this->getAliasName());
     }
     public function views() : ColumnField
     {
-        return new ColumnField('announcement', 'views', $this->getAliasName());
+        return new ColumnField('views', 'Announcement', 'announcement', 'views', $this->getAliasName());
     }
     public function announcementOptions() : ColumnField
     {
-        return new ColumnField('announcement', 'announcementoptions', $this->getAliasName());
+        return new ColumnField('announcementOptions', 'Announcement', 'announcement', 'announcementoptions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -60,6 +60,14 @@ class AnnouncementAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['announcementid', 'title', 'userid', 'startdate', 'enddate', 'pagetext', 'forumid', 'views', 'announcementoptions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['announcementid'];
     }
     
     public function __listNullableColumns() : array

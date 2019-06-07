@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedForumPermissionRecord implements Record {
     
     /** @var $forumPermissionOd int */
-    private $forumPermissionOd;
+    protected $forumPermissionOd;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $forumPermissions int */
-    private $forumPermissions;
+    protected $forumPermissions;
     
     public function hasForumPermissionOd(): bool
     {

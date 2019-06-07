@@ -17,39 +17,39 @@ class UserBanAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('userban', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserBan', 'userban', 'userid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('userban', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'UserBan', 'userban', 'usergroupid', $this->getAliasName());
     }
     public function displayGroupId() : ColumnField
     {
-        return new ColumnField('userban', 'displaygroupid', $this->getAliasName());
+        return new ColumnField('displayGroupId', 'UserBan', 'userban', 'displaygroupid', $this->getAliasName());
     }
     public function userTitle() : ColumnField
     {
-        return new ColumnField('userban', 'usertitle', $this->getAliasName());
+        return new ColumnField('userTitle', 'UserBan', 'userban', 'usertitle', $this->getAliasName());
     }
     public function customTitle() : ColumnField
     {
-        return new ColumnField('userban', 'customtitle', $this->getAliasName());
+        return new ColumnField('customTitle', 'UserBan', 'userban', 'customtitle', $this->getAliasName());
     }
     public function adminId() : ColumnField
     {
-        return new ColumnField('userban', 'adminid', $this->getAliasName());
+        return new ColumnField('adminId', 'UserBan', 'userban', 'adminid', $this->getAliasName());
     }
     public function bandate() : ColumnField
     {
-        return new ColumnField('userban', 'bandate', $this->getAliasName());
+        return new ColumnField('bandate', 'UserBan', 'userban', 'bandate', $this->getAliasName());
     }
     public function liftDate() : ColumnField
     {
-        return new ColumnField('userban', 'liftdate', $this->getAliasName());
+        return new ColumnField('liftDate', 'UserBan', 'userban', 'liftdate', $this->getAliasName());
     }
     public function reason() : ColumnField
     {
-        return new ColumnField('userban', 'reason', $this->getAliasName());
+        return new ColumnField('reason', 'UserBan', 'userban', 'reason', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -60,6 +60,14 @@ class UserBanAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'usergroupid', 'displaygroupid', 'usertitle', 'customtitle', 'adminid', 'bandate', 'liftdate', 'reason'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array

@@ -43,15 +43,15 @@ class Moderation implements Table {
     
     public static function primaryId() : ColumnField
     {
-        return new ColumnField('moderation', 'primaryid');
+        return new ColumnField('primaryId', 'Moderation', 'moderation', 'primaryid');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('moderation', 'type');
+        return new ColumnField('type', 'Moderation', 'moderation', 'type');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('moderation', 'dateline');
+        return new ColumnField('dateLine', 'Moderation', 'moderation', 'dateline');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class Moderation implements Table {
     public function __listColumns() : array
     {
         return ['primaryid', 'type', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['primaryid', 'type'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class Moderation implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

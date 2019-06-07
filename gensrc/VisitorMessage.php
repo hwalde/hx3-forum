@@ -52,51 +52,51 @@ class VisitorMessage implements Table {
     
     public static function vmId() : ColumnField
     {
-        return new ColumnField('visitormessage', 'vmid');
+        return new ColumnField('vmId', 'VisitorMessage', 'visitormessage', 'vmid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('visitormessage', 'userid');
+        return new ColumnField('userId', 'VisitorMessage', 'visitormessage', 'userid');
     }
     public static function postUserId() : ColumnField
     {
-        return new ColumnField('visitormessage', 'postuserid');
+        return new ColumnField('postUserId', 'VisitorMessage', 'visitormessage', 'postuserid');
     }
     public static function postUserName() : ColumnField
     {
-        return new ColumnField('visitormessage', 'postusername');
+        return new ColumnField('postUserName', 'VisitorMessage', 'visitormessage', 'postusername');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('visitormessage', 'dateline');
+        return new ColumnField('dateLine', 'VisitorMessage', 'visitormessage', 'dateline');
     }
     public static function state() : ColumnField
     {
-        return new ColumnField('visitormessage', 'state');
+        return new ColumnField('state', 'VisitorMessage', 'visitormessage', 'state');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('visitormessage', 'title');
+        return new ColumnField('title', 'VisitorMessage', 'visitormessage', 'title');
     }
     public static function pageText() : ColumnField
     {
-        return new ColumnField('visitormessage', 'pagetext');
+        return new ColumnField('pageText', 'VisitorMessage', 'visitormessage', 'pagetext');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('visitormessage', 'ipaddress');
+        return new ColumnField('ipAddress', 'VisitorMessage', 'visitormessage', 'ipaddress');
     }
     public static function allowSmilie() : ColumnField
     {
-        return new ColumnField('visitormessage', 'allowsmilie');
+        return new ColumnField('allowSmilie', 'VisitorMessage', 'visitormessage', 'allowsmilie');
     }
     public static function reportThreadId() : ColumnField
     {
-        return new ColumnField('visitormessage', 'reportthreadid');
+        return new ColumnField('reportThreadId', 'VisitorMessage', 'visitormessage', 'reportthreadid');
     }
     public static function messageRead() : ColumnField
     {
-        return new ColumnField('visitormessage', 'messageread');
+        return new ColumnField('messageRead', 'VisitorMessage', 'visitormessage', 'messageread');
     }
 
     public function getTableName(): string
@@ -107,6 +107,14 @@ class VisitorMessage implements Table {
     public function __listColumns() : array
     {
         return ['vmid', 'userid', 'postuserid', 'postusername', 'dateline', 'state', 'title', 'pagetext', 'ipaddress', 'allowsmilie', 'reportthreadid', 'messageread'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['vmid'];
     }
     
     public function __listNullableColumns() : array
@@ -149,5 +157,4 @@ class VisitorMessage implements Table {
 			'messageread' => 'messageRead'
 		];
     }
-
 }

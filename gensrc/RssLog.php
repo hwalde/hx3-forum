@@ -48,35 +48,35 @@ class RssLog implements Table {
     
     public static function rssFeedId() : ColumnField
     {
-        return new ColumnField('rsslog', 'rssfeedid');
+        return new ColumnField('rssFeedId', 'RssLog', 'rsslog', 'rssfeedid');
     }
     public static function itemId() : ColumnField
     {
-        return new ColumnField('rsslog', 'itemid');
+        return new ColumnField('itemId', 'RssLog', 'rsslog', 'itemid');
     }
     public static function itemType() : ColumnField
     {
-        return new ColumnField('rsslog', 'itemtype');
+        return new ColumnField('itemType', 'RssLog', 'rsslog', 'itemtype');
     }
     public static function uniqueHash() : ColumnField
     {
-        return new ColumnField('rsslog', 'uniquehash');
+        return new ColumnField('uniqueHash', 'RssLog', 'rsslog', 'uniquehash');
     }
     public static function contentHash() : ColumnField
     {
-        return new ColumnField('rsslog', 'contenthash');
+        return new ColumnField('contentHash', 'RssLog', 'rsslog', 'contenthash');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('rsslog', 'dateline');
+        return new ColumnField('dateLine', 'RssLog', 'rsslog', 'dateline');
     }
     public static function threadActionTime() : ColumnField
     {
-        return new ColumnField('rsslog', 'threadactiontime');
+        return new ColumnField('threadActionTime', 'RssLog', 'rsslog', 'threadactiontime');
     }
     public static function threadActionComplete() : ColumnField
     {
-        return new ColumnField('rsslog', 'threadactioncomplete');
+        return new ColumnField('threadActionComplete', 'RssLog', 'rsslog', 'threadactioncomplete');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class RssLog implements Table {
     public function __listColumns() : array
     {
         return ['rssfeedid', 'itemid', 'itemtype', 'uniquehash', 'contenthash', 'dateline', 'threadactiontime', 'threadactioncomplete'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['rssfeedid', 'itemid', 'itemtype'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class RssLog implements Table {
 			'threadactioncomplete' => 'threadActionComplete'
 		];
     }
-
 }

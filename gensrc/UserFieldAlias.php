@@ -17,31 +17,31 @@ class UserFieldAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('userfield', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserField', 'userfield', 'userid', $this->getAliasName());
     }
     public function temp() : ColumnField
     {
-        return new ColumnField('userfield', 'temp', $this->getAliasName());
+        return new ColumnField('temp', 'UserField', 'userfield', 'temp', $this->getAliasName());
     }
     public function field1() : ColumnField
     {
-        return new ColumnField('userfield', 'field1', $this->getAliasName());
+        return new ColumnField('field1', 'UserField', 'userfield', 'field1', $this->getAliasName());
     }
     public function field2() : ColumnField
     {
-        return new ColumnField('userfield', 'field2', $this->getAliasName());
+        return new ColumnField('field2', 'UserField', 'userfield', 'field2', $this->getAliasName());
     }
     public function field3() : ColumnField
     {
-        return new ColumnField('userfield', 'field3', $this->getAliasName());
+        return new ColumnField('field3', 'UserField', 'userfield', 'field3', $this->getAliasName());
     }
     public function field4() : ColumnField
     {
-        return new ColumnField('userfield', 'field4', $this->getAliasName());
+        return new ColumnField('field4', 'UserField', 'userfield', 'field4', $this->getAliasName());
     }
     public function field5() : ColumnField
     {
-        return new ColumnField('userfield', 'field5', $this->getAliasName());
+        return new ColumnField('field5', 'UserField', 'userfield', 'field5', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class UserFieldAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'temp', 'field1', 'field2', 'field3', 'field4', 'field5'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array

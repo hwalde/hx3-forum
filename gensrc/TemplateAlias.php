@@ -17,43 +17,43 @@ class TemplateAlias extends TableAlias {
    
     public function templateId() : ColumnField
     {
-        return new ColumnField('template', 'templateid', $this->getAliasName());
+        return new ColumnField('templateId', 'Template', 'template', 'templateid', $this->getAliasName());
     }
     public function styleId() : ColumnField
     {
-        return new ColumnField('template', 'styleid', $this->getAliasName());
+        return new ColumnField('styleId', 'Template', 'template', 'styleid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('template', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Template', 'template', 'title', $this->getAliasName());
     }
     public function template() : ColumnField
     {
-        return new ColumnField('template', 'template', $this->getAliasName());
+        return new ColumnField('template', 'Template', 'template', 'template', $this->getAliasName());
     }
     public function templateUn() : ColumnField
     {
-        return new ColumnField('template', 'template_un', $this->getAliasName());
+        return new ColumnField('templateUn', 'Template', 'template', 'template_un', $this->getAliasName());
     }
     public function templateType() : ColumnField
     {
-        return new ColumnField('template', 'templatetype', $this->getAliasName());
+        return new ColumnField('templateType', 'Template', 'template', 'templatetype', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('template', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Template', 'template', 'dateline', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('template', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'Template', 'template', 'username', $this->getAliasName());
     }
     public function version() : ColumnField
     {
-        return new ColumnField('template', 'version', $this->getAliasName());
+        return new ColumnField('version', 'Template', 'template', 'version', $this->getAliasName());
     }
     public function product() : ColumnField
     {
-        return new ColumnField('template', 'product', $this->getAliasName());
+        return new ColumnField('product', 'Template', 'template', 'product', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -64,6 +64,14 @@ class TemplateAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['templateid', 'styleid', 'title', 'template', 'template_un', 'templatetype', 'dateline', 'username', 'version', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['templateid'];
     }
     
     public function __listNullableColumns() : array

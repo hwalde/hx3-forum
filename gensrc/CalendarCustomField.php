@@ -48,35 +48,35 @@ class CalendarCustomField implements Table {
     
     public static function calendarCustomFieldId() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'calendarcustomfieldid');
+        return new ColumnField('calendarCustomFieldId', 'CalendarCustomField', 'calendarcustomfield', 'calendarcustomfieldid');
     }
     public static function calendarId() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'calendarid');
+        return new ColumnField('calendarId', 'CalendarCustomField', 'calendarcustomfield', 'calendarid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'title');
+        return new ColumnField('title', 'CalendarCustomField', 'calendarcustomfield', 'title');
     }
     public static function description() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'description');
+        return new ColumnField('description', 'CalendarCustomField', 'calendarcustomfield', 'description');
     }
     public static function options() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'options');
+        return new ColumnField('options', 'CalendarCustomField', 'calendarcustomfield', 'options');
     }
     public static function allowEntry() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'allowentry');
+        return new ColumnField('allowEntry', 'CalendarCustomField', 'calendarcustomfield', 'allowentry');
     }
     public static function required() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'required');
+        return new ColumnField('required', 'CalendarCustomField', 'calendarcustomfield', 'required');
     }
     public static function length() : ColumnField
     {
-        return new ColumnField('calendarcustomfield', 'length');
+        return new ColumnField('length', 'CalendarCustomField', 'calendarcustomfield', 'length');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class CalendarCustomField implements Table {
     public function __listColumns() : array
     {
         return ['calendarcustomfieldid', 'calendarid', 'title', 'description', 'options', 'allowentry', 'required', 'length'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['calendarcustomfieldid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class CalendarCustomField implements Table {
 			'length' => 'length'
 		];
     }
-
 }

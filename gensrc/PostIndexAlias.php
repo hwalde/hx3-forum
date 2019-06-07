@@ -17,19 +17,19 @@ class PostIndexAlias extends TableAlias {
    
     public function wordId() : ColumnField
     {
-        return new ColumnField('postindex', 'wordid', $this->getAliasName());
+        return new ColumnField('wordId', 'PostIndex', 'postindex', 'wordid', $this->getAliasName());
     }
     public function postId() : ColumnField
     {
-        return new ColumnField('postindex', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'PostIndex', 'postindex', 'postid', $this->getAliasName());
     }
     public function inTitle() : ColumnField
     {
-        return new ColumnField('postindex', 'intitle', $this->getAliasName());
+        return new ColumnField('inTitle', 'PostIndex', 'postindex', 'intitle', $this->getAliasName());
     }
     public function score() : ColumnField
     {
-        return new ColumnField('postindex', 'score', $this->getAliasName());
+        return new ColumnField('score', 'PostIndex', 'postindex', 'score', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class PostIndexAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['wordid', 'postid', 'intitle', 'score'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['wordid', 'postid'];
     }
     
     public function __listNullableColumns() : array

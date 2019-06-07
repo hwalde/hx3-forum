@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedTagThreadRecord implements Record {
     
     /** @var $tagId int */
-    private $tagId;
+    protected $tagId;
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasTagId(): bool
     {

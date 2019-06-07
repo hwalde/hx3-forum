@@ -14,52 +14,52 @@ use POOQ\Record;
 class GeneratedSessionRecord implements Record {
     
     /** @var $sessionHash string */
-    private $sessionHash;
+    protected $sessionHash;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $host string */
-    private $host;
+    protected $host;
     
     /** @var $idHash string */
-    private $idHash;
+    protected $idHash;
     
     /** @var $lastActivity int */
-    private $lastActivity;
+    protected $lastActivity;
     
     /** @var $location string */
-    private $location;
+    protected $location;
     
     /** @var $userAgent string */
-    private $userAgent;
+    protected $userAgent;
     
     /** @var $styleId int */
-    private $styleId;
+    protected $styleId;
     
     /** @var $loggedIn int */
-    private $loggedIn;
+    protected $loggedIn;
     
     /** @var $inForum int */
-    private $inForum;
+    protected $inForum;
     
     /** @var $inThread int */
-    private $inThread;
+    protected $inThread;
     
     /** @var $inCalendar int */
-    private $inCalendar;
+    protected $inCalendar;
     
     /** @var $badLocation int */
-    private $badLocation;
+    protected $badLocation;
     
     /** @var $bypass int */
-    private $bypass;
+    protected $bypass;
     
     /** @var $languageId int */
-    private $languageId;
+    protected $languageId;
     
     /** @var $profileUpdate int */
-    private $profileUpdate;
+    protected $profileUpdate;
     
     public function hasSessionHash(): bool
     {

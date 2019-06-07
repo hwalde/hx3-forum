@@ -17,27 +17,27 @@ class BookmarkSiteAlias extends TableAlias {
    
     public function bookmarkSiteId() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'bookmarksiteid', $this->getAliasName());
+        return new ColumnField('bookmarkSiteId', 'BookmarkSite', 'bookmarksite', 'bookmarksiteid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'title', $this->getAliasName());
+        return new ColumnField('title', 'BookmarkSite', 'bookmarksite', 'title', $this->getAliasName());
     }
     public function iconPath() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'iconpath', $this->getAliasName());
+        return new ColumnField('iconPath', 'BookmarkSite', 'bookmarksite', 'iconpath', $this->getAliasName());
     }
     public function active() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'active', $this->getAliasName());
+        return new ColumnField('active', 'BookmarkSite', 'bookmarksite', 'active', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'BookmarkSite', 'bookmarksite', 'displayorder', $this->getAliasName());
     }
     public function url() : ColumnField
     {
-        return new ColumnField('bookmarksite', 'url', $this->getAliasName());
+        return new ColumnField('url', 'BookmarkSite', 'bookmarksite', 'url', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class BookmarkSiteAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['bookmarksiteid', 'title', 'iconpath', 'active', 'displayorder', 'url'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['bookmarksiteid'];
     }
     
     public function __listNullableColumns() : array

@@ -17,47 +17,47 @@ class GroupMessageAlias extends TableAlias {
    
     public function gmId() : ColumnField
     {
-        return new ColumnField('groupmessage', 'gmid', $this->getAliasName());
+        return new ColumnField('gmId', 'GroupMessage', 'groupmessage', 'gmid', $this->getAliasName());
     }
     public function groupId() : ColumnField
     {
-        return new ColumnField('groupmessage', 'groupid', $this->getAliasName());
+        return new ColumnField('groupId', 'GroupMessage', 'groupmessage', 'groupid', $this->getAliasName());
     }
     public function postUserId() : ColumnField
     {
-        return new ColumnField('groupmessage', 'postuserid', $this->getAliasName());
+        return new ColumnField('postUserId', 'GroupMessage', 'groupmessage', 'postuserid', $this->getAliasName());
     }
     public function postUserName() : ColumnField
     {
-        return new ColumnField('groupmessage', 'postusername', $this->getAliasName());
+        return new ColumnField('postUserName', 'GroupMessage', 'groupmessage', 'postusername', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('groupmessage', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'GroupMessage', 'groupmessage', 'dateline', $this->getAliasName());
     }
     public function state() : ColumnField
     {
-        return new ColumnField('groupmessage', 'state', $this->getAliasName());
+        return new ColumnField('state', 'GroupMessage', 'groupmessage', 'state', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('groupmessage', 'title', $this->getAliasName());
+        return new ColumnField('title', 'GroupMessage', 'groupmessage', 'title', $this->getAliasName());
     }
     public function pageText() : ColumnField
     {
-        return new ColumnField('groupmessage', 'pagetext', $this->getAliasName());
+        return new ColumnField('pageText', 'GroupMessage', 'groupmessage', 'pagetext', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('groupmessage', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'GroupMessage', 'groupmessage', 'ipaddress', $this->getAliasName());
     }
     public function allowSmilie() : ColumnField
     {
-        return new ColumnField('groupmessage', 'allowsmilie', $this->getAliasName());
+        return new ColumnField('allowSmilie', 'GroupMessage', 'groupmessage', 'allowsmilie', $this->getAliasName());
     }
     public function reportThreadId() : ColumnField
     {
-        return new ColumnField('groupmessage', 'reportthreadid', $this->getAliasName());
+        return new ColumnField('reportThreadId', 'GroupMessage', 'groupmessage', 'reportthreadid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -68,6 +68,14 @@ class GroupMessageAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['gmid', 'groupid', 'postuserid', 'postusername', 'dateline', 'state', 'title', 'pagetext', 'ipaddress', 'allowsmilie', 'reportthreadid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['gmid'];
     }
     
     public function __listNullableColumns() : array

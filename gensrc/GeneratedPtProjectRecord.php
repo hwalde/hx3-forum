@@ -14,34 +14,34 @@ use POOQ\Record;
 class GeneratedPtProjectRecord implements Record {
     
     /** @var $projectId int */
-    private $projectId;
+    protected $projectId;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $titleClean string */
-    private $titleClean;
+    protected $titleClean;
     
     /** @var $summary string */
-    private $summary;
+    protected $summary;
     
     /** @var $summaryClean string */
-    private $summaryClean;
+    protected $summaryClean;
     
     /** @var $description string */
-    private $description;
+    protected $description;
     
     /** @var $options int */
-    private $options;
+    protected $options;
     
     /** @var $afterForumIds string */
-    private $afterForumIds;
+    protected $afterForumIds;
     
     /** @var $forumTitle string */
-    private $forumTitle;
+    protected $forumTitle;
     
     public function hasProjectId(): bool
     {

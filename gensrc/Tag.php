@@ -43,15 +43,15 @@ class Tag implements Table {
     
     public static function tagId() : ColumnField
     {
-        return new ColumnField('tag', 'tagid');
+        return new ColumnField('tagId', 'Tag', 'tag', 'tagid');
     }
     public static function tagText() : ColumnField
     {
-        return new ColumnField('tag', 'tagtext');
+        return new ColumnField('tagText', 'Tag', 'tag', 'tagtext');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('tag', 'dateline');
+        return new ColumnField('dateLine', 'Tag', 'tag', 'dateline');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class Tag implements Table {
     public function __listColumns() : array
     {
         return ['tagid', 'tagtext', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['tagid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class Tag implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

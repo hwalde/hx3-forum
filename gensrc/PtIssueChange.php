@@ -48,35 +48,35 @@ class PtIssueChange implements Table {
     
     public static function issueChangeId() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'issuechangeid');
+        return new ColumnField('issueChangeId', 'PtIssueChange', 'pt_issuechange', 'issuechangeid');
     }
     public static function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'issueid');
+        return new ColumnField('issueId', 'PtIssueChange', 'pt_issuechange', 'issueid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'userid');
+        return new ColumnField('userId', 'PtIssueChange', 'pt_issuechange', 'userid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'dateline');
+        return new ColumnField('dateLine', 'PtIssueChange', 'pt_issuechange', 'dateline');
     }
     public static function issueNoteId() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'issuenoteid');
+        return new ColumnField('issueNoteId', 'PtIssueChange', 'pt_issuechange', 'issuenoteid');
     }
     public static function field() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'field');
+        return new ColumnField('field', 'PtIssueChange', 'pt_issuechange', 'field');
     }
     public static function oldValue() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'oldvalue');
+        return new ColumnField('oldValue', 'PtIssueChange', 'pt_issuechange', 'oldvalue');
     }
     public static function newValue() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'newvalue');
+        return new ColumnField('newValue', 'PtIssueChange', 'pt_issuechange', 'newvalue');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class PtIssueChange implements Table {
     public function __listColumns() : array
     {
         return ['issuechangeid', 'issueid', 'userid', 'dateline', 'issuenoteid', 'field', 'oldvalue', 'newvalue'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuechangeid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class PtIssueChange implements Table {
 			'newvalue' => 'newValue'
 		];
     }
-
 }

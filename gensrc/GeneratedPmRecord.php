@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedPmRecord implements Record {
     
     /** @var $pmId int */
-    private $pmId;
+    protected $pmId;
     
     /** @var $pmTextId int */
-    private $pmTextId;
+    protected $pmTextId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $folderId int */
-    private $folderId;
+    protected $folderId;
     
     /** @var $messageRead int */
-    private $messageRead;
+    protected $messageRead;
     
     public function hasPmId(): bool
     {

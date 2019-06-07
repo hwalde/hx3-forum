@@ -17,15 +17,15 @@ class PtIssueTypeAlias extends TableAlias {
    
     public function issueTypeId() : ColumnField
     {
-        return new ColumnField('pt_issuetype', 'issuetypeid', $this->getAliasName());
+        return new ColumnField('issueTypeId', 'PtIssueType', 'pt_issuetype', 'issuetypeid', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_issuetype', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'PtIssueType', 'pt_issuetype', 'displayorder', $this->getAliasName());
     }
     public function iconFile() : ColumnField
     {
-        return new ColumnField('pt_issuetype', 'iconfile', $this->getAliasName());
+        return new ColumnField('iconFile', 'PtIssueType', 'pt_issuetype', 'iconfile', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class PtIssueTypeAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['issuetypeid', 'displayorder', 'iconfile'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuetypeid'];
     }
     
     public function __listNullableColumns() : array

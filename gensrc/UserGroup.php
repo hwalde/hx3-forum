@@ -87,191 +87,191 @@ class UserGroup implements Table {
     
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('usergroup', 'usergroupid');
+        return new ColumnField('userGroupId', 'UserGroup', 'usergroup', 'usergroupid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('usergroup', 'title');
+        return new ColumnField('title', 'UserGroup', 'usergroup', 'title');
     }
     public static function description() : ColumnField
     {
-        return new ColumnField('usergroup', 'description');
+        return new ColumnField('description', 'UserGroup', 'usergroup', 'description');
     }
     public static function userTitle() : ColumnField
     {
-        return new ColumnField('usergroup', 'usertitle');
+        return new ColumnField('userTitle', 'UserGroup', 'usergroup', 'usertitle');
     }
     public static function passwordExpires() : ColumnField
     {
-        return new ColumnField('usergroup', 'passwordexpires');
+        return new ColumnField('passwordExpires', 'UserGroup', 'usergroup', 'passwordexpires');
     }
     public static function passwordHistory() : ColumnField
     {
-        return new ColumnField('usergroup', 'passwordhistory');
+        return new ColumnField('passwordHistory', 'UserGroup', 'usergroup', 'passwordhistory');
     }
     public static function pmQuota() : ColumnField
     {
-        return new ColumnField('usergroup', 'pmquota');
+        return new ColumnField('pmQuota', 'UserGroup', 'usergroup', 'pmquota');
     }
     public static function pmSendmax() : ColumnField
     {
-        return new ColumnField('usergroup', 'pmsendmax');
+        return new ColumnField('pmSendmax', 'UserGroup', 'usergroup', 'pmsendmax');
     }
     public static function openTag() : ColumnField
     {
-        return new ColumnField('usergroup', 'opentag');
+        return new ColumnField('openTag', 'UserGroup', 'usergroup', 'opentag');
     }
     public static function closeTag() : ColumnField
     {
-        return new ColumnField('usergroup', 'closetag');
+        return new ColumnField('closeTag', 'UserGroup', 'usergroup', 'closetag');
     }
     public static function canOverride() : ColumnField
     {
-        return new ColumnField('usergroup', 'canoverride');
+        return new ColumnField('canOverride', 'UserGroup', 'usergroup', 'canoverride');
     }
     public static function isPublicGroup() : ColumnField
     {
-        return new ColumnField('usergroup', 'ispublicgroup');
+        return new ColumnField('isPublicGroup', 'UserGroup', 'usergroup', 'ispublicgroup');
     }
     public static function forumPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'forumpermissions');
+        return new ColumnField('forumPermissions', 'UserGroup', 'usergroup', 'forumpermissions');
     }
     public static function pmPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'pmpermissions');
+        return new ColumnField('pmPermissions', 'UserGroup', 'usergroup', 'pmpermissions');
     }
     public static function calendarPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'calendarpermissions');
+        return new ColumnField('calendarPermissions', 'UserGroup', 'usergroup', 'calendarpermissions');
     }
     public static function wolPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'wolpermissions');
+        return new ColumnField('wolPermissions', 'UserGroup', 'usergroup', 'wolpermissions');
     }
     public static function adminPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'adminpermissions');
+        return new ColumnField('adminPermissions', 'UserGroup', 'usergroup', 'adminpermissions');
     }
     public static function genericPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'genericpermissions');
+        return new ColumnField('genericPermissions', 'UserGroup', 'usergroup', 'genericpermissions');
     }
     public static function genericOptions() : ColumnField
     {
-        return new ColumnField('usergroup', 'genericoptions');
+        return new ColumnField('genericOptions', 'UserGroup', 'usergroup', 'genericoptions');
     }
     public static function attachLimit() : ColumnField
     {
-        return new ColumnField('usergroup', 'attachlimit');
+        return new ColumnField('attachLimit', 'UserGroup', 'usergroup', 'attachlimit');
     }
     public static function avatarMaxWidth() : ColumnField
     {
-        return new ColumnField('usergroup', 'avatarmaxwidth');
+        return new ColumnField('avatarMaxWidth', 'UserGroup', 'usergroup', 'avatarmaxwidth');
     }
     public static function avatarMaxHeight() : ColumnField
     {
-        return new ColumnField('usergroup', 'avatarmaxheight');
+        return new ColumnField('avatarMaxHeight', 'UserGroup', 'usergroup', 'avatarmaxheight');
     }
     public static function avatarMaxSize() : ColumnField
     {
-        return new ColumnField('usergroup', 'avatarmaxsize');
+        return new ColumnField('avatarMaxSize', 'UserGroup', 'usergroup', 'avatarmaxsize');
     }
     public static function profilePicMaxWidth() : ColumnField
     {
-        return new ColumnField('usergroup', 'profilepicmaxwidth');
+        return new ColumnField('profilePicMaxWidth', 'UserGroup', 'usergroup', 'profilepicmaxwidth');
     }
     public static function profilePicMaxHeight() : ColumnField
     {
-        return new ColumnField('usergroup', 'profilepicmaxheight');
+        return new ColumnField('profilePicMaxHeight', 'UserGroup', 'usergroup', 'profilepicmaxheight');
     }
     public static function profilePicMaxSize() : ColumnField
     {
-        return new ColumnField('usergroup', 'profilepicmaxsize');
+        return new ColumnField('profilePicMaxSize', 'UserGroup', 'usergroup', 'profilepicmaxsize');
     }
     public static function importUserGroupId() : ColumnField
     {
-        return new ColumnField('usergroup', 'importusergroupid');
+        return new ColumnField('importUserGroupId', 'UserGroup', 'usergroup', 'importusergroupid');
     }
     public static function signaturePermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'signaturepermissions');
+        return new ColumnField('signaturePermissions', 'UserGroup', 'usergroup', 'signaturepermissions');
     }
     public static function sigPicMaxWidth() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigpicmaxwidth');
+        return new ColumnField('sigPicMaxWidth', 'UserGroup', 'usergroup', 'sigpicmaxwidth');
     }
     public static function sigPicMaxheight() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigpicmaxheight');
+        return new ColumnField('sigPicMaxheight', 'UserGroup', 'usergroup', 'sigpicmaxheight');
     }
     public static function sigPicMaxSize() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigpicmaxsize');
+        return new ColumnField('sigPicMaxSize', 'UserGroup', 'usergroup', 'sigpicmaxsize');
     }
     public static function sigMaxImages() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigmaximages');
+        return new ColumnField('sigMaxImages', 'UserGroup', 'usergroup', 'sigmaximages');
     }
     public static function sigMaxSizeBBCode() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigmaxsizebbcode');
+        return new ColumnField('sigMaxSizeBBCode', 'UserGroup', 'usergroup', 'sigmaxsizebbcode');
     }
     public static function sigMaxChars() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigmaxchars');
+        return new ColumnField('sigMaxChars', 'UserGroup', 'usergroup', 'sigmaxchars');
     }
     public static function sigMaxRawChars() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigmaxrawchars');
+        return new ColumnField('sigMaxRawChars', 'UserGroup', 'usergroup', 'sigmaxrawchars');
     }
     public static function sigMaxLines() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigmaxlines');
+        return new ColumnField('sigMaxLines', 'UserGroup', 'usergroup', 'sigmaxlines');
     }
     public static function visitorMessagePermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'visitormessagepermissions');
+        return new ColumnField('visitorMessagePermissions', 'UserGroup', 'usergroup', 'visitormessagepermissions');
     }
     public static function socialGroupPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'socialgrouppermissions');
+        return new ColumnField('socialGroupPermissions', 'UserGroup', 'usergroup', 'socialgrouppermissions');
     }
     public static function userCssPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'usercsspermissions');
+        return new ColumnField('userCssPermissions', 'UserGroup', 'usergroup', 'usercsspermissions');
     }
     public static function albumPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'albumpermissions');
+        return new ColumnField('albumPermissions', 'UserGroup', 'usergroup', 'albumpermissions');
     }
     public static function albumPicMaxWidth() : ColumnField
     {
-        return new ColumnField('usergroup', 'albumpicmaxwidth');
+        return new ColumnField('albumPicMaxWidth', 'UserGroup', 'usergroup', 'albumpicmaxwidth');
     }
     public static function albumPicMaxHeight() : ColumnField
     {
-        return new ColumnField('usergroup', 'albumpicmaxheight');
+        return new ColumnField('albumPicMaxHeight', 'UserGroup', 'usergroup', 'albumpicmaxheight');
     }
     public static function albumPicMaxSize() : ColumnField
     {
-        return new ColumnField('usergroup', 'albumpicmaxsize');
+        return new ColumnField('albumPicMaxSize', 'UserGroup', 'usergroup', 'albumpicmaxsize');
     }
     public static function albumMaxPics() : ColumnField
     {
-        return new ColumnField('usergroup', 'albummaxpics');
+        return new ColumnField('albumMaxPics', 'UserGroup', 'usergroup', 'albummaxpics');
     }
     public static function albumMaxSize() : ColumnField
     {
-        return new ColumnField('usergroup', 'albummaxsize');
+        return new ColumnField('albumMaxSize', 'UserGroup', 'usergroup', 'albummaxsize');
     }
     public static function genericpermissions2() : ColumnField
     {
-        return new ColumnField('usergroup', 'genericpermissions2');
+        return new ColumnField('genericpermissions2', 'UserGroup', 'usergroup', 'genericpermissions2');
     }
     public static function ptPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'ptpermissions');
+        return new ColumnField('ptPermissions', 'UserGroup', 'usergroup', 'ptpermissions');
     }
 
     public function getTableName(): string
@@ -282,6 +282,14 @@ class UserGroup implements Table {
     public function __listColumns() : array
     {
         return ['usergroupid', 'title', 'description', 'usertitle', 'passwordexpires', 'passwordhistory', 'pmquota', 'pmsendmax', 'opentag', 'closetag', 'canoverride', 'ispublicgroup', 'forumpermissions', 'pmpermissions', 'calendarpermissions', 'wolpermissions', 'adminpermissions', 'genericpermissions', 'genericoptions', 'attachlimit', 'avatarmaxwidth', 'avatarmaxheight', 'avatarmaxsize', 'profilepicmaxwidth', 'profilepicmaxheight', 'profilepicmaxsize', 'importusergroupid', 'signaturepermissions', 'sigpicmaxwidth', 'sigpicmaxheight', 'sigpicmaxsize', 'sigmaximages', 'sigmaxsizebbcode', 'sigmaxchars', 'sigmaxrawchars', 'sigmaxlines', 'visitormessagepermissions', 'socialgrouppermissions', 'usercsspermissions', 'albumpermissions', 'albumpicmaxwidth', 'albumpicmaxheight', 'albumpicmaxsize', 'albummaxpics', 'albummaxsize', 'genericpermissions2', 'ptpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usergroupid'];
     }
     
     public function __listNullableColumns() : array
@@ -394,5 +402,4 @@ class UserGroup implements Table {
 			'ptpermissions' => 'ptPermissions'
 		];
     }
-
 }

@@ -45,23 +45,23 @@ class VbSeoBlackList implements Table {
     
     public static function lDomain() : ColumnField
     {
-        return new ColumnField('vbseo_blacklist', 'l_domain');
+        return new ColumnField('lDomain', 'VbSeoBlackList', 'vbseo_blacklist', 'l_domain');
     }
     public static function lType() : ColumnField
     {
-        return new ColumnField('vbseo_blacklist', 'l_type');
+        return new ColumnField('lType', 'VbSeoBlackList', 'vbseo_blacklist', 'l_type');
     }
     public static function lDateLine() : ColumnField
     {
-        return new ColumnField('vbseo_blacklist', 'l_dateline');
+        return new ColumnField('lDateLine', 'VbSeoBlackList', 'vbseo_blacklist', 'l_dateline');
     }
     public static function lHits() : ColumnField
     {
-        return new ColumnField('vbseo_blacklist', 'l_hits');
+        return new ColumnField('lHits', 'VbSeoBlackList', 'vbseo_blacklist', 'l_hits');
     }
     public static function lDeleted() : ColumnField
     {
-        return new ColumnField('vbseo_blacklist', 'l_deleted');
+        return new ColumnField('lDeleted', 'VbSeoBlackList', 'vbseo_blacklist', 'l_deleted');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class VbSeoBlackList implements Table {
     public function __listColumns() : array
     {
         return ['l_domain', 'l_type', 'l_dateline', 'l_hits', 'l_deleted'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['l_domain', 'l_type'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class VbSeoBlackList implements Table {
 			'l_deleted' => 'lDeleted'
 		];
     }
-
 }

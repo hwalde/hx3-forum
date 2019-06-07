@@ -17,23 +17,23 @@ class FaqAlias extends TableAlias {
    
     public function faqName() : ColumnField
     {
-        return new ColumnField('faq', 'faqname', $this->getAliasName());
+        return new ColumnField('faqName', 'Faq', 'faq', 'faqname', $this->getAliasName());
     }
     public function faqParent() : ColumnField
     {
-        return new ColumnField('faq', 'faqparent', $this->getAliasName());
+        return new ColumnField('faqParent', 'Faq', 'faq', 'faqparent', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('faq', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'Faq', 'faq', 'displayorder', $this->getAliasName());
     }
     public function volatile() : ColumnField
     {
-        return new ColumnField('faq', 'volatile', $this->getAliasName());
+        return new ColumnField('volatile', 'Faq', 'faq', 'volatile', $this->getAliasName());
     }
     public function product() : ColumnField
     {
-        return new ColumnField('faq', 'product', $this->getAliasName());
+        return new ColumnField('product', 'Faq', 'faq', 'product', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class FaqAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['faqname', 'faqparent', 'displayorder', 'volatile', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['faqname'];
     }
     
     public function __listNullableColumns() : array

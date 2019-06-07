@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedStatisticSpiderRecord implements Record {
     
     /** @var $id int */
-    private $id;
+    protected $id;
     
     /** @var $spiderName string */
-    private $spiderName;
+    protected $spiderName;
     
     /** @var $spiderLink string */
-    private $spiderLink;
+    protected $spiderLink;
     
     /** @var $balkenLink string */
-    private $balkenLink;
+    protected $balkenLink;
     
     /** @var $zaehler int */
-    private $zaehler;
+    protected $zaehler;
     
     public function hasId(): bool
     {

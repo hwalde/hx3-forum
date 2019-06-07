@@ -48,35 +48,35 @@ class CustomProfilePic implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'userid');
+        return new ColumnField('userId', 'CustomProfilePic', 'customprofilepic', 'userid');
     }
     public static function fileData() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'filedata');
+        return new ColumnField('fileData', 'CustomProfilePic', 'customprofilepic', 'filedata');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'dateline');
+        return new ColumnField('dateLine', 'CustomProfilePic', 'customprofilepic', 'dateline');
     }
     public static function fileName() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'filename');
+        return new ColumnField('fileName', 'CustomProfilePic', 'customprofilepic', 'filename');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'visible');
+        return new ColumnField('visible', 'CustomProfilePic', 'customprofilepic', 'visible');
     }
     public static function fileSize() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'filesize');
+        return new ColumnField('fileSize', 'CustomProfilePic', 'customprofilepic', 'filesize');
     }
     public static function width() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'width');
+        return new ColumnField('width', 'CustomProfilePic', 'customprofilepic', 'width');
     }
     public static function height() : ColumnField
     {
-        return new ColumnField('customprofilepic', 'height');
+        return new ColumnField('height', 'CustomProfilePic', 'customprofilepic', 'height');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class CustomProfilePic implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'filedata', 'dateline', 'filename', 'visible', 'filesize', 'width', 'height'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class CustomProfilePic implements Table {
 			'height' => 'height'
 		];
     }
-
 }

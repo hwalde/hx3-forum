@@ -56,67 +56,67 @@ class Picture implements Table {
     
     public static function pictureId() : ColumnField
     {
-        return new ColumnField('picture', 'pictureid');
+        return new ColumnField('pictureId', 'Picture', 'picture', 'pictureid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('picture', 'userid');
+        return new ColumnField('userId', 'Picture', 'picture', 'userid');
     }
     public static function caption() : ColumnField
     {
-        return new ColumnField('picture', 'caption');
+        return new ColumnField('caption', 'Picture', 'picture', 'caption');
     }
     public static function extension() : ColumnField
     {
-        return new ColumnField('picture', 'extension');
+        return new ColumnField('extension', 'Picture', 'picture', 'extension');
     }
     public static function fileData() : ColumnField
     {
-        return new ColumnField('picture', 'filedata');
+        return new ColumnField('fileData', 'Picture', 'picture', 'filedata');
     }
     public static function fileSize() : ColumnField
     {
-        return new ColumnField('picture', 'filesize');
+        return new ColumnField('fileSize', 'Picture', 'picture', 'filesize');
     }
     public static function width() : ColumnField
     {
-        return new ColumnField('picture', 'width');
+        return new ColumnField('width', 'Picture', 'picture', 'width');
     }
     public static function height() : ColumnField
     {
-        return new ColumnField('picture', 'height');
+        return new ColumnField('height', 'Picture', 'picture', 'height');
     }
     public static function thumbnail() : ColumnField
     {
-        return new ColumnField('picture', 'thumbnail');
+        return new ColumnField('thumbnail', 'Picture', 'picture', 'thumbnail');
     }
     public static function thumbnailFileSize() : ColumnField
     {
-        return new ColumnField('picture', 'thumbnail_filesize');
+        return new ColumnField('thumbnailFileSize', 'Picture', 'picture', 'thumbnail_filesize');
     }
     public static function thumbnailWidth() : ColumnField
     {
-        return new ColumnField('picture', 'thumbnail_width');
+        return new ColumnField('thumbnailWidth', 'Picture', 'picture', 'thumbnail_width');
     }
     public static function thumbnailHeight() : ColumnField
     {
-        return new ColumnField('picture', 'thumbnail_height');
+        return new ColumnField('thumbnailHeight', 'Picture', 'picture', 'thumbnail_height');
     }
     public static function thumbnailDateline() : ColumnField
     {
-        return new ColumnField('picture', 'thumbnail_dateline');
+        return new ColumnField('thumbnailDateline', 'Picture', 'picture', 'thumbnail_dateline');
     }
     public static function idHash() : ColumnField
     {
-        return new ColumnField('picture', 'idhash');
+        return new ColumnField('idHash', 'Picture', 'picture', 'idhash');
     }
     public static function reportThreadId() : ColumnField
     {
-        return new ColumnField('picture', 'reportthreadid');
+        return new ColumnField('reportThreadId', 'Picture', 'picture', 'reportthreadid');
     }
     public static function state() : ColumnField
     {
-        return new ColumnField('picture', 'state');
+        return new ColumnField('state', 'Picture', 'picture', 'state');
     }
 
     public function getTableName(): string
@@ -127,6 +127,14 @@ class Picture implements Table {
     public function __listColumns() : array
     {
         return ['pictureid', 'userid', 'caption', 'extension', 'filedata', 'filesize', 'width', 'height', 'thumbnail', 'thumbnail_filesize', 'thumbnail_width', 'thumbnail_height', 'thumbnail_dateline', 'idhash', 'reportthreadid', 'state'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pictureid'];
     }
     
     public function __listNullableColumns() : array
@@ -177,5 +185,4 @@ class Picture implements Table {
 			'state' => 'state'
 		];
     }
-
 }

@@ -17,39 +17,39 @@ class VbFieldsAlias extends TableAlias {
    
     public function fieldId() : ColumnField
     {
-        return new ColumnField('vbfields', 'fieldid', $this->getAliasName());
+        return new ColumnField('fieldId', 'VbFields', 'vbfields', 'fieldid', $this->getAliasName());
     }
     public function fieldName() : ColumnField
     {
-        return new ColumnField('vbfields', 'fieldname', $this->getAliasName());
+        return new ColumnField('fieldName', 'VbFields', 'vbfields', 'fieldname', $this->getAliasName());
     }
     public function fieldType() : ColumnField
     {
-        return new ColumnField('vbfields', 'fieldtype', $this->getAliasName());
+        return new ColumnField('fieldType', 'VbFields', 'vbfields', 'fieldtype', $this->getAliasName());
     }
     public function isUnsigned() : ColumnField
     {
-        return new ColumnField('vbfields', 'isunsigned', $this->getAliasName());
+        return new ColumnField('isUnsigned', 'VbFields', 'vbfields', 'isunsigned', $this->getAliasName());
     }
     public function tableName() : ColumnField
     {
-        return new ColumnField('vbfields', 'tablename', $this->getAliasName());
+        return new ColumnField('tableName', 'VbFields', 'vbfields', 'tablename', $this->getAliasName());
     }
     public function createSql() : ColumnField
     {
-        return new ColumnField('vbfields', 'createsql', $this->getAliasName());
+        return new ColumnField('createSql', 'VbFields', 'vbfields', 'createsql', $this->getAliasName());
     }
     public function vbMandatory() : ColumnField
     {
-        return new ColumnField('vbfields', 'vbmandatory', $this->getAliasName());
+        return new ColumnField('vbMandatory', 'VbFields', 'vbfields', 'vbmandatory', $this->getAliasName());
     }
     public function defaultValue() : ColumnField
     {
-        return new ColumnField('vbfields', 'defaultvalue', $this->getAliasName());
+        return new ColumnField('defaultValue', 'VbFields', 'vbfields', 'defaultvalue', $this->getAliasName());
     }
     public function dictionary() : ColumnField
     {
-        return new ColumnField('vbfields', 'dictionary', $this->getAliasName());
+        return new ColumnField('dictionary', 'VbFields', 'vbfields', 'dictionary', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -60,6 +60,14 @@ class VbFieldsAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['fieldid', 'fieldname', 'fieldtype', 'isunsigned', 'tablename', 'createsql', 'vbmandatory', 'defaultvalue', 'dictionary'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['fieldid'];
     }
     
     public function __listNullableColumns() : array

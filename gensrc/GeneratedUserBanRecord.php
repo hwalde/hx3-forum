@@ -14,31 +14,31 @@ use POOQ\Record;
 class GeneratedUserBanRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $displayGroupId int */
-    private $displayGroupId;
+    protected $displayGroupId;
     
     /** @var $userTitle string */
-    private $userTitle;
+    protected $userTitle;
     
     /** @var $customTitle int */
-    private $customTitle;
+    protected $customTitle;
     
     /** @var $adminId int */
-    private $adminId;
+    protected $adminId;
     
     /** @var $bandate int */
-    private $bandate;
+    protected $bandate;
     
     /** @var $liftDate int */
-    private $liftDate;
+    protected $liftDate;
     
     /** @var $reason string */
-    private $reason;
+    protected $reason;
     
     public function hasUserId(): bool
     {

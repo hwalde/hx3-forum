@@ -43,15 +43,15 @@ class Access implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('access', 'userid');
+        return new ColumnField('userId', 'Access', 'access', 'userid');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('access', 'forumid');
+        return new ColumnField('forumId', 'Access', 'access', 'forumid');
     }
     public static function accessMask() : ColumnField
     {
-        return new ColumnField('access', 'accessmask');
+        return new ColumnField('accessMask', 'Access', 'access', 'accessmask');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class Access implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'forumid', 'accessmask'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'forumid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class Access implements Table {
 			'accessmask' => 'accessMask'
 		];
     }
-
 }

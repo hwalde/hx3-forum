@@ -9,15 +9,16 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedTagSearchRecord implements Record {
+class GeneratedTagSearchRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $tagId int */
-    private $tagId;
+    protected $tagId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasTagId(): bool
     {

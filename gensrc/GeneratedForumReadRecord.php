@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedForumReadRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $readTime int */
-    private $readTime;
+    protected $readTime;
     
     public function hasUserId(): bool
     {

@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedPtIssueAssignRecord implements Record {
     
     /** @var $issueId int */
-    private $issueId;
+    protected $issueId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasIssueId(): bool
     {

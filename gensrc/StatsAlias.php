@@ -17,23 +17,23 @@ class StatsAlias extends TableAlias {
    
     public function dateLine() : ColumnField
     {
-        return new ColumnField('stats', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Stats', 'stats', 'dateline', $this->getAliasName());
     }
     public function nUser() : ColumnField
     {
-        return new ColumnField('stats', 'nuser', $this->getAliasName());
+        return new ColumnField('nUser', 'Stats', 'stats', 'nuser', $this->getAliasName());
     }
     public function nThread() : ColumnField
     {
-        return new ColumnField('stats', 'nthread', $this->getAliasName());
+        return new ColumnField('nThread', 'Stats', 'stats', 'nthread', $this->getAliasName());
     }
     public function nPost() : ColumnField
     {
-        return new ColumnField('stats', 'npost', $this->getAliasName());
+        return new ColumnField('nPost', 'Stats', 'stats', 'npost', $this->getAliasName());
     }
     public function ausers() : ColumnField
     {
-        return new ColumnField('stats', 'ausers', $this->getAliasName());
+        return new ColumnField('ausers', 'Stats', 'stats', 'ausers', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class StatsAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['dateline', 'nuser', 'nthread', 'npost', 'ausers'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['dateline'];
     }
     
     public function __listNullableColumns() : array

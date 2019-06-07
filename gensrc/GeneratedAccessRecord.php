@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedAccessRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $accessMask int */
-    private $accessMask;
+    protected $accessMask;
     
     public function hasUserId(): bool
     {

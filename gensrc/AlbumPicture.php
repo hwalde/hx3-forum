@@ -43,15 +43,15 @@ class AlbumPicture implements Table {
     
     public static function albumId() : ColumnField
     {
-        return new ColumnField('albumpicture', 'albumid');
+        return new ColumnField('albumId', 'AlbumPicture', 'albumpicture', 'albumid');
     }
     public static function pictureId() : ColumnField
     {
-        return new ColumnField('albumpicture', 'pictureid');
+        return new ColumnField('pictureId', 'AlbumPicture', 'albumpicture', 'pictureid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('albumpicture', 'dateline');
+        return new ColumnField('dateLine', 'AlbumPicture', 'albumpicture', 'dateline');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class AlbumPicture implements Table {
     public function __listColumns() : array
     {
         return ['albumid', 'pictureid', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['albumid', 'pictureid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class AlbumPicture implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

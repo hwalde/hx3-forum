@@ -14,40 +14,40 @@ use POOQ\Record;
 class GeneratedPodcastRecord implements Record {
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $author string */
-    private $author;
+    protected $author;
     
     /** @var $category string */
-    private $category;
+    protected $category;
     
     /** @var $image string */
-    private $image;
+    protected $image;
     
     /** @var $explicit int */
-    private $explicit;
+    protected $explicit;
     
     /** @var $enabled int */
-    private $enabled;
+    protected $enabled;
     
     /** @var $keywords string */
-    private $keywords;
+    protected $keywords;
     
     /** @var $ownerEmail string */
-    private $ownerEmail;
+    protected $ownerEmail;
     
     /** @var $ownerName string */
-    private $ownerName;
+    protected $ownerName;
     
     /** @var $subTitle string */
-    private $subTitle;
+    protected $subTitle;
     
     /** @var $summary string|null */
-    private $summary;
+    protected $summary;
     
     /** @var $categoryId int */
-    private $categoryId;
+    protected $categoryId;
     
     public function hasForumId(): bool
     {

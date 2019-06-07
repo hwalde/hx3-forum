@@ -17,191 +17,191 @@ class UserGroupAlias extends TableAlias {
    
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('usergroup', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'UserGroup', 'usergroup', 'usergroupid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('usergroup', 'title', $this->getAliasName());
+        return new ColumnField('title', 'UserGroup', 'usergroup', 'title', $this->getAliasName());
     }
     public function description() : ColumnField
     {
-        return new ColumnField('usergroup', 'description', $this->getAliasName());
+        return new ColumnField('description', 'UserGroup', 'usergroup', 'description', $this->getAliasName());
     }
     public function userTitle() : ColumnField
     {
-        return new ColumnField('usergroup', 'usertitle', $this->getAliasName());
+        return new ColumnField('userTitle', 'UserGroup', 'usergroup', 'usertitle', $this->getAliasName());
     }
     public function passwordExpires() : ColumnField
     {
-        return new ColumnField('usergroup', 'passwordexpires', $this->getAliasName());
+        return new ColumnField('passwordExpires', 'UserGroup', 'usergroup', 'passwordexpires', $this->getAliasName());
     }
     public function passwordHistory() : ColumnField
     {
-        return new ColumnField('usergroup', 'passwordhistory', $this->getAliasName());
+        return new ColumnField('passwordHistory', 'UserGroup', 'usergroup', 'passwordhistory', $this->getAliasName());
     }
     public function pmQuota() : ColumnField
     {
-        return new ColumnField('usergroup', 'pmquota', $this->getAliasName());
+        return new ColumnField('pmQuota', 'UserGroup', 'usergroup', 'pmquota', $this->getAliasName());
     }
     public function pmSendmax() : ColumnField
     {
-        return new ColumnField('usergroup', 'pmsendmax', $this->getAliasName());
+        return new ColumnField('pmSendmax', 'UserGroup', 'usergroup', 'pmsendmax', $this->getAliasName());
     }
     public function openTag() : ColumnField
     {
-        return new ColumnField('usergroup', 'opentag', $this->getAliasName());
+        return new ColumnField('openTag', 'UserGroup', 'usergroup', 'opentag', $this->getAliasName());
     }
     public function closeTag() : ColumnField
     {
-        return new ColumnField('usergroup', 'closetag', $this->getAliasName());
+        return new ColumnField('closeTag', 'UserGroup', 'usergroup', 'closetag', $this->getAliasName());
     }
     public function canOverride() : ColumnField
     {
-        return new ColumnField('usergroup', 'canoverride', $this->getAliasName());
+        return new ColumnField('canOverride', 'UserGroup', 'usergroup', 'canoverride', $this->getAliasName());
     }
     public function isPublicGroup() : ColumnField
     {
-        return new ColumnField('usergroup', 'ispublicgroup', $this->getAliasName());
+        return new ColumnField('isPublicGroup', 'UserGroup', 'usergroup', 'ispublicgroup', $this->getAliasName());
     }
     public function forumPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'forumpermissions', $this->getAliasName());
+        return new ColumnField('forumPermissions', 'UserGroup', 'usergroup', 'forumpermissions', $this->getAliasName());
     }
     public function pmPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'pmpermissions', $this->getAliasName());
+        return new ColumnField('pmPermissions', 'UserGroup', 'usergroup', 'pmpermissions', $this->getAliasName());
     }
     public function calendarPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'calendarpermissions', $this->getAliasName());
+        return new ColumnField('calendarPermissions', 'UserGroup', 'usergroup', 'calendarpermissions', $this->getAliasName());
     }
     public function wolPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'wolpermissions', $this->getAliasName());
+        return new ColumnField('wolPermissions', 'UserGroup', 'usergroup', 'wolpermissions', $this->getAliasName());
     }
     public function adminPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'adminpermissions', $this->getAliasName());
+        return new ColumnField('adminPermissions', 'UserGroup', 'usergroup', 'adminpermissions', $this->getAliasName());
     }
     public function genericPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'genericpermissions', $this->getAliasName());
+        return new ColumnField('genericPermissions', 'UserGroup', 'usergroup', 'genericpermissions', $this->getAliasName());
     }
     public function genericOptions() : ColumnField
     {
-        return new ColumnField('usergroup', 'genericoptions', $this->getAliasName());
+        return new ColumnField('genericOptions', 'UserGroup', 'usergroup', 'genericoptions', $this->getAliasName());
     }
     public function attachLimit() : ColumnField
     {
-        return new ColumnField('usergroup', 'attachlimit', $this->getAliasName());
+        return new ColumnField('attachLimit', 'UserGroup', 'usergroup', 'attachlimit', $this->getAliasName());
     }
     public function avatarMaxWidth() : ColumnField
     {
-        return new ColumnField('usergroup', 'avatarmaxwidth', $this->getAliasName());
+        return new ColumnField('avatarMaxWidth', 'UserGroup', 'usergroup', 'avatarmaxwidth', $this->getAliasName());
     }
     public function avatarMaxHeight() : ColumnField
     {
-        return new ColumnField('usergroup', 'avatarmaxheight', $this->getAliasName());
+        return new ColumnField('avatarMaxHeight', 'UserGroup', 'usergroup', 'avatarmaxheight', $this->getAliasName());
     }
     public function avatarMaxSize() : ColumnField
     {
-        return new ColumnField('usergroup', 'avatarmaxsize', $this->getAliasName());
+        return new ColumnField('avatarMaxSize', 'UserGroup', 'usergroup', 'avatarmaxsize', $this->getAliasName());
     }
     public function profilePicMaxWidth() : ColumnField
     {
-        return new ColumnField('usergroup', 'profilepicmaxwidth', $this->getAliasName());
+        return new ColumnField('profilePicMaxWidth', 'UserGroup', 'usergroup', 'profilepicmaxwidth', $this->getAliasName());
     }
     public function profilePicMaxHeight() : ColumnField
     {
-        return new ColumnField('usergroup', 'profilepicmaxheight', $this->getAliasName());
+        return new ColumnField('profilePicMaxHeight', 'UserGroup', 'usergroup', 'profilepicmaxheight', $this->getAliasName());
     }
     public function profilePicMaxSize() : ColumnField
     {
-        return new ColumnField('usergroup', 'profilepicmaxsize', $this->getAliasName());
+        return new ColumnField('profilePicMaxSize', 'UserGroup', 'usergroup', 'profilepicmaxsize', $this->getAliasName());
     }
     public function importUserGroupId() : ColumnField
     {
-        return new ColumnField('usergroup', 'importusergroupid', $this->getAliasName());
+        return new ColumnField('importUserGroupId', 'UserGroup', 'usergroup', 'importusergroupid', $this->getAliasName());
     }
     public function signaturePermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'signaturepermissions', $this->getAliasName());
+        return new ColumnField('signaturePermissions', 'UserGroup', 'usergroup', 'signaturepermissions', $this->getAliasName());
     }
     public function sigPicMaxWidth() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigpicmaxwidth', $this->getAliasName());
+        return new ColumnField('sigPicMaxWidth', 'UserGroup', 'usergroup', 'sigpicmaxwidth', $this->getAliasName());
     }
     public function sigPicMaxheight() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigpicmaxheight', $this->getAliasName());
+        return new ColumnField('sigPicMaxheight', 'UserGroup', 'usergroup', 'sigpicmaxheight', $this->getAliasName());
     }
     public function sigPicMaxSize() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigpicmaxsize', $this->getAliasName());
+        return new ColumnField('sigPicMaxSize', 'UserGroup', 'usergroup', 'sigpicmaxsize', $this->getAliasName());
     }
     public function sigMaxImages() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigmaximages', $this->getAliasName());
+        return new ColumnField('sigMaxImages', 'UserGroup', 'usergroup', 'sigmaximages', $this->getAliasName());
     }
     public function sigMaxSizeBBCode() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigmaxsizebbcode', $this->getAliasName());
+        return new ColumnField('sigMaxSizeBBCode', 'UserGroup', 'usergroup', 'sigmaxsizebbcode', $this->getAliasName());
     }
     public function sigMaxChars() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigmaxchars', $this->getAliasName());
+        return new ColumnField('sigMaxChars', 'UserGroup', 'usergroup', 'sigmaxchars', $this->getAliasName());
     }
     public function sigMaxRawChars() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigmaxrawchars', $this->getAliasName());
+        return new ColumnField('sigMaxRawChars', 'UserGroup', 'usergroup', 'sigmaxrawchars', $this->getAliasName());
     }
     public function sigMaxLines() : ColumnField
     {
-        return new ColumnField('usergroup', 'sigmaxlines', $this->getAliasName());
+        return new ColumnField('sigMaxLines', 'UserGroup', 'usergroup', 'sigmaxlines', $this->getAliasName());
     }
     public function visitorMessagePermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'visitormessagepermissions', $this->getAliasName());
+        return new ColumnField('visitorMessagePermissions', 'UserGroup', 'usergroup', 'visitormessagepermissions', $this->getAliasName());
     }
     public function socialGroupPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'socialgrouppermissions', $this->getAliasName());
+        return new ColumnField('socialGroupPermissions', 'UserGroup', 'usergroup', 'socialgrouppermissions', $this->getAliasName());
     }
     public function userCssPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'usercsspermissions', $this->getAliasName());
+        return new ColumnField('userCssPermissions', 'UserGroup', 'usergroup', 'usercsspermissions', $this->getAliasName());
     }
     public function albumPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'albumpermissions', $this->getAliasName());
+        return new ColumnField('albumPermissions', 'UserGroup', 'usergroup', 'albumpermissions', $this->getAliasName());
     }
     public function albumPicMaxWidth() : ColumnField
     {
-        return new ColumnField('usergroup', 'albumpicmaxwidth', $this->getAliasName());
+        return new ColumnField('albumPicMaxWidth', 'UserGroup', 'usergroup', 'albumpicmaxwidth', $this->getAliasName());
     }
     public function albumPicMaxHeight() : ColumnField
     {
-        return new ColumnField('usergroup', 'albumpicmaxheight', $this->getAliasName());
+        return new ColumnField('albumPicMaxHeight', 'UserGroup', 'usergroup', 'albumpicmaxheight', $this->getAliasName());
     }
     public function albumPicMaxSize() : ColumnField
     {
-        return new ColumnField('usergroup', 'albumpicmaxsize', $this->getAliasName());
+        return new ColumnField('albumPicMaxSize', 'UserGroup', 'usergroup', 'albumpicmaxsize', $this->getAliasName());
     }
     public function albumMaxPics() : ColumnField
     {
-        return new ColumnField('usergroup', 'albummaxpics', $this->getAliasName());
+        return new ColumnField('albumMaxPics', 'UserGroup', 'usergroup', 'albummaxpics', $this->getAliasName());
     }
     public function albumMaxSize() : ColumnField
     {
-        return new ColumnField('usergroup', 'albummaxsize', $this->getAliasName());
+        return new ColumnField('albumMaxSize', 'UserGroup', 'usergroup', 'albummaxsize', $this->getAliasName());
     }
     public function genericpermissions2() : ColumnField
     {
-        return new ColumnField('usergroup', 'genericpermissions2', $this->getAliasName());
+        return new ColumnField('genericpermissions2', 'UserGroup', 'usergroup', 'genericpermissions2', $this->getAliasName());
     }
     public function ptPermissions() : ColumnField
     {
-        return new ColumnField('usergroup', 'ptpermissions', $this->getAliasName());
+        return new ColumnField('ptPermissions', 'UserGroup', 'usergroup', 'ptpermissions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -212,6 +212,14 @@ class UserGroupAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['usergroupid', 'title', 'description', 'usertitle', 'passwordexpires', 'passwordhistory', 'pmquota', 'pmsendmax', 'opentag', 'closetag', 'canoverride', 'ispublicgroup', 'forumpermissions', 'pmpermissions', 'calendarpermissions', 'wolpermissions', 'adminpermissions', 'genericpermissions', 'genericoptions', 'attachlimit', 'avatarmaxwidth', 'avatarmaxheight', 'avatarmaxsize', 'profilepicmaxwidth', 'profilepicmaxheight', 'profilepicmaxsize', 'importusergroupid', 'signaturepermissions', 'sigpicmaxwidth', 'sigpicmaxheight', 'sigpicmaxsize', 'sigmaximages', 'sigmaxsizebbcode', 'sigmaxchars', 'sigmaxrawchars', 'sigmaxlines', 'visitormessagepermissions', 'socialgrouppermissions', 'usercsspermissions', 'albumpermissions', 'albumpicmaxwidth', 'albumpicmaxheight', 'albumpicmaxsize', 'albummaxpics', 'albummaxsize', 'genericpermissions2', 'ptpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usergroupid'];
     }
     
     public function __listNullableColumns() : array

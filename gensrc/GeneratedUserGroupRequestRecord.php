@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedUserGroupRequestRecord implements Record {
     
     /** @var $usergrouprequestid int */
-    private $usergrouprequestid;
+    protected $usergrouprequestid;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     /** @var $reason string */
-    private $reason;
+    protected $reason;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasUsergrouprequestid(): bool
     {

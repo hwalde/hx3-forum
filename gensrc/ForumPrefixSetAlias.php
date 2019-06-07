@@ -17,11 +17,11 @@ class ForumPrefixSetAlias extends TableAlias {
    
     public function forumId() : ColumnField
     {
-        return new ColumnField('forumprefixset', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'ForumPrefixSet', 'forumprefixset', 'forumid', $this->getAliasName());
     }
     public function prefixSetId() : ColumnField
     {
-        return new ColumnField('forumprefixset', 'prefixsetid', $this->getAliasName());
+        return new ColumnField('prefixSetId', 'ForumPrefixSet', 'forumprefixset', 'prefixsetid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -30,6 +30,14 @@ class ForumPrefixSetAlias extends TableAlias {
     }
     
     public function __listColumns() : array
+    {
+        return ['forumid', 'prefixsetid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
     {
         return ['forumid', 'prefixsetid'];
     }

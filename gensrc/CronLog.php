@@ -45,23 +45,23 @@ class CronLog implements Table {
     
     public static function cronLogId() : ColumnField
     {
-        return new ColumnField('cronlog', 'cronlogid');
+        return new ColumnField('cronLogId', 'CronLog', 'cronlog', 'cronlogid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('cronlog', 'dateline');
+        return new ColumnField('dateLine', 'CronLog', 'cronlog', 'dateline');
     }
     public static function description() : ColumnField
     {
-        return new ColumnField('cronlog', 'description');
+        return new ColumnField('description', 'CronLog', 'cronlog', 'description');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('cronlog', 'type');
+        return new ColumnField('type', 'CronLog', 'cronlog', 'type');
     }
     public static function varName() : ColumnField
     {
-        return new ColumnField('cronlog', 'varname');
+        return new ColumnField('varName', 'CronLog', 'cronlog', 'varname');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class CronLog implements Table {
     public function __listColumns() : array
     {
         return ['cronlogid', 'dateline', 'description', 'type', 'varname'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['cronlogid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class CronLog implements Table {
 			'varname' => 'varName'
 		];
     }
-
 }

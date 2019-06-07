@@ -17,63 +17,63 @@ class PtIssueAttachAlias extends TableAlias {
    
     public function attachmentId() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'attachmentid', $this->getAliasName());
+        return new ColumnField('attachmentId', 'PtIssueAttach', 'pt_issueattach', 'attachmentid', $this->getAliasName());
     }
     public function issueId() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'issueid', $this->getAliasName());
+        return new ColumnField('issueId', 'PtIssueAttach', 'pt_issueattach', 'issueid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PtIssueAttach', 'pt_issueattach', 'userid', $this->getAliasName());
     }
     public function fileName() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'filename', $this->getAliasName());
+        return new ColumnField('fileName', 'PtIssueAttach', 'pt_issueattach', 'filename', $this->getAliasName());
     }
     public function extension() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'extension', $this->getAliasName());
+        return new ColumnField('extension', 'PtIssueAttach', 'pt_issueattach', 'extension', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PtIssueAttach', 'pt_issueattach', 'dateline', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'PtIssueAttach', 'pt_issueattach', 'visible', $this->getAliasName());
     }
     public function status() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'status', $this->getAliasName());
+        return new ColumnField('status', 'PtIssueAttach', 'pt_issueattach', 'status', $this->getAliasName());
     }
     public function fileSize() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'filesize', $this->getAliasName());
+        return new ColumnField('fileSize', 'PtIssueAttach', 'pt_issueattach', 'filesize', $this->getAliasName());
     }
     public function fileHash() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'filehash', $this->getAliasName());
+        return new ColumnField('fileHash', 'PtIssueAttach', 'pt_issueattach', 'filehash', $this->getAliasName());
     }
     public function fileData() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'filedata', $this->getAliasName());
+        return new ColumnField('fileData', 'PtIssueAttach', 'pt_issueattach', 'filedata', $this->getAliasName());
     }
     public function thumbnail() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'thumbnail', $this->getAliasName());
+        return new ColumnField('thumbnail', 'PtIssueAttach', 'pt_issueattach', 'thumbnail', $this->getAliasName());
     }
     public function thumbnailFileSize() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'thumbnail_filesize', $this->getAliasName());
+        return new ColumnField('thumbnailFileSize', 'PtIssueAttach', 'pt_issueattach', 'thumbnail_filesize', $this->getAliasName());
     }
     public function thumbnailDateline() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'thumbnail_dateline', $this->getAliasName());
+        return new ColumnField('thumbnailDateline', 'PtIssueAttach', 'pt_issueattach', 'thumbnail_dateline', $this->getAliasName());
     }
     public function isPatchFile() : ColumnField
     {
-        return new ColumnField('pt_issueattach', 'ispatchfile', $this->getAliasName());
+        return new ColumnField('isPatchFile', 'PtIssueAttach', 'pt_issueattach', 'ispatchfile', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -84,6 +84,14 @@ class PtIssueAttachAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['attachmentid', 'issueid', 'userid', 'filename', 'extension', 'dateline', 'visible', 'status', 'filesize', 'filehash', 'filedata', 'thumbnail', 'thumbnail_filesize', 'thumbnail_dateline', 'ispatchfile'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['attachmentid'];
     }
     
     public function __listNullableColumns() : array

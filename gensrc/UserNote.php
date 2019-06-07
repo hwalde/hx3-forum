@@ -48,35 +48,35 @@ class UserNote implements Table {
     
     public static function usernoteid() : ColumnField
     {
-        return new ColumnField('usernote', 'usernoteid');
+        return new ColumnField('usernoteid', 'UserNote', 'usernote', 'usernoteid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('usernote', 'userid');
+        return new ColumnField('userId', 'UserNote', 'usernote', 'userid');
     }
     public static function posterid() : ColumnField
     {
-        return new ColumnField('usernote', 'posterid');
+        return new ColumnField('posterid', 'UserNote', 'usernote', 'posterid');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('usernote', 'username');
+        return new ColumnField('userName', 'UserNote', 'usernote', 'username');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('usernote', 'dateline');
+        return new ColumnField('dateLine', 'UserNote', 'usernote', 'dateline');
     }
     public static function message() : ColumnField
     {
-        return new ColumnField('usernote', 'message');
+        return new ColumnField('message', 'UserNote', 'usernote', 'message');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('usernote', 'title');
+        return new ColumnField('title', 'UserNote', 'usernote', 'title');
     }
     public static function allowSmilies() : ColumnField
     {
-        return new ColumnField('usernote', 'allowsmilies');
+        return new ColumnField('allowSmilies', 'UserNote', 'usernote', 'allowsmilies');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class UserNote implements Table {
     public function __listColumns() : array
     {
         return ['usernoteid', 'userid', 'posterid', 'username', 'dateline', 'message', 'title', 'allowsmilies'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usernoteid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class UserNote implements Table {
 			'allowsmilies' => 'allowSmilies'
 		];
     }
-
 }

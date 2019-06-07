@@ -17,11 +17,11 @@ class ThreadRedirectAlias extends TableAlias {
    
     public function threadId() : ColumnField
     {
-        return new ColumnField('threadredirect', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'ThreadRedirect', 'threadredirect', 'threadid', $this->getAliasName());
     }
     public function expires() : ColumnField
     {
-        return new ColumnField('threadredirect', 'expires', $this->getAliasName());
+        return new ColumnField('expires', 'ThreadRedirect', 'threadredirect', 'expires', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -32,6 +32,14 @@ class ThreadRedirectAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['threadid', 'expires'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['threadid'];
     }
     
     public function __listNullableColumns() : array

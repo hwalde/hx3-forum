@@ -17,19 +17,19 @@ class PostLogAlias extends TableAlias {
    
     public function postId() : ColumnField
     {
-        return new ColumnField('postlog', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'PostLog', 'postlog', 'postid', $this->getAliasName());
     }
     public function userAgent() : ColumnField
     {
-        return new ColumnField('postlog', 'useragent', $this->getAliasName());
+        return new ColumnField('userAgent', 'PostLog', 'postlog', 'useragent', $this->getAliasName());
     }
     public function ip() : ColumnField
     {
-        return new ColumnField('postlog', 'ip', $this->getAliasName());
+        return new ColumnField('ip', 'PostLog', 'postlog', 'ip', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('postlog', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PostLog', 'postlog', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class PostLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['postid', 'useragent', 'ip', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid'];
     }
     
     public function __listNullableColumns() : array

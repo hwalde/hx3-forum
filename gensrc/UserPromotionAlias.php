@@ -17,35 +17,35 @@ class UserPromotionAlias extends TableAlias {
    
     public function userpromotionid() : ColumnField
     {
-        return new ColumnField('userpromotion', 'userpromotionid', $this->getAliasName());
+        return new ColumnField('userpromotionid', 'UserPromotion', 'userpromotion', 'userpromotionid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('userpromotion', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'UserPromotion', 'userpromotion', 'usergroupid', $this->getAliasName());
     }
     public function joinUserGroupId() : ColumnField
     {
-        return new ColumnField('userpromotion', 'joinusergroupid', $this->getAliasName());
+        return new ColumnField('joinUserGroupId', 'UserPromotion', 'userpromotion', 'joinusergroupid', $this->getAliasName());
     }
     public function reputation() : ColumnField
     {
-        return new ColumnField('userpromotion', 'reputation', $this->getAliasName());
+        return new ColumnField('reputation', 'UserPromotion', 'userpromotion', 'reputation', $this->getAliasName());
     }
     public function date() : ColumnField
     {
-        return new ColumnField('userpromotion', 'date', $this->getAliasName());
+        return new ColumnField('date', 'UserPromotion', 'userpromotion', 'date', $this->getAliasName());
     }
     public function posts() : ColumnField
     {
-        return new ColumnField('userpromotion', 'posts', $this->getAliasName());
+        return new ColumnField('posts', 'UserPromotion', 'userpromotion', 'posts', $this->getAliasName());
     }
     public function strategy() : ColumnField
     {
-        return new ColumnField('userpromotion', 'strategy', $this->getAliasName());
+        return new ColumnField('strategy', 'UserPromotion', 'userpromotion', 'strategy', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('userpromotion', 'type', $this->getAliasName());
+        return new ColumnField('type', 'UserPromotion', 'userpromotion', 'type', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class UserPromotionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userpromotionid', 'usergroupid', 'joinusergroupid', 'reputation', 'date', 'posts', 'strategy', 'type'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userpromotionid'];
     }
     
     public function __listNullableColumns() : array

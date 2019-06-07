@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedUserGroupLeaderRecord implements Record {
     
     /** @var $usergroupleaderid int */
-    private $usergroupleaderid;
+    protected $usergroupleaderid;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $userGroupId int */
-    private $userGroupId;
+    protected $userGroupId;
     
     public function hasUsergroupleaderid(): bool
     {

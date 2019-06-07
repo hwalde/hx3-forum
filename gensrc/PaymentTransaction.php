@@ -50,43 +50,43 @@ class PaymentTransaction implements Table {
     
     public static function paymentTransactionId() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'paymenttransactionid');
+        return new ColumnField('paymentTransactionId', 'PaymentTransaction', 'paymenttransaction', 'paymenttransactionid');
     }
     public static function paymentInfoId() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'paymentinfoid');
+        return new ColumnField('paymentInfoId', 'PaymentTransaction', 'paymenttransaction', 'paymentinfoid');
     }
     public static function transactionId() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'transactionid');
+        return new ColumnField('transactionId', 'PaymentTransaction', 'paymenttransaction', 'transactionid');
     }
     public static function state() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'state');
+        return new ColumnField('state', 'PaymentTransaction', 'paymenttransaction', 'state');
     }
     public static function amount() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'amount');
+        return new ColumnField('amount', 'PaymentTransaction', 'paymenttransaction', 'amount');
     }
     public static function currency() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'currency');
+        return new ColumnField('currency', 'PaymentTransaction', 'paymenttransaction', 'currency');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'dateline');
+        return new ColumnField('dateLine', 'PaymentTransaction', 'paymenttransaction', 'dateline');
     }
     public static function paymentApiId() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'paymentapiid');
+        return new ColumnField('paymentApiId', 'PaymentTransaction', 'paymenttransaction', 'paymentapiid');
     }
     public static function request() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'request');
+        return new ColumnField('request', 'PaymentTransaction', 'paymenttransaction', 'request');
     }
     public static function reversed() : ColumnField
     {
-        return new ColumnField('paymenttransaction', 'reversed');
+        return new ColumnField('reversed', 'PaymentTransaction', 'paymenttransaction', 'reversed');
     }
 
     public function getTableName(): string
@@ -97,6 +97,14 @@ class PaymentTransaction implements Table {
     public function __listColumns() : array
     {
         return ['paymenttransactionid', 'paymentinfoid', 'transactionid', 'state', 'amount', 'currency', 'dateline', 'paymentapiid', 'request', 'reversed'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['paymenttransactionid'];
     }
     
     public function __listNullableColumns() : array
@@ -135,5 +143,4 @@ class PaymentTransaction implements Table {
 			'reversed' => 'reversed'
 		];
     }
-
 }

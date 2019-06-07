@@ -14,31 +14,31 @@ use POOQ\Record;
 class GeneratedSubscriptionRecord implements Record {
     
     /** @var $subscriptionId int */
-    private $subscriptionId;
+    protected $subscriptionId;
     
     /** @var $cost string */
-    private $cost;
+    protected $cost;
     
     /** @var $forums string */
-    private $forums;
+    protected $forums;
     
     /** @var $nUserGroupId int */
-    private $nUserGroupId;
+    protected $nUserGroupId;
     
     /** @var $memberGroupIds string */
-    private $memberGroupIds;
+    protected $memberGroupIds;
     
     /** @var $active int */
-    private $active;
+    protected $active;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $options int */
-    private $options;
+    protected $options;
     
     /** @var $adminOptions int */
-    private $adminOptions;
+    protected $adminOptions;
     
     public function hasSubscriptionId(): bool
     {

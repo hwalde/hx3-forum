@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedPostParsedRecord implements Record {
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $hasImages int */
-    private $hasImages;
+    protected $hasImages;
     
     /** @var $pageTextHtml string */
-    private $pageTextHtml;
+    protected $pageTextHtml;
     
     /** @var $styleId int */
-    private $styleId;
+    protected $styleId;
     
     /** @var $languageId int */
-    private $languageId;
+    protected $languageId;
     
     public function hasPostId(): bool
     {

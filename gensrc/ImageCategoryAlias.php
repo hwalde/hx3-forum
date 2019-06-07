@@ -17,19 +17,19 @@ class ImageCategoryAlias extends TableAlias {
    
     public function imageCategoryId() : ColumnField
     {
-        return new ColumnField('imagecategory', 'imagecategoryid', $this->getAliasName());
+        return new ColumnField('imageCategoryId', 'ImageCategory', 'imagecategory', 'imagecategoryid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('imagecategory', 'title', $this->getAliasName());
+        return new ColumnField('title', 'ImageCategory', 'imagecategory', 'title', $this->getAliasName());
     }
     public function imageType() : ColumnField
     {
-        return new ColumnField('imagecategory', 'imagetype', $this->getAliasName());
+        return new ColumnField('imageType', 'ImageCategory', 'imagecategory', 'imagetype', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('imagecategory', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'ImageCategory', 'imagecategory', 'displayorder', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class ImageCategoryAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['imagecategoryid', 'title', 'imagetype', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['imagecategoryid'];
     }
     
     public function __listNullableColumns() : array

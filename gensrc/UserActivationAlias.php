@@ -17,31 +17,31 @@ class UserActivationAlias extends TableAlias {
    
     public function userActivationId() : ColumnField
     {
-        return new ColumnField('useractivation', 'useractivationid', $this->getAliasName());
+        return new ColumnField('userActivationId', 'UserActivation', 'useractivation', 'useractivationid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('useractivation', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserActivation', 'useractivation', 'userid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('useractivation', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'UserActivation', 'useractivation', 'dateline', $this->getAliasName());
     }
     public function activationId() : ColumnField
     {
-        return new ColumnField('useractivation', 'activationid', $this->getAliasName());
+        return new ColumnField('activationId', 'UserActivation', 'useractivation', 'activationid', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('useractivation', 'type', $this->getAliasName());
+        return new ColumnField('type', 'UserActivation', 'useractivation', 'type', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('useractivation', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'UserActivation', 'useractivation', 'usergroupid', $this->getAliasName());
     }
     public function emailChange() : ColumnField
     {
-        return new ColumnField('useractivation', 'emailchange', $this->getAliasName());
+        return new ColumnField('emailChange', 'UserActivation', 'useractivation', 'emailchange', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class UserActivationAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['useractivationid', 'userid', 'dateline', 'activationid', 'type', 'usergroupid', 'emailchange'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['useractivationid'];
     }
     
     public function __listNullableColumns() : array

@@ -17,7 +17,7 @@ class AttachmentViewsAlias extends TableAlias {
    
     public function attachmentId() : ColumnField
     {
-        return new ColumnField('attachmentviews', 'attachmentid', $this->getAliasName());
+        return new ColumnField('attachmentId', 'AttachmentViews', 'attachmentviews', 'attachmentid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -28,6 +28,14 @@ class AttachmentViewsAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['attachmentid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

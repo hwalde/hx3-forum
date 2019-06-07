@@ -45,19 +45,19 @@ class ForumPermission implements Table {
     
     public static function forumPermissionOd() : ColumnField
     {
-        return new ColumnField('forumpermission', 'forumpermissionid');
+        return new ColumnField('forumPermissionOd', 'ForumPermission', 'forumpermission', 'forumpermissionid');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('forumpermission', 'forumid');
+        return new ColumnField('forumId', 'ForumPermission', 'forumpermission', 'forumid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('forumpermission', 'usergroupid');
+        return new ColumnField('userGroupId', 'ForumPermission', 'forumpermission', 'usergroupid');
     }
     public static function forumPermissions() : ColumnField
     {
-        return new ColumnField('forumpermission', 'forumpermissions');
+        return new ColumnField('forumPermissions', 'ForumPermission', 'forumpermission', 'forumpermissions');
     }
 
     public function getTableName(): string
@@ -68,6 +68,14 @@ class ForumPermission implements Table {
     public function __listColumns() : array
     {
         return ['forumpermissionid', 'forumid', 'usergroupid', 'forumpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['forumpermissionid'];
     }
     
     public function __listNullableColumns() : array
@@ -94,5 +102,4 @@ class ForumPermission implements Table {
 			'forumpermissions' => 'forumPermissions'
 		];
     }
-
 }

@@ -17,27 +17,27 @@ class AvatarAlias extends TableAlias {
    
     public function avatarId() : ColumnField
     {
-        return new ColumnField('avatar', 'avatarid', $this->getAliasName());
+        return new ColumnField('avatarId', 'Avatar', 'avatar', 'avatarid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('avatar', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Avatar', 'avatar', 'title', $this->getAliasName());
     }
     public function minimumPosts() : ColumnField
     {
-        return new ColumnField('avatar', 'minimumposts', $this->getAliasName());
+        return new ColumnField('minimumPosts', 'Avatar', 'avatar', 'minimumposts', $this->getAliasName());
     }
     public function avatarPath() : ColumnField
     {
-        return new ColumnField('avatar', 'avatarpath', $this->getAliasName());
+        return new ColumnField('avatarPath', 'Avatar', 'avatar', 'avatarpath', $this->getAliasName());
     }
     public function imageCategoryId() : ColumnField
     {
-        return new ColumnField('avatar', 'imagecategoryid', $this->getAliasName());
+        return new ColumnField('imageCategoryId', 'Avatar', 'avatar', 'imagecategoryid', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('avatar', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'Avatar', 'avatar', 'displayorder', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class AvatarAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['avatarid', 'title', 'minimumposts', 'avatarpath', 'imagecategoryid', 'displayorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['avatarid'];
     }
     
     public function __listNullableColumns() : array

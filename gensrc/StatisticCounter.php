@@ -42,11 +42,11 @@ class StatisticCounter implements Table {
     
     public static function forCounter() : ColumnField
     {
-        return new ColumnField('statistik_zaehler', 'Zaehler_fuer');
+        return new ColumnField('forCounter', 'StatisticCounter', 'statistik_zaehler', 'Zaehler_fuer');
     }
     public static function summe() : ColumnField
     {
-        return new ColumnField('statistik_zaehler', 'Summe');
+        return new ColumnField('summe', 'StatisticCounter', 'statistik_zaehler', 'Summe');
     }
 
     public function getTableName(): string
@@ -57,6 +57,14 @@ class StatisticCounter implements Table {
     public function __listColumns() : array
     {
         return ['Zaehler_fuer', 'Summe'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['Zaehler_fuer'];
     }
     
     public function __listNullableColumns() : array
@@ -79,5 +87,4 @@ class StatisticCounter implements Table {
 			'Summe' => 'summe'
 		];
     }
-
 }

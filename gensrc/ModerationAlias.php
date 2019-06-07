@@ -17,15 +17,15 @@ class ModerationAlias extends TableAlias {
    
     public function primaryId() : ColumnField
     {
-        return new ColumnField('moderation', 'primaryid', $this->getAliasName());
+        return new ColumnField('primaryId', 'Moderation', 'moderation', 'primaryid', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('moderation', 'type', $this->getAliasName());
+        return new ColumnField('type', 'Moderation', 'moderation', 'type', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('moderation', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Moderation', 'moderation', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class ModerationAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['primaryid', 'type', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['primaryid', 'type'];
     }
     
     public function __listNullableColumns() : array

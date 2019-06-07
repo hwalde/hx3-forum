@@ -43,15 +43,15 @@ class StatisticReferer implements Table {
     
     public static function id() : ColumnField
     {
-        return new ColumnField('statistik_referer', 'ID');
+        return new ColumnField('id', 'StatisticReferer', 'statistik_referer', 'ID');
     }
     public static function referer() : ColumnField
     {
-        return new ColumnField('statistik_referer', 'Referer');
+        return new ColumnField('referer', 'StatisticReferer', 'statistik_referer', 'Referer');
     }
     public static function zaehler() : ColumnField
     {
-        return new ColumnField('statistik_referer', 'Zaehler');
+        return new ColumnField('zaehler', 'StatisticReferer', 'statistik_referer', 'Zaehler');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class StatisticReferer implements Table {
     public function __listColumns() : array
     {
         return ['ID', 'Referer', 'Zaehler'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['ID'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class StatisticReferer implements Table {
 			'Zaehler' => 'zaehler'
 		];
     }
-
 }

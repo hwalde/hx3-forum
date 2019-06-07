@@ -17,35 +17,35 @@ class ReminderAlias extends TableAlias {
    
     public function reminderId() : ColumnField
     {
-        return new ColumnField('reminder', 'reminderid', $this->getAliasName());
+        return new ColumnField('reminderId', 'Reminder', 'reminder', 'reminderid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('reminder', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Reminder', 'reminder', 'userid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('reminder', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Reminder', 'reminder', 'title', $this->getAliasName());
     }
     public function text() : ColumnField
     {
-        return new ColumnField('reminder', 'text', $this->getAliasName());
+        return new ColumnField('text', 'Reminder', 'reminder', 'text', $this->getAliasName());
     }
     public function dueDate() : ColumnField
     {
-        return new ColumnField('reminder', 'duedate', $this->getAliasName());
+        return new ColumnField('dueDate', 'Reminder', 'reminder', 'duedate', $this->getAliasName());
     }
     public function adminOnly() : ColumnField
     {
-        return new ColumnField('reminder', 'adminonly', $this->getAliasName());
+        return new ColumnField('adminOnly', 'Reminder', 'reminder', 'adminonly', $this->getAliasName());
     }
     public function completedBy() : ColumnField
     {
-        return new ColumnField('reminder', 'completedby', $this->getAliasName());
+        return new ColumnField('completedBy', 'Reminder', 'reminder', 'completedby', $this->getAliasName());
     }
     public function completedTime() : ColumnField
     {
-        return new ColumnField('reminder', 'completedtime', $this->getAliasName());
+        return new ColumnField('completedTime', 'Reminder', 'reminder', 'completedtime', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class ReminderAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['reminderid', 'userid', 'title', 'text', 'duedate', 'adminonly', 'completedby', 'completedtime'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['reminderid'];
     }
     
     public function __listNullableColumns() : array

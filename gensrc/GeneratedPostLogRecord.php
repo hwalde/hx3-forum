@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedPostLogRecord implements Record {
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $userAgent string */
-    private $userAgent;
+    protected $userAgent;
     
     /** @var $ip int */
-    private $ip;
+    protected $ip;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasPostId(): bool
     {

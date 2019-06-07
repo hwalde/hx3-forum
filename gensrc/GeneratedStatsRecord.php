@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedStatsRecord implements Record {
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $nUser int */
-    private $nUser;
+    protected $nUser;
     
     /** @var $nThread int */
-    private $nThread;
+    protected $nThread;
     
     /** @var $nPost int */
-    private $nPost;
+    protected $nPost;
     
     /** @var $ausers int */
-    private $ausers;
+    protected $ausers;
     
     public function hasDateLine(): bool
     {

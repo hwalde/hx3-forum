@@ -41,7 +41,7 @@ class AttachmentViews implements Table {
     
     public static function attachmentId() : ColumnField
     {
-        return new ColumnField('attachmentviews', 'attachmentid');
+        return new ColumnField('attachmentId', 'AttachmentViews', 'attachmentviews', 'attachmentid');
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class AttachmentViews implements Table {
     public function __listColumns() : array
     {
         return ['attachmentid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -72,5 +80,4 @@ class AttachmentViews implements Table {
 			'attachmentid' => 'attachmentId'
 		];
     }
-
 }

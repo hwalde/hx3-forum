@@ -50,43 +50,43 @@ class AdminMessage implements Table {
     
     public static function adminMessageId() : ColumnField
     {
-        return new ColumnField('adminmessage', 'adminmessageid');
+        return new ColumnField('adminMessageId', 'AdminMessage', 'adminmessage', 'adminmessageid');
     }
     public static function varName() : ColumnField
     {
-        return new ColumnField('adminmessage', 'varname');
+        return new ColumnField('varName', 'AdminMessage', 'adminmessage', 'varname');
     }
     public static function dismissable() : ColumnField
     {
-        return new ColumnField('adminmessage', 'dismissable');
+        return new ColumnField('dismissable', 'AdminMessage', 'adminmessage', 'dismissable');
     }
     public static function script() : ColumnField
     {
-        return new ColumnField('adminmessage', 'script');
+        return new ColumnField('script', 'AdminMessage', 'adminmessage', 'script');
     }
     public static function action() : ColumnField
     {
-        return new ColumnField('adminmessage', 'action');
+        return new ColumnField('action', 'AdminMessage', 'adminmessage', 'action');
     }
     public static function execUrl() : ColumnField
     {
-        return new ColumnField('adminmessage', 'execurl');
+        return new ColumnField('execUrl', 'AdminMessage', 'adminmessage', 'execurl');
     }
     public static function method() : ColumnField
     {
-        return new ColumnField('adminmessage', 'method');
+        return new ColumnField('method', 'AdminMessage', 'adminmessage', 'method');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('adminmessage', 'dateline');
+        return new ColumnField('dateLine', 'AdminMessage', 'adminmessage', 'dateline');
     }
     public static function status() : ColumnField
     {
-        return new ColumnField('adminmessage', 'status');
+        return new ColumnField('status', 'AdminMessage', 'adminmessage', 'status');
     }
     public static function statusUserId() : ColumnField
     {
-        return new ColumnField('adminmessage', 'statususerid');
+        return new ColumnField('statusUserId', 'AdminMessage', 'adminmessage', 'statususerid');
     }
 
     public function getTableName(): string
@@ -97,6 +97,14 @@ class AdminMessage implements Table {
     public function __listColumns() : array
     {
         return ['adminmessageid', 'varname', 'dismissable', 'script', 'action', 'execurl', 'method', 'dateline', 'status', 'statususerid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['adminmessageid'];
     }
     
     public function __listNullableColumns() : array
@@ -135,5 +143,4 @@ class AdminMessage implements Table {
 			'statususerid' => 'statusUserId'
 		];
     }
-
 }

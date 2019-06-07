@@ -17,31 +17,31 @@ class PodcastItemAlias extends TableAlias {
    
     public function postId() : ColumnField
     {
-        return new ColumnField('podcastitem', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'PodcastItem', 'podcastitem', 'postid', $this->getAliasName());
     }
     public function url() : ColumnField
     {
-        return new ColumnField('podcastitem', 'url', $this->getAliasName());
+        return new ColumnField('url', 'PodcastItem', 'podcastitem', 'url', $this->getAliasName());
     }
     public function length() : ColumnField
     {
-        return new ColumnField('podcastitem', 'length', $this->getAliasName());
+        return new ColumnField('length', 'PodcastItem', 'podcastitem', 'length', $this->getAliasName());
     }
     public function explicit() : ColumnField
     {
-        return new ColumnField('podcastitem', 'explicit', $this->getAliasName());
+        return new ColumnField('explicit', 'PodcastItem', 'podcastitem', 'explicit', $this->getAliasName());
     }
     public function keywords() : ColumnField
     {
-        return new ColumnField('podcastitem', 'keywords', $this->getAliasName());
+        return new ColumnField('keywords', 'PodcastItem', 'podcastitem', 'keywords', $this->getAliasName());
     }
     public function subTitle() : ColumnField
     {
-        return new ColumnField('podcastitem', 'subtitle', $this->getAliasName());
+        return new ColumnField('subTitle', 'PodcastItem', 'podcastitem', 'subtitle', $this->getAliasName());
     }
     public function author() : ColumnField
     {
-        return new ColumnField('podcastitem', 'author', $this->getAliasName());
+        return new ColumnField('author', 'PodcastItem', 'podcastitem', 'author', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class PodcastItemAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['postid', 'url', 'length', 'explicit', 'keywords', 'subtitle', 'author'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid'];
     }
     
     public function __listNullableColumns() : array

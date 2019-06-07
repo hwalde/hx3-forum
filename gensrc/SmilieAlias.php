@@ -17,31 +17,31 @@ class SmilieAlias extends TableAlias {
    
     public function smilieId() : ColumnField
     {
-        return new ColumnField('smilie', 'smilieid', $this->getAliasName());
+        return new ColumnField('smilieId', 'Smilie', 'smilie', 'smilieid', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('smilie', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Smilie', 'smilie', 'title', $this->getAliasName());
     }
     public function smilieText() : ColumnField
     {
-        return new ColumnField('smilie', 'smilietext', $this->getAliasName());
+        return new ColumnField('smilieText', 'Smilie', 'smilie', 'smilietext', $this->getAliasName());
     }
     public function smiliePath() : ColumnField
     {
-        return new ColumnField('smilie', 'smiliepath', $this->getAliasName());
+        return new ColumnField('smiliePath', 'Smilie', 'smilie', 'smiliepath', $this->getAliasName());
     }
     public function imageCategoryId() : ColumnField
     {
-        return new ColumnField('smilie', 'imagecategoryid', $this->getAliasName());
+        return new ColumnField('imageCategoryId', 'Smilie', 'smilie', 'imagecategoryid', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('smilie', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'Smilie', 'smilie', 'displayorder', $this->getAliasName());
     }
     public function importSmilieId() : ColumnField
     {
-        return new ColumnField('smilie', 'importsmilieid', $this->getAliasName());
+        return new ColumnField('importSmilieId', 'Smilie', 'smilie', 'importsmilieid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class SmilieAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['smilieid', 'title', 'smilietext', 'smiliepath', 'imagecategoryid', 'displayorder', 'importsmilieid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['smilieid'];
     }
     
     public function __listNullableColumns() : array

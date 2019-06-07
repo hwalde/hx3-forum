@@ -44,19 +44,19 @@ class PostIndex implements Table {
     
     public static function wordId() : ColumnField
     {
-        return new ColumnField('postindex', 'wordid');
+        return new ColumnField('wordId', 'PostIndex', 'postindex', 'wordid');
     }
     public static function postId() : ColumnField
     {
-        return new ColumnField('postindex', 'postid');
+        return new ColumnField('postId', 'PostIndex', 'postindex', 'postid');
     }
     public static function inTitle() : ColumnField
     {
-        return new ColumnField('postindex', 'intitle');
+        return new ColumnField('inTitle', 'PostIndex', 'postindex', 'intitle');
     }
     public static function score() : ColumnField
     {
-        return new ColumnField('postindex', 'score');
+        return new ColumnField('score', 'PostIndex', 'postindex', 'score');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class PostIndex implements Table {
     public function __listColumns() : array
     {
         return ['wordid', 'postid', 'intitle', 'score'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['wordid', 'postid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class PostIndex implements Table {
 			'score' => 'score'
 		];
     }
-
 }

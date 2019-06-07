@@ -48,35 +48,35 @@ class UserPromotion implements Table {
     
     public static function userpromotionid() : ColumnField
     {
-        return new ColumnField('userpromotion', 'userpromotionid');
+        return new ColumnField('userpromotionid', 'UserPromotion', 'userpromotion', 'userpromotionid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('userpromotion', 'usergroupid');
+        return new ColumnField('userGroupId', 'UserPromotion', 'userpromotion', 'usergroupid');
     }
     public static function joinUserGroupId() : ColumnField
     {
-        return new ColumnField('userpromotion', 'joinusergroupid');
+        return new ColumnField('joinUserGroupId', 'UserPromotion', 'userpromotion', 'joinusergroupid');
     }
     public static function reputation() : ColumnField
     {
-        return new ColumnField('userpromotion', 'reputation');
+        return new ColumnField('reputation', 'UserPromotion', 'userpromotion', 'reputation');
     }
     public static function date() : ColumnField
     {
-        return new ColumnField('userpromotion', 'date');
+        return new ColumnField('date', 'UserPromotion', 'userpromotion', 'date');
     }
     public static function posts() : ColumnField
     {
-        return new ColumnField('userpromotion', 'posts');
+        return new ColumnField('posts', 'UserPromotion', 'userpromotion', 'posts');
     }
     public static function strategy() : ColumnField
     {
-        return new ColumnField('userpromotion', 'strategy');
+        return new ColumnField('strategy', 'UserPromotion', 'userpromotion', 'strategy');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('userpromotion', 'type');
+        return new ColumnField('type', 'UserPromotion', 'userpromotion', 'type');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class UserPromotion implements Table {
     public function __listColumns() : array
     {
         return ['userpromotionid', 'usergroupid', 'joinusergroupid', 'reputation', 'date', 'posts', 'strategy', 'type'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userpromotionid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class UserPromotion implements Table {
 			'type' => 'type'
 		];
     }
-
 }

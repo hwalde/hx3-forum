@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedProductRecord implements Record {
     
     /** @var $productId string */
-    private $productId;
+    protected $productId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $description string */
-    private $description;
+    protected $description;
     
     /** @var $version string */
-    private $version;
+    protected $version;
     
     /** @var $active int */
-    private $active;
+    protected $active;
     
     /** @var $url string */
-    private $url;
+    protected $url;
     
     /** @var $versioncheckurl string */
-    private $versioncheckurl;
+    protected $versioncheckurl;
     
     public function hasProductId(): bool
     {

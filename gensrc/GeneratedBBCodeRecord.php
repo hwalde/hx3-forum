@@ -14,31 +14,31 @@ use POOQ\Record;
 class GeneratedBBCodeRecord implements Record {
     
     /** @var $bbCodeId int */
-    private $bbCodeId;
+    protected $bbCodeId;
     
     /** @var $bbBodeTag string */
-    private $bbBodeTag;
+    protected $bbBodeTag;
     
     /** @var $bbCodeReplacement string */
-    private $bbCodeReplacement;
+    protected $bbCodeReplacement;
     
     /** @var $bbCodeExample string */
-    private $bbCodeExample;
+    protected $bbCodeExample;
     
     /** @var $bbCodeExplanation string */
-    private $bbCodeExplanation;
+    protected $bbCodeExplanation;
     
     /** @var $twoParams int */
-    private $twoParams;
+    protected $twoParams;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $buttonImage string */
-    private $buttonImage;
+    protected $buttonImage;
     
     /** @var $options int */
-    private $options;
+    protected $options;
     
     public function hasBbCodeId(): bool
     {

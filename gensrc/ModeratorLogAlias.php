@@ -17,75 +17,75 @@ class ModeratorLogAlias extends TableAlias {
    
     public function moderatorLogId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'moderatorlogid', $this->getAliasName());
+        return new ColumnField('moderatorLogId', 'ModeratorLog', 'moderatorlog', 'moderatorlogid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'ModeratorLog', 'moderatorlog', 'dateline', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'ModeratorLog', 'moderatorlog', 'userid', $this->getAliasName());
     }
     public function forumId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'forumid', $this->getAliasName());
+        return new ColumnField('forumId', 'ModeratorLog', 'moderatorlog', 'forumid', $this->getAliasName());
     }
     public function threadId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'ModeratorLog', 'moderatorlog', 'threadid', $this->getAliasName());
     }
     public function postId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'postid', $this->getAliasName());
+        return new ColumnField('postId', 'ModeratorLog', 'moderatorlog', 'postid', $this->getAliasName());
     }
     public function pollId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'pollid', $this->getAliasName());
+        return new ColumnField('pollId', 'ModeratorLog', 'moderatorlog', 'pollid', $this->getAliasName());
     }
     public function action() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'action', $this->getAliasName());
+        return new ColumnField('action', 'ModeratorLog', 'moderatorlog', 'action', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'type', $this->getAliasName());
+        return new ColumnField('type', 'ModeratorLog', 'moderatorlog', 'type', $this->getAliasName());
     }
     public function threadTitle() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'threadtitle', $this->getAliasName());
+        return new ColumnField('threadTitle', 'ModeratorLog', 'moderatorlog', 'threadtitle', $this->getAliasName());
     }
     public function attachmentId() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'attachmentid', $this->getAliasName());
+        return new ColumnField('attachmentId', 'ModeratorLog', 'moderatorlog', 'attachmentid', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'ModeratorLog', 'moderatorlog', 'ipaddress', $this->getAliasName());
     }
     public function id1() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'id1', $this->getAliasName());
+        return new ColumnField('id1', 'ModeratorLog', 'moderatorlog', 'id1', $this->getAliasName());
     }
     public function id2() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'id2', $this->getAliasName());
+        return new ColumnField('id2', 'ModeratorLog', 'moderatorlog', 'id2', $this->getAliasName());
     }
     public function id3() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'id3', $this->getAliasName());
+        return new ColumnField('id3', 'ModeratorLog', 'moderatorlog', 'id3', $this->getAliasName());
     }
     public function id4() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'id4', $this->getAliasName());
+        return new ColumnField('id4', 'ModeratorLog', 'moderatorlog', 'id4', $this->getAliasName());
     }
     public function id5() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'id5', $this->getAliasName());
+        return new ColumnField('id5', 'ModeratorLog', 'moderatorlog', 'id5', $this->getAliasName());
     }
     public function product() : ColumnField
     {
-        return new ColumnField('moderatorlog', 'product', $this->getAliasName());
+        return new ColumnField('product', 'ModeratorLog', 'moderatorlog', 'product', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -96,6 +96,14 @@ class ModeratorLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['moderatorlogid', 'dateline', 'userid', 'forumid', 'threadid', 'postid', 'pollid', 'action', 'type', 'threadtitle', 'attachmentid', 'ipaddress', 'id1', 'id2', 'id3', 'id4', 'id5', 'product'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['moderatorlogid'];
     }
     
     public function __listNullableColumns() : array

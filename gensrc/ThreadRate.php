@@ -45,23 +45,23 @@ class ThreadRate implements Table {
     
     public static function threadRateId() : ColumnField
     {
-        return new ColumnField('threadrate', 'threadrateid');
+        return new ColumnField('threadRateId', 'ThreadRate', 'threadrate', 'threadrateid');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('threadrate', 'threadid');
+        return new ColumnField('threadId', 'ThreadRate', 'threadrate', 'threadid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('threadrate', 'userid');
+        return new ColumnField('userId', 'ThreadRate', 'threadrate', 'userid');
     }
     public static function vote() : ColumnField
     {
-        return new ColumnField('threadrate', 'vote');
+        return new ColumnField('vote', 'ThreadRate', 'threadrate', 'vote');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('threadrate', 'ipaddress');
+        return new ColumnField('ipAddress', 'ThreadRate', 'threadrate', 'ipaddress');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class ThreadRate implements Table {
     public function __listColumns() : array
     {
         return ['threadrateid', 'threadid', 'userid', 'vote', 'ipaddress'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['threadrateid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class ThreadRate implements Table {
 			'ipaddress' => 'ipAddress'
 		];
     }
-
 }

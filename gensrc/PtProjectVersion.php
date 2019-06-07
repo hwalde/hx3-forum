@@ -46,27 +46,27 @@ class PtProjectVersion implements Table {
     
     public static function projectVersionId() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'projectversionid');
+        return new ColumnField('projectVersionId', 'PtProjectVersion', 'pt_projectversion', 'projectversionid');
     }
     public static function projectId() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'projectid');
+        return new ColumnField('projectId', 'PtProjectVersion', 'pt_projectversion', 'projectid');
     }
     public static function versionName() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'versionname');
+        return new ColumnField('versionName', 'PtProjectVersion', 'pt_projectversion', 'versionname');
     }
     public static function projectVersionGroupId() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'projectversiongroupid');
+        return new ColumnField('projectVersionGroupId', 'PtProjectVersion', 'pt_projectversion', 'projectversiongroupid');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'displayorder');
+        return new ColumnField('displayOrder', 'PtProjectVersion', 'pt_projectversion', 'displayorder');
     }
     public static function effectiveOrder() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'effectiveorder');
+        return new ColumnField('effectiveOrder', 'PtProjectVersion', 'pt_projectversion', 'effectiveorder');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class PtProjectVersion implements Table {
     public function __listColumns() : array
     {
         return ['projectversionid', 'projectid', 'versionname', 'projectversiongroupid', 'displayorder', 'effectiveorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['projectversionid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class PtProjectVersion implements Table {
 			'effectiveorder' => 'effectiveOrder'
 		];
     }
-
 }

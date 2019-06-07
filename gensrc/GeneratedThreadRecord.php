@@ -14,91 +14,91 @@ use POOQ\Record;
 class GeneratedThreadRecord implements Record {
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $firstPostId int */
-    private $firstPostId;
+    protected $firstPostId;
     
     /** @var $lastPost int|null */
-    private $lastPost;
+    protected $lastPost;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $pollId int */
-    private $pollId;
+    protected $pollId;
     
     /** @var $open int */
-    private $open;
+    protected $open;
     
     /** @var $replyCount int */
-    private $replyCount;
+    protected $replyCount;
     
     /** @var $postUserName string */
-    private $postUserName;
+    protected $postUserName;
     
     /** @var $postUserId int|null */
-    private $postUserId;
+    protected $postUserId;
     
     /** @var $lastPoster string */
-    private $lastPoster;
+    protected $lastPoster;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $views int */
-    private $views;
+    protected $views;
     
     /** @var $iconId int */
-    private $iconId;
+    protected $iconId;
     
     /** @var $notes string */
-    private $notes;
+    protected $notes;
     
     /** @var $visible int */
-    private $visible;
+    protected $visible;
     
     /** @var $sticky int */
-    private $sticky;
+    protected $sticky;
     
     /** @var $voteNum int */
-    private $voteNum;
+    protected $voteNum;
     
     /** @var $voteTotal int */
-    private $voteTotal;
+    protected $voteTotal;
     
     /** @var $attach int */
-    private $attach;
+    protected $attach;
     
     /** @var $similar string */
-    private $similar;
+    protected $similar;
     
     /** @var $importThreadId int */
-    private $importThreadId;
+    protected $importThreadId;
     
     /** @var $importForumId int */
-    private $importForumId;
+    protected $importForumId;
     
     /** @var $hiddenCount int */
-    private $hiddenCount;
+    protected $hiddenCount;
     
     /** @var $deletedCount int */
-    private $deletedCount;
+    protected $deletedCount;
     
     /** @var $lastPostId int|null */
-    private $lastPostId;
+    protected $lastPostId;
     
     /** @var $prefixId string */
-    private $prefixId;
+    protected $prefixId;
     
     /** @var $tagList string|null */
-    private $tagList;
+    protected $tagList;
     
     /** @var $vbSeoLinkbacksNo int */
-    private $vbSeoLinkbacksNo;
+    protected $vbSeoLinkbacksNo;
     
     public function hasThreadId(): bool
     {

@@ -42,11 +42,11 @@ class Word implements Table {
     
     public static function wordId() : ColumnField
     {
-        return new ColumnField('word', 'wordid');
+        return new ColumnField('wordId', 'Word', 'word', 'wordid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('word', 'title');
+        return new ColumnField('title', 'Word', 'word', 'title');
     }
 
     public function getTableName(): string
@@ -57,6 +57,14 @@ class Word implements Table {
     public function __listColumns() : array
     {
         return ['wordid', 'title'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['wordid'];
     }
     
     public function __listNullableColumns() : array
@@ -79,5 +87,4 @@ class Word implements Table {
 			'title' => 'title'
 		];
     }
-
 }

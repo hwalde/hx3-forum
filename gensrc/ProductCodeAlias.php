@@ -17,23 +17,23 @@ class ProductCodeAlias extends TableAlias {
    
     public function productCodeId() : ColumnField
     {
-        return new ColumnField('productcode', 'productcodeid', $this->getAliasName());
+        return new ColumnField('productCodeId', 'ProductCode', 'productcode', 'productcodeid', $this->getAliasName());
     }
     public function productId() : ColumnField
     {
-        return new ColumnField('productcode', 'productid', $this->getAliasName());
+        return new ColumnField('productId', 'ProductCode', 'productcode', 'productid', $this->getAliasName());
     }
     public function version() : ColumnField
     {
-        return new ColumnField('productcode', 'version', $this->getAliasName());
+        return new ColumnField('version', 'ProductCode', 'productcode', 'version', $this->getAliasName());
     }
     public function installCode() : ColumnField
     {
-        return new ColumnField('productcode', 'installcode', $this->getAliasName());
+        return new ColumnField('installCode', 'ProductCode', 'productcode', 'installcode', $this->getAliasName());
     }
     public function uninstallCode() : ColumnField
     {
-        return new ColumnField('productcode', 'uninstallcode', $this->getAliasName());
+        return new ColumnField('uninstallCode', 'ProductCode', 'productcode', 'uninstallcode', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class ProductCodeAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['productcodeid', 'productid', 'version', 'installcode', 'uninstallcode'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['productcodeid'];
     }
     
     public function __listNullableColumns() : array

@@ -14,40 +14,40 @@ use POOQ\Record;
 class GeneratedVisitorMessageRecord implements Record {
     
     /** @var $vmId int */
-    private $vmId;
+    protected $vmId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $postUserId int */
-    private $postUserId;
+    protected $postUserId;
     
     /** @var $postUserName string */
-    private $postUserName;
+    protected $postUserName;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $state string */
-    private $state;
+    protected $state;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $pageText string|null */
-    private $pageText;
+    protected $pageText;
     
     /** @var $ipAddress int */
-    private $ipAddress;
+    protected $ipAddress;
     
     /** @var $allowSmilie int */
-    private $allowSmilie;
+    protected $allowSmilie;
     
     /** @var $reportThreadId int */
-    private $reportThreadId;
+    protected $reportThreadId;
     
     /** @var $messageRead int */
-    private $messageRead;
+    protected $messageRead;
     
     public function hasVmId(): bool
     {

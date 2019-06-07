@@ -46,27 +46,27 @@ class ProductDependency implements Table {
     
     public static function productDependencyId() : ColumnField
     {
-        return new ColumnField('productdependency', 'productdependencyid');
+        return new ColumnField('productDependencyId', 'ProductDependency', 'productdependency', 'productdependencyid');
     }
     public static function productId() : ColumnField
     {
-        return new ColumnField('productdependency', 'productid');
+        return new ColumnField('productId', 'ProductDependency', 'productdependency', 'productid');
     }
     public static function dependencyType() : ColumnField
     {
-        return new ColumnField('productdependency', 'dependencytype');
+        return new ColumnField('dependencyType', 'ProductDependency', 'productdependency', 'dependencytype');
     }
     public static function parentProductId() : ColumnField
     {
-        return new ColumnField('productdependency', 'parentproductid');
+        return new ColumnField('parentProductId', 'ProductDependency', 'productdependency', 'parentproductid');
     }
     public static function minVersion() : ColumnField
     {
-        return new ColumnField('productdependency', 'minversion');
+        return new ColumnField('minVersion', 'ProductDependency', 'productdependency', 'minversion');
     }
     public static function maxVersion() : ColumnField
     {
-        return new ColumnField('productdependency', 'maxversion');
+        return new ColumnField('maxVersion', 'ProductDependency', 'productdependency', 'maxversion');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class ProductDependency implements Table {
     public function __listColumns() : array
     {
         return ['productdependencyid', 'productid', 'dependencytype', 'parentproductid', 'minversion', 'maxversion'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['productdependencyid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class ProductDependency implements Table {
 			'maxversion' => 'maxVersion'
 		];
     }
-
 }

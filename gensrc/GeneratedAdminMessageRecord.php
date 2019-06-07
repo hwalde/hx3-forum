@@ -14,34 +14,34 @@ use POOQ\Record;
 class GeneratedAdminMessageRecord implements Record {
     
     /** @var $adminMessageId int */
-    private $adminMessageId;
+    protected $adminMessageId;
     
     /** @var $varName string */
-    private $varName;
+    protected $varName;
     
     /** @var $dismissable int */
-    private $dismissable;
+    protected $dismissable;
     
     /** @var $script string */
-    private $script;
+    protected $script;
     
     /** @var $action string */
-    private $action;
+    protected $action;
     
     /** @var $execUrl string */
-    private $execUrl;
+    protected $execUrl;
     
     /** @var $method string */
-    private $method;
+    protected $method;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $status string */
-    private $status;
+    protected $status;
     
     /** @var $statusUserId int */
-    private $statusUserId;
+    protected $statusUserId;
     
     public function hasAdminMessageId(): bool
     {

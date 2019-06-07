@@ -17,19 +17,19 @@ class ProfileVisitorAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('profilevisitor', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'ProfileVisitor', 'profilevisitor', 'userid', $this->getAliasName());
     }
     public function visitorId() : ColumnField
     {
-        return new ColumnField('profilevisitor', 'visitorid', $this->getAliasName());
+        return new ColumnField('visitorId', 'ProfileVisitor', 'profilevisitor', 'visitorid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('profilevisitor', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'ProfileVisitor', 'profilevisitor', 'dateline', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('profilevisitor', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'ProfileVisitor', 'profilevisitor', 'visible', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class ProfileVisitorAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'visitorid', 'dateline', 'visible'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'visitorid'];
     }
     
     public function __listNullableColumns() : array

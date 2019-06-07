@@ -14,40 +14,40 @@ use POOQ\Record;
 class GeneratedCronRecord implements Record {
     
     /** @var $cronId int */
-    private $cronId;
+    protected $cronId;
     
     /** @var $nextRun int */
-    private $nextRun;
+    protected $nextRun;
     
     /** @var $weekDay int */
-    private $weekDay;
+    protected $weekDay;
     
     /** @var $day int */
-    private $day;
+    protected $day;
     
     /** @var $hour int */
-    private $hour;
+    protected $hour;
     
     /** @var $minute string */
-    private $minute;
+    protected $minute;
     
     /** @var $fileName string */
-    private $fileName;
+    protected $fileName;
     
     /** @var $logLevel int */
-    private $logLevel;
+    protected $logLevel;
     
     /** @var $active int */
-    private $active;
+    protected $active;
     
     /** @var $varName string */
-    private $varName;
+    protected $varName;
     
     /** @var $volatile int */
-    private $volatile;
+    protected $volatile;
     
     /** @var $product string */
-    private $product;
+    protected $product;
     
     public function hasCronId(): bool
     {

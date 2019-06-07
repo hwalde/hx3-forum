@@ -14,7 +14,7 @@ use POOQ\Record;
 class GeneratedSpamLogRecord implements Record {
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     public function hasPostId(): bool
     {

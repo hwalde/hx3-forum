@@ -47,31 +47,31 @@ class PodcastItem implements Table {
     
     public static function postId() : ColumnField
     {
-        return new ColumnField('podcastitem', 'postid');
+        return new ColumnField('postId', 'PodcastItem', 'podcastitem', 'postid');
     }
     public static function url() : ColumnField
     {
-        return new ColumnField('podcastitem', 'url');
+        return new ColumnField('url', 'PodcastItem', 'podcastitem', 'url');
     }
     public static function length() : ColumnField
     {
-        return new ColumnField('podcastitem', 'length');
+        return new ColumnField('length', 'PodcastItem', 'podcastitem', 'length');
     }
     public static function explicit() : ColumnField
     {
-        return new ColumnField('podcastitem', 'explicit');
+        return new ColumnField('explicit', 'PodcastItem', 'podcastitem', 'explicit');
     }
     public static function keywords() : ColumnField
     {
-        return new ColumnField('podcastitem', 'keywords');
+        return new ColumnField('keywords', 'PodcastItem', 'podcastitem', 'keywords');
     }
     public static function subTitle() : ColumnField
     {
-        return new ColumnField('podcastitem', 'subtitle');
+        return new ColumnField('subTitle', 'PodcastItem', 'podcastitem', 'subtitle');
     }
     public static function author() : ColumnField
     {
-        return new ColumnField('podcastitem', 'author');
+        return new ColumnField('author', 'PodcastItem', 'podcastitem', 'author');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class PodcastItem implements Table {
     public function __listColumns() : array
     {
         return ['postid', 'url', 'length', 'explicit', 'keywords', 'subtitle', 'author'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['postid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class PodcastItem implements Table {
 			'author' => 'author'
 		];
     }
-
 }

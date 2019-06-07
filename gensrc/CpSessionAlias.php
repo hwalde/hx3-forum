@@ -17,15 +17,15 @@ class CpSessionAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('cpsession', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'CpSession', 'cpsession', 'userid', $this->getAliasName());
     }
     public function hash() : ColumnField
     {
-        return new ColumnField('cpsession', 'hash', $this->getAliasName());
+        return new ColumnField('hash', 'CpSession', 'cpsession', 'hash', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('cpsession', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'CpSession', 'cpsession', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class CpSessionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'hash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'hash'];
     }
     
     public function __listNullableColumns() : array

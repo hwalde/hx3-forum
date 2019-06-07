@@ -17,63 +17,63 @@ class EventAlias extends TableAlias {
    
     public function eventId() : ColumnField
     {
-        return new ColumnField('event', 'eventid', $this->getAliasName());
+        return new ColumnField('eventId', 'Event', 'event', 'eventid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('event', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Event', 'event', 'userid', $this->getAliasName());
     }
     public function event() : ColumnField
     {
-        return new ColumnField('event', 'event', $this->getAliasName());
+        return new ColumnField('event', 'Event', 'event', 'event', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('event', 'title', $this->getAliasName());
+        return new ColumnField('title', 'Event', 'event', 'title', $this->getAliasName());
     }
     public function allowSmilies() : ColumnField
     {
-        return new ColumnField('event', 'allowsmilies', $this->getAliasName());
+        return new ColumnField('allowSmilies', 'Event', 'event', 'allowsmilies', $this->getAliasName());
     }
     public function recurring() : ColumnField
     {
-        return new ColumnField('event', 'recurring', $this->getAliasName());
+        return new ColumnField('recurring', 'Event', 'event', 'recurring', $this->getAliasName());
     }
     public function recurOption() : ColumnField
     {
-        return new ColumnField('event', 'recuroption', $this->getAliasName());
+        return new ColumnField('recurOption', 'Event', 'event', 'recuroption', $this->getAliasName());
     }
     public function calendarId() : ColumnField
     {
-        return new ColumnField('event', 'calendarid', $this->getAliasName());
+        return new ColumnField('calendarId', 'Event', 'event', 'calendarid', $this->getAliasName());
     }
     public function customFields() : ColumnField
     {
-        return new ColumnField('event', 'customfields', $this->getAliasName());
+        return new ColumnField('customFields', 'Event', 'event', 'customfields', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('event', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'Event', 'event', 'visible', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('event', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'Event', 'event', 'dateline', $this->getAliasName());
     }
     public function utc() : ColumnField
     {
-        return new ColumnField('event', 'utc', $this->getAliasName());
+        return new ColumnField('utc', 'Event', 'event', 'utc', $this->getAliasName());
     }
     public function dateLineFrom() : ColumnField
     {
-        return new ColumnField('event', 'dateline_from', $this->getAliasName());
+        return new ColumnField('dateLineFrom', 'Event', 'event', 'dateline_from', $this->getAliasName());
     }
     public function dateLineTo() : ColumnField
     {
-        return new ColumnField('event', 'dateline_to', $this->getAliasName());
+        return new ColumnField('dateLineTo', 'Event', 'event', 'dateline_to', $this->getAliasName());
     }
     public function dst() : ColumnField
     {
-        return new ColumnField('event', 'dst', $this->getAliasName());
+        return new ColumnField('dst', 'Event', 'event', 'dst', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -84,6 +84,14 @@ class EventAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['eventid', 'userid', 'event', 'title', 'allowsmilies', 'recurring', 'recuroption', 'calendarid', 'customfields', 'visible', 'dateline', 'utc', 'dateline_from', 'dateline_to', 'dst'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['eventid'];
     }
     
     public function __listNullableColumns() : array

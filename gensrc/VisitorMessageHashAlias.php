@@ -17,19 +17,19 @@ class VisitorMessageHashAlias extends TableAlias {
    
     public function postUserId() : ColumnField
     {
-        return new ColumnField('visitormessage_hash', 'postuserid', $this->getAliasName());
+        return new ColumnField('postUserId', 'VisitorMessageHash', 'visitormessage_hash', 'postuserid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('visitormessage_hash', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'VisitorMessageHash', 'visitormessage_hash', 'userid', $this->getAliasName());
     }
     public function dupeHash() : ColumnField
     {
-        return new ColumnField('visitormessage_hash', 'dupehash', $this->getAliasName());
+        return new ColumnField('dupeHash', 'VisitorMessageHash', 'visitormessage_hash', 'dupehash', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('visitormessage_hash', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'VisitorMessageHash', 'visitormessage_hash', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class VisitorMessageHashAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['postuserid', 'userid', 'dupehash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array

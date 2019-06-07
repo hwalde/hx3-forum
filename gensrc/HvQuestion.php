@@ -43,15 +43,15 @@ class HvQuestion implements Table {
     
     public static function questionId() : ColumnField
     {
-        return new ColumnField('hvquestion', 'questionid');
+        return new ColumnField('questionId', 'HvQuestion', 'hvquestion', 'questionid');
     }
     public static function regex() : ColumnField
     {
-        return new ColumnField('hvquestion', 'regex');
+        return new ColumnField('regex', 'HvQuestion', 'hvquestion', 'regex');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('hvquestion', 'dateline');
+        return new ColumnField('dateLine', 'HvQuestion', 'hvquestion', 'dateline');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class HvQuestion implements Table {
     public function __listColumns() : array
     {
         return ['questionid', 'regex', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['questionid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class HvQuestion implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

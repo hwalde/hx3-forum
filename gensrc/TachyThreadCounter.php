@@ -43,15 +43,15 @@ class TachyThreadCounter implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('tachythreadcounter', 'userid');
+        return new ColumnField('userId', 'TachyThreadCounter', 'tachythreadcounter', 'userid');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('tachythreadcounter', 'threadid');
+        return new ColumnField('threadId', 'TachyThreadCounter', 'tachythreadcounter', 'threadid');
     }
     public static function replyCount() : ColumnField
     {
-        return new ColumnField('tachythreadcounter', 'replycount');
+        return new ColumnField('replyCount', 'TachyThreadCounter', 'tachythreadcounter', 'replycount');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class TachyThreadCounter implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'threadid', 'replycount'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'threadid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class TachyThreadCounter implements Table {
 			'replycount' => 'replyCount'
 		];
     }
-
 }

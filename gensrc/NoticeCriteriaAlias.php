@@ -17,23 +17,23 @@ class NoticeCriteriaAlias extends TableAlias {
    
     public function noticeId() : ColumnField
     {
-        return new ColumnField('noticecriteria', 'noticeid', $this->getAliasName());
+        return new ColumnField('noticeId', 'NoticeCriteria', 'noticecriteria', 'noticeid', $this->getAliasName());
     }
     public function criteriaId() : ColumnField
     {
-        return new ColumnField('noticecriteria', 'criteriaid', $this->getAliasName());
+        return new ColumnField('criteriaId', 'NoticeCriteria', 'noticecriteria', 'criteriaid', $this->getAliasName());
     }
     public function condition1() : ColumnField
     {
-        return new ColumnField('noticecriteria', 'condition1', $this->getAliasName());
+        return new ColumnField('condition1', 'NoticeCriteria', 'noticecriteria', 'condition1', $this->getAliasName());
     }
     public function condition2() : ColumnField
     {
-        return new ColumnField('noticecriteria', 'condition2', $this->getAliasName());
+        return new ColumnField('condition2', 'NoticeCriteria', 'noticecriteria', 'condition2', $this->getAliasName());
     }
     public function condition3() : ColumnField
     {
-        return new ColumnField('noticecriteria', 'condition3', $this->getAliasName());
+        return new ColumnField('condition3', 'NoticeCriteria', 'noticecriteria', 'condition3', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class NoticeCriteriaAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['noticeid', 'criteriaid', 'condition1', 'condition2', 'condition3'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['noticeid', 'criteriaid'];
     }
     
     public function __listNullableColumns() : array

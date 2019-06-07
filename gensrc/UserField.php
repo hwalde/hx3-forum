@@ -47,31 +47,31 @@ class UserField implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('userfield', 'userid');
+        return new ColumnField('userId', 'UserField', 'userfield', 'userid');
     }
     public static function temp() : ColumnField
     {
-        return new ColumnField('userfield', 'temp');
+        return new ColumnField('temp', 'UserField', 'userfield', 'temp');
     }
     public static function field1() : ColumnField
     {
-        return new ColumnField('userfield', 'field1');
+        return new ColumnField('field1', 'UserField', 'userfield', 'field1');
     }
     public static function field2() : ColumnField
     {
-        return new ColumnField('userfield', 'field2');
+        return new ColumnField('field2', 'UserField', 'userfield', 'field2');
     }
     public static function field3() : ColumnField
     {
-        return new ColumnField('userfield', 'field3');
+        return new ColumnField('field3', 'UserField', 'userfield', 'field3');
     }
     public static function field4() : ColumnField
     {
-        return new ColumnField('userfield', 'field4');
+        return new ColumnField('field4', 'UserField', 'userfield', 'field4');
     }
     public static function field5() : ColumnField
     {
-        return new ColumnField('userfield', 'field5');
+        return new ColumnField('field5', 'UserField', 'userfield', 'field5');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class UserField implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'temp', 'field1', 'field2', 'field3', 'field4', 'field5'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class UserField implements Table {
 			'field5' => 'field5'
 		];
     }
-
 }

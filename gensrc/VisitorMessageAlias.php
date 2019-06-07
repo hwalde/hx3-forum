@@ -17,51 +17,51 @@ class VisitorMessageAlias extends TableAlias {
    
     public function vmId() : ColumnField
     {
-        return new ColumnField('visitormessage', 'vmid', $this->getAliasName());
+        return new ColumnField('vmId', 'VisitorMessage', 'visitormessage', 'vmid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('visitormessage', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'VisitorMessage', 'visitormessage', 'userid', $this->getAliasName());
     }
     public function postUserId() : ColumnField
     {
-        return new ColumnField('visitormessage', 'postuserid', $this->getAliasName());
+        return new ColumnField('postUserId', 'VisitorMessage', 'visitormessage', 'postuserid', $this->getAliasName());
     }
     public function postUserName() : ColumnField
     {
-        return new ColumnField('visitormessage', 'postusername', $this->getAliasName());
+        return new ColumnField('postUserName', 'VisitorMessage', 'visitormessage', 'postusername', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('visitormessage', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'VisitorMessage', 'visitormessage', 'dateline', $this->getAliasName());
     }
     public function state() : ColumnField
     {
-        return new ColumnField('visitormessage', 'state', $this->getAliasName());
+        return new ColumnField('state', 'VisitorMessage', 'visitormessage', 'state', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('visitormessage', 'title', $this->getAliasName());
+        return new ColumnField('title', 'VisitorMessage', 'visitormessage', 'title', $this->getAliasName());
     }
     public function pageText() : ColumnField
     {
-        return new ColumnField('visitormessage', 'pagetext', $this->getAliasName());
+        return new ColumnField('pageText', 'VisitorMessage', 'visitormessage', 'pagetext', $this->getAliasName());
     }
     public function ipAddress() : ColumnField
     {
-        return new ColumnField('visitormessage', 'ipaddress', $this->getAliasName());
+        return new ColumnField('ipAddress', 'VisitorMessage', 'visitormessage', 'ipaddress', $this->getAliasName());
     }
     public function allowSmilie() : ColumnField
     {
-        return new ColumnField('visitormessage', 'allowsmilie', $this->getAliasName());
+        return new ColumnField('allowSmilie', 'VisitorMessage', 'visitormessage', 'allowsmilie', $this->getAliasName());
     }
     public function reportThreadId() : ColumnField
     {
-        return new ColumnField('visitormessage', 'reportthreadid', $this->getAliasName());
+        return new ColumnField('reportThreadId', 'VisitorMessage', 'visitormessage', 'reportthreadid', $this->getAliasName());
     }
     public function messageRead() : ColumnField
     {
-        return new ColumnField('visitormessage', 'messageread', $this->getAliasName());
+        return new ColumnField('messageRead', 'VisitorMessage', 'visitormessage', 'messageread', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class VisitorMessageAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['vmid', 'userid', 'postuserid', 'postusername', 'dateline', 'state', 'title', 'pagetext', 'ipaddress', 'allowsmilie', 'reportthreadid', 'messageread'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['vmid'];
     }
     
     public function __listNullableColumns() : array

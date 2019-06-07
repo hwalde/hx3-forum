@@ -17,19 +17,19 @@ class UserListAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('userlist', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserList', 'userlist', 'userid', $this->getAliasName());
     }
     public function relationid() : ColumnField
     {
-        return new ColumnField('userlist', 'relationid', $this->getAliasName());
+        return new ColumnField('relationid', 'UserList', 'userlist', 'relationid', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('userlist', 'type', $this->getAliasName());
+        return new ColumnField('type', 'UserList', 'userlist', 'type', $this->getAliasName());
     }
     public function friend() : ColumnField
     {
-        return new ColumnField('userlist', 'friend', $this->getAliasName());
+        return new ColumnField('friend', 'UserList', 'userlist', 'friend', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class UserListAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'relationid', 'type', 'friend'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'relationid', 'type'];
     }
     
     public function __listNullableColumns() : array

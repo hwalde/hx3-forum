@@ -17,71 +17,71 @@ class SocialGroupAlias extends TableAlias {
    
     public function groupId() : ColumnField
     {
-        return new ColumnField('socialgroup', 'groupid', $this->getAliasName());
+        return new ColumnField('groupId', 'SocialGroup', 'socialgroup', 'groupid', $this->getAliasName());
     }
     public function name() : ColumnField
     {
-        return new ColumnField('socialgroup', 'name', $this->getAliasName());
+        return new ColumnField('name', 'SocialGroup', 'socialgroup', 'name', $this->getAliasName());
     }
     public function description() : ColumnField
     {
-        return new ColumnField('socialgroup', 'description', $this->getAliasName());
+        return new ColumnField('description', 'SocialGroup', 'socialgroup', 'description', $this->getAliasName());
     }
     public function creatorUserId() : ColumnField
     {
-        return new ColumnField('socialgroup', 'creatoruserid', $this->getAliasName());
+        return new ColumnField('creatorUserId', 'SocialGroup', 'socialgroup', 'creatoruserid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('socialgroup', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'SocialGroup', 'socialgroup', 'dateline', $this->getAliasName());
     }
     public function members() : ColumnField
     {
-        return new ColumnField('socialgroup', 'members', $this->getAliasName());
+        return new ColumnField('members', 'SocialGroup', 'socialgroup', 'members', $this->getAliasName());
     }
     public function pictureCount() : ColumnField
     {
-        return new ColumnField('socialgroup', 'picturecount', $this->getAliasName());
+        return new ColumnField('pictureCount', 'SocialGroup', 'socialgroup', 'picturecount', $this->getAliasName());
     }
     public function lastPost() : ColumnField
     {
-        return new ColumnField('socialgroup', 'lastpost', $this->getAliasName());
+        return new ColumnField('lastPost', 'SocialGroup', 'socialgroup', 'lastpost', $this->getAliasName());
     }
     public function lastPoster() : ColumnField
     {
-        return new ColumnField('socialgroup', 'lastposter', $this->getAliasName());
+        return new ColumnField('lastPoster', 'SocialGroup', 'socialgroup', 'lastposter', $this->getAliasName());
     }
     public function lastPosterId() : ColumnField
     {
-        return new ColumnField('socialgroup', 'lastposterid', $this->getAliasName());
+        return new ColumnField('lastPosterId', 'SocialGroup', 'socialgroup', 'lastposterid', $this->getAliasName());
     }
     public function lastGmId() : ColumnField
     {
-        return new ColumnField('socialgroup', 'lastgmid', $this->getAliasName());
+        return new ColumnField('lastGmId', 'SocialGroup', 'socialgroup', 'lastgmid', $this->getAliasName());
     }
     public function visible() : ColumnField
     {
-        return new ColumnField('socialgroup', 'visible', $this->getAliasName());
+        return new ColumnField('visible', 'SocialGroup', 'socialgroup', 'visible', $this->getAliasName());
     }
     public function deleted() : ColumnField
     {
-        return new ColumnField('socialgroup', 'deleted', $this->getAliasName());
+        return new ColumnField('deleted', 'SocialGroup', 'socialgroup', 'deleted', $this->getAliasName());
     }
     public function moderation() : ColumnField
     {
-        return new ColumnField('socialgroup', 'moderation', $this->getAliasName());
+        return new ColumnField('moderation', 'SocialGroup', 'socialgroup', 'moderation', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('socialgroup', 'type', $this->getAliasName());
+        return new ColumnField('type', 'SocialGroup', 'socialgroup', 'type', $this->getAliasName());
     }
     public function moderatedMembers() : ColumnField
     {
-        return new ColumnField('socialgroup', 'moderatedmembers', $this->getAliasName());
+        return new ColumnField('moderatedMembers', 'SocialGroup', 'socialgroup', 'moderatedmembers', $this->getAliasName());
     }
     public function options() : ColumnField
     {
-        return new ColumnField('socialgroup', 'options', $this->getAliasName());
+        return new ColumnField('options', 'SocialGroup', 'socialgroup', 'options', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -92,6 +92,14 @@ class SocialGroupAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['groupid', 'name', 'description', 'creatoruserid', 'dateline', 'members', 'picturecount', 'lastpost', 'lastposter', 'lastposterid', 'lastgmid', 'visible', 'deleted', 'moderation', 'type', 'moderatedmembers', 'options'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['groupid'];
     }
     
     public function __listNullableColumns() : array

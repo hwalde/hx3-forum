@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedReputationRecord implements Record {
     
     /** @var $reputationId int */
-    private $reputationId;
+    protected $reputationId;
     
     /** @var $postId int */
-    private $postId;
+    protected $postId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $reputation int */
-    private $reputation;
+    protected $reputation;
     
     /** @var $whoAdded int */
-    private $whoAdded;
+    protected $whoAdded;
     
     /** @var $reason string|null */
-    private $reason;
+    protected $reason;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasReputationId(): bool
     {

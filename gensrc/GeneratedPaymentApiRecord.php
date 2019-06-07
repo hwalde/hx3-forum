@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedPaymentApiRecord implements Record {
     
     /** @var $paymentApiId int */
-    private $paymentApiId;
+    protected $paymentApiId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $currency string */
-    private $currency;
+    protected $currency;
     
     /** @var $recurring int */
-    private $recurring;
+    protected $recurring;
     
     /** @var $className string */
-    private $className;
+    protected $className;
     
     /** @var $active int */
-    private $active;
+    protected $active;
     
     /** @var $settings string */
-    private $settings;
+    protected $settings;
     
     public function hasPaymentApiId(): bool
     {

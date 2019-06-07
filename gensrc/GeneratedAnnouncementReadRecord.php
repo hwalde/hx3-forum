@@ -14,10 +14,10 @@ use POOQ\Record;
 class GeneratedAnnouncementReadRecord implements Record {
     
     /** @var $announcementId int */
-    private $announcementId;
+    protected $announcementId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     public function hasAnnouncementId(): bool
     {

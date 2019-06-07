@@ -17,43 +17,43 @@ class PtProjectAlias extends TableAlias {
    
     public function projectId() : ColumnField
     {
-        return new ColumnField('pt_project', 'projectid', $this->getAliasName());
+        return new ColumnField('projectId', 'PtProject', 'pt_project', 'projectid', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_project', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'PtProject', 'pt_project', 'displayorder', $this->getAliasName());
     }
     public function title() : ColumnField
     {
-        return new ColumnField('pt_project', 'title', $this->getAliasName());
+        return new ColumnField('title', 'PtProject', 'pt_project', 'title', $this->getAliasName());
     }
     public function titleClean() : ColumnField
     {
-        return new ColumnField('pt_project', 'title_clean', $this->getAliasName());
+        return new ColumnField('titleClean', 'PtProject', 'pt_project', 'title_clean', $this->getAliasName());
     }
     public function summary() : ColumnField
     {
-        return new ColumnField('pt_project', 'summary', $this->getAliasName());
+        return new ColumnField('summary', 'PtProject', 'pt_project', 'summary', $this->getAliasName());
     }
     public function summaryClean() : ColumnField
     {
-        return new ColumnField('pt_project', 'summary_clean', $this->getAliasName());
+        return new ColumnField('summaryClean', 'PtProject', 'pt_project', 'summary_clean', $this->getAliasName());
     }
     public function description() : ColumnField
     {
-        return new ColumnField('pt_project', 'description', $this->getAliasName());
+        return new ColumnField('description', 'PtProject', 'pt_project', 'description', $this->getAliasName());
     }
     public function options() : ColumnField
     {
-        return new ColumnField('pt_project', 'options', $this->getAliasName());
+        return new ColumnField('options', 'PtProject', 'pt_project', 'options', $this->getAliasName());
     }
     public function afterForumIds() : ColumnField
     {
-        return new ColumnField('pt_project', 'afterforumids', $this->getAliasName());
+        return new ColumnField('afterForumIds', 'PtProject', 'pt_project', 'afterforumids', $this->getAliasName());
     }
     public function forumTitle() : ColumnField
     {
-        return new ColumnField('pt_project', 'forumtitle', $this->getAliasName());
+        return new ColumnField('forumTitle', 'PtProject', 'pt_project', 'forumtitle', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -64,6 +64,14 @@ class PtProjectAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['projectid', 'displayorder', 'title', 'title_clean', 'summary', 'summary_clean', 'description', 'options', 'afterforumids', 'forumtitle'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['projectid'];
     }
     
     public function __listNullableColumns() : array

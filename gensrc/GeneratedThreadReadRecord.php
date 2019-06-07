@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedThreadReadRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $readTime int */
-    private $readTime;
+    protected $readTime;
     
     public function hasUserId(): bool
     {

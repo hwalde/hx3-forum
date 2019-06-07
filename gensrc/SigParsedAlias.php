@@ -17,23 +17,23 @@ class SigParsedAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('sigparsed', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'SigParsed', 'sigparsed', 'userid', $this->getAliasName());
     }
     public function styleId() : ColumnField
     {
-        return new ColumnField('sigparsed', 'styleid', $this->getAliasName());
+        return new ColumnField('styleId', 'SigParsed', 'sigparsed', 'styleid', $this->getAliasName());
     }
     public function languageId() : ColumnField
     {
-        return new ColumnField('sigparsed', 'languageid', $this->getAliasName());
+        return new ColumnField('languageId', 'SigParsed', 'sigparsed', 'languageid', $this->getAliasName());
     }
     public function signatureParsed() : ColumnField
     {
-        return new ColumnField('sigparsed', 'signatureparsed', $this->getAliasName());
+        return new ColumnField('signatureParsed', 'SigParsed', 'sigparsed', 'signatureparsed', $this->getAliasName());
     }
     public function hasImages() : ColumnField
     {
-        return new ColumnField('sigparsed', 'hasimages', $this->getAliasName());
+        return new ColumnField('hasImages', 'SigParsed', 'sigparsed', 'hasimages', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class SigParsedAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'styleid', 'languageid', 'signatureparsed', 'hasimages'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'styleid', 'languageid'];
     }
     
     public function __listNullableColumns() : array

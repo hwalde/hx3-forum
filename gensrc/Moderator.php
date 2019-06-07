@@ -48,35 +48,35 @@ class Moderator implements Table {
     
     public static function moderatorId() : ColumnField
     {
-        return new ColumnField('moderator', 'moderatorid');
+        return new ColumnField('moderatorId', 'Moderator', 'moderator', 'moderatorid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('moderator', 'userid');
+        return new ColumnField('userId', 'Moderator', 'moderator', 'userid');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('moderator', 'forumid');
+        return new ColumnField('forumId', 'Moderator', 'moderator', 'forumid');
     }
     public static function permissions() : ColumnField
     {
-        return new ColumnField('moderator', 'permissions');
+        return new ColumnField('permissions', 'Moderator', 'moderator', 'permissions');
     }
     public static function importModeratorId() : ColumnField
     {
-        return new ColumnField('moderator', 'importmoderatorid');
+        return new ColumnField('importModeratorId', 'Moderator', 'moderator', 'importmoderatorid');
     }
     public static function moderatorUserGroupId() : ColumnField
     {
-        return new ColumnField('moderator', 'moderatorusergroupid');
+        return new ColumnField('moderatorUserGroupId', 'Moderator', 'moderator', 'moderatorusergroupid');
     }
     public static function modUserGroupId() : ColumnField
     {
-        return new ColumnField('moderator', 'modusergroupid');
+        return new ColumnField('modUserGroupId', 'Moderator', 'moderator', 'modusergroupid');
     }
     public static function permissions2() : ColumnField
     {
-        return new ColumnField('moderator', 'permissions2');
+        return new ColumnField('permissions2', 'Moderator', 'moderator', 'permissions2');
     }
 
     public function getTableName(): string
@@ -87,6 +87,14 @@ class Moderator implements Table {
     public function __listColumns() : array
     {
         return ['moderatorid', 'userid', 'forumid', 'permissions', 'importmoderatorid', 'moderatorusergroupid', 'modusergroupid', 'permissions2'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['moderatorid'];
     }
     
     public function __listNullableColumns() : array
@@ -121,5 +129,4 @@ class Moderator implements Table {
 			'permissions2' => 'permissions2'
 		];
     }
-
 }

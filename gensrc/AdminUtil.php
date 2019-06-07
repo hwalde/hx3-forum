@@ -42,11 +42,11 @@ class AdminUtil implements Table {
     
     public static function title() : ColumnField
     {
-        return new ColumnField('adminutil', 'title');
+        return new ColumnField('title', 'AdminUtil', 'adminutil', 'title');
     }
     public static function text() : ColumnField
     {
-        return new ColumnField('adminutil', 'text');
+        return new ColumnField('text', 'AdminUtil', 'adminutil', 'text');
     }
 
     public function getTableName(): string
@@ -57,6 +57,14 @@ class AdminUtil implements Table {
     public function __listColumns() : array
     {
         return ['title', 'text'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['title'];
     }
     
     public function __listNullableColumns() : array
@@ -79,5 +87,4 @@ class AdminUtil implements Table {
 			'text' => 'text'
 		];
     }
-
 }

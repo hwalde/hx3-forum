@@ -47,31 +47,31 @@ class StatisticCountries implements Table {
     
     public static function id() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'ID');
+        return new ColumnField('id', 'StatisticCountries', 'statistik_laender', 'ID');
     }
     public static function countryCode() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'Kuerzel_Land');
+        return new ColumnField('countryCode', 'StatisticCountries', 'statistik_laender', 'Kuerzel_Land');
     }
     public static function countryName() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'Name_Land');
+        return new ColumnField('countryName', 'StatisticCountries', 'statistik_laender', 'Name_Land');
     }
     public static function flagLink() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'flagge_link');
+        return new ColumnField('flagLink', 'StatisticCountries', 'statistik_laender', 'flagge_link');
     }
     public static function balkenLink() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'balken_link');
+        return new ColumnField('balkenLink', 'StatisticCountries', 'statistik_laender', 'balken_link');
     }
     public static function hostCounter() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'Zaehler_Hoster');
+        return new ColumnField('hostCounter', 'StatisticCountries', 'statistik_laender', 'Zaehler_Hoster');
     }
     public static function browserLanguageCounter() : ColumnField
     {
-        return new ColumnField('statistik_laender', 'Zaehler_Browsersprache');
+        return new ColumnField('browserLanguageCounter', 'StatisticCountries', 'statistik_laender', 'Zaehler_Browsersprache');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class StatisticCountries implements Table {
     public function __listColumns() : array
     {
         return ['ID', 'Kuerzel_Land', 'Name_Land', 'flagge_link', 'balken_link', 'Zaehler_Hoster', 'Zaehler_Browsersprache'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['ID'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class StatisticCountries implements Table {
 			'Zaehler_Browsersprache' => 'browserLanguageCounter'
 		];
     }
-
 }

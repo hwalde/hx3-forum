@@ -17,67 +17,67 @@ class SessionAlias extends TableAlias {
    
     public function sessionHash() : ColumnField
     {
-        return new ColumnField('session', 'sessionhash', $this->getAliasName());
+        return new ColumnField('sessionHash', 'Session', 'session', 'sessionhash', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('session', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Session', 'session', 'userid', $this->getAliasName());
     }
     public function host() : ColumnField
     {
-        return new ColumnField('session', 'host', $this->getAliasName());
+        return new ColumnField('host', 'Session', 'session', 'host', $this->getAliasName());
     }
     public function idHash() : ColumnField
     {
-        return new ColumnField('session', 'idhash', $this->getAliasName());
+        return new ColumnField('idHash', 'Session', 'session', 'idhash', $this->getAliasName());
     }
     public function lastActivity() : ColumnField
     {
-        return new ColumnField('session', 'lastactivity', $this->getAliasName());
+        return new ColumnField('lastActivity', 'Session', 'session', 'lastactivity', $this->getAliasName());
     }
     public function location() : ColumnField
     {
-        return new ColumnField('session', 'location', $this->getAliasName());
+        return new ColumnField('location', 'Session', 'session', 'location', $this->getAliasName());
     }
     public function userAgent() : ColumnField
     {
-        return new ColumnField('session', 'useragent', $this->getAliasName());
+        return new ColumnField('userAgent', 'Session', 'session', 'useragent', $this->getAliasName());
     }
     public function styleId() : ColumnField
     {
-        return new ColumnField('session', 'styleid', $this->getAliasName());
+        return new ColumnField('styleId', 'Session', 'session', 'styleid', $this->getAliasName());
     }
     public function loggedIn() : ColumnField
     {
-        return new ColumnField('session', 'loggedin', $this->getAliasName());
+        return new ColumnField('loggedIn', 'Session', 'session', 'loggedin', $this->getAliasName());
     }
     public function inForum() : ColumnField
     {
-        return new ColumnField('session', 'inforum', $this->getAliasName());
+        return new ColumnField('inForum', 'Session', 'session', 'inforum', $this->getAliasName());
     }
     public function inThread() : ColumnField
     {
-        return new ColumnField('session', 'inthread', $this->getAliasName());
+        return new ColumnField('inThread', 'Session', 'session', 'inthread', $this->getAliasName());
     }
     public function inCalendar() : ColumnField
     {
-        return new ColumnField('session', 'incalendar', $this->getAliasName());
+        return new ColumnField('inCalendar', 'Session', 'session', 'incalendar', $this->getAliasName());
     }
     public function badLocation() : ColumnField
     {
-        return new ColumnField('session', 'badlocation', $this->getAliasName());
+        return new ColumnField('badLocation', 'Session', 'session', 'badlocation', $this->getAliasName());
     }
     public function bypass() : ColumnField
     {
-        return new ColumnField('session', 'bypass', $this->getAliasName());
+        return new ColumnField('bypass', 'Session', 'session', 'bypass', $this->getAliasName());
     }
     public function languageId() : ColumnField
     {
-        return new ColumnField('session', 'languageid', $this->getAliasName());
+        return new ColumnField('languageId', 'Session', 'session', 'languageid', $this->getAliasName());
     }
     public function profileUpdate() : ColumnField
     {
-        return new ColumnField('session', 'profileupdate', $this->getAliasName());
+        return new ColumnField('profileUpdate', 'Session', 'session', 'profileupdate', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -88,6 +88,14 @@ class SessionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['sessionhash', 'userid', 'host', 'idhash', 'lastactivity', 'location', 'useragent', 'styleid', 'loggedin', 'inforum', 'inthread', 'incalendar', 'badlocation', 'bypass', 'languageid', 'profileupdate'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['sessionhash'];
     }
     
     public function __listNullableColumns() : array

@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedPtIssueVoteRecord implements Record {
     
     /** @var $issueVoteId int */
-    private $issueVoteId;
+    protected $issueVoteId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $ipAddress string */
-    private $ipAddress;
+    protected $ipAddress;
     
     /** @var $issueId int */
-    private $issueId;
+    protected $issueId;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $vote string */
-    private $vote;
+    protected $vote;
     
     public function hasIssueVoteId(): bool
     {

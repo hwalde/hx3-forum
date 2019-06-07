@@ -17,27 +17,27 @@ class PtProjectPermissionAlias extends TableAlias {
    
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'PtProjectPermission', 'pt_projectpermission', 'usergroupid', $this->getAliasName());
     }
     public function projectId() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'projectid', $this->getAliasName());
+        return new ColumnField('projectId', 'PtProjectPermission', 'pt_projectpermission', 'projectid', $this->getAliasName());
     }
     public function issueTypeId() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'issuetypeid', $this->getAliasName());
+        return new ColumnField('issueTypeId', 'PtProjectPermission', 'pt_projectpermission', 'issuetypeid', $this->getAliasName());
     }
     public function generalPermissions() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'generalpermissions', $this->getAliasName());
+        return new ColumnField('generalPermissions', 'PtProjectPermission', 'pt_projectpermission', 'generalpermissions', $this->getAliasName());
     }
     public function postPermissions() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'postpermissions', $this->getAliasName());
+        return new ColumnField('postPermissions', 'PtProjectPermission', 'pt_projectpermission', 'postpermissions', $this->getAliasName());
     }
     public function attachPermissions() : ColumnField
     {
-        return new ColumnField('pt_projectpermission', 'attachpermissions', $this->getAliasName());
+        return new ColumnField('attachPermissions', 'PtProjectPermission', 'pt_projectpermission', 'attachpermissions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class PtProjectPermissionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['usergroupid', 'projectid', 'issuetypeid', 'generalpermissions', 'postpermissions', 'attachpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['usergroupid', 'projectid', 'issuetypeid'];
     }
     
     public function __listNullableColumns() : array

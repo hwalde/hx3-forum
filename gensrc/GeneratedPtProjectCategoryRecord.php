@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedPtProjectCategoryRecord implements Record {
     
     /** @var $projectCategoryId int */
-    private $projectCategoryId;
+    protected $projectCategoryId;
     
     /** @var $projectId int */
-    private $projectId;
+    protected $projectId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     public function hasProjectCategoryId(): bool
     {

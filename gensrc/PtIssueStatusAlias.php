@@ -17,19 +17,19 @@ class PtIssueStatusAlias extends TableAlias {
    
     public function issueStatusId() : ColumnField
     {
-        return new ColumnField('pt_issuestatus', 'issuestatusid', $this->getAliasName());
+        return new ColumnField('issueStatusId', 'PtIssueStatus', 'pt_issuestatus', 'issuestatusid', $this->getAliasName());
     }
     public function issueTypeId() : ColumnField
     {
-        return new ColumnField('pt_issuestatus', 'issuetypeid', $this->getAliasName());
+        return new ColumnField('issueTypeId', 'PtIssueStatus', 'pt_issuestatus', 'issuetypeid', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_issuestatus', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'PtIssueStatus', 'pt_issuestatus', 'displayorder', $this->getAliasName());
     }
     public function canpetitionFrom() : ColumnField
     {
-        return new ColumnField('pt_issuestatus', 'canpetitionfrom', $this->getAliasName());
+        return new ColumnField('canpetitionFrom', 'PtIssueStatus', 'pt_issuestatus', 'canpetitionfrom', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class PtIssueStatusAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['issuestatusid', 'issuetypeid', 'displayorder', 'canpetitionfrom'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuestatusid'];
     }
     
     public function __listNullableColumns() : array

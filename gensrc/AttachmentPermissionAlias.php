@@ -17,31 +17,31 @@ class AttachmentPermissionAlias extends TableAlias {
    
     public function attachmentPermissionId() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'attachmentpermissionid', $this->getAliasName());
+        return new ColumnField('attachmentPermissionId', 'AttachmentPermission', 'attachmentpermission', 'attachmentpermissionid', $this->getAliasName());
     }
     public function extension() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'extension', $this->getAliasName());
+        return new ColumnField('extension', 'AttachmentPermission', 'attachmentpermission', 'extension', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'AttachmentPermission', 'attachmentpermission', 'usergroupid', $this->getAliasName());
     }
     public function size() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'size', $this->getAliasName());
+        return new ColumnField('size', 'AttachmentPermission', 'attachmentpermission', 'size', $this->getAliasName());
     }
     public function width() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'width', $this->getAliasName());
+        return new ColumnField('width', 'AttachmentPermission', 'attachmentpermission', 'width', $this->getAliasName());
     }
     public function height() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'height', $this->getAliasName());
+        return new ColumnField('height', 'AttachmentPermission', 'attachmentpermission', 'height', $this->getAliasName());
     }
     public function attachmentPermissions() : ColumnField
     {
-        return new ColumnField('attachmentpermission', 'attachmentpermissions', $this->getAliasName());
+        return new ColumnField('attachmentPermissions', 'AttachmentPermission', 'attachmentpermission', 'attachmentpermissions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class AttachmentPermissionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['attachmentpermissionid', 'extension', 'usergroupid', 'size', 'width', 'height', 'attachmentpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['attachmentpermissionid'];
     }
     
     public function __listNullableColumns() : array

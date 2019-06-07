@@ -43,15 +43,15 @@ class ProfileFieldCategory implements Table {
     
     public static function profileFieldCategoryId() : ColumnField
     {
-        return new ColumnField('profilefieldcategory', 'profilefieldcategoryid');
+        return new ColumnField('profileFieldCategoryId', 'ProfileFieldCategory', 'profilefieldcategory', 'profilefieldcategoryid');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('profilefieldcategory', 'displayorder');
+        return new ColumnField('displayOrder', 'ProfileFieldCategory', 'profilefieldcategory', 'displayorder');
     }
     public static function location() : ColumnField
     {
-        return new ColumnField('profilefieldcategory', 'location');
+        return new ColumnField('location', 'ProfileFieldCategory', 'profilefieldcategory', 'location');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class ProfileFieldCategory implements Table {
     public function __listColumns() : array
     {
         return ['profilefieldcategoryid', 'displayorder', 'location'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['profilefieldcategoryid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class ProfileFieldCategory implements Table {
 			'location' => 'location'
 		];
     }
-
 }

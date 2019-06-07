@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedUserNoteRecord implements Record {
     
     /** @var $usernoteid int */
-    private $usernoteid;
+    protected $usernoteid;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $posterid int */
-    private $posterid;
+    protected $posterid;
     
     /** @var $userName string */
-    private $userName;
+    protected $userName;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $message string */
-    private $message;
+    protected $message;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $allowSmilies int */
-    private $allowSmilies;
+    protected $allowSmilies;
     
     public function hasUsernoteid(): bool
     {

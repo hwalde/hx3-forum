@@ -17,11 +17,11 @@ class AdminUtilAlias extends TableAlias {
    
     public function title() : ColumnField
     {
-        return new ColumnField('adminutil', 'title', $this->getAliasName());
+        return new ColumnField('title', 'AdminUtil', 'adminutil', 'title', $this->getAliasName());
     }
     public function text() : ColumnField
     {
-        return new ColumnField('adminutil', 'text', $this->getAliasName());
+        return new ColumnField('text', 'AdminUtil', 'adminutil', 'text', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -32,6 +32,14 @@ class AdminUtilAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['title', 'text'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['title'];
     }
     
     public function __listNullableColumns() : array

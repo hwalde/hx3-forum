@@ -17,31 +17,31 @@ class SubscriptionLogAlias extends TableAlias {
    
     public function subscriptionLogId() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'subscriptionlogid', $this->getAliasName());
+        return new ColumnField('subscriptionLogId', 'SubscriptionLog', 'subscriptionlog', 'subscriptionlogid', $this->getAliasName());
     }
     public function subscriptionId() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'subscriptionid', $this->getAliasName());
+        return new ColumnField('subscriptionId', 'SubscriptionLog', 'subscriptionlog', 'subscriptionid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'SubscriptionLog', 'subscriptionlog', 'userid', $this->getAliasName());
     }
     public function pUserGroupId() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'pusergroupid', $this->getAliasName());
+        return new ColumnField('pUserGroupId', 'SubscriptionLog', 'subscriptionlog', 'pusergroupid', $this->getAliasName());
     }
     public function status() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'status', $this->getAliasName());
+        return new ColumnField('status', 'SubscriptionLog', 'subscriptionlog', 'status', $this->getAliasName());
     }
     public function regDate() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'regdate', $this->getAliasName());
+        return new ColumnField('regDate', 'SubscriptionLog', 'subscriptionlog', 'regdate', $this->getAliasName());
     }
     public function expiryDate() : ColumnField
     {
-        return new ColumnField('subscriptionlog', 'expirydate', $this->getAliasName());
+        return new ColumnField('expiryDate', 'SubscriptionLog', 'subscriptionlog', 'expirydate', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -52,6 +52,14 @@ class SubscriptionLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['subscriptionlogid', 'subscriptionid', 'userid', 'pusergroupid', 'status', 'regdate', 'expirydate'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscriptionlogid'];
     }
     
     public function __listNullableColumns() : array

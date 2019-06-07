@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedStatisticLogRecord implements Record {
     
     /** @var $id int */
-    private $id;
+    protected $id;
     
     /** @var $IP string */
-    private $IP;
+    protected $IP;
     
     /** @var $loggedInSince int */
-    private $loggedInSince;
+    protected $loggedInSince;
     
     /** @var $browserStamp string */
-    private $browserStamp;
+    protected $browserStamp;
     
     public function hasId(): bool
     {

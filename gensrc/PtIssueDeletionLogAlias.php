@@ -17,27 +17,27 @@ class PtIssueDeletionLogAlias extends TableAlias {
    
     public function primaryId() : ColumnField
     {
-        return new ColumnField('pt_issuedeletionlog', 'primaryid', $this->getAliasName());
+        return new ColumnField('primaryId', 'PtIssueDeletionLog', 'pt_issuedeletionlog', 'primaryid', $this->getAliasName());
     }
     public function type() : ColumnField
     {
-        return new ColumnField('pt_issuedeletionlog', 'type', $this->getAliasName());
+        return new ColumnField('type', 'PtIssueDeletionLog', 'pt_issuedeletionlog', 'type', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pt_issuedeletionlog', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PtIssueDeletionLog', 'pt_issuedeletionlog', 'userid', $this->getAliasName());
     }
     public function userName() : ColumnField
     {
-        return new ColumnField('pt_issuedeletionlog', 'username', $this->getAliasName());
+        return new ColumnField('userName', 'PtIssueDeletionLog', 'pt_issuedeletionlog', 'username', $this->getAliasName());
     }
     public function reason() : ColumnField
     {
-        return new ColumnField('pt_issuedeletionlog', 'reason', $this->getAliasName());
+        return new ColumnField('reason', 'PtIssueDeletionLog', 'pt_issuedeletionlog', 'reason', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuedeletionlog', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PtIssueDeletionLog', 'pt_issuedeletionlog', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class PtIssueDeletionLogAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['primaryid', 'type', 'userid', 'username', 'reason', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['primaryid', 'type'];
     }
     
     public function __listNullableColumns() : array

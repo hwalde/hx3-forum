@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedPhraseTypeRecord implements Record {
     
     /** @var $fieldName string */
-    private $fieldName;
+    protected $fieldName;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $editRows int */
-    private $editRows;
+    protected $editRows;
     
     /** @var $product string */
-    private $product;
+    protected $product;
     
     /** @var $special int */
-    private $special;
+    protected $special;
     
     public function hasFieldName(): bool
     {

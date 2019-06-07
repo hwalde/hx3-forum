@@ -9,18 +9,19 @@
  */
 namespace generated;
 
-use POOQ\Record;
+use POOQ\AbstractUpdateableRecord;
+use POOQ\UpdateableRecord;
 
-class GeneratedPasswordHistoryRecord implements Record {
+class GeneratedPasswordHistoryRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $password string */
-    private $password;
+    protected $password;
     
     /** @var $passwordDate \DateTime */
-    private $passwordDate;
+    protected $passwordDate;
     
     public function hasUserId(): bool
     {

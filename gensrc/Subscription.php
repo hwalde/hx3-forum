@@ -49,39 +49,39 @@ class Subscription implements Table {
     
     public static function subscriptionId() : ColumnField
     {
-        return new ColumnField('subscription', 'subscriptionid');
+        return new ColumnField('subscriptionId', 'Subscription', 'subscription', 'subscriptionid');
     }
     public static function cost() : ColumnField
     {
-        return new ColumnField('subscription', 'cost');
+        return new ColumnField('cost', 'Subscription', 'subscription', 'cost');
     }
     public static function forums() : ColumnField
     {
-        return new ColumnField('subscription', 'forums');
+        return new ColumnField('forums', 'Subscription', 'subscription', 'forums');
     }
     public static function nUserGroupId() : ColumnField
     {
-        return new ColumnField('subscription', 'nusergroupid');
+        return new ColumnField('nUserGroupId', 'Subscription', 'subscription', 'nusergroupid');
     }
     public static function memberGroupIds() : ColumnField
     {
-        return new ColumnField('subscription', 'membergroupids');
+        return new ColumnField('memberGroupIds', 'Subscription', 'subscription', 'membergroupids');
     }
     public static function active() : ColumnField
     {
-        return new ColumnField('subscription', 'active');
+        return new ColumnField('active', 'Subscription', 'subscription', 'active');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('subscription', 'displayorder');
+        return new ColumnField('displayOrder', 'Subscription', 'subscription', 'displayorder');
     }
     public static function options() : ColumnField
     {
-        return new ColumnField('subscription', 'options');
+        return new ColumnField('options', 'Subscription', 'subscription', 'options');
     }
     public static function adminOptions() : ColumnField
     {
-        return new ColumnField('subscription', 'adminoptions');
+        return new ColumnField('adminOptions', 'Subscription', 'subscription', 'adminoptions');
     }
 
     public function getTableName(): string
@@ -92,6 +92,14 @@ class Subscription implements Table {
     public function __listColumns() : array
     {
         return ['subscriptionid', 'cost', 'forums', 'nusergroupid', 'membergroupids', 'active', 'displayorder', 'options', 'adminoptions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscriptionid'];
     }
     
     public function __listNullableColumns() : array
@@ -128,5 +136,4 @@ class Subscription implements Table {
 			'adminoptions' => 'adminOptions'
 		];
     }
-
 }

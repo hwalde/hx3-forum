@@ -45,23 +45,23 @@ class PtProjectType implements Table {
     
     public static function projectId() : ColumnField
     {
-        return new ColumnField('pt_projecttype', 'projectid');
+        return new ColumnField('projectId', 'PtProjectType', 'pt_projecttype', 'projectid');
     }
     public static function issueTypeId() : ColumnField
     {
-        return new ColumnField('pt_projecttype', 'issuetypeid');
+        return new ColumnField('issueTypeId', 'PtProjectType', 'pt_projecttype', 'issuetypeid');
     }
     public static function startStatusId() : ColumnField
     {
-        return new ColumnField('pt_projecttype', 'startstatusid');
+        return new ColumnField('startStatusId', 'PtProjectType', 'pt_projecttype', 'startstatusid');
     }
     public static function issueCount() : ColumnField
     {
-        return new ColumnField('pt_projecttype', 'issuecount');
+        return new ColumnField('issueCount', 'PtProjectType', 'pt_projecttype', 'issuecount');
     }
     public static function lastActivity() : ColumnField
     {
-        return new ColumnField('pt_projecttype', 'lastactivity');
+        return new ColumnField('lastActivity', 'PtProjectType', 'pt_projecttype', 'lastactivity');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class PtProjectType implements Table {
     public function __listColumns() : array
     {
         return ['projectid', 'issuetypeid', 'startstatusid', 'issuecount', 'lastactivity'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['projectid', 'issuetypeid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class PtProjectType implements Table {
 			'lastactivity' => 'lastActivity'
 		];
     }
-
 }

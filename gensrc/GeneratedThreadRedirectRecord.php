@@ -14,10 +14,10 @@ use POOQ\Record;
 class GeneratedThreadRedirectRecord implements Record {
     
     /** @var $threadId int */
-    private $threadId;
+    protected $threadId;
     
     /** @var $expires int */
-    private $expires;
+    protected $expires;
     
     public function hasThreadId(): bool
     {

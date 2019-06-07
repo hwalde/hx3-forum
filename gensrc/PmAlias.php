@@ -17,23 +17,23 @@ class PmAlias extends TableAlias {
    
     public function pmId() : ColumnField
     {
-        return new ColumnField('pm', 'pmid', $this->getAliasName());
+        return new ColumnField('pmId', 'Pm', 'pm', 'pmid', $this->getAliasName());
     }
     public function pmTextId() : ColumnField
     {
-        return new ColumnField('pm', 'pmtextid', $this->getAliasName());
+        return new ColumnField('pmTextId', 'Pm', 'pm', 'pmtextid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pm', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'Pm', 'pm', 'userid', $this->getAliasName());
     }
     public function folderId() : ColumnField
     {
-        return new ColumnField('pm', 'folderid', $this->getAliasName());
+        return new ColumnField('folderId', 'Pm', 'pm', 'folderid', $this->getAliasName());
     }
     public function messageRead() : ColumnField
     {
-        return new ColumnField('pm', 'messageread', $this->getAliasName());
+        return new ColumnField('messageRead', 'Pm', 'pm', 'messageread', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class PmAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['pmid', 'pmtextid', 'userid', 'folderid', 'messageread'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pmid'];
     }
     
     public function __listNullableColumns() : array

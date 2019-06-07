@@ -43,15 +43,15 @@ class PasswordHistory implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('passwordhistory', 'userid');
+        return new ColumnField('userId', 'PasswordHistory', 'passwordhistory', 'userid');
     }
     public static function password() : ColumnField
     {
-        return new ColumnField('passwordhistory', 'password');
+        return new ColumnField('password', 'PasswordHistory', 'passwordhistory', 'password');
     }
     public static function passwordDate() : ColumnField
     {
-        return new ColumnField('passwordhistory', 'passworddate');
+        return new ColumnField('passwordDate', 'PasswordHistory', 'passwordhistory', 'passworddate');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class PasswordHistory implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'password', 'passworddate'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class PasswordHistory implements Table {
 			'passworddate' => 'passwordDate'
 		];
     }
-
 }

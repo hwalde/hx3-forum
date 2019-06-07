@@ -67,111 +67,111 @@ class PtIssue implements Table {
     
     public static function issueId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'issueid');
+        return new ColumnField('issueId', 'PtIssue', 'pt_issue', 'issueid');
     }
     public static function projectId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'projectid');
+        return new ColumnField('projectId', 'PtIssue', 'pt_issue', 'projectid');
     }
     public static function issueStatusId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'issuestatusid');
+        return new ColumnField('issueStatusId', 'PtIssue', 'pt_issue', 'issuestatusid');
     }
     public static function issueTypeId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'issuetypeid');
+        return new ColumnField('issueTypeId', 'PtIssue', 'pt_issue', 'issuetypeid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('pt_issue', 'title');
+        return new ColumnField('title', 'PtIssue', 'pt_issue', 'title');
     }
     public static function summary() : ColumnField
     {
-        return new ColumnField('pt_issue', 'summary');
+        return new ColumnField('summary', 'PtIssue', 'pt_issue', 'summary');
     }
     public static function submitUserId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'submituserid');
+        return new ColumnField('submitUserId', 'PtIssue', 'pt_issue', 'submituserid');
     }
     public static function submitUserName() : ColumnField
     {
-        return new ColumnField('pt_issue', 'submitusername');
+        return new ColumnField('submitUserName', 'PtIssue', 'pt_issue', 'submitusername');
     }
     public static function submitDate() : ColumnField
     {
-        return new ColumnField('pt_issue', 'submitdate');
+        return new ColumnField('submitDate', 'PtIssue', 'pt_issue', 'submitdate');
     }
     public static function appliesVersionId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'appliesversionid');
+        return new ColumnField('appliesVersionId', 'PtIssue', 'pt_issue', 'appliesversionid');
     }
     public static function isAddressed() : ColumnField
     {
-        return new ColumnField('pt_issue', 'isaddressed');
+        return new ColumnField('isAddressed', 'PtIssue', 'pt_issue', 'isaddressed');
     }
     public static function addressedVersionId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'addressedversionid');
+        return new ColumnField('addressedVersionId', 'PtIssue', 'pt_issue', 'addressedversionid');
     }
     public static function priority() : ColumnField
     {
-        return new ColumnField('pt_issue', 'priority');
+        return new ColumnField('priority', 'PtIssue', 'pt_issue', 'priority');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('pt_issue', 'visible');
+        return new ColumnField('visible', 'PtIssue', 'pt_issue', 'visible');
     }
     public static function lastPost() : ColumnField
     {
-        return new ColumnField('pt_issue', 'lastpost');
+        return new ColumnField('lastPost', 'PtIssue', 'pt_issue', 'lastpost');
     }
     public static function lastActivity() : ColumnField
     {
-        return new ColumnField('pt_issue', 'lastactivity');
+        return new ColumnField('lastActivity', 'PtIssue', 'pt_issue', 'lastactivity');
     }
     public static function lastPostUserId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'lastpostuserid');
+        return new ColumnField('lastPostUserId', 'PtIssue', 'pt_issue', 'lastpostuserid');
     }
     public static function lastPostUserName() : ColumnField
     {
-        return new ColumnField('pt_issue', 'lastpostusername');
+        return new ColumnField('lastPostUserName', 'PtIssue', 'pt_issue', 'lastpostusername');
     }
     public static function firstNoteId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'firstnoteid');
+        return new ColumnField('firstNoteId', 'PtIssue', 'pt_issue', 'firstnoteid');
     }
     public static function lastNoteId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'lastnoteid');
+        return new ColumnField('lastNoteId', 'PtIssue', 'pt_issue', 'lastnoteid');
     }
     public static function attachCount() : ColumnField
     {
-        return new ColumnField('pt_issue', 'attachcount');
+        return new ColumnField('attachCount', 'PtIssue', 'pt_issue', 'attachcount');
     }
     public static function pendingPetitions() : ColumnField
     {
-        return new ColumnField('pt_issue', 'pendingpetitions');
+        return new ColumnField('pendingPetitions', 'PtIssue', 'pt_issue', 'pendingpetitions');
     }
     public static function replyCount() : ColumnField
     {
-        return new ColumnField('pt_issue', 'replycount');
+        return new ColumnField('replyCount', 'PtIssue', 'pt_issue', 'replycount');
     }
     public static function votePositive() : ColumnField
     {
-        return new ColumnField('pt_issue', 'votepositive');
+        return new ColumnField('votePositive', 'PtIssue', 'pt_issue', 'votepositive');
     }
     public static function voteNegative() : ColumnField
     {
-        return new ColumnField('pt_issue', 'votenegative');
+        return new ColumnField('voteNegative', 'PtIssue', 'pt_issue', 'votenegative');
     }
     public static function projectCategoryId() : ColumnField
     {
-        return new ColumnField('pt_issue', 'projectcategoryid');
+        return new ColumnField('projectCategoryId', 'PtIssue', 'pt_issue', 'projectcategoryid');
     }
     public static function assignedUsers() : ColumnField
     {
-        return new ColumnField('pt_issue', 'assignedusers');
+        return new ColumnField('assignedUsers', 'PtIssue', 'pt_issue', 'assignedusers');
     }
 
     public function getTableName(): string
@@ -182,6 +182,14 @@ class PtIssue implements Table {
     public function __listColumns() : array
     {
         return ['issueid', 'projectid', 'issuestatusid', 'issuetypeid', 'title', 'summary', 'submituserid', 'submitusername', 'submitdate', 'appliesversionid', 'isaddressed', 'addressedversionid', 'priority', 'visible', 'lastpost', 'lastactivity', 'lastpostuserid', 'lastpostusername', 'firstnoteid', 'lastnoteid', 'attachcount', 'pendingpetitions', 'replycount', 'votepositive', 'votenegative', 'projectcategoryid', 'assignedusers'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issueid'];
     }
     
     public function __listNullableColumns() : array
@@ -254,5 +262,4 @@ class PtIssue implements Table {
 			'assignedusers' => 'assignedUsers'
 		];
     }
-
 }

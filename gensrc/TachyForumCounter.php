@@ -44,19 +44,19 @@ class TachyForumCounter implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('tachyforumcounter', 'userid');
+        return new ColumnField('userId', 'TachyForumCounter', 'tachyforumcounter', 'userid');
     }
     public static function forumId() : ColumnField
     {
-        return new ColumnField('tachyforumcounter', 'forumid');
+        return new ColumnField('forumId', 'TachyForumCounter', 'tachyforumcounter', 'forumid');
     }
     public static function threadCount() : ColumnField
     {
-        return new ColumnField('tachyforumcounter', 'threadcount');
+        return new ColumnField('threadCount', 'TachyForumCounter', 'tachyforumcounter', 'threadcount');
     }
     public static function replyCount() : ColumnField
     {
-        return new ColumnField('tachyforumcounter', 'replycount');
+        return new ColumnField('replyCount', 'TachyForumCounter', 'tachyforumcounter', 'replycount');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class TachyForumCounter implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'forumid', 'threadcount', 'replycount'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'forumid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class TachyForumCounter implements Table {
 			'replycount' => 'replyCount'
 		];
     }
-
 }

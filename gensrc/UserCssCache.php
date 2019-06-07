@@ -43,15 +43,15 @@ class UserCssCache implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('usercsscache', 'userid');
+        return new ColumnField('userId', 'UserCssCache', 'usercsscache', 'userid');
     }
     public static function cachedCss() : ColumnField
     {
-        return new ColumnField('usercsscache', 'cachedcss');
+        return new ColumnField('cachedCss', 'UserCssCache', 'usercsscache', 'cachedcss');
     }
     public static function buildPermissions() : ColumnField
     {
-        return new ColumnField('usercsscache', 'buildpermissions');
+        return new ColumnField('buildPermissions', 'UserCssCache', 'usercsscache', 'buildpermissions');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class UserCssCache implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'cachedcss', 'buildpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class UserCssCache implements Table {
 			'buildpermissions' => 'buildPermissions'
 		];
     }
-
 }

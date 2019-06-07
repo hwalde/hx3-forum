@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedAdminHelpRecord implements Record {
     
     /** @var $adminHelpId int */
-    private $adminHelpId;
+    protected $adminHelpId;
     
     /** @var $script string */
-    private $script;
+    protected $script;
     
     /** @var $action string */
-    private $action;
+    protected $action;
     
     /** @var $optionName string */
-    private $optionName;
+    protected $optionName;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     /** @var $volatile int */
-    private $volatile;
+    protected $volatile;
     
     /** @var $product string */
-    private $product;
+    protected $product;
     
     public function hasAdminHelpId(): bool
     {

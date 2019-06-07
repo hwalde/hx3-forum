@@ -45,23 +45,23 @@ class CalendarModerator implements Table {
     
     public static function calendarModeratorId() : ColumnField
     {
-        return new ColumnField('calendarmoderator', 'calendarmoderatorid');
+        return new ColumnField('calendarModeratorId', 'CalendarModerator', 'calendarmoderator', 'calendarmoderatorid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('calendarmoderator', 'userid');
+        return new ColumnField('userId', 'CalendarModerator', 'calendarmoderator', 'userid');
     }
     public static function calendarId() : ColumnField
     {
-        return new ColumnField('calendarmoderator', 'calendarid');
+        return new ColumnField('calendarId', 'CalendarModerator', 'calendarmoderator', 'calendarid');
     }
     public static function newEventEmail() : ColumnField
     {
-        return new ColumnField('calendarmoderator', 'neweventemail');
+        return new ColumnField('newEventEmail', 'CalendarModerator', 'calendarmoderator', 'neweventemail');
     }
     public static function permissions() : ColumnField
     {
-        return new ColumnField('calendarmoderator', 'permissions');
+        return new ColumnField('permissions', 'CalendarModerator', 'calendarmoderator', 'permissions');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class CalendarModerator implements Table {
     public function __listColumns() : array
     {
         return ['calendarmoderatorid', 'userid', 'calendarid', 'neweventemail', 'permissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['calendarmoderatorid'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class CalendarModerator implements Table {
 			'permissions' => 'permissions'
 		];
     }
-
 }

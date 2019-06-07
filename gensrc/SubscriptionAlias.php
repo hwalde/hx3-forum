@@ -17,39 +17,39 @@ class SubscriptionAlias extends TableAlias {
    
     public function subscriptionId() : ColumnField
     {
-        return new ColumnField('subscription', 'subscriptionid', $this->getAliasName());
+        return new ColumnField('subscriptionId', 'Subscription', 'subscription', 'subscriptionid', $this->getAliasName());
     }
     public function cost() : ColumnField
     {
-        return new ColumnField('subscription', 'cost', $this->getAliasName());
+        return new ColumnField('cost', 'Subscription', 'subscription', 'cost', $this->getAliasName());
     }
     public function forums() : ColumnField
     {
-        return new ColumnField('subscription', 'forums', $this->getAliasName());
+        return new ColumnField('forums', 'Subscription', 'subscription', 'forums', $this->getAliasName());
     }
     public function nUserGroupId() : ColumnField
     {
-        return new ColumnField('subscription', 'nusergroupid', $this->getAliasName());
+        return new ColumnField('nUserGroupId', 'Subscription', 'subscription', 'nusergroupid', $this->getAliasName());
     }
     public function memberGroupIds() : ColumnField
     {
-        return new ColumnField('subscription', 'membergroupids', $this->getAliasName());
+        return new ColumnField('memberGroupIds', 'Subscription', 'subscription', 'membergroupids', $this->getAliasName());
     }
     public function active() : ColumnField
     {
-        return new ColumnField('subscription', 'active', $this->getAliasName());
+        return new ColumnField('active', 'Subscription', 'subscription', 'active', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('subscription', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'Subscription', 'subscription', 'displayorder', $this->getAliasName());
     }
     public function options() : ColumnField
     {
-        return new ColumnField('subscription', 'options', $this->getAliasName());
+        return new ColumnField('options', 'Subscription', 'subscription', 'options', $this->getAliasName());
     }
     public function adminOptions() : ColumnField
     {
-        return new ColumnField('subscription', 'adminoptions', $this->getAliasName());
+        return new ColumnField('adminOptions', 'Subscription', 'subscription', 'adminoptions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -60,6 +60,14 @@ class SubscriptionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['subscriptionid', 'cost', 'forums', 'nusergroupid', 'membergroupids', 'active', 'displayorder', 'options', 'adminoptions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['subscriptionid'];
     }
     
     public function __listNullableColumns() : array

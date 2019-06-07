@@ -44,19 +44,19 @@ class TagThread implements Table {
     
     public static function tagId() : ColumnField
     {
-        return new ColumnField('tagthread', 'tagid');
+        return new ColumnField('tagId', 'TagThread', 'tagthread', 'tagid');
     }
     public static function threadId() : ColumnField
     {
-        return new ColumnField('tagthread', 'threadid');
+        return new ColumnField('threadId', 'TagThread', 'tagthread', 'threadid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('tagthread', 'userid');
+        return new ColumnField('userId', 'TagThread', 'tagthread', 'userid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('tagthread', 'dateline');
+        return new ColumnField('dateLine', 'TagThread', 'tagthread', 'dateline');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class TagThread implements Table {
     public function __listColumns() : array
     {
         return ['tagid', 'threadid', 'userid', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['tagid', 'threadid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class TagThread implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

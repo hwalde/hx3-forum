@@ -52,51 +52,51 @@ class Setting implements Table {
     
     public static function varName() : ColumnField
     {
-        return new ColumnField('setting', 'varname');
+        return new ColumnField('varName', 'Setting', 'setting', 'varname');
     }
     public static function groupTitle() : ColumnField
     {
-        return new ColumnField('setting', 'grouptitle');
+        return new ColumnField('groupTitle', 'Setting', 'setting', 'grouptitle');
     }
     public static function value() : ColumnField
     {
-        return new ColumnField('setting', 'value');
+        return new ColumnField('value', 'Setting', 'setting', 'value');
     }
     public static function defaultValue() : ColumnField
     {
-        return new ColumnField('setting', 'defaultvalue');
+        return new ColumnField('defaultValue', 'Setting', 'setting', 'defaultvalue');
     }
     public static function optionCode() : ColumnField
     {
-        return new ColumnField('setting', 'optioncode');
+        return new ColumnField('optionCode', 'Setting', 'setting', 'optioncode');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('setting', 'displayorder');
+        return new ColumnField('displayOrder', 'Setting', 'setting', 'displayorder');
     }
     public static function advanced() : ColumnField
     {
-        return new ColumnField('setting', 'advanced');
+        return new ColumnField('advanced', 'Setting', 'setting', 'advanced');
     }
     public static function volatile() : ColumnField
     {
-        return new ColumnField('setting', 'volatile');
+        return new ColumnField('volatile', 'Setting', 'setting', 'volatile');
     }
     public static function product() : ColumnField
     {
-        return new ColumnField('setting', 'product');
+        return new ColumnField('product', 'Setting', 'setting', 'product');
     }
     public static function dataType() : ColumnField
     {
-        return new ColumnField('setting', 'datatype');
+        return new ColumnField('dataType', 'Setting', 'setting', 'datatype');
     }
     public static function blackList() : ColumnField
     {
-        return new ColumnField('setting', 'blacklist');
+        return new ColumnField('blackList', 'Setting', 'setting', 'blacklist');
     }
     public static function validationCode() : ColumnField
     {
-        return new ColumnField('setting', 'validationcode');
+        return new ColumnField('validationCode', 'Setting', 'setting', 'validationcode');
     }
 
     public function getTableName(): string
@@ -107,6 +107,14 @@ class Setting implements Table {
     public function __listColumns() : array
     {
         return ['varname', 'grouptitle', 'value', 'defaultvalue', 'optioncode', 'displayorder', 'advanced', 'volatile', 'product', 'datatype', 'blacklist', 'validationcode'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['varname'];
     }
     
     public function __listNullableColumns() : array
@@ -149,5 +157,4 @@ class Setting implements Table {
 			'validationcode' => 'validationCode'
 		];
     }
-
 }

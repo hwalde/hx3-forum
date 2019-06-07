@@ -43,15 +43,15 @@ class PtIssueType implements Table {
     
     public static function issueTypeId() : ColumnField
     {
-        return new ColumnField('pt_issuetype', 'issuetypeid');
+        return new ColumnField('issueTypeId', 'PtIssueType', 'pt_issuetype', 'issuetypeid');
     }
     public static function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_issuetype', 'displayorder');
+        return new ColumnField('displayOrder', 'PtIssueType', 'pt_issuetype', 'displayorder');
     }
     public static function iconFile() : ColumnField
     {
-        return new ColumnField('pt_issuetype', 'iconfile');
+        return new ColumnField('iconFile', 'PtIssueType', 'pt_issuetype', 'iconfile');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class PtIssueType implements Table {
     public function __listColumns() : array
     {
         return ['issuetypeid', 'displayorder', 'iconfile'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuetypeid'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class PtIssueType implements Table {
 			'iconfile' => 'iconFile'
 		];
     }
-
 }

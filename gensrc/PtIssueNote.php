@@ -52,51 +52,51 @@ class PtIssueNote implements Table {
     
     public static function issueNoteId() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'issuenoteid');
+        return new ColumnField('issueNoteId', 'PtIssueNote', 'pt_issuenote', 'issuenoteid');
     }
     public static function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'issueid');
+        return new ColumnField('issueId', 'PtIssueNote', 'pt_issuenote', 'issueid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'dateline');
+        return new ColumnField('dateLine', 'PtIssueNote', 'pt_issuenote', 'dateline');
     }
     public static function pageText() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'pagetext');
+        return new ColumnField('pageText', 'PtIssueNote', 'pt_issuenote', 'pagetext');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'userid');
+        return new ColumnField('userId', 'PtIssueNote', 'pt_issuenote', 'userid');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'username');
+        return new ColumnField('userName', 'PtIssueNote', 'pt_issuenote', 'username');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'type');
+        return new ColumnField('type', 'PtIssueNote', 'pt_issuenote', 'type');
     }
     public static function isPending() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'ispending');
+        return new ColumnField('isPending', 'PtIssueNote', 'pt_issuenote', 'ispending');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'visible');
+        return new ColumnField('visible', 'PtIssueNote', 'pt_issuenote', 'visible');
     }
     public static function lastEditDate() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'lasteditdate');
+        return new ColumnField('lastEditDate', 'PtIssueNote', 'pt_issuenote', 'lasteditdate');
     }
     public static function isFirstNote() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'isfirstnote');
+        return new ColumnField('isFirstNote', 'PtIssueNote', 'pt_issuenote', 'isfirstnote');
     }
     public static function ipAddress() : ColumnField
     {
-        return new ColumnField('pt_issuenote', 'ipaddress');
+        return new ColumnField('ipAddress', 'PtIssueNote', 'pt_issuenote', 'ipaddress');
     }
 
     public function getTableName(): string
@@ -107,6 +107,14 @@ class PtIssueNote implements Table {
     public function __listColumns() : array
     {
         return ['issuenoteid', 'issueid', 'dateline', 'pagetext', 'userid', 'username', 'type', 'ispending', 'visible', 'lasteditdate', 'isfirstnote', 'ipaddress'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuenoteid'];
     }
     
     public function __listNullableColumns() : array
@@ -149,5 +157,4 @@ class PtIssueNote implements Table {
 			'ipaddress' => 'ipAddress'
 		];
     }
-
 }

@@ -17,67 +17,67 @@ class VbSeoLinkBackAlias extends TableAlias {
    
     public function tId() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_id', $this->getAliasName());
+        return new ColumnField('tId', 'VbSeoLinkBack', 'vbseo_linkback', 't_id', $this->getAliasName());
     }
     public function tTime() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_time', $this->getAliasName());
+        return new ColumnField('tTime', 'VbSeoLinkBack', 'vbseo_linkback', 't_time', $this->getAliasName());
     }
     public function tSrcUrl() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_src_url', $this->getAliasName());
+        return new ColumnField('tSrcUrl', 'VbSeoLinkBack', 'vbseo_linkback', 't_src_url', $this->getAliasName());
     }
     public function tDestUrl() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_dest_url', $this->getAliasName());
+        return new ColumnField('tDestUrl', 'VbSeoLinkBack', 'vbseo_linkback', 't_dest_url', $this->getAliasName());
     }
     public function tType() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_type', $this->getAliasName());
+        return new ColumnField('tType', 'VbSeoLinkBack', 'vbseo_linkback', 't_type', $this->getAliasName());
     }
     public function tPostId() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_postid', $this->getAliasName());
+        return new ColumnField('tPostId', 'VbSeoLinkBack', 'vbseo_linkback', 't_postid', $this->getAliasName());
     }
     public function tPostCount() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_postcount', $this->getAliasName());
+        return new ColumnField('tPostCount', 'VbSeoLinkBack', 'vbseo_linkback', 't_postcount', $this->getAliasName());
     }
     public function tThreadId() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_threadid', $this->getAliasName());
+        return new ColumnField('tThreadId', 'VbSeoLinkBack', 'vbseo_linkback', 't_threadid', $this->getAliasName());
     }
     public function tPage() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_page', $this->getAliasName());
+        return new ColumnField('tPage', 'VbSeoLinkBack', 'vbseo_linkback', 't_page', $this->getAliasName());
     }
     public function tTitle() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_title', $this->getAliasName());
+        return new ColumnField('tTitle', 'VbSeoLinkBack', 'vbseo_linkback', 't_title', $this->getAliasName());
     }
     public function tText() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_text', $this->getAliasName());
+        return new ColumnField('tText', 'VbSeoLinkBack', 'vbseo_linkback', 't_text', $this->getAliasName());
     }
     public function tApprove() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_approve', $this->getAliasName());
+        return new ColumnField('tApprove', 'VbSeoLinkBack', 'vbseo_linkback', 't_approve', $this->getAliasName());
     }
     public function tWait() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_wait', $this->getAliasName());
+        return new ColumnField('tWait', 'VbSeoLinkBack', 'vbseo_linkback', 't_wait', $this->getAliasName());
     }
     public function tIncoming() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_incoming', $this->getAliasName());
+        return new ColumnField('tIncoming', 'VbSeoLinkBack', 'vbseo_linkback', 't_incoming', $this->getAliasName());
     }
     public function tDeleted() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_deleted', $this->getAliasName());
+        return new ColumnField('tDeleted', 'VbSeoLinkBack', 'vbseo_linkback', 't_deleted', $this->getAliasName());
     }
     public function tHits() : ColumnField
     {
-        return new ColumnField('vbseo_linkback', 't_hits', $this->getAliasName());
+        return new ColumnField('tHits', 'VbSeoLinkBack', 'vbseo_linkback', 't_hits', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -88,6 +88,14 @@ class VbSeoLinkBackAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['t_id', 't_time', 't_src_url', 't_dest_url', 't_type', 't_postid', 't_postcount', 't_threadid', 't_page', 't_title', 't_text', 't_approve', 't_wait', 't_incoming', 't_deleted', 't_hits'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['t_id'];
     }
     
     public function __listNullableColumns() : array

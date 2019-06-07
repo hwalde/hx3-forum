@@ -14,31 +14,31 @@ use POOQ\Record;
 class GeneratedAnnouncementRecord implements Record {
     
     /** @var $announcementId int */
-    private $announcementId;
+    protected $announcementId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $startDate int */
-    private $startDate;
+    protected $startDate;
     
     /** @var $endDate int */
-    private $endDate;
+    protected $endDate;
     
     /** @var $pageText string */
-    private $pageText;
+    protected $pageText;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     /** @var $views int */
-    private $views;
+    protected $views;
     
     /** @var $announcementOptions int */
-    private $announcementOptions;
+    protected $announcementOptions;
     
     public function hasAnnouncementId(): bool
     {

@@ -51,47 +51,47 @@ class CustomAvatar implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('customavatar', 'userid');
+        return new ColumnField('userId', 'CustomAvatar', 'customavatar', 'userid');
     }
     public static function fileData() : ColumnField
     {
-        return new ColumnField('customavatar', 'filedata');
+        return new ColumnField('fileData', 'CustomAvatar', 'customavatar', 'filedata');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('customavatar', 'dateline');
+        return new ColumnField('dateLine', 'CustomAvatar', 'customavatar', 'dateline');
     }
     public static function fileName() : ColumnField
     {
-        return new ColumnField('customavatar', 'filename');
+        return new ColumnField('fileName', 'CustomAvatar', 'customavatar', 'filename');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('customavatar', 'visible');
+        return new ColumnField('visible', 'CustomAvatar', 'customavatar', 'visible');
     }
     public static function fileSize() : ColumnField
     {
-        return new ColumnField('customavatar', 'filesize');
+        return new ColumnField('fileSize', 'CustomAvatar', 'customavatar', 'filesize');
     }
     public static function width() : ColumnField
     {
-        return new ColumnField('customavatar', 'width');
+        return new ColumnField('width', 'CustomAvatar', 'customavatar', 'width');
     }
     public static function height() : ColumnField
     {
-        return new ColumnField('customavatar', 'height');
+        return new ColumnField('height', 'CustomAvatar', 'customavatar', 'height');
     }
     public static function fileDataThumb() : ColumnField
     {
-        return new ColumnField('customavatar', 'filedata_thumb');
+        return new ColumnField('fileDataThumb', 'CustomAvatar', 'customavatar', 'filedata_thumb');
     }
     public static function widthThumb() : ColumnField
     {
-        return new ColumnField('customavatar', 'width_thumb');
+        return new ColumnField('widthThumb', 'CustomAvatar', 'customavatar', 'width_thumb');
     }
     public static function heightThumb() : ColumnField
     {
-        return new ColumnField('customavatar', 'height_thumb');
+        return new ColumnField('heightThumb', 'CustomAvatar', 'customavatar', 'height_thumb');
     }
 
     public function getTableName(): string
@@ -102,6 +102,14 @@ class CustomAvatar implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'filedata', 'dateline', 'filename', 'visible', 'filesize', 'width', 'height', 'filedata_thumb', 'width_thumb', 'height_thumb'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array
@@ -142,5 +150,4 @@ class CustomAvatar implements Table {
 			'height_thumb' => 'heightThumb'
 		];
     }
-
 }

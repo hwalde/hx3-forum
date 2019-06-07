@@ -47,31 +47,31 @@ class PaymentApi implements Table {
     
     public static function paymentApiId() : ColumnField
     {
-        return new ColumnField('paymentapi', 'paymentapiid');
+        return new ColumnField('paymentApiId', 'PaymentApi', 'paymentapi', 'paymentapiid');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('paymentapi', 'title');
+        return new ColumnField('title', 'PaymentApi', 'paymentapi', 'title');
     }
     public static function currency() : ColumnField
     {
-        return new ColumnField('paymentapi', 'currency');
+        return new ColumnField('currency', 'PaymentApi', 'paymentapi', 'currency');
     }
     public static function recurring() : ColumnField
     {
-        return new ColumnField('paymentapi', 'recurring');
+        return new ColumnField('recurring', 'PaymentApi', 'paymentapi', 'recurring');
     }
     public static function className() : ColumnField
     {
-        return new ColumnField('paymentapi', 'classname');
+        return new ColumnField('className', 'PaymentApi', 'paymentapi', 'classname');
     }
     public static function active() : ColumnField
     {
-        return new ColumnField('paymentapi', 'active');
+        return new ColumnField('active', 'PaymentApi', 'paymentapi', 'active');
     }
     public static function settings() : ColumnField
     {
-        return new ColumnField('paymentapi', 'settings');
+        return new ColumnField('settings', 'PaymentApi', 'paymentapi', 'settings');
     }
 
     public function getTableName(): string
@@ -82,6 +82,14 @@ class PaymentApi implements Table {
     public function __listColumns() : array
     {
         return ['paymentapiid', 'title', 'currency', 'recurring', 'classname', 'active', 'settings'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['paymentapiid'];
     }
     
     public function __listNullableColumns() : array
@@ -114,5 +122,4 @@ class PaymentApi implements Table {
 			'settings' => 'settings'
 		];
     }
-
 }

@@ -17,15 +17,15 @@ class HvQuestionAlias extends TableAlias {
    
     public function questionId() : ColumnField
     {
-        return new ColumnField('hvquestion', 'questionid', $this->getAliasName());
+        return new ColumnField('questionId', 'HvQuestion', 'hvquestion', 'questionid', $this->getAliasName());
     }
     public function regex() : ColumnField
     {
-        return new ColumnField('hvquestion', 'regex', $this->getAliasName());
+        return new ColumnField('regex', 'HvQuestion', 'hvquestion', 'regex', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('hvquestion', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'HvQuestion', 'hvquestion', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class HvQuestionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['questionid', 'regex', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['questionid'];
     }
     
     public function __listNullableColumns() : array

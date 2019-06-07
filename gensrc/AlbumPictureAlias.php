@@ -17,15 +17,15 @@ class AlbumPictureAlias extends TableAlias {
    
     public function albumId() : ColumnField
     {
-        return new ColumnField('albumpicture', 'albumid', $this->getAliasName());
+        return new ColumnField('albumId', 'AlbumPicture', 'albumpicture', 'albumid', $this->getAliasName());
     }
     public function pictureId() : ColumnField
     {
-        return new ColumnField('albumpicture', 'pictureid', $this->getAliasName());
+        return new ColumnField('pictureId', 'AlbumPicture', 'albumpicture', 'pictureid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('albumpicture', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'AlbumPicture', 'albumpicture', 'dateline', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class AlbumPictureAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['albumid', 'pictureid', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['albumid', 'pictureid'];
     }
     
     public function __listNullableColumns() : array

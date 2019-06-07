@@ -17,23 +17,23 @@ class TachyThreadPostAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('tachythreadpost', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'TachyThreadPost', 'tachythreadpost', 'userid', $this->getAliasName());
     }
     public function threadId() : ColumnField
     {
-        return new ColumnField('tachythreadpost', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'TachyThreadPost', 'tachythreadpost', 'threadid', $this->getAliasName());
     }
     public function lastPost() : ColumnField
     {
-        return new ColumnField('tachythreadpost', 'lastpost', $this->getAliasName());
+        return new ColumnField('lastPost', 'TachyThreadPost', 'tachythreadpost', 'lastpost', $this->getAliasName());
     }
     public function lastPoster() : ColumnField
     {
-        return new ColumnField('tachythreadpost', 'lastposter', $this->getAliasName());
+        return new ColumnField('lastPoster', 'TachyThreadPost', 'tachythreadpost', 'lastposter', $this->getAliasName());
     }
     public function lastPostId() : ColumnField
     {
-        return new ColumnField('tachythreadpost', 'lastpostid', $this->getAliasName());
+        return new ColumnField('lastPostId', 'TachyThreadPost', 'tachythreadpost', 'lastpostid', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class TachyThreadPostAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'threadid', 'lastpost', 'lastposter', 'lastpostid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'threadid'];
     }
     
     public function __listNullableColumns() : array

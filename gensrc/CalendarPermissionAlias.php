@@ -17,19 +17,19 @@ class CalendarPermissionAlias extends TableAlias {
    
     public function calendarPermissionId() : ColumnField
     {
-        return new ColumnField('calendarpermission', 'calendarpermissionid', $this->getAliasName());
+        return new ColumnField('calendarPermissionId', 'CalendarPermission', 'calendarpermission', 'calendarpermissionid', $this->getAliasName());
     }
     public function calendarId() : ColumnField
     {
-        return new ColumnField('calendarpermission', 'calendarid', $this->getAliasName());
+        return new ColumnField('calendarId', 'CalendarPermission', 'calendarpermission', 'calendarid', $this->getAliasName());
     }
     public function userGroupId() : ColumnField
     {
-        return new ColumnField('calendarpermission', 'usergroupid', $this->getAliasName());
+        return new ColumnField('userGroupId', 'CalendarPermission', 'calendarpermission', 'usergroupid', $this->getAliasName());
     }
     public function calendarPermissions() : ColumnField
     {
-        return new ColumnField('calendarpermission', 'calendarpermissions', $this->getAliasName());
+        return new ColumnField('calendarPermissions', 'CalendarPermission', 'calendarpermission', 'calendarpermissions', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class CalendarPermissionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['calendarpermissionid', 'calendarid', 'usergroupid', 'calendarpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['calendarpermissionid'];
     }
     
     public function __listNullableColumns() : array

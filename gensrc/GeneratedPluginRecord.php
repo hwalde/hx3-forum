@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedPluginRecord implements Record {
     
     /** @var $pluginId int */
-    private $pluginId;
+    protected $pluginId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $hookName string */
-    private $hookName;
+    protected $hookName;
     
     /** @var $phpCode string */
-    private $phpCode;
+    protected $phpCode;
     
     /** @var $product string */
-    private $product;
+    protected $product;
     
     /** @var $devKey string */
-    private $devKey;
+    protected $devKey;
     
     /** @var $active int */
-    private $active;
+    protected $active;
     
     /** @var $executionOrder int */
-    private $executionOrder;
+    protected $executionOrder;
     
     public function hasPluginId(): bool
     {

@@ -14,28 +14,28 @@ use POOQ\Record;
 class GeneratedCustomProfilePicRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $fileData string */
-    private $fileData;
+    protected $fileData;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $fileName string */
-    private $fileName;
+    protected $fileName;
     
     /** @var $visible int */
-    private $visible;
+    protected $visible;
     
     /** @var $fileSize int */
-    private $fileSize;
+    protected $fileSize;
     
     /** @var $width int */
-    private $width;
+    protected $width;
     
     /** @var $height int */
-    private $height;
+    protected $height;
     
     public function hasUserId(): bool
     {

@@ -51,47 +51,47 @@ class PmText implements Table {
     
     public static function pmTextId() : ColumnField
     {
-        return new ColumnField('pmtext', 'pmtextid');
+        return new ColumnField('pmTextId', 'PmText', 'pmtext', 'pmtextid');
     }
     public static function fromUserId() : ColumnField
     {
-        return new ColumnField('pmtext', 'fromuserid');
+        return new ColumnField('fromUserId', 'PmText', 'pmtext', 'fromuserid');
     }
     public static function fromUserName() : ColumnField
     {
-        return new ColumnField('pmtext', 'fromusername');
+        return new ColumnField('fromUserName', 'PmText', 'pmtext', 'fromusername');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('pmtext', 'title');
+        return new ColumnField('title', 'PmText', 'pmtext', 'title');
     }
     public static function message() : ColumnField
     {
-        return new ColumnField('pmtext', 'message');
+        return new ColumnField('message', 'PmText', 'pmtext', 'message');
     }
     public static function toUserArray() : ColumnField
     {
-        return new ColumnField('pmtext', 'touserarray');
+        return new ColumnField('toUserArray', 'PmText', 'pmtext', 'touserarray');
     }
     public static function iconId() : ColumnField
     {
-        return new ColumnField('pmtext', 'iconid');
+        return new ColumnField('iconId', 'PmText', 'pmtext', 'iconid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('pmtext', 'dateline');
+        return new ColumnField('dateLine', 'PmText', 'pmtext', 'dateline');
     }
     public static function showSignature() : ColumnField
     {
-        return new ColumnField('pmtext', 'showsignature');
+        return new ColumnField('showSignature', 'PmText', 'pmtext', 'showsignature');
     }
     public static function allowSmilie() : ColumnField
     {
-        return new ColumnField('pmtext', 'allowsmilie');
+        return new ColumnField('allowSmilie', 'PmText', 'pmtext', 'allowsmilie');
     }
     public static function importPmId() : ColumnField
     {
-        return new ColumnField('pmtext', 'importpmid');
+        return new ColumnField('importPmId', 'PmText', 'pmtext', 'importpmid');
     }
 
     public function getTableName(): string
@@ -102,6 +102,14 @@ class PmText implements Table {
     public function __listColumns() : array
     {
         return ['pmtextid', 'fromuserid', 'fromusername', 'title', 'message', 'touserarray', 'iconid', 'dateline', 'showsignature', 'allowsmilie', 'importpmid'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['pmtextid'];
     }
     
     public function __listNullableColumns() : array
@@ -142,5 +150,4 @@ class PmText implements Table {
 			'importpmid' => 'importPmId'
 		];
     }
-
 }

@@ -17,15 +17,15 @@ class ThreadReadAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('threadread', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'ThreadRead', 'threadread', 'userid', $this->getAliasName());
     }
     public function threadId() : ColumnField
     {
-        return new ColumnField('threadread', 'threadid', $this->getAliasName());
+        return new ColumnField('threadId', 'ThreadRead', 'threadread', 'threadid', $this->getAliasName());
     }
     public function readTime() : ColumnField
     {
-        return new ColumnField('threadread', 'readtime', $this->getAliasName());
+        return new ColumnField('readTime', 'ThreadRead', 'threadread', 'readtime', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class ThreadReadAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'threadid', 'readtime'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'threadid'];
     }
     
     public function __listNullableColumns() : array

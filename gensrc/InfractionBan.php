@@ -46,27 +46,27 @@ class InfractionBan implements Table {
     
     public static function infractionBanId() : ColumnField
     {
-        return new ColumnField('infractionban', 'infractionbanid');
+        return new ColumnField('infractionBanId', 'InfractionBan', 'infractionban', 'infractionbanid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('infractionban', 'usergroupid');
+        return new ColumnField('userGroupId', 'InfractionBan', 'infractionban', 'usergroupid');
     }
     public static function banuserGroupId() : ColumnField
     {
-        return new ColumnField('infractionban', 'banusergroupid');
+        return new ColumnField('banuserGroupId', 'InfractionBan', 'infractionban', 'banusergroupid');
     }
     public static function amount() : ColumnField
     {
-        return new ColumnField('infractionban', 'amount');
+        return new ColumnField('amount', 'InfractionBan', 'infractionban', 'amount');
     }
     public static function period() : ColumnField
     {
-        return new ColumnField('infractionban', 'period');
+        return new ColumnField('period', 'InfractionBan', 'infractionban', 'period');
     }
     public static function method() : ColumnField
     {
-        return new ColumnField('infractionban', 'method');
+        return new ColumnField('method', 'InfractionBan', 'infractionban', 'method');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class InfractionBan implements Table {
     public function __listColumns() : array
     {
         return ['infractionbanid', 'usergroupid', 'banusergroupid', 'amount', 'period', 'method'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['infractionbanid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class InfractionBan implements Table {
 			'method' => 'method'
 		];
     }
-
 }

@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedPtIssueNoteHashRecord implements Record {
     
     /** @var $issueNoteId int */
-    private $issueNoteId;
+    protected $issueNoteId;
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $issueId int */
-    private $issueId;
+    protected $issueId;
     
     /** @var $dupeHash string */
-    private $dupeHash;
+    protected $dupeHash;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasIssueNoteId(): bool
     {

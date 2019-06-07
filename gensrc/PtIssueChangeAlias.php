@@ -17,35 +17,35 @@ class PtIssueChangeAlias extends TableAlias {
    
     public function issueChangeId() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'issuechangeid', $this->getAliasName());
+        return new ColumnField('issueChangeId', 'PtIssueChange', 'pt_issuechange', 'issuechangeid', $this->getAliasName());
     }
     public function issueId() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'issueid', $this->getAliasName());
+        return new ColumnField('issueId', 'PtIssueChange', 'pt_issuechange', 'issueid', $this->getAliasName());
     }
     public function userId() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'PtIssueChange', 'pt_issuechange', 'userid', $this->getAliasName());
     }
     public function dateLine() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'dateline', $this->getAliasName());
+        return new ColumnField('dateLine', 'PtIssueChange', 'pt_issuechange', 'dateline', $this->getAliasName());
     }
     public function issueNoteId() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'issuenoteid', $this->getAliasName());
+        return new ColumnField('issueNoteId', 'PtIssueChange', 'pt_issuechange', 'issuenoteid', $this->getAliasName());
     }
     public function field() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'field', $this->getAliasName());
+        return new ColumnField('field', 'PtIssueChange', 'pt_issuechange', 'field', $this->getAliasName());
     }
     public function oldValue() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'oldvalue', $this->getAliasName());
+        return new ColumnField('oldValue', 'PtIssueChange', 'pt_issuechange', 'oldvalue', $this->getAliasName());
     }
     public function newValue() : ColumnField
     {
-        return new ColumnField('pt_issuechange', 'newvalue', $this->getAliasName());
+        return new ColumnField('newValue', 'PtIssueChange', 'pt_issuechange', 'newvalue', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -56,6 +56,14 @@ class PtIssueChangeAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['issuechangeid', 'issueid', 'userid', 'dateline', 'issuenoteid', 'field', 'oldvalue', 'newvalue'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['issuechangeid'];
     }
     
     public function __listNullableColumns() : array

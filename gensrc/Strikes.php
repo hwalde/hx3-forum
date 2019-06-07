@@ -43,15 +43,15 @@ class Strikes implements Table {
     
     public static function strikeTime() : ColumnField
     {
-        return new ColumnField('strikes', 'striketime');
+        return new ColumnField('strikeTime', 'Strikes', 'strikes', 'striketime');
     }
     public static function strikeIp() : ColumnField
     {
-        return new ColumnField('strikes', 'strikeip');
+        return new ColumnField('strikeIp', 'Strikes', 'strikes', 'strikeip');
     }
     public static function userName() : ColumnField
     {
-        return new ColumnField('strikes', 'username');
+        return new ColumnField('userName', 'Strikes', 'strikes', 'username');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class Strikes implements Table {
     public function __listColumns() : array
     {
         return ['striketime', 'strikeip', 'username'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return [];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class Strikes implements Table {
 			'username' => 'userName'
 		];
     }
-
 }

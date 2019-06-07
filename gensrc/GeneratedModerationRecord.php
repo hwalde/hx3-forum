@@ -14,13 +14,13 @@ use POOQ\Record;
 class GeneratedModerationRecord implements Record {
     
     /** @var $primaryId int */
-    private $primaryId;
+    protected $primaryId;
     
     /** @var $type string */
-    private $type;
+    protected $type;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     public function hasPrimaryId(): bool
     {

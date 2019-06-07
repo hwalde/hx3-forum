@@ -14,16 +14,16 @@ use POOQ\Record;
 class GeneratedPtProjectVersionGroupRecord implements Record {
     
     /** @var $projectVersionGroupId int */
-    private $projectVersionGroupId;
+    protected $projectVersionGroupId;
     
     /** @var $projectId int */
-    private $projectId;
+    protected $projectId;
     
     /** @var $groupName string */
-    private $groupName;
+    protected $groupName;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     public function hasProjectVersionGroupId(): bool
     {

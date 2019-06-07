@@ -17,23 +17,23 @@ class PtProjectTypeAlias extends TableAlias {
    
     public function projectId() : ColumnField
     {
-        return new ColumnField('pt_projecttype', 'projectid', $this->getAliasName());
+        return new ColumnField('projectId', 'PtProjectType', 'pt_projecttype', 'projectid', $this->getAliasName());
     }
     public function issueTypeId() : ColumnField
     {
-        return new ColumnField('pt_projecttype', 'issuetypeid', $this->getAliasName());
+        return new ColumnField('issueTypeId', 'PtProjectType', 'pt_projecttype', 'issuetypeid', $this->getAliasName());
     }
     public function startStatusId() : ColumnField
     {
-        return new ColumnField('pt_projecttype', 'startstatusid', $this->getAliasName());
+        return new ColumnField('startStatusId', 'PtProjectType', 'pt_projecttype', 'startstatusid', $this->getAliasName());
     }
     public function issueCount() : ColumnField
     {
-        return new ColumnField('pt_projecttype', 'issuecount', $this->getAliasName());
+        return new ColumnField('issueCount', 'PtProjectType', 'pt_projecttype', 'issuecount', $this->getAliasName());
     }
     public function lastActivity() : ColumnField
     {
-        return new ColumnField('pt_projecttype', 'lastactivity', $this->getAliasName());
+        return new ColumnField('lastActivity', 'PtProjectType', 'pt_projecttype', 'lastactivity', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -44,6 +44,14 @@ class PtProjectTypeAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['projectid', 'issuetypeid', 'startstatusid', 'issuecount', 'lastactivity'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['projectid', 'issuetypeid'];
     }
     
     public function __listNullableColumns() : array

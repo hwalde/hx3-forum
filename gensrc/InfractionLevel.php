@@ -46,27 +46,27 @@ class InfractionLevel implements Table {
     
     public static function infractionLevelId() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'infractionlevelid');
+        return new ColumnField('infractionLevelId', 'InfractionLevel', 'infractionlevel', 'infractionlevelid');
     }
     public static function points() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'points');
+        return new ColumnField('points', 'InfractionLevel', 'infractionlevel', 'points');
     }
     public static function expires() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'expires');
+        return new ColumnField('expires', 'InfractionLevel', 'infractionlevel', 'expires');
     }
     public static function period() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'period');
+        return new ColumnField('period', 'InfractionLevel', 'infractionlevel', 'period');
     }
     public static function warning() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'warning');
+        return new ColumnField('warning', 'InfractionLevel', 'infractionlevel', 'warning');
     }
     public static function extend() : ColumnField
     {
-        return new ColumnField('infractionlevel', 'extend');
+        return new ColumnField('extend', 'InfractionLevel', 'infractionlevel', 'extend');
     }
 
     public function getTableName(): string
@@ -77,6 +77,14 @@ class InfractionLevel implements Table {
     public function __listColumns() : array
     {
         return ['infractionlevelid', 'points', 'expires', 'period', 'warning', 'extend'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['infractionlevelid'];
     }
     
     public function __listNullableColumns() : array
@@ -107,5 +115,4 @@ class InfractionLevel implements Table {
 			'extend' => 'extend'
 		];
     }
-
 }

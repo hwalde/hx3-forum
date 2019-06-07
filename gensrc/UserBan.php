@@ -49,39 +49,39 @@ class UserBan implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('userban', 'userid');
+        return new ColumnField('userId', 'UserBan', 'userban', 'userid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('userban', 'usergroupid');
+        return new ColumnField('userGroupId', 'UserBan', 'userban', 'usergroupid');
     }
     public static function displayGroupId() : ColumnField
     {
-        return new ColumnField('userban', 'displaygroupid');
+        return new ColumnField('displayGroupId', 'UserBan', 'userban', 'displaygroupid');
     }
     public static function userTitle() : ColumnField
     {
-        return new ColumnField('userban', 'usertitle');
+        return new ColumnField('userTitle', 'UserBan', 'userban', 'usertitle');
     }
     public static function customTitle() : ColumnField
     {
-        return new ColumnField('userban', 'customtitle');
+        return new ColumnField('customTitle', 'UserBan', 'userban', 'customtitle');
     }
     public static function adminId() : ColumnField
     {
-        return new ColumnField('userban', 'adminid');
+        return new ColumnField('adminId', 'UserBan', 'userban', 'adminid');
     }
     public static function bandate() : ColumnField
     {
-        return new ColumnField('userban', 'bandate');
+        return new ColumnField('bandate', 'UserBan', 'userban', 'bandate');
     }
     public static function liftDate() : ColumnField
     {
-        return new ColumnField('userban', 'liftdate');
+        return new ColumnField('liftDate', 'UserBan', 'userban', 'liftdate');
     }
     public static function reason() : ColumnField
     {
-        return new ColumnField('userban', 'reason');
+        return new ColumnField('reason', 'UserBan', 'userban', 'reason');
     }
 
     public function getTableName(): string
@@ -92,6 +92,14 @@ class UserBan implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'usergroupid', 'displaygroupid', 'usertitle', 'customtitle', 'adminid', 'bandate', 'liftdate', 'reason'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid'];
     }
     
     public function __listNullableColumns() : array
@@ -128,5 +136,4 @@ class UserBan implements Table {
 			'reason' => 'reason'
 		];
     }
-
 }

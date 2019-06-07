@@ -14,22 +14,22 @@ use POOQ\Record;
 class GeneratedAvatarRecord implements Record {
     
     /** @var $avatarId int */
-    private $avatarId;
+    protected $avatarId;
     
     /** @var $title string */
-    private $title;
+    protected $title;
     
     /** @var $minimumPosts int */
-    private $minimumPosts;
+    protected $minimumPosts;
     
     /** @var $avatarPath string */
-    private $avatarPath;
+    protected $avatarPath;
     
     /** @var $imageCategoryId int */
-    private $imageCategoryId;
+    protected $imageCategoryId;
     
     /** @var $displayOrder int */
-    private $displayOrder;
+    protected $displayOrder;
     
     public function hasAvatarId(): bool
     {

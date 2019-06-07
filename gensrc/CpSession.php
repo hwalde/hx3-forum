@@ -43,15 +43,15 @@ class CpSession implements Table {
     
     public static function userId() : ColumnField
     {
-        return new ColumnField('cpsession', 'userid');
+        return new ColumnField('userId', 'CpSession', 'cpsession', 'userid');
     }
     public static function hash() : ColumnField
     {
-        return new ColumnField('cpsession', 'hash');
+        return new ColumnField('hash', 'CpSession', 'cpsession', 'hash');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('cpsession', 'dateline');
+        return new ColumnField('dateLine', 'CpSession', 'cpsession', 'dateline');
     }
 
     public function getTableName(): string
@@ -62,6 +62,14 @@ class CpSession implements Table {
     public function __listColumns() : array
     {
         return ['userid', 'hash', 'dateline'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'hash'];
     }
     
     public function __listNullableColumns() : array
@@ -86,5 +94,4 @@ class CpSession implements Table {
 			'dateline' => 'dateLine'
 		];
     }
-
 }

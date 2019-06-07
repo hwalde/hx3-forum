@@ -17,15 +17,15 @@ class StatisticRefererAlias extends TableAlias {
    
     public function id() : ColumnField
     {
-        return new ColumnField('statistik_referer', 'ID', $this->getAliasName());
+        return new ColumnField('id', 'StatisticReferer', 'statistik_referer', 'ID', $this->getAliasName());
     }
     public function referer() : ColumnField
     {
-        return new ColumnField('statistik_referer', 'Referer', $this->getAliasName());
+        return new ColumnField('referer', 'StatisticReferer', 'statistik_referer', 'Referer', $this->getAliasName());
     }
     public function zaehler() : ColumnField
     {
-        return new ColumnField('statistik_referer', 'Zaehler', $this->getAliasName());
+        return new ColumnField('zaehler', 'StatisticReferer', 'statistik_referer', 'Zaehler', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -36,6 +36,14 @@ class StatisticRefererAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['ID', 'Referer', 'Zaehler'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['ID'];
     }
     
     public function __listNullableColumns() : array

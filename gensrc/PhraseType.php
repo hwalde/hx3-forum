@@ -45,23 +45,23 @@ class PhraseType implements Table {
     
     public static function fieldName() : ColumnField
     {
-        return new ColumnField('phrasetype', 'fieldname');
+        return new ColumnField('fieldName', 'PhraseType', 'phrasetype', 'fieldname');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('phrasetype', 'title');
+        return new ColumnField('title', 'PhraseType', 'phrasetype', 'title');
     }
     public static function editRows() : ColumnField
     {
-        return new ColumnField('phrasetype', 'editrows');
+        return new ColumnField('editRows', 'PhraseType', 'phrasetype', 'editrows');
     }
     public static function product() : ColumnField
     {
-        return new ColumnField('phrasetype', 'product');
+        return new ColumnField('product', 'PhraseType', 'phrasetype', 'product');
     }
     public static function special() : ColumnField
     {
-        return new ColumnField('phrasetype', 'special');
+        return new ColumnField('special', 'PhraseType', 'phrasetype', 'special');
     }
 
     public function getTableName(): string
@@ -72,6 +72,14 @@ class PhraseType implements Table {
     public function __listColumns() : array
     {
         return ['fieldname', 'title', 'editrows', 'product', 'special'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['fieldname'];
     }
     
     public function __listNullableColumns() : array
@@ -100,5 +108,4 @@ class PhraseType implements Table {
 			'special' => 'special'
 		];
     }
-
 }

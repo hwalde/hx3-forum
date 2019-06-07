@@ -57,71 +57,71 @@ class SocialGroup implements Table {
     
     public static function groupId() : ColumnField
     {
-        return new ColumnField('socialgroup', 'groupid');
+        return new ColumnField('groupId', 'SocialGroup', 'socialgroup', 'groupid');
     }
     public static function name() : ColumnField
     {
-        return new ColumnField('socialgroup', 'name');
+        return new ColumnField('name', 'SocialGroup', 'socialgroup', 'name');
     }
     public static function description() : ColumnField
     {
-        return new ColumnField('socialgroup', 'description');
+        return new ColumnField('description', 'SocialGroup', 'socialgroup', 'description');
     }
     public static function creatorUserId() : ColumnField
     {
-        return new ColumnField('socialgroup', 'creatoruserid');
+        return new ColumnField('creatorUserId', 'SocialGroup', 'socialgroup', 'creatoruserid');
     }
     public static function dateLine() : ColumnField
     {
-        return new ColumnField('socialgroup', 'dateline');
+        return new ColumnField('dateLine', 'SocialGroup', 'socialgroup', 'dateline');
     }
     public static function members() : ColumnField
     {
-        return new ColumnField('socialgroup', 'members');
+        return new ColumnField('members', 'SocialGroup', 'socialgroup', 'members');
     }
     public static function pictureCount() : ColumnField
     {
-        return new ColumnField('socialgroup', 'picturecount');
+        return new ColumnField('pictureCount', 'SocialGroup', 'socialgroup', 'picturecount');
     }
     public static function lastPost() : ColumnField
     {
-        return new ColumnField('socialgroup', 'lastpost');
+        return new ColumnField('lastPost', 'SocialGroup', 'socialgroup', 'lastpost');
     }
     public static function lastPoster() : ColumnField
     {
-        return new ColumnField('socialgroup', 'lastposter');
+        return new ColumnField('lastPoster', 'SocialGroup', 'socialgroup', 'lastposter');
     }
     public static function lastPosterId() : ColumnField
     {
-        return new ColumnField('socialgroup', 'lastposterid');
+        return new ColumnField('lastPosterId', 'SocialGroup', 'socialgroup', 'lastposterid');
     }
     public static function lastGmId() : ColumnField
     {
-        return new ColumnField('socialgroup', 'lastgmid');
+        return new ColumnField('lastGmId', 'SocialGroup', 'socialgroup', 'lastgmid');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('socialgroup', 'visible');
+        return new ColumnField('visible', 'SocialGroup', 'socialgroup', 'visible');
     }
     public static function deleted() : ColumnField
     {
-        return new ColumnField('socialgroup', 'deleted');
+        return new ColumnField('deleted', 'SocialGroup', 'socialgroup', 'deleted');
     }
     public static function moderation() : ColumnField
     {
-        return new ColumnField('socialgroup', 'moderation');
+        return new ColumnField('moderation', 'SocialGroup', 'socialgroup', 'moderation');
     }
     public static function type() : ColumnField
     {
-        return new ColumnField('socialgroup', 'type');
+        return new ColumnField('type', 'SocialGroup', 'socialgroup', 'type');
     }
     public static function moderatedMembers() : ColumnField
     {
-        return new ColumnField('socialgroup', 'moderatedmembers');
+        return new ColumnField('moderatedMembers', 'SocialGroup', 'socialgroup', 'moderatedmembers');
     }
     public static function options() : ColumnField
     {
-        return new ColumnField('socialgroup', 'options');
+        return new ColumnField('options', 'SocialGroup', 'socialgroup', 'options');
     }
 
     public function getTableName(): string
@@ -132,6 +132,14 @@ class SocialGroup implements Table {
     public function __listColumns() : array
     {
         return ['groupid', 'name', 'description', 'creatoruserid', 'dateline', 'members', 'picturecount', 'lastpost', 'lastposter', 'lastposterid', 'lastgmid', 'visible', 'deleted', 'moderation', 'type', 'moderatedmembers', 'options'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['groupid'];
     }
     
     public function __listNullableColumns() : array
@@ -184,5 +192,4 @@ class SocialGroup implements Table {
 			'options' => 'options'
 		];
     }
-
 }

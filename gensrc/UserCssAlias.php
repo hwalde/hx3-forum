@@ -17,19 +17,19 @@ class UserCssAlias extends TableAlias {
    
     public function userId() : ColumnField
     {
-        return new ColumnField('usercss', 'userid', $this->getAliasName());
+        return new ColumnField('userId', 'UserCss', 'usercss', 'userid', $this->getAliasName());
     }
     public function selector() : ColumnField
     {
-        return new ColumnField('usercss', 'selector', $this->getAliasName());
+        return new ColumnField('selector', 'UserCss', 'usercss', 'selector', $this->getAliasName());
     }
     public function property() : ColumnField
     {
-        return new ColumnField('usercss', 'property', $this->getAliasName());
+        return new ColumnField('property', 'UserCss', 'usercss', 'property', $this->getAliasName());
     }
     public function value() : ColumnField
     {
-        return new ColumnField('usercss', 'value', $this->getAliasName());
+        return new ColumnField('value', 'UserCss', 'usercss', 'value', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -40,6 +40,14 @@ class UserCssAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['userid', 'selector', 'property', 'value'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['userid', 'selector', 'property'];
     }
     
     public function __listNullableColumns() : array

@@ -44,19 +44,19 @@ class Holiday implements Table {
     
     public static function holidayId() : ColumnField
     {
-        return new ColumnField('holiday', 'holidayid');
+        return new ColumnField('holidayId', 'Holiday', 'holiday', 'holidayid');
     }
     public static function recurring() : ColumnField
     {
-        return new ColumnField('holiday', 'recurring');
+        return new ColumnField('recurring', 'Holiday', 'holiday', 'recurring');
     }
     public static function recurOption() : ColumnField
     {
-        return new ColumnField('holiday', 'recuroption');
+        return new ColumnField('recurOption', 'Holiday', 'holiday', 'recuroption');
     }
     public static function allowSmilies() : ColumnField
     {
-        return new ColumnField('holiday', 'allowsmilies');
+        return new ColumnField('allowSmilies', 'Holiday', 'holiday', 'allowsmilies');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class Holiday implements Table {
     public function __listColumns() : array
     {
         return ['holidayid', 'recurring', 'recuroption', 'allowsmilies'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['holidayid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class Holiday implements Table {
 			'allowsmilies' => 'allowSmilies'
 		];
     }
-
 }

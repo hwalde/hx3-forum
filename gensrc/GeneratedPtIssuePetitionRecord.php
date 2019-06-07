@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedPtIssuePetitionRecord implements Record {
     
     /** @var $issueNoteId int */
-    private $issueNoteId;
+    protected $issueNoteId;
     
     /** @var $petitionStatusId int */
-    private $petitionStatusId;
+    protected $petitionStatusId;
     
     /** @var $resolution string */
-    private $resolution;
+    protected $resolution;
     
     /** @var $resolveUserId int */
-    private $resolveUserId;
+    protected $resolveUserId;
     
     /** @var $resolveDate int */
-    private $resolveDate;
+    protected $resolveDate;
     
     public function hasIssueNoteId(): bool
     {

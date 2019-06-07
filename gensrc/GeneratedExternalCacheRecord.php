@@ -14,19 +14,19 @@ use POOQ\Record;
 class GeneratedExternalCacheRecord implements Record {
     
     /** @var $cacheHash string */
-    private $cacheHash;
+    protected $cacheHash;
     
     /** @var $text string|null */
-    private $text;
+    protected $text;
     
     /** @var $headers string|null */
-    private $headers;
+    protected $headers;
     
     /** @var $dateLine int */
-    private $dateLine;
+    protected $dateLine;
     
     /** @var $forumId int */
-    private $forumId;
+    protected $forumId;
     
     public function hasCacheHash(): bool
     {

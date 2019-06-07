@@ -44,19 +44,19 @@ class CalendarPermission implements Table {
     
     public static function calendarPermissionId() : ColumnField
     {
-        return new ColumnField('calendarpermission', 'calendarpermissionid');
+        return new ColumnField('calendarPermissionId', 'CalendarPermission', 'calendarpermission', 'calendarpermissionid');
     }
     public static function calendarId() : ColumnField
     {
-        return new ColumnField('calendarpermission', 'calendarid');
+        return new ColumnField('calendarId', 'CalendarPermission', 'calendarpermission', 'calendarid');
     }
     public static function userGroupId() : ColumnField
     {
-        return new ColumnField('calendarpermission', 'usergroupid');
+        return new ColumnField('userGroupId', 'CalendarPermission', 'calendarpermission', 'usergroupid');
     }
     public static function calendarPermissions() : ColumnField
     {
-        return new ColumnField('calendarpermission', 'calendarpermissions');
+        return new ColumnField('calendarPermissions', 'CalendarPermission', 'calendarpermission', 'calendarpermissions');
     }
 
     public function getTableName(): string
@@ -67,6 +67,14 @@ class CalendarPermission implements Table {
     public function __listColumns() : array
     {
         return ['calendarpermissionid', 'calendarid', 'usergroupid', 'calendarpermissions'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['calendarpermissionid'];
     }
     
     public function __listNullableColumns() : array
@@ -93,5 +101,4 @@ class CalendarPermission implements Table {
 			'calendarpermissions' => 'calendarPermissions'
 		];
     }
-
 }

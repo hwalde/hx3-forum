@@ -50,43 +50,43 @@ class Album implements Table {
     
     public static function albumId() : ColumnField
     {
-        return new ColumnField('album', 'albumid');
+        return new ColumnField('albumId', 'Album', 'album', 'albumid');
     }
     public static function userId() : ColumnField
     {
-        return new ColumnField('album', 'userid');
+        return new ColumnField('userId', 'Album', 'album', 'userid');
     }
     public static function createDate() : ColumnField
     {
-        return new ColumnField('album', 'createdate');
+        return new ColumnField('createDate', 'Album', 'album', 'createdate');
     }
     public static function lastPictureDate() : ColumnField
     {
-        return new ColumnField('album', 'lastpicturedate');
+        return new ColumnField('lastPictureDate', 'Album', 'album', 'lastpicturedate');
     }
     public static function visible() : ColumnField
     {
-        return new ColumnField('album', 'visible');
+        return new ColumnField('visible', 'Album', 'album', 'visible');
     }
     public static function title() : ColumnField
     {
-        return new ColumnField('album', 'title');
+        return new ColumnField('title', 'Album', 'album', 'title');
     }
     public static function description() : ColumnField
     {
-        return new ColumnField('album', 'description');
+        return new ColumnField('description', 'Album', 'album', 'description');
     }
     public static function coverPictureId() : ColumnField
     {
-        return new ColumnField('album', 'coverpictureid');
+        return new ColumnField('coverPictureId', 'Album', 'album', 'coverpictureid');
     }
     public static function state() : ColumnField
     {
-        return new ColumnField('album', 'state');
+        return new ColumnField('state', 'Album', 'album', 'state');
     }
     public static function moderation() : ColumnField
     {
-        return new ColumnField('album', 'moderation');
+        return new ColumnField('moderation', 'Album', 'album', 'moderation');
     }
 
     public function getTableName(): string
@@ -97,6 +97,14 @@ class Album implements Table {
     public function __listColumns() : array
     {
         return ['albumid', 'userid', 'createdate', 'lastpicturedate', 'visible', 'title', 'description', 'coverpictureid', 'state', 'moderation'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['albumid'];
     }
     
     public function __listNullableColumns() : array
@@ -135,5 +143,4 @@ class Album implements Table {
 			'moderation' => 'moderation'
 		];
     }
-
 }

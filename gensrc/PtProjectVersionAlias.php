@@ -17,27 +17,27 @@ class PtProjectVersionAlias extends TableAlias {
    
     public function projectVersionId() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'projectversionid', $this->getAliasName());
+        return new ColumnField('projectVersionId', 'PtProjectVersion', 'pt_projectversion', 'projectversionid', $this->getAliasName());
     }
     public function projectId() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'projectid', $this->getAliasName());
+        return new ColumnField('projectId', 'PtProjectVersion', 'pt_projectversion', 'projectid', $this->getAliasName());
     }
     public function versionName() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'versionname', $this->getAliasName());
+        return new ColumnField('versionName', 'PtProjectVersion', 'pt_projectversion', 'versionname', $this->getAliasName());
     }
     public function projectVersionGroupId() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'projectversiongroupid', $this->getAliasName());
+        return new ColumnField('projectVersionGroupId', 'PtProjectVersion', 'pt_projectversion', 'projectversiongroupid', $this->getAliasName());
     }
     public function displayOrder() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'displayorder', $this->getAliasName());
+        return new ColumnField('displayOrder', 'PtProjectVersion', 'pt_projectversion', 'displayorder', $this->getAliasName());
     }
     public function effectiveOrder() : ColumnField
     {
-        return new ColumnField('pt_projectversion', 'effectiveorder', $this->getAliasName());
+        return new ColumnField('effectiveOrder', 'PtProjectVersion', 'pt_projectversion', 'effectiveorder', $this->getAliasName());
     }
 
     public function getTableName(): string
@@ -48,6 +48,14 @@ class PtProjectVersionAlias extends TableAlias {
     public function __listColumns() : array
     {
         return ['projectversionid', 'projectid', 'versionname', 'projectversiongroupid', 'displayorder', 'effectiveorder'];
+    }
+    
+    /**
+     * @return string[]
+     */
+    public function __listPrimaryKeyColumns(): array
+    {
+        return ['projectversionid'];
     }
     
     public function __listNullableColumns() : array

@@ -14,25 +14,25 @@ use POOQ\Record;
 class GeneratedUserFieldRecord implements Record {
     
     /** @var $userId int */
-    private $userId;
+    protected $userId;
     
     /** @var $temp string */
-    private $temp;
+    protected $temp;
     
     /** @var $field1 string */
-    private $field1;
+    protected $field1;
     
     /** @var $field2 string */
-    private $field2;
+    protected $field2;
     
     /** @var $field3 string */
-    private $field3;
+    protected $field3;
     
     /** @var $field4 string */
-    private $field4;
+    protected $field4;
     
     /** @var $field5 string */
-    private $field5;
+    protected $field5;
     
     public function hasUserId(): bool
     {
