@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPostParsedRecord implements Record {
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $hasImages int */
+    /** @var $hasImages RecordValue */
     protected $hasImages;
     
-    /** @var $pageTextHtml string */
+    /** @var $pageTextHtml RecordValue */
     protected $pageTextHtml;
     
-    /** @var $styleId int */
+    /** @var $styleId RecordValue */
     protected $styleId;
     
-    /** @var $languageId int */
+    /** @var $languageId RecordValue */
     protected $languageId;
+
+    public function __construct() {
+		$this->postId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->hasImages = new RecordValue();
+		$this->pageTextHtml = new RecordValue();
+		$this->styleId = new RecordValue();
+		$this->languageId = new RecordValue();
+    }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasHasImages(): bool
     {
-        return isset($this->hasImages);
+        return $this->hasImages->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function getHasImages() : int
     {
-        return $this->hasImages;
+        return $this->hasImages->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function setHasImages(int $hasImages)
     {
-        $this->hasImages = $hasImages;
+        $this->hasImages->setChanged(true);
+        $this->hasImages->setValue($hasImages);
     }
     
     public function hasPageTextHtml(): bool
     {
-        return isset($this->pageTextHtml);
+        return $this->pageTextHtml->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function getPageTextHtml() : string
     {
-        return $this->pageTextHtml;
+        return $this->pageTextHtml->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function setPageTextHtml(string $pageTextHtml)
     {
-        $this->pageTextHtml = $pageTextHtml;
+        $this->pageTextHtml->setChanged(true);
+        $this->pageTextHtml->setValue($pageTextHtml);
     }
     
     public function hasStyleId(): bool
     {
-        return isset($this->styleId);
+        return $this->styleId->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function getStyleId() : int
     {
-        return $this->styleId;
+        return $this->styleId->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function setStyleId(int $styleId)
     {
-        $this->styleId = $styleId;
+        $this->styleId->setChanged(true);
+        $this->styleId->setValue($styleId);
     }
     
     public function hasLanguageId(): bool
     {
-        return isset($this->languageId);
+        return $this->languageId->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function getLanguageId() : int
     {
-        return $this->languageId;
+        return $this->languageId->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedPostParsedRecord implements Record {
      */
     public function setLanguageId(int $languageId)
     {
-        $this->languageId = $languageId;
+        $this->languageId->setChanged(true);
+        $this->languageId->setValue($languageId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

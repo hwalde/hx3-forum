@@ -9,67 +9,89 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedRssFeedRecord implements Record {
     
-    /** @var $rssFeedId int */
+    /** @var $rssFeedId RecordValue */
     protected $rssFeedId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $url string|null */
+    /** @var $url RecordValue */
     protected $url;
     
-    /** @var $port int */
+    /** @var $port RecordValue */
     protected $port;
     
-    /** @var $ttl int */
+    /** @var $ttl RecordValue */
     protected $ttl;
     
-    /** @var $maxResults int */
+    /** @var $maxResults RecordValue */
     protected $maxResults;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $iconId int */
+    /** @var $iconId RecordValue */
     protected $iconId;
     
-    /** @var $titleTemplate string */
+    /** @var $titleTemplate RecordValue */
     protected $titleTemplate;
     
-    /** @var $bodyTemplate string */
+    /** @var $bodyTemplate RecordValue */
     protected $bodyTemplate;
     
-    /** @var $searchWords string */
+    /** @var $searchWords RecordValue */
     protected $searchWords;
     
-    /** @var $itemType string */
+    /** @var $itemType RecordValue */
     protected $itemType;
     
-    /** @var $threadActionDelay int */
+    /** @var $threadActionDelay RecordValue */
     protected $threadActionDelay;
     
-    /** @var $endAnnouncement int */
+    /** @var $endAnnouncement RecordValue */
     protected $endAnnouncement;
     
-    /** @var $options int */
+    /** @var $options RecordValue */
     protected $options;
     
-    /** @var $lastRun int */
+    /** @var $lastRun RecordValue */
     protected $lastRun;
     
-    /** @var $prefixId string */
+    /** @var $prefixId RecordValue */
     protected $prefixId;
+
+    public function __construct() {
+		$this->rssFeedId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->url = new RecordValue();
+		$this->port = new RecordValue();
+		$this->ttl = new RecordValue();
+		$this->maxResults = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->forumId = new RecordValue();
+		$this->iconId = new RecordValue();
+		$this->titleTemplate = new RecordValue();
+		$this->bodyTemplate = new RecordValue();
+		$this->searchWords = new RecordValue();
+		$this->itemType = new RecordValue();
+		$this->threadActionDelay = new RecordValue();
+		$this->endAnnouncement = new RecordValue();
+		$this->options = new RecordValue();
+		$this->lastRun = new RecordValue();
+		$this->prefixId = new RecordValue();
+    }
     
     public function hasRssFeedId(): bool
     {
-        return isset($this->rssFeedId);
+        return $this->rssFeedId->hasBeenSet();
     }    
 
     /**
@@ -77,7 +99,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getRssFeedId() : int
     {
-        return $this->rssFeedId;
+        return $this->rssFeedId->getValue();
     }
 
     /**
@@ -85,12 +107,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setRssFeedId(int $rssFeedId)
     {
-        $this->rssFeedId = $rssFeedId;
+        $this->rssFeedId->setChanged(true);
+        $this->rssFeedId->setValue($rssFeedId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -98,7 +121,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -106,12 +129,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasUrl(): bool
     {
-        return isset($this->url);
+        return $this->url->hasBeenSet();
     }    
 
     /**
@@ -119,7 +143,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getUrl() : ?string
     {
-        return $this->url;
+        return $this->url->getValue();
     }
 
     /**
@@ -127,12 +151,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setUrl(?string $url)
     {
-        $this->url = $url;
+        $this->url->setChanged(true);
+        $this->url->setValue($url);
     }
     
     public function hasPort(): bool
     {
-        return isset($this->port);
+        return $this->port->hasBeenSet();
     }    
 
     /**
@@ -140,7 +165,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getPort() : int
     {
-        return $this->port;
+        return $this->port->getValue();
     }
 
     /**
@@ -148,12 +173,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setPort(int $port)
     {
-        $this->port = $port;
+        $this->port->setChanged(true);
+        $this->port->setValue($port);
     }
     
     public function hasTtl(): bool
     {
-        return isset($this->ttl);
+        return $this->ttl->hasBeenSet();
     }    
 
     /**
@@ -161,7 +187,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getTtl() : int
     {
-        return $this->ttl;
+        return $this->ttl->getValue();
     }
 
     /**
@@ -169,12 +195,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setTtl(int $ttl)
     {
-        $this->ttl = $ttl;
+        $this->ttl->setChanged(true);
+        $this->ttl->setValue($ttl);
     }
     
     public function hasMaxResults(): bool
     {
-        return isset($this->maxResults);
+        return $this->maxResults->hasBeenSet();
     }    
 
     /**
@@ -182,7 +209,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getMaxResults() : int
     {
-        return $this->maxResults;
+        return $this->maxResults->getValue();
     }
 
     /**
@@ -190,12 +217,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setMaxResults(int $maxResults)
     {
-        $this->maxResults = $maxResults;
+        $this->maxResults->setChanged(true);
+        $this->maxResults->setValue($maxResults);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -203,7 +231,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -211,12 +239,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -224,7 +253,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -232,12 +261,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasIconId(): bool
     {
-        return isset($this->iconId);
+        return $this->iconId->hasBeenSet();
     }    
 
     /**
@@ -245,7 +275,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getIconId() : int
     {
-        return $this->iconId;
+        return $this->iconId->getValue();
     }
 
     /**
@@ -253,12 +283,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setIconId(int $iconId)
     {
-        $this->iconId = $iconId;
+        $this->iconId->setChanged(true);
+        $this->iconId->setValue($iconId);
     }
     
     public function hasTitleTemplate(): bool
     {
-        return isset($this->titleTemplate);
+        return $this->titleTemplate->hasBeenSet();
     }    
 
     /**
@@ -266,7 +297,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getTitleTemplate() : string
     {
-        return $this->titleTemplate;
+        return $this->titleTemplate->getValue();
     }
 
     /**
@@ -274,12 +305,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setTitleTemplate(string $titleTemplate)
     {
-        $this->titleTemplate = $titleTemplate;
+        $this->titleTemplate->setChanged(true);
+        $this->titleTemplate->setValue($titleTemplate);
     }
     
     public function hasBodyTemplate(): bool
     {
-        return isset($this->bodyTemplate);
+        return $this->bodyTemplate->hasBeenSet();
     }    
 
     /**
@@ -287,7 +319,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getBodyTemplate() : string
     {
-        return $this->bodyTemplate;
+        return $this->bodyTemplate->getValue();
     }
 
     /**
@@ -295,12 +327,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setBodyTemplate(string $bodyTemplate)
     {
-        $this->bodyTemplate = $bodyTemplate;
+        $this->bodyTemplate->setChanged(true);
+        $this->bodyTemplate->setValue($bodyTemplate);
     }
     
     public function hasSearchWords(): bool
     {
-        return isset($this->searchWords);
+        return $this->searchWords->hasBeenSet();
     }    
 
     /**
@@ -308,7 +341,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getSearchWords() : string
     {
-        return $this->searchWords;
+        return $this->searchWords->getValue();
     }
 
     /**
@@ -316,12 +349,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setSearchWords(string $searchWords)
     {
-        $this->searchWords = $searchWords;
+        $this->searchWords->setChanged(true);
+        $this->searchWords->setValue($searchWords);
     }
     
     public function hasItemType(): bool
     {
-        return isset($this->itemType);
+        return $this->itemType->hasBeenSet();
     }    
 
     /**
@@ -329,7 +363,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getItemType() : string
     {
-        return $this->itemType;
+        return $this->itemType->getValue();
     }
 
     /**
@@ -337,12 +371,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setItemType(string $itemType)
     {
-        $this->itemType = $itemType;
+        $this->itemType->setChanged(true);
+        $this->itemType->setValue($itemType);
     }
     
     public function hasThreadActionDelay(): bool
     {
-        return isset($this->threadActionDelay);
+        return $this->threadActionDelay->hasBeenSet();
     }    
 
     /**
@@ -350,7 +385,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getThreadActionDelay() : int
     {
-        return $this->threadActionDelay;
+        return $this->threadActionDelay->getValue();
     }
 
     /**
@@ -358,12 +393,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setThreadActionDelay(int $threadActionDelay)
     {
-        $this->threadActionDelay = $threadActionDelay;
+        $this->threadActionDelay->setChanged(true);
+        $this->threadActionDelay->setValue($threadActionDelay);
     }
     
     public function hasEndAnnouncement(): bool
     {
-        return isset($this->endAnnouncement);
+        return $this->endAnnouncement->hasBeenSet();
     }    
 
     /**
@@ -371,7 +407,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getEndAnnouncement() : int
     {
-        return $this->endAnnouncement;
+        return $this->endAnnouncement->getValue();
     }
 
     /**
@@ -379,12 +415,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setEndAnnouncement(int $endAnnouncement)
     {
-        $this->endAnnouncement = $endAnnouncement;
+        $this->endAnnouncement->setChanged(true);
+        $this->endAnnouncement->setValue($endAnnouncement);
     }
     
     public function hasOptions(): bool
     {
-        return isset($this->options);
+        return $this->options->hasBeenSet();
     }    
 
     /**
@@ -392,7 +429,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getOptions() : int
     {
-        return $this->options;
+        return $this->options->getValue();
     }
 
     /**
@@ -400,12 +437,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setOptions(int $options)
     {
-        $this->options = $options;
+        $this->options->setChanged(true);
+        $this->options->setValue($options);
     }
     
     public function hasLastRun(): bool
     {
-        return isset($this->lastRun);
+        return $this->lastRun->hasBeenSet();
     }    
 
     /**
@@ -413,7 +451,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getLastRun() : int
     {
-        return $this->lastRun;
+        return $this->lastRun->getValue();
     }
 
     /**
@@ -421,12 +459,13 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setLastRun(int $lastRun)
     {
-        $this->lastRun = $lastRun;
+        $this->lastRun->setChanged(true);
+        $this->lastRun->setValue($lastRun);
     }
     
     public function hasPrefixId(): bool
     {
-        return isset($this->prefixId);
+        return $this->prefixId->hasBeenSet();
     }    
 
     /**
@@ -434,7 +473,7 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function getPrefixId() : string
     {
-        return $this->prefixId;
+        return $this->prefixId->getValue();
     }
 
     /**
@@ -442,9 +481,9 @@ class GeneratedRssFeedRecord implements Record {
      */
     public function setPrefixId(string $prefixId)
     {
-        $this->prefixId = $prefixId;
+        $this->prefixId->setChanged(true);
+        $this->prefixId->setValue($prefixId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

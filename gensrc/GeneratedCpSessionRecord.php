@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedCpSessionRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $hash string */
+    /** @var $hash RecordValue */
     protected $hash;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->hash = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedCpSessionRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedCpSessionRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasHash(): bool
     {
-        return isset($this->hash);
+        return $this->hash->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedCpSessionRecord implements Record {
      */
     public function getHash() : string
     {
-        return $this->hash;
+        return $this->hash->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedCpSessionRecord implements Record {
      */
     public function setHash(string $hash)
     {
-        $this->hash = $hash;
+        $this->hash->setChanged(true);
+        $this->hash->setValue($hash);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedCpSessionRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedCpSessionRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

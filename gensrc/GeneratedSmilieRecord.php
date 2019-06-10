@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSmilieRecord implements Record {
     
-    /** @var $smilieId int */
+    /** @var $smilieId RecordValue */
     protected $smilieId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $smilieText string */
+    /** @var $smilieText RecordValue */
     protected $smilieText;
     
-    /** @var $smiliePath string */
+    /** @var $smiliePath RecordValue */
     protected $smiliePath;
     
-    /** @var $imageCategoryId int */
+    /** @var $imageCategoryId RecordValue */
     protected $imageCategoryId;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $importSmilieId int */
+    /** @var $importSmilieId RecordValue */
     protected $importSmilieId;
+
+    public function __construct() {
+		$this->smilieId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->smilieText = new RecordValue();
+		$this->smiliePath = new RecordValue();
+		$this->imageCategoryId = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->importSmilieId = new RecordValue();
+    }
     
     public function hasSmilieId(): bool
     {
-        return isset($this->smilieId);
+        return $this->smilieId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedSmilieRecord implements Record {
      */
     public function getSmilieId() : int
     {
-        return $this->smilieId;
+        return $this->smilieId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedSmilieRecord implements Record {
      */
     public function setSmilieId(int $smilieId)
     {
-        $this->smilieId = $smilieId;
+        $this->smilieId->setChanged(true);
+        $this->smilieId->setValue($smilieId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedSmilieRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedSmilieRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasSmilieText(): bool
     {
-        return isset($this->smilieText);
+        return $this->smilieText->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedSmilieRecord implements Record {
      */
     public function getSmilieText() : string
     {
-        return $this->smilieText;
+        return $this->smilieText->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedSmilieRecord implements Record {
      */
     public function setSmilieText(string $smilieText)
     {
-        $this->smilieText = $smilieText;
+        $this->smilieText->setChanged(true);
+        $this->smilieText->setValue($smilieText);
     }
     
     public function hasSmiliePath(): bool
     {
-        return isset($this->smiliePath);
+        return $this->smiliePath->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedSmilieRecord implements Record {
      */
     public function getSmiliePath() : string
     {
-        return $this->smiliePath;
+        return $this->smiliePath->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedSmilieRecord implements Record {
      */
     public function setSmiliePath(string $smiliePath)
     {
-        $this->smiliePath = $smiliePath;
+        $this->smiliePath->setChanged(true);
+        $this->smiliePath->setValue($smiliePath);
     }
     
     public function hasImageCategoryId(): bool
     {
-        return isset($this->imageCategoryId);
+        return $this->imageCategoryId->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedSmilieRecord implements Record {
      */
     public function getImageCategoryId() : int
     {
-        return $this->imageCategoryId;
+        return $this->imageCategoryId->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedSmilieRecord implements Record {
      */
     public function setImageCategoryId(int $imageCategoryId)
     {
-        $this->imageCategoryId = $imageCategoryId;
+        $this->imageCategoryId->setChanged(true);
+        $this->imageCategoryId->setValue($imageCategoryId);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedSmilieRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedSmilieRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasImportSmilieId(): bool
     {
-        return isset($this->importSmilieId);
+        return $this->importSmilieId->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedSmilieRecord implements Record {
      */
     public function getImportSmilieId() : int
     {
-        return $this->importSmilieId;
+        return $this->importSmilieId->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedSmilieRecord implements Record {
      */
     public function setImportSmilieId(int $importSmilieId)
     {
-        $this->importSmilieId = $importSmilieId;
+        $this->importSmilieId->setChanged(true);
+        $this->importSmilieId->setValue($importSmilieId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPaymentApiRecord implements Record {
     
-    /** @var $paymentApiId int */
+    /** @var $paymentApiId RecordValue */
     protected $paymentApiId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $currency string */
+    /** @var $currency RecordValue */
     protected $currency;
     
-    /** @var $recurring int */
+    /** @var $recurring RecordValue */
     protected $recurring;
     
-    /** @var $className string */
+    /** @var $className RecordValue */
     protected $className;
     
-    /** @var $active int */
+    /** @var $active RecordValue */
     protected $active;
     
-    /** @var $settings string */
+    /** @var $settings RecordValue */
     protected $settings;
+
+    public function __construct() {
+		$this->paymentApiId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->currency = new RecordValue();
+		$this->recurring = new RecordValue();
+		$this->className = new RecordValue();
+		$this->active = new RecordValue();
+		$this->settings = new RecordValue();
+    }
     
     public function hasPaymentApiId(): bool
     {
-        return isset($this->paymentApiId);
+        return $this->paymentApiId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function getPaymentApiId() : int
     {
-        return $this->paymentApiId;
+        return $this->paymentApiId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function setPaymentApiId(int $paymentApiId)
     {
-        $this->paymentApiId = $paymentApiId;
+        $this->paymentApiId->setChanged(true);
+        $this->paymentApiId->setValue($paymentApiId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasCurrency(): bool
     {
-        return isset($this->currency);
+        return $this->currency->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function getCurrency() : string
     {
-        return $this->currency;
+        return $this->currency->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function setCurrency(string $currency)
     {
-        $this->currency = $currency;
+        $this->currency->setChanged(true);
+        $this->currency->setValue($currency);
     }
     
     public function hasRecurring(): bool
     {
-        return isset($this->recurring);
+        return $this->recurring->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function getRecurring() : int
     {
-        return $this->recurring;
+        return $this->recurring->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function setRecurring(int $recurring)
     {
-        $this->recurring = $recurring;
+        $this->recurring->setChanged(true);
+        $this->recurring->setValue($recurring);
     }
     
     public function hasClassName(): bool
     {
-        return isset($this->className);
+        return $this->className->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function getClassName() : string
     {
-        return $this->className;
+        return $this->className->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function setClassName(string $className)
     {
-        $this->className = $className;
+        $this->className->setChanged(true);
+        $this->className->setValue($className);
     }
     
     public function hasActive(): bool
     {
-        return isset($this->active);
+        return $this->active->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function getActive() : int
     {
-        return $this->active;
+        return $this->active->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function setActive(int $active)
     {
-        $this->active = $active;
+        $this->active->setChanged(true);
+        $this->active->setValue($active);
     }
     
     public function hasSettings(): bool
     {
-        return isset($this->settings);
+        return $this->settings->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function getSettings() : string
     {
-        return $this->settings;
+        return $this->settings->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedPaymentApiRecord implements Record {
      */
     public function setSettings(string $settings)
     {
-        $this->settings = $settings;
+        $this->settings->setChanged(true);
+        $this->settings->setValue($settings);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

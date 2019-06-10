@@ -9,19 +9,25 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedStatisticCounterRecord implements Record {
     
-    /** @var $forCounter string */
+    /** @var $forCounter RecordValue */
     protected $forCounter;
     
-    /** @var $summe int */
+    /** @var $summe RecordValue */
     protected $summe;
+
+    public function __construct() {
+		$this->forCounter = new RecordValue();
+		$this->summe = new RecordValue();
+    }
     
     public function hasForCounter(): bool
     {
-        return isset($this->forCounter);
+        return $this->forCounter->hasBeenSet();
     }    
 
     /**
@@ -29,7 +35,7 @@ class GeneratedStatisticCounterRecord implements Record {
      */
     public function getForCounter() : string
     {
-        return $this->forCounter;
+        return $this->forCounter->getValue();
     }
 
     /**
@@ -37,12 +43,13 @@ class GeneratedStatisticCounterRecord implements Record {
      */
     public function setForCounter(string $forCounter)
     {
-        $this->forCounter = $forCounter;
+        $this->forCounter->setChanged(true);
+        $this->forCounter->setValue($forCounter);
     }
     
     public function hasSumme(): bool
     {
-        return isset($this->summe);
+        return $this->summe->hasBeenSet();
     }    
 
     /**
@@ -50,7 +57,7 @@ class GeneratedStatisticCounterRecord implements Record {
      */
     public function getSumme() : int
     {
-        return $this->summe;
+        return $this->summe->getValue();
     }
 
     /**
@@ -58,9 +65,9 @@ class GeneratedStatisticCounterRecord implements Record {
      */
     public function setSumme(int $summe)
     {
-        $this->summe = $summe;
+        $this->summe->setChanged(true);
+        $this->summe->setValue($summe);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

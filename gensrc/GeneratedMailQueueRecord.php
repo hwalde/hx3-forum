@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedMailQueueRecord implements Record {
     
-    /** @var $mailQueueId int */
+    /** @var $mailQueueId RecordValue */
     protected $mailQueueId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $toEmail string */
+    /** @var $toEmail RecordValue */
     protected $toEmail;
     
-    /** @var $subject string */
+    /** @var $subject RecordValue */
     protected $subject;
     
-    /** @var $message string */
+    /** @var $message RecordValue */
     protected $message;
     
-    /** @var $header string */
+    /** @var $header RecordValue */
     protected $header;
     
-    /** @var $fromEmail string */
+    /** @var $fromEmail RecordValue */
     protected $fromEmail;
+
+    public function __construct() {
+		$this->mailQueueId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->toEmail = new RecordValue();
+		$this->subject = new RecordValue();
+		$this->message = new RecordValue();
+		$this->header = new RecordValue();
+		$this->fromEmail = new RecordValue();
+    }
     
     public function hasMailQueueId(): bool
     {
-        return isset($this->mailQueueId);
+        return $this->mailQueueId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function getMailQueueId() : int
     {
-        return $this->mailQueueId;
+        return $this->mailQueueId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function setMailQueueId(int $mailQueueId)
     {
-        $this->mailQueueId = $mailQueueId;
+        $this->mailQueueId->setChanged(true);
+        $this->mailQueueId->setValue($mailQueueId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasToEmail(): bool
     {
-        return isset($this->toEmail);
+        return $this->toEmail->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function getToEmail() : string
     {
-        return $this->toEmail;
+        return $this->toEmail->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function setToEmail(string $toEmail)
     {
-        $this->toEmail = $toEmail;
+        $this->toEmail->setChanged(true);
+        $this->toEmail->setValue($toEmail);
     }
     
     public function hasSubject(): bool
     {
-        return isset($this->subject);
+        return $this->subject->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function getSubject() : string
     {
-        return $this->subject;
+        return $this->subject->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function setSubject(string $subject)
     {
-        $this->subject = $subject;
+        $this->subject->setChanged(true);
+        $this->subject->setValue($subject);
     }
     
     public function hasMessage(): bool
     {
-        return isset($this->message);
+        return $this->message->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function getMessage() : string
     {
-        return $this->message;
+        return $this->message->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function setMessage(string $message)
     {
-        $this->message = $message;
+        $this->message->setChanged(true);
+        $this->message->setValue($message);
     }
     
     public function hasHeader(): bool
     {
-        return isset($this->header);
+        return $this->header->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function getHeader() : string
     {
-        return $this->header;
+        return $this->header->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function setHeader(string $header)
     {
-        $this->header = $header;
+        $this->header->setChanged(true);
+        $this->header->setValue($header);
     }
     
     public function hasFromEmail(): bool
     {
-        return isset($this->fromEmail);
+        return $this->fromEmail->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function getFromEmail() : string
     {
-        return $this->fromEmail;
+        return $this->fromEmail->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedMailQueueRecord implements Record {
      */
     public function setFromEmail(string $fromEmail)
     {
-        $this->fromEmail = $fromEmail;
+        $this->fromEmail->setChanged(true);
+        $this->fromEmail->setValue($fromEmail);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,58 +9,77 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedInfractionRecord implements Record {
     
-    /** @var $infractionId int */
+    /** @var $infractionId RecordValue */
     protected $infractionId;
     
-    /** @var $infractionLevelId int */
+    /** @var $infractionLevelId RecordValue */
     protected $infractionLevelId;
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $whoAdded int */
+    /** @var $whoAdded RecordValue */
     protected $whoAdded;
     
-    /** @var $points int */
+    /** @var $points RecordValue */
     protected $points;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $note string */
+    /** @var $note RecordValue */
     protected $note;
     
-    /** @var $action int */
+    /** @var $action RecordValue */
     protected $action;
     
-    /** @var $actionDateline int */
+    /** @var $actionDateline RecordValue */
     protected $actionDateline;
     
-    /** @var $actionUserId int */
+    /** @var $actionUserId RecordValue */
     protected $actionUserId;
     
-    /** @var $actionReason string */
+    /** @var $actionReason RecordValue */
     protected $actionReason;
     
-    /** @var $expires int */
+    /** @var $expires RecordValue */
     protected $expires;
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $customReason string */
+    /** @var $customReason RecordValue */
     protected $customReason;
+
+    public function __construct() {
+		$this->infractionId = new RecordValue();
+		$this->infractionLevelId = new RecordValue();
+		$this->postId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->whoAdded = new RecordValue();
+		$this->points = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->note = new RecordValue();
+		$this->action = new RecordValue();
+		$this->actionDateline = new RecordValue();
+		$this->actionUserId = new RecordValue();
+		$this->actionReason = new RecordValue();
+		$this->expires = new RecordValue();
+		$this->threadId = new RecordValue();
+		$this->customReason = new RecordValue();
+    }
     
     public function hasInfractionId(): bool
     {
-        return isset($this->infractionId);
+        return $this->infractionId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +87,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getInfractionId() : int
     {
-        return $this->infractionId;
+        return $this->infractionId->getValue();
     }
 
     /**
@@ -76,12 +95,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setInfractionId(int $infractionId)
     {
-        $this->infractionId = $infractionId;
+        $this->infractionId->setChanged(true);
+        $this->infractionId->setValue($infractionId);
     }
     
     public function hasInfractionLevelId(): bool
     {
-        return isset($this->infractionLevelId);
+        return $this->infractionLevelId->hasBeenSet();
     }    
 
     /**
@@ -89,7 +109,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getInfractionLevelId() : int
     {
-        return $this->infractionLevelId;
+        return $this->infractionLevelId->getValue();
     }
 
     /**
@@ -97,12 +117,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setInfractionLevelId(int $infractionLevelId)
     {
-        $this->infractionLevelId = $infractionLevelId;
+        $this->infractionLevelId->setChanged(true);
+        $this->infractionLevelId->setValue($infractionLevelId);
     }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -110,7 +131,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -118,12 +139,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -131,7 +153,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -139,12 +161,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasWhoAdded(): bool
     {
-        return isset($this->whoAdded);
+        return $this->whoAdded->hasBeenSet();
     }    
 
     /**
@@ -152,7 +175,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getWhoAdded() : int
     {
-        return $this->whoAdded;
+        return $this->whoAdded->getValue();
     }
 
     /**
@@ -160,12 +183,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setWhoAdded(int $whoAdded)
     {
-        $this->whoAdded = $whoAdded;
+        $this->whoAdded->setChanged(true);
+        $this->whoAdded->setValue($whoAdded);
     }
     
     public function hasPoints(): bool
     {
-        return isset($this->points);
+        return $this->points->hasBeenSet();
     }    
 
     /**
@@ -173,7 +197,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getPoints() : int
     {
-        return $this->points;
+        return $this->points->getValue();
     }
 
     /**
@@ -181,12 +205,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setPoints(int $points)
     {
-        $this->points = $points;
+        $this->points->setChanged(true);
+        $this->points->setValue($points);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -194,7 +219,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -202,12 +227,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasNote(): bool
     {
-        return isset($this->note);
+        return $this->note->hasBeenSet();
     }    
 
     /**
@@ -215,7 +241,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getNote() : string
     {
-        return $this->note;
+        return $this->note->getValue();
     }
 
     /**
@@ -223,12 +249,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setNote(string $note)
     {
-        $this->note = $note;
+        $this->note->setChanged(true);
+        $this->note->setValue($note);
     }
     
     public function hasAction(): bool
     {
-        return isset($this->action);
+        return $this->action->hasBeenSet();
     }    
 
     /**
@@ -236,7 +263,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getAction() : int
     {
-        return $this->action;
+        return $this->action->getValue();
     }
 
     /**
@@ -244,12 +271,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setAction(int $action)
     {
-        $this->action = $action;
+        $this->action->setChanged(true);
+        $this->action->setValue($action);
     }
     
     public function hasActionDateline(): bool
     {
-        return isset($this->actionDateline);
+        return $this->actionDateline->hasBeenSet();
     }    
 
     /**
@@ -257,7 +285,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getActionDateline() : int
     {
-        return $this->actionDateline;
+        return $this->actionDateline->getValue();
     }
 
     /**
@@ -265,12 +293,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setActionDateline(int $actionDateline)
     {
-        $this->actionDateline = $actionDateline;
+        $this->actionDateline->setChanged(true);
+        $this->actionDateline->setValue($actionDateline);
     }
     
     public function hasActionUserId(): bool
     {
-        return isset($this->actionUserId);
+        return $this->actionUserId->hasBeenSet();
     }    
 
     /**
@@ -278,7 +307,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getActionUserId() : int
     {
-        return $this->actionUserId;
+        return $this->actionUserId->getValue();
     }
 
     /**
@@ -286,12 +315,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setActionUserId(int $actionUserId)
     {
-        $this->actionUserId = $actionUserId;
+        $this->actionUserId->setChanged(true);
+        $this->actionUserId->setValue($actionUserId);
     }
     
     public function hasActionReason(): bool
     {
-        return isset($this->actionReason);
+        return $this->actionReason->hasBeenSet();
     }    
 
     /**
@@ -299,7 +329,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getActionReason() : string
     {
-        return $this->actionReason;
+        return $this->actionReason->getValue();
     }
 
     /**
@@ -307,12 +337,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setActionReason(string $actionReason)
     {
-        $this->actionReason = $actionReason;
+        $this->actionReason->setChanged(true);
+        $this->actionReason->setValue($actionReason);
     }
     
     public function hasExpires(): bool
     {
-        return isset($this->expires);
+        return $this->expires->hasBeenSet();
     }    
 
     /**
@@ -320,7 +351,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getExpires() : int
     {
-        return $this->expires;
+        return $this->expires->getValue();
     }
 
     /**
@@ -328,12 +359,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setExpires(int $expires)
     {
-        $this->expires = $expires;
+        $this->expires->setChanged(true);
+        $this->expires->setValue($expires);
     }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -341,7 +373,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -349,12 +381,13 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasCustomReason(): bool
     {
-        return isset($this->customReason);
+        return $this->customReason->hasBeenSet();
     }    
 
     /**
@@ -362,7 +395,7 @@ class GeneratedInfractionRecord implements Record {
      */
     public function getCustomReason() : string
     {
-        return $this->customReason;
+        return $this->customReason->getValue();
     }
 
     /**
@@ -370,9 +403,9 @@ class GeneratedInfractionRecord implements Record {
      */
     public function setCustomReason(string $customReason)
     {
-        $this->customReason = $customReason;
+        $this->customReason->setChanged(true);
+        $this->customReason->setValue($customReason);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

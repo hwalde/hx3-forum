@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueTypeRecord implements Record {
     
-    /** @var $issueTypeId string */
+    /** @var $issueTypeId RecordValue */
     protected $issueTypeId;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $iconFile string */
+    /** @var $iconFile RecordValue */
     protected $iconFile;
+
+    public function __construct() {
+		$this->issueTypeId = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->iconFile = new RecordValue();
+    }
     
     public function hasIssueTypeId(): bool
     {
-        return isset($this->issueTypeId);
+        return $this->issueTypeId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedPtIssueTypeRecord implements Record {
      */
     public function getIssueTypeId() : string
     {
-        return $this->issueTypeId;
+        return $this->issueTypeId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedPtIssueTypeRecord implements Record {
      */
     public function setIssueTypeId(string $issueTypeId)
     {
-        $this->issueTypeId = $issueTypeId;
+        $this->issueTypeId->setChanged(true);
+        $this->issueTypeId->setValue($issueTypeId);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedPtIssueTypeRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedPtIssueTypeRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasIconFile(): bool
     {
-        return isset($this->iconFile);
+        return $this->iconFile->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedPtIssueTypeRecord implements Record {
      */
     public function getIconFile() : string
     {
-        return $this->iconFile;
+        return $this->iconFile->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedPtIssueTypeRecord implements Record {
      */
     public function setIconFile(string $iconFile)
     {
-        $this->iconFile = $iconFile;
+        $this->iconFile->setChanged(true);
+        $this->iconFile->setValue($iconFile);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

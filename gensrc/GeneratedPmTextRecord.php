@@ -9,46 +9,61 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPmTextRecord implements Record {
     
-    /** @var $pmTextId int */
+    /** @var $pmTextId RecordValue */
     protected $pmTextId;
     
-    /** @var $fromUserId int */
+    /** @var $fromUserId RecordValue */
     protected $fromUserId;
     
-    /** @var $fromUserName string */
+    /** @var $fromUserName RecordValue */
     protected $fromUserName;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $message string */
+    /** @var $message RecordValue */
     protected $message;
     
-    /** @var $toUserArray string */
+    /** @var $toUserArray RecordValue */
     protected $toUserArray;
     
-    /** @var $iconId int */
+    /** @var $iconId RecordValue */
     protected $iconId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $showSignature int */
+    /** @var $showSignature RecordValue */
     protected $showSignature;
     
-    /** @var $allowSmilie int */
+    /** @var $allowSmilie RecordValue */
     protected $allowSmilie;
     
-    /** @var $importPmId int */
+    /** @var $importPmId RecordValue */
     protected $importPmId;
+
+    public function __construct() {
+		$this->pmTextId = new RecordValue();
+		$this->fromUserId = new RecordValue();
+		$this->fromUserName = new RecordValue();
+		$this->title = new RecordValue();
+		$this->message = new RecordValue();
+		$this->toUserArray = new RecordValue();
+		$this->iconId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->showSignature = new RecordValue();
+		$this->allowSmilie = new RecordValue();
+		$this->importPmId = new RecordValue();
+    }
     
     public function hasPmTextId(): bool
     {
-        return isset($this->pmTextId);
+        return $this->pmTextId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +71,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getPmTextId() : int
     {
-        return $this->pmTextId;
+        return $this->pmTextId->getValue();
     }
 
     /**
@@ -64,12 +79,13 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setPmTextId(int $pmTextId)
     {
-        $this->pmTextId = $pmTextId;
+        $this->pmTextId->setChanged(true);
+        $this->pmTextId->setValue($pmTextId);
     }
     
     public function hasFromUserId(): bool
     {
-        return isset($this->fromUserId);
+        return $this->fromUserId->hasBeenSet();
     }    
 
     /**
@@ -77,7 +93,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getFromUserId() : int
     {
-        return $this->fromUserId;
+        return $this->fromUserId->getValue();
     }
 
     /**
@@ -85,12 +101,13 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setFromUserId(int $fromUserId)
     {
-        $this->fromUserId = $fromUserId;
+        $this->fromUserId->setChanged(true);
+        $this->fromUserId->setValue($fromUserId);
     }
     
     public function hasFromUserName(): bool
     {
-        return isset($this->fromUserName);
+        return $this->fromUserName->hasBeenSet();
     }    
 
     /**
@@ -98,7 +115,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getFromUserName() : string
     {
-        return $this->fromUserName;
+        return $this->fromUserName->getValue();
     }
 
     /**
@@ -106,12 +123,13 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setFromUserName(string $fromUserName)
     {
-        $this->fromUserName = $fromUserName;
+        $this->fromUserName->setChanged(true);
+        $this->fromUserName->setValue($fromUserName);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -119,7 +137,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -127,12 +145,13 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasMessage(): bool
     {
-        return isset($this->message);
+        return $this->message->hasBeenSet();
     }    
 
     /**
@@ -140,7 +159,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getMessage() : string
     {
-        return $this->message;
+        return $this->message->getValue();
     }
 
     /**
@@ -148,12 +167,13 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setMessage(string $message)
     {
-        $this->message = $message;
+        $this->message->setChanged(true);
+        $this->message->setValue($message);
     }
     
     public function hasToUserArray(): bool
     {
-        return isset($this->toUserArray);
+        return $this->toUserArray->hasBeenSet();
     }    
 
     /**
@@ -161,7 +181,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getToUserArray() : string
     {
-        return $this->toUserArray;
+        return $this->toUserArray->getValue();
     }
 
     /**
@@ -169,12 +189,13 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setToUserArray(string $toUserArray)
     {
-        $this->toUserArray = $toUserArray;
+        $this->toUserArray->setChanged(true);
+        $this->toUserArray->setValue($toUserArray);
     }
     
     public function hasIconId(): bool
     {
-        return isset($this->iconId);
+        return $this->iconId->hasBeenSet();
     }    
 
     /**
@@ -182,7 +203,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getIconId() : int
     {
-        return $this->iconId;
+        return $this->iconId->getValue();
     }
 
     /**
@@ -190,12 +211,13 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setIconId(int $iconId)
     {
-        $this->iconId = $iconId;
+        $this->iconId->setChanged(true);
+        $this->iconId->setValue($iconId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -203,7 +225,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -211,12 +233,13 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasShowSignature(): bool
     {
-        return isset($this->showSignature);
+        return $this->showSignature->hasBeenSet();
     }    
 
     /**
@@ -224,7 +247,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getShowSignature() : int
     {
-        return $this->showSignature;
+        return $this->showSignature->getValue();
     }
 
     /**
@@ -232,12 +255,13 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setShowSignature(int $showSignature)
     {
-        $this->showSignature = $showSignature;
+        $this->showSignature->setChanged(true);
+        $this->showSignature->setValue($showSignature);
     }
     
     public function hasAllowSmilie(): bool
     {
-        return isset($this->allowSmilie);
+        return $this->allowSmilie->hasBeenSet();
     }    
 
     /**
@@ -245,7 +269,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getAllowSmilie() : int
     {
-        return $this->allowSmilie;
+        return $this->allowSmilie->getValue();
     }
 
     /**
@@ -253,12 +277,13 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setAllowSmilie(int $allowSmilie)
     {
-        $this->allowSmilie = $allowSmilie;
+        $this->allowSmilie->setChanged(true);
+        $this->allowSmilie->setValue($allowSmilie);
     }
     
     public function hasImportPmId(): bool
     {
-        return isset($this->importPmId);
+        return $this->importPmId->hasBeenSet();
     }    
 
     /**
@@ -266,7 +291,7 @@ class GeneratedPmTextRecord implements Record {
      */
     public function getImportPmId() : int
     {
-        return $this->importPmId;
+        return $this->importPmId->getValue();
     }
 
     /**
@@ -274,9 +299,9 @@ class GeneratedPmTextRecord implements Record {
      */
     public function setImportPmId(int $importPmId)
     {
-        $this->importPmId = $importPmId;
+        $this->importPmId->setChanged(true);
+        $this->importPmId->setValue($importPmId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

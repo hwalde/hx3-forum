@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueAssignRecord implements Record {
     
-    /** @var $issueId int */
+    /** @var $issueId RecordValue */
     protected $issueId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->issueId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasIssueId(): bool
     {
-        return isset($this->issueId);
+        return $this->issueId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedPtIssueAssignRecord implements Record {
      */
     public function getIssueId() : int
     {
-        return $this->issueId;
+        return $this->issueId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedPtIssueAssignRecord implements Record {
      */
     public function setIssueId(int $issueId)
     {
-        $this->issueId = $issueId;
+        $this->issueId->setChanged(true);
+        $this->issueId->setValue($issueId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedPtIssueAssignRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedPtIssueAssignRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedPtIssueAssignRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedPtIssueAssignRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

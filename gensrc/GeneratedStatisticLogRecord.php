@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedStatisticLogRecord implements Record {
     
-    /** @var $id int */
+    /** @var $id RecordValue */
     protected $id;
     
-    /** @var $IP string */
+    /** @var $IP RecordValue */
     protected $IP;
     
-    /** @var $loggedInSince int */
+    /** @var $loggedInSince RecordValue */
     protected $loggedInSince;
     
-    /** @var $browserStamp string */
+    /** @var $browserStamp RecordValue */
     protected $browserStamp;
+
+    public function __construct() {
+		$this->id = new RecordValue();
+		$this->IP = new RecordValue();
+		$this->loggedInSince = new RecordValue();
+		$this->browserStamp = new RecordValue();
+    }
     
     public function hasId(): bool
     {
-        return isset($this->id);
+        return $this->id->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedStatisticLogRecord implements Record {
      */
     public function getId() : int
     {
-        return $this->id;
+        return $this->id->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedStatisticLogRecord implements Record {
      */
     public function setId(int $id)
     {
-        $this->id = $id;
+        $this->id->setChanged(true);
+        $this->id->setValue($id);
     }
     
     public function hasIP(): bool
     {
-        return isset($this->IP);
+        return $this->IP->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedStatisticLogRecord implements Record {
      */
     public function getIP() : string
     {
-        return $this->IP;
+        return $this->IP->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedStatisticLogRecord implements Record {
      */
     public function setIP(string $IP)
     {
-        $this->IP = $IP;
+        $this->IP->setChanged(true);
+        $this->IP->setValue($IP);
     }
     
     public function hasLoggedInSince(): bool
     {
-        return isset($this->loggedInSince);
+        return $this->loggedInSince->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedStatisticLogRecord implements Record {
      */
     public function getLoggedInSince() : int
     {
-        return $this->loggedInSince;
+        return $this->loggedInSince->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedStatisticLogRecord implements Record {
      */
     public function setLoggedInSince(int $loggedInSince)
     {
-        $this->loggedInSince = $loggedInSince;
+        $this->loggedInSince->setChanged(true);
+        $this->loggedInSince->setValue($loggedInSince);
     }
     
     public function hasBrowserStamp(): bool
     {
-        return isset($this->browserStamp);
+        return $this->browserStamp->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedStatisticLogRecord implements Record {
      */
     public function getBrowserStamp() : string
     {
-        return $this->browserStamp;
+        return $this->browserStamp->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedStatisticLogRecord implements Record {
      */
     public function setBrowserStamp(string $browserStamp)
     {
-        $this->browserStamp = $browserStamp;
+        $this->browserStamp->setChanged(true);
+        $this->browserStamp->setValue($browserStamp);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

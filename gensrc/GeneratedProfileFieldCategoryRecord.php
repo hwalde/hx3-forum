@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedProfileFieldCategoryRecord implements Record {
     
-    /** @var $profileFieldCategoryId int */
+    /** @var $profileFieldCategoryId RecordValue */
     protected $profileFieldCategoryId;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $location string */
+    /** @var $location RecordValue */
     protected $location;
+
+    public function __construct() {
+		$this->profileFieldCategoryId = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->location = new RecordValue();
+    }
     
     public function hasProfileFieldCategoryId(): bool
     {
-        return isset($this->profileFieldCategoryId);
+        return $this->profileFieldCategoryId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedProfileFieldCategoryRecord implements Record {
      */
     public function getProfileFieldCategoryId() : int
     {
-        return $this->profileFieldCategoryId;
+        return $this->profileFieldCategoryId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedProfileFieldCategoryRecord implements Record {
      */
     public function setProfileFieldCategoryId(int $profileFieldCategoryId)
     {
-        $this->profileFieldCategoryId = $profileFieldCategoryId;
+        $this->profileFieldCategoryId->setChanged(true);
+        $this->profileFieldCategoryId->setValue($profileFieldCategoryId);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedProfileFieldCategoryRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedProfileFieldCategoryRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasLocation(): bool
     {
-        return isset($this->location);
+        return $this->location->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedProfileFieldCategoryRecord implements Record {
      */
     public function getLocation() : string
     {
-        return $this->location;
+        return $this->location->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedProfileFieldCategoryRecord implements Record {
      */
     public function setLocation(string $location)
     {
-        $this->location = $location;
+        $this->location->setChanged(true);
+        $this->location->setValue($location);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

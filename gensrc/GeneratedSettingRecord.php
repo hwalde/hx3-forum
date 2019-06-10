@@ -9,49 +9,65 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSettingRecord implements Record {
     
-    /** @var $varName string */
+    /** @var $varName RecordValue */
     protected $varName;
     
-    /** @var $groupTitle string */
+    /** @var $groupTitle RecordValue */
     protected $groupTitle;
     
-    /** @var $value string */
+    /** @var $value RecordValue */
     protected $value;
     
-    /** @var $defaultValue string */
+    /** @var $defaultValue RecordValue */
     protected $defaultValue;
     
-    /** @var $optionCode string */
+    /** @var $optionCode RecordValue */
     protected $optionCode;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $advanced int */
+    /** @var $advanced RecordValue */
     protected $advanced;
     
-    /** @var $volatile int */
+    /** @var $volatile RecordValue */
     protected $volatile;
     
-    /** @var $product string */
+    /** @var $product RecordValue */
     protected $product;
     
-    /** @var $dataType string */
+    /** @var $dataType RecordValue */
     protected $dataType;
     
-    /** @var $blackList int */
+    /** @var $blackList RecordValue */
     protected $blackList;
     
-    /** @var $validationCode string|null */
+    /** @var $validationCode RecordValue */
     protected $validationCode;
+
+    public function __construct() {
+		$this->varName = new RecordValue();
+		$this->groupTitle = new RecordValue();
+		$this->value = new RecordValue();
+		$this->defaultValue = new RecordValue();
+		$this->optionCode = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->advanced = new RecordValue();
+		$this->volatile = new RecordValue();
+		$this->product = new RecordValue();
+		$this->dataType = new RecordValue();
+		$this->blackList = new RecordValue();
+		$this->validationCode = new RecordValue();
+    }
     
     public function hasVarName(): bool
     {
-        return isset($this->varName);
+        return $this->varName->hasBeenSet();
     }    
 
     /**
@@ -59,7 +75,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getVarName() : string
     {
-        return $this->varName;
+        return $this->varName->getValue();
     }
 
     /**
@@ -67,12 +83,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setVarName(string $varName)
     {
-        $this->varName = $varName;
+        $this->varName->setChanged(true);
+        $this->varName->setValue($varName);
     }
     
     public function hasGroupTitle(): bool
     {
-        return isset($this->groupTitle);
+        return $this->groupTitle->hasBeenSet();
     }    
 
     /**
@@ -80,7 +97,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getGroupTitle() : string
     {
-        return $this->groupTitle;
+        return $this->groupTitle->getValue();
     }
 
     /**
@@ -88,12 +105,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setGroupTitle(string $groupTitle)
     {
-        $this->groupTitle = $groupTitle;
+        $this->groupTitle->setChanged(true);
+        $this->groupTitle->setValue($groupTitle);
     }
     
     public function hasValue(): bool
     {
-        return isset($this->value);
+        return $this->value->hasBeenSet();
     }    
 
     /**
@@ -101,7 +119,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getValue() : string
     {
-        return $this->value;
+        return $this->value->getValue();
     }
 
     /**
@@ -109,12 +127,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setValue(string $value)
     {
-        $this->value = $value;
+        $this->value->setChanged(true);
+        $this->value->setValue($value);
     }
     
     public function hasDefaultValue(): bool
     {
-        return isset($this->defaultValue);
+        return $this->defaultValue->hasBeenSet();
     }    
 
     /**
@@ -122,7 +141,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getDefaultValue() : string
     {
-        return $this->defaultValue;
+        return $this->defaultValue->getValue();
     }
 
     /**
@@ -130,12 +149,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setDefaultValue(string $defaultValue)
     {
-        $this->defaultValue = $defaultValue;
+        $this->defaultValue->setChanged(true);
+        $this->defaultValue->setValue($defaultValue);
     }
     
     public function hasOptionCode(): bool
     {
-        return isset($this->optionCode);
+        return $this->optionCode->hasBeenSet();
     }    
 
     /**
@@ -143,7 +163,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getOptionCode() : string
     {
-        return $this->optionCode;
+        return $this->optionCode->getValue();
     }
 
     /**
@@ -151,12 +171,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setOptionCode(string $optionCode)
     {
-        $this->optionCode = $optionCode;
+        $this->optionCode->setChanged(true);
+        $this->optionCode->setValue($optionCode);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -164,7 +185,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -172,12 +193,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasAdvanced(): bool
     {
-        return isset($this->advanced);
+        return $this->advanced->hasBeenSet();
     }    
 
     /**
@@ -185,7 +207,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getAdvanced() : int
     {
-        return $this->advanced;
+        return $this->advanced->getValue();
     }
 
     /**
@@ -193,12 +215,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setAdvanced(int $advanced)
     {
-        $this->advanced = $advanced;
+        $this->advanced->setChanged(true);
+        $this->advanced->setValue($advanced);
     }
     
     public function hasVolatile(): bool
     {
-        return isset($this->volatile);
+        return $this->volatile->hasBeenSet();
     }    
 
     /**
@@ -206,7 +229,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getVolatile() : int
     {
-        return $this->volatile;
+        return $this->volatile->getValue();
     }
 
     /**
@@ -214,12 +237,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setVolatile(int $volatile)
     {
-        $this->volatile = $volatile;
+        $this->volatile->setChanged(true);
+        $this->volatile->setValue($volatile);
     }
     
     public function hasProduct(): bool
     {
-        return isset($this->product);
+        return $this->product->hasBeenSet();
     }    
 
     /**
@@ -227,7 +251,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getProduct() : string
     {
-        return $this->product;
+        return $this->product->getValue();
     }
 
     /**
@@ -235,12 +259,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setProduct(string $product)
     {
-        $this->product = $product;
+        $this->product->setChanged(true);
+        $this->product->setValue($product);
     }
     
     public function hasDataType(): bool
     {
-        return isset($this->dataType);
+        return $this->dataType->hasBeenSet();
     }    
 
     /**
@@ -248,7 +273,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getDataType() : string
     {
-        return $this->dataType;
+        return $this->dataType->getValue();
     }
 
     /**
@@ -256,12 +281,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setDataType(string $dataType)
     {
-        $this->dataType = $dataType;
+        $this->dataType->setChanged(true);
+        $this->dataType->setValue($dataType);
     }
     
     public function hasBlackList(): bool
     {
-        return isset($this->blackList);
+        return $this->blackList->hasBeenSet();
     }    
 
     /**
@@ -269,7 +295,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getBlackList() : int
     {
-        return $this->blackList;
+        return $this->blackList->getValue();
     }
 
     /**
@@ -277,12 +303,13 @@ class GeneratedSettingRecord implements Record {
      */
     public function setBlackList(int $blackList)
     {
-        $this->blackList = $blackList;
+        $this->blackList->setChanged(true);
+        $this->blackList->setValue($blackList);
     }
     
     public function hasValidationCode(): bool
     {
-        return isset($this->validationCode);
+        return $this->validationCode->hasBeenSet();
     }    
 
     /**
@@ -290,7 +317,7 @@ class GeneratedSettingRecord implements Record {
      */
     public function getValidationCode() : ?string
     {
-        return $this->validationCode;
+        return $this->validationCode->getValue();
     }
 
     /**
@@ -298,9 +325,9 @@ class GeneratedSettingRecord implements Record {
      */
     public function setValidationCode(?string $validationCode)
     {
-        $this->validationCode = $validationCode;
+        $this->validationCode->setChanged(true);
+        $this->validationCode->setValue($validationCode);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

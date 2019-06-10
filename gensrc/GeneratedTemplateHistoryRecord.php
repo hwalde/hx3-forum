@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedTemplateHistoryRecord implements Record {
     
-    /** @var $templateHistoryId int */
+    /** @var $templateHistoryId RecordValue */
     protected $templateHistoryId;
     
-    /** @var $styleId int */
+    /** @var $styleId RecordValue */
     protected $styleId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $template string */
+    /** @var $template RecordValue */
     protected $template;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
     
-    /** @var $version string */
+    /** @var $version RecordValue */
     protected $version;
     
-    /** @var $comment string */
+    /** @var $comment RecordValue */
     protected $comment;
+
+    public function __construct() {
+		$this->templateHistoryId = new RecordValue();
+		$this->styleId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->template = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->userName = new RecordValue();
+		$this->version = new RecordValue();
+		$this->comment = new RecordValue();
+    }
     
     public function hasTemplateHistoryId(): bool
     {
-        return isset($this->templateHistoryId);
+        return $this->templateHistoryId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function getTemplateHistoryId() : int
     {
-        return $this->templateHistoryId;
+        return $this->templateHistoryId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function setTemplateHistoryId(int $templateHistoryId)
     {
-        $this->templateHistoryId = $templateHistoryId;
+        $this->templateHistoryId->setChanged(true);
+        $this->templateHistoryId->setValue($templateHistoryId);
     }
     
     public function hasStyleId(): bool
     {
-        return isset($this->styleId);
+        return $this->styleId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function getStyleId() : int
     {
-        return $this->styleId;
+        return $this->styleId->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function setStyleId(int $styleId)
     {
-        $this->styleId = $styleId;
+        $this->styleId->setChanged(true);
+        $this->styleId->setValue($styleId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasTemplate(): bool
     {
-        return isset($this->template);
+        return $this->template->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function getTemplate() : string
     {
-        return $this->template;
+        return $this->template->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function setTemplate(string $template)
     {
-        $this->template = $template;
+        $this->template->setChanged(true);
+        $this->template->setValue($template);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
     
     public function hasVersion(): bool
     {
-        return isset($this->version);
+        return $this->version->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function getVersion() : string
     {
-        return $this->version;
+        return $this->version->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function setVersion(string $version)
     {
-        $this->version = $version;
+        $this->version->setChanged(true);
+        $this->version->setValue($version);
     }
     
     public function hasComment(): bool
     {
-        return isset($this->comment);
+        return $this->comment->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function getComment() : string
     {
-        return $this->comment;
+        return $this->comment->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedTemplateHistoryRecord implements Record {
      */
     public function setComment(string $comment)
     {
-        $this->comment = $comment;
+        $this->comment->setChanged(true);
+        $this->comment->setValue($comment);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

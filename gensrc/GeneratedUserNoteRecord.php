@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserNoteRecord implements Record {
     
-    /** @var $usernoteid int */
+    /** @var $usernoteid RecordValue */
     protected $usernoteid;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $posterid int */
+    /** @var $posterid RecordValue */
     protected $posterid;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $message string */
+    /** @var $message RecordValue */
     protected $message;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $allowSmilies int */
+    /** @var $allowSmilies RecordValue */
     protected $allowSmilies;
+
+    public function __construct() {
+		$this->usernoteid = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->posterid = new RecordValue();
+		$this->userName = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->message = new RecordValue();
+		$this->title = new RecordValue();
+		$this->allowSmilies = new RecordValue();
+    }
     
     public function hasUsernoteid(): bool
     {
-        return isset($this->usernoteid);
+        return $this->usernoteid->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function getUsernoteid() : int
     {
-        return $this->usernoteid;
+        return $this->usernoteid->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function setUsernoteid(int $usernoteid)
     {
-        $this->usernoteid = $usernoteid;
+        $this->usernoteid->setChanged(true);
+        $this->usernoteid->setValue($usernoteid);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasPosterid(): bool
     {
-        return isset($this->posterid);
+        return $this->posterid->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function getPosterid() : int
     {
-        return $this->posterid;
+        return $this->posterid->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function setPosterid(int $posterid)
     {
-        $this->posterid = $posterid;
+        $this->posterid->setChanged(true);
+        $this->posterid->setValue($posterid);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasMessage(): bool
     {
-        return isset($this->message);
+        return $this->message->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function getMessage() : string
     {
-        return $this->message;
+        return $this->message->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function setMessage(string $message)
     {
-        $this->message = $message;
+        $this->message->setChanged(true);
+        $this->message->setValue($message);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasAllowSmilies(): bool
     {
-        return isset($this->allowSmilies);
+        return $this->allowSmilies->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function getAllowSmilies() : int
     {
-        return $this->allowSmilies;
+        return $this->allowSmilies->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedUserNoteRecord implements Record {
      */
     public function setAllowSmilies(int $allowSmilies)
     {
-        $this->allowSmilies = $allowSmilies;
+        $this->allowSmilies->setChanged(true);
+        $this->allowSmilies->setValue($allowSmilies);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

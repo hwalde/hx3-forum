@@ -9,23 +9,30 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedPasswordHistoryRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $password string */
+    /** @var $password RecordValue */
     protected $password;
     
-    /** @var $passwordDate \DateTime */
+    /** @var $passwordDate RecordValue */
     protected $passwordDate;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->password = new RecordValue();
+		$this->passwordDate = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -33,7 +40,7 @@ class GeneratedPasswordHistoryRecord extends AbstractUpdateableRecord implements
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -41,12 +48,13 @@ class GeneratedPasswordHistoryRecord extends AbstractUpdateableRecord implements
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasPassword(): bool
     {
-        return isset($this->password);
+        return $this->password->hasBeenSet();
     }    
 
     /**
@@ -54,7 +62,7 @@ class GeneratedPasswordHistoryRecord extends AbstractUpdateableRecord implements
      */
     public function getPassword() : string
     {
-        return $this->password;
+        return $this->password->getValue();
     }
 
     /**
@@ -62,12 +70,13 @@ class GeneratedPasswordHistoryRecord extends AbstractUpdateableRecord implements
      */
     public function setPassword(string $password)
     {
-        $this->password = $password;
+        $this->password->setChanged(true);
+        $this->password->setValue($password);
     }
     
     public function hasPasswordDate(): bool
     {
-        return isset($this->passwordDate);
+        return $this->passwordDate->hasBeenSet();
     }    
 
     /**
@@ -75,7 +84,7 @@ class GeneratedPasswordHistoryRecord extends AbstractUpdateableRecord implements
      */
     public function getPasswordDate() : \DateTime
     {
-        return $this->passwordDate;
+        return $this->passwordDate->getValue();
     }
 
     /**
@@ -83,9 +92,9 @@ class GeneratedPasswordHistoryRecord extends AbstractUpdateableRecord implements
      */
     public function setPasswordDate(\DateTime $passwordDate)
     {
-        $this->passwordDate = $passwordDate;
+        $this->passwordDate->setChanged(true);
+        $this->passwordDate->setValue($passwordDate);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

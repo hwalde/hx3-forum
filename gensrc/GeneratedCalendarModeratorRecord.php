@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedCalendarModeratorRecord implements Record {
     
-    /** @var $calendarModeratorId int */
+    /** @var $calendarModeratorId RecordValue */
     protected $calendarModeratorId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $calendarId int */
+    /** @var $calendarId RecordValue */
     protected $calendarId;
     
-    /** @var $newEventEmail int */
+    /** @var $newEventEmail RecordValue */
     protected $newEventEmail;
     
-    /** @var $permissions int */
+    /** @var $permissions RecordValue */
     protected $permissions;
+
+    public function __construct() {
+		$this->calendarModeratorId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->calendarId = new RecordValue();
+		$this->newEventEmail = new RecordValue();
+		$this->permissions = new RecordValue();
+    }
     
     public function hasCalendarModeratorId(): bool
     {
-        return isset($this->calendarModeratorId);
+        return $this->calendarModeratorId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedCalendarModeratorRecord implements Record {
      */
     public function getCalendarModeratorId() : int
     {
-        return $this->calendarModeratorId;
+        return $this->calendarModeratorId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedCalendarModeratorRecord implements Record {
      */
     public function setCalendarModeratorId(int $calendarModeratorId)
     {
-        $this->calendarModeratorId = $calendarModeratorId;
+        $this->calendarModeratorId->setChanged(true);
+        $this->calendarModeratorId->setValue($calendarModeratorId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedCalendarModeratorRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedCalendarModeratorRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasCalendarId(): bool
     {
-        return isset($this->calendarId);
+        return $this->calendarId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedCalendarModeratorRecord implements Record {
      */
     public function getCalendarId() : int
     {
-        return $this->calendarId;
+        return $this->calendarId->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedCalendarModeratorRecord implements Record {
      */
     public function setCalendarId(int $calendarId)
     {
-        $this->calendarId = $calendarId;
+        $this->calendarId->setChanged(true);
+        $this->calendarId->setValue($calendarId);
     }
     
     public function hasNewEventEmail(): bool
     {
-        return isset($this->newEventEmail);
+        return $this->newEventEmail->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedCalendarModeratorRecord implements Record {
      */
     public function getNewEventEmail() : int
     {
-        return $this->newEventEmail;
+        return $this->newEventEmail->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedCalendarModeratorRecord implements Record {
      */
     public function setNewEventEmail(int $newEventEmail)
     {
-        $this->newEventEmail = $newEventEmail;
+        $this->newEventEmail->setChanged(true);
+        $this->newEventEmail->setValue($newEventEmail);
     }
     
     public function hasPermissions(): bool
     {
-        return isset($this->permissions);
+        return $this->permissions->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedCalendarModeratorRecord implements Record {
      */
     public function getPermissions() : int
     {
-        return $this->permissions;
+        return $this->permissions->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedCalendarModeratorRecord implements Record {
      */
     public function setPermissions(int $permissions)
     {
-        $this->permissions = $permissions;
+        $this->permissions->setChanged(true);
+        $this->permissions->setValue($permissions);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPostLogRecord implements Record {
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $userAgent string */
+    /** @var $userAgent RecordValue */
     protected $userAgent;
     
-    /** @var $ip int */
+    /** @var $ip RecordValue */
     protected $ip;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->postId = new RecordValue();
+		$this->userAgent = new RecordValue();
+		$this->ip = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedPostLogRecord implements Record {
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedPostLogRecord implements Record {
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasUserAgent(): bool
     {
-        return isset($this->userAgent);
+        return $this->userAgent->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedPostLogRecord implements Record {
      */
     public function getUserAgent() : string
     {
-        return $this->userAgent;
+        return $this->userAgent->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedPostLogRecord implements Record {
      */
     public function setUserAgent(string $userAgent)
     {
-        $this->userAgent = $userAgent;
+        $this->userAgent->setChanged(true);
+        $this->userAgent->setValue($userAgent);
     }
     
     public function hasIp(): bool
     {
-        return isset($this->ip);
+        return $this->ip->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedPostLogRecord implements Record {
      */
     public function getIp() : int
     {
-        return $this->ip;
+        return $this->ip->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedPostLogRecord implements Record {
      */
     public function setIp(int $ip)
     {
-        $this->ip = $ip;
+        $this->ip->setChanged(true);
+        $this->ip->setValue($ip);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedPostLogRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedPostLogRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

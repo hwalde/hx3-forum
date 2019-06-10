@@ -9,68 +9,90 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $reset int */
+    /** @var $reset RecordValue */
     protected $reset;
     
-    /** @var $logTime int */
+    /** @var $logTime RecordValue */
     protected $logTime;
     
-    /** @var $DOMAIN string */
+    /** @var $DOMAIN RecordValue */
     protected $DOMAIN;
     
-    /** @var $topThread int */
+    /** @var $topThread RecordValue */
     protected $topThread;
     
-    /** @var $popThread int */
+    /** @var $popThread RecordValue */
     protected $popThread;
     
-    /** @var $popForum int */
+    /** @var $popForum RecordValue */
     protected $popForum;
     
-    /** @var $newRegister int */
+    /** @var $newRegister RecordValue */
     protected $newRegister;
     
-    /** @var $visit int */
+    /** @var $visit RecordValue */
     protected $visit;
     
-    /** @var $writtenThreads int */
+    /** @var $writtenThreads RecordValue */
     protected $writtenThreads;
     
-    /** @var $writtenPost int */
+    /** @var $writtenPost RecordValue */
     protected $writtenPost;
     
-    /** @var $topPoster int */
+    /** @var $topPoster RecordValue */
     protected $topPoster;
     
-    /** @var $xDays int */
+    /** @var $xDays RecordValue */
     protected $xDays;
     
-    /** @var $xThreads int */
+    /** @var $xThreads RecordValue */
     protected $xThreads;
     
-    /** @var $polls int */
+    /** @var $polls RecordValue */
     protected $polls;
     
-    /** @var $sticky int */
+    /** @var $sticky RecordValue */
     protected $sticky;
     
-    /** @var $search int */
+    /** @var $search RecordValue */
     protected $search;
     
-    /** @var $topref int */
+    /** @var $topref RecordValue */
     protected $topref;
     
-    /** @var $topld int */
+    /** @var $topld RecordValue */
     protected $topld;
+
+    public function __construct() {
+		$this->reset = new RecordValue();
+		$this->logTime = new RecordValue();
+		$this->DOMAIN = new RecordValue();
+		$this->topThread = new RecordValue();
+		$this->popThread = new RecordValue();
+		$this->popForum = new RecordValue();
+		$this->newRegister = new RecordValue();
+		$this->visit = new RecordValue();
+		$this->writtenThreads = new RecordValue();
+		$this->writtenPost = new RecordValue();
+		$this->topPoster = new RecordValue();
+		$this->xDays = new RecordValue();
+		$this->xThreads = new RecordValue();
+		$this->polls = new RecordValue();
+		$this->sticky = new RecordValue();
+		$this->search = new RecordValue();
+		$this->topref = new RecordValue();
+		$this->topld = new RecordValue();
+    }
     
     public function hasReset(): bool
     {
-        return isset($this->reset);
+        return $this->reset->hasBeenSet();
     }    
 
     /**
@@ -78,7 +100,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getReset() : int
     {
-        return $this->reset;
+        return $this->reset->getValue();
     }
 
     /**
@@ -86,12 +108,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setReset(int $reset)
     {
-        $this->reset = $reset;
+        $this->reset->setChanged(true);
+        $this->reset->setValue($reset);
     }
     
     public function hasLogTime(): bool
     {
-        return isset($this->logTime);
+        return $this->logTime->hasBeenSet();
     }    
 
     /**
@@ -99,7 +122,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getLogTime() : int
     {
-        return $this->logTime;
+        return $this->logTime->getValue();
     }
 
     /**
@@ -107,12 +130,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setLogTime(int $logTime)
     {
-        $this->logTime = $logTime;
+        $this->logTime->setChanged(true);
+        $this->logTime->setValue($logTime);
     }
     
     public function hasDOMAIN(): bool
     {
-        return isset($this->DOMAIN);
+        return $this->DOMAIN->hasBeenSet();
     }    
 
     /**
@@ -120,7 +144,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getDOMAIN() : string
     {
-        return $this->DOMAIN;
+        return $this->DOMAIN->getValue();
     }
 
     /**
@@ -128,12 +152,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setDOMAIN(string $DOMAIN)
     {
-        $this->DOMAIN = $DOMAIN;
+        $this->DOMAIN->setChanged(true);
+        $this->DOMAIN->setValue($DOMAIN);
     }
     
     public function hasTopThread(): bool
     {
-        return isset($this->topThread);
+        return $this->topThread->hasBeenSet();
     }    
 
     /**
@@ -141,7 +166,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getTopThread() : int
     {
-        return $this->topThread;
+        return $this->topThread->getValue();
     }
 
     /**
@@ -149,12 +174,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setTopThread(int $topThread)
     {
-        $this->topThread = $topThread;
+        $this->topThread->setChanged(true);
+        $this->topThread->setValue($topThread);
     }
     
     public function hasPopThread(): bool
     {
-        return isset($this->popThread);
+        return $this->popThread->hasBeenSet();
     }    
 
     /**
@@ -162,7 +188,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getPopThread() : int
     {
-        return $this->popThread;
+        return $this->popThread->getValue();
     }
 
     /**
@@ -170,12 +196,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setPopThread(int $popThread)
     {
-        $this->popThread = $popThread;
+        $this->popThread->setChanged(true);
+        $this->popThread->setValue($popThread);
     }
     
     public function hasPopForum(): bool
     {
-        return isset($this->popForum);
+        return $this->popForum->hasBeenSet();
     }    
 
     /**
@@ -183,7 +210,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getPopForum() : int
     {
-        return $this->popForum;
+        return $this->popForum->getValue();
     }
 
     /**
@@ -191,12 +218,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setPopForum(int $popForum)
     {
-        $this->popForum = $popForum;
+        $this->popForum->setChanged(true);
+        $this->popForum->setValue($popForum);
     }
     
     public function hasNewRegister(): bool
     {
-        return isset($this->newRegister);
+        return $this->newRegister->hasBeenSet();
     }    
 
     /**
@@ -204,7 +232,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getNewRegister() : int
     {
-        return $this->newRegister;
+        return $this->newRegister->getValue();
     }
 
     /**
@@ -212,12 +240,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setNewRegister(int $newRegister)
     {
-        $this->newRegister = $newRegister;
+        $this->newRegister->setChanged(true);
+        $this->newRegister->setValue($newRegister);
     }
     
     public function hasVisit(): bool
     {
-        return isset($this->visit);
+        return $this->visit->hasBeenSet();
     }    
 
     /**
@@ -225,7 +254,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getVisit() : int
     {
-        return $this->visit;
+        return $this->visit->getValue();
     }
 
     /**
@@ -233,12 +262,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setVisit(int $visit)
     {
-        $this->visit = $visit;
+        $this->visit->setChanged(true);
+        $this->visit->setValue($visit);
     }
     
     public function hasWrittenThreads(): bool
     {
-        return isset($this->writtenThreads);
+        return $this->writtenThreads->hasBeenSet();
     }    
 
     /**
@@ -246,7 +276,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getWrittenThreads() : int
     {
-        return $this->writtenThreads;
+        return $this->writtenThreads->getValue();
     }
 
     /**
@@ -254,12 +284,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setWrittenThreads(int $writtenThreads)
     {
-        $this->writtenThreads = $writtenThreads;
+        $this->writtenThreads->setChanged(true);
+        $this->writtenThreads->setValue($writtenThreads);
     }
     
     public function hasWrittenPost(): bool
     {
-        return isset($this->writtenPost);
+        return $this->writtenPost->hasBeenSet();
     }    
 
     /**
@@ -267,7 +298,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getWrittenPost() : int
     {
-        return $this->writtenPost;
+        return $this->writtenPost->getValue();
     }
 
     /**
@@ -275,12 +306,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setWrittenPost(int $writtenPost)
     {
-        $this->writtenPost = $writtenPost;
+        $this->writtenPost->setChanged(true);
+        $this->writtenPost->setValue($writtenPost);
     }
     
     public function hasTopPoster(): bool
     {
-        return isset($this->topPoster);
+        return $this->topPoster->hasBeenSet();
     }    
 
     /**
@@ -288,7 +320,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getTopPoster() : int
     {
-        return $this->topPoster;
+        return $this->topPoster->getValue();
     }
 
     /**
@@ -296,12 +328,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setTopPoster(int $topPoster)
     {
-        $this->topPoster = $topPoster;
+        $this->topPoster->setChanged(true);
+        $this->topPoster->setValue($topPoster);
     }
     
     public function hasXDays(): bool
     {
-        return isset($this->xDays);
+        return $this->xDays->hasBeenSet();
     }    
 
     /**
@@ -309,7 +342,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getXDays() : int
     {
-        return $this->xDays;
+        return $this->xDays->getValue();
     }
 
     /**
@@ -317,12 +350,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setXDays(int $xDays)
     {
-        $this->xDays = $xDays;
+        $this->xDays->setChanged(true);
+        $this->xDays->setValue($xDays);
     }
     
     public function hasXThreads(): bool
     {
-        return isset($this->xThreads);
+        return $this->xThreads->hasBeenSet();
     }    
 
     /**
@@ -330,7 +364,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getXThreads() : int
     {
-        return $this->xThreads;
+        return $this->xThreads->getValue();
     }
 
     /**
@@ -338,12 +372,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setXThreads(int $xThreads)
     {
-        $this->xThreads = $xThreads;
+        $this->xThreads->setChanged(true);
+        $this->xThreads->setValue($xThreads);
     }
     
     public function hasPolls(): bool
     {
-        return isset($this->polls);
+        return $this->polls->hasBeenSet();
     }    
 
     /**
@@ -351,7 +386,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getPolls() : int
     {
-        return $this->polls;
+        return $this->polls->getValue();
     }
 
     /**
@@ -359,12 +394,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setPolls(int $polls)
     {
-        $this->polls = $polls;
+        $this->polls->setChanged(true);
+        $this->polls->setValue($polls);
     }
     
     public function hasSticky(): bool
     {
-        return isset($this->sticky);
+        return $this->sticky->hasBeenSet();
     }    
 
     /**
@@ -372,7 +408,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getSticky() : int
     {
-        return $this->sticky;
+        return $this->sticky->getValue();
     }
 
     /**
@@ -380,12 +416,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setSticky(int $sticky)
     {
-        $this->sticky = $sticky;
+        $this->sticky->setChanged(true);
+        $this->sticky->setValue($sticky);
     }
     
     public function hasSearch(): bool
     {
-        return isset($this->search);
+        return $this->search->hasBeenSet();
     }    
 
     /**
@@ -393,7 +430,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getSearch() : int
     {
-        return $this->search;
+        return $this->search->getValue();
     }
 
     /**
@@ -401,12 +438,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setSearch(int $search)
     {
-        $this->search = $search;
+        $this->search->setChanged(true);
+        $this->search->setValue($search);
     }
     
     public function hasTopref(): bool
     {
-        return isset($this->topref);
+        return $this->topref->hasBeenSet();
     }    
 
     /**
@@ -414,7 +452,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getTopref() : int
     {
-        return $this->topref;
+        return $this->topref->getValue();
     }
 
     /**
@@ -422,12 +460,13 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setTopref(int $topref)
     {
-        $this->topref = $topref;
+        $this->topref->setChanged(true);
+        $this->topref->setValue($topref);
     }
     
     public function hasTopld(): bool
     {
-        return isset($this->topld);
+        return $this->topld->hasBeenSet();
     }    
 
     /**
@@ -435,7 +474,7 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function getTopld() : int
     {
-        return $this->topld;
+        return $this->topld->getValue();
     }
 
     /**
@@ -443,9 +482,9 @@ class GeneratedStatisticSettingsRecord extends AbstractUpdateableRecord implemen
      */
     public function setTopld(int $topld)
     {
-        $this->topld = $topld;
+        $this->topld->setChanged(true);
+        $this->topld->setValue($topld);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

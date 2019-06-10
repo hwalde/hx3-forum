@@ -9,43 +9,57 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPostEditHistoryRecord implements Record {
     
-    /** @var $postEditHistoryid int */
+    /** @var $postEditHistoryid RecordValue */
     protected $postEditHistoryid;
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $iconId int */
+    /** @var $iconId RecordValue */
     protected $iconId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $reason string */
+    /** @var $reason RecordValue */
     protected $reason;
     
-    /** @var $original int */
+    /** @var $original RecordValue */
     protected $original;
     
-    /** @var $pageText string|null */
+    /** @var $pageText RecordValue */
     protected $pageText;
+
+    public function __construct() {
+		$this->postEditHistoryid = new RecordValue();
+		$this->postId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->userName = new RecordValue();
+		$this->title = new RecordValue();
+		$this->iconId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->reason = new RecordValue();
+		$this->original = new RecordValue();
+		$this->pageText = new RecordValue();
+    }
     
     public function hasPostEditHistoryid(): bool
     {
-        return isset($this->postEditHistoryid);
+        return $this->postEditHistoryid->hasBeenSet();
     }    
 
     /**
@@ -53,7 +67,7 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function getPostEditHistoryid() : int
     {
-        return $this->postEditHistoryid;
+        return $this->postEditHistoryid->getValue();
     }
 
     /**
@@ -61,12 +75,13 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function setPostEditHistoryid(int $postEditHistoryid)
     {
-        $this->postEditHistoryid = $postEditHistoryid;
+        $this->postEditHistoryid->setChanged(true);
+        $this->postEditHistoryid->setValue($postEditHistoryid);
     }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -74,7 +89,7 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -82,12 +97,13 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -95,7 +111,7 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -103,12 +119,13 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -116,7 +133,7 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -124,12 +141,13 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -137,7 +155,7 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -145,12 +163,13 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasIconId(): bool
     {
-        return isset($this->iconId);
+        return $this->iconId->hasBeenSet();
     }    
 
     /**
@@ -158,7 +177,7 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function getIconId() : int
     {
-        return $this->iconId;
+        return $this->iconId->getValue();
     }
 
     /**
@@ -166,12 +185,13 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function setIconId(int $iconId)
     {
-        $this->iconId = $iconId;
+        $this->iconId->setChanged(true);
+        $this->iconId->setValue($iconId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -179,7 +199,7 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -187,12 +207,13 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasReason(): bool
     {
-        return isset($this->reason);
+        return $this->reason->hasBeenSet();
     }    
 
     /**
@@ -200,7 +221,7 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function getReason() : string
     {
-        return $this->reason;
+        return $this->reason->getValue();
     }
 
     /**
@@ -208,12 +229,13 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function setReason(string $reason)
     {
-        $this->reason = $reason;
+        $this->reason->setChanged(true);
+        $this->reason->setValue($reason);
     }
     
     public function hasOriginal(): bool
     {
-        return isset($this->original);
+        return $this->original->hasBeenSet();
     }    
 
     /**
@@ -221,7 +243,7 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function getOriginal() : int
     {
-        return $this->original;
+        return $this->original->getValue();
     }
 
     /**
@@ -229,12 +251,13 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function setOriginal(int $original)
     {
-        $this->original = $original;
+        $this->original->setChanged(true);
+        $this->original->setValue($original);
     }
     
     public function hasPageText(): bool
     {
-        return isset($this->pageText);
+        return $this->pageText->hasBeenSet();
     }    
 
     /**
@@ -242,7 +265,7 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function getPageText() : ?string
     {
-        return $this->pageText;
+        return $this->pageText->getValue();
     }
 
     /**
@@ -250,9 +273,9 @@ class GeneratedPostEditHistoryRecord implements Record {
      */
     public function setPageText(?string $pageText)
     {
-        $this->pageText = $pageText;
+        $this->pageText->setChanged(true);
+        $this->pageText->setValue($pageText);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

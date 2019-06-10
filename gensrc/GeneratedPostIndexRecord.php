@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPostIndexRecord implements Record {
     
-    /** @var $wordId int */
+    /** @var $wordId RecordValue */
     protected $wordId;
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $inTitle int */
+    /** @var $inTitle RecordValue */
     protected $inTitle;
     
-    /** @var $score int */
+    /** @var $score RecordValue */
     protected $score;
+
+    public function __construct() {
+		$this->wordId = new RecordValue();
+		$this->postId = new RecordValue();
+		$this->inTitle = new RecordValue();
+		$this->score = new RecordValue();
+    }
     
     public function hasWordId(): bool
     {
-        return isset($this->wordId);
+        return $this->wordId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedPostIndexRecord implements Record {
      */
     public function getWordId() : int
     {
-        return $this->wordId;
+        return $this->wordId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedPostIndexRecord implements Record {
      */
     public function setWordId(int $wordId)
     {
-        $this->wordId = $wordId;
+        $this->wordId->setChanged(true);
+        $this->wordId->setValue($wordId);
     }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedPostIndexRecord implements Record {
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedPostIndexRecord implements Record {
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasInTitle(): bool
     {
-        return isset($this->inTitle);
+        return $this->inTitle->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedPostIndexRecord implements Record {
      */
     public function getInTitle() : int
     {
-        return $this->inTitle;
+        return $this->inTitle->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedPostIndexRecord implements Record {
      */
     public function setInTitle(int $inTitle)
     {
-        $this->inTitle = $inTitle;
+        $this->inTitle->setChanged(true);
+        $this->inTitle->setValue($inTitle);
     }
     
     public function hasScore(): bool
     {
-        return isset($this->score);
+        return $this->score->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedPostIndexRecord implements Record {
      */
     public function getScore() : int
     {
-        return $this->score;
+        return $this->score->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedPostIndexRecord implements Record {
      */
     public function setScore(int $score)
     {
-        $this->score = $score;
+        $this->score->setChanged(true);
+        $this->score->setValue($score);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

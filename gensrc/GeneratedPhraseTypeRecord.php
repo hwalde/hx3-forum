@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPhraseTypeRecord implements Record {
     
-    /** @var $fieldName string */
+    /** @var $fieldName RecordValue */
     protected $fieldName;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $editRows int */
+    /** @var $editRows RecordValue */
     protected $editRows;
     
-    /** @var $product string */
+    /** @var $product RecordValue */
     protected $product;
     
-    /** @var $special int */
+    /** @var $special RecordValue */
     protected $special;
+
+    public function __construct() {
+		$this->fieldName = new RecordValue();
+		$this->title = new RecordValue();
+		$this->editRows = new RecordValue();
+		$this->product = new RecordValue();
+		$this->special = new RecordValue();
+    }
     
     public function hasFieldName(): bool
     {
-        return isset($this->fieldName);
+        return $this->fieldName->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedPhraseTypeRecord implements Record {
      */
     public function getFieldName() : string
     {
-        return $this->fieldName;
+        return $this->fieldName->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedPhraseTypeRecord implements Record {
      */
     public function setFieldName(string $fieldName)
     {
-        $this->fieldName = $fieldName;
+        $this->fieldName->setChanged(true);
+        $this->fieldName->setValue($fieldName);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedPhraseTypeRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedPhraseTypeRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasEditRows(): bool
     {
-        return isset($this->editRows);
+        return $this->editRows->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedPhraseTypeRecord implements Record {
      */
     public function getEditRows() : int
     {
-        return $this->editRows;
+        return $this->editRows->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedPhraseTypeRecord implements Record {
      */
     public function setEditRows(int $editRows)
     {
-        $this->editRows = $editRows;
+        $this->editRows->setChanged(true);
+        $this->editRows->setValue($editRows);
     }
     
     public function hasProduct(): bool
     {
-        return isset($this->product);
+        return $this->product->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedPhraseTypeRecord implements Record {
      */
     public function getProduct() : string
     {
-        return $this->product;
+        return $this->product->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedPhraseTypeRecord implements Record {
      */
     public function setProduct(string $product)
     {
-        $this->product = $product;
+        $this->product->setChanged(true);
+        $this->product->setValue($product);
     }
     
     public function hasSpecial(): bool
     {
-        return isset($this->special);
+        return $this->special->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedPhraseTypeRecord implements Record {
      */
     public function getSpecial() : int
     {
-        return $this->special;
+        return $this->special->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedPhraseTypeRecord implements Record {
      */
     public function setSpecial(int $special)
     {
-        $this->special = $special;
+        $this->special->setChanged(true);
+        $this->special->setValue($special);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,26 +9,34 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedVbSeoServiceUpdateRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $sThreadId int */
+    /** @var $sThreadId RecordValue */
     protected $sThreadId;
     
-    /** @var $sUpdated int */
+    /** @var $sUpdated RecordValue */
     protected $sUpdated;
     
-    /** @var $sDateLine int|null */
+    /** @var $sDateLine RecordValue */
     protected $sDateLine;
     
-    /** @var $sType int */
+    /** @var $sType RecordValue */
     protected $sType;
+
+    public function __construct() {
+		$this->sThreadId = new RecordValue();
+		$this->sUpdated = new RecordValue();
+		$this->sDateLine = new RecordValue();
+		$this->sType = new RecordValue();
+    }
     
     public function hasSThreadId(): bool
     {
-        return isset($this->sThreadId);
+        return $this->sThreadId->hasBeenSet();
     }    
 
     /**
@@ -36,7 +44,7 @@ class GeneratedVbSeoServiceUpdateRecord extends AbstractUpdateableRecord impleme
      */
     public function getSThreadId() : int
     {
-        return $this->sThreadId;
+        return $this->sThreadId->getValue();
     }
 
     /**
@@ -44,12 +52,13 @@ class GeneratedVbSeoServiceUpdateRecord extends AbstractUpdateableRecord impleme
      */
     public function setSThreadId(int $sThreadId)
     {
-        $this->sThreadId = $sThreadId;
+        $this->sThreadId->setChanged(true);
+        $this->sThreadId->setValue($sThreadId);
     }
     
     public function hasSUpdated(): bool
     {
-        return isset($this->sUpdated);
+        return $this->sUpdated->hasBeenSet();
     }    
 
     /**
@@ -57,7 +66,7 @@ class GeneratedVbSeoServiceUpdateRecord extends AbstractUpdateableRecord impleme
      */
     public function getSUpdated() : int
     {
-        return $this->sUpdated;
+        return $this->sUpdated->getValue();
     }
 
     /**
@@ -65,12 +74,13 @@ class GeneratedVbSeoServiceUpdateRecord extends AbstractUpdateableRecord impleme
      */
     public function setSUpdated(int $sUpdated)
     {
-        $this->sUpdated = $sUpdated;
+        $this->sUpdated->setChanged(true);
+        $this->sUpdated->setValue($sUpdated);
     }
     
     public function hasSDateLine(): bool
     {
-        return isset($this->sDateLine);
+        return $this->sDateLine->hasBeenSet();
     }    
 
     /**
@@ -78,7 +88,7 @@ class GeneratedVbSeoServiceUpdateRecord extends AbstractUpdateableRecord impleme
      */
     public function getSDateLine() : ?int
     {
-        return $this->sDateLine;
+        return $this->sDateLine->getValue();
     }
 
     /**
@@ -86,12 +96,13 @@ class GeneratedVbSeoServiceUpdateRecord extends AbstractUpdateableRecord impleme
      */
     public function setSDateLine(?int $sDateLine)
     {
-        $this->sDateLine = $sDateLine;
+        $this->sDateLine->setChanged(true);
+        $this->sDateLine->setValue($sDateLine);
     }
     
     public function hasSType(): bool
     {
-        return isset($this->sType);
+        return $this->sType->hasBeenSet();
     }    
 
     /**
@@ -99,7 +110,7 @@ class GeneratedVbSeoServiceUpdateRecord extends AbstractUpdateableRecord impleme
      */
     public function getSType() : int
     {
-        return $this->sType;
+        return $this->sType->getValue();
     }
 
     /**
@@ -107,9 +118,9 @@ class GeneratedVbSeoServiceUpdateRecord extends AbstractUpdateableRecord impleme
      */
     public function setSType(int $sType)
     {
-        $this->sType = $sType;
+        $this->sType->setChanged(true);
+        $this->sType->setValue($sType);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

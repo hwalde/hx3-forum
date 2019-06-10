@@ -9,61 +9,81 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPictureRecord implements Record {
     
-    /** @var $pictureId int */
+    /** @var $pictureId RecordValue */
     protected $pictureId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $caption string|null */
+    /** @var $caption RecordValue */
     protected $caption;
     
-    /** @var $extension string */
+    /** @var $extension RecordValue */
     protected $extension;
     
-    /** @var $fileData string|null */
+    /** @var $fileData RecordValue */
     protected $fileData;
     
-    /** @var $fileSize int */
+    /** @var $fileSize RecordValue */
     protected $fileSize;
     
-    /** @var $width int */
+    /** @var $width RecordValue */
     protected $width;
     
-    /** @var $height int */
+    /** @var $height RecordValue */
     protected $height;
     
-    /** @var $thumbnail string|null */
+    /** @var $thumbnail RecordValue */
     protected $thumbnail;
     
-    /** @var $thumbnailFileSize int */
+    /** @var $thumbnailFileSize RecordValue */
     protected $thumbnailFileSize;
     
-    /** @var $thumbnailWidth int */
+    /** @var $thumbnailWidth RecordValue */
     protected $thumbnailWidth;
     
-    /** @var $thumbnailHeight int */
+    /** @var $thumbnailHeight RecordValue */
     protected $thumbnailHeight;
     
-    /** @var $thumbnailDateline int */
+    /** @var $thumbnailDateline RecordValue */
     protected $thumbnailDateline;
     
-    /** @var $idHash string */
+    /** @var $idHash RecordValue */
     protected $idHash;
     
-    /** @var $reportThreadId int */
+    /** @var $reportThreadId RecordValue */
     protected $reportThreadId;
     
-    /** @var $state string */
+    /** @var $state RecordValue */
     protected $state;
+
+    public function __construct() {
+		$this->pictureId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->caption = new RecordValue();
+		$this->extension = new RecordValue();
+		$this->fileData = new RecordValue();
+		$this->fileSize = new RecordValue();
+		$this->width = new RecordValue();
+		$this->height = new RecordValue();
+		$this->thumbnail = new RecordValue();
+		$this->thumbnailFileSize = new RecordValue();
+		$this->thumbnailWidth = new RecordValue();
+		$this->thumbnailHeight = new RecordValue();
+		$this->thumbnailDateline = new RecordValue();
+		$this->idHash = new RecordValue();
+		$this->reportThreadId = new RecordValue();
+		$this->state = new RecordValue();
+    }
     
     public function hasPictureId(): bool
     {
-        return isset($this->pictureId);
+        return $this->pictureId->hasBeenSet();
     }    
 
     /**
@@ -71,7 +91,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getPictureId() : int
     {
-        return $this->pictureId;
+        return $this->pictureId->getValue();
     }
 
     /**
@@ -79,12 +99,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setPictureId(int $pictureId)
     {
-        $this->pictureId = $pictureId;
+        $this->pictureId->setChanged(true);
+        $this->pictureId->setValue($pictureId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -92,7 +113,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -100,12 +121,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasCaption(): bool
     {
-        return isset($this->caption);
+        return $this->caption->hasBeenSet();
     }    
 
     /**
@@ -113,7 +135,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getCaption() : ?string
     {
-        return $this->caption;
+        return $this->caption->getValue();
     }
 
     /**
@@ -121,12 +143,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setCaption(?string $caption)
     {
-        $this->caption = $caption;
+        $this->caption->setChanged(true);
+        $this->caption->setValue($caption);
     }
     
     public function hasExtension(): bool
     {
-        return isset($this->extension);
+        return $this->extension->hasBeenSet();
     }    
 
     /**
@@ -134,7 +157,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getExtension() : string
     {
-        return $this->extension;
+        return $this->extension->getValue();
     }
 
     /**
@@ -142,12 +165,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setExtension(string $extension)
     {
-        $this->extension = $extension;
+        $this->extension->setChanged(true);
+        $this->extension->setValue($extension);
     }
     
     public function hasFileData(): bool
     {
-        return isset($this->fileData);
+        return $this->fileData->hasBeenSet();
     }    
 
     /**
@@ -155,7 +179,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getFileData() : ?string
     {
-        return $this->fileData;
+        return $this->fileData->getValue();
     }
 
     /**
@@ -163,12 +187,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setFileData(?string $fileData)
     {
-        $this->fileData = $fileData;
+        $this->fileData->setChanged(true);
+        $this->fileData->setValue($fileData);
     }
     
     public function hasFileSize(): bool
     {
-        return isset($this->fileSize);
+        return $this->fileSize->hasBeenSet();
     }    
 
     /**
@@ -176,7 +201,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getFileSize() : int
     {
-        return $this->fileSize;
+        return $this->fileSize->getValue();
     }
 
     /**
@@ -184,12 +209,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setFileSize(int $fileSize)
     {
-        $this->fileSize = $fileSize;
+        $this->fileSize->setChanged(true);
+        $this->fileSize->setValue($fileSize);
     }
     
     public function hasWidth(): bool
     {
-        return isset($this->width);
+        return $this->width->hasBeenSet();
     }    
 
     /**
@@ -197,7 +223,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getWidth() : int
     {
-        return $this->width;
+        return $this->width->getValue();
     }
 
     /**
@@ -205,12 +231,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setWidth(int $width)
     {
-        $this->width = $width;
+        $this->width->setChanged(true);
+        $this->width->setValue($width);
     }
     
     public function hasHeight(): bool
     {
-        return isset($this->height);
+        return $this->height->hasBeenSet();
     }    
 
     /**
@@ -218,7 +245,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getHeight() : int
     {
-        return $this->height;
+        return $this->height->getValue();
     }
 
     /**
@@ -226,12 +253,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setHeight(int $height)
     {
-        $this->height = $height;
+        $this->height->setChanged(true);
+        $this->height->setValue($height);
     }
     
     public function hasThumbnail(): bool
     {
-        return isset($this->thumbnail);
+        return $this->thumbnail->hasBeenSet();
     }    
 
     /**
@@ -239,7 +267,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getThumbnail() : ?string
     {
-        return $this->thumbnail;
+        return $this->thumbnail->getValue();
     }
 
     /**
@@ -247,12 +275,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setThumbnail(?string $thumbnail)
     {
-        $this->thumbnail = $thumbnail;
+        $this->thumbnail->setChanged(true);
+        $this->thumbnail->setValue($thumbnail);
     }
     
     public function hasThumbnailFileSize(): bool
     {
-        return isset($this->thumbnailFileSize);
+        return $this->thumbnailFileSize->hasBeenSet();
     }    
 
     /**
@@ -260,7 +289,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getThumbnailFileSize() : int
     {
-        return $this->thumbnailFileSize;
+        return $this->thumbnailFileSize->getValue();
     }
 
     /**
@@ -268,12 +297,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setThumbnailFileSize(int $thumbnailFileSize)
     {
-        $this->thumbnailFileSize = $thumbnailFileSize;
+        $this->thumbnailFileSize->setChanged(true);
+        $this->thumbnailFileSize->setValue($thumbnailFileSize);
     }
     
     public function hasThumbnailWidth(): bool
     {
-        return isset($this->thumbnailWidth);
+        return $this->thumbnailWidth->hasBeenSet();
     }    
 
     /**
@@ -281,7 +311,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getThumbnailWidth() : int
     {
-        return $this->thumbnailWidth;
+        return $this->thumbnailWidth->getValue();
     }
 
     /**
@@ -289,12 +319,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setThumbnailWidth(int $thumbnailWidth)
     {
-        $this->thumbnailWidth = $thumbnailWidth;
+        $this->thumbnailWidth->setChanged(true);
+        $this->thumbnailWidth->setValue($thumbnailWidth);
     }
     
     public function hasThumbnailHeight(): bool
     {
-        return isset($this->thumbnailHeight);
+        return $this->thumbnailHeight->hasBeenSet();
     }    
 
     /**
@@ -302,7 +333,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getThumbnailHeight() : int
     {
-        return $this->thumbnailHeight;
+        return $this->thumbnailHeight->getValue();
     }
 
     /**
@@ -310,12 +341,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setThumbnailHeight(int $thumbnailHeight)
     {
-        $this->thumbnailHeight = $thumbnailHeight;
+        $this->thumbnailHeight->setChanged(true);
+        $this->thumbnailHeight->setValue($thumbnailHeight);
     }
     
     public function hasThumbnailDateline(): bool
     {
-        return isset($this->thumbnailDateline);
+        return $this->thumbnailDateline->hasBeenSet();
     }    
 
     /**
@@ -323,7 +355,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getThumbnailDateline() : int
     {
-        return $this->thumbnailDateline;
+        return $this->thumbnailDateline->getValue();
     }
 
     /**
@@ -331,12 +363,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setThumbnailDateline(int $thumbnailDateline)
     {
-        $this->thumbnailDateline = $thumbnailDateline;
+        $this->thumbnailDateline->setChanged(true);
+        $this->thumbnailDateline->setValue($thumbnailDateline);
     }
     
     public function hasIdHash(): bool
     {
-        return isset($this->idHash);
+        return $this->idHash->hasBeenSet();
     }    
 
     /**
@@ -344,7 +377,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getIdHash() : string
     {
-        return $this->idHash;
+        return $this->idHash->getValue();
     }
 
     /**
@@ -352,12 +385,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setIdHash(string $idHash)
     {
-        $this->idHash = $idHash;
+        $this->idHash->setChanged(true);
+        $this->idHash->setValue($idHash);
     }
     
     public function hasReportThreadId(): bool
     {
-        return isset($this->reportThreadId);
+        return $this->reportThreadId->hasBeenSet();
     }    
 
     /**
@@ -365,7 +399,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getReportThreadId() : int
     {
-        return $this->reportThreadId;
+        return $this->reportThreadId->getValue();
     }
 
     /**
@@ -373,12 +407,13 @@ class GeneratedPictureRecord implements Record {
      */
     public function setReportThreadId(int $reportThreadId)
     {
-        $this->reportThreadId = $reportThreadId;
+        $this->reportThreadId->setChanged(true);
+        $this->reportThreadId->setValue($reportThreadId);
     }
     
     public function hasState(): bool
     {
-        return isset($this->state);
+        return $this->state->hasBeenSet();
     }    
 
     /**
@@ -386,7 +421,7 @@ class GeneratedPictureRecord implements Record {
      */
     public function getState() : string
     {
-        return $this->state;
+        return $this->state->getValue();
     }
 
     /**
@@ -394,9 +429,9 @@ class GeneratedPictureRecord implements Record {
      */
     public function setState(string $state)
     {
-        $this->state = $state;
+        $this->state->setChanged(true);
+        $this->state->setValue($state);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

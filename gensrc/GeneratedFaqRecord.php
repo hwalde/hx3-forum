@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedFaqRecord implements Record {
     
-    /** @var $faqName string */
+    /** @var $faqName RecordValue */
     protected $faqName;
     
-    /** @var $faqParent string */
+    /** @var $faqParent RecordValue */
     protected $faqParent;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $volatile int */
+    /** @var $volatile RecordValue */
     protected $volatile;
     
-    /** @var $product string */
+    /** @var $product RecordValue */
     protected $product;
+
+    public function __construct() {
+		$this->faqName = new RecordValue();
+		$this->faqParent = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->volatile = new RecordValue();
+		$this->product = new RecordValue();
+    }
     
     public function hasFaqName(): bool
     {
-        return isset($this->faqName);
+        return $this->faqName->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedFaqRecord implements Record {
      */
     public function getFaqName() : string
     {
-        return $this->faqName;
+        return $this->faqName->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedFaqRecord implements Record {
      */
     public function setFaqName(string $faqName)
     {
-        $this->faqName = $faqName;
+        $this->faqName->setChanged(true);
+        $this->faqName->setValue($faqName);
     }
     
     public function hasFaqParent(): bool
     {
-        return isset($this->faqParent);
+        return $this->faqParent->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedFaqRecord implements Record {
      */
     public function getFaqParent() : string
     {
-        return $this->faqParent;
+        return $this->faqParent->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedFaqRecord implements Record {
      */
     public function setFaqParent(string $faqParent)
     {
-        $this->faqParent = $faqParent;
+        $this->faqParent->setChanged(true);
+        $this->faqParent->setValue($faqParent);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedFaqRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedFaqRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasVolatile(): bool
     {
-        return isset($this->volatile);
+        return $this->volatile->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedFaqRecord implements Record {
      */
     public function getVolatile() : int
     {
-        return $this->volatile;
+        return $this->volatile->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedFaqRecord implements Record {
      */
     public function setVolatile(int $volatile)
     {
-        $this->volatile = $volatile;
+        $this->volatile->setChanged(true);
+        $this->volatile->setValue($volatile);
     }
     
     public function hasProduct(): bool
     {
-        return isset($this->product);
+        return $this->product->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedFaqRecord implements Record {
      */
     public function getProduct() : string
     {
-        return $this->product;
+        return $this->product->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedFaqRecord implements Record {
      */
     public function setProduct(string $product)
     {
-        $this->product = $product;
+        $this->product->setChanged(true);
+        $this->product->setValue($product);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

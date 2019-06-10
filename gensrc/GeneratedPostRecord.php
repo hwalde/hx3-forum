@@ -9,67 +9,89 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPostRecord implements Record {
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $parentId int */
+    /** @var $parentId RecordValue */
     protected $parentId;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $pageText string */
+    /** @var $pageText RecordValue */
     protected $pageText;
     
-    /** @var $allowSmilie int */
+    /** @var $allowSmilie RecordValue */
     protected $allowSmilie;
     
-    /** @var $showSignature int */
+    /** @var $showSignature RecordValue */
     protected $showSignature;
     
-    /** @var $ipAddress string */
+    /** @var $ipAddress RecordValue */
     protected $ipAddress;
     
-    /** @var $iconId int */
+    /** @var $iconId RecordValue */
     protected $iconId;
     
-    /** @var $visible int */
+    /** @var $visible RecordValue */
     protected $visible;
     
-    /** @var $attach int */
+    /** @var $attach RecordValue */
     protected $attach;
     
-    /** @var $importThreadId int */
+    /** @var $importThreadId RecordValue */
     protected $importThreadId;
     
-    /** @var $importpostId int */
+    /** @var $importpostId RecordValue */
     protected $importpostId;
     
-    /** @var $infraction int|null */
+    /** @var $infraction RecordValue */
     protected $infraction;
     
-    /** @var $reportThreadId int|null */
+    /** @var $reportThreadId RecordValue */
     protected $reportThreadId;
+
+    public function __construct() {
+		$this->postId = new RecordValue();
+		$this->threadId = new RecordValue();
+		$this->parentId = new RecordValue();
+		$this->userName = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->pageText = new RecordValue();
+		$this->allowSmilie = new RecordValue();
+		$this->showSignature = new RecordValue();
+		$this->ipAddress = new RecordValue();
+		$this->iconId = new RecordValue();
+		$this->visible = new RecordValue();
+		$this->attach = new RecordValue();
+		$this->importThreadId = new RecordValue();
+		$this->importpostId = new RecordValue();
+		$this->infraction = new RecordValue();
+		$this->reportThreadId = new RecordValue();
+    }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -77,7 +99,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -85,12 +107,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -98,7 +121,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -106,12 +129,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasParentId(): bool
     {
-        return isset($this->parentId);
+        return $this->parentId->hasBeenSet();
     }    
 
     /**
@@ -119,7 +143,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getParentId() : int
     {
-        return $this->parentId;
+        return $this->parentId->getValue();
     }
 
     /**
@@ -127,12 +151,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setParentId(int $parentId)
     {
-        $this->parentId = $parentId;
+        $this->parentId->setChanged(true);
+        $this->parentId->setValue($parentId);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -140,7 +165,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -148,12 +173,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -161,7 +187,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -169,12 +195,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -182,7 +209,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -190,12 +217,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -203,7 +231,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -211,12 +239,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasPageText(): bool
     {
-        return isset($this->pageText);
+        return $this->pageText->hasBeenSet();
     }    
 
     /**
@@ -224,7 +253,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getPageText() : string
     {
-        return $this->pageText;
+        return $this->pageText->getValue();
     }
 
     /**
@@ -232,12 +261,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setPageText(string $pageText)
     {
-        $this->pageText = $pageText;
+        $this->pageText->setChanged(true);
+        $this->pageText->setValue($pageText);
     }
     
     public function hasAllowSmilie(): bool
     {
-        return isset($this->allowSmilie);
+        return $this->allowSmilie->hasBeenSet();
     }    
 
     /**
@@ -245,7 +275,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getAllowSmilie() : int
     {
-        return $this->allowSmilie;
+        return $this->allowSmilie->getValue();
     }
 
     /**
@@ -253,12 +283,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setAllowSmilie(int $allowSmilie)
     {
-        $this->allowSmilie = $allowSmilie;
+        $this->allowSmilie->setChanged(true);
+        $this->allowSmilie->setValue($allowSmilie);
     }
     
     public function hasShowSignature(): bool
     {
-        return isset($this->showSignature);
+        return $this->showSignature->hasBeenSet();
     }    
 
     /**
@@ -266,7 +297,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getShowSignature() : int
     {
-        return $this->showSignature;
+        return $this->showSignature->getValue();
     }
 
     /**
@@ -274,12 +305,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setShowSignature(int $showSignature)
     {
-        $this->showSignature = $showSignature;
+        $this->showSignature->setChanged(true);
+        $this->showSignature->setValue($showSignature);
     }
     
     public function hasIpAddress(): bool
     {
-        return isset($this->ipAddress);
+        return $this->ipAddress->hasBeenSet();
     }    
 
     /**
@@ -287,7 +319,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getIpAddress() : string
     {
-        return $this->ipAddress;
+        return $this->ipAddress->getValue();
     }
 
     /**
@@ -295,12 +327,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setIpAddress(string $ipAddress)
     {
-        $this->ipAddress = $ipAddress;
+        $this->ipAddress->setChanged(true);
+        $this->ipAddress->setValue($ipAddress);
     }
     
     public function hasIconId(): bool
     {
-        return isset($this->iconId);
+        return $this->iconId->hasBeenSet();
     }    
 
     /**
@@ -308,7 +341,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getIconId() : int
     {
-        return $this->iconId;
+        return $this->iconId->getValue();
     }
 
     /**
@@ -316,12 +349,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setIconId(int $iconId)
     {
-        $this->iconId = $iconId;
+        $this->iconId->setChanged(true);
+        $this->iconId->setValue($iconId);
     }
     
     public function hasVisible(): bool
     {
-        return isset($this->visible);
+        return $this->visible->hasBeenSet();
     }    
 
     /**
@@ -329,7 +363,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getVisible() : int
     {
-        return $this->visible;
+        return $this->visible->getValue();
     }
 
     /**
@@ -337,12 +371,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setVisible(int $visible)
     {
-        $this->visible = $visible;
+        $this->visible->setChanged(true);
+        $this->visible->setValue($visible);
     }
     
     public function hasAttach(): bool
     {
-        return isset($this->attach);
+        return $this->attach->hasBeenSet();
     }    
 
     /**
@@ -350,7 +385,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getAttach() : int
     {
-        return $this->attach;
+        return $this->attach->getValue();
     }
 
     /**
@@ -358,12 +393,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setAttach(int $attach)
     {
-        $this->attach = $attach;
+        $this->attach->setChanged(true);
+        $this->attach->setValue($attach);
     }
     
     public function hasImportThreadId(): bool
     {
-        return isset($this->importThreadId);
+        return $this->importThreadId->hasBeenSet();
     }    
 
     /**
@@ -371,7 +407,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getImportThreadId() : int
     {
-        return $this->importThreadId;
+        return $this->importThreadId->getValue();
     }
 
     /**
@@ -379,12 +415,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setImportThreadId(int $importThreadId)
     {
-        $this->importThreadId = $importThreadId;
+        $this->importThreadId->setChanged(true);
+        $this->importThreadId->setValue($importThreadId);
     }
     
     public function hasImportpostId(): bool
     {
-        return isset($this->importpostId);
+        return $this->importpostId->hasBeenSet();
     }    
 
     /**
@@ -392,7 +429,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getImportpostId() : int
     {
-        return $this->importpostId;
+        return $this->importpostId->getValue();
     }
 
     /**
@@ -400,12 +437,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setImportpostId(int $importpostId)
     {
-        $this->importpostId = $importpostId;
+        $this->importpostId->setChanged(true);
+        $this->importpostId->setValue($importpostId);
     }
     
     public function hasInfraction(): bool
     {
-        return isset($this->infraction);
+        return $this->infraction->hasBeenSet();
     }    
 
     /**
@@ -413,7 +451,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getInfraction() : ?int
     {
-        return $this->infraction;
+        return $this->infraction->getValue();
     }
 
     /**
@@ -421,12 +459,13 @@ class GeneratedPostRecord implements Record {
      */
     public function setInfraction(?int $infraction)
     {
-        $this->infraction = $infraction;
+        $this->infraction->setChanged(true);
+        $this->infraction->setValue($infraction);
     }
     
     public function hasReportThreadId(): bool
     {
-        return isset($this->reportThreadId);
+        return $this->reportThreadId->hasBeenSet();
     }    
 
     /**
@@ -434,7 +473,7 @@ class GeneratedPostRecord implements Record {
      */
     public function getReportThreadId() : ?int
     {
-        return $this->reportThreadId;
+        return $this->reportThreadId->getValue();
     }
 
     /**
@@ -442,9 +481,9 @@ class GeneratedPostRecord implements Record {
      */
     public function setReportThreadId(?int $reportThreadId)
     {
-        $this->reportThreadId = $reportThreadId;
+        $this->reportThreadId->setChanged(true);
+        $this->reportThreadId->setValue($reportThreadId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueSearchResultRecord implements Record {
     
-    /** @var $issueSearchId int */
+    /** @var $issueSearchId RecordValue */
     protected $issueSearchId;
     
-    /** @var $issueId int */
+    /** @var $issueId RecordValue */
     protected $issueId;
     
-    /** @var $offset int */
+    /** @var $offset RecordValue */
     protected $offset;
     
-    /** @var $groupId string */
+    /** @var $groupId RecordValue */
     protected $groupId;
+
+    public function __construct() {
+		$this->issueSearchId = new RecordValue();
+		$this->issueId = new RecordValue();
+		$this->offset = new RecordValue();
+		$this->groupId = new RecordValue();
+    }
     
     public function hasIssueSearchId(): bool
     {
-        return isset($this->issueSearchId);
+        return $this->issueSearchId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedPtIssueSearchResultRecord implements Record {
      */
     public function getIssueSearchId() : int
     {
-        return $this->issueSearchId;
+        return $this->issueSearchId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedPtIssueSearchResultRecord implements Record {
      */
     public function setIssueSearchId(int $issueSearchId)
     {
-        $this->issueSearchId = $issueSearchId;
+        $this->issueSearchId->setChanged(true);
+        $this->issueSearchId->setValue($issueSearchId);
     }
     
     public function hasIssueId(): bool
     {
-        return isset($this->issueId);
+        return $this->issueId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedPtIssueSearchResultRecord implements Record {
      */
     public function getIssueId() : int
     {
-        return $this->issueId;
+        return $this->issueId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedPtIssueSearchResultRecord implements Record {
      */
     public function setIssueId(int $issueId)
     {
-        $this->issueId = $issueId;
+        $this->issueId->setChanged(true);
+        $this->issueId->setValue($issueId);
     }
     
     public function hasOffset(): bool
     {
-        return isset($this->offset);
+        return $this->offset->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedPtIssueSearchResultRecord implements Record {
      */
     public function getOffset() : int
     {
-        return $this->offset;
+        return $this->offset->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedPtIssueSearchResultRecord implements Record {
      */
     public function setOffset(int $offset)
     {
-        $this->offset = $offset;
+        $this->offset->setChanged(true);
+        $this->offset->setValue($offset);
     }
     
     public function hasGroupId(): bool
     {
-        return isset($this->groupId);
+        return $this->groupId->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedPtIssueSearchResultRecord implements Record {
      */
     public function getGroupId() : string
     {
-        return $this->groupId;
+        return $this->groupId->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedPtIssueSearchResultRecord implements Record {
      */
     public function setGroupId(string $groupId)
     {
-        $this->groupId = $groupId;
+        $this->groupId->setChanged(true);
+        $this->groupId->setValue($groupId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

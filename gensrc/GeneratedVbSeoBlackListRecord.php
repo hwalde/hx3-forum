@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedVbSeoBlackListRecord implements Record {
     
-    /** @var $lDomain string */
+    /** @var $lDomain RecordValue */
     protected $lDomain;
     
-    /** @var $lType int */
+    /** @var $lType RecordValue */
     protected $lType;
     
-    /** @var $lDateLine int */
+    /** @var $lDateLine RecordValue */
     protected $lDateLine;
     
-    /** @var $lHits int */
+    /** @var $lHits RecordValue */
     protected $lHits;
     
-    /** @var $lDeleted int */
+    /** @var $lDeleted RecordValue */
     protected $lDeleted;
+
+    public function __construct() {
+		$this->lDomain = new RecordValue();
+		$this->lType = new RecordValue();
+		$this->lDateLine = new RecordValue();
+		$this->lHits = new RecordValue();
+		$this->lDeleted = new RecordValue();
+    }
     
     public function hasLDomain(): bool
     {
-        return isset($this->lDomain);
+        return $this->lDomain->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedVbSeoBlackListRecord implements Record {
      */
     public function getLDomain() : string
     {
-        return $this->lDomain;
+        return $this->lDomain->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedVbSeoBlackListRecord implements Record {
      */
     public function setLDomain(string $lDomain)
     {
-        $this->lDomain = $lDomain;
+        $this->lDomain->setChanged(true);
+        $this->lDomain->setValue($lDomain);
     }
     
     public function hasLType(): bool
     {
-        return isset($this->lType);
+        return $this->lType->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedVbSeoBlackListRecord implements Record {
      */
     public function getLType() : int
     {
-        return $this->lType;
+        return $this->lType->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedVbSeoBlackListRecord implements Record {
      */
     public function setLType(int $lType)
     {
-        $this->lType = $lType;
+        $this->lType->setChanged(true);
+        $this->lType->setValue($lType);
     }
     
     public function hasLDateLine(): bool
     {
-        return isset($this->lDateLine);
+        return $this->lDateLine->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedVbSeoBlackListRecord implements Record {
      */
     public function getLDateLine() : int
     {
-        return $this->lDateLine;
+        return $this->lDateLine->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedVbSeoBlackListRecord implements Record {
      */
     public function setLDateLine(int $lDateLine)
     {
-        $this->lDateLine = $lDateLine;
+        $this->lDateLine->setChanged(true);
+        $this->lDateLine->setValue($lDateLine);
     }
     
     public function hasLHits(): bool
     {
-        return isset($this->lHits);
+        return $this->lHits->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedVbSeoBlackListRecord implements Record {
      */
     public function getLHits() : int
     {
-        return $this->lHits;
+        return $this->lHits->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedVbSeoBlackListRecord implements Record {
      */
     public function setLHits(int $lHits)
     {
-        $this->lHits = $lHits;
+        $this->lHits->setChanged(true);
+        $this->lHits->setValue($lHits);
     }
     
     public function hasLDeleted(): bool
     {
-        return isset($this->lDeleted);
+        return $this->lDeleted->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedVbSeoBlackListRecord implements Record {
      */
     public function getLDeleted() : int
     {
-        return $this->lDeleted;
+        return $this->lDeleted->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedVbSeoBlackListRecord implements Record {
      */
     public function setLDeleted(int $lDeleted)
     {
-        $this->lDeleted = $lDeleted;
+        $this->lDeleted->setChanged(true);
+        $this->lDeleted->setValue($lDeleted);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

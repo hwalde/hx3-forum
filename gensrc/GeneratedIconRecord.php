@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedIconRecord implements Record {
     
-    /** @var $iconId int */
+    /** @var $iconId RecordValue */
     protected $iconId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $iconPath string */
+    /** @var $iconPath RecordValue */
     protected $iconPath;
     
-    /** @var $imageCategoryId int */
+    /** @var $imageCategoryId RecordValue */
     protected $imageCategoryId;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
+
+    public function __construct() {
+		$this->iconId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->iconPath = new RecordValue();
+		$this->imageCategoryId = new RecordValue();
+		$this->displayOrder = new RecordValue();
+    }
     
     public function hasIconId(): bool
     {
-        return isset($this->iconId);
+        return $this->iconId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedIconRecord implements Record {
      */
     public function getIconId() : int
     {
-        return $this->iconId;
+        return $this->iconId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedIconRecord implements Record {
      */
     public function setIconId(int $iconId)
     {
-        $this->iconId = $iconId;
+        $this->iconId->setChanged(true);
+        $this->iconId->setValue($iconId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedIconRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedIconRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasIconPath(): bool
     {
-        return isset($this->iconPath);
+        return $this->iconPath->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedIconRecord implements Record {
      */
     public function getIconPath() : string
     {
-        return $this->iconPath;
+        return $this->iconPath->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedIconRecord implements Record {
      */
     public function setIconPath(string $iconPath)
     {
-        $this->iconPath = $iconPath;
+        $this->iconPath->setChanged(true);
+        $this->iconPath->setValue($iconPath);
     }
     
     public function hasImageCategoryId(): bool
     {
-        return isset($this->imageCategoryId);
+        return $this->imageCategoryId->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedIconRecord implements Record {
      */
     public function getImageCategoryId() : int
     {
-        return $this->imageCategoryId;
+        return $this->imageCategoryId->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedIconRecord implements Record {
      */
     public function setImageCategoryId(int $imageCategoryId)
     {
-        $this->imageCategoryId = $imageCategoryId;
+        $this->imageCategoryId->setChanged(true);
+        $this->imageCategoryId->setValue($imageCategoryId);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedIconRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedIconRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

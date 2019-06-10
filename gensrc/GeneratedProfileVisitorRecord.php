@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedProfileVisitorRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $visitorId int */
+    /** @var $visitorId RecordValue */
     protected $visitorId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $visible int */
+    /** @var $visible RecordValue */
     protected $visible;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->visitorId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->visible = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedProfileVisitorRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedProfileVisitorRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasVisitorId(): bool
     {
-        return isset($this->visitorId);
+        return $this->visitorId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedProfileVisitorRecord implements Record {
      */
     public function getVisitorId() : int
     {
-        return $this->visitorId;
+        return $this->visitorId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedProfileVisitorRecord implements Record {
      */
     public function setVisitorId(int $visitorId)
     {
-        $this->visitorId = $visitorId;
+        $this->visitorId->setChanged(true);
+        $this->visitorId->setValue($visitorId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedProfileVisitorRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedProfileVisitorRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasVisible(): bool
     {
-        return isset($this->visible);
+        return $this->visible->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedProfileVisitorRecord implements Record {
      */
     public function getVisible() : int
     {
-        return $this->visible;
+        return $this->visible->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedProfileVisitorRecord implements Record {
      */
     public function setVisible(int $visible)
     {
-        $this->visible = $visible;
+        $this->visible->setChanged(true);
+        $this->visible->setValue($visible);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

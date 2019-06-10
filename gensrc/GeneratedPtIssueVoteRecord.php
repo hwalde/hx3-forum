@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueVoteRecord implements Record {
     
-    /** @var $issueVoteId int */
+    /** @var $issueVoteId RecordValue */
     protected $issueVoteId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $ipAddress string */
+    /** @var $ipAddress RecordValue */
     protected $ipAddress;
     
-    /** @var $issueId int */
+    /** @var $issueId RecordValue */
     protected $issueId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $vote string */
+    /** @var $vote RecordValue */
     protected $vote;
+
+    public function __construct() {
+		$this->issueVoteId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->ipAddress = new RecordValue();
+		$this->issueId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->vote = new RecordValue();
+    }
     
     public function hasIssueVoteId(): bool
     {
-        return isset($this->issueVoteId);
+        return $this->issueVoteId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function getIssueVoteId() : int
     {
-        return $this->issueVoteId;
+        return $this->issueVoteId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function setIssueVoteId(int $issueVoteId)
     {
-        $this->issueVoteId = $issueVoteId;
+        $this->issueVoteId->setChanged(true);
+        $this->issueVoteId->setValue($issueVoteId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasIpAddress(): bool
     {
-        return isset($this->ipAddress);
+        return $this->ipAddress->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function getIpAddress() : string
     {
-        return $this->ipAddress;
+        return $this->ipAddress->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function setIpAddress(string $ipAddress)
     {
-        $this->ipAddress = $ipAddress;
+        $this->ipAddress->setChanged(true);
+        $this->ipAddress->setValue($ipAddress);
     }
     
     public function hasIssueId(): bool
     {
-        return isset($this->issueId);
+        return $this->issueId->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function getIssueId() : int
     {
-        return $this->issueId;
+        return $this->issueId->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function setIssueId(int $issueId)
     {
-        $this->issueId = $issueId;
+        $this->issueId->setChanged(true);
+        $this->issueId->setValue($issueId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasVote(): bool
     {
-        return isset($this->vote);
+        return $this->vote->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function getVote() : string
     {
-        return $this->vote;
+        return $this->vote->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedPtIssueVoteRecord implements Record {
      */
     public function setVote(string $vote)
     {
-        $this->vote = $vote;
+        $this->vote->setChanged(true);
+        $this->vote->setValue($vote);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

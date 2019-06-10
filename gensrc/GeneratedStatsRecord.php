@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedStatsRecord implements Record {
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $nUser int */
+    /** @var $nUser RecordValue */
     protected $nUser;
     
-    /** @var $nThread int */
+    /** @var $nThread RecordValue */
     protected $nThread;
     
-    /** @var $nPost int */
+    /** @var $nPost RecordValue */
     protected $nPost;
     
-    /** @var $ausers int */
+    /** @var $ausers RecordValue */
     protected $ausers;
+
+    public function __construct() {
+		$this->dateLine = new RecordValue();
+		$this->nUser = new RecordValue();
+		$this->nThread = new RecordValue();
+		$this->nPost = new RecordValue();
+		$this->ausers = new RecordValue();
+    }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedStatsRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedStatsRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasNUser(): bool
     {
-        return isset($this->nUser);
+        return $this->nUser->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedStatsRecord implements Record {
      */
     public function getNUser() : int
     {
-        return $this->nUser;
+        return $this->nUser->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedStatsRecord implements Record {
      */
     public function setNUser(int $nUser)
     {
-        $this->nUser = $nUser;
+        $this->nUser->setChanged(true);
+        $this->nUser->setValue($nUser);
     }
     
     public function hasNThread(): bool
     {
-        return isset($this->nThread);
+        return $this->nThread->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedStatsRecord implements Record {
      */
     public function getNThread() : int
     {
-        return $this->nThread;
+        return $this->nThread->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedStatsRecord implements Record {
      */
     public function setNThread(int $nThread)
     {
-        $this->nThread = $nThread;
+        $this->nThread->setChanged(true);
+        $this->nThread->setValue($nThread);
     }
     
     public function hasNPost(): bool
     {
-        return isset($this->nPost);
+        return $this->nPost->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedStatsRecord implements Record {
      */
     public function getNPost() : int
     {
-        return $this->nPost;
+        return $this->nPost->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedStatsRecord implements Record {
      */
     public function setNPost(int $nPost)
     {
-        $this->nPost = $nPost;
+        $this->nPost->setChanged(true);
+        $this->nPost->setValue($nPost);
     }
     
     public function hasAusers(): bool
     {
-        return isset($this->ausers);
+        return $this->ausers->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedStatsRecord implements Record {
      */
     public function getAusers() : int
     {
-        return $this->ausers;
+        return $this->ausers->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedStatsRecord implements Record {
      */
     public function setAusers(int $ausers)
     {
-        $this->ausers = $ausers;
+        $this->ausers->setChanged(true);
+        $this->ausers->setValue($ausers);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtProjectVersionRecord implements Record {
     
-    /** @var $projectVersionId int */
+    /** @var $projectVersionId RecordValue */
     protected $projectVersionId;
     
-    /** @var $projectId int */
+    /** @var $projectId RecordValue */
     protected $projectId;
     
-    /** @var $versionName string */
+    /** @var $versionName RecordValue */
     protected $versionName;
     
-    /** @var $projectVersionGroupId int */
+    /** @var $projectVersionGroupId RecordValue */
     protected $projectVersionGroupId;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $effectiveOrder int */
+    /** @var $effectiveOrder RecordValue */
     protected $effectiveOrder;
+
+    public function __construct() {
+		$this->projectVersionId = new RecordValue();
+		$this->projectId = new RecordValue();
+		$this->versionName = new RecordValue();
+		$this->projectVersionGroupId = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->effectiveOrder = new RecordValue();
+    }
     
     public function hasProjectVersionId(): bool
     {
-        return isset($this->projectVersionId);
+        return $this->projectVersionId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function getProjectVersionId() : int
     {
-        return $this->projectVersionId;
+        return $this->projectVersionId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function setProjectVersionId(int $projectVersionId)
     {
-        $this->projectVersionId = $projectVersionId;
+        $this->projectVersionId->setChanged(true);
+        $this->projectVersionId->setValue($projectVersionId);
     }
     
     public function hasProjectId(): bool
     {
-        return isset($this->projectId);
+        return $this->projectId->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function getProjectId() : int
     {
-        return $this->projectId;
+        return $this->projectId->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function setProjectId(int $projectId)
     {
-        $this->projectId = $projectId;
+        $this->projectId->setChanged(true);
+        $this->projectId->setValue($projectId);
     }
     
     public function hasVersionName(): bool
     {
-        return isset($this->versionName);
+        return $this->versionName->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function getVersionName() : string
     {
-        return $this->versionName;
+        return $this->versionName->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function setVersionName(string $versionName)
     {
-        $this->versionName = $versionName;
+        $this->versionName->setChanged(true);
+        $this->versionName->setValue($versionName);
     }
     
     public function hasProjectVersionGroupId(): bool
     {
-        return isset($this->projectVersionGroupId);
+        return $this->projectVersionGroupId->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function getProjectVersionGroupId() : int
     {
-        return $this->projectVersionGroupId;
+        return $this->projectVersionGroupId->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function setProjectVersionGroupId(int $projectVersionGroupId)
     {
-        $this->projectVersionGroupId = $projectVersionGroupId;
+        $this->projectVersionGroupId->setChanged(true);
+        $this->projectVersionGroupId->setValue($projectVersionGroupId);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasEffectiveOrder(): bool
     {
-        return isset($this->effectiveOrder);
+        return $this->effectiveOrder->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function getEffectiveOrder() : int
     {
-        return $this->effectiveOrder;
+        return $this->effectiveOrder->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedPtProjectVersionRecord implements Record {
      */
     public function setEffectiveOrder(int $effectiveOrder)
     {
-        $this->effectiveOrder = $effectiveOrder;
+        $this->effectiveOrder->setChanged(true);
+        $this->effectiveOrder->setValue($effectiveOrder);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

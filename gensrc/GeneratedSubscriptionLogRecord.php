@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSubscriptionLogRecord implements Record {
     
-    /** @var $subscriptionLogId int */
+    /** @var $subscriptionLogId RecordValue */
     protected $subscriptionLogId;
     
-    /** @var $subscriptionId int */
+    /** @var $subscriptionId RecordValue */
     protected $subscriptionId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $pUserGroupId int */
+    /** @var $pUserGroupId RecordValue */
     protected $pUserGroupId;
     
-    /** @var $status int */
+    /** @var $status RecordValue */
     protected $status;
     
-    /** @var $regDate int */
+    /** @var $regDate RecordValue */
     protected $regDate;
     
-    /** @var $expiryDate int */
+    /** @var $expiryDate RecordValue */
     protected $expiryDate;
+
+    public function __construct() {
+		$this->subscriptionLogId = new RecordValue();
+		$this->subscriptionId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->pUserGroupId = new RecordValue();
+		$this->status = new RecordValue();
+		$this->regDate = new RecordValue();
+		$this->expiryDate = new RecordValue();
+    }
     
     public function hasSubscriptionLogId(): bool
     {
-        return isset($this->subscriptionLogId);
+        return $this->subscriptionLogId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function getSubscriptionLogId() : int
     {
-        return $this->subscriptionLogId;
+        return $this->subscriptionLogId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function setSubscriptionLogId(int $subscriptionLogId)
     {
-        $this->subscriptionLogId = $subscriptionLogId;
+        $this->subscriptionLogId->setChanged(true);
+        $this->subscriptionLogId->setValue($subscriptionLogId);
     }
     
     public function hasSubscriptionId(): bool
     {
-        return isset($this->subscriptionId);
+        return $this->subscriptionId->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function getSubscriptionId() : int
     {
-        return $this->subscriptionId;
+        return $this->subscriptionId->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function setSubscriptionId(int $subscriptionId)
     {
-        $this->subscriptionId = $subscriptionId;
+        $this->subscriptionId->setChanged(true);
+        $this->subscriptionId->setValue($subscriptionId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasPUserGroupId(): bool
     {
-        return isset($this->pUserGroupId);
+        return $this->pUserGroupId->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function getPUserGroupId() : int
     {
-        return $this->pUserGroupId;
+        return $this->pUserGroupId->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function setPUserGroupId(int $pUserGroupId)
     {
-        $this->pUserGroupId = $pUserGroupId;
+        $this->pUserGroupId->setChanged(true);
+        $this->pUserGroupId->setValue($pUserGroupId);
     }
     
     public function hasStatus(): bool
     {
-        return isset($this->status);
+        return $this->status->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function getStatus() : int
     {
-        return $this->status;
+        return $this->status->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function setStatus(int $status)
     {
-        $this->status = $status;
+        $this->status->setChanged(true);
+        $this->status->setValue($status);
     }
     
     public function hasRegDate(): bool
     {
-        return isset($this->regDate);
+        return $this->regDate->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function getRegDate() : int
     {
-        return $this->regDate;
+        return $this->regDate->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function setRegDate(int $regDate)
     {
-        $this->regDate = $regDate;
+        $this->regDate->setChanged(true);
+        $this->regDate->setValue($regDate);
     }
     
     public function hasExpiryDate(): bool
     {
-        return isset($this->expiryDate);
+        return $this->expiryDate->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function getExpiryDate() : int
     {
-        return $this->expiryDate;
+        return $this->expiryDate->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedSubscriptionLogRecord implements Record {
      */
     public function setExpiryDate(int $expiryDate)
     {
-        $this->expiryDate = $expiryDate;
+        $this->expiryDate->setChanged(true);
+        $this->expiryDate->setValue($expiryDate);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

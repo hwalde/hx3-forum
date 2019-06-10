@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtProjectVersionGroupRecord implements Record {
     
-    /** @var $projectVersionGroupId int */
+    /** @var $projectVersionGroupId RecordValue */
     protected $projectVersionGroupId;
     
-    /** @var $projectId int */
+    /** @var $projectId RecordValue */
     protected $projectId;
     
-    /** @var $groupName string */
+    /** @var $groupName RecordValue */
     protected $groupName;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
+
+    public function __construct() {
+		$this->projectVersionGroupId = new RecordValue();
+		$this->projectId = new RecordValue();
+		$this->groupName = new RecordValue();
+		$this->displayOrder = new RecordValue();
+    }
     
     public function hasProjectVersionGroupId(): bool
     {
-        return isset($this->projectVersionGroupId);
+        return $this->projectVersionGroupId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedPtProjectVersionGroupRecord implements Record {
      */
     public function getProjectVersionGroupId() : int
     {
-        return $this->projectVersionGroupId;
+        return $this->projectVersionGroupId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedPtProjectVersionGroupRecord implements Record {
      */
     public function setProjectVersionGroupId(int $projectVersionGroupId)
     {
-        $this->projectVersionGroupId = $projectVersionGroupId;
+        $this->projectVersionGroupId->setChanged(true);
+        $this->projectVersionGroupId->setValue($projectVersionGroupId);
     }
     
     public function hasProjectId(): bool
     {
-        return isset($this->projectId);
+        return $this->projectId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedPtProjectVersionGroupRecord implements Record {
      */
     public function getProjectId() : int
     {
-        return $this->projectId;
+        return $this->projectId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedPtProjectVersionGroupRecord implements Record {
      */
     public function setProjectId(int $projectId)
     {
-        $this->projectId = $projectId;
+        $this->projectId->setChanged(true);
+        $this->projectId->setValue($projectId);
     }
     
     public function hasGroupName(): bool
     {
-        return isset($this->groupName);
+        return $this->groupName->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedPtProjectVersionGroupRecord implements Record {
      */
     public function getGroupName() : string
     {
-        return $this->groupName;
+        return $this->groupName->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedPtProjectVersionGroupRecord implements Record {
      */
     public function setGroupName(string $groupName)
     {
-        $this->groupName = $groupName;
+        $this->groupName->setChanged(true);
+        $this->groupName->setValue($groupName);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedPtProjectVersionGroupRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedPtProjectVersionGroupRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedExternalCacheRecord implements Record {
     
-    /** @var $cacheHash string */
+    /** @var $cacheHash RecordValue */
     protected $cacheHash;
     
-    /** @var $text string|null */
+    /** @var $text RecordValue */
     protected $text;
     
-    /** @var $headers string|null */
+    /** @var $headers RecordValue */
     protected $headers;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
+
+    public function __construct() {
+		$this->cacheHash = new RecordValue();
+		$this->text = new RecordValue();
+		$this->headers = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->forumId = new RecordValue();
+    }
     
     public function hasCacheHash(): bool
     {
-        return isset($this->cacheHash);
+        return $this->cacheHash->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedExternalCacheRecord implements Record {
      */
     public function getCacheHash() : string
     {
-        return $this->cacheHash;
+        return $this->cacheHash->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedExternalCacheRecord implements Record {
      */
     public function setCacheHash(string $cacheHash)
     {
-        $this->cacheHash = $cacheHash;
+        $this->cacheHash->setChanged(true);
+        $this->cacheHash->setValue($cacheHash);
     }
     
     public function hasText(): bool
     {
-        return isset($this->text);
+        return $this->text->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedExternalCacheRecord implements Record {
      */
     public function getText() : ?string
     {
-        return $this->text;
+        return $this->text->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedExternalCacheRecord implements Record {
      */
     public function setText(?string $text)
     {
-        $this->text = $text;
+        $this->text->setChanged(true);
+        $this->text->setValue($text);
     }
     
     public function hasHeaders(): bool
     {
-        return isset($this->headers);
+        return $this->headers->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedExternalCacheRecord implements Record {
      */
     public function getHeaders() : ?string
     {
-        return $this->headers;
+        return $this->headers->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedExternalCacheRecord implements Record {
      */
     public function setHeaders(?string $headers)
     {
-        $this->headers = $headers;
+        $this->headers->setChanged(true);
+        $this->headers->setValue($headers);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedExternalCacheRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedExternalCacheRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedExternalCacheRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedExternalCacheRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,40 +9,53 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAttachmentTypeRecord implements Record {
     
-    /** @var $extension string */
+    /** @var $extension RecordValue */
     protected $extension;
     
-    /** @var $mimeType string */
+    /** @var $mimeType RecordValue */
     protected $mimeType;
     
-    /** @var $size int */
+    /** @var $size RecordValue */
     protected $size;
     
-    /** @var $width int */
+    /** @var $width RecordValue */
     protected $width;
     
-    /** @var $height int */
+    /** @var $height RecordValue */
     protected $height;
     
-    /** @var $enabled int */
+    /** @var $enabled RecordValue */
     protected $enabled;
     
-    /** @var $display int */
+    /** @var $display RecordValue */
     protected $display;
     
-    /** @var $thumbnail int */
+    /** @var $thumbnail RecordValue */
     protected $thumbnail;
     
-    /** @var $newWindow int */
+    /** @var $newWindow RecordValue */
     protected $newWindow;
+
+    public function __construct() {
+		$this->extension = new RecordValue();
+		$this->mimeType = new RecordValue();
+		$this->size = new RecordValue();
+		$this->width = new RecordValue();
+		$this->height = new RecordValue();
+		$this->enabled = new RecordValue();
+		$this->display = new RecordValue();
+		$this->thumbnail = new RecordValue();
+		$this->newWindow = new RecordValue();
+    }
     
     public function hasExtension(): bool
     {
-        return isset($this->extension);
+        return $this->extension->hasBeenSet();
     }    
 
     /**
@@ -50,7 +63,7 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function getExtension() : string
     {
-        return $this->extension;
+        return $this->extension->getValue();
     }
 
     /**
@@ -58,12 +71,13 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function setExtension(string $extension)
     {
-        $this->extension = $extension;
+        $this->extension->setChanged(true);
+        $this->extension->setValue($extension);
     }
     
     public function hasMimeType(): bool
     {
-        return isset($this->mimeType);
+        return $this->mimeType->hasBeenSet();
     }    
 
     /**
@@ -71,7 +85,7 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function getMimeType() : string
     {
-        return $this->mimeType;
+        return $this->mimeType->getValue();
     }
 
     /**
@@ -79,12 +93,13 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function setMimeType(string $mimeType)
     {
-        $this->mimeType = $mimeType;
+        $this->mimeType->setChanged(true);
+        $this->mimeType->setValue($mimeType);
     }
     
     public function hasSize(): bool
     {
-        return isset($this->size);
+        return $this->size->hasBeenSet();
     }    
 
     /**
@@ -92,7 +107,7 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function getSize() : int
     {
-        return $this->size;
+        return $this->size->getValue();
     }
 
     /**
@@ -100,12 +115,13 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function setSize(int $size)
     {
-        $this->size = $size;
+        $this->size->setChanged(true);
+        $this->size->setValue($size);
     }
     
     public function hasWidth(): bool
     {
-        return isset($this->width);
+        return $this->width->hasBeenSet();
     }    
 
     /**
@@ -113,7 +129,7 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function getWidth() : int
     {
-        return $this->width;
+        return $this->width->getValue();
     }
 
     /**
@@ -121,12 +137,13 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function setWidth(int $width)
     {
-        $this->width = $width;
+        $this->width->setChanged(true);
+        $this->width->setValue($width);
     }
     
     public function hasHeight(): bool
     {
-        return isset($this->height);
+        return $this->height->hasBeenSet();
     }    
 
     /**
@@ -134,7 +151,7 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function getHeight() : int
     {
-        return $this->height;
+        return $this->height->getValue();
     }
 
     /**
@@ -142,12 +159,13 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function setHeight(int $height)
     {
-        $this->height = $height;
+        $this->height->setChanged(true);
+        $this->height->setValue($height);
     }
     
     public function hasEnabled(): bool
     {
-        return isset($this->enabled);
+        return $this->enabled->hasBeenSet();
     }    
 
     /**
@@ -155,7 +173,7 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function getEnabled() : int
     {
-        return $this->enabled;
+        return $this->enabled->getValue();
     }
 
     /**
@@ -163,12 +181,13 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function setEnabled(int $enabled)
     {
-        $this->enabled = $enabled;
+        $this->enabled->setChanged(true);
+        $this->enabled->setValue($enabled);
     }
     
     public function hasDisplay(): bool
     {
-        return isset($this->display);
+        return $this->display->hasBeenSet();
     }    
 
     /**
@@ -176,7 +195,7 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function getDisplay() : int
     {
-        return $this->display;
+        return $this->display->getValue();
     }
 
     /**
@@ -184,12 +203,13 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function setDisplay(int $display)
     {
-        $this->display = $display;
+        $this->display->setChanged(true);
+        $this->display->setValue($display);
     }
     
     public function hasThumbnail(): bool
     {
-        return isset($this->thumbnail);
+        return $this->thumbnail->hasBeenSet();
     }    
 
     /**
@@ -197,7 +217,7 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function getThumbnail() : int
     {
-        return $this->thumbnail;
+        return $this->thumbnail->getValue();
     }
 
     /**
@@ -205,12 +225,13 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function setThumbnail(int $thumbnail)
     {
-        $this->thumbnail = $thumbnail;
+        $this->thumbnail->setChanged(true);
+        $this->thumbnail->setValue($thumbnail);
     }
     
     public function hasNewWindow(): bool
     {
-        return isset($this->newWindow);
+        return $this->newWindow->hasBeenSet();
     }    
 
     /**
@@ -218,7 +239,7 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function getNewWindow() : int
     {
-        return $this->newWindow;
+        return $this->newWindow->getValue();
     }
 
     /**
@@ -226,9 +247,9 @@ class GeneratedAttachmentTypeRecord implements Record {
      */
     public function setNewWindow(int $newWindow)
     {
-        $this->newWindow = $newWindow;
+        $this->newWindow->setChanged(true);
+        $this->newWindow->setValue($newWindow);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

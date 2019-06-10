@@ -9,49 +9,65 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedCronRecord implements Record {
     
-    /** @var $cronId int */
+    /** @var $cronId RecordValue */
     protected $cronId;
     
-    /** @var $nextRun int */
+    /** @var $nextRun RecordValue */
     protected $nextRun;
     
-    /** @var $weekDay int */
+    /** @var $weekDay RecordValue */
     protected $weekDay;
     
-    /** @var $day int */
+    /** @var $day RecordValue */
     protected $day;
     
-    /** @var $hour int */
+    /** @var $hour RecordValue */
     protected $hour;
     
-    /** @var $minute string */
+    /** @var $minute RecordValue */
     protected $minute;
     
-    /** @var $fileName string */
+    /** @var $fileName RecordValue */
     protected $fileName;
     
-    /** @var $logLevel int */
+    /** @var $logLevel RecordValue */
     protected $logLevel;
     
-    /** @var $active int */
+    /** @var $active RecordValue */
     protected $active;
     
-    /** @var $varName string */
+    /** @var $varName RecordValue */
     protected $varName;
     
-    /** @var $volatile int */
+    /** @var $volatile RecordValue */
     protected $volatile;
     
-    /** @var $product string */
+    /** @var $product RecordValue */
     protected $product;
+
+    public function __construct() {
+		$this->cronId = new RecordValue();
+		$this->nextRun = new RecordValue();
+		$this->weekDay = new RecordValue();
+		$this->day = new RecordValue();
+		$this->hour = new RecordValue();
+		$this->minute = new RecordValue();
+		$this->fileName = new RecordValue();
+		$this->logLevel = new RecordValue();
+		$this->active = new RecordValue();
+		$this->varName = new RecordValue();
+		$this->volatile = new RecordValue();
+		$this->product = new RecordValue();
+    }
     
     public function hasCronId(): bool
     {
-        return isset($this->cronId);
+        return $this->cronId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +75,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getCronId() : int
     {
-        return $this->cronId;
+        return $this->cronId->getValue();
     }
 
     /**
@@ -67,12 +83,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setCronId(int $cronId)
     {
-        $this->cronId = $cronId;
+        $this->cronId->setChanged(true);
+        $this->cronId->setValue($cronId);
     }
     
     public function hasNextRun(): bool
     {
-        return isset($this->nextRun);
+        return $this->nextRun->hasBeenSet();
     }    
 
     /**
@@ -80,7 +97,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getNextRun() : int
     {
-        return $this->nextRun;
+        return $this->nextRun->getValue();
     }
 
     /**
@@ -88,12 +105,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setNextRun(int $nextRun)
     {
-        $this->nextRun = $nextRun;
+        $this->nextRun->setChanged(true);
+        $this->nextRun->setValue($nextRun);
     }
     
     public function hasWeekDay(): bool
     {
-        return isset($this->weekDay);
+        return $this->weekDay->hasBeenSet();
     }    
 
     /**
@@ -101,7 +119,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getWeekDay() : int
     {
-        return $this->weekDay;
+        return $this->weekDay->getValue();
     }
 
     /**
@@ -109,12 +127,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setWeekDay(int $weekDay)
     {
-        $this->weekDay = $weekDay;
+        $this->weekDay->setChanged(true);
+        $this->weekDay->setValue($weekDay);
     }
     
     public function hasDay(): bool
     {
-        return isset($this->day);
+        return $this->day->hasBeenSet();
     }    
 
     /**
@@ -122,7 +141,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getDay() : int
     {
-        return $this->day;
+        return $this->day->getValue();
     }
 
     /**
@@ -130,12 +149,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setDay(int $day)
     {
-        $this->day = $day;
+        $this->day->setChanged(true);
+        $this->day->setValue($day);
     }
     
     public function hasHour(): bool
     {
-        return isset($this->hour);
+        return $this->hour->hasBeenSet();
     }    
 
     /**
@@ -143,7 +163,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getHour() : int
     {
-        return $this->hour;
+        return $this->hour->getValue();
     }
 
     /**
@@ -151,12 +171,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setHour(int $hour)
     {
-        $this->hour = $hour;
+        $this->hour->setChanged(true);
+        $this->hour->setValue($hour);
     }
     
     public function hasMinute(): bool
     {
-        return isset($this->minute);
+        return $this->minute->hasBeenSet();
     }    
 
     /**
@@ -164,7 +185,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getMinute() : string
     {
-        return $this->minute;
+        return $this->minute->getValue();
     }
 
     /**
@@ -172,12 +193,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setMinute(string $minute)
     {
-        $this->minute = $minute;
+        $this->minute->setChanged(true);
+        $this->minute->setValue($minute);
     }
     
     public function hasFileName(): bool
     {
-        return isset($this->fileName);
+        return $this->fileName->hasBeenSet();
     }    
 
     /**
@@ -185,7 +207,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getFileName() : string
     {
-        return $this->fileName;
+        return $this->fileName->getValue();
     }
 
     /**
@@ -193,12 +215,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setFileName(string $fileName)
     {
-        $this->fileName = $fileName;
+        $this->fileName->setChanged(true);
+        $this->fileName->setValue($fileName);
     }
     
     public function hasLogLevel(): bool
     {
-        return isset($this->logLevel);
+        return $this->logLevel->hasBeenSet();
     }    
 
     /**
@@ -206,7 +229,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getLogLevel() : int
     {
-        return $this->logLevel;
+        return $this->logLevel->getValue();
     }
 
     /**
@@ -214,12 +237,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setLogLevel(int $logLevel)
     {
-        $this->logLevel = $logLevel;
+        $this->logLevel->setChanged(true);
+        $this->logLevel->setValue($logLevel);
     }
     
     public function hasActive(): bool
     {
-        return isset($this->active);
+        return $this->active->hasBeenSet();
     }    
 
     /**
@@ -227,7 +251,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getActive() : int
     {
-        return $this->active;
+        return $this->active->getValue();
     }
 
     /**
@@ -235,12 +259,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setActive(int $active)
     {
-        $this->active = $active;
+        $this->active->setChanged(true);
+        $this->active->setValue($active);
     }
     
     public function hasVarName(): bool
     {
-        return isset($this->varName);
+        return $this->varName->hasBeenSet();
     }    
 
     /**
@@ -248,7 +273,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getVarName() : string
     {
-        return $this->varName;
+        return $this->varName->getValue();
     }
 
     /**
@@ -256,12 +281,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setVarName(string $varName)
     {
-        $this->varName = $varName;
+        $this->varName->setChanged(true);
+        $this->varName->setValue($varName);
     }
     
     public function hasVolatile(): bool
     {
-        return isset($this->volatile);
+        return $this->volatile->hasBeenSet();
     }    
 
     /**
@@ -269,7 +295,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getVolatile() : int
     {
-        return $this->volatile;
+        return $this->volatile->getValue();
     }
 
     /**
@@ -277,12 +303,13 @@ class GeneratedCronRecord implements Record {
      */
     public function setVolatile(int $volatile)
     {
-        $this->volatile = $volatile;
+        $this->volatile->setChanged(true);
+        $this->volatile->setValue($volatile);
     }
     
     public function hasProduct(): bool
     {
-        return isset($this->product);
+        return $this->product->hasBeenSet();
     }    
 
     /**
@@ -290,7 +317,7 @@ class GeneratedCronRecord implements Record {
      */
     public function getProduct() : string
     {
-        return $this->product;
+        return $this->product->getValue();
     }
 
     /**
@@ -298,9 +325,9 @@ class GeneratedCronRecord implements Record {
      */
     public function setProduct(string $product)
     {
-        $this->product = $product;
+        $this->product->setChanged(true);
+        $this->product->setValue($product);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

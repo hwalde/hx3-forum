@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedCalendarCustomFieldRecord implements Record {
     
-    /** @var $calendarCustomFieldId int */
+    /** @var $calendarCustomFieldId RecordValue */
     protected $calendarCustomFieldId;
     
-    /** @var $calendarId int */
+    /** @var $calendarId RecordValue */
     protected $calendarId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $description string */
+    /** @var $description RecordValue */
     protected $description;
     
-    /** @var $options string */
+    /** @var $options RecordValue */
     protected $options;
     
-    /** @var $allowEntry int */
+    /** @var $allowEntry RecordValue */
     protected $allowEntry;
     
-    /** @var $required int */
+    /** @var $required RecordValue */
     protected $required;
     
-    /** @var $length int */
+    /** @var $length RecordValue */
     protected $length;
+
+    public function __construct() {
+		$this->calendarCustomFieldId = new RecordValue();
+		$this->calendarId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->description = new RecordValue();
+		$this->options = new RecordValue();
+		$this->allowEntry = new RecordValue();
+		$this->required = new RecordValue();
+		$this->length = new RecordValue();
+    }
     
     public function hasCalendarCustomFieldId(): bool
     {
-        return isset($this->calendarCustomFieldId);
+        return $this->calendarCustomFieldId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function getCalendarCustomFieldId() : int
     {
-        return $this->calendarCustomFieldId;
+        return $this->calendarCustomFieldId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function setCalendarCustomFieldId(int $calendarCustomFieldId)
     {
-        $this->calendarCustomFieldId = $calendarCustomFieldId;
+        $this->calendarCustomFieldId->setChanged(true);
+        $this->calendarCustomFieldId->setValue($calendarCustomFieldId);
     }
     
     public function hasCalendarId(): bool
     {
-        return isset($this->calendarId);
+        return $this->calendarId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function getCalendarId() : int
     {
-        return $this->calendarId;
+        return $this->calendarId->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function setCalendarId(int $calendarId)
     {
-        $this->calendarId = $calendarId;
+        $this->calendarId->setChanged(true);
+        $this->calendarId->setValue($calendarId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasDescription(): bool
     {
-        return isset($this->description);
+        return $this->description->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function getDescription() : string
     {
-        return $this->description;
+        return $this->description->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function setDescription(string $description)
     {
-        $this->description = $description;
+        $this->description->setChanged(true);
+        $this->description->setValue($description);
     }
     
     public function hasOptions(): bool
     {
-        return isset($this->options);
+        return $this->options->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function getOptions() : string
     {
-        return $this->options;
+        return $this->options->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function setOptions(string $options)
     {
-        $this->options = $options;
+        $this->options->setChanged(true);
+        $this->options->setValue($options);
     }
     
     public function hasAllowEntry(): bool
     {
-        return isset($this->allowEntry);
+        return $this->allowEntry->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function getAllowEntry() : int
     {
-        return $this->allowEntry;
+        return $this->allowEntry->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function setAllowEntry(int $allowEntry)
     {
-        $this->allowEntry = $allowEntry;
+        $this->allowEntry->setChanged(true);
+        $this->allowEntry->setValue($allowEntry);
     }
     
     public function hasRequired(): bool
     {
-        return isset($this->required);
+        return $this->required->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function getRequired() : int
     {
-        return $this->required;
+        return $this->required->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function setRequired(int $required)
     {
-        $this->required = $required;
+        $this->required->setChanged(true);
+        $this->required->setValue($required);
     }
     
     public function hasLength(): bool
     {
-        return isset($this->length);
+        return $this->length->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function getLength() : int
     {
-        return $this->length;
+        return $this->length->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedCalendarCustomFieldRecord implements Record {
      */
     public function setLength(int $length)
     {
-        $this->length = $length;
+        $this->length->setChanged(true);
+        $this->length->setValue($length);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

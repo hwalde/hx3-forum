@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueStatusRecord implements Record {
     
-    /** @var $issueStatusId int */
+    /** @var $issueStatusId RecordValue */
     protected $issueStatusId;
     
-    /** @var $issueTypeId string */
+    /** @var $issueTypeId RecordValue */
     protected $issueTypeId;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $canpetitionFrom int */
+    /** @var $canpetitionFrom RecordValue */
     protected $canpetitionFrom;
+
+    public function __construct() {
+		$this->issueStatusId = new RecordValue();
+		$this->issueTypeId = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->canpetitionFrom = new RecordValue();
+    }
     
     public function hasIssueStatusId(): bool
     {
-        return isset($this->issueStatusId);
+        return $this->issueStatusId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedPtIssueStatusRecord implements Record {
      */
     public function getIssueStatusId() : int
     {
-        return $this->issueStatusId;
+        return $this->issueStatusId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedPtIssueStatusRecord implements Record {
      */
     public function setIssueStatusId(int $issueStatusId)
     {
-        $this->issueStatusId = $issueStatusId;
+        $this->issueStatusId->setChanged(true);
+        $this->issueStatusId->setValue($issueStatusId);
     }
     
     public function hasIssueTypeId(): bool
     {
-        return isset($this->issueTypeId);
+        return $this->issueTypeId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedPtIssueStatusRecord implements Record {
      */
     public function getIssueTypeId() : string
     {
-        return $this->issueTypeId;
+        return $this->issueTypeId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedPtIssueStatusRecord implements Record {
      */
     public function setIssueTypeId(string $issueTypeId)
     {
-        $this->issueTypeId = $issueTypeId;
+        $this->issueTypeId->setChanged(true);
+        $this->issueTypeId->setValue($issueTypeId);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedPtIssueStatusRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedPtIssueStatusRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasCanpetitionFrom(): bool
     {
-        return isset($this->canpetitionFrom);
+        return $this->canpetitionFrom->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedPtIssueStatusRecord implements Record {
      */
     public function getCanpetitionFrom() : int
     {
-        return $this->canpetitionFrom;
+        return $this->canpetitionFrom->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedPtIssueStatusRecord implements Record {
      */
     public function setCanpetitionFrom(int $canpetitionFrom)
     {
-        $this->canpetitionFrom = $canpetitionFrom;
+        $this->canpetitionFrom->setChanged(true);
+        $this->canpetitionFrom->setValue($canpetitionFrom);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

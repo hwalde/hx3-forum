@@ -9,19 +9,25 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedWordRecord implements Record {
     
-    /** @var $wordId int */
+    /** @var $wordId RecordValue */
     protected $wordId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
+
+    public function __construct() {
+		$this->wordId = new RecordValue();
+		$this->title = new RecordValue();
+    }
     
     public function hasWordId(): bool
     {
-        return isset($this->wordId);
+        return $this->wordId->hasBeenSet();
     }    
 
     /**
@@ -29,7 +35,7 @@ class GeneratedWordRecord implements Record {
      */
     public function getWordId() : int
     {
-        return $this->wordId;
+        return $this->wordId->getValue();
     }
 
     /**
@@ -37,12 +43,13 @@ class GeneratedWordRecord implements Record {
      */
     public function setWordId(int $wordId)
     {
-        $this->wordId = $wordId;
+        $this->wordId->setChanged(true);
+        $this->wordId->setValue($wordId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -50,7 +57,7 @@ class GeneratedWordRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -58,9 +65,9 @@ class GeneratedWordRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

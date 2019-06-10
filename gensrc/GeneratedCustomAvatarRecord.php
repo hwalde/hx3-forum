@@ -9,46 +9,61 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedCustomAvatarRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $fileData string */
+    /** @var $fileData RecordValue */
     protected $fileData;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $fileName string */
+    /** @var $fileName RecordValue */
     protected $fileName;
     
-    /** @var $visible int */
+    /** @var $visible RecordValue */
     protected $visible;
     
-    /** @var $fileSize int */
+    /** @var $fileSize RecordValue */
     protected $fileSize;
     
-    /** @var $width int */
+    /** @var $width RecordValue */
     protected $width;
     
-    /** @var $height int */
+    /** @var $height RecordValue */
     protected $height;
     
-    /** @var $fileDataThumb string|null */
+    /** @var $fileDataThumb RecordValue */
     protected $fileDataThumb;
     
-    /** @var $widthThumb int */
+    /** @var $widthThumb RecordValue */
     protected $widthThumb;
     
-    /** @var $heightThumb int */
+    /** @var $heightThumb RecordValue */
     protected $heightThumb;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->fileData = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->fileName = new RecordValue();
+		$this->visible = new RecordValue();
+		$this->fileSize = new RecordValue();
+		$this->width = new RecordValue();
+		$this->height = new RecordValue();
+		$this->fileDataThumb = new RecordValue();
+		$this->widthThumb = new RecordValue();
+		$this->heightThumb = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +71,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -64,12 +79,13 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasFileData(): bool
     {
-        return isset($this->fileData);
+        return $this->fileData->hasBeenSet();
     }    
 
     /**
@@ -77,7 +93,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getFileData() : string
     {
-        return $this->fileData;
+        return $this->fileData->getValue();
     }
 
     /**
@@ -85,12 +101,13 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setFileData(string $fileData)
     {
-        $this->fileData = $fileData;
+        $this->fileData->setChanged(true);
+        $this->fileData->setValue($fileData);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -98,7 +115,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -106,12 +123,13 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasFileName(): bool
     {
-        return isset($this->fileName);
+        return $this->fileName->hasBeenSet();
     }    
 
     /**
@@ -119,7 +137,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getFileName() : string
     {
-        return $this->fileName;
+        return $this->fileName->getValue();
     }
 
     /**
@@ -127,12 +145,13 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setFileName(string $fileName)
     {
-        $this->fileName = $fileName;
+        $this->fileName->setChanged(true);
+        $this->fileName->setValue($fileName);
     }
     
     public function hasVisible(): bool
     {
-        return isset($this->visible);
+        return $this->visible->hasBeenSet();
     }    
 
     /**
@@ -140,7 +159,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getVisible() : int
     {
-        return $this->visible;
+        return $this->visible->getValue();
     }
 
     /**
@@ -148,12 +167,13 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setVisible(int $visible)
     {
-        $this->visible = $visible;
+        $this->visible->setChanged(true);
+        $this->visible->setValue($visible);
     }
     
     public function hasFileSize(): bool
     {
-        return isset($this->fileSize);
+        return $this->fileSize->hasBeenSet();
     }    
 
     /**
@@ -161,7 +181,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getFileSize() : int
     {
-        return $this->fileSize;
+        return $this->fileSize->getValue();
     }
 
     /**
@@ -169,12 +189,13 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setFileSize(int $fileSize)
     {
-        $this->fileSize = $fileSize;
+        $this->fileSize->setChanged(true);
+        $this->fileSize->setValue($fileSize);
     }
     
     public function hasWidth(): bool
     {
-        return isset($this->width);
+        return $this->width->hasBeenSet();
     }    
 
     /**
@@ -182,7 +203,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getWidth() : int
     {
-        return $this->width;
+        return $this->width->getValue();
     }
 
     /**
@@ -190,12 +211,13 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setWidth(int $width)
     {
-        $this->width = $width;
+        $this->width->setChanged(true);
+        $this->width->setValue($width);
     }
     
     public function hasHeight(): bool
     {
-        return isset($this->height);
+        return $this->height->hasBeenSet();
     }    
 
     /**
@@ -203,7 +225,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getHeight() : int
     {
-        return $this->height;
+        return $this->height->getValue();
     }
 
     /**
@@ -211,12 +233,13 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setHeight(int $height)
     {
-        $this->height = $height;
+        $this->height->setChanged(true);
+        $this->height->setValue($height);
     }
     
     public function hasFileDataThumb(): bool
     {
-        return isset($this->fileDataThumb);
+        return $this->fileDataThumb->hasBeenSet();
     }    
 
     /**
@@ -224,7 +247,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getFileDataThumb() : ?string
     {
-        return $this->fileDataThumb;
+        return $this->fileDataThumb->getValue();
     }
 
     /**
@@ -232,12 +255,13 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setFileDataThumb(?string $fileDataThumb)
     {
-        $this->fileDataThumb = $fileDataThumb;
+        $this->fileDataThumb->setChanged(true);
+        $this->fileDataThumb->setValue($fileDataThumb);
     }
     
     public function hasWidthThumb(): bool
     {
-        return isset($this->widthThumb);
+        return $this->widthThumb->hasBeenSet();
     }    
 
     /**
@@ -245,7 +269,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getWidthThumb() : int
     {
-        return $this->widthThumb;
+        return $this->widthThumb->getValue();
     }
 
     /**
@@ -253,12 +277,13 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setWidthThumb(int $widthThumb)
     {
-        $this->widthThumb = $widthThumb;
+        $this->widthThumb->setChanged(true);
+        $this->widthThumb->setValue($widthThumb);
     }
     
     public function hasHeightThumb(): bool
     {
-        return isset($this->heightThumb);
+        return $this->heightThumb->hasBeenSet();
     }    
 
     /**
@@ -266,7 +291,7 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function getHeightThumb() : int
     {
-        return $this->heightThumb;
+        return $this->heightThumb->getValue();
     }
 
     /**
@@ -274,9 +299,9 @@ class GeneratedCustomAvatarRecord implements Record {
      */
     public function setHeightThumb(int $heightThumb)
     {
-        $this->heightThumb = $heightThumb;
+        $this->heightThumb->setChanged(true);
+        $this->heightThumb->setValue($heightThumb);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

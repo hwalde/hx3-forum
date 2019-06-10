@@ -9,40 +9,53 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSubscriptionRecord implements Record {
     
-    /** @var $subscriptionId int */
+    /** @var $subscriptionId RecordValue */
     protected $subscriptionId;
     
-    /** @var $cost string */
+    /** @var $cost RecordValue */
     protected $cost;
     
-    /** @var $forums string */
+    /** @var $forums RecordValue */
     protected $forums;
     
-    /** @var $nUserGroupId int */
+    /** @var $nUserGroupId RecordValue */
     protected $nUserGroupId;
     
-    /** @var $memberGroupIds string */
+    /** @var $memberGroupIds RecordValue */
     protected $memberGroupIds;
     
-    /** @var $active int */
+    /** @var $active RecordValue */
     protected $active;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $options int */
+    /** @var $options RecordValue */
     protected $options;
     
-    /** @var $adminOptions int */
+    /** @var $adminOptions RecordValue */
     protected $adminOptions;
+
+    public function __construct() {
+		$this->subscriptionId = new RecordValue();
+		$this->cost = new RecordValue();
+		$this->forums = new RecordValue();
+		$this->nUserGroupId = new RecordValue();
+		$this->memberGroupIds = new RecordValue();
+		$this->active = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->options = new RecordValue();
+		$this->adminOptions = new RecordValue();
+    }
     
     public function hasSubscriptionId(): bool
     {
-        return isset($this->subscriptionId);
+        return $this->subscriptionId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +63,7 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function getSubscriptionId() : int
     {
-        return $this->subscriptionId;
+        return $this->subscriptionId->getValue();
     }
 
     /**
@@ -58,12 +71,13 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function setSubscriptionId(int $subscriptionId)
     {
-        $this->subscriptionId = $subscriptionId;
+        $this->subscriptionId->setChanged(true);
+        $this->subscriptionId->setValue($subscriptionId);
     }
     
     public function hasCost(): bool
     {
-        return isset($this->cost);
+        return $this->cost->hasBeenSet();
     }    
 
     /**
@@ -71,7 +85,7 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function getCost() : string
     {
-        return $this->cost;
+        return $this->cost->getValue();
     }
 
     /**
@@ -79,12 +93,13 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function setCost(string $cost)
     {
-        $this->cost = $cost;
+        $this->cost->setChanged(true);
+        $this->cost->setValue($cost);
     }
     
     public function hasForums(): bool
     {
-        return isset($this->forums);
+        return $this->forums->hasBeenSet();
     }    
 
     /**
@@ -92,7 +107,7 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function getForums() : string
     {
-        return $this->forums;
+        return $this->forums->getValue();
     }
 
     /**
@@ -100,12 +115,13 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function setForums(string $forums)
     {
-        $this->forums = $forums;
+        $this->forums->setChanged(true);
+        $this->forums->setValue($forums);
     }
     
     public function hasNUserGroupId(): bool
     {
-        return isset($this->nUserGroupId);
+        return $this->nUserGroupId->hasBeenSet();
     }    
 
     /**
@@ -113,7 +129,7 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function getNUserGroupId() : int
     {
-        return $this->nUserGroupId;
+        return $this->nUserGroupId->getValue();
     }
 
     /**
@@ -121,12 +137,13 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function setNUserGroupId(int $nUserGroupId)
     {
-        $this->nUserGroupId = $nUserGroupId;
+        $this->nUserGroupId->setChanged(true);
+        $this->nUserGroupId->setValue($nUserGroupId);
     }
     
     public function hasMemberGroupIds(): bool
     {
-        return isset($this->memberGroupIds);
+        return $this->memberGroupIds->hasBeenSet();
     }    
 
     /**
@@ -134,7 +151,7 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function getMemberGroupIds() : string
     {
-        return $this->memberGroupIds;
+        return $this->memberGroupIds->getValue();
     }
 
     /**
@@ -142,12 +159,13 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function setMemberGroupIds(string $memberGroupIds)
     {
-        $this->memberGroupIds = $memberGroupIds;
+        $this->memberGroupIds->setChanged(true);
+        $this->memberGroupIds->setValue($memberGroupIds);
     }
     
     public function hasActive(): bool
     {
-        return isset($this->active);
+        return $this->active->hasBeenSet();
     }    
 
     /**
@@ -155,7 +173,7 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function getActive() : int
     {
-        return $this->active;
+        return $this->active->getValue();
     }
 
     /**
@@ -163,12 +181,13 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function setActive(int $active)
     {
-        $this->active = $active;
+        $this->active->setChanged(true);
+        $this->active->setValue($active);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -176,7 +195,7 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -184,12 +203,13 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasOptions(): bool
     {
-        return isset($this->options);
+        return $this->options->hasBeenSet();
     }    
 
     /**
@@ -197,7 +217,7 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function getOptions() : int
     {
-        return $this->options;
+        return $this->options->getValue();
     }
 
     /**
@@ -205,12 +225,13 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function setOptions(int $options)
     {
-        $this->options = $options;
+        $this->options->setChanged(true);
+        $this->options->setValue($options);
     }
     
     public function hasAdminOptions(): bool
     {
-        return isset($this->adminOptions);
+        return $this->adminOptions->hasBeenSet();
     }    
 
     /**
@@ -218,7 +239,7 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function getAdminOptions() : int
     {
-        return $this->adminOptions;
+        return $this->adminOptions->getValue();
     }
 
     /**
@@ -226,9 +247,9 @@ class GeneratedSubscriptionRecord implements Record {
      */
     public function setAdminOptions(int $adminOptions)
     {
-        $this->adminOptions = $adminOptions;
+        $this->adminOptions->setChanged(true);
+        $this->adminOptions->setValue($adminOptions);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

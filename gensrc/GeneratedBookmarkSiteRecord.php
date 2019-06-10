@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedBookmarkSiteRecord implements Record {
     
-    /** @var $bookmarkSiteId int */
+    /** @var $bookmarkSiteId RecordValue */
     protected $bookmarkSiteId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $iconPath string */
+    /** @var $iconPath RecordValue */
     protected $iconPath;
     
-    /** @var $active int */
+    /** @var $active RecordValue */
     protected $active;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $url string */
+    /** @var $url RecordValue */
     protected $url;
+
+    public function __construct() {
+		$this->bookmarkSiteId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->iconPath = new RecordValue();
+		$this->active = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->url = new RecordValue();
+    }
     
     public function hasBookmarkSiteId(): bool
     {
-        return isset($this->bookmarkSiteId);
+        return $this->bookmarkSiteId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function getBookmarkSiteId() : int
     {
-        return $this->bookmarkSiteId;
+        return $this->bookmarkSiteId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function setBookmarkSiteId(int $bookmarkSiteId)
     {
-        $this->bookmarkSiteId = $bookmarkSiteId;
+        $this->bookmarkSiteId->setChanged(true);
+        $this->bookmarkSiteId->setValue($bookmarkSiteId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasIconPath(): bool
     {
-        return isset($this->iconPath);
+        return $this->iconPath->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function getIconPath() : string
     {
-        return $this->iconPath;
+        return $this->iconPath->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function setIconPath(string $iconPath)
     {
-        $this->iconPath = $iconPath;
+        $this->iconPath->setChanged(true);
+        $this->iconPath->setValue($iconPath);
     }
     
     public function hasActive(): bool
     {
-        return isset($this->active);
+        return $this->active->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function getActive() : int
     {
-        return $this->active;
+        return $this->active->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function setActive(int $active)
     {
-        $this->active = $active;
+        $this->active->setChanged(true);
+        $this->active->setValue($active);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasUrl(): bool
     {
-        return isset($this->url);
+        return $this->url->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function getUrl() : string
     {
-        return $this->url;
+        return $this->url->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedBookmarkSiteRecord implements Record {
      */
     public function setUrl(string $url)
     {
-        $this->url = $url;
+        $this->url->setChanged(true);
+        $this->url->setValue($url);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

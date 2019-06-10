@@ -9,26 +9,34 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedHumanVerifyRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $hash string */
+    /** @var $hash RecordValue */
     protected $hash;
     
-    /** @var $answer string|null */
+    /** @var $answer RecordValue */
     protected $answer;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $viewed int */
+    /** @var $viewed RecordValue */
     protected $viewed;
+
+    public function __construct() {
+		$this->hash = new RecordValue();
+		$this->answer = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->viewed = new RecordValue();
+    }
     
     public function hasHash(): bool
     {
-        return isset($this->hash);
+        return $this->hash->hasBeenSet();
     }    
 
     /**
@@ -36,7 +44,7 @@ class GeneratedHumanVerifyRecord extends AbstractUpdateableRecord implements Upd
      */
     public function getHash() : string
     {
-        return $this->hash;
+        return $this->hash->getValue();
     }
 
     /**
@@ -44,12 +52,13 @@ class GeneratedHumanVerifyRecord extends AbstractUpdateableRecord implements Upd
      */
     public function setHash(string $hash)
     {
-        $this->hash = $hash;
+        $this->hash->setChanged(true);
+        $this->hash->setValue($hash);
     }
     
     public function hasAnswer(): bool
     {
-        return isset($this->answer);
+        return $this->answer->hasBeenSet();
     }    
 
     /**
@@ -57,7 +66,7 @@ class GeneratedHumanVerifyRecord extends AbstractUpdateableRecord implements Upd
      */
     public function getAnswer() : ?string
     {
-        return $this->answer;
+        return $this->answer->getValue();
     }
 
     /**
@@ -65,12 +74,13 @@ class GeneratedHumanVerifyRecord extends AbstractUpdateableRecord implements Upd
      */
     public function setAnswer(?string $answer)
     {
-        $this->answer = $answer;
+        $this->answer->setChanged(true);
+        $this->answer->setValue($answer);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -78,7 +88,7 @@ class GeneratedHumanVerifyRecord extends AbstractUpdateableRecord implements Upd
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -86,12 +96,13 @@ class GeneratedHumanVerifyRecord extends AbstractUpdateableRecord implements Upd
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasViewed(): bool
     {
-        return isset($this->viewed);
+        return $this->viewed->hasBeenSet();
     }    
 
     /**
@@ -99,7 +110,7 @@ class GeneratedHumanVerifyRecord extends AbstractUpdateableRecord implements Upd
      */
     public function getViewed() : int
     {
-        return $this->viewed;
+        return $this->viewed->getValue();
     }
 
     /**
@@ -107,9 +118,9 @@ class GeneratedHumanVerifyRecord extends AbstractUpdateableRecord implements Upd
      */
     public function setViewed(int $viewed)
     {
-        $this->viewed = $viewed;
+        $this->viewed->setChanged(true);
+        $this->viewed->setValue($viewed);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

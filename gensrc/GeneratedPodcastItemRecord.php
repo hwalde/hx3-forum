@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPodcastItemRecord implements Record {
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $url string */
+    /** @var $url RecordValue */
     protected $url;
     
-    /** @var $length int */
+    /** @var $length RecordValue */
     protected $length;
     
-    /** @var $explicit int */
+    /** @var $explicit RecordValue */
     protected $explicit;
     
-    /** @var $keywords string */
+    /** @var $keywords RecordValue */
     protected $keywords;
     
-    /** @var $subTitle string */
+    /** @var $subTitle RecordValue */
     protected $subTitle;
     
-    /** @var $author string */
+    /** @var $author RecordValue */
     protected $author;
+
+    public function __construct() {
+		$this->postId = new RecordValue();
+		$this->url = new RecordValue();
+		$this->length = new RecordValue();
+		$this->explicit = new RecordValue();
+		$this->keywords = new RecordValue();
+		$this->subTitle = new RecordValue();
+		$this->author = new RecordValue();
+    }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasUrl(): bool
     {
-        return isset($this->url);
+        return $this->url->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function getUrl() : string
     {
-        return $this->url;
+        return $this->url->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function setUrl(string $url)
     {
-        $this->url = $url;
+        $this->url->setChanged(true);
+        $this->url->setValue($url);
     }
     
     public function hasLength(): bool
     {
-        return isset($this->length);
+        return $this->length->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function getLength() : int
     {
-        return $this->length;
+        return $this->length->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function setLength(int $length)
     {
-        $this->length = $length;
+        $this->length->setChanged(true);
+        $this->length->setValue($length);
     }
     
     public function hasExplicit(): bool
     {
-        return isset($this->explicit);
+        return $this->explicit->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function getExplicit() : int
     {
-        return $this->explicit;
+        return $this->explicit->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function setExplicit(int $explicit)
     {
-        $this->explicit = $explicit;
+        $this->explicit->setChanged(true);
+        $this->explicit->setValue($explicit);
     }
     
     public function hasKeywords(): bool
     {
-        return isset($this->keywords);
+        return $this->keywords->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function getKeywords() : string
     {
-        return $this->keywords;
+        return $this->keywords->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function setKeywords(string $keywords)
     {
-        $this->keywords = $keywords;
+        $this->keywords->setChanged(true);
+        $this->keywords->setValue($keywords);
     }
     
     public function hasSubTitle(): bool
     {
-        return isset($this->subTitle);
+        return $this->subTitle->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function getSubTitle() : string
     {
-        return $this->subTitle;
+        return $this->subTitle->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function setSubTitle(string $subTitle)
     {
-        $this->subTitle = $subTitle;
+        $this->subTitle->setChanged(true);
+        $this->subTitle->setValue($subTitle);
     }
     
     public function hasAuthor(): bool
     {
-        return isset($this->author);
+        return $this->author->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function getAuthor() : string
     {
-        return $this->author;
+        return $this->author->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedPodcastItemRecord implements Record {
      */
     public function setAuthor(string $author)
     {
-        $this->author = $author;
+        $this->author->setChanged(true);
+        $this->author->setValue($author);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

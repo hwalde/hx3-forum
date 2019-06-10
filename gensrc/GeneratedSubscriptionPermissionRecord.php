@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSubscriptionPermissionRecord implements Record {
     
-    /** @var $subscriptionPermissionId int */
+    /** @var $subscriptionPermissionId RecordValue */
     protected $subscriptionPermissionId;
     
-    /** @var $subscriptionId int */
+    /** @var $subscriptionId RecordValue */
     protected $subscriptionId;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
+
+    public function __construct() {
+		$this->subscriptionPermissionId = new RecordValue();
+		$this->subscriptionId = new RecordValue();
+		$this->userGroupId = new RecordValue();
+    }
     
     public function hasSubscriptionPermissionId(): bool
     {
-        return isset($this->subscriptionPermissionId);
+        return $this->subscriptionPermissionId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedSubscriptionPermissionRecord implements Record {
      */
     public function getSubscriptionPermissionId() : int
     {
-        return $this->subscriptionPermissionId;
+        return $this->subscriptionPermissionId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedSubscriptionPermissionRecord implements Record {
      */
     public function setSubscriptionPermissionId(int $subscriptionPermissionId)
     {
-        $this->subscriptionPermissionId = $subscriptionPermissionId;
+        $this->subscriptionPermissionId->setChanged(true);
+        $this->subscriptionPermissionId->setValue($subscriptionPermissionId);
     }
     
     public function hasSubscriptionId(): bool
     {
-        return isset($this->subscriptionId);
+        return $this->subscriptionId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedSubscriptionPermissionRecord implements Record {
      */
     public function getSubscriptionId() : int
     {
-        return $this->subscriptionId;
+        return $this->subscriptionId->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedSubscriptionPermissionRecord implements Record {
      */
     public function setSubscriptionId(int $subscriptionId)
     {
-        $this->subscriptionId = $subscriptionId;
+        $this->subscriptionId->setChanged(true);
+        $this->subscriptionId->setValue($subscriptionId);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedSubscriptionPermissionRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedSubscriptionPermissionRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

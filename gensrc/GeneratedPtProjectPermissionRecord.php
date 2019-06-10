@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtProjectPermissionRecord implements Record {
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $projectId int */
+    /** @var $projectId RecordValue */
     protected $projectId;
     
-    /** @var $issueTypeId string */
+    /** @var $issueTypeId RecordValue */
     protected $issueTypeId;
     
-    /** @var $generalPermissions int */
+    /** @var $generalPermissions RecordValue */
     protected $generalPermissions;
     
-    /** @var $postPermissions int */
+    /** @var $postPermissions RecordValue */
     protected $postPermissions;
     
-    /** @var $attachPermissions int */
+    /** @var $attachPermissions RecordValue */
     protected $attachPermissions;
+
+    public function __construct() {
+		$this->userGroupId = new RecordValue();
+		$this->projectId = new RecordValue();
+		$this->issueTypeId = new RecordValue();
+		$this->generalPermissions = new RecordValue();
+		$this->postPermissions = new RecordValue();
+		$this->attachPermissions = new RecordValue();
+    }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasProjectId(): bool
     {
-        return isset($this->projectId);
+        return $this->projectId->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function getProjectId() : int
     {
-        return $this->projectId;
+        return $this->projectId->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function setProjectId(int $projectId)
     {
-        $this->projectId = $projectId;
+        $this->projectId->setChanged(true);
+        $this->projectId->setValue($projectId);
     }
     
     public function hasIssueTypeId(): bool
     {
-        return isset($this->issueTypeId);
+        return $this->issueTypeId->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function getIssueTypeId() : string
     {
-        return $this->issueTypeId;
+        return $this->issueTypeId->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function setIssueTypeId(string $issueTypeId)
     {
-        $this->issueTypeId = $issueTypeId;
+        $this->issueTypeId->setChanged(true);
+        $this->issueTypeId->setValue($issueTypeId);
     }
     
     public function hasGeneralPermissions(): bool
     {
-        return isset($this->generalPermissions);
+        return $this->generalPermissions->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function getGeneralPermissions() : int
     {
-        return $this->generalPermissions;
+        return $this->generalPermissions->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function setGeneralPermissions(int $generalPermissions)
     {
-        $this->generalPermissions = $generalPermissions;
+        $this->generalPermissions->setChanged(true);
+        $this->generalPermissions->setValue($generalPermissions);
     }
     
     public function hasPostPermissions(): bool
     {
-        return isset($this->postPermissions);
+        return $this->postPermissions->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function getPostPermissions() : int
     {
-        return $this->postPermissions;
+        return $this->postPermissions->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function setPostPermissions(int $postPermissions)
     {
-        $this->postPermissions = $postPermissions;
+        $this->postPermissions->setChanged(true);
+        $this->postPermissions->setValue($postPermissions);
     }
     
     public function hasAttachPermissions(): bool
     {
-        return isset($this->attachPermissions);
+        return $this->attachPermissions->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function getAttachPermissions() : int
     {
-        return $this->attachPermissions;
+        return $this->attachPermissions->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedPtProjectPermissionRecord implements Record {
      */
     public function setAttachPermissions(int $attachPermissions)
     {
-        $this->attachPermissions = $attachPermissions;
+        $this->attachPermissions->setChanged(true);
+        $this->attachPermissions->setValue($attachPermissions);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

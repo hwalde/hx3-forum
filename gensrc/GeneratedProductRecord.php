@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedProductRecord implements Record {
     
-    /** @var $productId string */
+    /** @var $productId RecordValue */
     protected $productId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $description string */
+    /** @var $description RecordValue */
     protected $description;
     
-    /** @var $version string */
+    /** @var $version RecordValue */
     protected $version;
     
-    /** @var $active int */
+    /** @var $active RecordValue */
     protected $active;
     
-    /** @var $url string */
+    /** @var $url RecordValue */
     protected $url;
     
-    /** @var $versioncheckurl string */
+    /** @var $versioncheckurl RecordValue */
     protected $versioncheckurl;
+
+    public function __construct() {
+		$this->productId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->description = new RecordValue();
+		$this->version = new RecordValue();
+		$this->active = new RecordValue();
+		$this->url = new RecordValue();
+		$this->versioncheckurl = new RecordValue();
+    }
     
     public function hasProductId(): bool
     {
-        return isset($this->productId);
+        return $this->productId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedProductRecord implements Record {
      */
     public function getProductId() : string
     {
-        return $this->productId;
+        return $this->productId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedProductRecord implements Record {
      */
     public function setProductId(string $productId)
     {
-        $this->productId = $productId;
+        $this->productId->setChanged(true);
+        $this->productId->setValue($productId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedProductRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedProductRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasDescription(): bool
     {
-        return isset($this->description);
+        return $this->description->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedProductRecord implements Record {
      */
     public function getDescription() : string
     {
-        return $this->description;
+        return $this->description->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedProductRecord implements Record {
      */
     public function setDescription(string $description)
     {
-        $this->description = $description;
+        $this->description->setChanged(true);
+        $this->description->setValue($description);
     }
     
     public function hasVersion(): bool
     {
-        return isset($this->version);
+        return $this->version->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedProductRecord implements Record {
      */
     public function getVersion() : string
     {
-        return $this->version;
+        return $this->version->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedProductRecord implements Record {
      */
     public function setVersion(string $version)
     {
-        $this->version = $version;
+        $this->version->setChanged(true);
+        $this->version->setValue($version);
     }
     
     public function hasActive(): bool
     {
-        return isset($this->active);
+        return $this->active->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedProductRecord implements Record {
      */
     public function getActive() : int
     {
-        return $this->active;
+        return $this->active->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedProductRecord implements Record {
      */
     public function setActive(int $active)
     {
-        $this->active = $active;
+        $this->active->setChanged(true);
+        $this->active->setValue($active);
     }
     
     public function hasUrl(): bool
     {
-        return isset($this->url);
+        return $this->url->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedProductRecord implements Record {
      */
     public function getUrl() : string
     {
-        return $this->url;
+        return $this->url->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedProductRecord implements Record {
      */
     public function setUrl(string $url)
     {
-        $this->url = $url;
+        $this->url->setChanged(true);
+        $this->url->setValue($url);
     }
     
     public function hasVersioncheckurl(): bool
     {
-        return isset($this->versioncheckurl);
+        return $this->versioncheckurl->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedProductRecord implements Record {
      */
     public function getVersioncheckurl() : string
     {
-        return $this->versioncheckurl;
+        return $this->versioncheckurl->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedProductRecord implements Record {
      */
     public function setVersioncheckurl(string $versioncheckurl)
     {
-        $this->versioncheckurl = $versioncheckurl;
+        $this->versioncheckurl->setChanged(true);
+        $this->versioncheckurl->setValue($versioncheckurl);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

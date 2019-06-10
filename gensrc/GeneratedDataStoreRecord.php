@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedDataStoreRecord implements Record {
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $data string */
+    /** @var $data RecordValue */
     protected $data;
     
-    /** @var $unSerialize int */
+    /** @var $unSerialize RecordValue */
     protected $unSerialize;
+
+    public function __construct() {
+		$this->title = new RecordValue();
+		$this->data = new RecordValue();
+		$this->unSerialize = new RecordValue();
+    }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedDataStoreRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedDataStoreRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasData(): bool
     {
-        return isset($this->data);
+        return $this->data->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedDataStoreRecord implements Record {
      */
     public function getData() : string
     {
-        return $this->data;
+        return $this->data->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedDataStoreRecord implements Record {
      */
     public function setData(string $data)
     {
-        $this->data = $data;
+        $this->data->setChanged(true);
+        $this->data->setValue($data);
     }
     
     public function hasUnSerialize(): bool
     {
-        return isset($this->unSerialize);
+        return $this->unSerialize->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedDataStoreRecord implements Record {
      */
     public function getUnSerialize() : int
     {
-        return $this->unSerialize;
+        return $this->unSerialize->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedDataStoreRecord implements Record {
      */
     public function setUnSerialize(int $unSerialize)
     {
-        $this->unSerialize = $unSerialize;
+        $this->unSerialize->setChanged(true);
+        $this->unSerialize->setValue($unSerialize);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

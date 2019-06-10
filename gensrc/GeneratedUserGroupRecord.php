@@ -9,154 +9,205 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserGroupRecord implements Record {
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $description string */
+    /** @var $description RecordValue */
     protected $description;
     
-    /** @var $userTitle string */
+    /** @var $userTitle RecordValue */
     protected $userTitle;
     
-    /** @var $passwordExpires int */
+    /** @var $passwordExpires RecordValue */
     protected $passwordExpires;
     
-    /** @var $passwordHistory int */
+    /** @var $passwordHistory RecordValue */
     protected $passwordHistory;
     
-    /** @var $pmQuota int */
+    /** @var $pmQuota RecordValue */
     protected $pmQuota;
     
-    /** @var $pmSendmax int */
+    /** @var $pmSendmax RecordValue */
     protected $pmSendmax;
     
-    /** @var $openTag string */
+    /** @var $openTag RecordValue */
     protected $openTag;
     
-    /** @var $closeTag string */
+    /** @var $closeTag RecordValue */
     protected $closeTag;
     
-    /** @var $canOverride int */
+    /** @var $canOverride RecordValue */
     protected $canOverride;
     
-    /** @var $isPublicGroup int */
+    /** @var $isPublicGroup RecordValue */
     protected $isPublicGroup;
     
-    /** @var $forumPermissions int */
+    /** @var $forumPermissions RecordValue */
     protected $forumPermissions;
     
-    /** @var $pmPermissions int */
+    /** @var $pmPermissions RecordValue */
     protected $pmPermissions;
     
-    /** @var $calendarPermissions int */
+    /** @var $calendarPermissions RecordValue */
     protected $calendarPermissions;
     
-    /** @var $wolPermissions int */
+    /** @var $wolPermissions RecordValue */
     protected $wolPermissions;
     
-    /** @var $adminPermissions int */
+    /** @var $adminPermissions RecordValue */
     protected $adminPermissions;
     
-    /** @var $genericPermissions int */
+    /** @var $genericPermissions RecordValue */
     protected $genericPermissions;
     
-    /** @var $genericOptions int */
+    /** @var $genericOptions RecordValue */
     protected $genericOptions;
     
-    /** @var $attachLimit int */
+    /** @var $attachLimit RecordValue */
     protected $attachLimit;
     
-    /** @var $avatarMaxWidth int */
+    /** @var $avatarMaxWidth RecordValue */
     protected $avatarMaxWidth;
     
-    /** @var $avatarMaxHeight int */
+    /** @var $avatarMaxHeight RecordValue */
     protected $avatarMaxHeight;
     
-    /** @var $avatarMaxSize int */
+    /** @var $avatarMaxSize RecordValue */
     protected $avatarMaxSize;
     
-    /** @var $profilePicMaxWidth int */
+    /** @var $profilePicMaxWidth RecordValue */
     protected $profilePicMaxWidth;
     
-    /** @var $profilePicMaxHeight int */
+    /** @var $profilePicMaxHeight RecordValue */
     protected $profilePicMaxHeight;
     
-    /** @var $profilePicMaxSize int */
+    /** @var $profilePicMaxSize RecordValue */
     protected $profilePicMaxSize;
     
-    /** @var $importUserGroupId int */
+    /** @var $importUserGroupId RecordValue */
     protected $importUserGroupId;
     
-    /** @var $signaturePermissions int */
+    /** @var $signaturePermissions RecordValue */
     protected $signaturePermissions;
     
-    /** @var $sigPicMaxWidth int */
+    /** @var $sigPicMaxWidth RecordValue */
     protected $sigPicMaxWidth;
     
-    /** @var $sigPicMaxheight int */
+    /** @var $sigPicMaxheight RecordValue */
     protected $sigPicMaxheight;
     
-    /** @var $sigPicMaxSize int */
+    /** @var $sigPicMaxSize RecordValue */
     protected $sigPicMaxSize;
     
-    /** @var $sigMaxImages int */
+    /** @var $sigMaxImages RecordValue */
     protected $sigMaxImages;
     
-    /** @var $sigMaxSizeBBCode int */
+    /** @var $sigMaxSizeBBCode RecordValue */
     protected $sigMaxSizeBBCode;
     
-    /** @var $sigMaxChars int */
+    /** @var $sigMaxChars RecordValue */
     protected $sigMaxChars;
     
-    /** @var $sigMaxRawChars int */
+    /** @var $sigMaxRawChars RecordValue */
     protected $sigMaxRawChars;
     
-    /** @var $sigMaxLines int */
+    /** @var $sigMaxLines RecordValue */
     protected $sigMaxLines;
     
-    /** @var $visitorMessagePermissions int */
+    /** @var $visitorMessagePermissions RecordValue */
     protected $visitorMessagePermissions;
     
-    /** @var $socialGroupPermissions int */
+    /** @var $socialGroupPermissions RecordValue */
     protected $socialGroupPermissions;
     
-    /** @var $userCssPermissions int */
+    /** @var $userCssPermissions RecordValue */
     protected $userCssPermissions;
     
-    /** @var $albumPermissions int */
+    /** @var $albumPermissions RecordValue */
     protected $albumPermissions;
     
-    /** @var $albumPicMaxWidth int */
+    /** @var $albumPicMaxWidth RecordValue */
     protected $albumPicMaxWidth;
     
-    /** @var $albumPicMaxHeight int */
+    /** @var $albumPicMaxHeight RecordValue */
     protected $albumPicMaxHeight;
     
-    /** @var $albumPicMaxSize int */
+    /** @var $albumPicMaxSize RecordValue */
     protected $albumPicMaxSize;
     
-    /** @var $albumMaxPics int */
+    /** @var $albumMaxPics RecordValue */
     protected $albumMaxPics;
     
-    /** @var $albumMaxSize int */
+    /** @var $albumMaxSize RecordValue */
     protected $albumMaxSize;
     
-    /** @var $genericpermissions2 int */
+    /** @var $genericpermissions2 RecordValue */
     protected $genericpermissions2;
     
-    /** @var $ptPermissions int */
+    /** @var $ptPermissions RecordValue */
     protected $ptPermissions;
+
+    public function __construct() {
+		$this->userGroupId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->description = new RecordValue();
+		$this->userTitle = new RecordValue();
+		$this->passwordExpires = new RecordValue();
+		$this->passwordHistory = new RecordValue();
+		$this->pmQuota = new RecordValue();
+		$this->pmSendmax = new RecordValue();
+		$this->openTag = new RecordValue();
+		$this->closeTag = new RecordValue();
+		$this->canOverride = new RecordValue();
+		$this->isPublicGroup = new RecordValue();
+		$this->forumPermissions = new RecordValue();
+		$this->pmPermissions = new RecordValue();
+		$this->calendarPermissions = new RecordValue();
+		$this->wolPermissions = new RecordValue();
+		$this->adminPermissions = new RecordValue();
+		$this->genericPermissions = new RecordValue();
+		$this->genericOptions = new RecordValue();
+		$this->attachLimit = new RecordValue();
+		$this->avatarMaxWidth = new RecordValue();
+		$this->avatarMaxHeight = new RecordValue();
+		$this->avatarMaxSize = new RecordValue();
+		$this->profilePicMaxWidth = new RecordValue();
+		$this->profilePicMaxHeight = new RecordValue();
+		$this->profilePicMaxSize = new RecordValue();
+		$this->importUserGroupId = new RecordValue();
+		$this->signaturePermissions = new RecordValue();
+		$this->sigPicMaxWidth = new RecordValue();
+		$this->sigPicMaxheight = new RecordValue();
+		$this->sigPicMaxSize = new RecordValue();
+		$this->sigMaxImages = new RecordValue();
+		$this->sigMaxSizeBBCode = new RecordValue();
+		$this->sigMaxChars = new RecordValue();
+		$this->sigMaxRawChars = new RecordValue();
+		$this->sigMaxLines = new RecordValue();
+		$this->visitorMessagePermissions = new RecordValue();
+		$this->socialGroupPermissions = new RecordValue();
+		$this->userCssPermissions = new RecordValue();
+		$this->albumPermissions = new RecordValue();
+		$this->albumPicMaxWidth = new RecordValue();
+		$this->albumPicMaxHeight = new RecordValue();
+		$this->albumPicMaxSize = new RecordValue();
+		$this->albumMaxPics = new RecordValue();
+		$this->albumMaxSize = new RecordValue();
+		$this->genericpermissions2 = new RecordValue();
+		$this->ptPermissions = new RecordValue();
+    }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -164,7 +215,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -172,12 +223,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -185,7 +237,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -193,12 +245,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasDescription(): bool
     {
-        return isset($this->description);
+        return $this->description->hasBeenSet();
     }    
 
     /**
@@ -206,7 +259,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getDescription() : string
     {
-        return $this->description;
+        return $this->description->getValue();
     }
 
     /**
@@ -214,12 +267,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setDescription(string $description)
     {
-        $this->description = $description;
+        $this->description->setChanged(true);
+        $this->description->setValue($description);
     }
     
     public function hasUserTitle(): bool
     {
-        return isset($this->userTitle);
+        return $this->userTitle->hasBeenSet();
     }    
 
     /**
@@ -227,7 +281,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getUserTitle() : string
     {
-        return $this->userTitle;
+        return $this->userTitle->getValue();
     }
 
     /**
@@ -235,12 +289,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setUserTitle(string $userTitle)
     {
-        $this->userTitle = $userTitle;
+        $this->userTitle->setChanged(true);
+        $this->userTitle->setValue($userTitle);
     }
     
     public function hasPasswordExpires(): bool
     {
-        return isset($this->passwordExpires);
+        return $this->passwordExpires->hasBeenSet();
     }    
 
     /**
@@ -248,7 +303,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getPasswordExpires() : int
     {
-        return $this->passwordExpires;
+        return $this->passwordExpires->getValue();
     }
 
     /**
@@ -256,12 +311,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setPasswordExpires(int $passwordExpires)
     {
-        $this->passwordExpires = $passwordExpires;
+        $this->passwordExpires->setChanged(true);
+        $this->passwordExpires->setValue($passwordExpires);
     }
     
     public function hasPasswordHistory(): bool
     {
-        return isset($this->passwordHistory);
+        return $this->passwordHistory->hasBeenSet();
     }    
 
     /**
@@ -269,7 +325,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getPasswordHistory() : int
     {
-        return $this->passwordHistory;
+        return $this->passwordHistory->getValue();
     }
 
     /**
@@ -277,12 +333,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setPasswordHistory(int $passwordHistory)
     {
-        $this->passwordHistory = $passwordHistory;
+        $this->passwordHistory->setChanged(true);
+        $this->passwordHistory->setValue($passwordHistory);
     }
     
     public function hasPmQuota(): bool
     {
-        return isset($this->pmQuota);
+        return $this->pmQuota->hasBeenSet();
     }    
 
     /**
@@ -290,7 +347,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getPmQuota() : int
     {
-        return $this->pmQuota;
+        return $this->pmQuota->getValue();
     }
 
     /**
@@ -298,12 +355,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setPmQuota(int $pmQuota)
     {
-        $this->pmQuota = $pmQuota;
+        $this->pmQuota->setChanged(true);
+        $this->pmQuota->setValue($pmQuota);
     }
     
     public function hasPmSendmax(): bool
     {
-        return isset($this->pmSendmax);
+        return $this->pmSendmax->hasBeenSet();
     }    
 
     /**
@@ -311,7 +369,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getPmSendmax() : int
     {
-        return $this->pmSendmax;
+        return $this->pmSendmax->getValue();
     }
 
     /**
@@ -319,12 +377,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setPmSendmax(int $pmSendmax)
     {
-        $this->pmSendmax = $pmSendmax;
+        $this->pmSendmax->setChanged(true);
+        $this->pmSendmax->setValue($pmSendmax);
     }
     
     public function hasOpenTag(): bool
     {
-        return isset($this->openTag);
+        return $this->openTag->hasBeenSet();
     }    
 
     /**
@@ -332,7 +391,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getOpenTag() : string
     {
-        return $this->openTag;
+        return $this->openTag->getValue();
     }
 
     /**
@@ -340,12 +399,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setOpenTag(string $openTag)
     {
-        $this->openTag = $openTag;
+        $this->openTag->setChanged(true);
+        $this->openTag->setValue($openTag);
     }
     
     public function hasCloseTag(): bool
     {
-        return isset($this->closeTag);
+        return $this->closeTag->hasBeenSet();
     }    
 
     /**
@@ -353,7 +413,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getCloseTag() : string
     {
-        return $this->closeTag;
+        return $this->closeTag->getValue();
     }
 
     /**
@@ -361,12 +421,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setCloseTag(string $closeTag)
     {
-        $this->closeTag = $closeTag;
+        $this->closeTag->setChanged(true);
+        $this->closeTag->setValue($closeTag);
     }
     
     public function hasCanOverride(): bool
     {
-        return isset($this->canOverride);
+        return $this->canOverride->hasBeenSet();
     }    
 
     /**
@@ -374,7 +435,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getCanOverride() : int
     {
-        return $this->canOverride;
+        return $this->canOverride->getValue();
     }
 
     /**
@@ -382,12 +443,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setCanOverride(int $canOverride)
     {
-        $this->canOverride = $canOverride;
+        $this->canOverride->setChanged(true);
+        $this->canOverride->setValue($canOverride);
     }
     
     public function hasIsPublicGroup(): bool
     {
-        return isset($this->isPublicGroup);
+        return $this->isPublicGroup->hasBeenSet();
     }    
 
     /**
@@ -395,7 +457,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getIsPublicGroup() : int
     {
-        return $this->isPublicGroup;
+        return $this->isPublicGroup->getValue();
     }
 
     /**
@@ -403,12 +465,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setIsPublicGroup(int $isPublicGroup)
     {
-        $this->isPublicGroup = $isPublicGroup;
+        $this->isPublicGroup->setChanged(true);
+        $this->isPublicGroup->setValue($isPublicGroup);
     }
     
     public function hasForumPermissions(): bool
     {
-        return isset($this->forumPermissions);
+        return $this->forumPermissions->hasBeenSet();
     }    
 
     /**
@@ -416,7 +479,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getForumPermissions() : int
     {
-        return $this->forumPermissions;
+        return $this->forumPermissions->getValue();
     }
 
     /**
@@ -424,12 +487,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setForumPermissions(int $forumPermissions)
     {
-        $this->forumPermissions = $forumPermissions;
+        $this->forumPermissions->setChanged(true);
+        $this->forumPermissions->setValue($forumPermissions);
     }
     
     public function hasPmPermissions(): bool
     {
-        return isset($this->pmPermissions);
+        return $this->pmPermissions->hasBeenSet();
     }    
 
     /**
@@ -437,7 +501,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getPmPermissions() : int
     {
-        return $this->pmPermissions;
+        return $this->pmPermissions->getValue();
     }
 
     /**
@@ -445,12 +509,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setPmPermissions(int $pmPermissions)
     {
-        $this->pmPermissions = $pmPermissions;
+        $this->pmPermissions->setChanged(true);
+        $this->pmPermissions->setValue($pmPermissions);
     }
     
     public function hasCalendarPermissions(): bool
     {
-        return isset($this->calendarPermissions);
+        return $this->calendarPermissions->hasBeenSet();
     }    
 
     /**
@@ -458,7 +523,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getCalendarPermissions() : int
     {
-        return $this->calendarPermissions;
+        return $this->calendarPermissions->getValue();
     }
 
     /**
@@ -466,12 +531,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setCalendarPermissions(int $calendarPermissions)
     {
-        $this->calendarPermissions = $calendarPermissions;
+        $this->calendarPermissions->setChanged(true);
+        $this->calendarPermissions->setValue($calendarPermissions);
     }
     
     public function hasWolPermissions(): bool
     {
-        return isset($this->wolPermissions);
+        return $this->wolPermissions->hasBeenSet();
     }    
 
     /**
@@ -479,7 +545,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getWolPermissions() : int
     {
-        return $this->wolPermissions;
+        return $this->wolPermissions->getValue();
     }
 
     /**
@@ -487,12 +553,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setWolPermissions(int $wolPermissions)
     {
-        $this->wolPermissions = $wolPermissions;
+        $this->wolPermissions->setChanged(true);
+        $this->wolPermissions->setValue($wolPermissions);
     }
     
     public function hasAdminPermissions(): bool
     {
-        return isset($this->adminPermissions);
+        return $this->adminPermissions->hasBeenSet();
     }    
 
     /**
@@ -500,7 +567,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAdminPermissions() : int
     {
-        return $this->adminPermissions;
+        return $this->adminPermissions->getValue();
     }
 
     /**
@@ -508,12 +575,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAdminPermissions(int $adminPermissions)
     {
-        $this->adminPermissions = $adminPermissions;
+        $this->adminPermissions->setChanged(true);
+        $this->adminPermissions->setValue($adminPermissions);
     }
     
     public function hasGenericPermissions(): bool
     {
-        return isset($this->genericPermissions);
+        return $this->genericPermissions->hasBeenSet();
     }    
 
     /**
@@ -521,7 +589,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getGenericPermissions() : int
     {
-        return $this->genericPermissions;
+        return $this->genericPermissions->getValue();
     }
 
     /**
@@ -529,12 +597,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setGenericPermissions(int $genericPermissions)
     {
-        $this->genericPermissions = $genericPermissions;
+        $this->genericPermissions->setChanged(true);
+        $this->genericPermissions->setValue($genericPermissions);
     }
     
     public function hasGenericOptions(): bool
     {
-        return isset($this->genericOptions);
+        return $this->genericOptions->hasBeenSet();
     }    
 
     /**
@@ -542,7 +611,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getGenericOptions() : int
     {
-        return $this->genericOptions;
+        return $this->genericOptions->getValue();
     }
 
     /**
@@ -550,12 +619,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setGenericOptions(int $genericOptions)
     {
-        $this->genericOptions = $genericOptions;
+        $this->genericOptions->setChanged(true);
+        $this->genericOptions->setValue($genericOptions);
     }
     
     public function hasAttachLimit(): bool
     {
-        return isset($this->attachLimit);
+        return $this->attachLimit->hasBeenSet();
     }    
 
     /**
@@ -563,7 +633,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAttachLimit() : int
     {
-        return $this->attachLimit;
+        return $this->attachLimit->getValue();
     }
 
     /**
@@ -571,12 +641,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAttachLimit(int $attachLimit)
     {
-        $this->attachLimit = $attachLimit;
+        $this->attachLimit->setChanged(true);
+        $this->attachLimit->setValue($attachLimit);
     }
     
     public function hasAvatarMaxWidth(): bool
     {
-        return isset($this->avatarMaxWidth);
+        return $this->avatarMaxWidth->hasBeenSet();
     }    
 
     /**
@@ -584,7 +655,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAvatarMaxWidth() : int
     {
-        return $this->avatarMaxWidth;
+        return $this->avatarMaxWidth->getValue();
     }
 
     /**
@@ -592,12 +663,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAvatarMaxWidth(int $avatarMaxWidth)
     {
-        $this->avatarMaxWidth = $avatarMaxWidth;
+        $this->avatarMaxWidth->setChanged(true);
+        $this->avatarMaxWidth->setValue($avatarMaxWidth);
     }
     
     public function hasAvatarMaxHeight(): bool
     {
-        return isset($this->avatarMaxHeight);
+        return $this->avatarMaxHeight->hasBeenSet();
     }    
 
     /**
@@ -605,7 +677,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAvatarMaxHeight() : int
     {
-        return $this->avatarMaxHeight;
+        return $this->avatarMaxHeight->getValue();
     }
 
     /**
@@ -613,12 +685,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAvatarMaxHeight(int $avatarMaxHeight)
     {
-        $this->avatarMaxHeight = $avatarMaxHeight;
+        $this->avatarMaxHeight->setChanged(true);
+        $this->avatarMaxHeight->setValue($avatarMaxHeight);
     }
     
     public function hasAvatarMaxSize(): bool
     {
-        return isset($this->avatarMaxSize);
+        return $this->avatarMaxSize->hasBeenSet();
     }    
 
     /**
@@ -626,7 +699,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAvatarMaxSize() : int
     {
-        return $this->avatarMaxSize;
+        return $this->avatarMaxSize->getValue();
     }
 
     /**
@@ -634,12 +707,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAvatarMaxSize(int $avatarMaxSize)
     {
-        $this->avatarMaxSize = $avatarMaxSize;
+        $this->avatarMaxSize->setChanged(true);
+        $this->avatarMaxSize->setValue($avatarMaxSize);
     }
     
     public function hasProfilePicMaxWidth(): bool
     {
-        return isset($this->profilePicMaxWidth);
+        return $this->profilePicMaxWidth->hasBeenSet();
     }    
 
     /**
@@ -647,7 +721,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getProfilePicMaxWidth() : int
     {
-        return $this->profilePicMaxWidth;
+        return $this->profilePicMaxWidth->getValue();
     }
 
     /**
@@ -655,12 +729,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setProfilePicMaxWidth(int $profilePicMaxWidth)
     {
-        $this->profilePicMaxWidth = $profilePicMaxWidth;
+        $this->profilePicMaxWidth->setChanged(true);
+        $this->profilePicMaxWidth->setValue($profilePicMaxWidth);
     }
     
     public function hasProfilePicMaxHeight(): bool
     {
-        return isset($this->profilePicMaxHeight);
+        return $this->profilePicMaxHeight->hasBeenSet();
     }    
 
     /**
@@ -668,7 +743,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getProfilePicMaxHeight() : int
     {
-        return $this->profilePicMaxHeight;
+        return $this->profilePicMaxHeight->getValue();
     }
 
     /**
@@ -676,12 +751,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setProfilePicMaxHeight(int $profilePicMaxHeight)
     {
-        $this->profilePicMaxHeight = $profilePicMaxHeight;
+        $this->profilePicMaxHeight->setChanged(true);
+        $this->profilePicMaxHeight->setValue($profilePicMaxHeight);
     }
     
     public function hasProfilePicMaxSize(): bool
     {
-        return isset($this->profilePicMaxSize);
+        return $this->profilePicMaxSize->hasBeenSet();
     }    
 
     /**
@@ -689,7 +765,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getProfilePicMaxSize() : int
     {
-        return $this->profilePicMaxSize;
+        return $this->profilePicMaxSize->getValue();
     }
 
     /**
@@ -697,12 +773,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setProfilePicMaxSize(int $profilePicMaxSize)
     {
-        $this->profilePicMaxSize = $profilePicMaxSize;
+        $this->profilePicMaxSize->setChanged(true);
+        $this->profilePicMaxSize->setValue($profilePicMaxSize);
     }
     
     public function hasImportUserGroupId(): bool
     {
-        return isset($this->importUserGroupId);
+        return $this->importUserGroupId->hasBeenSet();
     }    
 
     /**
@@ -710,7 +787,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getImportUserGroupId() : int
     {
-        return $this->importUserGroupId;
+        return $this->importUserGroupId->getValue();
     }
 
     /**
@@ -718,12 +795,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setImportUserGroupId(int $importUserGroupId)
     {
-        $this->importUserGroupId = $importUserGroupId;
+        $this->importUserGroupId->setChanged(true);
+        $this->importUserGroupId->setValue($importUserGroupId);
     }
     
     public function hasSignaturePermissions(): bool
     {
-        return isset($this->signaturePermissions);
+        return $this->signaturePermissions->hasBeenSet();
     }    
 
     /**
@@ -731,7 +809,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getSignaturePermissions() : int
     {
-        return $this->signaturePermissions;
+        return $this->signaturePermissions->getValue();
     }
 
     /**
@@ -739,12 +817,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setSignaturePermissions(int $signaturePermissions)
     {
-        $this->signaturePermissions = $signaturePermissions;
+        $this->signaturePermissions->setChanged(true);
+        $this->signaturePermissions->setValue($signaturePermissions);
     }
     
     public function hasSigPicMaxWidth(): bool
     {
-        return isset($this->sigPicMaxWidth);
+        return $this->sigPicMaxWidth->hasBeenSet();
     }    
 
     /**
@@ -752,7 +831,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getSigPicMaxWidth() : int
     {
-        return $this->sigPicMaxWidth;
+        return $this->sigPicMaxWidth->getValue();
     }
 
     /**
@@ -760,12 +839,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setSigPicMaxWidth(int $sigPicMaxWidth)
     {
-        $this->sigPicMaxWidth = $sigPicMaxWidth;
+        $this->sigPicMaxWidth->setChanged(true);
+        $this->sigPicMaxWidth->setValue($sigPicMaxWidth);
     }
     
     public function hasSigPicMaxheight(): bool
     {
-        return isset($this->sigPicMaxheight);
+        return $this->sigPicMaxheight->hasBeenSet();
     }    
 
     /**
@@ -773,7 +853,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getSigPicMaxheight() : int
     {
-        return $this->sigPicMaxheight;
+        return $this->sigPicMaxheight->getValue();
     }
 
     /**
@@ -781,12 +861,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setSigPicMaxheight(int $sigPicMaxheight)
     {
-        $this->sigPicMaxheight = $sigPicMaxheight;
+        $this->sigPicMaxheight->setChanged(true);
+        $this->sigPicMaxheight->setValue($sigPicMaxheight);
     }
     
     public function hasSigPicMaxSize(): bool
     {
-        return isset($this->sigPicMaxSize);
+        return $this->sigPicMaxSize->hasBeenSet();
     }    
 
     /**
@@ -794,7 +875,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getSigPicMaxSize() : int
     {
-        return $this->sigPicMaxSize;
+        return $this->sigPicMaxSize->getValue();
     }
 
     /**
@@ -802,12 +883,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setSigPicMaxSize(int $sigPicMaxSize)
     {
-        $this->sigPicMaxSize = $sigPicMaxSize;
+        $this->sigPicMaxSize->setChanged(true);
+        $this->sigPicMaxSize->setValue($sigPicMaxSize);
     }
     
     public function hasSigMaxImages(): bool
     {
-        return isset($this->sigMaxImages);
+        return $this->sigMaxImages->hasBeenSet();
     }    
 
     /**
@@ -815,7 +897,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getSigMaxImages() : int
     {
-        return $this->sigMaxImages;
+        return $this->sigMaxImages->getValue();
     }
 
     /**
@@ -823,12 +905,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setSigMaxImages(int $sigMaxImages)
     {
-        $this->sigMaxImages = $sigMaxImages;
+        $this->sigMaxImages->setChanged(true);
+        $this->sigMaxImages->setValue($sigMaxImages);
     }
     
     public function hasSigMaxSizeBBCode(): bool
     {
-        return isset($this->sigMaxSizeBBCode);
+        return $this->sigMaxSizeBBCode->hasBeenSet();
     }    
 
     /**
@@ -836,7 +919,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getSigMaxSizeBBCode() : int
     {
-        return $this->sigMaxSizeBBCode;
+        return $this->sigMaxSizeBBCode->getValue();
     }
 
     /**
@@ -844,12 +927,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setSigMaxSizeBBCode(int $sigMaxSizeBBCode)
     {
-        $this->sigMaxSizeBBCode = $sigMaxSizeBBCode;
+        $this->sigMaxSizeBBCode->setChanged(true);
+        $this->sigMaxSizeBBCode->setValue($sigMaxSizeBBCode);
     }
     
     public function hasSigMaxChars(): bool
     {
-        return isset($this->sigMaxChars);
+        return $this->sigMaxChars->hasBeenSet();
     }    
 
     /**
@@ -857,7 +941,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getSigMaxChars() : int
     {
-        return $this->sigMaxChars;
+        return $this->sigMaxChars->getValue();
     }
 
     /**
@@ -865,12 +949,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setSigMaxChars(int $sigMaxChars)
     {
-        $this->sigMaxChars = $sigMaxChars;
+        $this->sigMaxChars->setChanged(true);
+        $this->sigMaxChars->setValue($sigMaxChars);
     }
     
     public function hasSigMaxRawChars(): bool
     {
-        return isset($this->sigMaxRawChars);
+        return $this->sigMaxRawChars->hasBeenSet();
     }    
 
     /**
@@ -878,7 +963,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getSigMaxRawChars() : int
     {
-        return $this->sigMaxRawChars;
+        return $this->sigMaxRawChars->getValue();
     }
 
     /**
@@ -886,12 +971,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setSigMaxRawChars(int $sigMaxRawChars)
     {
-        $this->sigMaxRawChars = $sigMaxRawChars;
+        $this->sigMaxRawChars->setChanged(true);
+        $this->sigMaxRawChars->setValue($sigMaxRawChars);
     }
     
     public function hasSigMaxLines(): bool
     {
-        return isset($this->sigMaxLines);
+        return $this->sigMaxLines->hasBeenSet();
     }    
 
     /**
@@ -899,7 +985,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getSigMaxLines() : int
     {
-        return $this->sigMaxLines;
+        return $this->sigMaxLines->getValue();
     }
 
     /**
@@ -907,12 +993,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setSigMaxLines(int $sigMaxLines)
     {
-        $this->sigMaxLines = $sigMaxLines;
+        $this->sigMaxLines->setChanged(true);
+        $this->sigMaxLines->setValue($sigMaxLines);
     }
     
     public function hasVisitorMessagePermissions(): bool
     {
-        return isset($this->visitorMessagePermissions);
+        return $this->visitorMessagePermissions->hasBeenSet();
     }    
 
     /**
@@ -920,7 +1007,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getVisitorMessagePermissions() : int
     {
-        return $this->visitorMessagePermissions;
+        return $this->visitorMessagePermissions->getValue();
     }
 
     /**
@@ -928,12 +1015,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setVisitorMessagePermissions(int $visitorMessagePermissions)
     {
-        $this->visitorMessagePermissions = $visitorMessagePermissions;
+        $this->visitorMessagePermissions->setChanged(true);
+        $this->visitorMessagePermissions->setValue($visitorMessagePermissions);
     }
     
     public function hasSocialGroupPermissions(): bool
     {
-        return isset($this->socialGroupPermissions);
+        return $this->socialGroupPermissions->hasBeenSet();
     }    
 
     /**
@@ -941,7 +1029,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getSocialGroupPermissions() : int
     {
-        return $this->socialGroupPermissions;
+        return $this->socialGroupPermissions->getValue();
     }
 
     /**
@@ -949,12 +1037,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setSocialGroupPermissions(int $socialGroupPermissions)
     {
-        $this->socialGroupPermissions = $socialGroupPermissions;
+        $this->socialGroupPermissions->setChanged(true);
+        $this->socialGroupPermissions->setValue($socialGroupPermissions);
     }
     
     public function hasUserCssPermissions(): bool
     {
-        return isset($this->userCssPermissions);
+        return $this->userCssPermissions->hasBeenSet();
     }    
 
     /**
@@ -962,7 +1051,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getUserCssPermissions() : int
     {
-        return $this->userCssPermissions;
+        return $this->userCssPermissions->getValue();
     }
 
     /**
@@ -970,12 +1059,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setUserCssPermissions(int $userCssPermissions)
     {
-        $this->userCssPermissions = $userCssPermissions;
+        $this->userCssPermissions->setChanged(true);
+        $this->userCssPermissions->setValue($userCssPermissions);
     }
     
     public function hasAlbumPermissions(): bool
     {
-        return isset($this->albumPermissions);
+        return $this->albumPermissions->hasBeenSet();
     }    
 
     /**
@@ -983,7 +1073,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAlbumPermissions() : int
     {
-        return $this->albumPermissions;
+        return $this->albumPermissions->getValue();
     }
 
     /**
@@ -991,12 +1081,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAlbumPermissions(int $albumPermissions)
     {
-        $this->albumPermissions = $albumPermissions;
+        $this->albumPermissions->setChanged(true);
+        $this->albumPermissions->setValue($albumPermissions);
     }
     
     public function hasAlbumPicMaxWidth(): bool
     {
-        return isset($this->albumPicMaxWidth);
+        return $this->albumPicMaxWidth->hasBeenSet();
     }    
 
     /**
@@ -1004,7 +1095,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAlbumPicMaxWidth() : int
     {
-        return $this->albumPicMaxWidth;
+        return $this->albumPicMaxWidth->getValue();
     }
 
     /**
@@ -1012,12 +1103,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAlbumPicMaxWidth(int $albumPicMaxWidth)
     {
-        $this->albumPicMaxWidth = $albumPicMaxWidth;
+        $this->albumPicMaxWidth->setChanged(true);
+        $this->albumPicMaxWidth->setValue($albumPicMaxWidth);
     }
     
     public function hasAlbumPicMaxHeight(): bool
     {
-        return isset($this->albumPicMaxHeight);
+        return $this->albumPicMaxHeight->hasBeenSet();
     }    
 
     /**
@@ -1025,7 +1117,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAlbumPicMaxHeight() : int
     {
-        return $this->albumPicMaxHeight;
+        return $this->albumPicMaxHeight->getValue();
     }
 
     /**
@@ -1033,12 +1125,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAlbumPicMaxHeight(int $albumPicMaxHeight)
     {
-        $this->albumPicMaxHeight = $albumPicMaxHeight;
+        $this->albumPicMaxHeight->setChanged(true);
+        $this->albumPicMaxHeight->setValue($albumPicMaxHeight);
     }
     
     public function hasAlbumPicMaxSize(): bool
     {
-        return isset($this->albumPicMaxSize);
+        return $this->albumPicMaxSize->hasBeenSet();
     }    
 
     /**
@@ -1046,7 +1139,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAlbumPicMaxSize() : int
     {
-        return $this->albumPicMaxSize;
+        return $this->albumPicMaxSize->getValue();
     }
 
     /**
@@ -1054,12 +1147,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAlbumPicMaxSize(int $albumPicMaxSize)
     {
-        $this->albumPicMaxSize = $albumPicMaxSize;
+        $this->albumPicMaxSize->setChanged(true);
+        $this->albumPicMaxSize->setValue($albumPicMaxSize);
     }
     
     public function hasAlbumMaxPics(): bool
     {
-        return isset($this->albumMaxPics);
+        return $this->albumMaxPics->hasBeenSet();
     }    
 
     /**
@@ -1067,7 +1161,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAlbumMaxPics() : int
     {
-        return $this->albumMaxPics;
+        return $this->albumMaxPics->getValue();
     }
 
     /**
@@ -1075,12 +1169,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAlbumMaxPics(int $albumMaxPics)
     {
-        $this->albumMaxPics = $albumMaxPics;
+        $this->albumMaxPics->setChanged(true);
+        $this->albumMaxPics->setValue($albumMaxPics);
     }
     
     public function hasAlbumMaxSize(): bool
     {
-        return isset($this->albumMaxSize);
+        return $this->albumMaxSize->hasBeenSet();
     }    
 
     /**
@@ -1088,7 +1183,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getAlbumMaxSize() : int
     {
-        return $this->albumMaxSize;
+        return $this->albumMaxSize->getValue();
     }
 
     /**
@@ -1096,12 +1191,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setAlbumMaxSize(int $albumMaxSize)
     {
-        $this->albumMaxSize = $albumMaxSize;
+        $this->albumMaxSize->setChanged(true);
+        $this->albumMaxSize->setValue($albumMaxSize);
     }
     
     public function hasGenericpermissions2(): bool
     {
-        return isset($this->genericpermissions2);
+        return $this->genericpermissions2->hasBeenSet();
     }    
 
     /**
@@ -1109,7 +1205,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getGenericpermissions2() : int
     {
-        return $this->genericpermissions2;
+        return $this->genericpermissions2->getValue();
     }
 
     /**
@@ -1117,12 +1213,13 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setGenericpermissions2(int $genericpermissions2)
     {
-        $this->genericpermissions2 = $genericpermissions2;
+        $this->genericpermissions2->setChanged(true);
+        $this->genericpermissions2->setValue($genericpermissions2);
     }
     
     public function hasPtPermissions(): bool
     {
-        return isset($this->ptPermissions);
+        return $this->ptPermissions->hasBeenSet();
     }    
 
     /**
@@ -1130,7 +1227,7 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function getPtPermissions() : int
     {
-        return $this->ptPermissions;
+        return $this->ptPermissions->getValue();
     }
 
     /**
@@ -1138,9 +1235,9 @@ class GeneratedUserGroupRecord implements Record {
      */
     public function setPtPermissions(int $ptPermissions)
     {
-        $this->ptPermissions = $ptPermissions;
+        $this->ptPermissions->setChanged(true);
+        $this->ptPermissions->setValue($ptPermissions);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,40 +9,53 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPhraseRecord implements Record {
     
-    /** @var $phraseId int */
+    /** @var $phraseId RecordValue */
     protected $phraseId;
     
-    /** @var $languageId int */
+    /** @var $languageId RecordValue */
     protected $languageId;
     
-    /** @var $varName string */
+    /** @var $varName RecordValue */
     protected $varName;
     
-    /** @var $text string */
+    /** @var $text RecordValue */
     protected $text;
     
-    /** @var $product string */
+    /** @var $product RecordValue */
     protected $product;
     
-    /** @var $fieldName string */
+    /** @var $fieldName RecordValue */
     protected $fieldName;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $version string */
+    /** @var $version RecordValue */
     protected $version;
+
+    public function __construct() {
+		$this->phraseId = new RecordValue();
+		$this->languageId = new RecordValue();
+		$this->varName = new RecordValue();
+		$this->text = new RecordValue();
+		$this->product = new RecordValue();
+		$this->fieldName = new RecordValue();
+		$this->userName = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->version = new RecordValue();
+    }
     
     public function hasPhraseId(): bool
     {
-        return isset($this->phraseId);
+        return $this->phraseId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +63,7 @@ class GeneratedPhraseRecord implements Record {
      */
     public function getPhraseId() : int
     {
-        return $this->phraseId;
+        return $this->phraseId->getValue();
     }
 
     /**
@@ -58,12 +71,13 @@ class GeneratedPhraseRecord implements Record {
      */
     public function setPhraseId(int $phraseId)
     {
-        $this->phraseId = $phraseId;
+        $this->phraseId->setChanged(true);
+        $this->phraseId->setValue($phraseId);
     }
     
     public function hasLanguageId(): bool
     {
-        return isset($this->languageId);
+        return $this->languageId->hasBeenSet();
     }    
 
     /**
@@ -71,7 +85,7 @@ class GeneratedPhraseRecord implements Record {
      */
     public function getLanguageId() : int
     {
-        return $this->languageId;
+        return $this->languageId->getValue();
     }
 
     /**
@@ -79,12 +93,13 @@ class GeneratedPhraseRecord implements Record {
      */
     public function setLanguageId(int $languageId)
     {
-        $this->languageId = $languageId;
+        $this->languageId->setChanged(true);
+        $this->languageId->setValue($languageId);
     }
     
     public function hasVarName(): bool
     {
-        return isset($this->varName);
+        return $this->varName->hasBeenSet();
     }    
 
     /**
@@ -92,7 +107,7 @@ class GeneratedPhraseRecord implements Record {
      */
     public function getVarName() : string
     {
-        return $this->varName;
+        return $this->varName->getValue();
     }
 
     /**
@@ -100,12 +115,13 @@ class GeneratedPhraseRecord implements Record {
      */
     public function setVarName(string $varName)
     {
-        $this->varName = $varName;
+        $this->varName->setChanged(true);
+        $this->varName->setValue($varName);
     }
     
     public function hasText(): bool
     {
-        return isset($this->text);
+        return $this->text->hasBeenSet();
     }    
 
     /**
@@ -113,7 +129,7 @@ class GeneratedPhraseRecord implements Record {
      */
     public function getText() : string
     {
-        return $this->text;
+        return $this->text->getValue();
     }
 
     /**
@@ -121,12 +137,13 @@ class GeneratedPhraseRecord implements Record {
      */
     public function setText(string $text)
     {
-        $this->text = $text;
+        $this->text->setChanged(true);
+        $this->text->setValue($text);
     }
     
     public function hasProduct(): bool
     {
-        return isset($this->product);
+        return $this->product->hasBeenSet();
     }    
 
     /**
@@ -134,7 +151,7 @@ class GeneratedPhraseRecord implements Record {
      */
     public function getProduct() : string
     {
-        return $this->product;
+        return $this->product->getValue();
     }
 
     /**
@@ -142,12 +159,13 @@ class GeneratedPhraseRecord implements Record {
      */
     public function setProduct(string $product)
     {
-        $this->product = $product;
+        $this->product->setChanged(true);
+        $this->product->setValue($product);
     }
     
     public function hasFieldName(): bool
     {
-        return isset($this->fieldName);
+        return $this->fieldName->hasBeenSet();
     }    
 
     /**
@@ -155,7 +173,7 @@ class GeneratedPhraseRecord implements Record {
      */
     public function getFieldName() : string
     {
-        return $this->fieldName;
+        return $this->fieldName->getValue();
     }
 
     /**
@@ -163,12 +181,13 @@ class GeneratedPhraseRecord implements Record {
      */
     public function setFieldName(string $fieldName)
     {
-        $this->fieldName = $fieldName;
+        $this->fieldName->setChanged(true);
+        $this->fieldName->setValue($fieldName);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -176,7 +195,7 @@ class GeneratedPhraseRecord implements Record {
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -184,12 +203,13 @@ class GeneratedPhraseRecord implements Record {
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -197,7 +217,7 @@ class GeneratedPhraseRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -205,12 +225,13 @@ class GeneratedPhraseRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasVersion(): bool
     {
-        return isset($this->version);
+        return $this->version->hasBeenSet();
     }    
 
     /**
@@ -218,7 +239,7 @@ class GeneratedPhraseRecord implements Record {
      */
     public function getVersion() : string
     {
-        return $this->version;
+        return $this->version->getValue();
     }
 
     /**
@@ -226,9 +247,9 @@ class GeneratedPhraseRecord implements Record {
      */
     public function setVersion(string $version)
     {
-        $this->version = $version;
+        $this->version->setChanged(true);
+        $this->version->setValue($version);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,49 +9,65 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueNoteRecord implements Record {
     
-    /** @var $issueNoteId int */
+    /** @var $issueNoteId RecordValue */
     protected $issueNoteId;
     
-    /** @var $issueId int */
+    /** @var $issueId RecordValue */
     protected $issueId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $pageText string */
+    /** @var $pageText RecordValue */
     protected $pageText;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
     
-    /** @var $type string */
+    /** @var $type RecordValue */
     protected $type;
     
-    /** @var $isPending int */
+    /** @var $isPending RecordValue */
     protected $isPending;
     
-    /** @var $visible string */
+    /** @var $visible RecordValue */
     protected $visible;
     
-    /** @var $lastEditDate int */
+    /** @var $lastEditDate RecordValue */
     protected $lastEditDate;
     
-    /** @var $isFirstNote int */
+    /** @var $isFirstNote RecordValue */
     protected $isFirstNote;
     
-    /** @var $ipAddress int */
+    /** @var $ipAddress RecordValue */
     protected $ipAddress;
+
+    public function __construct() {
+		$this->issueNoteId = new RecordValue();
+		$this->issueId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->pageText = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->userName = new RecordValue();
+		$this->type = new RecordValue();
+		$this->isPending = new RecordValue();
+		$this->visible = new RecordValue();
+		$this->lastEditDate = new RecordValue();
+		$this->isFirstNote = new RecordValue();
+		$this->ipAddress = new RecordValue();
+    }
     
     public function hasIssueNoteId(): bool
     {
-        return isset($this->issueNoteId);
+        return $this->issueNoteId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +75,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getIssueNoteId() : int
     {
-        return $this->issueNoteId;
+        return $this->issueNoteId->getValue();
     }
 
     /**
@@ -67,12 +83,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setIssueNoteId(int $issueNoteId)
     {
-        $this->issueNoteId = $issueNoteId;
+        $this->issueNoteId->setChanged(true);
+        $this->issueNoteId->setValue($issueNoteId);
     }
     
     public function hasIssueId(): bool
     {
-        return isset($this->issueId);
+        return $this->issueId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +97,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getIssueId() : int
     {
-        return $this->issueId;
+        return $this->issueId->getValue();
     }
 
     /**
@@ -88,12 +105,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setIssueId(int $issueId)
     {
-        $this->issueId = $issueId;
+        $this->issueId->setChanged(true);
+        $this->issueId->setValue($issueId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -101,7 +119,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -109,12 +127,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasPageText(): bool
     {
-        return isset($this->pageText);
+        return $this->pageText->hasBeenSet();
     }    
 
     /**
@@ -122,7 +141,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getPageText() : string
     {
-        return $this->pageText;
+        return $this->pageText->getValue();
     }
 
     /**
@@ -130,12 +149,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setPageText(string $pageText)
     {
-        $this->pageText = $pageText;
+        $this->pageText->setChanged(true);
+        $this->pageText->setValue($pageText);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -143,7 +163,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -151,12 +171,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -164,7 +185,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -172,12 +193,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -185,7 +207,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getType() : string
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -193,12 +215,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setType(string $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
     
     public function hasIsPending(): bool
     {
-        return isset($this->isPending);
+        return $this->isPending->hasBeenSet();
     }    
 
     /**
@@ -206,7 +229,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getIsPending() : int
     {
-        return $this->isPending;
+        return $this->isPending->getValue();
     }
 
     /**
@@ -214,12 +237,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setIsPending(int $isPending)
     {
-        $this->isPending = $isPending;
+        $this->isPending->setChanged(true);
+        $this->isPending->setValue($isPending);
     }
     
     public function hasVisible(): bool
     {
-        return isset($this->visible);
+        return $this->visible->hasBeenSet();
     }    
 
     /**
@@ -227,7 +251,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getVisible() : string
     {
-        return $this->visible;
+        return $this->visible->getValue();
     }
 
     /**
@@ -235,12 +259,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setVisible(string $visible)
     {
-        $this->visible = $visible;
+        $this->visible->setChanged(true);
+        $this->visible->setValue($visible);
     }
     
     public function hasLastEditDate(): bool
     {
-        return isset($this->lastEditDate);
+        return $this->lastEditDate->hasBeenSet();
     }    
 
     /**
@@ -248,7 +273,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getLastEditDate() : int
     {
-        return $this->lastEditDate;
+        return $this->lastEditDate->getValue();
     }
 
     /**
@@ -256,12 +281,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setLastEditDate(int $lastEditDate)
     {
-        $this->lastEditDate = $lastEditDate;
+        $this->lastEditDate->setChanged(true);
+        $this->lastEditDate->setValue($lastEditDate);
     }
     
     public function hasIsFirstNote(): bool
     {
-        return isset($this->isFirstNote);
+        return $this->isFirstNote->hasBeenSet();
     }    
 
     /**
@@ -269,7 +295,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getIsFirstNote() : int
     {
-        return $this->isFirstNote;
+        return $this->isFirstNote->getValue();
     }
 
     /**
@@ -277,12 +303,13 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setIsFirstNote(int $isFirstNote)
     {
-        $this->isFirstNote = $isFirstNote;
+        $this->isFirstNote->setChanged(true);
+        $this->isFirstNote->setValue($isFirstNote);
     }
     
     public function hasIpAddress(): bool
     {
-        return isset($this->ipAddress);
+        return $this->ipAddress->hasBeenSet();
     }    
 
     /**
@@ -290,7 +317,7 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function getIpAddress() : int
     {
-        return $this->ipAddress;
+        return $this->ipAddress->getValue();
     }
 
     /**
@@ -298,9 +325,9 @@ class GeneratedPtIssueNoteRecord implements Record {
      */
     public function setIpAddress(int $ipAddress)
     {
-        $this->ipAddress = $ipAddress;
+        $this->ipAddress->setChanged(true);
+        $this->ipAddress->setValue($ipAddress);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

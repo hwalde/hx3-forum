@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserListRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $relationid int */
+    /** @var $relationid RecordValue */
     protected $relationid;
     
-    /** @var $type string */
+    /** @var $type RecordValue */
     protected $type;
     
-    /** @var $friend string */
+    /** @var $friend RecordValue */
     protected $friend;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->relationid = new RecordValue();
+		$this->type = new RecordValue();
+		$this->friend = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedUserListRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedUserListRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasRelationid(): bool
     {
-        return isset($this->relationid);
+        return $this->relationid->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedUserListRecord implements Record {
      */
     public function getRelationid() : int
     {
-        return $this->relationid;
+        return $this->relationid->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedUserListRecord implements Record {
      */
     public function setRelationid(int $relationid)
     {
-        $this->relationid = $relationid;
+        $this->relationid->setChanged(true);
+        $this->relationid->setValue($relationid);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedUserListRecord implements Record {
      */
     public function getType() : string
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedUserListRecord implements Record {
      */
     public function setType(string $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
     
     public function hasFriend(): bool
     {
-        return isset($this->friend);
+        return $this->friend->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedUserListRecord implements Record {
      */
     public function getFriend() : string
     {
-        return $this->friend;
+        return $this->friend->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedUserListRecord implements Record {
      */
     public function setFriend(string $friend)
     {
-        $this->friend = $friend;
+        $this->friend->setChanged(true);
+        $this->friend->setValue($friend);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

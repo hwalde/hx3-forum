@@ -9,61 +9,81 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedVbSeoLinkBackRecord implements Record {
     
-    /** @var $tId int */
+    /** @var $tId RecordValue */
     protected $tId;
     
-    /** @var $tTime int */
+    /** @var $tTime RecordValue */
     protected $tTime;
     
-    /** @var $tSrcUrl string */
+    /** @var $tSrcUrl RecordValue */
     protected $tSrcUrl;
     
-    /** @var $tDestUrl string */
+    /** @var $tDestUrl RecordValue */
     protected $tDestUrl;
     
-    /** @var $tType int */
+    /** @var $tType RecordValue */
     protected $tType;
     
-    /** @var $tPostId int */
+    /** @var $tPostId RecordValue */
     protected $tPostId;
     
-    /** @var $tPostCount int */
+    /** @var $tPostCount RecordValue */
     protected $tPostCount;
     
-    /** @var $tThreadId int */
+    /** @var $tThreadId RecordValue */
     protected $tThreadId;
     
-    /** @var $tPage int */
+    /** @var $tPage RecordValue */
     protected $tPage;
     
-    /** @var $tTitle string */
+    /** @var $tTitle RecordValue */
     protected $tTitle;
     
-    /** @var $tText string */
+    /** @var $tText RecordValue */
     protected $tText;
     
-    /** @var $tApprove int */
+    /** @var $tApprove RecordValue */
     protected $tApprove;
     
-    /** @var $tWait int */
+    /** @var $tWait RecordValue */
     protected $tWait;
     
-    /** @var $tIncoming int */
+    /** @var $tIncoming RecordValue */
     protected $tIncoming;
     
-    /** @var $tDeleted int */
+    /** @var $tDeleted RecordValue */
     protected $tDeleted;
     
-    /** @var $tHits int */
+    /** @var $tHits RecordValue */
     protected $tHits;
+
+    public function __construct() {
+		$this->tId = new RecordValue();
+		$this->tTime = new RecordValue();
+		$this->tSrcUrl = new RecordValue();
+		$this->tDestUrl = new RecordValue();
+		$this->tType = new RecordValue();
+		$this->tPostId = new RecordValue();
+		$this->tPostCount = new RecordValue();
+		$this->tThreadId = new RecordValue();
+		$this->tPage = new RecordValue();
+		$this->tTitle = new RecordValue();
+		$this->tText = new RecordValue();
+		$this->tApprove = new RecordValue();
+		$this->tWait = new RecordValue();
+		$this->tIncoming = new RecordValue();
+		$this->tDeleted = new RecordValue();
+		$this->tHits = new RecordValue();
+    }
     
     public function hasTId(): bool
     {
-        return isset($this->tId);
+        return $this->tId->hasBeenSet();
     }    
 
     /**
@@ -71,7 +91,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTId() : int
     {
-        return $this->tId;
+        return $this->tId->getValue();
     }
 
     /**
@@ -79,12 +99,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTId(int $tId)
     {
-        $this->tId = $tId;
+        $this->tId->setChanged(true);
+        $this->tId->setValue($tId);
     }
     
     public function hasTTime(): bool
     {
-        return isset($this->tTime);
+        return $this->tTime->hasBeenSet();
     }    
 
     /**
@@ -92,7 +113,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTTime() : int
     {
-        return $this->tTime;
+        return $this->tTime->getValue();
     }
 
     /**
@@ -100,12 +121,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTTime(int $tTime)
     {
-        $this->tTime = $tTime;
+        $this->tTime->setChanged(true);
+        $this->tTime->setValue($tTime);
     }
     
     public function hasTSrcUrl(): bool
     {
-        return isset($this->tSrcUrl);
+        return $this->tSrcUrl->hasBeenSet();
     }    
 
     /**
@@ -113,7 +135,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTSrcUrl() : string
     {
-        return $this->tSrcUrl;
+        return $this->tSrcUrl->getValue();
     }
 
     /**
@@ -121,12 +143,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTSrcUrl(string $tSrcUrl)
     {
-        $this->tSrcUrl = $tSrcUrl;
+        $this->tSrcUrl->setChanged(true);
+        $this->tSrcUrl->setValue($tSrcUrl);
     }
     
     public function hasTDestUrl(): bool
     {
-        return isset($this->tDestUrl);
+        return $this->tDestUrl->hasBeenSet();
     }    
 
     /**
@@ -134,7 +157,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTDestUrl() : string
     {
-        return $this->tDestUrl;
+        return $this->tDestUrl->getValue();
     }
 
     /**
@@ -142,12 +165,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTDestUrl(string $tDestUrl)
     {
-        $this->tDestUrl = $tDestUrl;
+        $this->tDestUrl->setChanged(true);
+        $this->tDestUrl->setValue($tDestUrl);
     }
     
     public function hasTType(): bool
     {
-        return isset($this->tType);
+        return $this->tType->hasBeenSet();
     }    
 
     /**
@@ -155,7 +179,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTType() : int
     {
-        return $this->tType;
+        return $this->tType->getValue();
     }
 
     /**
@@ -163,12 +187,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTType(int $tType)
     {
-        $this->tType = $tType;
+        $this->tType->setChanged(true);
+        $this->tType->setValue($tType);
     }
     
     public function hasTPostId(): bool
     {
-        return isset($this->tPostId);
+        return $this->tPostId->hasBeenSet();
     }    
 
     /**
@@ -176,7 +201,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTPostId() : int
     {
-        return $this->tPostId;
+        return $this->tPostId->getValue();
     }
 
     /**
@@ -184,12 +209,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTPostId(int $tPostId)
     {
-        $this->tPostId = $tPostId;
+        $this->tPostId->setChanged(true);
+        $this->tPostId->setValue($tPostId);
     }
     
     public function hasTPostCount(): bool
     {
-        return isset($this->tPostCount);
+        return $this->tPostCount->hasBeenSet();
     }    
 
     /**
@@ -197,7 +223,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTPostCount() : int
     {
-        return $this->tPostCount;
+        return $this->tPostCount->getValue();
     }
 
     /**
@@ -205,12 +231,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTPostCount(int $tPostCount)
     {
-        $this->tPostCount = $tPostCount;
+        $this->tPostCount->setChanged(true);
+        $this->tPostCount->setValue($tPostCount);
     }
     
     public function hasTThreadId(): bool
     {
-        return isset($this->tThreadId);
+        return $this->tThreadId->hasBeenSet();
     }    
 
     /**
@@ -218,7 +245,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTThreadId() : int
     {
-        return $this->tThreadId;
+        return $this->tThreadId->getValue();
     }
 
     /**
@@ -226,12 +253,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTThreadId(int $tThreadId)
     {
-        $this->tThreadId = $tThreadId;
+        $this->tThreadId->setChanged(true);
+        $this->tThreadId->setValue($tThreadId);
     }
     
     public function hasTPage(): bool
     {
-        return isset($this->tPage);
+        return $this->tPage->hasBeenSet();
     }    
 
     /**
@@ -239,7 +267,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTPage() : int
     {
-        return $this->tPage;
+        return $this->tPage->getValue();
     }
 
     /**
@@ -247,12 +275,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTPage(int $tPage)
     {
-        $this->tPage = $tPage;
+        $this->tPage->setChanged(true);
+        $this->tPage->setValue($tPage);
     }
     
     public function hasTTitle(): bool
     {
-        return isset($this->tTitle);
+        return $this->tTitle->hasBeenSet();
     }    
 
     /**
@@ -260,7 +289,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTTitle() : string
     {
-        return $this->tTitle;
+        return $this->tTitle->getValue();
     }
 
     /**
@@ -268,12 +297,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTTitle(string $tTitle)
     {
-        $this->tTitle = $tTitle;
+        $this->tTitle->setChanged(true);
+        $this->tTitle->setValue($tTitle);
     }
     
     public function hasTText(): bool
     {
-        return isset($this->tText);
+        return $this->tText->hasBeenSet();
     }    
 
     /**
@@ -281,7 +311,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTText() : string
     {
-        return $this->tText;
+        return $this->tText->getValue();
     }
 
     /**
@@ -289,12 +319,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTText(string $tText)
     {
-        $this->tText = $tText;
+        $this->tText->setChanged(true);
+        $this->tText->setValue($tText);
     }
     
     public function hasTApprove(): bool
     {
-        return isset($this->tApprove);
+        return $this->tApprove->hasBeenSet();
     }    
 
     /**
@@ -302,7 +333,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTApprove() : int
     {
-        return $this->tApprove;
+        return $this->tApprove->getValue();
     }
 
     /**
@@ -310,12 +341,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTApprove(int $tApprove)
     {
-        $this->tApprove = $tApprove;
+        $this->tApprove->setChanged(true);
+        $this->tApprove->setValue($tApprove);
     }
     
     public function hasTWait(): bool
     {
-        return isset($this->tWait);
+        return $this->tWait->hasBeenSet();
     }    
 
     /**
@@ -323,7 +355,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTWait() : int
     {
-        return $this->tWait;
+        return $this->tWait->getValue();
     }
 
     /**
@@ -331,12 +363,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTWait(int $tWait)
     {
-        $this->tWait = $tWait;
+        $this->tWait->setChanged(true);
+        $this->tWait->setValue($tWait);
     }
     
     public function hasTIncoming(): bool
     {
-        return isset($this->tIncoming);
+        return $this->tIncoming->hasBeenSet();
     }    
 
     /**
@@ -344,7 +377,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTIncoming() : int
     {
-        return $this->tIncoming;
+        return $this->tIncoming->getValue();
     }
 
     /**
@@ -352,12 +385,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTIncoming(int $tIncoming)
     {
-        $this->tIncoming = $tIncoming;
+        $this->tIncoming->setChanged(true);
+        $this->tIncoming->setValue($tIncoming);
     }
     
     public function hasTDeleted(): bool
     {
-        return isset($this->tDeleted);
+        return $this->tDeleted->hasBeenSet();
     }    
 
     /**
@@ -365,7 +399,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTDeleted() : int
     {
-        return $this->tDeleted;
+        return $this->tDeleted->getValue();
     }
 
     /**
@@ -373,12 +407,13 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTDeleted(int $tDeleted)
     {
-        $this->tDeleted = $tDeleted;
+        $this->tDeleted->setChanged(true);
+        $this->tDeleted->setValue($tDeleted);
     }
     
     public function hasTHits(): bool
     {
-        return isset($this->tHits);
+        return $this->tHits->hasBeenSet();
     }    
 
     /**
@@ -386,7 +421,7 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function getTHits() : int
     {
-        return $this->tHits;
+        return $this->tHits->getValue();
     }
 
     /**
@@ -394,9 +429,9 @@ class GeneratedVbSeoLinkBackRecord implements Record {
      */
     public function setTHits(int $tHits)
     {
-        $this->tHits = $tHits;
+        $this->tHits->setChanged(true);
+        $this->tHits->setValue($tHits);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

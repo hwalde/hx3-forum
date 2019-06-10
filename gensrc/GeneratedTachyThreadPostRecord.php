@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedTachyThreadPostRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $lastPost int */
+    /** @var $lastPost RecordValue */
     protected $lastPost;
     
-    /** @var $lastPoster string */
+    /** @var $lastPoster RecordValue */
     protected $lastPoster;
     
-    /** @var $lastPostId int */
+    /** @var $lastPostId RecordValue */
     protected $lastPostId;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->threadId = new RecordValue();
+		$this->lastPost = new RecordValue();
+		$this->lastPoster = new RecordValue();
+		$this->lastPostId = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedTachyThreadPostRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedTachyThreadPostRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedTachyThreadPostRecord implements Record {
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedTachyThreadPostRecord implements Record {
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasLastPost(): bool
     {
-        return isset($this->lastPost);
+        return $this->lastPost->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedTachyThreadPostRecord implements Record {
      */
     public function getLastPost() : int
     {
-        return $this->lastPost;
+        return $this->lastPost->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedTachyThreadPostRecord implements Record {
      */
     public function setLastPost(int $lastPost)
     {
-        $this->lastPost = $lastPost;
+        $this->lastPost->setChanged(true);
+        $this->lastPost->setValue($lastPost);
     }
     
     public function hasLastPoster(): bool
     {
-        return isset($this->lastPoster);
+        return $this->lastPoster->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedTachyThreadPostRecord implements Record {
      */
     public function getLastPoster() : string
     {
-        return $this->lastPoster;
+        return $this->lastPoster->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedTachyThreadPostRecord implements Record {
      */
     public function setLastPoster(string $lastPoster)
     {
-        $this->lastPoster = $lastPoster;
+        $this->lastPoster->setChanged(true);
+        $this->lastPoster->setValue($lastPoster);
     }
     
     public function hasLastPostId(): bool
     {
-        return isset($this->lastPostId);
+        return $this->lastPostId->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedTachyThreadPostRecord implements Record {
      */
     public function getLastPostId() : int
     {
-        return $this->lastPostId;
+        return $this->lastPostId->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedTachyThreadPostRecord implements Record {
      */
     public function setLastPostId(int $lastPostId)
     {
-        $this->lastPostId = $lastPostId;
+        $this->lastPostId->setChanged(true);
+        $this->lastPostId->setValue($lastPostId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

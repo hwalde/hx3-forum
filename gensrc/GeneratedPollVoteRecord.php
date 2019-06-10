@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPollVoteRecord implements Record {
     
-    /** @var $pollVoteId int */
+    /** @var $pollVoteId RecordValue */
     protected $pollVoteId;
     
-    /** @var $pollId int */
+    /** @var $pollId RecordValue */
     protected $pollId;
     
-    /** @var $userId int|null */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $voteDate int */
+    /** @var $voteDate RecordValue */
     protected $voteDate;
     
-    /** @var $voteOption int */
+    /** @var $voteOption RecordValue */
     protected $voteOption;
     
-    /** @var $voteType int */
+    /** @var $voteType RecordValue */
     protected $voteType;
+
+    public function __construct() {
+		$this->pollVoteId = new RecordValue();
+		$this->pollId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->voteDate = new RecordValue();
+		$this->voteOption = new RecordValue();
+		$this->voteType = new RecordValue();
+    }
     
     public function hasPollVoteId(): bool
     {
-        return isset($this->pollVoteId);
+        return $this->pollVoteId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function getPollVoteId() : int
     {
-        return $this->pollVoteId;
+        return $this->pollVoteId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function setPollVoteId(int $pollVoteId)
     {
-        $this->pollVoteId = $pollVoteId;
+        $this->pollVoteId->setChanged(true);
+        $this->pollVoteId->setValue($pollVoteId);
     }
     
     public function hasPollId(): bool
     {
-        return isset($this->pollId);
+        return $this->pollId->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function getPollId() : int
     {
-        return $this->pollId;
+        return $this->pollId->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function setPollId(int $pollId)
     {
-        $this->pollId = $pollId;
+        $this->pollId->setChanged(true);
+        $this->pollId->setValue($pollId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function getUserId() : ?int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function setUserId(?int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasVoteDate(): bool
     {
-        return isset($this->voteDate);
+        return $this->voteDate->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function getVoteDate() : int
     {
-        return $this->voteDate;
+        return $this->voteDate->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function setVoteDate(int $voteDate)
     {
-        $this->voteDate = $voteDate;
+        $this->voteDate->setChanged(true);
+        $this->voteDate->setValue($voteDate);
     }
     
     public function hasVoteOption(): bool
     {
-        return isset($this->voteOption);
+        return $this->voteOption->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function getVoteOption() : int
     {
-        return $this->voteOption;
+        return $this->voteOption->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function setVoteOption(int $voteOption)
     {
-        $this->voteOption = $voteOption;
+        $this->voteOption->setChanged(true);
+        $this->voteOption->setValue($voteOption);
     }
     
     public function hasVoteType(): bool
     {
-        return isset($this->voteType);
+        return $this->voteType->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function getVoteType() : int
     {
-        return $this->voteType;
+        return $this->voteType->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedPollVoteRecord implements Record {
      */
     public function setVoteType(int $voteType)
     {
-        $this->voteType = $voteType;
+        $this->voteType->setChanged(true);
+        $this->voteType->setValue($voteType);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

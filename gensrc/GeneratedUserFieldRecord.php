@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserFieldRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $temp string */
+    /** @var $temp RecordValue */
     protected $temp;
     
-    /** @var $field1 string */
+    /** @var $field1 RecordValue */
     protected $field1;
     
-    /** @var $field2 string */
+    /** @var $field2 RecordValue */
     protected $field2;
     
-    /** @var $field3 string */
+    /** @var $field3 RecordValue */
     protected $field3;
     
-    /** @var $field4 string */
+    /** @var $field4 RecordValue */
     protected $field4;
     
-    /** @var $field5 string */
+    /** @var $field5 RecordValue */
     protected $field5;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->temp = new RecordValue();
+		$this->field1 = new RecordValue();
+		$this->field2 = new RecordValue();
+		$this->field3 = new RecordValue();
+		$this->field4 = new RecordValue();
+		$this->field5 = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasTemp(): bool
     {
-        return isset($this->temp);
+        return $this->temp->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function getTemp() : string
     {
-        return $this->temp;
+        return $this->temp->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function setTemp(string $temp)
     {
-        $this->temp = $temp;
+        $this->temp->setChanged(true);
+        $this->temp->setValue($temp);
     }
     
     public function hasField1(): bool
     {
-        return isset($this->field1);
+        return $this->field1->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function getField1() : string
     {
-        return $this->field1;
+        return $this->field1->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function setField1(string $field1)
     {
-        $this->field1 = $field1;
+        $this->field1->setChanged(true);
+        $this->field1->setValue($field1);
     }
     
     public function hasField2(): bool
     {
-        return isset($this->field2);
+        return $this->field2->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function getField2() : string
     {
-        return $this->field2;
+        return $this->field2->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function setField2(string $field2)
     {
-        $this->field2 = $field2;
+        $this->field2->setChanged(true);
+        $this->field2->setValue($field2);
     }
     
     public function hasField3(): bool
     {
-        return isset($this->field3);
+        return $this->field3->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function getField3() : string
     {
-        return $this->field3;
+        return $this->field3->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function setField3(string $field3)
     {
-        $this->field3 = $field3;
+        $this->field3->setChanged(true);
+        $this->field3->setValue($field3);
     }
     
     public function hasField4(): bool
     {
-        return isset($this->field4);
+        return $this->field4->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function getField4() : string
     {
-        return $this->field4;
+        return $this->field4->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function setField4(string $field4)
     {
-        $this->field4 = $field4;
+        $this->field4->setChanged(true);
+        $this->field4->setValue($field4);
     }
     
     public function hasField5(): bool
     {
-        return isset($this->field5);
+        return $this->field5->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function getField5() : string
     {
-        return $this->field5;
+        return $this->field5->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedUserFieldRecord implements Record {
      */
     public function setField5(string $field5)
     {
-        $this->field5 = $field5;
+        $this->field5->setChanged(true);
+        $this->field5->setValue($field5);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

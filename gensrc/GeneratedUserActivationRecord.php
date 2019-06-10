@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserActivationRecord implements Record {
     
-    /** @var $userActivationId int */
+    /** @var $userActivationId RecordValue */
     protected $userActivationId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $activationId int */
+    /** @var $activationId RecordValue */
     protected $activationId;
     
-    /** @var $type int */
+    /** @var $type RecordValue */
     protected $type;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $emailChange int */
+    /** @var $emailChange RecordValue */
     protected $emailChange;
+
+    public function __construct() {
+		$this->userActivationId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->activationId = new RecordValue();
+		$this->type = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->emailChange = new RecordValue();
+    }
     
     public function hasUserActivationId(): bool
     {
-        return isset($this->userActivationId);
+        return $this->userActivationId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function getUserActivationId() : int
     {
-        return $this->userActivationId;
+        return $this->userActivationId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function setUserActivationId(int $userActivationId)
     {
-        $this->userActivationId = $userActivationId;
+        $this->userActivationId->setChanged(true);
+        $this->userActivationId->setValue($userActivationId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasActivationId(): bool
     {
-        return isset($this->activationId);
+        return $this->activationId->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function getActivationId() : int
     {
-        return $this->activationId;
+        return $this->activationId->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function setActivationId(int $activationId)
     {
-        $this->activationId = $activationId;
+        $this->activationId->setChanged(true);
+        $this->activationId->setValue($activationId);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function getType() : int
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function setType(int $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasEmailChange(): bool
     {
-        return isset($this->emailChange);
+        return $this->emailChange->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function getEmailChange() : int
     {
-        return $this->emailChange;
+        return $this->emailChange->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedUserActivationRecord implements Record {
      */
     public function setEmailChange(int $emailChange)
     {
-        $this->emailChange = $emailChange;
+        $this->emailChange->setChanged(true);
+        $this->emailChange->setValue($emailChange);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

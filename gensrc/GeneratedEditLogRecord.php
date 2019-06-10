@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedEditLogRecord implements Record {
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $reason string */
+    /** @var $reason RecordValue */
     protected $reason;
     
-    /** @var $hasHistory int */
+    /** @var $hasHistory RecordValue */
     protected $hasHistory;
+
+    public function __construct() {
+		$this->postId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->userName = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->reason = new RecordValue();
+		$this->hasHistory = new RecordValue();
+    }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedEditLogRecord implements Record {
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedEditLogRecord implements Record {
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedEditLogRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedEditLogRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedEditLogRecord implements Record {
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedEditLogRecord implements Record {
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedEditLogRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedEditLogRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasReason(): bool
     {
-        return isset($this->reason);
+        return $this->reason->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedEditLogRecord implements Record {
      */
     public function getReason() : string
     {
-        return $this->reason;
+        return $this->reason->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedEditLogRecord implements Record {
      */
     public function setReason(string $reason)
     {
-        $this->reason = $reason;
+        $this->reason->setChanged(true);
+        $this->reason->setValue($reason);
     }
     
     public function hasHasHistory(): bool
     {
-        return isset($this->hasHistory);
+        return $this->hasHistory->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedEditLogRecord implements Record {
      */
     public function getHasHistory() : int
     {
-        return $this->hasHistory;
+        return $this->hasHistory->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedEditLogRecord implements Record {
      */
     public function setHasHistory(int $hasHistory)
     {
-        $this->hasHistory = $hasHistory;
+        $this->hasHistory->setChanged(true);
+        $this->hasHistory->setValue($hasHistory);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

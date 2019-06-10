@@ -9,19 +9,25 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtTagRecord implements Record {
     
-    /** @var $tagId int */
+    /** @var $tagId RecordValue */
     protected $tagId;
     
-    /** @var $tagText string */
+    /** @var $tagText RecordValue */
     protected $tagText;
+
+    public function __construct() {
+		$this->tagId = new RecordValue();
+		$this->tagText = new RecordValue();
+    }
     
     public function hasTagId(): bool
     {
-        return isset($this->tagId);
+        return $this->tagId->hasBeenSet();
     }    
 
     /**
@@ -29,7 +35,7 @@ class GeneratedPtTagRecord implements Record {
      */
     public function getTagId() : int
     {
-        return $this->tagId;
+        return $this->tagId->getValue();
     }
 
     /**
@@ -37,12 +43,13 @@ class GeneratedPtTagRecord implements Record {
      */
     public function setTagId(int $tagId)
     {
-        $this->tagId = $tagId;
+        $this->tagId->setChanged(true);
+        $this->tagId->setValue($tagId);
     }
     
     public function hasTagText(): bool
     {
-        return isset($this->tagText);
+        return $this->tagText->hasBeenSet();
     }    
 
     /**
@@ -50,7 +57,7 @@ class GeneratedPtTagRecord implements Record {
      */
     public function getTagText() : string
     {
-        return $this->tagText;
+        return $this->tagText->getValue();
     }
 
     /**
@@ -58,9 +65,9 @@ class GeneratedPtTagRecord implements Record {
      */
     public function setTagText(string $tagText)
     {
-        $this->tagText = $tagText;
+        $this->tagText->setChanged(true);
+        $this->tagText->setValue($tagText);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtProjectTypeRecord implements Record {
     
-    /** @var $projectId int */
+    /** @var $projectId RecordValue */
     protected $projectId;
     
-    /** @var $issueTypeId string */
+    /** @var $issueTypeId RecordValue */
     protected $issueTypeId;
     
-    /** @var $startStatusId int */
+    /** @var $startStatusId RecordValue */
     protected $startStatusId;
     
-    /** @var $issueCount int */
+    /** @var $issueCount RecordValue */
     protected $issueCount;
     
-    /** @var $lastActivity int */
+    /** @var $lastActivity RecordValue */
     protected $lastActivity;
+
+    public function __construct() {
+		$this->projectId = new RecordValue();
+		$this->issueTypeId = new RecordValue();
+		$this->startStatusId = new RecordValue();
+		$this->issueCount = new RecordValue();
+		$this->lastActivity = new RecordValue();
+    }
     
     public function hasProjectId(): bool
     {
-        return isset($this->projectId);
+        return $this->projectId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedPtProjectTypeRecord implements Record {
      */
     public function getProjectId() : int
     {
-        return $this->projectId;
+        return $this->projectId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedPtProjectTypeRecord implements Record {
      */
     public function setProjectId(int $projectId)
     {
-        $this->projectId = $projectId;
+        $this->projectId->setChanged(true);
+        $this->projectId->setValue($projectId);
     }
     
     public function hasIssueTypeId(): bool
     {
-        return isset($this->issueTypeId);
+        return $this->issueTypeId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedPtProjectTypeRecord implements Record {
      */
     public function getIssueTypeId() : string
     {
-        return $this->issueTypeId;
+        return $this->issueTypeId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedPtProjectTypeRecord implements Record {
      */
     public function setIssueTypeId(string $issueTypeId)
     {
-        $this->issueTypeId = $issueTypeId;
+        $this->issueTypeId->setChanged(true);
+        $this->issueTypeId->setValue($issueTypeId);
     }
     
     public function hasStartStatusId(): bool
     {
-        return isset($this->startStatusId);
+        return $this->startStatusId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedPtProjectTypeRecord implements Record {
      */
     public function getStartStatusId() : int
     {
-        return $this->startStatusId;
+        return $this->startStatusId->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedPtProjectTypeRecord implements Record {
      */
     public function setStartStatusId(int $startStatusId)
     {
-        $this->startStatusId = $startStatusId;
+        $this->startStatusId->setChanged(true);
+        $this->startStatusId->setValue($startStatusId);
     }
     
     public function hasIssueCount(): bool
     {
-        return isset($this->issueCount);
+        return $this->issueCount->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedPtProjectTypeRecord implements Record {
      */
     public function getIssueCount() : int
     {
-        return $this->issueCount;
+        return $this->issueCount->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedPtProjectTypeRecord implements Record {
      */
     public function setIssueCount(int $issueCount)
     {
-        $this->issueCount = $issueCount;
+        $this->issueCount->setChanged(true);
+        $this->issueCount->setValue($issueCount);
     }
     
     public function hasLastActivity(): bool
     {
-        return isset($this->lastActivity);
+        return $this->lastActivity->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedPtProjectTypeRecord implements Record {
      */
     public function getLastActivity() : int
     {
-        return $this->lastActivity;
+        return $this->lastActivity->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedPtProjectTypeRecord implements Record {
      */
     public function setLastActivity(int $lastActivity)
     {
-        $this->lastActivity = $lastActivity;
+        $this->lastActivity->setChanged(true);
+        $this->lastActivity->setValue($lastActivity);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

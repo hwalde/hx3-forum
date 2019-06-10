@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserCssCacheRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $cachedCss string|null */
+    /** @var $cachedCss RecordValue */
     protected $cachedCss;
     
-    /** @var $buildPermissions int */
+    /** @var $buildPermissions RecordValue */
     protected $buildPermissions;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->cachedCss = new RecordValue();
+		$this->buildPermissions = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedUserCssCacheRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedUserCssCacheRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasCachedCss(): bool
     {
-        return isset($this->cachedCss);
+        return $this->cachedCss->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedUserCssCacheRecord implements Record {
      */
     public function getCachedCss() : ?string
     {
-        return $this->cachedCss;
+        return $this->cachedCss->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedUserCssCacheRecord implements Record {
      */
     public function setCachedCss(?string $cachedCss)
     {
-        $this->cachedCss = $cachedCss;
+        $this->cachedCss->setChanged(true);
+        $this->cachedCss->setValue($cachedCss);
     }
     
     public function hasBuildPermissions(): bool
     {
-        return isset($this->buildPermissions);
+        return $this->buildPermissions->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedUserCssCacheRecord implements Record {
      */
     public function getBuildPermissions() : int
     {
-        return $this->buildPermissions;
+        return $this->buildPermissions->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedUserCssCacheRecord implements Record {
      */
     public function setBuildPermissions(int $buildPermissions)
     {
-        $this->buildPermissions = $buildPermissions;
+        $this->buildPermissions->setChanged(true);
+        $this->buildPermissions->setValue($buildPermissions);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

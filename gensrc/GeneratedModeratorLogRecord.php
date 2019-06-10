@@ -9,67 +9,89 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedModeratorLogRecord implements Record {
     
-    /** @var $moderatorLogId int */
+    /** @var $moderatorLogId RecordValue */
     protected $moderatorLogId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $pollId int */
+    /** @var $pollId RecordValue */
     protected $pollId;
     
-    /** @var $action string */
+    /** @var $action RecordValue */
     protected $action;
     
-    /** @var $type int */
+    /** @var $type RecordValue */
     protected $type;
     
-    /** @var $threadTitle string */
+    /** @var $threadTitle RecordValue */
     protected $threadTitle;
     
-    /** @var $attachmentId int */
+    /** @var $attachmentId RecordValue */
     protected $attachmentId;
     
-    /** @var $ipAddress string */
+    /** @var $ipAddress RecordValue */
     protected $ipAddress;
     
-    /** @var $id1 int */
+    /** @var $id1 RecordValue */
     protected $id1;
     
-    /** @var $id2 int */
+    /** @var $id2 RecordValue */
     protected $id2;
     
-    /** @var $id3 int */
+    /** @var $id3 RecordValue */
     protected $id3;
     
-    /** @var $id4 int */
+    /** @var $id4 RecordValue */
     protected $id4;
     
-    /** @var $id5 int */
+    /** @var $id5 RecordValue */
     protected $id5;
     
-    /** @var $product string */
+    /** @var $product RecordValue */
     protected $product;
+
+    public function __construct() {
+		$this->moderatorLogId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->forumId = new RecordValue();
+		$this->threadId = new RecordValue();
+		$this->postId = new RecordValue();
+		$this->pollId = new RecordValue();
+		$this->action = new RecordValue();
+		$this->type = new RecordValue();
+		$this->threadTitle = new RecordValue();
+		$this->attachmentId = new RecordValue();
+		$this->ipAddress = new RecordValue();
+		$this->id1 = new RecordValue();
+		$this->id2 = new RecordValue();
+		$this->id3 = new RecordValue();
+		$this->id4 = new RecordValue();
+		$this->id5 = new RecordValue();
+		$this->product = new RecordValue();
+    }
     
     public function hasModeratorLogId(): bool
     {
-        return isset($this->moderatorLogId);
+        return $this->moderatorLogId->hasBeenSet();
     }    
 
     /**
@@ -77,7 +99,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getModeratorLogId() : int
     {
-        return $this->moderatorLogId;
+        return $this->moderatorLogId->getValue();
     }
 
     /**
@@ -85,12 +107,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setModeratorLogId(int $moderatorLogId)
     {
-        $this->moderatorLogId = $moderatorLogId;
+        $this->moderatorLogId->setChanged(true);
+        $this->moderatorLogId->setValue($moderatorLogId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -98,7 +121,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -106,12 +129,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -119,7 +143,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -127,12 +151,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -140,7 +165,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -148,12 +173,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -161,7 +187,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -169,12 +195,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -182,7 +209,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -190,12 +217,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasPollId(): bool
     {
-        return isset($this->pollId);
+        return $this->pollId->hasBeenSet();
     }    
 
     /**
@@ -203,7 +231,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getPollId() : int
     {
-        return $this->pollId;
+        return $this->pollId->getValue();
     }
 
     /**
@@ -211,12 +239,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setPollId(int $pollId)
     {
-        $this->pollId = $pollId;
+        $this->pollId->setChanged(true);
+        $this->pollId->setValue($pollId);
     }
     
     public function hasAction(): bool
     {
-        return isset($this->action);
+        return $this->action->hasBeenSet();
     }    
 
     /**
@@ -224,7 +253,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getAction() : string
     {
-        return $this->action;
+        return $this->action->getValue();
     }
 
     /**
@@ -232,12 +261,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setAction(string $action)
     {
-        $this->action = $action;
+        $this->action->setChanged(true);
+        $this->action->setValue($action);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -245,7 +275,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getType() : int
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -253,12 +283,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setType(int $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
     
     public function hasThreadTitle(): bool
     {
-        return isset($this->threadTitle);
+        return $this->threadTitle->hasBeenSet();
     }    
 
     /**
@@ -266,7 +297,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getThreadTitle() : string
     {
-        return $this->threadTitle;
+        return $this->threadTitle->getValue();
     }
 
     /**
@@ -274,12 +305,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setThreadTitle(string $threadTitle)
     {
-        $this->threadTitle = $threadTitle;
+        $this->threadTitle->setChanged(true);
+        $this->threadTitle->setValue($threadTitle);
     }
     
     public function hasAttachmentId(): bool
     {
-        return isset($this->attachmentId);
+        return $this->attachmentId->hasBeenSet();
     }    
 
     /**
@@ -287,7 +319,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getAttachmentId() : int
     {
-        return $this->attachmentId;
+        return $this->attachmentId->getValue();
     }
 
     /**
@@ -295,12 +327,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setAttachmentId(int $attachmentId)
     {
-        $this->attachmentId = $attachmentId;
+        $this->attachmentId->setChanged(true);
+        $this->attachmentId->setValue($attachmentId);
     }
     
     public function hasIpAddress(): bool
     {
-        return isset($this->ipAddress);
+        return $this->ipAddress->hasBeenSet();
     }    
 
     /**
@@ -308,7 +341,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getIpAddress() : string
     {
-        return $this->ipAddress;
+        return $this->ipAddress->getValue();
     }
 
     /**
@@ -316,12 +349,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setIpAddress(string $ipAddress)
     {
-        $this->ipAddress = $ipAddress;
+        $this->ipAddress->setChanged(true);
+        $this->ipAddress->setValue($ipAddress);
     }
     
     public function hasId1(): bool
     {
-        return isset($this->id1);
+        return $this->id1->hasBeenSet();
     }    
 
     /**
@@ -329,7 +363,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getId1() : int
     {
-        return $this->id1;
+        return $this->id1->getValue();
     }
 
     /**
@@ -337,12 +371,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setId1(int $id1)
     {
-        $this->id1 = $id1;
+        $this->id1->setChanged(true);
+        $this->id1->setValue($id1);
     }
     
     public function hasId2(): bool
     {
-        return isset($this->id2);
+        return $this->id2->hasBeenSet();
     }    
 
     /**
@@ -350,7 +385,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getId2() : int
     {
-        return $this->id2;
+        return $this->id2->getValue();
     }
 
     /**
@@ -358,12 +393,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setId2(int $id2)
     {
-        $this->id2 = $id2;
+        $this->id2->setChanged(true);
+        $this->id2->setValue($id2);
     }
     
     public function hasId3(): bool
     {
-        return isset($this->id3);
+        return $this->id3->hasBeenSet();
     }    
 
     /**
@@ -371,7 +407,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getId3() : int
     {
-        return $this->id3;
+        return $this->id3->getValue();
     }
 
     /**
@@ -379,12 +415,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setId3(int $id3)
     {
-        $this->id3 = $id3;
+        $this->id3->setChanged(true);
+        $this->id3->setValue($id3);
     }
     
     public function hasId4(): bool
     {
-        return isset($this->id4);
+        return $this->id4->hasBeenSet();
     }    
 
     /**
@@ -392,7 +429,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getId4() : int
     {
-        return $this->id4;
+        return $this->id4->getValue();
     }
 
     /**
@@ -400,12 +437,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setId4(int $id4)
     {
-        $this->id4 = $id4;
+        $this->id4->setChanged(true);
+        $this->id4->setValue($id4);
     }
     
     public function hasId5(): bool
     {
-        return isset($this->id5);
+        return $this->id5->hasBeenSet();
     }    
 
     /**
@@ -413,7 +451,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getId5() : int
     {
-        return $this->id5;
+        return $this->id5->getValue();
     }
 
     /**
@@ -421,12 +459,13 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setId5(int $id5)
     {
-        $this->id5 = $id5;
+        $this->id5->setChanged(true);
+        $this->id5->setValue($id5);
     }
     
     public function hasProduct(): bool
     {
-        return isset($this->product);
+        return $this->product->hasBeenSet();
     }    
 
     /**
@@ -434,7 +473,7 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function getProduct() : string
     {
-        return $this->product;
+        return $this->product->getValue();
     }
 
     /**
@@ -442,9 +481,9 @@ class GeneratedModeratorLogRecord implements Record {
      */
     public function setProduct(string $product)
     {
-        $this->product = $product;
+        $this->product->setChanged(true);
+        $this->product->setValue($product);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedHvAnswerRecord implements Record {
     
-    /** @var $answerId int */
+    /** @var $answerId RecordValue */
     protected $answerId;
     
-    /** @var $questionId int */
+    /** @var $questionId RecordValue */
     protected $questionId;
     
-    /** @var $answer string */
+    /** @var $answer RecordValue */
     protected $answer;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->answerId = new RecordValue();
+		$this->questionId = new RecordValue();
+		$this->answer = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasAnswerId(): bool
     {
-        return isset($this->answerId);
+        return $this->answerId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedHvAnswerRecord implements Record {
      */
     public function getAnswerId() : int
     {
-        return $this->answerId;
+        return $this->answerId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedHvAnswerRecord implements Record {
      */
     public function setAnswerId(int $answerId)
     {
-        $this->answerId = $answerId;
+        $this->answerId->setChanged(true);
+        $this->answerId->setValue($answerId);
     }
     
     public function hasQuestionId(): bool
     {
-        return isset($this->questionId);
+        return $this->questionId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedHvAnswerRecord implements Record {
      */
     public function getQuestionId() : int
     {
-        return $this->questionId;
+        return $this->questionId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedHvAnswerRecord implements Record {
      */
     public function setQuestionId(int $questionId)
     {
-        $this->questionId = $questionId;
+        $this->questionId->setChanged(true);
+        $this->questionId->setValue($questionId);
     }
     
     public function hasAnswer(): bool
     {
-        return isset($this->answer);
+        return $this->answer->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedHvAnswerRecord implements Record {
      */
     public function getAnswer() : string
     {
-        return $this->answer;
+        return $this->answer->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedHvAnswerRecord implements Record {
      */
     public function setAnswer(string $answer)
     {
-        $this->answer = $answer;
+        $this->answer->setChanged(true);
+        $this->answer->setValue($answer);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedHvAnswerRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedHvAnswerRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

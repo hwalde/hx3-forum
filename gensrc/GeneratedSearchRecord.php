@@ -9,73 +9,97 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSearchRecord implements Record {
     
-    /** @var $searchId int */
+    /** @var $searchId RecordValue */
     protected $searchId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $ipAddress string */
+    /** @var $ipAddress RecordValue */
     protected $ipAddress;
     
-    /** @var $personal int */
+    /** @var $personal RecordValue */
     protected $personal;
     
-    /** @var $query string */
+    /** @var $query RecordValue */
     protected $query;
     
-    /** @var $searchUser string */
+    /** @var $searchUser RecordValue */
     protected $searchUser;
     
-    /** @var $forumChoice string */
+    /** @var $forumChoice RecordValue */
     protected $forumChoice;
     
-    /** @var $sortBy string */
+    /** @var $sortBy RecordValue */
     protected $sortBy;
     
-    /** @var $sortOrder string */
+    /** @var $sortOrder RecordValue */
     protected $sortOrder;
     
-    /** @var $searchTime mixed */
+    /** @var $searchTime RecordValue */
     protected $searchTime;
     
-    /** @var $showPosts int */
+    /** @var $showPosts RecordValue */
     protected $showPosts;
     
-    /** @var $orderedIds string */
+    /** @var $orderedIds RecordValue */
     protected $orderedIds;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $searchTerms string */
+    /** @var $searchTerms RecordValue */
     protected $searchTerms;
     
-    /** @var $displayTerms string */
+    /** @var $displayTerms RecordValue */
     protected $displayTerms;
     
-    /** @var $searchHash string */
+    /** @var $searchHash RecordValue */
     protected $searchHash;
     
-    /** @var $titleOnly int */
+    /** @var $titleOnly RecordValue */
     protected $titleOnly;
     
-    /** @var $announceIds string|null */
+    /** @var $announceIds RecordValue */
     protected $announceIds;
     
-    /** @var $completed int */
+    /** @var $completed RecordValue */
     protected $completed;
     
-    /** @var $prefixChoice string|null */
+    /** @var $prefixChoice RecordValue */
     protected $prefixChoice;
+
+    public function __construct() {
+		$this->searchId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->ipAddress = new RecordValue();
+		$this->personal = new RecordValue();
+		$this->query = new RecordValue();
+		$this->searchUser = new RecordValue();
+		$this->forumChoice = new RecordValue();
+		$this->sortBy = new RecordValue();
+		$this->sortOrder = new RecordValue();
+		$this->searchTime = new RecordValue();
+		$this->showPosts = new RecordValue();
+		$this->orderedIds = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->searchTerms = new RecordValue();
+		$this->displayTerms = new RecordValue();
+		$this->searchHash = new RecordValue();
+		$this->titleOnly = new RecordValue();
+		$this->announceIds = new RecordValue();
+		$this->completed = new RecordValue();
+		$this->prefixChoice = new RecordValue();
+    }
     
     public function hasSearchId(): bool
     {
-        return isset($this->searchId);
+        return $this->searchId->hasBeenSet();
     }    
 
     /**
@@ -83,7 +107,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getSearchId() : int
     {
-        return $this->searchId;
+        return $this->searchId->getValue();
     }
 
     /**
@@ -91,12 +115,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setSearchId(int $searchId)
     {
-        $this->searchId = $searchId;
+        $this->searchId->setChanged(true);
+        $this->searchId->setValue($searchId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -104,7 +129,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -112,12 +137,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasIpAddress(): bool
     {
-        return isset($this->ipAddress);
+        return $this->ipAddress->hasBeenSet();
     }    
 
     /**
@@ -125,7 +151,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getIpAddress() : string
     {
-        return $this->ipAddress;
+        return $this->ipAddress->getValue();
     }
 
     /**
@@ -133,12 +159,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setIpAddress(string $ipAddress)
     {
-        $this->ipAddress = $ipAddress;
+        $this->ipAddress->setChanged(true);
+        $this->ipAddress->setValue($ipAddress);
     }
     
     public function hasPersonal(): bool
     {
-        return isset($this->personal);
+        return $this->personal->hasBeenSet();
     }    
 
     /**
@@ -146,7 +173,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getPersonal() : int
     {
-        return $this->personal;
+        return $this->personal->getValue();
     }
 
     /**
@@ -154,12 +181,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setPersonal(int $personal)
     {
-        $this->personal = $personal;
+        $this->personal->setChanged(true);
+        $this->personal->setValue($personal);
     }
     
     public function hasQuery(): bool
     {
-        return isset($this->query);
+        return $this->query->hasBeenSet();
     }    
 
     /**
@@ -167,7 +195,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getQuery() : string
     {
-        return $this->query;
+        return $this->query->getValue();
     }
 
     /**
@@ -175,12 +203,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setQuery(string $query)
     {
-        $this->query = $query;
+        $this->query->setChanged(true);
+        $this->query->setValue($query);
     }
     
     public function hasSearchUser(): bool
     {
-        return isset($this->searchUser);
+        return $this->searchUser->hasBeenSet();
     }    
 
     /**
@@ -188,7 +217,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getSearchUser() : string
     {
-        return $this->searchUser;
+        return $this->searchUser->getValue();
     }
 
     /**
@@ -196,12 +225,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setSearchUser(string $searchUser)
     {
-        $this->searchUser = $searchUser;
+        $this->searchUser->setChanged(true);
+        $this->searchUser->setValue($searchUser);
     }
     
     public function hasForumChoice(): bool
     {
-        return isset($this->forumChoice);
+        return $this->forumChoice->hasBeenSet();
     }    
 
     /**
@@ -209,7 +239,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getForumChoice() : string
     {
-        return $this->forumChoice;
+        return $this->forumChoice->getValue();
     }
 
     /**
@@ -217,12 +247,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setForumChoice(string $forumChoice)
     {
-        $this->forumChoice = $forumChoice;
+        $this->forumChoice->setChanged(true);
+        $this->forumChoice->setValue($forumChoice);
     }
     
     public function hasSortBy(): bool
     {
-        return isset($this->sortBy);
+        return $this->sortBy->hasBeenSet();
     }    
 
     /**
@@ -230,7 +261,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getSortBy() : string
     {
-        return $this->sortBy;
+        return $this->sortBy->getValue();
     }
 
     /**
@@ -238,12 +269,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setSortBy(string $sortBy)
     {
-        $this->sortBy = $sortBy;
+        $this->sortBy->setChanged(true);
+        $this->sortBy->setValue($sortBy);
     }
     
     public function hasSortOrder(): bool
     {
-        return isset($this->sortOrder);
+        return $this->sortOrder->hasBeenSet();
     }    
 
     /**
@@ -251,7 +283,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getSortOrder() : string
     {
-        return $this->sortOrder;
+        return $this->sortOrder->getValue();
     }
 
     /**
@@ -259,12 +291,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setSortOrder(string $sortOrder)
     {
-        $this->sortOrder = $sortOrder;
+        $this->sortOrder->setChanged(true);
+        $this->sortOrder->setValue($sortOrder);
     }
     
     public function hasSearchTime(): bool
     {
-        return isset($this->searchTime);
+        return $this->searchTime->hasBeenSet();
     }    
 
     /**
@@ -272,7 +305,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getSearchTime()
     {
-        return $this->searchTime;
+        return $this->searchTime->getValue();
     }
 
     /**
@@ -280,12 +313,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setSearchTime($searchTime)
     {
-        $this->searchTime = $searchTime;
+        $this->searchTime->setChanged(true);
+        $this->searchTime->setValue($searchTime);
     }
     
     public function hasShowPosts(): bool
     {
-        return isset($this->showPosts);
+        return $this->showPosts->hasBeenSet();
     }    
 
     /**
@@ -293,7 +327,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getShowPosts() : int
     {
-        return $this->showPosts;
+        return $this->showPosts->getValue();
     }
 
     /**
@@ -301,12 +335,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setShowPosts(int $showPosts)
     {
-        $this->showPosts = $showPosts;
+        $this->showPosts->setChanged(true);
+        $this->showPosts->setValue($showPosts);
     }
     
     public function hasOrderedIds(): bool
     {
-        return isset($this->orderedIds);
+        return $this->orderedIds->hasBeenSet();
     }    
 
     /**
@@ -314,7 +349,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getOrderedIds() : string
     {
-        return $this->orderedIds;
+        return $this->orderedIds->getValue();
     }
 
     /**
@@ -322,12 +357,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setOrderedIds(string $orderedIds)
     {
-        $this->orderedIds = $orderedIds;
+        $this->orderedIds->setChanged(true);
+        $this->orderedIds->setValue($orderedIds);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -335,7 +371,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -343,12 +379,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasSearchTerms(): bool
     {
-        return isset($this->searchTerms);
+        return $this->searchTerms->hasBeenSet();
     }    
 
     /**
@@ -356,7 +393,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getSearchTerms() : string
     {
-        return $this->searchTerms;
+        return $this->searchTerms->getValue();
     }
 
     /**
@@ -364,12 +401,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setSearchTerms(string $searchTerms)
     {
-        $this->searchTerms = $searchTerms;
+        $this->searchTerms->setChanged(true);
+        $this->searchTerms->setValue($searchTerms);
     }
     
     public function hasDisplayTerms(): bool
     {
-        return isset($this->displayTerms);
+        return $this->displayTerms->hasBeenSet();
     }    
 
     /**
@@ -377,7 +415,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getDisplayTerms() : string
     {
-        return $this->displayTerms;
+        return $this->displayTerms->getValue();
     }
 
     /**
@@ -385,12 +423,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setDisplayTerms(string $displayTerms)
     {
-        $this->displayTerms = $displayTerms;
+        $this->displayTerms->setChanged(true);
+        $this->displayTerms->setValue($displayTerms);
     }
     
     public function hasSearchHash(): bool
     {
-        return isset($this->searchHash);
+        return $this->searchHash->hasBeenSet();
     }    
 
     /**
@@ -398,7 +437,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getSearchHash() : string
     {
-        return $this->searchHash;
+        return $this->searchHash->getValue();
     }
 
     /**
@@ -406,12 +445,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setSearchHash(string $searchHash)
     {
-        $this->searchHash = $searchHash;
+        $this->searchHash->setChanged(true);
+        $this->searchHash->setValue($searchHash);
     }
     
     public function hasTitleOnly(): bool
     {
-        return isset($this->titleOnly);
+        return $this->titleOnly->hasBeenSet();
     }    
 
     /**
@@ -419,7 +459,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getTitleOnly() : int
     {
-        return $this->titleOnly;
+        return $this->titleOnly->getValue();
     }
 
     /**
@@ -427,12 +467,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setTitleOnly(int $titleOnly)
     {
-        $this->titleOnly = $titleOnly;
+        $this->titleOnly->setChanged(true);
+        $this->titleOnly->setValue($titleOnly);
     }
     
     public function hasAnnounceIds(): bool
     {
-        return isset($this->announceIds);
+        return $this->announceIds->hasBeenSet();
     }    
 
     /**
@@ -440,7 +481,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getAnnounceIds() : ?string
     {
-        return $this->announceIds;
+        return $this->announceIds->getValue();
     }
 
     /**
@@ -448,12 +489,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setAnnounceIds(?string $announceIds)
     {
-        $this->announceIds = $announceIds;
+        $this->announceIds->setChanged(true);
+        $this->announceIds->setValue($announceIds);
     }
     
     public function hasCompleted(): bool
     {
-        return isset($this->completed);
+        return $this->completed->hasBeenSet();
     }    
 
     /**
@@ -461,7 +503,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getCompleted() : int
     {
-        return $this->completed;
+        return $this->completed->getValue();
     }
 
     /**
@@ -469,12 +511,13 @@ class GeneratedSearchRecord implements Record {
      */
     public function setCompleted(int $completed)
     {
-        $this->completed = $completed;
+        $this->completed->setChanged(true);
+        $this->completed->setValue($completed);
     }
     
     public function hasPrefixChoice(): bool
     {
-        return isset($this->prefixChoice);
+        return $this->prefixChoice->hasBeenSet();
     }    
 
     /**
@@ -482,7 +525,7 @@ class GeneratedSearchRecord implements Record {
      */
     public function getPrefixChoice() : ?string
     {
-        return $this->prefixChoice;
+        return $this->prefixChoice->getValue();
     }
 
     /**
@@ -490,9 +533,9 @@ class GeneratedSearchRecord implements Record {
      */
     public function setPrefixChoice(?string $prefixChoice)
     {
-        $this->prefixChoice = $prefixChoice;
+        $this->prefixChoice->setChanged(true);
+        $this->prefixChoice->setValue($prefixChoice);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

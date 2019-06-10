@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueReportSubscribeRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $issueReportId int */
+    /** @var $issueReportId RecordValue */
     protected $issueReportId;
     
-    /** @var $issueSearchId int */
+    /** @var $issueSearchId RecordValue */
     protected $issueSearchId;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->issueReportId = new RecordValue();
+		$this->issueSearchId = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedPtIssueReportSubscribeRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedPtIssueReportSubscribeRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasIssueReportId(): bool
     {
-        return isset($this->issueReportId);
+        return $this->issueReportId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedPtIssueReportSubscribeRecord implements Record {
      */
     public function getIssueReportId() : int
     {
-        return $this->issueReportId;
+        return $this->issueReportId->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedPtIssueReportSubscribeRecord implements Record {
      */
     public function setIssueReportId(int $issueReportId)
     {
-        $this->issueReportId = $issueReportId;
+        $this->issueReportId->setChanged(true);
+        $this->issueReportId->setValue($issueReportId);
     }
     
     public function hasIssueSearchId(): bool
     {
-        return isset($this->issueSearchId);
+        return $this->issueSearchId->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedPtIssueReportSubscribeRecord implements Record {
      */
     public function getIssueSearchId() : int
     {
-        return $this->issueSearchId;
+        return $this->issueSearchId->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedPtIssueReportSubscribeRecord implements Record {
      */
     public function setIssueSearchId(int $issueSearchId)
     {
-        $this->issueSearchId = $issueSearchId;
+        $this->issueSearchId->setChanged(true);
+        $this->issueSearchId->setValue($issueSearchId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,40 +9,53 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedTachyForumPostRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $lastPost int */
+    /** @var $lastPost RecordValue */
     protected $lastPost;
     
-    /** @var $lastPoster string */
+    /** @var $lastPoster RecordValue */
     protected $lastPoster;
     
-    /** @var $lastThread string */
+    /** @var $lastThread RecordValue */
     protected $lastThread;
     
-    /** @var $lastThreadId int */
+    /** @var $lastThreadId RecordValue */
     protected $lastThreadId;
     
-    /** @var $lastIconId int */
+    /** @var $lastIconId RecordValue */
     protected $lastIconId;
     
-    /** @var $lastPostId int */
+    /** @var $lastPostId RecordValue */
     protected $lastPostId;
     
-    /** @var $lastPrefixId string */
+    /** @var $lastPrefixId RecordValue */
     protected $lastPrefixId;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->forumId = new RecordValue();
+		$this->lastPost = new RecordValue();
+		$this->lastPoster = new RecordValue();
+		$this->lastThread = new RecordValue();
+		$this->lastThreadId = new RecordValue();
+		$this->lastIconId = new RecordValue();
+		$this->lastPostId = new RecordValue();
+		$this->lastPrefixId = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +63,7 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -58,12 +71,13 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -71,7 +85,7 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -79,12 +93,13 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasLastPost(): bool
     {
-        return isset($this->lastPost);
+        return $this->lastPost->hasBeenSet();
     }    
 
     /**
@@ -92,7 +107,7 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function getLastPost() : int
     {
-        return $this->lastPost;
+        return $this->lastPost->getValue();
     }
 
     /**
@@ -100,12 +115,13 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function setLastPost(int $lastPost)
     {
-        $this->lastPost = $lastPost;
+        $this->lastPost->setChanged(true);
+        $this->lastPost->setValue($lastPost);
     }
     
     public function hasLastPoster(): bool
     {
-        return isset($this->lastPoster);
+        return $this->lastPoster->hasBeenSet();
     }    
 
     /**
@@ -113,7 +129,7 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function getLastPoster() : string
     {
-        return $this->lastPoster;
+        return $this->lastPoster->getValue();
     }
 
     /**
@@ -121,12 +137,13 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function setLastPoster(string $lastPoster)
     {
-        $this->lastPoster = $lastPoster;
+        $this->lastPoster->setChanged(true);
+        $this->lastPoster->setValue($lastPoster);
     }
     
     public function hasLastThread(): bool
     {
-        return isset($this->lastThread);
+        return $this->lastThread->hasBeenSet();
     }    
 
     /**
@@ -134,7 +151,7 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function getLastThread() : string
     {
-        return $this->lastThread;
+        return $this->lastThread->getValue();
     }
 
     /**
@@ -142,12 +159,13 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function setLastThread(string $lastThread)
     {
-        $this->lastThread = $lastThread;
+        $this->lastThread->setChanged(true);
+        $this->lastThread->setValue($lastThread);
     }
     
     public function hasLastThreadId(): bool
     {
-        return isset($this->lastThreadId);
+        return $this->lastThreadId->hasBeenSet();
     }    
 
     /**
@@ -155,7 +173,7 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function getLastThreadId() : int
     {
-        return $this->lastThreadId;
+        return $this->lastThreadId->getValue();
     }
 
     /**
@@ -163,12 +181,13 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function setLastThreadId(int $lastThreadId)
     {
-        $this->lastThreadId = $lastThreadId;
+        $this->lastThreadId->setChanged(true);
+        $this->lastThreadId->setValue($lastThreadId);
     }
     
     public function hasLastIconId(): bool
     {
-        return isset($this->lastIconId);
+        return $this->lastIconId->hasBeenSet();
     }    
 
     /**
@@ -176,7 +195,7 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function getLastIconId() : int
     {
-        return $this->lastIconId;
+        return $this->lastIconId->getValue();
     }
 
     /**
@@ -184,12 +203,13 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function setLastIconId(int $lastIconId)
     {
-        $this->lastIconId = $lastIconId;
+        $this->lastIconId->setChanged(true);
+        $this->lastIconId->setValue($lastIconId);
     }
     
     public function hasLastPostId(): bool
     {
-        return isset($this->lastPostId);
+        return $this->lastPostId->hasBeenSet();
     }    
 
     /**
@@ -197,7 +217,7 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function getLastPostId() : int
     {
-        return $this->lastPostId;
+        return $this->lastPostId->getValue();
     }
 
     /**
@@ -205,12 +225,13 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function setLastPostId(int $lastPostId)
     {
-        $this->lastPostId = $lastPostId;
+        $this->lastPostId->setChanged(true);
+        $this->lastPostId->setValue($lastPostId);
     }
     
     public function hasLastPrefixId(): bool
     {
-        return isset($this->lastPrefixId);
+        return $this->lastPrefixId->hasBeenSet();
     }    
 
     /**
@@ -218,7 +239,7 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function getLastPrefixId() : string
     {
-        return $this->lastPrefixId;
+        return $this->lastPrefixId->getValue();
     }
 
     /**
@@ -226,9 +247,9 @@ class GeneratedTachyForumPostRecord implements Record {
      */
     public function setLastPrefixId(string $lastPrefixId)
     {
-        $this->lastPrefixId = $lastPrefixId;
+        $this->lastPrefixId->setChanged(true);
+        $this->lastPrefixId->setValue($lastPrefixId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

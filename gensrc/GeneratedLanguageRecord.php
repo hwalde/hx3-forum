@@ -9,232 +9,309 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedLanguageRecord implements Record {
     
-    /** @var $languageId int */
+    /** @var $languageId RecordValue */
     protected $languageId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $userSelect int */
+    /** @var $userSelect RecordValue */
     protected $userSelect;
     
-    /** @var $options int */
+    /** @var $options RecordValue */
     protected $options;
     
-    /** @var $languageCode string */
+    /** @var $languageCode RecordValue */
     protected $languageCode;
     
-    /** @var $charset string */
+    /** @var $charset RecordValue */
     protected $charset;
     
-    /** @var $imagesOverride string */
+    /** @var $imagesOverride RecordValue */
     protected $imagesOverride;
     
-    /** @var $dateOverride string */
+    /** @var $dateOverride RecordValue */
     protected $dateOverride;
     
-    /** @var $timeOverride string */
+    /** @var $timeOverride RecordValue */
     protected $timeOverride;
     
-    /** @var $registeredDateOverride string */
+    /** @var $registeredDateOverride RecordValue */
     protected $registeredDateOverride;
     
-    /** @var $calFormat1Override string */
+    /** @var $calFormat1Override RecordValue */
     protected $calFormat1Override;
     
-    /** @var $calFormat2Override string */
+    /** @var $calFormat2Override RecordValue */
     protected $calFormat2Override;
     
-    /** @var $logDateOverride string */
+    /** @var $logDateOverride RecordValue */
     protected $logDateOverride;
     
-    /** @var $locale string */
+    /** @var $locale RecordValue */
     protected $locale;
     
-    /** @var $decimalSep string */
+    /** @var $decimalSep RecordValue */
     protected $decimalSep;
     
-    /** @var $thousandSep string */
+    /** @var $thousandSep RecordValue */
     protected $thousandSep;
     
-    /** @var $phraseGroupGlobal string */
+    /** @var $phraseGroupGlobal RecordValue */
     protected $phraseGroupGlobal;
     
-    /** @var $phraseGroupOpGlobal string */
+    /** @var $phraseGroupOpGlobal RecordValue */
     protected $phraseGroupOpGlobal;
     
-    /** @var $phraseGroupCpPermission string */
+    /** @var $phraseGroupCpPermission RecordValue */
     protected $phraseGroupCpPermission;
     
-    /** @var $phraseGroupForum string */
+    /** @var $phraseGroupForum RecordValue */
     protected $phraseGroupForum;
     
-    /** @var $phraseGroupCalendar string */
+    /** @var $phraseGroupCalendar RecordValue */
     protected $phraseGroupCalendar;
     
-    /** @var $phraseGroupAttachmentImage string */
+    /** @var $phraseGroupAttachmentImage RecordValue */
     protected $phraseGroupAttachmentImage;
     
-    /** @var $phrasegGroupStyle string */
+    /** @var $phrasegGroupStyle RecordValue */
     protected $phrasegGroupStyle;
     
-    /** @var $phraseGroupLogging string */
+    /** @var $phraseGroupLogging RecordValue */
     protected $phraseGroupLogging;
     
-    /** @var $phraseGroupCpHome string */
+    /** @var $phraseGroupCpHome RecordValue */
     protected $phraseGroupCpHome;
     
-    /** @var $phraseGroupPromotion string */
+    /** @var $phraseGroupPromotion RecordValue */
     protected $phraseGroupPromotion;
     
-    /** @var $phraseGroupUser string */
+    /** @var $phraseGroupUser RecordValue */
     protected $phraseGroupUser;
     
-    /** @var $phraseGroupHelpFaq string */
+    /** @var $phraseGroupHelpFaq RecordValue */
     protected $phraseGroupHelpFaq;
     
-    /** @var $phraseGroupSql string */
+    /** @var $phraseGroupSql RecordValue */
     protected $phraseGroupSql;
     
-    /** @var $phraseGroupSubscription string */
+    /** @var $phraseGroupSubscription RecordValue */
     protected $phraseGroupSubscription;
     
-    /** @var $phraseGroupLanguage string */
+    /** @var $phraseGroupLanguage RecordValue */
     protected $phraseGroupLanguage;
     
-    /** @var $phraseGroupBBCode string */
+    /** @var $phraseGroupBBCode RecordValue */
     protected $phraseGroupBBCode;
     
-    /** @var $phraseGroupStats string */
+    /** @var $phraseGroupStats RecordValue */
     protected $phraseGroupStats;
     
-    /** @var $phraseGroupDiagnostic string */
+    /** @var $phraseGroupDiagnostic RecordValue */
     protected $phraseGroupDiagnostic;
     
-    /** @var $phraseGroupMaintenance string */
+    /** @var $phraseGroupMaintenance RecordValue */
     protected $phraseGroupMaintenance;
     
-    /** @var $phraseGroupProfileField string */
+    /** @var $phraseGroupProfileField RecordValue */
     protected $phraseGroupProfileField;
     
-    /** @var $phraseGroupThread string */
+    /** @var $phraseGroupThread RecordValue */
     protected $phraseGroupThread;
     
-    /** @var $phraseGroupTimeZone string */
+    /** @var $phraseGroupTimeZone RecordValue */
     protected $phraseGroupTimeZone;
     
-    /** @var $phraseGroupBanning string */
+    /** @var $phraseGroupBanning RecordValue */
     protected $phraseGroupBanning;
     
-    /** @var $phraseGroupReputation string */
+    /** @var $phraseGroupReputation RecordValue */
     protected $phraseGroupReputation;
     
-    /** @var $phraseGroupWol string */
+    /** @var $phraseGroupWol RecordValue */
     protected $phraseGroupWol;
     
-    /** @var $phraseGroupThreadManage string */
+    /** @var $phraseGroupThreadManage RecordValue */
     protected $phraseGroupThreadManage;
     
-    /** @var $phraseGroupPm string */
+    /** @var $phraseGroupPm RecordValue */
     protected $phraseGroupPm;
     
-    /** @var $phraseGroupCpUser string */
+    /** @var $phraseGroupCpUser RecordValue */
     protected $phraseGroupCpUser;
     
-    /** @var $phraseGroupAccessMask string */
+    /** @var $phraseGroupAccessMask RecordValue */
     protected $phraseGroupAccessMask;
     
-    /** @var $phraseGroupCron string */
+    /** @var $phraseGroupCron RecordValue */
     protected $phraseGroupCron;
     
-    /** @var $phrasegGoupModerator string */
+    /** @var $phrasegGoupModerator RecordValue */
     protected $phrasegGoupModerator;
     
-    /** @var $phraseGroupCpOption string */
+    /** @var $phraseGroupCpOption RecordValue */
     protected $phraseGroupCpOption;
     
-    /** @var $phraseGroupCpRank string */
+    /** @var $phraseGroupCpRank RecordValue */
     protected $phraseGroupCpRank;
     
-    /** @var $phraseGroupCpUserGroup string */
+    /** @var $phraseGroupCpUserGroup RecordValue */
     protected $phraseGroupCpUserGroup;
     
-    /** @var $phraseGroupHoliday string */
+    /** @var $phraseGroupHoliday RecordValue */
     protected $phraseGroupHoliday;
     
-    /** @var $phraseGroupPosting string */
+    /** @var $phraseGroupPosting RecordValue */
     protected $phraseGroupPosting;
     
-    /** @var $phraseGroupPoll string */
+    /** @var $phraseGroupPoll RecordValue */
     protected $phraseGroupPoll;
     
-    /** @var $phraseGroupFrontHelp string */
+    /** @var $phraseGroupFrontHelp RecordValue */
     protected $phraseGroupFrontHelp;
     
-    /** @var $phraseGroupRegister string */
+    /** @var $phraseGroupRegister RecordValue */
     protected $phraseGroupRegister;
     
-    /** @var $phraseGroupSearch string */
+    /** @var $phraseGroupSearch RecordValue */
     protected $phraseGroupSearch;
     
-    /** @var $phraseGroupShowThread string */
+    /** @var $phraseGroupShowThread RecordValue */
     protected $phraseGroupShowThread;
     
-    /** @var $phraseGroupPostBit string */
+    /** @var $phraseGroupPostBit RecordValue */
     protected $phraseGroupPostBit;
     
-    /** @var $phraseGroupForumDisplay string */
+    /** @var $phraseGroupForumDisplay RecordValue */
     protected $phraseGroupForumDisplay;
     
-    /** @var $phraseGroupMessaging string */
+    /** @var $phraseGroupMessaging RecordValue */
     protected $phraseGroupMessaging;
     
-    /** @var $phraseGroupInlineMod string */
+    /** @var $phraseGroupInlineMod RecordValue */
     protected $phraseGroupInlineMod;
     
-    /** @var $phraseGroupPlugins string */
+    /** @var $phraseGroupPlugins RecordValue */
     protected $phraseGroupPlugins;
     
-    /** @var $phraseGroupCProfileField string|null */
+    /** @var $phraseGroupCProfileField RecordValue */
     protected $phraseGroupCProfileField;
     
-    /** @var $phraseGroupReputationLevel string|null */
+    /** @var $phraseGroupReputationLevel RecordValue */
     protected $phraseGroupReputationLevel;
     
-    /** @var $phraseGroupInfraction string|null */
+    /** @var $phraseGroupInfraction RecordValue */
     protected $phraseGroupInfraction;
     
-    /** @var $phraseGroupInfractionLevel string|null */
+    /** @var $phraseGroupInfractionLevel RecordValue */
     protected $phraseGroupInfractionLevel;
     
-    /** @var $phraseGroupPrefix string|null */
+    /** @var $phraseGroupPrefix RecordValue */
     protected $phraseGroupPrefix;
     
-    /** @var $phraseGroupSocialGroups string|null */
+    /** @var $phraseGroupSocialGroups RecordValue */
     protected $phraseGroupSocialGroups;
     
-    /** @var $phraseGroupPrefixAdmin string|null */
+    /** @var $phraseGroupPrefixAdmin RecordValue */
     protected $phraseGroupPrefixAdmin;
     
-    /** @var $phraseGroupNotice string|null */
+    /** @var $phraseGroupNotice RecordValue */
     protected $phraseGroupNotice;
     
-    /** @var $phraseGroupAlbum string|null */
+    /** @var $phraseGroupAlbum RecordValue */
     protected $phraseGroupAlbum;
     
-    /** @var $phraseGroupProjectTools string */
+    /** @var $phraseGroupProjectTools RecordValue */
     protected $phraseGroupProjectTools;
     
-    /** @var $phraseGroupProjectToolsAdmin string */
+    /** @var $phraseGroupProjectToolsAdmin RecordValue */
     protected $phraseGroupProjectToolsAdmin;
+
+    public function __construct() {
+		$this->languageId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->userSelect = new RecordValue();
+		$this->options = new RecordValue();
+		$this->languageCode = new RecordValue();
+		$this->charset = new RecordValue();
+		$this->imagesOverride = new RecordValue();
+		$this->dateOverride = new RecordValue();
+		$this->timeOverride = new RecordValue();
+		$this->registeredDateOverride = new RecordValue();
+		$this->calFormat1Override = new RecordValue();
+		$this->calFormat2Override = new RecordValue();
+		$this->logDateOverride = new RecordValue();
+		$this->locale = new RecordValue();
+		$this->decimalSep = new RecordValue();
+		$this->thousandSep = new RecordValue();
+		$this->phraseGroupGlobal = new RecordValue();
+		$this->phraseGroupOpGlobal = new RecordValue();
+		$this->phraseGroupCpPermission = new RecordValue();
+		$this->phraseGroupForum = new RecordValue();
+		$this->phraseGroupCalendar = new RecordValue();
+		$this->phraseGroupAttachmentImage = new RecordValue();
+		$this->phrasegGroupStyle = new RecordValue();
+		$this->phraseGroupLogging = new RecordValue();
+		$this->phraseGroupCpHome = new RecordValue();
+		$this->phraseGroupPromotion = new RecordValue();
+		$this->phraseGroupUser = new RecordValue();
+		$this->phraseGroupHelpFaq = new RecordValue();
+		$this->phraseGroupSql = new RecordValue();
+		$this->phraseGroupSubscription = new RecordValue();
+		$this->phraseGroupLanguage = new RecordValue();
+		$this->phraseGroupBBCode = new RecordValue();
+		$this->phraseGroupStats = new RecordValue();
+		$this->phraseGroupDiagnostic = new RecordValue();
+		$this->phraseGroupMaintenance = new RecordValue();
+		$this->phraseGroupProfileField = new RecordValue();
+		$this->phraseGroupThread = new RecordValue();
+		$this->phraseGroupTimeZone = new RecordValue();
+		$this->phraseGroupBanning = new RecordValue();
+		$this->phraseGroupReputation = new RecordValue();
+		$this->phraseGroupWol = new RecordValue();
+		$this->phraseGroupThreadManage = new RecordValue();
+		$this->phraseGroupPm = new RecordValue();
+		$this->phraseGroupCpUser = new RecordValue();
+		$this->phraseGroupAccessMask = new RecordValue();
+		$this->phraseGroupCron = new RecordValue();
+		$this->phrasegGoupModerator = new RecordValue();
+		$this->phraseGroupCpOption = new RecordValue();
+		$this->phraseGroupCpRank = new RecordValue();
+		$this->phraseGroupCpUserGroup = new RecordValue();
+		$this->phraseGroupHoliday = new RecordValue();
+		$this->phraseGroupPosting = new RecordValue();
+		$this->phraseGroupPoll = new RecordValue();
+		$this->phraseGroupFrontHelp = new RecordValue();
+		$this->phraseGroupRegister = new RecordValue();
+		$this->phraseGroupSearch = new RecordValue();
+		$this->phraseGroupShowThread = new RecordValue();
+		$this->phraseGroupPostBit = new RecordValue();
+		$this->phraseGroupForumDisplay = new RecordValue();
+		$this->phraseGroupMessaging = new RecordValue();
+		$this->phraseGroupInlineMod = new RecordValue();
+		$this->phraseGroupPlugins = new RecordValue();
+		$this->phraseGroupCProfileField = new RecordValue();
+		$this->phraseGroupReputationLevel = new RecordValue();
+		$this->phraseGroupInfraction = new RecordValue();
+		$this->phraseGroupInfractionLevel = new RecordValue();
+		$this->phraseGroupPrefix = new RecordValue();
+		$this->phraseGroupSocialGroups = new RecordValue();
+		$this->phraseGroupPrefixAdmin = new RecordValue();
+		$this->phraseGroupNotice = new RecordValue();
+		$this->phraseGroupAlbum = new RecordValue();
+		$this->phraseGroupProjectTools = new RecordValue();
+		$this->phraseGroupProjectToolsAdmin = new RecordValue();
+    }
     
     public function hasLanguageId(): bool
     {
-        return isset($this->languageId);
+        return $this->languageId->hasBeenSet();
     }    
 
     /**
@@ -242,7 +319,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getLanguageId() : int
     {
-        return $this->languageId;
+        return $this->languageId->getValue();
     }
 
     /**
@@ -250,12 +327,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setLanguageId(int $languageId)
     {
-        $this->languageId = $languageId;
+        $this->languageId->setChanged(true);
+        $this->languageId->setValue($languageId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -263,7 +341,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -271,12 +349,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasUserSelect(): bool
     {
-        return isset($this->userSelect);
+        return $this->userSelect->hasBeenSet();
     }    
 
     /**
@@ -284,7 +363,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getUserSelect() : int
     {
-        return $this->userSelect;
+        return $this->userSelect->getValue();
     }
 
     /**
@@ -292,12 +371,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setUserSelect(int $userSelect)
     {
-        $this->userSelect = $userSelect;
+        $this->userSelect->setChanged(true);
+        $this->userSelect->setValue($userSelect);
     }
     
     public function hasOptions(): bool
     {
-        return isset($this->options);
+        return $this->options->hasBeenSet();
     }    
 
     /**
@@ -305,7 +385,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getOptions() : int
     {
-        return $this->options;
+        return $this->options->getValue();
     }
 
     /**
@@ -313,12 +393,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setOptions(int $options)
     {
-        $this->options = $options;
+        $this->options->setChanged(true);
+        $this->options->setValue($options);
     }
     
     public function hasLanguageCode(): bool
     {
-        return isset($this->languageCode);
+        return $this->languageCode->hasBeenSet();
     }    
 
     /**
@@ -326,7 +407,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getLanguageCode() : string
     {
-        return $this->languageCode;
+        return $this->languageCode->getValue();
     }
 
     /**
@@ -334,12 +415,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setLanguageCode(string $languageCode)
     {
-        $this->languageCode = $languageCode;
+        $this->languageCode->setChanged(true);
+        $this->languageCode->setValue($languageCode);
     }
     
     public function hasCharset(): bool
     {
-        return isset($this->charset);
+        return $this->charset->hasBeenSet();
     }    
 
     /**
@@ -347,7 +429,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getCharset() : string
     {
-        return $this->charset;
+        return $this->charset->getValue();
     }
 
     /**
@@ -355,12 +437,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setCharset(string $charset)
     {
-        $this->charset = $charset;
+        $this->charset->setChanged(true);
+        $this->charset->setValue($charset);
     }
     
     public function hasImagesOverride(): bool
     {
-        return isset($this->imagesOverride);
+        return $this->imagesOverride->hasBeenSet();
     }    
 
     /**
@@ -368,7 +451,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getImagesOverride() : string
     {
-        return $this->imagesOverride;
+        return $this->imagesOverride->getValue();
     }
 
     /**
@@ -376,12 +459,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setImagesOverride(string $imagesOverride)
     {
-        $this->imagesOverride = $imagesOverride;
+        $this->imagesOverride->setChanged(true);
+        $this->imagesOverride->setValue($imagesOverride);
     }
     
     public function hasDateOverride(): bool
     {
-        return isset($this->dateOverride);
+        return $this->dateOverride->hasBeenSet();
     }    
 
     /**
@@ -389,7 +473,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getDateOverride() : string
     {
-        return $this->dateOverride;
+        return $this->dateOverride->getValue();
     }
 
     /**
@@ -397,12 +481,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setDateOverride(string $dateOverride)
     {
-        $this->dateOverride = $dateOverride;
+        $this->dateOverride->setChanged(true);
+        $this->dateOverride->setValue($dateOverride);
     }
     
     public function hasTimeOverride(): bool
     {
-        return isset($this->timeOverride);
+        return $this->timeOverride->hasBeenSet();
     }    
 
     /**
@@ -410,7 +495,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getTimeOverride() : string
     {
-        return $this->timeOverride;
+        return $this->timeOverride->getValue();
     }
 
     /**
@@ -418,12 +503,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setTimeOverride(string $timeOverride)
     {
-        $this->timeOverride = $timeOverride;
+        $this->timeOverride->setChanged(true);
+        $this->timeOverride->setValue($timeOverride);
     }
     
     public function hasRegisteredDateOverride(): bool
     {
-        return isset($this->registeredDateOverride);
+        return $this->registeredDateOverride->hasBeenSet();
     }    
 
     /**
@@ -431,7 +517,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getRegisteredDateOverride() : string
     {
-        return $this->registeredDateOverride;
+        return $this->registeredDateOverride->getValue();
     }
 
     /**
@@ -439,12 +525,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setRegisteredDateOverride(string $registeredDateOverride)
     {
-        $this->registeredDateOverride = $registeredDateOverride;
+        $this->registeredDateOverride->setChanged(true);
+        $this->registeredDateOverride->setValue($registeredDateOverride);
     }
     
     public function hasCalFormat1Override(): bool
     {
-        return isset($this->calFormat1Override);
+        return $this->calFormat1Override->hasBeenSet();
     }    
 
     /**
@@ -452,7 +539,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getCalFormat1Override() : string
     {
-        return $this->calFormat1Override;
+        return $this->calFormat1Override->getValue();
     }
 
     /**
@@ -460,12 +547,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setCalFormat1Override(string $calFormat1Override)
     {
-        $this->calFormat1Override = $calFormat1Override;
+        $this->calFormat1Override->setChanged(true);
+        $this->calFormat1Override->setValue($calFormat1Override);
     }
     
     public function hasCalFormat2Override(): bool
     {
-        return isset($this->calFormat2Override);
+        return $this->calFormat2Override->hasBeenSet();
     }    
 
     /**
@@ -473,7 +561,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getCalFormat2Override() : string
     {
-        return $this->calFormat2Override;
+        return $this->calFormat2Override->getValue();
     }
 
     /**
@@ -481,12 +569,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setCalFormat2Override(string $calFormat2Override)
     {
-        $this->calFormat2Override = $calFormat2Override;
+        $this->calFormat2Override->setChanged(true);
+        $this->calFormat2Override->setValue($calFormat2Override);
     }
     
     public function hasLogDateOverride(): bool
     {
-        return isset($this->logDateOverride);
+        return $this->logDateOverride->hasBeenSet();
     }    
 
     /**
@@ -494,7 +583,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getLogDateOverride() : string
     {
-        return $this->logDateOverride;
+        return $this->logDateOverride->getValue();
     }
 
     /**
@@ -502,12 +591,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setLogDateOverride(string $logDateOverride)
     {
-        $this->logDateOverride = $logDateOverride;
+        $this->logDateOverride->setChanged(true);
+        $this->logDateOverride->setValue($logDateOverride);
     }
     
     public function hasLocale(): bool
     {
-        return isset($this->locale);
+        return $this->locale->hasBeenSet();
     }    
 
     /**
@@ -515,7 +605,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getLocale() : string
     {
-        return $this->locale;
+        return $this->locale->getValue();
     }
 
     /**
@@ -523,12 +613,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setLocale(string $locale)
     {
-        $this->locale = $locale;
+        $this->locale->setChanged(true);
+        $this->locale->setValue($locale);
     }
     
     public function hasDecimalSep(): bool
     {
-        return isset($this->decimalSep);
+        return $this->decimalSep->hasBeenSet();
     }    
 
     /**
@@ -536,7 +627,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getDecimalSep() : string
     {
-        return $this->decimalSep;
+        return $this->decimalSep->getValue();
     }
 
     /**
@@ -544,12 +635,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setDecimalSep(string $decimalSep)
     {
-        $this->decimalSep = $decimalSep;
+        $this->decimalSep->setChanged(true);
+        $this->decimalSep->setValue($decimalSep);
     }
     
     public function hasThousandSep(): bool
     {
-        return isset($this->thousandSep);
+        return $this->thousandSep->hasBeenSet();
     }    
 
     /**
@@ -557,7 +649,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getThousandSep() : string
     {
-        return $this->thousandSep;
+        return $this->thousandSep->getValue();
     }
 
     /**
@@ -565,12 +657,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setThousandSep(string $thousandSep)
     {
-        $this->thousandSep = $thousandSep;
+        $this->thousandSep->setChanged(true);
+        $this->thousandSep->setValue($thousandSep);
     }
     
     public function hasPhraseGroupGlobal(): bool
     {
-        return isset($this->phraseGroupGlobal);
+        return $this->phraseGroupGlobal->hasBeenSet();
     }    
 
     /**
@@ -578,7 +671,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupGlobal() : string
     {
-        return $this->phraseGroupGlobal;
+        return $this->phraseGroupGlobal->getValue();
     }
 
     /**
@@ -586,12 +679,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupGlobal(string $phraseGroupGlobal)
     {
-        $this->phraseGroupGlobal = $phraseGroupGlobal;
+        $this->phraseGroupGlobal->setChanged(true);
+        $this->phraseGroupGlobal->setValue($phraseGroupGlobal);
     }
     
     public function hasPhraseGroupOpGlobal(): bool
     {
-        return isset($this->phraseGroupOpGlobal);
+        return $this->phraseGroupOpGlobal->hasBeenSet();
     }    
 
     /**
@@ -599,7 +693,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupOpGlobal() : string
     {
-        return $this->phraseGroupOpGlobal;
+        return $this->phraseGroupOpGlobal->getValue();
     }
 
     /**
@@ -607,12 +701,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupOpGlobal(string $phraseGroupOpGlobal)
     {
-        $this->phraseGroupOpGlobal = $phraseGroupOpGlobal;
+        $this->phraseGroupOpGlobal->setChanged(true);
+        $this->phraseGroupOpGlobal->setValue($phraseGroupOpGlobal);
     }
     
     public function hasPhraseGroupCpPermission(): bool
     {
-        return isset($this->phraseGroupCpPermission);
+        return $this->phraseGroupCpPermission->hasBeenSet();
     }    
 
     /**
@@ -620,7 +715,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupCpPermission() : string
     {
-        return $this->phraseGroupCpPermission;
+        return $this->phraseGroupCpPermission->getValue();
     }
 
     /**
@@ -628,12 +723,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupCpPermission(string $phraseGroupCpPermission)
     {
-        $this->phraseGroupCpPermission = $phraseGroupCpPermission;
+        $this->phraseGroupCpPermission->setChanged(true);
+        $this->phraseGroupCpPermission->setValue($phraseGroupCpPermission);
     }
     
     public function hasPhraseGroupForum(): bool
     {
-        return isset($this->phraseGroupForum);
+        return $this->phraseGroupForum->hasBeenSet();
     }    
 
     /**
@@ -641,7 +737,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupForum() : string
     {
-        return $this->phraseGroupForum;
+        return $this->phraseGroupForum->getValue();
     }
 
     /**
@@ -649,12 +745,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupForum(string $phraseGroupForum)
     {
-        $this->phraseGroupForum = $phraseGroupForum;
+        $this->phraseGroupForum->setChanged(true);
+        $this->phraseGroupForum->setValue($phraseGroupForum);
     }
     
     public function hasPhraseGroupCalendar(): bool
     {
-        return isset($this->phraseGroupCalendar);
+        return $this->phraseGroupCalendar->hasBeenSet();
     }    
 
     /**
@@ -662,7 +759,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupCalendar() : string
     {
-        return $this->phraseGroupCalendar;
+        return $this->phraseGroupCalendar->getValue();
     }
 
     /**
@@ -670,12 +767,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupCalendar(string $phraseGroupCalendar)
     {
-        $this->phraseGroupCalendar = $phraseGroupCalendar;
+        $this->phraseGroupCalendar->setChanged(true);
+        $this->phraseGroupCalendar->setValue($phraseGroupCalendar);
     }
     
     public function hasPhraseGroupAttachmentImage(): bool
     {
-        return isset($this->phraseGroupAttachmentImage);
+        return $this->phraseGroupAttachmentImage->hasBeenSet();
     }    
 
     /**
@@ -683,7 +781,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupAttachmentImage() : string
     {
-        return $this->phraseGroupAttachmentImage;
+        return $this->phraseGroupAttachmentImage->getValue();
     }
 
     /**
@@ -691,12 +789,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupAttachmentImage(string $phraseGroupAttachmentImage)
     {
-        $this->phraseGroupAttachmentImage = $phraseGroupAttachmentImage;
+        $this->phraseGroupAttachmentImage->setChanged(true);
+        $this->phraseGroupAttachmentImage->setValue($phraseGroupAttachmentImage);
     }
     
     public function hasPhrasegGroupStyle(): bool
     {
-        return isset($this->phrasegGroupStyle);
+        return $this->phrasegGroupStyle->hasBeenSet();
     }    
 
     /**
@@ -704,7 +803,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhrasegGroupStyle() : string
     {
-        return $this->phrasegGroupStyle;
+        return $this->phrasegGroupStyle->getValue();
     }
 
     /**
@@ -712,12 +811,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhrasegGroupStyle(string $phrasegGroupStyle)
     {
-        $this->phrasegGroupStyle = $phrasegGroupStyle;
+        $this->phrasegGroupStyle->setChanged(true);
+        $this->phrasegGroupStyle->setValue($phrasegGroupStyle);
     }
     
     public function hasPhraseGroupLogging(): bool
     {
-        return isset($this->phraseGroupLogging);
+        return $this->phraseGroupLogging->hasBeenSet();
     }    
 
     /**
@@ -725,7 +825,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupLogging() : string
     {
-        return $this->phraseGroupLogging;
+        return $this->phraseGroupLogging->getValue();
     }
 
     /**
@@ -733,12 +833,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupLogging(string $phraseGroupLogging)
     {
-        $this->phraseGroupLogging = $phraseGroupLogging;
+        $this->phraseGroupLogging->setChanged(true);
+        $this->phraseGroupLogging->setValue($phraseGroupLogging);
     }
     
     public function hasPhraseGroupCpHome(): bool
     {
-        return isset($this->phraseGroupCpHome);
+        return $this->phraseGroupCpHome->hasBeenSet();
     }    
 
     /**
@@ -746,7 +847,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupCpHome() : string
     {
-        return $this->phraseGroupCpHome;
+        return $this->phraseGroupCpHome->getValue();
     }
 
     /**
@@ -754,12 +855,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupCpHome(string $phraseGroupCpHome)
     {
-        $this->phraseGroupCpHome = $phraseGroupCpHome;
+        $this->phraseGroupCpHome->setChanged(true);
+        $this->phraseGroupCpHome->setValue($phraseGroupCpHome);
     }
     
     public function hasPhraseGroupPromotion(): bool
     {
-        return isset($this->phraseGroupPromotion);
+        return $this->phraseGroupPromotion->hasBeenSet();
     }    
 
     /**
@@ -767,7 +869,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupPromotion() : string
     {
-        return $this->phraseGroupPromotion;
+        return $this->phraseGroupPromotion->getValue();
     }
 
     /**
@@ -775,12 +877,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupPromotion(string $phraseGroupPromotion)
     {
-        $this->phraseGroupPromotion = $phraseGroupPromotion;
+        $this->phraseGroupPromotion->setChanged(true);
+        $this->phraseGroupPromotion->setValue($phraseGroupPromotion);
     }
     
     public function hasPhraseGroupUser(): bool
     {
-        return isset($this->phraseGroupUser);
+        return $this->phraseGroupUser->hasBeenSet();
     }    
 
     /**
@@ -788,7 +891,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupUser() : string
     {
-        return $this->phraseGroupUser;
+        return $this->phraseGroupUser->getValue();
     }
 
     /**
@@ -796,12 +899,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupUser(string $phraseGroupUser)
     {
-        $this->phraseGroupUser = $phraseGroupUser;
+        $this->phraseGroupUser->setChanged(true);
+        $this->phraseGroupUser->setValue($phraseGroupUser);
     }
     
     public function hasPhraseGroupHelpFaq(): bool
     {
-        return isset($this->phraseGroupHelpFaq);
+        return $this->phraseGroupHelpFaq->hasBeenSet();
     }    
 
     /**
@@ -809,7 +913,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupHelpFaq() : string
     {
-        return $this->phraseGroupHelpFaq;
+        return $this->phraseGroupHelpFaq->getValue();
     }
 
     /**
@@ -817,12 +921,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupHelpFaq(string $phraseGroupHelpFaq)
     {
-        $this->phraseGroupHelpFaq = $phraseGroupHelpFaq;
+        $this->phraseGroupHelpFaq->setChanged(true);
+        $this->phraseGroupHelpFaq->setValue($phraseGroupHelpFaq);
     }
     
     public function hasPhraseGroupSql(): bool
     {
-        return isset($this->phraseGroupSql);
+        return $this->phraseGroupSql->hasBeenSet();
     }    
 
     /**
@@ -830,7 +935,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupSql() : string
     {
-        return $this->phraseGroupSql;
+        return $this->phraseGroupSql->getValue();
     }
 
     /**
@@ -838,12 +943,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupSql(string $phraseGroupSql)
     {
-        $this->phraseGroupSql = $phraseGroupSql;
+        $this->phraseGroupSql->setChanged(true);
+        $this->phraseGroupSql->setValue($phraseGroupSql);
     }
     
     public function hasPhraseGroupSubscription(): bool
     {
-        return isset($this->phraseGroupSubscription);
+        return $this->phraseGroupSubscription->hasBeenSet();
     }    
 
     /**
@@ -851,7 +957,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupSubscription() : string
     {
-        return $this->phraseGroupSubscription;
+        return $this->phraseGroupSubscription->getValue();
     }
 
     /**
@@ -859,12 +965,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupSubscription(string $phraseGroupSubscription)
     {
-        $this->phraseGroupSubscription = $phraseGroupSubscription;
+        $this->phraseGroupSubscription->setChanged(true);
+        $this->phraseGroupSubscription->setValue($phraseGroupSubscription);
     }
     
     public function hasPhraseGroupLanguage(): bool
     {
-        return isset($this->phraseGroupLanguage);
+        return $this->phraseGroupLanguage->hasBeenSet();
     }    
 
     /**
@@ -872,7 +979,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupLanguage() : string
     {
-        return $this->phraseGroupLanguage;
+        return $this->phraseGroupLanguage->getValue();
     }
 
     /**
@@ -880,12 +987,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupLanguage(string $phraseGroupLanguage)
     {
-        $this->phraseGroupLanguage = $phraseGroupLanguage;
+        $this->phraseGroupLanguage->setChanged(true);
+        $this->phraseGroupLanguage->setValue($phraseGroupLanguage);
     }
     
     public function hasPhraseGroupBBCode(): bool
     {
-        return isset($this->phraseGroupBBCode);
+        return $this->phraseGroupBBCode->hasBeenSet();
     }    
 
     /**
@@ -893,7 +1001,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupBBCode() : string
     {
-        return $this->phraseGroupBBCode;
+        return $this->phraseGroupBBCode->getValue();
     }
 
     /**
@@ -901,12 +1009,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupBBCode(string $phraseGroupBBCode)
     {
-        $this->phraseGroupBBCode = $phraseGroupBBCode;
+        $this->phraseGroupBBCode->setChanged(true);
+        $this->phraseGroupBBCode->setValue($phraseGroupBBCode);
     }
     
     public function hasPhraseGroupStats(): bool
     {
-        return isset($this->phraseGroupStats);
+        return $this->phraseGroupStats->hasBeenSet();
     }    
 
     /**
@@ -914,7 +1023,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupStats() : string
     {
-        return $this->phraseGroupStats;
+        return $this->phraseGroupStats->getValue();
     }
 
     /**
@@ -922,12 +1031,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupStats(string $phraseGroupStats)
     {
-        $this->phraseGroupStats = $phraseGroupStats;
+        $this->phraseGroupStats->setChanged(true);
+        $this->phraseGroupStats->setValue($phraseGroupStats);
     }
     
     public function hasPhraseGroupDiagnostic(): bool
     {
-        return isset($this->phraseGroupDiagnostic);
+        return $this->phraseGroupDiagnostic->hasBeenSet();
     }    
 
     /**
@@ -935,7 +1045,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupDiagnostic() : string
     {
-        return $this->phraseGroupDiagnostic;
+        return $this->phraseGroupDiagnostic->getValue();
     }
 
     /**
@@ -943,12 +1053,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupDiagnostic(string $phraseGroupDiagnostic)
     {
-        $this->phraseGroupDiagnostic = $phraseGroupDiagnostic;
+        $this->phraseGroupDiagnostic->setChanged(true);
+        $this->phraseGroupDiagnostic->setValue($phraseGroupDiagnostic);
     }
     
     public function hasPhraseGroupMaintenance(): bool
     {
-        return isset($this->phraseGroupMaintenance);
+        return $this->phraseGroupMaintenance->hasBeenSet();
     }    
 
     /**
@@ -956,7 +1067,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupMaintenance() : string
     {
-        return $this->phraseGroupMaintenance;
+        return $this->phraseGroupMaintenance->getValue();
     }
 
     /**
@@ -964,12 +1075,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupMaintenance(string $phraseGroupMaintenance)
     {
-        $this->phraseGroupMaintenance = $phraseGroupMaintenance;
+        $this->phraseGroupMaintenance->setChanged(true);
+        $this->phraseGroupMaintenance->setValue($phraseGroupMaintenance);
     }
     
     public function hasPhraseGroupProfileField(): bool
     {
-        return isset($this->phraseGroupProfileField);
+        return $this->phraseGroupProfileField->hasBeenSet();
     }    
 
     /**
@@ -977,7 +1089,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupProfileField() : string
     {
-        return $this->phraseGroupProfileField;
+        return $this->phraseGroupProfileField->getValue();
     }
 
     /**
@@ -985,12 +1097,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupProfileField(string $phraseGroupProfileField)
     {
-        $this->phraseGroupProfileField = $phraseGroupProfileField;
+        $this->phraseGroupProfileField->setChanged(true);
+        $this->phraseGroupProfileField->setValue($phraseGroupProfileField);
     }
     
     public function hasPhraseGroupThread(): bool
     {
-        return isset($this->phraseGroupThread);
+        return $this->phraseGroupThread->hasBeenSet();
     }    
 
     /**
@@ -998,7 +1111,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupThread() : string
     {
-        return $this->phraseGroupThread;
+        return $this->phraseGroupThread->getValue();
     }
 
     /**
@@ -1006,12 +1119,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupThread(string $phraseGroupThread)
     {
-        $this->phraseGroupThread = $phraseGroupThread;
+        $this->phraseGroupThread->setChanged(true);
+        $this->phraseGroupThread->setValue($phraseGroupThread);
     }
     
     public function hasPhraseGroupTimeZone(): bool
     {
-        return isset($this->phraseGroupTimeZone);
+        return $this->phraseGroupTimeZone->hasBeenSet();
     }    
 
     /**
@@ -1019,7 +1133,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupTimeZone() : string
     {
-        return $this->phraseGroupTimeZone;
+        return $this->phraseGroupTimeZone->getValue();
     }
 
     /**
@@ -1027,12 +1141,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupTimeZone(string $phraseGroupTimeZone)
     {
-        $this->phraseGroupTimeZone = $phraseGroupTimeZone;
+        $this->phraseGroupTimeZone->setChanged(true);
+        $this->phraseGroupTimeZone->setValue($phraseGroupTimeZone);
     }
     
     public function hasPhraseGroupBanning(): bool
     {
-        return isset($this->phraseGroupBanning);
+        return $this->phraseGroupBanning->hasBeenSet();
     }    
 
     /**
@@ -1040,7 +1155,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupBanning() : string
     {
-        return $this->phraseGroupBanning;
+        return $this->phraseGroupBanning->getValue();
     }
 
     /**
@@ -1048,12 +1163,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupBanning(string $phraseGroupBanning)
     {
-        $this->phraseGroupBanning = $phraseGroupBanning;
+        $this->phraseGroupBanning->setChanged(true);
+        $this->phraseGroupBanning->setValue($phraseGroupBanning);
     }
     
     public function hasPhraseGroupReputation(): bool
     {
-        return isset($this->phraseGroupReputation);
+        return $this->phraseGroupReputation->hasBeenSet();
     }    
 
     /**
@@ -1061,7 +1177,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupReputation() : string
     {
-        return $this->phraseGroupReputation;
+        return $this->phraseGroupReputation->getValue();
     }
 
     /**
@@ -1069,12 +1185,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupReputation(string $phraseGroupReputation)
     {
-        $this->phraseGroupReputation = $phraseGroupReputation;
+        $this->phraseGroupReputation->setChanged(true);
+        $this->phraseGroupReputation->setValue($phraseGroupReputation);
     }
     
     public function hasPhraseGroupWol(): bool
     {
-        return isset($this->phraseGroupWol);
+        return $this->phraseGroupWol->hasBeenSet();
     }    
 
     /**
@@ -1082,7 +1199,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupWol() : string
     {
-        return $this->phraseGroupWol;
+        return $this->phraseGroupWol->getValue();
     }
 
     /**
@@ -1090,12 +1207,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupWol(string $phraseGroupWol)
     {
-        $this->phraseGroupWol = $phraseGroupWol;
+        $this->phraseGroupWol->setChanged(true);
+        $this->phraseGroupWol->setValue($phraseGroupWol);
     }
     
     public function hasPhraseGroupThreadManage(): bool
     {
-        return isset($this->phraseGroupThreadManage);
+        return $this->phraseGroupThreadManage->hasBeenSet();
     }    
 
     /**
@@ -1103,7 +1221,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupThreadManage() : string
     {
-        return $this->phraseGroupThreadManage;
+        return $this->phraseGroupThreadManage->getValue();
     }
 
     /**
@@ -1111,12 +1229,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupThreadManage(string $phraseGroupThreadManage)
     {
-        $this->phraseGroupThreadManage = $phraseGroupThreadManage;
+        $this->phraseGroupThreadManage->setChanged(true);
+        $this->phraseGroupThreadManage->setValue($phraseGroupThreadManage);
     }
     
     public function hasPhraseGroupPm(): bool
     {
-        return isset($this->phraseGroupPm);
+        return $this->phraseGroupPm->hasBeenSet();
     }    
 
     /**
@@ -1124,7 +1243,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupPm() : string
     {
-        return $this->phraseGroupPm;
+        return $this->phraseGroupPm->getValue();
     }
 
     /**
@@ -1132,12 +1251,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupPm(string $phraseGroupPm)
     {
-        $this->phraseGroupPm = $phraseGroupPm;
+        $this->phraseGroupPm->setChanged(true);
+        $this->phraseGroupPm->setValue($phraseGroupPm);
     }
     
     public function hasPhraseGroupCpUser(): bool
     {
-        return isset($this->phraseGroupCpUser);
+        return $this->phraseGroupCpUser->hasBeenSet();
     }    
 
     /**
@@ -1145,7 +1265,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupCpUser() : string
     {
-        return $this->phraseGroupCpUser;
+        return $this->phraseGroupCpUser->getValue();
     }
 
     /**
@@ -1153,12 +1273,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupCpUser(string $phraseGroupCpUser)
     {
-        $this->phraseGroupCpUser = $phraseGroupCpUser;
+        $this->phraseGroupCpUser->setChanged(true);
+        $this->phraseGroupCpUser->setValue($phraseGroupCpUser);
     }
     
     public function hasPhraseGroupAccessMask(): bool
     {
-        return isset($this->phraseGroupAccessMask);
+        return $this->phraseGroupAccessMask->hasBeenSet();
     }    
 
     /**
@@ -1166,7 +1287,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupAccessMask() : string
     {
-        return $this->phraseGroupAccessMask;
+        return $this->phraseGroupAccessMask->getValue();
     }
 
     /**
@@ -1174,12 +1295,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupAccessMask(string $phraseGroupAccessMask)
     {
-        $this->phraseGroupAccessMask = $phraseGroupAccessMask;
+        $this->phraseGroupAccessMask->setChanged(true);
+        $this->phraseGroupAccessMask->setValue($phraseGroupAccessMask);
     }
     
     public function hasPhraseGroupCron(): bool
     {
-        return isset($this->phraseGroupCron);
+        return $this->phraseGroupCron->hasBeenSet();
     }    
 
     /**
@@ -1187,7 +1309,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupCron() : string
     {
-        return $this->phraseGroupCron;
+        return $this->phraseGroupCron->getValue();
     }
 
     /**
@@ -1195,12 +1317,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupCron(string $phraseGroupCron)
     {
-        $this->phraseGroupCron = $phraseGroupCron;
+        $this->phraseGroupCron->setChanged(true);
+        $this->phraseGroupCron->setValue($phraseGroupCron);
     }
     
     public function hasPhrasegGoupModerator(): bool
     {
-        return isset($this->phrasegGoupModerator);
+        return $this->phrasegGoupModerator->hasBeenSet();
     }    
 
     /**
@@ -1208,7 +1331,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhrasegGoupModerator() : string
     {
-        return $this->phrasegGoupModerator;
+        return $this->phrasegGoupModerator->getValue();
     }
 
     /**
@@ -1216,12 +1339,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhrasegGoupModerator(string $phrasegGoupModerator)
     {
-        $this->phrasegGoupModerator = $phrasegGoupModerator;
+        $this->phrasegGoupModerator->setChanged(true);
+        $this->phrasegGoupModerator->setValue($phrasegGoupModerator);
     }
     
     public function hasPhraseGroupCpOption(): bool
     {
-        return isset($this->phraseGroupCpOption);
+        return $this->phraseGroupCpOption->hasBeenSet();
     }    
 
     /**
@@ -1229,7 +1353,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupCpOption() : string
     {
-        return $this->phraseGroupCpOption;
+        return $this->phraseGroupCpOption->getValue();
     }
 
     /**
@@ -1237,12 +1361,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupCpOption(string $phraseGroupCpOption)
     {
-        $this->phraseGroupCpOption = $phraseGroupCpOption;
+        $this->phraseGroupCpOption->setChanged(true);
+        $this->phraseGroupCpOption->setValue($phraseGroupCpOption);
     }
     
     public function hasPhraseGroupCpRank(): bool
     {
-        return isset($this->phraseGroupCpRank);
+        return $this->phraseGroupCpRank->hasBeenSet();
     }    
 
     /**
@@ -1250,7 +1375,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupCpRank() : string
     {
-        return $this->phraseGroupCpRank;
+        return $this->phraseGroupCpRank->getValue();
     }
 
     /**
@@ -1258,12 +1383,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupCpRank(string $phraseGroupCpRank)
     {
-        $this->phraseGroupCpRank = $phraseGroupCpRank;
+        $this->phraseGroupCpRank->setChanged(true);
+        $this->phraseGroupCpRank->setValue($phraseGroupCpRank);
     }
     
     public function hasPhraseGroupCpUserGroup(): bool
     {
-        return isset($this->phraseGroupCpUserGroup);
+        return $this->phraseGroupCpUserGroup->hasBeenSet();
     }    
 
     /**
@@ -1271,7 +1397,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupCpUserGroup() : string
     {
-        return $this->phraseGroupCpUserGroup;
+        return $this->phraseGroupCpUserGroup->getValue();
     }
 
     /**
@@ -1279,12 +1405,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupCpUserGroup(string $phraseGroupCpUserGroup)
     {
-        $this->phraseGroupCpUserGroup = $phraseGroupCpUserGroup;
+        $this->phraseGroupCpUserGroup->setChanged(true);
+        $this->phraseGroupCpUserGroup->setValue($phraseGroupCpUserGroup);
     }
     
     public function hasPhraseGroupHoliday(): bool
     {
-        return isset($this->phraseGroupHoliday);
+        return $this->phraseGroupHoliday->hasBeenSet();
     }    
 
     /**
@@ -1292,7 +1419,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupHoliday() : string
     {
-        return $this->phraseGroupHoliday;
+        return $this->phraseGroupHoliday->getValue();
     }
 
     /**
@@ -1300,12 +1427,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupHoliday(string $phraseGroupHoliday)
     {
-        $this->phraseGroupHoliday = $phraseGroupHoliday;
+        $this->phraseGroupHoliday->setChanged(true);
+        $this->phraseGroupHoliday->setValue($phraseGroupHoliday);
     }
     
     public function hasPhraseGroupPosting(): bool
     {
-        return isset($this->phraseGroupPosting);
+        return $this->phraseGroupPosting->hasBeenSet();
     }    
 
     /**
@@ -1313,7 +1441,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupPosting() : string
     {
-        return $this->phraseGroupPosting;
+        return $this->phraseGroupPosting->getValue();
     }
 
     /**
@@ -1321,12 +1449,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupPosting(string $phraseGroupPosting)
     {
-        $this->phraseGroupPosting = $phraseGroupPosting;
+        $this->phraseGroupPosting->setChanged(true);
+        $this->phraseGroupPosting->setValue($phraseGroupPosting);
     }
     
     public function hasPhraseGroupPoll(): bool
     {
-        return isset($this->phraseGroupPoll);
+        return $this->phraseGroupPoll->hasBeenSet();
     }    
 
     /**
@@ -1334,7 +1463,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupPoll() : string
     {
-        return $this->phraseGroupPoll;
+        return $this->phraseGroupPoll->getValue();
     }
 
     /**
@@ -1342,12 +1471,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupPoll(string $phraseGroupPoll)
     {
-        $this->phraseGroupPoll = $phraseGroupPoll;
+        $this->phraseGroupPoll->setChanged(true);
+        $this->phraseGroupPoll->setValue($phraseGroupPoll);
     }
     
     public function hasPhraseGroupFrontHelp(): bool
     {
-        return isset($this->phraseGroupFrontHelp);
+        return $this->phraseGroupFrontHelp->hasBeenSet();
     }    
 
     /**
@@ -1355,7 +1485,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupFrontHelp() : string
     {
-        return $this->phraseGroupFrontHelp;
+        return $this->phraseGroupFrontHelp->getValue();
     }
 
     /**
@@ -1363,12 +1493,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupFrontHelp(string $phraseGroupFrontHelp)
     {
-        $this->phraseGroupFrontHelp = $phraseGroupFrontHelp;
+        $this->phraseGroupFrontHelp->setChanged(true);
+        $this->phraseGroupFrontHelp->setValue($phraseGroupFrontHelp);
     }
     
     public function hasPhraseGroupRegister(): bool
     {
-        return isset($this->phraseGroupRegister);
+        return $this->phraseGroupRegister->hasBeenSet();
     }    
 
     /**
@@ -1376,7 +1507,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupRegister() : string
     {
-        return $this->phraseGroupRegister;
+        return $this->phraseGroupRegister->getValue();
     }
 
     /**
@@ -1384,12 +1515,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupRegister(string $phraseGroupRegister)
     {
-        $this->phraseGroupRegister = $phraseGroupRegister;
+        $this->phraseGroupRegister->setChanged(true);
+        $this->phraseGroupRegister->setValue($phraseGroupRegister);
     }
     
     public function hasPhraseGroupSearch(): bool
     {
-        return isset($this->phraseGroupSearch);
+        return $this->phraseGroupSearch->hasBeenSet();
     }    
 
     /**
@@ -1397,7 +1529,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupSearch() : string
     {
-        return $this->phraseGroupSearch;
+        return $this->phraseGroupSearch->getValue();
     }
 
     /**
@@ -1405,12 +1537,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupSearch(string $phraseGroupSearch)
     {
-        $this->phraseGroupSearch = $phraseGroupSearch;
+        $this->phraseGroupSearch->setChanged(true);
+        $this->phraseGroupSearch->setValue($phraseGroupSearch);
     }
     
     public function hasPhraseGroupShowThread(): bool
     {
-        return isset($this->phraseGroupShowThread);
+        return $this->phraseGroupShowThread->hasBeenSet();
     }    
 
     /**
@@ -1418,7 +1551,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupShowThread() : string
     {
-        return $this->phraseGroupShowThread;
+        return $this->phraseGroupShowThread->getValue();
     }
 
     /**
@@ -1426,12 +1559,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupShowThread(string $phraseGroupShowThread)
     {
-        $this->phraseGroupShowThread = $phraseGroupShowThread;
+        $this->phraseGroupShowThread->setChanged(true);
+        $this->phraseGroupShowThread->setValue($phraseGroupShowThread);
     }
     
     public function hasPhraseGroupPostBit(): bool
     {
-        return isset($this->phraseGroupPostBit);
+        return $this->phraseGroupPostBit->hasBeenSet();
     }    
 
     /**
@@ -1439,7 +1573,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupPostBit() : string
     {
-        return $this->phraseGroupPostBit;
+        return $this->phraseGroupPostBit->getValue();
     }
 
     /**
@@ -1447,12 +1581,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupPostBit(string $phraseGroupPostBit)
     {
-        $this->phraseGroupPostBit = $phraseGroupPostBit;
+        $this->phraseGroupPostBit->setChanged(true);
+        $this->phraseGroupPostBit->setValue($phraseGroupPostBit);
     }
     
     public function hasPhraseGroupForumDisplay(): bool
     {
-        return isset($this->phraseGroupForumDisplay);
+        return $this->phraseGroupForumDisplay->hasBeenSet();
     }    
 
     /**
@@ -1460,7 +1595,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupForumDisplay() : string
     {
-        return $this->phraseGroupForumDisplay;
+        return $this->phraseGroupForumDisplay->getValue();
     }
 
     /**
@@ -1468,12 +1603,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupForumDisplay(string $phraseGroupForumDisplay)
     {
-        $this->phraseGroupForumDisplay = $phraseGroupForumDisplay;
+        $this->phraseGroupForumDisplay->setChanged(true);
+        $this->phraseGroupForumDisplay->setValue($phraseGroupForumDisplay);
     }
     
     public function hasPhraseGroupMessaging(): bool
     {
-        return isset($this->phraseGroupMessaging);
+        return $this->phraseGroupMessaging->hasBeenSet();
     }    
 
     /**
@@ -1481,7 +1617,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupMessaging() : string
     {
-        return $this->phraseGroupMessaging;
+        return $this->phraseGroupMessaging->getValue();
     }
 
     /**
@@ -1489,12 +1625,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupMessaging(string $phraseGroupMessaging)
     {
-        $this->phraseGroupMessaging = $phraseGroupMessaging;
+        $this->phraseGroupMessaging->setChanged(true);
+        $this->phraseGroupMessaging->setValue($phraseGroupMessaging);
     }
     
     public function hasPhraseGroupInlineMod(): bool
     {
-        return isset($this->phraseGroupInlineMod);
+        return $this->phraseGroupInlineMod->hasBeenSet();
     }    
 
     /**
@@ -1502,7 +1639,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupInlineMod() : string
     {
-        return $this->phraseGroupInlineMod;
+        return $this->phraseGroupInlineMod->getValue();
     }
 
     /**
@@ -1510,12 +1647,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupInlineMod(string $phraseGroupInlineMod)
     {
-        $this->phraseGroupInlineMod = $phraseGroupInlineMod;
+        $this->phraseGroupInlineMod->setChanged(true);
+        $this->phraseGroupInlineMod->setValue($phraseGroupInlineMod);
     }
     
     public function hasPhraseGroupPlugins(): bool
     {
-        return isset($this->phraseGroupPlugins);
+        return $this->phraseGroupPlugins->hasBeenSet();
     }    
 
     /**
@@ -1523,7 +1661,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupPlugins() : string
     {
-        return $this->phraseGroupPlugins;
+        return $this->phraseGroupPlugins->getValue();
     }
 
     /**
@@ -1531,12 +1669,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupPlugins(string $phraseGroupPlugins)
     {
-        $this->phraseGroupPlugins = $phraseGroupPlugins;
+        $this->phraseGroupPlugins->setChanged(true);
+        $this->phraseGroupPlugins->setValue($phraseGroupPlugins);
     }
     
     public function hasPhraseGroupCProfileField(): bool
     {
-        return isset($this->phraseGroupCProfileField);
+        return $this->phraseGroupCProfileField->hasBeenSet();
     }    
 
     /**
@@ -1544,7 +1683,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupCProfileField() : ?string
     {
-        return $this->phraseGroupCProfileField;
+        return $this->phraseGroupCProfileField->getValue();
     }
 
     /**
@@ -1552,12 +1691,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupCProfileField(?string $phraseGroupCProfileField)
     {
-        $this->phraseGroupCProfileField = $phraseGroupCProfileField;
+        $this->phraseGroupCProfileField->setChanged(true);
+        $this->phraseGroupCProfileField->setValue($phraseGroupCProfileField);
     }
     
     public function hasPhraseGroupReputationLevel(): bool
     {
-        return isset($this->phraseGroupReputationLevel);
+        return $this->phraseGroupReputationLevel->hasBeenSet();
     }    
 
     /**
@@ -1565,7 +1705,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupReputationLevel() : ?string
     {
-        return $this->phraseGroupReputationLevel;
+        return $this->phraseGroupReputationLevel->getValue();
     }
 
     /**
@@ -1573,12 +1713,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupReputationLevel(?string $phraseGroupReputationLevel)
     {
-        $this->phraseGroupReputationLevel = $phraseGroupReputationLevel;
+        $this->phraseGroupReputationLevel->setChanged(true);
+        $this->phraseGroupReputationLevel->setValue($phraseGroupReputationLevel);
     }
     
     public function hasPhraseGroupInfraction(): bool
     {
-        return isset($this->phraseGroupInfraction);
+        return $this->phraseGroupInfraction->hasBeenSet();
     }    
 
     /**
@@ -1586,7 +1727,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupInfraction() : ?string
     {
-        return $this->phraseGroupInfraction;
+        return $this->phraseGroupInfraction->getValue();
     }
 
     /**
@@ -1594,12 +1735,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupInfraction(?string $phraseGroupInfraction)
     {
-        $this->phraseGroupInfraction = $phraseGroupInfraction;
+        $this->phraseGroupInfraction->setChanged(true);
+        $this->phraseGroupInfraction->setValue($phraseGroupInfraction);
     }
     
     public function hasPhraseGroupInfractionLevel(): bool
     {
-        return isset($this->phraseGroupInfractionLevel);
+        return $this->phraseGroupInfractionLevel->hasBeenSet();
     }    
 
     /**
@@ -1607,7 +1749,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupInfractionLevel() : ?string
     {
-        return $this->phraseGroupInfractionLevel;
+        return $this->phraseGroupInfractionLevel->getValue();
     }
 
     /**
@@ -1615,12 +1757,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupInfractionLevel(?string $phraseGroupInfractionLevel)
     {
-        $this->phraseGroupInfractionLevel = $phraseGroupInfractionLevel;
+        $this->phraseGroupInfractionLevel->setChanged(true);
+        $this->phraseGroupInfractionLevel->setValue($phraseGroupInfractionLevel);
     }
     
     public function hasPhraseGroupPrefix(): bool
     {
-        return isset($this->phraseGroupPrefix);
+        return $this->phraseGroupPrefix->hasBeenSet();
     }    
 
     /**
@@ -1628,7 +1771,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupPrefix() : ?string
     {
-        return $this->phraseGroupPrefix;
+        return $this->phraseGroupPrefix->getValue();
     }
 
     /**
@@ -1636,12 +1779,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupPrefix(?string $phraseGroupPrefix)
     {
-        $this->phraseGroupPrefix = $phraseGroupPrefix;
+        $this->phraseGroupPrefix->setChanged(true);
+        $this->phraseGroupPrefix->setValue($phraseGroupPrefix);
     }
     
     public function hasPhraseGroupSocialGroups(): bool
     {
-        return isset($this->phraseGroupSocialGroups);
+        return $this->phraseGroupSocialGroups->hasBeenSet();
     }    
 
     /**
@@ -1649,7 +1793,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupSocialGroups() : ?string
     {
-        return $this->phraseGroupSocialGroups;
+        return $this->phraseGroupSocialGroups->getValue();
     }
 
     /**
@@ -1657,12 +1801,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupSocialGroups(?string $phraseGroupSocialGroups)
     {
-        $this->phraseGroupSocialGroups = $phraseGroupSocialGroups;
+        $this->phraseGroupSocialGroups->setChanged(true);
+        $this->phraseGroupSocialGroups->setValue($phraseGroupSocialGroups);
     }
     
     public function hasPhraseGroupPrefixAdmin(): bool
     {
-        return isset($this->phraseGroupPrefixAdmin);
+        return $this->phraseGroupPrefixAdmin->hasBeenSet();
     }    
 
     /**
@@ -1670,7 +1815,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupPrefixAdmin() : ?string
     {
-        return $this->phraseGroupPrefixAdmin;
+        return $this->phraseGroupPrefixAdmin->getValue();
     }
 
     /**
@@ -1678,12 +1823,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupPrefixAdmin(?string $phraseGroupPrefixAdmin)
     {
-        $this->phraseGroupPrefixAdmin = $phraseGroupPrefixAdmin;
+        $this->phraseGroupPrefixAdmin->setChanged(true);
+        $this->phraseGroupPrefixAdmin->setValue($phraseGroupPrefixAdmin);
     }
     
     public function hasPhraseGroupNotice(): bool
     {
-        return isset($this->phraseGroupNotice);
+        return $this->phraseGroupNotice->hasBeenSet();
     }    
 
     /**
@@ -1691,7 +1837,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupNotice() : ?string
     {
-        return $this->phraseGroupNotice;
+        return $this->phraseGroupNotice->getValue();
     }
 
     /**
@@ -1699,12 +1845,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupNotice(?string $phraseGroupNotice)
     {
-        $this->phraseGroupNotice = $phraseGroupNotice;
+        $this->phraseGroupNotice->setChanged(true);
+        $this->phraseGroupNotice->setValue($phraseGroupNotice);
     }
     
     public function hasPhraseGroupAlbum(): bool
     {
-        return isset($this->phraseGroupAlbum);
+        return $this->phraseGroupAlbum->hasBeenSet();
     }    
 
     /**
@@ -1712,7 +1859,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupAlbum() : ?string
     {
-        return $this->phraseGroupAlbum;
+        return $this->phraseGroupAlbum->getValue();
     }
 
     /**
@@ -1720,12 +1867,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupAlbum(?string $phraseGroupAlbum)
     {
-        $this->phraseGroupAlbum = $phraseGroupAlbum;
+        $this->phraseGroupAlbum->setChanged(true);
+        $this->phraseGroupAlbum->setValue($phraseGroupAlbum);
     }
     
     public function hasPhraseGroupProjectTools(): bool
     {
-        return isset($this->phraseGroupProjectTools);
+        return $this->phraseGroupProjectTools->hasBeenSet();
     }    
 
     /**
@@ -1733,7 +1881,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupProjectTools() : string
     {
-        return $this->phraseGroupProjectTools;
+        return $this->phraseGroupProjectTools->getValue();
     }
 
     /**
@@ -1741,12 +1889,13 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupProjectTools(string $phraseGroupProjectTools)
     {
-        $this->phraseGroupProjectTools = $phraseGroupProjectTools;
+        $this->phraseGroupProjectTools->setChanged(true);
+        $this->phraseGroupProjectTools->setValue($phraseGroupProjectTools);
     }
     
     public function hasPhraseGroupProjectToolsAdmin(): bool
     {
-        return isset($this->phraseGroupProjectToolsAdmin);
+        return $this->phraseGroupProjectToolsAdmin->hasBeenSet();
     }    
 
     /**
@@ -1754,7 +1903,7 @@ class GeneratedLanguageRecord implements Record {
      */
     public function getPhraseGroupProjectToolsAdmin() : string
     {
-        return $this->phraseGroupProjectToolsAdmin;
+        return $this->phraseGroupProjectToolsAdmin->getValue();
     }
 
     /**
@@ -1762,9 +1911,9 @@ class GeneratedLanguageRecord implements Record {
      */
     public function setPhraseGroupProjectToolsAdmin(string $phraseGroupProjectToolsAdmin)
     {
-        $this->phraseGroupProjectToolsAdmin = $phraseGroupProjectToolsAdmin;
+        $this->phraseGroupProjectToolsAdmin->setChanged(true);
+        $this->phraseGroupProjectToolsAdmin->setValue($phraseGroupProjectToolsAdmin);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

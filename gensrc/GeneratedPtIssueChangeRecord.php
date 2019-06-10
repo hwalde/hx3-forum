@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueChangeRecord implements Record {
     
-    /** @var $issueChangeId int */
+    /** @var $issueChangeId RecordValue */
     protected $issueChangeId;
     
-    /** @var $issueId int */
+    /** @var $issueId RecordValue */
     protected $issueId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $issueNoteId int */
+    /** @var $issueNoteId RecordValue */
     protected $issueNoteId;
     
-    /** @var $field string */
+    /** @var $field RecordValue */
     protected $field;
     
-    /** @var $oldValue string */
+    /** @var $oldValue RecordValue */
     protected $oldValue;
     
-    /** @var $newValue string */
+    /** @var $newValue RecordValue */
     protected $newValue;
+
+    public function __construct() {
+		$this->issueChangeId = new RecordValue();
+		$this->issueId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->issueNoteId = new RecordValue();
+		$this->field = new RecordValue();
+		$this->oldValue = new RecordValue();
+		$this->newValue = new RecordValue();
+    }
     
     public function hasIssueChangeId(): bool
     {
-        return isset($this->issueChangeId);
+        return $this->issueChangeId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function getIssueChangeId() : int
     {
-        return $this->issueChangeId;
+        return $this->issueChangeId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function setIssueChangeId(int $issueChangeId)
     {
-        $this->issueChangeId = $issueChangeId;
+        $this->issueChangeId->setChanged(true);
+        $this->issueChangeId->setValue($issueChangeId);
     }
     
     public function hasIssueId(): bool
     {
-        return isset($this->issueId);
+        return $this->issueId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function getIssueId() : int
     {
-        return $this->issueId;
+        return $this->issueId->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function setIssueId(int $issueId)
     {
-        $this->issueId = $issueId;
+        $this->issueId->setChanged(true);
+        $this->issueId->setValue($issueId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasIssueNoteId(): bool
     {
-        return isset($this->issueNoteId);
+        return $this->issueNoteId->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function getIssueNoteId() : int
     {
-        return $this->issueNoteId;
+        return $this->issueNoteId->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function setIssueNoteId(int $issueNoteId)
     {
-        $this->issueNoteId = $issueNoteId;
+        $this->issueNoteId->setChanged(true);
+        $this->issueNoteId->setValue($issueNoteId);
     }
     
     public function hasField(): bool
     {
-        return isset($this->field);
+        return $this->field->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function getField() : string
     {
-        return $this->field;
+        return $this->field->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function setField(string $field)
     {
-        $this->field = $field;
+        $this->field->setChanged(true);
+        $this->field->setValue($field);
     }
     
     public function hasOldValue(): bool
     {
-        return isset($this->oldValue);
+        return $this->oldValue->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function getOldValue() : string
     {
-        return $this->oldValue;
+        return $this->oldValue->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function setOldValue(string $oldValue)
     {
-        $this->oldValue = $oldValue;
+        $this->oldValue->setChanged(true);
+        $this->oldValue->setValue($oldValue);
     }
     
     public function hasNewValue(): bool
     {
-        return isset($this->newValue);
+        return $this->newValue->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function getNewValue() : string
     {
-        return $this->newValue;
+        return $this->newValue->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedPtIssueChangeRecord implements Record {
      */
     public function setNewValue(string $newValue)
     {
-        $this->newValue = $newValue;
+        $this->newValue->setChanged(true);
+        $this->newValue->setValue($newValue);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

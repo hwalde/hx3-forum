@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedModerationRecord implements Record {
     
-    /** @var $primaryId int */
+    /** @var $primaryId RecordValue */
     protected $primaryId;
     
-    /** @var $type string */
+    /** @var $type RecordValue */
     protected $type;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->primaryId = new RecordValue();
+		$this->type = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasPrimaryId(): bool
     {
-        return isset($this->primaryId);
+        return $this->primaryId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedModerationRecord implements Record {
      */
     public function getPrimaryId() : int
     {
-        return $this->primaryId;
+        return $this->primaryId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedModerationRecord implements Record {
      */
     public function setPrimaryId(int $primaryId)
     {
-        $this->primaryId = $primaryId;
+        $this->primaryId->setChanged(true);
+        $this->primaryId->setValue($primaryId);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedModerationRecord implements Record {
      */
     public function getType() : string
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedModerationRecord implements Record {
      */
     public function setType(string $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedModerationRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedModerationRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,55 +9,73 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedCalendarRecord implements Record {
     
-    /** @var $calendarId int */
+    /** @var $calendarId RecordValue */
     protected $calendarId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $description string */
+    /** @var $description RecordValue */
     protected $description;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $newEventEmail string|null */
+    /** @var $newEventEmail RecordValue */
     protected $newEventEmail;
     
-    /** @var $moderateNew int */
+    /** @var $moderateNew RecordValue */
     protected $moderateNew;
     
-    /** @var $startOfWeek int */
+    /** @var $startOfWeek RecordValue */
     protected $startOfWeek;
     
-    /** @var $options int */
+    /** @var $options RecordValue */
     protected $options;
     
-    /** @var $cutOff int */
+    /** @var $cutOff RecordValue */
     protected $cutOff;
     
-    /** @var $eventCount int */
+    /** @var $eventCount RecordValue */
     protected $eventCount;
     
-    /** @var $birthdayCount int */
+    /** @var $birthdayCount RecordValue */
     protected $birthdayCount;
     
-    /** @var $startYear int */
+    /** @var $startYear RecordValue */
     protected $startYear;
     
-    /** @var $endYear int */
+    /** @var $endYear RecordValue */
     protected $endYear;
     
-    /** @var $holidays int */
+    /** @var $holidays RecordValue */
     protected $holidays;
+
+    public function __construct() {
+		$this->calendarId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->description = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->newEventEmail = new RecordValue();
+		$this->moderateNew = new RecordValue();
+		$this->startOfWeek = new RecordValue();
+		$this->options = new RecordValue();
+		$this->cutOff = new RecordValue();
+		$this->eventCount = new RecordValue();
+		$this->birthdayCount = new RecordValue();
+		$this->startYear = new RecordValue();
+		$this->endYear = new RecordValue();
+		$this->holidays = new RecordValue();
+    }
     
     public function hasCalendarId(): bool
     {
-        return isset($this->calendarId);
+        return $this->calendarId->hasBeenSet();
     }    
 
     /**
@@ -65,7 +83,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getCalendarId() : int
     {
-        return $this->calendarId;
+        return $this->calendarId->getValue();
     }
 
     /**
@@ -73,12 +91,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setCalendarId(int $calendarId)
     {
-        $this->calendarId = $calendarId;
+        $this->calendarId->setChanged(true);
+        $this->calendarId->setValue($calendarId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -86,7 +105,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -94,12 +113,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasDescription(): bool
     {
-        return isset($this->description);
+        return $this->description->hasBeenSet();
     }    
 
     /**
@@ -107,7 +127,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getDescription() : string
     {
-        return $this->description;
+        return $this->description->getValue();
     }
 
     /**
@@ -115,12 +135,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setDescription(string $description)
     {
-        $this->description = $description;
+        $this->description->setChanged(true);
+        $this->description->setValue($description);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -128,7 +149,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -136,12 +157,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasNewEventEmail(): bool
     {
-        return isset($this->newEventEmail);
+        return $this->newEventEmail->hasBeenSet();
     }    
 
     /**
@@ -149,7 +171,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getNewEventEmail() : ?string
     {
-        return $this->newEventEmail;
+        return $this->newEventEmail->getValue();
     }
 
     /**
@@ -157,12 +179,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setNewEventEmail(?string $newEventEmail)
     {
-        $this->newEventEmail = $newEventEmail;
+        $this->newEventEmail->setChanged(true);
+        $this->newEventEmail->setValue($newEventEmail);
     }
     
     public function hasModerateNew(): bool
     {
-        return isset($this->moderateNew);
+        return $this->moderateNew->hasBeenSet();
     }    
 
     /**
@@ -170,7 +193,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getModerateNew() : int
     {
-        return $this->moderateNew;
+        return $this->moderateNew->getValue();
     }
 
     /**
@@ -178,12 +201,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setModerateNew(int $moderateNew)
     {
-        $this->moderateNew = $moderateNew;
+        $this->moderateNew->setChanged(true);
+        $this->moderateNew->setValue($moderateNew);
     }
     
     public function hasStartOfWeek(): bool
     {
-        return isset($this->startOfWeek);
+        return $this->startOfWeek->hasBeenSet();
     }    
 
     /**
@@ -191,7 +215,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getStartOfWeek() : int
     {
-        return $this->startOfWeek;
+        return $this->startOfWeek->getValue();
     }
 
     /**
@@ -199,12 +223,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setStartOfWeek(int $startOfWeek)
     {
-        $this->startOfWeek = $startOfWeek;
+        $this->startOfWeek->setChanged(true);
+        $this->startOfWeek->setValue($startOfWeek);
     }
     
     public function hasOptions(): bool
     {
-        return isset($this->options);
+        return $this->options->hasBeenSet();
     }    
 
     /**
@@ -212,7 +237,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getOptions() : int
     {
-        return $this->options;
+        return $this->options->getValue();
     }
 
     /**
@@ -220,12 +245,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setOptions(int $options)
     {
-        $this->options = $options;
+        $this->options->setChanged(true);
+        $this->options->setValue($options);
     }
     
     public function hasCutOff(): bool
     {
-        return isset($this->cutOff);
+        return $this->cutOff->hasBeenSet();
     }    
 
     /**
@@ -233,7 +259,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getCutOff() : int
     {
-        return $this->cutOff;
+        return $this->cutOff->getValue();
     }
 
     /**
@@ -241,12 +267,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setCutOff(int $cutOff)
     {
-        $this->cutOff = $cutOff;
+        $this->cutOff->setChanged(true);
+        $this->cutOff->setValue($cutOff);
     }
     
     public function hasEventCount(): bool
     {
-        return isset($this->eventCount);
+        return $this->eventCount->hasBeenSet();
     }    
 
     /**
@@ -254,7 +281,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getEventCount() : int
     {
-        return $this->eventCount;
+        return $this->eventCount->getValue();
     }
 
     /**
@@ -262,12 +289,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setEventCount(int $eventCount)
     {
-        $this->eventCount = $eventCount;
+        $this->eventCount->setChanged(true);
+        $this->eventCount->setValue($eventCount);
     }
     
     public function hasBirthdayCount(): bool
     {
-        return isset($this->birthdayCount);
+        return $this->birthdayCount->hasBeenSet();
     }    
 
     /**
@@ -275,7 +303,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getBirthdayCount() : int
     {
-        return $this->birthdayCount;
+        return $this->birthdayCount->getValue();
     }
 
     /**
@@ -283,12 +311,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setBirthdayCount(int $birthdayCount)
     {
-        $this->birthdayCount = $birthdayCount;
+        $this->birthdayCount->setChanged(true);
+        $this->birthdayCount->setValue($birthdayCount);
     }
     
     public function hasStartYear(): bool
     {
-        return isset($this->startYear);
+        return $this->startYear->hasBeenSet();
     }    
 
     /**
@@ -296,7 +325,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getStartYear() : int
     {
-        return $this->startYear;
+        return $this->startYear->getValue();
     }
 
     /**
@@ -304,12 +333,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setStartYear(int $startYear)
     {
-        $this->startYear = $startYear;
+        $this->startYear->setChanged(true);
+        $this->startYear->setValue($startYear);
     }
     
     public function hasEndYear(): bool
     {
-        return isset($this->endYear);
+        return $this->endYear->hasBeenSet();
     }    
 
     /**
@@ -317,7 +347,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getEndYear() : int
     {
-        return $this->endYear;
+        return $this->endYear->getValue();
     }
 
     /**
@@ -325,12 +355,13 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setEndYear(int $endYear)
     {
-        $this->endYear = $endYear;
+        $this->endYear->setChanged(true);
+        $this->endYear->setValue($endYear);
     }
     
     public function hasHolidays(): bool
     {
-        return isset($this->holidays);
+        return $this->holidays->hasBeenSet();
     }    
 
     /**
@@ -338,7 +369,7 @@ class GeneratedCalendarRecord implements Record {
      */
     public function getHolidays() : int
     {
-        return $this->holidays;
+        return $this->holidays->getValue();
     }
 
     /**
@@ -346,9 +377,9 @@ class GeneratedCalendarRecord implements Record {
      */
     public function setHolidays(int $holidays)
     {
-        $this->holidays = $holidays;
+        $this->holidays->setChanged(true);
+        $this->holidays->setValue($holidays);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

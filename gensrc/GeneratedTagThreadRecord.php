@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedTagThreadRecord implements Record {
     
-    /** @var $tagId int */
+    /** @var $tagId RecordValue */
     protected $tagId;
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->tagId = new RecordValue();
+		$this->threadId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasTagId(): bool
     {
-        return isset($this->tagId);
+        return $this->tagId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedTagThreadRecord implements Record {
      */
     public function getTagId() : int
     {
-        return $this->tagId;
+        return $this->tagId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedTagThreadRecord implements Record {
      */
     public function setTagId(int $tagId)
     {
-        $this->tagId = $tagId;
+        $this->tagId->setChanged(true);
+        $this->tagId->setValue($tagId);
     }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedTagThreadRecord implements Record {
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedTagThreadRecord implements Record {
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedTagThreadRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedTagThreadRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedTagThreadRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedTagThreadRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

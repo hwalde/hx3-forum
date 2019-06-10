@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedStatisticDomainRecord implements Record {
     
-    /** @var $id int */
+    /** @var $id RecordValue */
     protected $id;
     
-    /** @var $domain string */
+    /** @var $domain RecordValue */
     protected $domain;
     
-    /** @var $zaehler int */
+    /** @var $zaehler RecordValue */
     protected $zaehler;
+
+    public function __construct() {
+		$this->id = new RecordValue();
+		$this->domain = new RecordValue();
+		$this->zaehler = new RecordValue();
+    }
     
     public function hasId(): bool
     {
-        return isset($this->id);
+        return $this->id->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedStatisticDomainRecord implements Record {
      */
     public function getId() : int
     {
-        return $this->id;
+        return $this->id->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedStatisticDomainRecord implements Record {
      */
     public function setId(int $id)
     {
-        $this->id = $id;
+        $this->id->setChanged(true);
+        $this->id->setValue($id);
     }
     
     public function hasDomain(): bool
     {
-        return isset($this->domain);
+        return $this->domain->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedStatisticDomainRecord implements Record {
      */
     public function getDomain() : string
     {
-        return $this->domain;
+        return $this->domain->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedStatisticDomainRecord implements Record {
      */
     public function setDomain(string $domain)
     {
-        $this->domain = $domain;
+        $this->domain->setChanged(true);
+        $this->domain->setValue($domain);
     }
     
     public function hasZaehler(): bool
     {
-        return isset($this->zaehler);
+        return $this->zaehler->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedStatisticDomainRecord implements Record {
      */
     public function getZaehler() : int
     {
-        return $this->zaehler;
+        return $this->zaehler->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedStatisticDomainRecord implements Record {
      */
     public function setZaehler(int $zaehler)
     {
-        $this->zaehler = $zaehler;
+        $this->zaehler->setChanged(true);
+        $this->zaehler->setValue($zaehler);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

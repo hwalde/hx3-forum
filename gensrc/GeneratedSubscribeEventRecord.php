@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSubscribeEventRecord implements Record {
     
-    /** @var $subscribeEventId int */
+    /** @var $subscribeEventId RecordValue */
     protected $subscribeEventId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $eventId int */
+    /** @var $eventId RecordValue */
     protected $eventId;
     
-    /** @var $lastReminder int */
+    /** @var $lastReminder RecordValue */
     protected $lastReminder;
     
-    /** @var $reminder int */
+    /** @var $reminder RecordValue */
     protected $reminder;
+
+    public function __construct() {
+		$this->subscribeEventId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->eventId = new RecordValue();
+		$this->lastReminder = new RecordValue();
+		$this->reminder = new RecordValue();
+    }
     
     public function hasSubscribeEventId(): bool
     {
-        return isset($this->subscribeEventId);
+        return $this->subscribeEventId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedSubscribeEventRecord implements Record {
      */
     public function getSubscribeEventId() : int
     {
-        return $this->subscribeEventId;
+        return $this->subscribeEventId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedSubscribeEventRecord implements Record {
      */
     public function setSubscribeEventId(int $subscribeEventId)
     {
-        $this->subscribeEventId = $subscribeEventId;
+        $this->subscribeEventId->setChanged(true);
+        $this->subscribeEventId->setValue($subscribeEventId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedSubscribeEventRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedSubscribeEventRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasEventId(): bool
     {
-        return isset($this->eventId);
+        return $this->eventId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedSubscribeEventRecord implements Record {
      */
     public function getEventId() : int
     {
-        return $this->eventId;
+        return $this->eventId->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedSubscribeEventRecord implements Record {
      */
     public function setEventId(int $eventId)
     {
-        $this->eventId = $eventId;
+        $this->eventId->setChanged(true);
+        $this->eventId->setValue($eventId);
     }
     
     public function hasLastReminder(): bool
     {
-        return isset($this->lastReminder);
+        return $this->lastReminder->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedSubscribeEventRecord implements Record {
      */
     public function getLastReminder() : int
     {
-        return $this->lastReminder;
+        return $this->lastReminder->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedSubscribeEventRecord implements Record {
      */
     public function setLastReminder(int $lastReminder)
     {
-        $this->lastReminder = $lastReminder;
+        $this->lastReminder->setChanged(true);
+        $this->lastReminder->setValue($lastReminder);
     }
     
     public function hasReminder(): bool
     {
-        return isset($this->reminder);
+        return $this->reminder->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedSubscribeEventRecord implements Record {
      */
     public function getReminder() : int
     {
-        return $this->reminder;
+        return $this->reminder->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedSubscribeEventRecord implements Record {
      */
     public function setReminder(int $reminder)
     {
-        $this->reminder = $reminder;
+        $this->reminder->setChanged(true);
+        $this->reminder->setValue($reminder);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

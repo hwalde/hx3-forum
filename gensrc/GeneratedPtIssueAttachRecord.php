@@ -9,58 +9,77 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueAttachRecord implements Record {
     
-    /** @var $attachmentId int */
+    /** @var $attachmentId RecordValue */
     protected $attachmentId;
     
-    /** @var $issueId int */
+    /** @var $issueId RecordValue */
     protected $issueId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $fileName string */
+    /** @var $fileName RecordValue */
     protected $fileName;
     
-    /** @var $extension string */
+    /** @var $extension RecordValue */
     protected $extension;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $visible int */
+    /** @var $visible RecordValue */
     protected $visible;
     
-    /** @var $status string */
+    /** @var $status RecordValue */
     protected $status;
     
-    /** @var $fileSize int */
+    /** @var $fileSize RecordValue */
     protected $fileSize;
     
-    /** @var $fileHash string */
+    /** @var $fileHash RecordValue */
     protected $fileHash;
     
-    /** @var $fileData string */
+    /** @var $fileData RecordValue */
     protected $fileData;
     
-    /** @var $thumbnail string */
+    /** @var $thumbnail RecordValue */
     protected $thumbnail;
     
-    /** @var $thumbnailFileSize int */
+    /** @var $thumbnailFileSize RecordValue */
     protected $thumbnailFileSize;
     
-    /** @var $thumbnailDateline int */
+    /** @var $thumbnailDateline RecordValue */
     protected $thumbnailDateline;
     
-    /** @var $isPatchFile int */
+    /** @var $isPatchFile RecordValue */
     protected $isPatchFile;
+
+    public function __construct() {
+		$this->attachmentId = new RecordValue();
+		$this->issueId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->fileName = new RecordValue();
+		$this->extension = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->visible = new RecordValue();
+		$this->status = new RecordValue();
+		$this->fileSize = new RecordValue();
+		$this->fileHash = new RecordValue();
+		$this->fileData = new RecordValue();
+		$this->thumbnail = new RecordValue();
+		$this->thumbnailFileSize = new RecordValue();
+		$this->thumbnailDateline = new RecordValue();
+		$this->isPatchFile = new RecordValue();
+    }
     
     public function hasAttachmentId(): bool
     {
-        return isset($this->attachmentId);
+        return $this->attachmentId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +87,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getAttachmentId() : int
     {
-        return $this->attachmentId;
+        return $this->attachmentId->getValue();
     }
 
     /**
@@ -76,12 +95,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setAttachmentId(int $attachmentId)
     {
-        $this->attachmentId = $attachmentId;
+        $this->attachmentId->setChanged(true);
+        $this->attachmentId->setValue($attachmentId);
     }
     
     public function hasIssueId(): bool
     {
-        return isset($this->issueId);
+        return $this->issueId->hasBeenSet();
     }    
 
     /**
@@ -89,7 +109,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getIssueId() : int
     {
-        return $this->issueId;
+        return $this->issueId->getValue();
     }
 
     /**
@@ -97,12 +117,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setIssueId(int $issueId)
     {
-        $this->issueId = $issueId;
+        $this->issueId->setChanged(true);
+        $this->issueId->setValue($issueId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -110,7 +131,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -118,12 +139,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasFileName(): bool
     {
-        return isset($this->fileName);
+        return $this->fileName->hasBeenSet();
     }    
 
     /**
@@ -131,7 +153,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getFileName() : string
     {
-        return $this->fileName;
+        return $this->fileName->getValue();
     }
 
     /**
@@ -139,12 +161,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setFileName(string $fileName)
     {
-        $this->fileName = $fileName;
+        $this->fileName->setChanged(true);
+        $this->fileName->setValue($fileName);
     }
     
     public function hasExtension(): bool
     {
-        return isset($this->extension);
+        return $this->extension->hasBeenSet();
     }    
 
     /**
@@ -152,7 +175,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getExtension() : string
     {
-        return $this->extension;
+        return $this->extension->getValue();
     }
 
     /**
@@ -160,12 +183,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setExtension(string $extension)
     {
-        $this->extension = $extension;
+        $this->extension->setChanged(true);
+        $this->extension->setValue($extension);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -173,7 +197,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -181,12 +205,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasVisible(): bool
     {
-        return isset($this->visible);
+        return $this->visible->hasBeenSet();
     }    
 
     /**
@@ -194,7 +219,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getVisible() : int
     {
-        return $this->visible;
+        return $this->visible->getValue();
     }
 
     /**
@@ -202,12 +227,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setVisible(int $visible)
     {
-        $this->visible = $visible;
+        $this->visible->setChanged(true);
+        $this->visible->setValue($visible);
     }
     
     public function hasStatus(): bool
     {
-        return isset($this->status);
+        return $this->status->hasBeenSet();
     }    
 
     /**
@@ -215,7 +241,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getStatus() : string
     {
-        return $this->status;
+        return $this->status->getValue();
     }
 
     /**
@@ -223,12 +249,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setStatus(string $status)
     {
-        $this->status = $status;
+        $this->status->setChanged(true);
+        $this->status->setValue($status);
     }
     
     public function hasFileSize(): bool
     {
-        return isset($this->fileSize);
+        return $this->fileSize->hasBeenSet();
     }    
 
     /**
@@ -236,7 +263,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getFileSize() : int
     {
-        return $this->fileSize;
+        return $this->fileSize->getValue();
     }
 
     /**
@@ -244,12 +271,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setFileSize(int $fileSize)
     {
-        $this->fileSize = $fileSize;
+        $this->fileSize->setChanged(true);
+        $this->fileSize->setValue($fileSize);
     }
     
     public function hasFileHash(): bool
     {
-        return isset($this->fileHash);
+        return $this->fileHash->hasBeenSet();
     }    
 
     /**
@@ -257,7 +285,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getFileHash() : string
     {
-        return $this->fileHash;
+        return $this->fileHash->getValue();
     }
 
     /**
@@ -265,12 +293,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setFileHash(string $fileHash)
     {
-        $this->fileHash = $fileHash;
+        $this->fileHash->setChanged(true);
+        $this->fileHash->setValue($fileHash);
     }
     
     public function hasFileData(): bool
     {
-        return isset($this->fileData);
+        return $this->fileData->hasBeenSet();
     }    
 
     /**
@@ -278,7 +307,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getFileData() : string
     {
-        return $this->fileData;
+        return $this->fileData->getValue();
     }
 
     /**
@@ -286,12 +315,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setFileData(string $fileData)
     {
-        $this->fileData = $fileData;
+        $this->fileData->setChanged(true);
+        $this->fileData->setValue($fileData);
     }
     
     public function hasThumbnail(): bool
     {
-        return isset($this->thumbnail);
+        return $this->thumbnail->hasBeenSet();
     }    
 
     /**
@@ -299,7 +329,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getThumbnail() : string
     {
-        return $this->thumbnail;
+        return $this->thumbnail->getValue();
     }
 
     /**
@@ -307,12 +337,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setThumbnail(string $thumbnail)
     {
-        $this->thumbnail = $thumbnail;
+        $this->thumbnail->setChanged(true);
+        $this->thumbnail->setValue($thumbnail);
     }
     
     public function hasThumbnailFileSize(): bool
     {
-        return isset($this->thumbnailFileSize);
+        return $this->thumbnailFileSize->hasBeenSet();
     }    
 
     /**
@@ -320,7 +351,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getThumbnailFileSize() : int
     {
-        return $this->thumbnailFileSize;
+        return $this->thumbnailFileSize->getValue();
     }
 
     /**
@@ -328,12 +359,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setThumbnailFileSize(int $thumbnailFileSize)
     {
-        $this->thumbnailFileSize = $thumbnailFileSize;
+        $this->thumbnailFileSize->setChanged(true);
+        $this->thumbnailFileSize->setValue($thumbnailFileSize);
     }
     
     public function hasThumbnailDateline(): bool
     {
-        return isset($this->thumbnailDateline);
+        return $this->thumbnailDateline->hasBeenSet();
     }    
 
     /**
@@ -341,7 +373,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getThumbnailDateline() : int
     {
-        return $this->thumbnailDateline;
+        return $this->thumbnailDateline->getValue();
     }
 
     /**
@@ -349,12 +381,13 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setThumbnailDateline(int $thumbnailDateline)
     {
-        $this->thumbnailDateline = $thumbnailDateline;
+        $this->thumbnailDateline->setChanged(true);
+        $this->thumbnailDateline->setValue($thumbnailDateline);
     }
     
     public function hasIsPatchFile(): bool
     {
-        return isset($this->isPatchFile);
+        return $this->isPatchFile->hasBeenSet();
     }    
 
     /**
@@ -362,7 +395,7 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function getIsPatchFile() : int
     {
-        return $this->isPatchFile;
+        return $this->isPatchFile->getValue();
     }
 
     /**
@@ -370,9 +403,9 @@ class GeneratedPtIssueAttachRecord implements Record {
      */
     public function setIsPatchFile(int $isPatchFile)
     {
-        $this->isPatchFile = $isPatchFile;
+        $this->isPatchFile->setChanged(true);
+        $this->isPatchFile->setValue($isPatchFile);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

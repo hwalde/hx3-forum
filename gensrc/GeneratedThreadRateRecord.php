@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedThreadRateRecord implements Record {
     
-    /** @var $threadRateId int */
+    /** @var $threadRateId RecordValue */
     protected $threadRateId;
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $vote int */
+    /** @var $vote RecordValue */
     protected $vote;
     
-    /** @var $ipAddress string */
+    /** @var $ipAddress RecordValue */
     protected $ipAddress;
+
+    public function __construct() {
+		$this->threadRateId = new RecordValue();
+		$this->threadId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->vote = new RecordValue();
+		$this->ipAddress = new RecordValue();
+    }
     
     public function hasThreadRateId(): bool
     {
-        return isset($this->threadRateId);
+        return $this->threadRateId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedThreadRateRecord implements Record {
      */
     public function getThreadRateId() : int
     {
-        return $this->threadRateId;
+        return $this->threadRateId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedThreadRateRecord implements Record {
      */
     public function setThreadRateId(int $threadRateId)
     {
-        $this->threadRateId = $threadRateId;
+        $this->threadRateId->setChanged(true);
+        $this->threadRateId->setValue($threadRateId);
     }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedThreadRateRecord implements Record {
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedThreadRateRecord implements Record {
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedThreadRateRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedThreadRateRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasVote(): bool
     {
-        return isset($this->vote);
+        return $this->vote->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedThreadRateRecord implements Record {
      */
     public function getVote() : int
     {
-        return $this->vote;
+        return $this->vote->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedThreadRateRecord implements Record {
      */
     public function setVote(int $vote)
     {
-        $this->vote = $vote;
+        $this->vote->setChanged(true);
+        $this->vote->setValue($vote);
     }
     
     public function hasIpAddress(): bool
     {
-        return isset($this->ipAddress);
+        return $this->ipAddress->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedThreadRateRecord implements Record {
      */
     public function getIpAddress() : string
     {
-        return $this->ipAddress;
+        return $this->ipAddress->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedThreadRateRecord implements Record {
      */
     public function setIpAddress(string $ipAddress)
     {
-        $this->ipAddress = $ipAddress;
+        $this->ipAddress->setChanged(true);
+        $this->ipAddress->setValue($ipAddress);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

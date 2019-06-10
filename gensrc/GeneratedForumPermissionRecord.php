@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedForumPermissionRecord implements Record {
     
-    /** @var $forumPermissionOd int */
+    /** @var $forumPermissionOd RecordValue */
     protected $forumPermissionOd;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $forumPermissions int */
+    /** @var $forumPermissions RecordValue */
     protected $forumPermissions;
+
+    public function __construct() {
+		$this->forumPermissionOd = new RecordValue();
+		$this->forumId = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->forumPermissions = new RecordValue();
+    }
     
     public function hasForumPermissionOd(): bool
     {
-        return isset($this->forumPermissionOd);
+        return $this->forumPermissionOd->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedForumPermissionRecord implements Record {
      */
     public function getForumPermissionOd() : int
     {
-        return $this->forumPermissionOd;
+        return $this->forumPermissionOd->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedForumPermissionRecord implements Record {
      */
     public function setForumPermissionOd(int $forumPermissionOd)
     {
-        $this->forumPermissionOd = $forumPermissionOd;
+        $this->forumPermissionOd->setChanged(true);
+        $this->forumPermissionOd->setValue($forumPermissionOd);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedForumPermissionRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedForumPermissionRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedForumPermissionRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedForumPermissionRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasForumPermissions(): bool
     {
-        return isset($this->forumPermissions);
+        return $this->forumPermissions->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedForumPermissionRecord implements Record {
      */
     public function getForumPermissions() : int
     {
-        return $this->forumPermissions;
+        return $this->forumPermissions->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedForumPermissionRecord implements Record {
      */
     public function setForumPermissions(int $forumPermissions)
     {
-        $this->forumPermissions = $forumPermissions;
+        $this->forumPermissions->setChanged(true);
+        $this->forumPermissions->setValue($forumPermissions);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

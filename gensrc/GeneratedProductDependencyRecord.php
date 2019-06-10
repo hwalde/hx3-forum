@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedProductDependencyRecord implements Record {
     
-    /** @var $productDependencyId int */
+    /** @var $productDependencyId RecordValue */
     protected $productDependencyId;
     
-    /** @var $productId string */
+    /** @var $productId RecordValue */
     protected $productId;
     
-    /** @var $dependencyType string */
+    /** @var $dependencyType RecordValue */
     protected $dependencyType;
     
-    /** @var $parentProductId string */
+    /** @var $parentProductId RecordValue */
     protected $parentProductId;
     
-    /** @var $minVersion string */
+    /** @var $minVersion RecordValue */
     protected $minVersion;
     
-    /** @var $maxVersion string */
+    /** @var $maxVersion RecordValue */
     protected $maxVersion;
+
+    public function __construct() {
+		$this->productDependencyId = new RecordValue();
+		$this->productId = new RecordValue();
+		$this->dependencyType = new RecordValue();
+		$this->parentProductId = new RecordValue();
+		$this->minVersion = new RecordValue();
+		$this->maxVersion = new RecordValue();
+    }
     
     public function hasProductDependencyId(): bool
     {
-        return isset($this->productDependencyId);
+        return $this->productDependencyId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function getProductDependencyId() : int
     {
-        return $this->productDependencyId;
+        return $this->productDependencyId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function setProductDependencyId(int $productDependencyId)
     {
-        $this->productDependencyId = $productDependencyId;
+        $this->productDependencyId->setChanged(true);
+        $this->productDependencyId->setValue($productDependencyId);
     }
     
     public function hasProductId(): bool
     {
-        return isset($this->productId);
+        return $this->productId->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function getProductId() : string
     {
-        return $this->productId;
+        return $this->productId->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function setProductId(string $productId)
     {
-        $this->productId = $productId;
+        $this->productId->setChanged(true);
+        $this->productId->setValue($productId);
     }
     
     public function hasDependencyType(): bool
     {
-        return isset($this->dependencyType);
+        return $this->dependencyType->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function getDependencyType() : string
     {
-        return $this->dependencyType;
+        return $this->dependencyType->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function setDependencyType(string $dependencyType)
     {
-        $this->dependencyType = $dependencyType;
+        $this->dependencyType->setChanged(true);
+        $this->dependencyType->setValue($dependencyType);
     }
     
     public function hasParentProductId(): bool
     {
-        return isset($this->parentProductId);
+        return $this->parentProductId->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function getParentProductId() : string
     {
-        return $this->parentProductId;
+        return $this->parentProductId->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function setParentProductId(string $parentProductId)
     {
-        $this->parentProductId = $parentProductId;
+        $this->parentProductId->setChanged(true);
+        $this->parentProductId->setValue($parentProductId);
     }
     
     public function hasMinVersion(): bool
     {
-        return isset($this->minVersion);
+        return $this->minVersion->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function getMinVersion() : string
     {
-        return $this->minVersion;
+        return $this->minVersion->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function setMinVersion(string $minVersion)
     {
-        $this->minVersion = $minVersion;
+        $this->minVersion->setChanged(true);
+        $this->minVersion->setValue($minVersion);
     }
     
     public function hasMaxVersion(): bool
     {
-        return isset($this->maxVersion);
+        return $this->maxVersion->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function getMaxVersion() : string
     {
-        return $this->maxVersion;
+        return $this->maxVersion->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedProductDependencyRecord implements Record {
      */
     public function setMaxVersion(string $maxVersion)
     {
-        $this->maxVersion = $maxVersion;
+        $this->maxVersion->setChanged(true);
+        $this->maxVersion->setValue($maxVersion);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

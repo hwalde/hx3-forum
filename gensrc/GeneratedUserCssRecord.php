@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserCssRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $selector string */
+    /** @var $selector RecordValue */
     protected $selector;
     
-    /** @var $property string */
+    /** @var $property RecordValue */
     protected $property;
     
-    /** @var $value string */
+    /** @var $value RecordValue */
     protected $value;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->selector = new RecordValue();
+		$this->property = new RecordValue();
+		$this->value = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedUserCssRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedUserCssRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasSelector(): bool
     {
-        return isset($this->selector);
+        return $this->selector->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedUserCssRecord implements Record {
      */
     public function getSelector() : string
     {
-        return $this->selector;
+        return $this->selector->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedUserCssRecord implements Record {
      */
     public function setSelector(string $selector)
     {
-        $this->selector = $selector;
+        $this->selector->setChanged(true);
+        $this->selector->setValue($selector);
     }
     
     public function hasProperty(): bool
     {
-        return isset($this->property);
+        return $this->property->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedUserCssRecord implements Record {
      */
     public function getProperty() : string
     {
-        return $this->property;
+        return $this->property->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedUserCssRecord implements Record {
      */
     public function setProperty(string $property)
     {
-        $this->property = $property;
+        $this->property->setChanged(true);
+        $this->property->setValue($property);
     }
     
     public function hasValue(): bool
     {
-        return isset($this->value);
+        return $this->value->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedUserCssRecord implements Record {
      */
     public function getValue() : string
     {
-        return $this->value;
+        return $this->value->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedUserCssRecord implements Record {
      */
     public function setValue(string $value)
     {
-        $this->value = $value;
+        $this->value->setChanged(true);
+        $this->value->setValue($value);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

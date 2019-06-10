@@ -9,40 +9,53 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAnnouncementRecord implements Record {
     
-    /** @var $announcementId int */
+    /** @var $announcementId RecordValue */
     protected $announcementId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $startDate int */
+    /** @var $startDate RecordValue */
     protected $startDate;
     
-    /** @var $endDate int */
+    /** @var $endDate RecordValue */
     protected $endDate;
     
-    /** @var $pageText string */
+    /** @var $pageText RecordValue */
     protected $pageText;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $views int */
+    /** @var $views RecordValue */
     protected $views;
     
-    /** @var $announcementOptions int */
+    /** @var $announcementOptions RecordValue */
     protected $announcementOptions;
+
+    public function __construct() {
+		$this->announcementId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->startDate = new RecordValue();
+		$this->endDate = new RecordValue();
+		$this->pageText = new RecordValue();
+		$this->forumId = new RecordValue();
+		$this->views = new RecordValue();
+		$this->announcementOptions = new RecordValue();
+    }
     
     public function hasAnnouncementId(): bool
     {
-        return isset($this->announcementId);
+        return $this->announcementId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +63,7 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function getAnnouncementId() : int
     {
-        return $this->announcementId;
+        return $this->announcementId->getValue();
     }
 
     /**
@@ -58,12 +71,13 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function setAnnouncementId(int $announcementId)
     {
-        $this->announcementId = $announcementId;
+        $this->announcementId->setChanged(true);
+        $this->announcementId->setValue($announcementId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -71,7 +85,7 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -79,12 +93,13 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -92,7 +107,7 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -100,12 +115,13 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasStartDate(): bool
     {
-        return isset($this->startDate);
+        return $this->startDate->hasBeenSet();
     }    
 
     /**
@@ -113,7 +129,7 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function getStartDate() : int
     {
-        return $this->startDate;
+        return $this->startDate->getValue();
     }
 
     /**
@@ -121,12 +137,13 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function setStartDate(int $startDate)
     {
-        $this->startDate = $startDate;
+        $this->startDate->setChanged(true);
+        $this->startDate->setValue($startDate);
     }
     
     public function hasEndDate(): bool
     {
-        return isset($this->endDate);
+        return $this->endDate->hasBeenSet();
     }    
 
     /**
@@ -134,7 +151,7 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function getEndDate() : int
     {
-        return $this->endDate;
+        return $this->endDate->getValue();
     }
 
     /**
@@ -142,12 +159,13 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function setEndDate(int $endDate)
     {
-        $this->endDate = $endDate;
+        $this->endDate->setChanged(true);
+        $this->endDate->setValue($endDate);
     }
     
     public function hasPageText(): bool
     {
-        return isset($this->pageText);
+        return $this->pageText->hasBeenSet();
     }    
 
     /**
@@ -155,7 +173,7 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function getPageText() : string
     {
-        return $this->pageText;
+        return $this->pageText->getValue();
     }
 
     /**
@@ -163,12 +181,13 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function setPageText(string $pageText)
     {
-        $this->pageText = $pageText;
+        $this->pageText->setChanged(true);
+        $this->pageText->setValue($pageText);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -176,7 +195,7 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -184,12 +203,13 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasViews(): bool
     {
-        return isset($this->views);
+        return $this->views->hasBeenSet();
     }    
 
     /**
@@ -197,7 +217,7 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function getViews() : int
     {
-        return $this->views;
+        return $this->views->getValue();
     }
 
     /**
@@ -205,12 +225,13 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function setViews(int $views)
     {
-        $this->views = $views;
+        $this->views->setChanged(true);
+        $this->views->setValue($views);
     }
     
     public function hasAnnouncementOptions(): bool
     {
-        return isset($this->announcementOptions);
+        return $this->announcementOptions->hasBeenSet();
     }    
 
     /**
@@ -218,7 +239,7 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function getAnnouncementOptions() : int
     {
-        return $this->announcementOptions;
+        return $this->announcementOptions->getValue();
     }
 
     /**
@@ -226,9 +247,9 @@ class GeneratedAnnouncementRecord implements Record {
      */
     public function setAnnouncementOptions(int $announcementOptions)
     {
-        $this->announcementOptions = $announcementOptions;
+        $this->announcementOptions->setChanged(true);
+        $this->announcementOptions->setValue($announcementOptions);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,19 +9,25 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAdminUtilRecord implements Record {
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $text string */
+    /** @var $text RecordValue */
     protected $text;
+
+    public function __construct() {
+		$this->title = new RecordValue();
+		$this->text = new RecordValue();
+    }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -29,7 +35,7 @@ class GeneratedAdminUtilRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -37,12 +43,13 @@ class GeneratedAdminUtilRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasText(): bool
     {
-        return isset($this->text);
+        return $this->text->hasBeenSet();
     }    
 
     /**
@@ -50,7 +57,7 @@ class GeneratedAdminUtilRecord implements Record {
      */
     public function getText() : string
     {
-        return $this->text;
+        return $this->text->getValue();
     }
 
     /**
@@ -58,9 +65,9 @@ class GeneratedAdminUtilRecord implements Record {
      */
     public function setText(string $text)
     {
-        $this->text = $text;
+        $this->text->setChanged(true);
+        $this->text->setValue($text);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedNoticeCriteriaRecord implements Record {
     
-    /** @var $noticeId int */
+    /** @var $noticeId RecordValue */
     protected $noticeId;
     
-    /** @var $criteriaId string */
+    /** @var $criteriaId RecordValue */
     protected $criteriaId;
     
-    /** @var $condition1 string */
+    /** @var $condition1 RecordValue */
     protected $condition1;
     
-    /** @var $condition2 string */
+    /** @var $condition2 RecordValue */
     protected $condition2;
     
-    /** @var $condition3 string */
+    /** @var $condition3 RecordValue */
     protected $condition3;
+
+    public function __construct() {
+		$this->noticeId = new RecordValue();
+		$this->criteriaId = new RecordValue();
+		$this->condition1 = new RecordValue();
+		$this->condition2 = new RecordValue();
+		$this->condition3 = new RecordValue();
+    }
     
     public function hasNoticeId(): bool
     {
-        return isset($this->noticeId);
+        return $this->noticeId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedNoticeCriteriaRecord implements Record {
      */
     public function getNoticeId() : int
     {
-        return $this->noticeId;
+        return $this->noticeId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedNoticeCriteriaRecord implements Record {
      */
     public function setNoticeId(int $noticeId)
     {
-        $this->noticeId = $noticeId;
+        $this->noticeId->setChanged(true);
+        $this->noticeId->setValue($noticeId);
     }
     
     public function hasCriteriaId(): bool
     {
-        return isset($this->criteriaId);
+        return $this->criteriaId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedNoticeCriteriaRecord implements Record {
      */
     public function getCriteriaId() : string
     {
-        return $this->criteriaId;
+        return $this->criteriaId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedNoticeCriteriaRecord implements Record {
      */
     public function setCriteriaId(string $criteriaId)
     {
-        $this->criteriaId = $criteriaId;
+        $this->criteriaId->setChanged(true);
+        $this->criteriaId->setValue($criteriaId);
     }
     
     public function hasCondition1(): bool
     {
-        return isset($this->condition1);
+        return $this->condition1->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedNoticeCriteriaRecord implements Record {
      */
     public function getCondition1() : string
     {
-        return $this->condition1;
+        return $this->condition1->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedNoticeCriteriaRecord implements Record {
      */
     public function setCondition1(string $condition1)
     {
-        $this->condition1 = $condition1;
+        $this->condition1->setChanged(true);
+        $this->condition1->setValue($condition1);
     }
     
     public function hasCondition2(): bool
     {
-        return isset($this->condition2);
+        return $this->condition2->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedNoticeCriteriaRecord implements Record {
      */
     public function getCondition2() : string
     {
-        return $this->condition2;
+        return $this->condition2->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedNoticeCriteriaRecord implements Record {
      */
     public function setCondition2(string $condition2)
     {
-        $this->condition2 = $condition2;
+        $this->condition2->setChanged(true);
+        $this->condition2->setValue($condition2);
     }
     
     public function hasCondition3(): bool
     {
-        return isset($this->condition3);
+        return $this->condition3->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedNoticeCriteriaRecord implements Record {
      */
     public function getCondition3() : string
     {
-        return $this->condition3;
+        return $this->condition3->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedNoticeCriteriaRecord implements Record {
      */
     public function setCondition3(string $condition3)
     {
-        $this->condition3 = $condition3;
+        $this->condition3->setChanged(true);
+        $this->condition3->setValue($condition3);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueSubscribeRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $issueId int */
+    /** @var $issueId RecordValue */
     protected $issueId;
     
-    /** @var $subscribeType string */
+    /** @var $subscribeType RecordValue */
     protected $subscribeType;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->issueId = new RecordValue();
+		$this->subscribeType = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedPtIssueSubscribeRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedPtIssueSubscribeRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasIssueId(): bool
     {
-        return isset($this->issueId);
+        return $this->issueId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedPtIssueSubscribeRecord implements Record {
      */
     public function getIssueId() : int
     {
-        return $this->issueId;
+        return $this->issueId->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedPtIssueSubscribeRecord implements Record {
      */
     public function setIssueId(int $issueId)
     {
-        $this->issueId = $issueId;
+        $this->issueId->setChanged(true);
+        $this->issueId->setValue($issueId);
     }
     
     public function hasSubscribeType(): bool
     {
-        return isset($this->subscribeType);
+        return $this->subscribeType->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedPtIssueSubscribeRecord implements Record {
      */
     public function getSubscribeType() : string
     {
-        return $this->subscribeType;
+        return $this->subscribeType->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedPtIssueSubscribeRecord implements Record {
      */
     public function setSubscribeType(string $subscribeType)
     {
-        $this->subscribeType = $subscribeType;
+        $this->subscribeType->setChanged(true);
+        $this->subscribeType->setValue($subscribeType);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

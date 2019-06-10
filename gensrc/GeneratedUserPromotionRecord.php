@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserPromotionRecord implements Record {
     
-    /** @var $userpromotionid int */
+    /** @var $userpromotionid RecordValue */
     protected $userpromotionid;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $joinUserGroupId int */
+    /** @var $joinUserGroupId RecordValue */
     protected $joinUserGroupId;
     
-    /** @var $reputation int */
+    /** @var $reputation RecordValue */
     protected $reputation;
     
-    /** @var $date int */
+    /** @var $date RecordValue */
     protected $date;
     
-    /** @var $posts int */
+    /** @var $posts RecordValue */
     protected $posts;
     
-    /** @var $strategy int */
+    /** @var $strategy RecordValue */
     protected $strategy;
     
-    /** @var $type int */
+    /** @var $type RecordValue */
     protected $type;
+
+    public function __construct() {
+		$this->userpromotionid = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->joinUserGroupId = new RecordValue();
+		$this->reputation = new RecordValue();
+		$this->date = new RecordValue();
+		$this->posts = new RecordValue();
+		$this->strategy = new RecordValue();
+		$this->type = new RecordValue();
+    }
     
     public function hasUserpromotionid(): bool
     {
-        return isset($this->userpromotionid);
+        return $this->userpromotionid->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function getUserpromotionid() : int
     {
-        return $this->userpromotionid;
+        return $this->userpromotionid->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function setUserpromotionid(int $userpromotionid)
     {
-        $this->userpromotionid = $userpromotionid;
+        $this->userpromotionid->setChanged(true);
+        $this->userpromotionid->setValue($userpromotionid);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasJoinUserGroupId(): bool
     {
-        return isset($this->joinUserGroupId);
+        return $this->joinUserGroupId->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function getJoinUserGroupId() : int
     {
-        return $this->joinUserGroupId;
+        return $this->joinUserGroupId->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function setJoinUserGroupId(int $joinUserGroupId)
     {
-        $this->joinUserGroupId = $joinUserGroupId;
+        $this->joinUserGroupId->setChanged(true);
+        $this->joinUserGroupId->setValue($joinUserGroupId);
     }
     
     public function hasReputation(): bool
     {
-        return isset($this->reputation);
+        return $this->reputation->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function getReputation() : int
     {
-        return $this->reputation;
+        return $this->reputation->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function setReputation(int $reputation)
     {
-        $this->reputation = $reputation;
+        $this->reputation->setChanged(true);
+        $this->reputation->setValue($reputation);
     }
     
     public function hasDate(): bool
     {
-        return isset($this->date);
+        return $this->date->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function getDate() : int
     {
-        return $this->date;
+        return $this->date->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function setDate(int $date)
     {
-        $this->date = $date;
+        $this->date->setChanged(true);
+        $this->date->setValue($date);
     }
     
     public function hasPosts(): bool
     {
-        return isset($this->posts);
+        return $this->posts->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function getPosts() : int
     {
-        return $this->posts;
+        return $this->posts->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function setPosts(int $posts)
     {
-        $this->posts = $posts;
+        $this->posts->setChanged(true);
+        $this->posts->setValue($posts);
     }
     
     public function hasStrategy(): bool
     {
-        return isset($this->strategy);
+        return $this->strategy->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function getStrategy() : int
     {
-        return $this->strategy;
+        return $this->strategy->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function setStrategy(int $strategy)
     {
-        $this->strategy = $strategy;
+        $this->strategy->setChanged(true);
+        $this->strategy->setValue($strategy);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function getType() : int
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedUserPromotionRecord implements Record {
      */
     public function setType(int $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

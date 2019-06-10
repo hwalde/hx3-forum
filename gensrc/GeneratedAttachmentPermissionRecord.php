@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAttachmentPermissionRecord implements Record {
     
-    /** @var $attachmentPermissionId int */
+    /** @var $attachmentPermissionId RecordValue */
     protected $attachmentPermissionId;
     
-    /** @var $extension string */
+    /** @var $extension RecordValue */
     protected $extension;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $size int */
+    /** @var $size RecordValue */
     protected $size;
     
-    /** @var $width int */
+    /** @var $width RecordValue */
     protected $width;
     
-    /** @var $height int */
+    /** @var $height RecordValue */
     protected $height;
     
-    /** @var $attachmentPermissions int */
+    /** @var $attachmentPermissions RecordValue */
     protected $attachmentPermissions;
+
+    public function __construct() {
+		$this->attachmentPermissionId = new RecordValue();
+		$this->extension = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->size = new RecordValue();
+		$this->width = new RecordValue();
+		$this->height = new RecordValue();
+		$this->attachmentPermissions = new RecordValue();
+    }
     
     public function hasAttachmentPermissionId(): bool
     {
-        return isset($this->attachmentPermissionId);
+        return $this->attachmentPermissionId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function getAttachmentPermissionId() : int
     {
-        return $this->attachmentPermissionId;
+        return $this->attachmentPermissionId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function setAttachmentPermissionId(int $attachmentPermissionId)
     {
-        $this->attachmentPermissionId = $attachmentPermissionId;
+        $this->attachmentPermissionId->setChanged(true);
+        $this->attachmentPermissionId->setValue($attachmentPermissionId);
     }
     
     public function hasExtension(): bool
     {
-        return isset($this->extension);
+        return $this->extension->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function getExtension() : string
     {
-        return $this->extension;
+        return $this->extension->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function setExtension(string $extension)
     {
-        $this->extension = $extension;
+        $this->extension->setChanged(true);
+        $this->extension->setValue($extension);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasSize(): bool
     {
-        return isset($this->size);
+        return $this->size->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function getSize() : int
     {
-        return $this->size;
+        return $this->size->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function setSize(int $size)
     {
-        $this->size = $size;
+        $this->size->setChanged(true);
+        $this->size->setValue($size);
     }
     
     public function hasWidth(): bool
     {
-        return isset($this->width);
+        return $this->width->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function getWidth() : int
     {
-        return $this->width;
+        return $this->width->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function setWidth(int $width)
     {
-        $this->width = $width;
+        $this->width->setChanged(true);
+        $this->width->setValue($width);
     }
     
     public function hasHeight(): bool
     {
-        return isset($this->height);
+        return $this->height->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function getHeight() : int
     {
-        return $this->height;
+        return $this->height->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function setHeight(int $height)
     {
-        $this->height = $height;
+        $this->height->setChanged(true);
+        $this->height->setValue($height);
     }
     
     public function hasAttachmentPermissions(): bool
     {
-        return isset($this->attachmentPermissions);
+        return $this->attachmentPermissions->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function getAttachmentPermissions() : int
     {
-        return $this->attachmentPermissions;
+        return $this->attachmentPermissions->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedAttachmentPermissionRecord implements Record {
      */
     public function setAttachmentPermissions(int $attachmentPermissions)
     {
-        $this->attachmentPermissions = $attachmentPermissions;
+        $this->attachmentPermissions->setChanged(true);
+        $this->attachmentPermissions->setValue($attachmentPermissions);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

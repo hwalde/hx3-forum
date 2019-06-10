@@ -9,49 +9,65 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueSearchRecord implements Record {
     
-    /** @var $issueSearchId int */
+    /** @var $issueSearchId RecordValue */
     protected $issueSearchId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $ipAddress string */
+    /** @var $ipAddress RecordValue */
     protected $ipAddress;
     
-    /** @var $criteria string */
+    /** @var $criteria RecordValue */
     protected $criteria;
     
-    /** @var $sortBy string */
+    /** @var $sortBy RecordValue */
     protected $sortBy;
     
-    /** @var $sortOrder string */
+    /** @var $sortOrder RecordValue */
     protected $sortOrder;
     
-    /** @var $groupBy string */
+    /** @var $groupBy RecordValue */
     protected $groupBy;
     
-    /** @var $searchTime mixed */
+    /** @var $searchTime RecordValue */
     protected $searchTime;
     
-    /** @var $resultCount int */
+    /** @var $resultCount RecordValue */
     protected $resultCount;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $completed int */
+    /** @var $completed RecordValue */
     protected $completed;
     
-    /** @var $issueReportId int */
+    /** @var $issueReportId RecordValue */
     protected $issueReportId;
+
+    public function __construct() {
+		$this->issueSearchId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->ipAddress = new RecordValue();
+		$this->criteria = new RecordValue();
+		$this->sortBy = new RecordValue();
+		$this->sortOrder = new RecordValue();
+		$this->groupBy = new RecordValue();
+		$this->searchTime = new RecordValue();
+		$this->resultCount = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->completed = new RecordValue();
+		$this->issueReportId = new RecordValue();
+    }
     
     public function hasIssueSearchId(): bool
     {
-        return isset($this->issueSearchId);
+        return $this->issueSearchId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +75,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getIssueSearchId() : int
     {
-        return $this->issueSearchId;
+        return $this->issueSearchId->getValue();
     }
 
     /**
@@ -67,12 +83,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setIssueSearchId(int $issueSearchId)
     {
-        $this->issueSearchId = $issueSearchId;
+        $this->issueSearchId->setChanged(true);
+        $this->issueSearchId->setValue($issueSearchId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +97,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -88,12 +105,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasIpAddress(): bool
     {
-        return isset($this->ipAddress);
+        return $this->ipAddress->hasBeenSet();
     }    
 
     /**
@@ -101,7 +119,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getIpAddress() : string
     {
-        return $this->ipAddress;
+        return $this->ipAddress->getValue();
     }
 
     /**
@@ -109,12 +127,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setIpAddress(string $ipAddress)
     {
-        $this->ipAddress = $ipAddress;
+        $this->ipAddress->setChanged(true);
+        $this->ipAddress->setValue($ipAddress);
     }
     
     public function hasCriteria(): bool
     {
-        return isset($this->criteria);
+        return $this->criteria->hasBeenSet();
     }    
 
     /**
@@ -122,7 +141,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getCriteria() : string
     {
-        return $this->criteria;
+        return $this->criteria->getValue();
     }
 
     /**
@@ -130,12 +149,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setCriteria(string $criteria)
     {
-        $this->criteria = $criteria;
+        $this->criteria->setChanged(true);
+        $this->criteria->setValue($criteria);
     }
     
     public function hasSortBy(): bool
     {
-        return isset($this->sortBy);
+        return $this->sortBy->hasBeenSet();
     }    
 
     /**
@@ -143,7 +163,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getSortBy() : string
     {
-        return $this->sortBy;
+        return $this->sortBy->getValue();
     }
 
     /**
@@ -151,12 +171,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setSortBy(string $sortBy)
     {
-        $this->sortBy = $sortBy;
+        $this->sortBy->setChanged(true);
+        $this->sortBy->setValue($sortBy);
     }
     
     public function hasSortOrder(): bool
     {
-        return isset($this->sortOrder);
+        return $this->sortOrder->hasBeenSet();
     }    
 
     /**
@@ -164,7 +185,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getSortOrder() : string
     {
-        return $this->sortOrder;
+        return $this->sortOrder->getValue();
     }
 
     /**
@@ -172,12 +193,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setSortOrder(string $sortOrder)
     {
-        $this->sortOrder = $sortOrder;
+        $this->sortOrder->setChanged(true);
+        $this->sortOrder->setValue($sortOrder);
     }
     
     public function hasGroupBy(): bool
     {
-        return isset($this->groupBy);
+        return $this->groupBy->hasBeenSet();
     }    
 
     /**
@@ -185,7 +207,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getGroupBy() : string
     {
-        return $this->groupBy;
+        return $this->groupBy->getValue();
     }
 
     /**
@@ -193,12 +215,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setGroupBy(string $groupBy)
     {
-        $this->groupBy = $groupBy;
+        $this->groupBy->setChanged(true);
+        $this->groupBy->setValue($groupBy);
     }
     
     public function hasSearchTime(): bool
     {
-        return isset($this->searchTime);
+        return $this->searchTime->hasBeenSet();
     }    
 
     /**
@@ -206,7 +229,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getSearchTime()
     {
-        return $this->searchTime;
+        return $this->searchTime->getValue();
     }
 
     /**
@@ -214,12 +237,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setSearchTime($searchTime)
     {
-        $this->searchTime = $searchTime;
+        $this->searchTime->setChanged(true);
+        $this->searchTime->setValue($searchTime);
     }
     
     public function hasResultCount(): bool
     {
-        return isset($this->resultCount);
+        return $this->resultCount->hasBeenSet();
     }    
 
     /**
@@ -227,7 +251,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getResultCount() : int
     {
-        return $this->resultCount;
+        return $this->resultCount->getValue();
     }
 
     /**
@@ -235,12 +259,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setResultCount(int $resultCount)
     {
-        $this->resultCount = $resultCount;
+        $this->resultCount->setChanged(true);
+        $this->resultCount->setValue($resultCount);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -248,7 +273,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -256,12 +281,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasCompleted(): bool
     {
-        return isset($this->completed);
+        return $this->completed->hasBeenSet();
     }    
 
     /**
@@ -269,7 +295,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getCompleted() : int
     {
-        return $this->completed;
+        return $this->completed->getValue();
     }
 
     /**
@@ -277,12 +303,13 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setCompleted(int $completed)
     {
-        $this->completed = $completed;
+        $this->completed->setChanged(true);
+        $this->completed->setValue($completed);
     }
     
     public function hasIssueReportId(): bool
     {
-        return isset($this->issueReportId);
+        return $this->issueReportId->hasBeenSet();
     }    
 
     /**
@@ -290,7 +317,7 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function getIssueReportId() : int
     {
-        return $this->issueReportId;
+        return $this->issueReportId->getValue();
     }
 
     /**
@@ -298,9 +325,9 @@ class GeneratedPtIssueSearchRecord implements Record {
      */
     public function setIssueReportId(int $issueReportId)
     {
-        $this->issueReportId = $issueReportId;
+        $this->issueReportId->setChanged(true);
+        $this->issueReportId->setValue($issueReportId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

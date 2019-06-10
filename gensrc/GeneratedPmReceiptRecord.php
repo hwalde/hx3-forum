@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPmReceiptRecord implements Record {
     
-    /** @var $pmId int */
+    /** @var $pmId RecordValue */
     protected $pmId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $toUserId int */
+    /** @var $toUserId RecordValue */
     protected $toUserId;
     
-    /** @var $toUserName string */
+    /** @var $toUserName RecordValue */
     protected $toUserName;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $sendTime int */
+    /** @var $sendTime RecordValue */
     protected $sendTime;
     
-    /** @var $readTime int */
+    /** @var $readTime RecordValue */
     protected $readTime;
     
-    /** @var $denied int */
+    /** @var $denied RecordValue */
     protected $denied;
+
+    public function __construct() {
+		$this->pmId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->toUserId = new RecordValue();
+		$this->toUserName = new RecordValue();
+		$this->title = new RecordValue();
+		$this->sendTime = new RecordValue();
+		$this->readTime = new RecordValue();
+		$this->denied = new RecordValue();
+    }
     
     public function hasPmId(): bool
     {
-        return isset($this->pmId);
+        return $this->pmId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function getPmId() : int
     {
-        return $this->pmId;
+        return $this->pmId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function setPmId(int $pmId)
     {
-        $this->pmId = $pmId;
+        $this->pmId->setChanged(true);
+        $this->pmId->setValue($pmId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasToUserId(): bool
     {
-        return isset($this->toUserId);
+        return $this->toUserId->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function getToUserId() : int
     {
-        return $this->toUserId;
+        return $this->toUserId->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function setToUserId(int $toUserId)
     {
-        $this->toUserId = $toUserId;
+        $this->toUserId->setChanged(true);
+        $this->toUserId->setValue($toUserId);
     }
     
     public function hasToUserName(): bool
     {
-        return isset($this->toUserName);
+        return $this->toUserName->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function getToUserName() : string
     {
-        return $this->toUserName;
+        return $this->toUserName->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function setToUserName(string $toUserName)
     {
-        $this->toUserName = $toUserName;
+        $this->toUserName->setChanged(true);
+        $this->toUserName->setValue($toUserName);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasSendTime(): bool
     {
-        return isset($this->sendTime);
+        return $this->sendTime->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function getSendTime() : int
     {
-        return $this->sendTime;
+        return $this->sendTime->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function setSendTime(int $sendTime)
     {
-        $this->sendTime = $sendTime;
+        $this->sendTime->setChanged(true);
+        $this->sendTime->setValue($sendTime);
     }
     
     public function hasReadTime(): bool
     {
-        return isset($this->readTime);
+        return $this->readTime->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function getReadTime() : int
     {
-        return $this->readTime;
+        return $this->readTime->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function setReadTime(int $readTime)
     {
-        $this->readTime = $readTime;
+        $this->readTime->setChanged(true);
+        $this->readTime->setValue($readTime);
     }
     
     public function hasDenied(): bool
     {
-        return isset($this->denied);
+        return $this->denied->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function getDenied() : int
     {
-        return $this->denied;
+        return $this->denied->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedPmReceiptRecord implements Record {
      */
     public function setDenied(int $denied)
     {
-        $this->denied = $denied;
+        $this->denied->setChanged(true);
+        $this->denied->setValue($denied);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

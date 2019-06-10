@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAccessRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $accessMask int */
+    /** @var $accessMask RecordValue */
     protected $accessMask;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->forumId = new RecordValue();
+		$this->accessMask = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedAccessRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedAccessRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedAccessRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedAccessRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasAccessMask(): bool
     {
-        return isset($this->accessMask);
+        return $this->accessMask->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedAccessRecord implements Record {
      */
     public function getAccessMask() : int
     {
-        return $this->accessMask;
+        return $this->accessMask->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedAccessRecord implements Record {
      */
     public function setAccessMask(int $accessMask)
     {
-        $this->accessMask = $accessMask;
+        $this->accessMask->setChanged(true);
+        $this->accessMask->setValue($accessMask);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

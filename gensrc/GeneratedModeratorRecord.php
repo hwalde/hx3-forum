@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedModeratorRecord implements Record {
     
-    /** @var $moderatorId int */
+    /** @var $moderatorId RecordValue */
     protected $moderatorId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $permissions int */
+    /** @var $permissions RecordValue */
     protected $permissions;
     
-    /** @var $importModeratorId int */
+    /** @var $importModeratorId RecordValue */
     protected $importModeratorId;
     
-    /** @var $moderatorUserGroupId int */
+    /** @var $moderatorUserGroupId RecordValue */
     protected $moderatorUserGroupId;
     
-    /** @var $modUserGroupId int */
+    /** @var $modUserGroupId RecordValue */
     protected $modUserGroupId;
     
-    /** @var $permissions2 int */
+    /** @var $permissions2 RecordValue */
     protected $permissions2;
+
+    public function __construct() {
+		$this->moderatorId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->forumId = new RecordValue();
+		$this->permissions = new RecordValue();
+		$this->importModeratorId = new RecordValue();
+		$this->moderatorUserGroupId = new RecordValue();
+		$this->modUserGroupId = new RecordValue();
+		$this->permissions2 = new RecordValue();
+    }
     
     public function hasModeratorId(): bool
     {
-        return isset($this->moderatorId);
+        return $this->moderatorId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedModeratorRecord implements Record {
      */
     public function getModeratorId() : int
     {
-        return $this->moderatorId;
+        return $this->moderatorId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedModeratorRecord implements Record {
      */
     public function setModeratorId(int $moderatorId)
     {
-        $this->moderatorId = $moderatorId;
+        $this->moderatorId->setChanged(true);
+        $this->moderatorId->setValue($moderatorId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedModeratorRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedModeratorRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedModeratorRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedModeratorRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasPermissions(): bool
     {
-        return isset($this->permissions);
+        return $this->permissions->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedModeratorRecord implements Record {
      */
     public function getPermissions() : int
     {
-        return $this->permissions;
+        return $this->permissions->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedModeratorRecord implements Record {
      */
     public function setPermissions(int $permissions)
     {
-        $this->permissions = $permissions;
+        $this->permissions->setChanged(true);
+        $this->permissions->setValue($permissions);
     }
     
     public function hasImportModeratorId(): bool
     {
-        return isset($this->importModeratorId);
+        return $this->importModeratorId->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedModeratorRecord implements Record {
      */
     public function getImportModeratorId() : int
     {
-        return $this->importModeratorId;
+        return $this->importModeratorId->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedModeratorRecord implements Record {
      */
     public function setImportModeratorId(int $importModeratorId)
     {
-        $this->importModeratorId = $importModeratorId;
+        $this->importModeratorId->setChanged(true);
+        $this->importModeratorId->setValue($importModeratorId);
     }
     
     public function hasModeratorUserGroupId(): bool
     {
-        return isset($this->moderatorUserGroupId);
+        return $this->moderatorUserGroupId->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedModeratorRecord implements Record {
      */
     public function getModeratorUserGroupId() : int
     {
-        return $this->moderatorUserGroupId;
+        return $this->moderatorUserGroupId->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedModeratorRecord implements Record {
      */
     public function setModeratorUserGroupId(int $moderatorUserGroupId)
     {
-        $this->moderatorUserGroupId = $moderatorUserGroupId;
+        $this->moderatorUserGroupId->setChanged(true);
+        $this->moderatorUserGroupId->setValue($moderatorUserGroupId);
     }
     
     public function hasModUserGroupId(): bool
     {
-        return isset($this->modUserGroupId);
+        return $this->modUserGroupId->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedModeratorRecord implements Record {
      */
     public function getModUserGroupId() : int
     {
-        return $this->modUserGroupId;
+        return $this->modUserGroupId->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedModeratorRecord implements Record {
      */
     public function setModUserGroupId(int $modUserGroupId)
     {
-        $this->modUserGroupId = $modUserGroupId;
+        $this->modUserGroupId->setChanged(true);
+        $this->modUserGroupId->setValue($modUserGroupId);
     }
     
     public function hasPermissions2(): bool
     {
-        return isset($this->permissions2);
+        return $this->permissions2->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedModeratorRecord implements Record {
      */
     public function getPermissions2() : int
     {
-        return $this->permissions2;
+        return $this->permissions2->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedModeratorRecord implements Record {
      */
     public function setPermissions2(int $permissions2)
     {
-        $this->permissions2 = $permissions2;
+        $this->permissions2->setChanged(true);
+        $this->permissions2->setValue($permissions2);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

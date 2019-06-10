@@ -9,100 +9,133 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedThreadRecord implements Record {
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $firstPostId int */
+    /** @var $firstPostId RecordValue */
     protected $firstPostId;
     
-    /** @var $lastPost int|null */
+    /** @var $lastPost RecordValue */
     protected $lastPost;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $pollId int */
+    /** @var $pollId RecordValue */
     protected $pollId;
     
-    /** @var $open int */
+    /** @var $open RecordValue */
     protected $open;
     
-    /** @var $replyCount int */
+    /** @var $replyCount RecordValue */
     protected $replyCount;
     
-    /** @var $postUserName string */
+    /** @var $postUserName RecordValue */
     protected $postUserName;
     
-    /** @var $postUserId int|null */
+    /** @var $postUserId RecordValue */
     protected $postUserId;
     
-    /** @var $lastPoster string */
+    /** @var $lastPoster RecordValue */
     protected $lastPoster;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $views int */
+    /** @var $views RecordValue */
     protected $views;
     
-    /** @var $iconId int */
+    /** @var $iconId RecordValue */
     protected $iconId;
     
-    /** @var $notes string */
+    /** @var $notes RecordValue */
     protected $notes;
     
-    /** @var $visible int */
+    /** @var $visible RecordValue */
     protected $visible;
     
-    /** @var $sticky int */
+    /** @var $sticky RecordValue */
     protected $sticky;
     
-    /** @var $voteNum int */
+    /** @var $voteNum RecordValue */
     protected $voteNum;
     
-    /** @var $voteTotal int */
+    /** @var $voteTotal RecordValue */
     protected $voteTotal;
     
-    /** @var $attach int */
+    /** @var $attach RecordValue */
     protected $attach;
     
-    /** @var $similar string */
+    /** @var $similar RecordValue */
     protected $similar;
     
-    /** @var $importThreadId int */
+    /** @var $importThreadId RecordValue */
     protected $importThreadId;
     
-    /** @var $importForumId int */
+    /** @var $importForumId RecordValue */
     protected $importForumId;
     
-    /** @var $hiddenCount int */
+    /** @var $hiddenCount RecordValue */
     protected $hiddenCount;
     
-    /** @var $deletedCount int */
+    /** @var $deletedCount RecordValue */
     protected $deletedCount;
     
-    /** @var $lastPostId int|null */
+    /** @var $lastPostId RecordValue */
     protected $lastPostId;
     
-    /** @var $prefixId string */
+    /** @var $prefixId RecordValue */
     protected $prefixId;
     
-    /** @var $tagList string|null */
+    /** @var $tagList RecordValue */
     protected $tagList;
     
-    /** @var $vbSeoLinkbacksNo int */
+    /** @var $vbSeoLinkbacksNo RecordValue */
     protected $vbSeoLinkbacksNo;
+
+    public function __construct() {
+		$this->threadId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->firstPostId = new RecordValue();
+		$this->lastPost = new RecordValue();
+		$this->forumId = new RecordValue();
+		$this->pollId = new RecordValue();
+		$this->open = new RecordValue();
+		$this->replyCount = new RecordValue();
+		$this->postUserName = new RecordValue();
+		$this->postUserId = new RecordValue();
+		$this->lastPoster = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->views = new RecordValue();
+		$this->iconId = new RecordValue();
+		$this->notes = new RecordValue();
+		$this->visible = new RecordValue();
+		$this->sticky = new RecordValue();
+		$this->voteNum = new RecordValue();
+		$this->voteTotal = new RecordValue();
+		$this->attach = new RecordValue();
+		$this->similar = new RecordValue();
+		$this->importThreadId = new RecordValue();
+		$this->importForumId = new RecordValue();
+		$this->hiddenCount = new RecordValue();
+		$this->deletedCount = new RecordValue();
+		$this->lastPostId = new RecordValue();
+		$this->prefixId = new RecordValue();
+		$this->tagList = new RecordValue();
+		$this->vbSeoLinkbacksNo = new RecordValue();
+    }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -110,7 +143,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -118,12 +151,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -131,7 +165,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -139,12 +173,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasFirstPostId(): bool
     {
-        return isset($this->firstPostId);
+        return $this->firstPostId->hasBeenSet();
     }    
 
     /**
@@ -152,7 +187,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getFirstPostId() : int
     {
-        return $this->firstPostId;
+        return $this->firstPostId->getValue();
     }
 
     /**
@@ -160,12 +195,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setFirstPostId(int $firstPostId)
     {
-        $this->firstPostId = $firstPostId;
+        $this->firstPostId->setChanged(true);
+        $this->firstPostId->setValue($firstPostId);
     }
     
     public function hasLastPost(): bool
     {
-        return isset($this->lastPost);
+        return $this->lastPost->hasBeenSet();
     }    
 
     /**
@@ -173,7 +209,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getLastPost() : ?int
     {
-        return $this->lastPost;
+        return $this->lastPost->getValue();
     }
 
     /**
@@ -181,12 +217,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setLastPost(?int $lastPost)
     {
-        $this->lastPost = $lastPost;
+        $this->lastPost->setChanged(true);
+        $this->lastPost->setValue($lastPost);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -194,7 +231,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -202,12 +239,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasPollId(): bool
     {
-        return isset($this->pollId);
+        return $this->pollId->hasBeenSet();
     }    
 
     /**
@@ -215,7 +253,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getPollId() : int
     {
-        return $this->pollId;
+        return $this->pollId->getValue();
     }
 
     /**
@@ -223,12 +261,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setPollId(int $pollId)
     {
-        $this->pollId = $pollId;
+        $this->pollId->setChanged(true);
+        $this->pollId->setValue($pollId);
     }
     
     public function hasOpen(): bool
     {
-        return isset($this->open);
+        return $this->open->hasBeenSet();
     }    
 
     /**
@@ -236,7 +275,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getOpen() : int
     {
-        return $this->open;
+        return $this->open->getValue();
     }
 
     /**
@@ -244,12 +283,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setOpen(int $open)
     {
-        $this->open = $open;
+        $this->open->setChanged(true);
+        $this->open->setValue($open);
     }
     
     public function hasReplyCount(): bool
     {
-        return isset($this->replyCount);
+        return $this->replyCount->hasBeenSet();
     }    
 
     /**
@@ -257,7 +297,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getReplyCount() : int
     {
-        return $this->replyCount;
+        return $this->replyCount->getValue();
     }
 
     /**
@@ -265,12 +305,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setReplyCount(int $replyCount)
     {
-        $this->replyCount = $replyCount;
+        $this->replyCount->setChanged(true);
+        $this->replyCount->setValue($replyCount);
     }
     
     public function hasPostUserName(): bool
     {
-        return isset($this->postUserName);
+        return $this->postUserName->hasBeenSet();
     }    
 
     /**
@@ -278,7 +319,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getPostUserName() : string
     {
-        return $this->postUserName;
+        return $this->postUserName->getValue();
     }
 
     /**
@@ -286,12 +327,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setPostUserName(string $postUserName)
     {
-        $this->postUserName = $postUserName;
+        $this->postUserName->setChanged(true);
+        $this->postUserName->setValue($postUserName);
     }
     
     public function hasPostUserId(): bool
     {
-        return isset($this->postUserId);
+        return $this->postUserId->hasBeenSet();
     }    
 
     /**
@@ -299,7 +341,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getPostUserId() : ?int
     {
-        return $this->postUserId;
+        return $this->postUserId->getValue();
     }
 
     /**
@@ -307,12 +349,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setPostUserId(?int $postUserId)
     {
-        $this->postUserId = $postUserId;
+        $this->postUserId->setChanged(true);
+        $this->postUserId->setValue($postUserId);
     }
     
     public function hasLastPoster(): bool
     {
-        return isset($this->lastPoster);
+        return $this->lastPoster->hasBeenSet();
     }    
 
     /**
@@ -320,7 +363,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getLastPoster() : string
     {
-        return $this->lastPoster;
+        return $this->lastPoster->getValue();
     }
 
     /**
@@ -328,12 +371,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setLastPoster(string $lastPoster)
     {
-        $this->lastPoster = $lastPoster;
+        $this->lastPoster->setChanged(true);
+        $this->lastPoster->setValue($lastPoster);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -341,7 +385,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -349,12 +393,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasViews(): bool
     {
-        return isset($this->views);
+        return $this->views->hasBeenSet();
     }    
 
     /**
@@ -362,7 +407,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getViews() : int
     {
-        return $this->views;
+        return $this->views->getValue();
     }
 
     /**
@@ -370,12 +415,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setViews(int $views)
     {
-        $this->views = $views;
+        $this->views->setChanged(true);
+        $this->views->setValue($views);
     }
     
     public function hasIconId(): bool
     {
-        return isset($this->iconId);
+        return $this->iconId->hasBeenSet();
     }    
 
     /**
@@ -383,7 +429,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getIconId() : int
     {
-        return $this->iconId;
+        return $this->iconId->getValue();
     }
 
     /**
@@ -391,12 +437,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setIconId(int $iconId)
     {
-        $this->iconId = $iconId;
+        $this->iconId->setChanged(true);
+        $this->iconId->setValue($iconId);
     }
     
     public function hasNotes(): bool
     {
-        return isset($this->notes);
+        return $this->notes->hasBeenSet();
     }    
 
     /**
@@ -404,7 +451,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getNotes() : string
     {
-        return $this->notes;
+        return $this->notes->getValue();
     }
 
     /**
@@ -412,12 +459,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setNotes(string $notes)
     {
-        $this->notes = $notes;
+        $this->notes->setChanged(true);
+        $this->notes->setValue($notes);
     }
     
     public function hasVisible(): bool
     {
-        return isset($this->visible);
+        return $this->visible->hasBeenSet();
     }    
 
     /**
@@ -425,7 +473,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getVisible() : int
     {
-        return $this->visible;
+        return $this->visible->getValue();
     }
 
     /**
@@ -433,12 +481,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setVisible(int $visible)
     {
-        $this->visible = $visible;
+        $this->visible->setChanged(true);
+        $this->visible->setValue($visible);
     }
     
     public function hasSticky(): bool
     {
-        return isset($this->sticky);
+        return $this->sticky->hasBeenSet();
     }    
 
     /**
@@ -446,7 +495,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getSticky() : int
     {
-        return $this->sticky;
+        return $this->sticky->getValue();
     }
 
     /**
@@ -454,12 +503,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setSticky(int $sticky)
     {
-        $this->sticky = $sticky;
+        $this->sticky->setChanged(true);
+        $this->sticky->setValue($sticky);
     }
     
     public function hasVoteNum(): bool
     {
-        return isset($this->voteNum);
+        return $this->voteNum->hasBeenSet();
     }    
 
     /**
@@ -467,7 +517,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getVoteNum() : int
     {
-        return $this->voteNum;
+        return $this->voteNum->getValue();
     }
 
     /**
@@ -475,12 +525,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setVoteNum(int $voteNum)
     {
-        $this->voteNum = $voteNum;
+        $this->voteNum->setChanged(true);
+        $this->voteNum->setValue($voteNum);
     }
     
     public function hasVoteTotal(): bool
     {
-        return isset($this->voteTotal);
+        return $this->voteTotal->hasBeenSet();
     }    
 
     /**
@@ -488,7 +539,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getVoteTotal() : int
     {
-        return $this->voteTotal;
+        return $this->voteTotal->getValue();
     }
 
     /**
@@ -496,12 +547,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setVoteTotal(int $voteTotal)
     {
-        $this->voteTotal = $voteTotal;
+        $this->voteTotal->setChanged(true);
+        $this->voteTotal->setValue($voteTotal);
     }
     
     public function hasAttach(): bool
     {
-        return isset($this->attach);
+        return $this->attach->hasBeenSet();
     }    
 
     /**
@@ -509,7 +561,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getAttach() : int
     {
-        return $this->attach;
+        return $this->attach->getValue();
     }
 
     /**
@@ -517,12 +569,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setAttach(int $attach)
     {
-        $this->attach = $attach;
+        $this->attach->setChanged(true);
+        $this->attach->setValue($attach);
     }
     
     public function hasSimilar(): bool
     {
-        return isset($this->similar);
+        return $this->similar->hasBeenSet();
     }    
 
     /**
@@ -530,7 +583,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getSimilar() : string
     {
-        return $this->similar;
+        return $this->similar->getValue();
     }
 
     /**
@@ -538,12 +591,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setSimilar(string $similar)
     {
-        $this->similar = $similar;
+        $this->similar->setChanged(true);
+        $this->similar->setValue($similar);
     }
     
     public function hasImportThreadId(): bool
     {
-        return isset($this->importThreadId);
+        return $this->importThreadId->hasBeenSet();
     }    
 
     /**
@@ -551,7 +605,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getImportThreadId() : int
     {
-        return $this->importThreadId;
+        return $this->importThreadId->getValue();
     }
 
     /**
@@ -559,12 +613,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setImportThreadId(int $importThreadId)
     {
-        $this->importThreadId = $importThreadId;
+        $this->importThreadId->setChanged(true);
+        $this->importThreadId->setValue($importThreadId);
     }
     
     public function hasImportForumId(): bool
     {
-        return isset($this->importForumId);
+        return $this->importForumId->hasBeenSet();
     }    
 
     /**
@@ -572,7 +627,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getImportForumId() : int
     {
-        return $this->importForumId;
+        return $this->importForumId->getValue();
     }
 
     /**
@@ -580,12 +635,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setImportForumId(int $importForumId)
     {
-        $this->importForumId = $importForumId;
+        $this->importForumId->setChanged(true);
+        $this->importForumId->setValue($importForumId);
     }
     
     public function hasHiddenCount(): bool
     {
-        return isset($this->hiddenCount);
+        return $this->hiddenCount->hasBeenSet();
     }    
 
     /**
@@ -593,7 +649,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getHiddenCount() : int
     {
-        return $this->hiddenCount;
+        return $this->hiddenCount->getValue();
     }
 
     /**
@@ -601,12 +657,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setHiddenCount(int $hiddenCount)
     {
-        $this->hiddenCount = $hiddenCount;
+        $this->hiddenCount->setChanged(true);
+        $this->hiddenCount->setValue($hiddenCount);
     }
     
     public function hasDeletedCount(): bool
     {
-        return isset($this->deletedCount);
+        return $this->deletedCount->hasBeenSet();
     }    
 
     /**
@@ -614,7 +671,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getDeletedCount() : int
     {
-        return $this->deletedCount;
+        return $this->deletedCount->getValue();
     }
 
     /**
@@ -622,12 +679,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setDeletedCount(int $deletedCount)
     {
-        $this->deletedCount = $deletedCount;
+        $this->deletedCount->setChanged(true);
+        $this->deletedCount->setValue($deletedCount);
     }
     
     public function hasLastPostId(): bool
     {
-        return isset($this->lastPostId);
+        return $this->lastPostId->hasBeenSet();
     }    
 
     /**
@@ -635,7 +693,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getLastPostId() : ?int
     {
-        return $this->lastPostId;
+        return $this->lastPostId->getValue();
     }
 
     /**
@@ -643,12 +701,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setLastPostId(?int $lastPostId)
     {
-        $this->lastPostId = $lastPostId;
+        $this->lastPostId->setChanged(true);
+        $this->lastPostId->setValue($lastPostId);
     }
     
     public function hasPrefixId(): bool
     {
-        return isset($this->prefixId);
+        return $this->prefixId->hasBeenSet();
     }    
 
     /**
@@ -656,7 +715,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getPrefixId() : string
     {
-        return $this->prefixId;
+        return $this->prefixId->getValue();
     }
 
     /**
@@ -664,12 +723,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setPrefixId(string $prefixId)
     {
-        $this->prefixId = $prefixId;
+        $this->prefixId->setChanged(true);
+        $this->prefixId->setValue($prefixId);
     }
     
     public function hasTagList(): bool
     {
-        return isset($this->tagList);
+        return $this->tagList->hasBeenSet();
     }    
 
     /**
@@ -677,7 +737,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getTagList() : ?string
     {
-        return $this->tagList;
+        return $this->tagList->getValue();
     }
 
     /**
@@ -685,12 +745,13 @@ class GeneratedThreadRecord implements Record {
      */
     public function setTagList(?string $tagList)
     {
-        $this->tagList = $tagList;
+        $this->tagList->setChanged(true);
+        $this->tagList->setValue($tagList);
     }
     
     public function hasVbSeoLinkbacksNo(): bool
     {
-        return isset($this->vbSeoLinkbacksNo);
+        return $this->vbSeoLinkbacksNo->hasBeenSet();
     }    
 
     /**
@@ -698,7 +759,7 @@ class GeneratedThreadRecord implements Record {
      */
     public function getVbSeoLinkbacksNo() : int
     {
-        return $this->vbSeoLinkbacksNo;
+        return $this->vbSeoLinkbacksNo->getValue();
     }
 
     /**
@@ -706,9 +767,9 @@ class GeneratedThreadRecord implements Record {
      */
     public function setVbSeoLinkbacksNo(int $vbSeoLinkbacksNo)
     {
-        $this->vbSeoLinkbacksNo = $vbSeoLinkbacksNo;
+        $this->vbSeoLinkbacksNo->setChanged(true);
+        $this->vbSeoLinkbacksNo->setValue($vbSeoLinkbacksNo);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedTachyForumCounterRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $threadCount int */
+    /** @var $threadCount RecordValue */
     protected $threadCount;
     
-    /** @var $replyCount int */
+    /** @var $replyCount RecordValue */
     protected $replyCount;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->forumId = new RecordValue();
+		$this->threadCount = new RecordValue();
+		$this->replyCount = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedTachyForumCounterRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedTachyForumCounterRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedTachyForumCounterRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedTachyForumCounterRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasThreadCount(): bool
     {
-        return isset($this->threadCount);
+        return $this->threadCount->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedTachyForumCounterRecord implements Record {
      */
     public function getThreadCount() : int
     {
-        return $this->threadCount;
+        return $this->threadCount->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedTachyForumCounterRecord implements Record {
      */
     public function setThreadCount(int $threadCount)
     {
-        $this->threadCount = $threadCount;
+        $this->threadCount->setChanged(true);
+        $this->threadCount->setValue($threadCount);
     }
     
     public function hasReplyCount(): bool
     {
-        return isset($this->replyCount);
+        return $this->replyCount->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedTachyForumCounterRecord implements Record {
      */
     public function getReplyCount() : int
     {
-        return $this->replyCount;
+        return $this->replyCount->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedTachyForumCounterRecord implements Record {
      */
     public function setReplyCount(int $replyCount)
     {
-        $this->replyCount = $replyCount;
+        $this->replyCount->setChanged(true);
+        $this->replyCount->setValue($replyCount);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

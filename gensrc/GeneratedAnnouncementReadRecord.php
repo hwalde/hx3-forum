@@ -9,19 +9,25 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAnnouncementReadRecord implements Record {
     
-    /** @var $announcementId int */
+    /** @var $announcementId RecordValue */
     protected $announcementId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
+
+    public function __construct() {
+		$this->announcementId = new RecordValue();
+		$this->userId = new RecordValue();
+    }
     
     public function hasAnnouncementId(): bool
     {
-        return isset($this->announcementId);
+        return $this->announcementId->hasBeenSet();
     }    
 
     /**
@@ -29,7 +35,7 @@ class GeneratedAnnouncementReadRecord implements Record {
      */
     public function getAnnouncementId() : int
     {
-        return $this->announcementId;
+        return $this->announcementId->getValue();
     }
 
     /**
@@ -37,12 +43,13 @@ class GeneratedAnnouncementReadRecord implements Record {
      */
     public function setAnnouncementId(int $announcementId)
     {
-        $this->announcementId = $announcementId;
+        $this->announcementId->setChanged(true);
+        $this->announcementId->setValue($announcementId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +57,7 @@ class GeneratedAnnouncementReadRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -58,9 +65,9 @@ class GeneratedAnnouncementReadRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,19 +9,25 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedReputationLevelRecord implements Record {
     
-    /** @var $reputationLevelId int */
+    /** @var $reputationLevelId RecordValue */
     protected $reputationLevelId;
     
-    /** @var $minimumReputation int */
+    /** @var $minimumReputation RecordValue */
     protected $minimumReputation;
+
+    public function __construct() {
+		$this->reputationLevelId = new RecordValue();
+		$this->minimumReputation = new RecordValue();
+    }
     
     public function hasReputationLevelId(): bool
     {
-        return isset($this->reputationLevelId);
+        return $this->reputationLevelId->hasBeenSet();
     }    
 
     /**
@@ -29,7 +35,7 @@ class GeneratedReputationLevelRecord implements Record {
      */
     public function getReputationLevelId() : int
     {
-        return $this->reputationLevelId;
+        return $this->reputationLevelId->getValue();
     }
 
     /**
@@ -37,12 +43,13 @@ class GeneratedReputationLevelRecord implements Record {
      */
     public function setReputationLevelId(int $reputationLevelId)
     {
-        $this->reputationLevelId = $reputationLevelId;
+        $this->reputationLevelId->setChanged(true);
+        $this->reputationLevelId->setValue($reputationLevelId);
     }
     
     public function hasMinimumReputation(): bool
     {
-        return isset($this->minimumReputation);
+        return $this->minimumReputation->hasBeenSet();
     }    
 
     /**
@@ -50,7 +57,7 @@ class GeneratedReputationLevelRecord implements Record {
      */
     public function getMinimumReputation() : int
     {
-        return $this->minimumReputation;
+        return $this->minimumReputation->getValue();
     }
 
     /**
@@ -58,9 +65,9 @@ class GeneratedReputationLevelRecord implements Record {
      */
     public function setMinimumReputation(int $minimumReputation)
     {
-        $this->minimumReputation = $minimumReputation;
+        $this->minimumReputation->setChanged(true);
+        $this->minimumReputation->setValue($minimumReputation);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

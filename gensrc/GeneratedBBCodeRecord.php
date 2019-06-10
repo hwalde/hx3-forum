@@ -9,40 +9,53 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedBBCodeRecord implements Record {
     
-    /** @var $bbCodeId int */
+    /** @var $bbCodeId RecordValue */
     protected $bbCodeId;
     
-    /** @var $bbBodeTag string */
+    /** @var $bbBodeTag RecordValue */
     protected $bbBodeTag;
     
-    /** @var $bbCodeReplacement string */
+    /** @var $bbCodeReplacement RecordValue */
     protected $bbCodeReplacement;
     
-    /** @var $bbCodeExample string */
+    /** @var $bbCodeExample RecordValue */
     protected $bbCodeExample;
     
-    /** @var $bbCodeExplanation string */
+    /** @var $bbCodeExplanation RecordValue */
     protected $bbCodeExplanation;
     
-    /** @var $twoParams int */
+    /** @var $twoParams RecordValue */
     protected $twoParams;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $buttonImage string */
+    /** @var $buttonImage RecordValue */
     protected $buttonImage;
     
-    /** @var $options int */
+    /** @var $options RecordValue */
     protected $options;
+
+    public function __construct() {
+		$this->bbCodeId = new RecordValue();
+		$this->bbBodeTag = new RecordValue();
+		$this->bbCodeReplacement = new RecordValue();
+		$this->bbCodeExample = new RecordValue();
+		$this->bbCodeExplanation = new RecordValue();
+		$this->twoParams = new RecordValue();
+		$this->title = new RecordValue();
+		$this->buttonImage = new RecordValue();
+		$this->options = new RecordValue();
+    }
     
     public function hasBbCodeId(): bool
     {
-        return isset($this->bbCodeId);
+        return $this->bbCodeId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +63,7 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function getBbCodeId() : int
     {
-        return $this->bbCodeId;
+        return $this->bbCodeId->getValue();
     }
 
     /**
@@ -58,12 +71,13 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function setBbCodeId(int $bbCodeId)
     {
-        $this->bbCodeId = $bbCodeId;
+        $this->bbCodeId->setChanged(true);
+        $this->bbCodeId->setValue($bbCodeId);
     }
     
     public function hasBbBodeTag(): bool
     {
-        return isset($this->bbBodeTag);
+        return $this->bbBodeTag->hasBeenSet();
     }    
 
     /**
@@ -71,7 +85,7 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function getBbBodeTag() : string
     {
-        return $this->bbBodeTag;
+        return $this->bbBodeTag->getValue();
     }
 
     /**
@@ -79,12 +93,13 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function setBbBodeTag(string $bbBodeTag)
     {
-        $this->bbBodeTag = $bbBodeTag;
+        $this->bbBodeTag->setChanged(true);
+        $this->bbBodeTag->setValue($bbBodeTag);
     }
     
     public function hasBbCodeReplacement(): bool
     {
-        return isset($this->bbCodeReplacement);
+        return $this->bbCodeReplacement->hasBeenSet();
     }    
 
     /**
@@ -92,7 +107,7 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function getBbCodeReplacement() : string
     {
-        return $this->bbCodeReplacement;
+        return $this->bbCodeReplacement->getValue();
     }
 
     /**
@@ -100,12 +115,13 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function setBbCodeReplacement(string $bbCodeReplacement)
     {
-        $this->bbCodeReplacement = $bbCodeReplacement;
+        $this->bbCodeReplacement->setChanged(true);
+        $this->bbCodeReplacement->setValue($bbCodeReplacement);
     }
     
     public function hasBbCodeExample(): bool
     {
-        return isset($this->bbCodeExample);
+        return $this->bbCodeExample->hasBeenSet();
     }    
 
     /**
@@ -113,7 +129,7 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function getBbCodeExample() : string
     {
-        return $this->bbCodeExample;
+        return $this->bbCodeExample->getValue();
     }
 
     /**
@@ -121,12 +137,13 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function setBbCodeExample(string $bbCodeExample)
     {
-        $this->bbCodeExample = $bbCodeExample;
+        $this->bbCodeExample->setChanged(true);
+        $this->bbCodeExample->setValue($bbCodeExample);
     }
     
     public function hasBbCodeExplanation(): bool
     {
-        return isset($this->bbCodeExplanation);
+        return $this->bbCodeExplanation->hasBeenSet();
     }    
 
     /**
@@ -134,7 +151,7 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function getBbCodeExplanation() : string
     {
-        return $this->bbCodeExplanation;
+        return $this->bbCodeExplanation->getValue();
     }
 
     /**
@@ -142,12 +159,13 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function setBbCodeExplanation(string $bbCodeExplanation)
     {
-        $this->bbCodeExplanation = $bbCodeExplanation;
+        $this->bbCodeExplanation->setChanged(true);
+        $this->bbCodeExplanation->setValue($bbCodeExplanation);
     }
     
     public function hasTwoParams(): bool
     {
-        return isset($this->twoParams);
+        return $this->twoParams->hasBeenSet();
     }    
 
     /**
@@ -155,7 +173,7 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function getTwoParams() : int
     {
-        return $this->twoParams;
+        return $this->twoParams->getValue();
     }
 
     /**
@@ -163,12 +181,13 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function setTwoParams(int $twoParams)
     {
-        $this->twoParams = $twoParams;
+        $this->twoParams->setChanged(true);
+        $this->twoParams->setValue($twoParams);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -176,7 +195,7 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -184,12 +203,13 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasButtonImage(): bool
     {
-        return isset($this->buttonImage);
+        return $this->buttonImage->hasBeenSet();
     }    
 
     /**
@@ -197,7 +217,7 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function getButtonImage() : string
     {
-        return $this->buttonImage;
+        return $this->buttonImage->getValue();
     }
 
     /**
@@ -205,12 +225,13 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function setButtonImage(string $buttonImage)
     {
-        $this->buttonImage = $buttonImage;
+        $this->buttonImage->setChanged(true);
+        $this->buttonImage->setValue($buttonImage);
     }
     
     public function hasOptions(): bool
     {
-        return isset($this->options);
+        return $this->options->hasBeenSet();
     }    
 
     /**
@@ -218,7 +239,7 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function getOptions() : int
     {
-        return $this->options;
+        return $this->options->getValue();
     }
 
     /**
@@ -226,9 +247,9 @@ class GeneratedBBCodeRecord implements Record {
      */
     public function setOptions(int $options)
     {
-        $this->options = $options;
+        $this->options->setChanged(true);
+        $this->options->setValue($options);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

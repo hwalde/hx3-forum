@@ -9,40 +9,53 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedRanksRecord implements Record {
     
-    /** @var $rankId int */
+    /** @var $rankId RecordValue */
     protected $rankId;
     
-    /** @var $minPosts int */
+    /** @var $minPosts RecordValue */
     protected $minPosts;
     
-    /** @var $rankLevel int */
+    /** @var $rankLevel RecordValue */
     protected $rankLevel;
     
-    /** @var $rankimg string */
+    /** @var $rankimg RecordValue */
     protected $rankimg;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $type int */
+    /** @var $type RecordValue */
     protected $type;
     
-    /** @var $importRanksId int */
+    /** @var $importRanksId RecordValue */
     protected $importRanksId;
     
-    /** @var $stack int */
+    /** @var $stack RecordValue */
     protected $stack;
     
-    /** @var $display int */
+    /** @var $display RecordValue */
     protected $display;
+
+    public function __construct() {
+		$this->rankId = new RecordValue();
+		$this->minPosts = new RecordValue();
+		$this->rankLevel = new RecordValue();
+		$this->rankimg = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->type = new RecordValue();
+		$this->importRanksId = new RecordValue();
+		$this->stack = new RecordValue();
+		$this->display = new RecordValue();
+    }
     
     public function hasRankId(): bool
     {
-        return isset($this->rankId);
+        return $this->rankId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +63,7 @@ class GeneratedRanksRecord implements Record {
      */
     public function getRankId() : int
     {
-        return $this->rankId;
+        return $this->rankId->getValue();
     }
 
     /**
@@ -58,12 +71,13 @@ class GeneratedRanksRecord implements Record {
      */
     public function setRankId(int $rankId)
     {
-        $this->rankId = $rankId;
+        $this->rankId->setChanged(true);
+        $this->rankId->setValue($rankId);
     }
     
     public function hasMinPosts(): bool
     {
-        return isset($this->minPosts);
+        return $this->minPosts->hasBeenSet();
     }    
 
     /**
@@ -71,7 +85,7 @@ class GeneratedRanksRecord implements Record {
      */
     public function getMinPosts() : int
     {
-        return $this->minPosts;
+        return $this->minPosts->getValue();
     }
 
     /**
@@ -79,12 +93,13 @@ class GeneratedRanksRecord implements Record {
      */
     public function setMinPosts(int $minPosts)
     {
-        $this->minPosts = $minPosts;
+        $this->minPosts->setChanged(true);
+        $this->minPosts->setValue($minPosts);
     }
     
     public function hasRankLevel(): bool
     {
-        return isset($this->rankLevel);
+        return $this->rankLevel->hasBeenSet();
     }    
 
     /**
@@ -92,7 +107,7 @@ class GeneratedRanksRecord implements Record {
      */
     public function getRankLevel() : int
     {
-        return $this->rankLevel;
+        return $this->rankLevel->getValue();
     }
 
     /**
@@ -100,12 +115,13 @@ class GeneratedRanksRecord implements Record {
      */
     public function setRankLevel(int $rankLevel)
     {
-        $this->rankLevel = $rankLevel;
+        $this->rankLevel->setChanged(true);
+        $this->rankLevel->setValue($rankLevel);
     }
     
     public function hasRankimg(): bool
     {
-        return isset($this->rankimg);
+        return $this->rankimg->hasBeenSet();
     }    
 
     /**
@@ -113,7 +129,7 @@ class GeneratedRanksRecord implements Record {
      */
     public function getRankimg() : string
     {
-        return $this->rankimg;
+        return $this->rankimg->getValue();
     }
 
     /**
@@ -121,12 +137,13 @@ class GeneratedRanksRecord implements Record {
      */
     public function setRankimg(string $rankimg)
     {
-        $this->rankimg = $rankimg;
+        $this->rankimg->setChanged(true);
+        $this->rankimg->setValue($rankimg);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -134,7 +151,7 @@ class GeneratedRanksRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -142,12 +159,13 @@ class GeneratedRanksRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -155,7 +173,7 @@ class GeneratedRanksRecord implements Record {
      */
     public function getType() : int
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -163,12 +181,13 @@ class GeneratedRanksRecord implements Record {
      */
     public function setType(int $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
     
     public function hasImportRanksId(): bool
     {
-        return isset($this->importRanksId);
+        return $this->importRanksId->hasBeenSet();
     }    
 
     /**
@@ -176,7 +195,7 @@ class GeneratedRanksRecord implements Record {
      */
     public function getImportRanksId() : int
     {
-        return $this->importRanksId;
+        return $this->importRanksId->getValue();
     }
 
     /**
@@ -184,12 +203,13 @@ class GeneratedRanksRecord implements Record {
      */
     public function setImportRanksId(int $importRanksId)
     {
-        $this->importRanksId = $importRanksId;
+        $this->importRanksId->setChanged(true);
+        $this->importRanksId->setValue($importRanksId);
     }
     
     public function hasStack(): bool
     {
-        return isset($this->stack);
+        return $this->stack->hasBeenSet();
     }    
 
     /**
@@ -197,7 +217,7 @@ class GeneratedRanksRecord implements Record {
      */
     public function getStack() : int
     {
-        return $this->stack;
+        return $this->stack->getValue();
     }
 
     /**
@@ -205,12 +225,13 @@ class GeneratedRanksRecord implements Record {
      */
     public function setStack(int $stack)
     {
-        $this->stack = $stack;
+        $this->stack->setChanged(true);
+        $this->stack->setValue($stack);
     }
     
     public function hasDisplay(): bool
     {
-        return isset($this->display);
+        return $this->display->hasBeenSet();
     }    
 
     /**
@@ -218,7 +239,7 @@ class GeneratedRanksRecord implements Record {
      */
     public function getDisplay() : int
     {
-        return $this->display;
+        return $this->display->getValue();
     }
 
     /**
@@ -226,9 +247,9 @@ class GeneratedRanksRecord implements Record {
      */
     public function setDisplay(int $display)
     {
-        $this->display = $display;
+        $this->display->setChanged(true);
+        $this->display->setValue($display);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedImageCategoryRecord implements Record {
     
-    /** @var $imageCategoryId int */
+    /** @var $imageCategoryId RecordValue */
     protected $imageCategoryId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $imageType int */
+    /** @var $imageType RecordValue */
     protected $imageType;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
+
+    public function __construct() {
+		$this->imageCategoryId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->imageType = new RecordValue();
+		$this->displayOrder = new RecordValue();
+    }
     
     public function hasImageCategoryId(): bool
     {
-        return isset($this->imageCategoryId);
+        return $this->imageCategoryId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedImageCategoryRecord implements Record {
      */
     public function getImageCategoryId() : int
     {
-        return $this->imageCategoryId;
+        return $this->imageCategoryId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedImageCategoryRecord implements Record {
      */
     public function setImageCategoryId(int $imageCategoryId)
     {
-        $this->imageCategoryId = $imageCategoryId;
+        $this->imageCategoryId->setChanged(true);
+        $this->imageCategoryId->setValue($imageCategoryId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedImageCategoryRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedImageCategoryRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasImageType(): bool
     {
-        return isset($this->imageType);
+        return $this->imageType->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedImageCategoryRecord implements Record {
      */
     public function getImageType() : int
     {
-        return $this->imageType;
+        return $this->imageType->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedImageCategoryRecord implements Record {
      */
     public function setImageType(int $imageType)
     {
-        $this->imageType = $imageType;
+        $this->imageType->setChanged(true);
+        $this->imageType->setValue($imageType);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedImageCategoryRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedImageCategoryRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

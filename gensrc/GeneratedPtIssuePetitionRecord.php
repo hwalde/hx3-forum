@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssuePetitionRecord implements Record {
     
-    /** @var $issueNoteId int */
+    /** @var $issueNoteId RecordValue */
     protected $issueNoteId;
     
-    /** @var $petitionStatusId int */
+    /** @var $petitionStatusId RecordValue */
     protected $petitionStatusId;
     
-    /** @var $resolution string */
+    /** @var $resolution RecordValue */
     protected $resolution;
     
-    /** @var $resolveUserId int */
+    /** @var $resolveUserId RecordValue */
     protected $resolveUserId;
     
-    /** @var $resolveDate int */
+    /** @var $resolveDate RecordValue */
     protected $resolveDate;
+
+    public function __construct() {
+		$this->issueNoteId = new RecordValue();
+		$this->petitionStatusId = new RecordValue();
+		$this->resolution = new RecordValue();
+		$this->resolveUserId = new RecordValue();
+		$this->resolveDate = new RecordValue();
+    }
     
     public function hasIssueNoteId(): bool
     {
-        return isset($this->issueNoteId);
+        return $this->issueNoteId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedPtIssuePetitionRecord implements Record {
      */
     public function getIssueNoteId() : int
     {
-        return $this->issueNoteId;
+        return $this->issueNoteId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedPtIssuePetitionRecord implements Record {
      */
     public function setIssueNoteId(int $issueNoteId)
     {
-        $this->issueNoteId = $issueNoteId;
+        $this->issueNoteId->setChanged(true);
+        $this->issueNoteId->setValue($issueNoteId);
     }
     
     public function hasPetitionStatusId(): bool
     {
-        return isset($this->petitionStatusId);
+        return $this->petitionStatusId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedPtIssuePetitionRecord implements Record {
      */
     public function getPetitionStatusId() : int
     {
-        return $this->petitionStatusId;
+        return $this->petitionStatusId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedPtIssuePetitionRecord implements Record {
      */
     public function setPetitionStatusId(int $petitionStatusId)
     {
-        $this->petitionStatusId = $petitionStatusId;
+        $this->petitionStatusId->setChanged(true);
+        $this->petitionStatusId->setValue($petitionStatusId);
     }
     
     public function hasResolution(): bool
     {
-        return isset($this->resolution);
+        return $this->resolution->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedPtIssuePetitionRecord implements Record {
      */
     public function getResolution() : string
     {
-        return $this->resolution;
+        return $this->resolution->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedPtIssuePetitionRecord implements Record {
      */
     public function setResolution(string $resolution)
     {
-        $this->resolution = $resolution;
+        $this->resolution->setChanged(true);
+        $this->resolution->setValue($resolution);
     }
     
     public function hasResolveUserId(): bool
     {
-        return isset($this->resolveUserId);
+        return $this->resolveUserId->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedPtIssuePetitionRecord implements Record {
      */
     public function getResolveUserId() : int
     {
-        return $this->resolveUserId;
+        return $this->resolveUserId->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedPtIssuePetitionRecord implements Record {
      */
     public function setResolveUserId(int $resolveUserId)
     {
-        $this->resolveUserId = $resolveUserId;
+        $this->resolveUserId->setChanged(true);
+        $this->resolveUserId->setValue($resolveUserId);
     }
     
     public function hasResolveDate(): bool
     {
-        return isset($this->resolveDate);
+        return $this->resolveDate->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedPtIssuePetitionRecord implements Record {
      */
     public function getResolveDate() : int
     {
-        return $this->resolveDate;
+        return $this->resolveDate->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedPtIssuePetitionRecord implements Record {
      */
     public function setResolveDate(int $resolveDate)
     {
-        $this->resolveDate = $resolveDate;
+        $this->resolveDate->setChanged(true);
+        $this->resolveDate->setValue($resolveDate);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

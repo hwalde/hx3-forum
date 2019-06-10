@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAvatarRecord implements Record {
     
-    /** @var $avatarId int */
+    /** @var $avatarId RecordValue */
     protected $avatarId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $minimumPosts int */
+    /** @var $minimumPosts RecordValue */
     protected $minimumPosts;
     
-    /** @var $avatarPath string */
+    /** @var $avatarPath RecordValue */
     protected $avatarPath;
     
-    /** @var $imageCategoryId int */
+    /** @var $imageCategoryId RecordValue */
     protected $imageCategoryId;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
+
+    public function __construct() {
+		$this->avatarId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->minimumPosts = new RecordValue();
+		$this->avatarPath = new RecordValue();
+		$this->imageCategoryId = new RecordValue();
+		$this->displayOrder = new RecordValue();
+    }
     
     public function hasAvatarId(): bool
     {
-        return isset($this->avatarId);
+        return $this->avatarId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedAvatarRecord implements Record {
      */
     public function getAvatarId() : int
     {
-        return $this->avatarId;
+        return $this->avatarId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedAvatarRecord implements Record {
      */
     public function setAvatarId(int $avatarId)
     {
-        $this->avatarId = $avatarId;
+        $this->avatarId->setChanged(true);
+        $this->avatarId->setValue($avatarId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedAvatarRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedAvatarRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasMinimumPosts(): bool
     {
-        return isset($this->minimumPosts);
+        return $this->minimumPosts->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedAvatarRecord implements Record {
      */
     public function getMinimumPosts() : int
     {
-        return $this->minimumPosts;
+        return $this->minimumPosts->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedAvatarRecord implements Record {
      */
     public function setMinimumPosts(int $minimumPosts)
     {
-        $this->minimumPosts = $minimumPosts;
+        $this->minimumPosts->setChanged(true);
+        $this->minimumPosts->setValue($minimumPosts);
     }
     
     public function hasAvatarPath(): bool
     {
-        return isset($this->avatarPath);
+        return $this->avatarPath->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedAvatarRecord implements Record {
      */
     public function getAvatarPath() : string
     {
-        return $this->avatarPath;
+        return $this->avatarPath->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedAvatarRecord implements Record {
      */
     public function setAvatarPath(string $avatarPath)
     {
-        $this->avatarPath = $avatarPath;
+        $this->avatarPath->setChanged(true);
+        $this->avatarPath->setValue($avatarPath);
     }
     
     public function hasImageCategoryId(): bool
     {
-        return isset($this->imageCategoryId);
+        return $this->imageCategoryId->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedAvatarRecord implements Record {
      */
     public function getImageCategoryId() : int
     {
-        return $this->imageCategoryId;
+        return $this->imageCategoryId->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedAvatarRecord implements Record {
      */
     public function setImageCategoryId(int $imageCategoryId)
     {
-        $this->imageCategoryId = $imageCategoryId;
+        $this->imageCategoryId->setChanged(true);
+        $this->imageCategoryId->setValue($imageCategoryId);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedAvatarRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedAvatarRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

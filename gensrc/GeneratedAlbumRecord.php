@@ -9,43 +9,57 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAlbumRecord implements Record {
     
-    /** @var $albumId int */
+    /** @var $albumId RecordValue */
     protected $albumId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $createDate int */
+    /** @var $createDate RecordValue */
     protected $createDate;
     
-    /** @var $lastPictureDate int */
+    /** @var $lastPictureDate RecordValue */
     protected $lastPictureDate;
     
-    /** @var $visible int */
+    /** @var $visible RecordValue */
     protected $visible;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $description string|null */
+    /** @var $description RecordValue */
     protected $description;
     
-    /** @var $coverPictureId int */
+    /** @var $coverPictureId RecordValue */
     protected $coverPictureId;
     
-    /** @var $state string */
+    /** @var $state RecordValue */
     protected $state;
     
-    /** @var $moderation int */
+    /** @var $moderation RecordValue */
     protected $moderation;
+
+    public function __construct() {
+		$this->albumId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->createDate = new RecordValue();
+		$this->lastPictureDate = new RecordValue();
+		$this->visible = new RecordValue();
+		$this->title = new RecordValue();
+		$this->description = new RecordValue();
+		$this->coverPictureId = new RecordValue();
+		$this->state = new RecordValue();
+		$this->moderation = new RecordValue();
+    }
     
     public function hasAlbumId(): bool
     {
-        return isset($this->albumId);
+        return $this->albumId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +67,7 @@ class GeneratedAlbumRecord implements Record {
      */
     public function getAlbumId() : int
     {
-        return $this->albumId;
+        return $this->albumId->getValue();
     }
 
     /**
@@ -61,12 +75,13 @@ class GeneratedAlbumRecord implements Record {
      */
     public function setAlbumId(int $albumId)
     {
-        $this->albumId = $albumId;
+        $this->albumId->setChanged(true);
+        $this->albumId->setValue($albumId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -74,7 +89,7 @@ class GeneratedAlbumRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -82,12 +97,13 @@ class GeneratedAlbumRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasCreateDate(): bool
     {
-        return isset($this->createDate);
+        return $this->createDate->hasBeenSet();
     }    
 
     /**
@@ -95,7 +111,7 @@ class GeneratedAlbumRecord implements Record {
      */
     public function getCreateDate() : int
     {
-        return $this->createDate;
+        return $this->createDate->getValue();
     }
 
     /**
@@ -103,12 +119,13 @@ class GeneratedAlbumRecord implements Record {
      */
     public function setCreateDate(int $createDate)
     {
-        $this->createDate = $createDate;
+        $this->createDate->setChanged(true);
+        $this->createDate->setValue($createDate);
     }
     
     public function hasLastPictureDate(): bool
     {
-        return isset($this->lastPictureDate);
+        return $this->lastPictureDate->hasBeenSet();
     }    
 
     /**
@@ -116,7 +133,7 @@ class GeneratedAlbumRecord implements Record {
      */
     public function getLastPictureDate() : int
     {
-        return $this->lastPictureDate;
+        return $this->lastPictureDate->getValue();
     }
 
     /**
@@ -124,12 +141,13 @@ class GeneratedAlbumRecord implements Record {
      */
     public function setLastPictureDate(int $lastPictureDate)
     {
-        $this->lastPictureDate = $lastPictureDate;
+        $this->lastPictureDate->setChanged(true);
+        $this->lastPictureDate->setValue($lastPictureDate);
     }
     
     public function hasVisible(): bool
     {
-        return isset($this->visible);
+        return $this->visible->hasBeenSet();
     }    
 
     /**
@@ -137,7 +155,7 @@ class GeneratedAlbumRecord implements Record {
      */
     public function getVisible() : int
     {
-        return $this->visible;
+        return $this->visible->getValue();
     }
 
     /**
@@ -145,12 +163,13 @@ class GeneratedAlbumRecord implements Record {
      */
     public function setVisible(int $visible)
     {
-        $this->visible = $visible;
+        $this->visible->setChanged(true);
+        $this->visible->setValue($visible);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -158,7 +177,7 @@ class GeneratedAlbumRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -166,12 +185,13 @@ class GeneratedAlbumRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasDescription(): bool
     {
-        return isset($this->description);
+        return $this->description->hasBeenSet();
     }    
 
     /**
@@ -179,7 +199,7 @@ class GeneratedAlbumRecord implements Record {
      */
     public function getDescription() : ?string
     {
-        return $this->description;
+        return $this->description->getValue();
     }
 
     /**
@@ -187,12 +207,13 @@ class GeneratedAlbumRecord implements Record {
      */
     public function setDescription(?string $description)
     {
-        $this->description = $description;
+        $this->description->setChanged(true);
+        $this->description->setValue($description);
     }
     
     public function hasCoverPictureId(): bool
     {
-        return isset($this->coverPictureId);
+        return $this->coverPictureId->hasBeenSet();
     }    
 
     /**
@@ -200,7 +221,7 @@ class GeneratedAlbumRecord implements Record {
      */
     public function getCoverPictureId() : int
     {
-        return $this->coverPictureId;
+        return $this->coverPictureId->getValue();
     }
 
     /**
@@ -208,12 +229,13 @@ class GeneratedAlbumRecord implements Record {
      */
     public function setCoverPictureId(int $coverPictureId)
     {
-        $this->coverPictureId = $coverPictureId;
+        $this->coverPictureId->setChanged(true);
+        $this->coverPictureId->setValue($coverPictureId);
     }
     
     public function hasState(): bool
     {
-        return isset($this->state);
+        return $this->state->hasBeenSet();
     }    
 
     /**
@@ -221,7 +243,7 @@ class GeneratedAlbumRecord implements Record {
      */
     public function getState() : string
     {
-        return $this->state;
+        return $this->state->getValue();
     }
 
     /**
@@ -229,12 +251,13 @@ class GeneratedAlbumRecord implements Record {
      */
     public function setState(string $state)
     {
-        $this->state = $state;
+        $this->state->setChanged(true);
+        $this->state->setValue($state);
     }
     
     public function hasModeration(): bool
     {
-        return isset($this->moderation);
+        return $this->moderation->hasBeenSet();
     }    
 
     /**
@@ -242,7 +265,7 @@ class GeneratedAlbumRecord implements Record {
      */
     public function getModeration() : int
     {
-        return $this->moderation;
+        return $this->moderation->getValue();
     }
 
     /**
@@ -250,9 +273,9 @@ class GeneratedAlbumRecord implements Record {
      */
     public function setModeration(int $moderation)
     {
-        $this->moderation = $moderation;
+        $this->moderation->setChanged(true);
+        $this->moderation->setValue($moderation);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

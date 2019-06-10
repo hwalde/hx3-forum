@@ -9,61 +9,81 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSessionRecord implements Record {
     
-    /** @var $sessionHash string */
+    /** @var $sessionHash RecordValue */
     protected $sessionHash;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $host string */
+    /** @var $host RecordValue */
     protected $host;
     
-    /** @var $idHash string */
+    /** @var $idHash RecordValue */
     protected $idHash;
     
-    /** @var $lastActivity int */
+    /** @var $lastActivity RecordValue */
     protected $lastActivity;
     
-    /** @var $location string */
+    /** @var $location RecordValue */
     protected $location;
     
-    /** @var $userAgent string */
+    /** @var $userAgent RecordValue */
     protected $userAgent;
     
-    /** @var $styleId int */
+    /** @var $styleId RecordValue */
     protected $styleId;
     
-    /** @var $loggedIn int */
+    /** @var $loggedIn RecordValue */
     protected $loggedIn;
     
-    /** @var $inForum int */
+    /** @var $inForum RecordValue */
     protected $inForum;
     
-    /** @var $inThread int */
+    /** @var $inThread RecordValue */
     protected $inThread;
     
-    /** @var $inCalendar int */
+    /** @var $inCalendar RecordValue */
     protected $inCalendar;
     
-    /** @var $badLocation int */
+    /** @var $badLocation RecordValue */
     protected $badLocation;
     
-    /** @var $bypass int */
+    /** @var $bypass RecordValue */
     protected $bypass;
     
-    /** @var $languageId int */
+    /** @var $languageId RecordValue */
     protected $languageId;
     
-    /** @var $profileUpdate int */
+    /** @var $profileUpdate RecordValue */
     protected $profileUpdate;
+
+    public function __construct() {
+		$this->sessionHash = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->host = new RecordValue();
+		$this->idHash = new RecordValue();
+		$this->lastActivity = new RecordValue();
+		$this->location = new RecordValue();
+		$this->userAgent = new RecordValue();
+		$this->styleId = new RecordValue();
+		$this->loggedIn = new RecordValue();
+		$this->inForum = new RecordValue();
+		$this->inThread = new RecordValue();
+		$this->inCalendar = new RecordValue();
+		$this->badLocation = new RecordValue();
+		$this->bypass = new RecordValue();
+		$this->languageId = new RecordValue();
+		$this->profileUpdate = new RecordValue();
+    }
     
     public function hasSessionHash(): bool
     {
-        return isset($this->sessionHash);
+        return $this->sessionHash->hasBeenSet();
     }    
 
     /**
@@ -71,7 +91,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getSessionHash() : string
     {
-        return $this->sessionHash;
+        return $this->sessionHash->getValue();
     }
 
     /**
@@ -79,12 +99,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setSessionHash(string $sessionHash)
     {
-        $this->sessionHash = $sessionHash;
+        $this->sessionHash->setChanged(true);
+        $this->sessionHash->setValue($sessionHash);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -92,7 +113,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -100,12 +121,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasHost(): bool
     {
-        return isset($this->host);
+        return $this->host->hasBeenSet();
     }    
 
     /**
@@ -113,7 +135,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getHost() : string
     {
-        return $this->host;
+        return $this->host->getValue();
     }
 
     /**
@@ -121,12 +143,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setHost(string $host)
     {
-        $this->host = $host;
+        $this->host->setChanged(true);
+        $this->host->setValue($host);
     }
     
     public function hasIdHash(): bool
     {
-        return isset($this->idHash);
+        return $this->idHash->hasBeenSet();
     }    
 
     /**
@@ -134,7 +157,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getIdHash() : string
     {
-        return $this->idHash;
+        return $this->idHash->getValue();
     }
 
     /**
@@ -142,12 +165,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setIdHash(string $idHash)
     {
-        $this->idHash = $idHash;
+        $this->idHash->setChanged(true);
+        $this->idHash->setValue($idHash);
     }
     
     public function hasLastActivity(): bool
     {
-        return isset($this->lastActivity);
+        return $this->lastActivity->hasBeenSet();
     }    
 
     /**
@@ -155,7 +179,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getLastActivity() : int
     {
-        return $this->lastActivity;
+        return $this->lastActivity->getValue();
     }
 
     /**
@@ -163,12 +187,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setLastActivity(int $lastActivity)
     {
-        $this->lastActivity = $lastActivity;
+        $this->lastActivity->setChanged(true);
+        $this->lastActivity->setValue($lastActivity);
     }
     
     public function hasLocation(): bool
     {
-        return isset($this->location);
+        return $this->location->hasBeenSet();
     }    
 
     /**
@@ -176,7 +201,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getLocation() : string
     {
-        return $this->location;
+        return $this->location->getValue();
     }
 
     /**
@@ -184,12 +209,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setLocation(string $location)
     {
-        $this->location = $location;
+        $this->location->setChanged(true);
+        $this->location->setValue($location);
     }
     
     public function hasUserAgent(): bool
     {
-        return isset($this->userAgent);
+        return $this->userAgent->hasBeenSet();
     }    
 
     /**
@@ -197,7 +223,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getUserAgent() : string
     {
-        return $this->userAgent;
+        return $this->userAgent->getValue();
     }
 
     /**
@@ -205,12 +231,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setUserAgent(string $userAgent)
     {
-        $this->userAgent = $userAgent;
+        $this->userAgent->setChanged(true);
+        $this->userAgent->setValue($userAgent);
     }
     
     public function hasStyleId(): bool
     {
-        return isset($this->styleId);
+        return $this->styleId->hasBeenSet();
     }    
 
     /**
@@ -218,7 +245,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getStyleId() : int
     {
-        return $this->styleId;
+        return $this->styleId->getValue();
     }
 
     /**
@@ -226,12 +253,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setStyleId(int $styleId)
     {
-        $this->styleId = $styleId;
+        $this->styleId->setChanged(true);
+        $this->styleId->setValue($styleId);
     }
     
     public function hasLoggedIn(): bool
     {
-        return isset($this->loggedIn);
+        return $this->loggedIn->hasBeenSet();
     }    
 
     /**
@@ -239,7 +267,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getLoggedIn() : int
     {
-        return $this->loggedIn;
+        return $this->loggedIn->getValue();
     }
 
     /**
@@ -247,12 +275,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setLoggedIn(int $loggedIn)
     {
-        $this->loggedIn = $loggedIn;
+        $this->loggedIn->setChanged(true);
+        $this->loggedIn->setValue($loggedIn);
     }
     
     public function hasInForum(): bool
     {
-        return isset($this->inForum);
+        return $this->inForum->hasBeenSet();
     }    
 
     /**
@@ -260,7 +289,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getInForum() : int
     {
-        return $this->inForum;
+        return $this->inForum->getValue();
     }
 
     /**
@@ -268,12 +297,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setInForum(int $inForum)
     {
-        $this->inForum = $inForum;
+        $this->inForum->setChanged(true);
+        $this->inForum->setValue($inForum);
     }
     
     public function hasInThread(): bool
     {
-        return isset($this->inThread);
+        return $this->inThread->hasBeenSet();
     }    
 
     /**
@@ -281,7 +311,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getInThread() : int
     {
-        return $this->inThread;
+        return $this->inThread->getValue();
     }
 
     /**
@@ -289,12 +319,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setInThread(int $inThread)
     {
-        $this->inThread = $inThread;
+        $this->inThread->setChanged(true);
+        $this->inThread->setValue($inThread);
     }
     
     public function hasInCalendar(): bool
     {
-        return isset($this->inCalendar);
+        return $this->inCalendar->hasBeenSet();
     }    
 
     /**
@@ -302,7 +333,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getInCalendar() : int
     {
-        return $this->inCalendar;
+        return $this->inCalendar->getValue();
     }
 
     /**
@@ -310,12 +341,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setInCalendar(int $inCalendar)
     {
-        $this->inCalendar = $inCalendar;
+        $this->inCalendar->setChanged(true);
+        $this->inCalendar->setValue($inCalendar);
     }
     
     public function hasBadLocation(): bool
     {
-        return isset($this->badLocation);
+        return $this->badLocation->hasBeenSet();
     }    
 
     /**
@@ -323,7 +355,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getBadLocation() : int
     {
-        return $this->badLocation;
+        return $this->badLocation->getValue();
     }
 
     /**
@@ -331,12 +363,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setBadLocation(int $badLocation)
     {
-        $this->badLocation = $badLocation;
+        $this->badLocation->setChanged(true);
+        $this->badLocation->setValue($badLocation);
     }
     
     public function hasBypass(): bool
     {
-        return isset($this->bypass);
+        return $this->bypass->hasBeenSet();
     }    
 
     /**
@@ -344,7 +377,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getBypass() : int
     {
-        return $this->bypass;
+        return $this->bypass->getValue();
     }
 
     /**
@@ -352,12 +385,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setBypass(int $bypass)
     {
-        $this->bypass = $bypass;
+        $this->bypass->setChanged(true);
+        $this->bypass->setValue($bypass);
     }
     
     public function hasLanguageId(): bool
     {
-        return isset($this->languageId);
+        return $this->languageId->hasBeenSet();
     }    
 
     /**
@@ -365,7 +399,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getLanguageId() : int
     {
-        return $this->languageId;
+        return $this->languageId->getValue();
     }
 
     /**
@@ -373,12 +407,13 @@ class GeneratedSessionRecord implements Record {
      */
     public function setLanguageId(int $languageId)
     {
-        $this->languageId = $languageId;
+        $this->languageId->setChanged(true);
+        $this->languageId->setValue($languageId);
     }
     
     public function hasProfileUpdate(): bool
     {
-        return isset($this->profileUpdate);
+        return $this->profileUpdate->hasBeenSet();
     }    
 
     /**
@@ -386,7 +421,7 @@ class GeneratedSessionRecord implements Record {
      */
     public function getProfileUpdate() : int
     {
-        return $this->profileUpdate;
+        return $this->profileUpdate->getValue();
     }
 
     /**
@@ -394,9 +429,9 @@ class GeneratedSessionRecord implements Record {
      */
     public function setProfileUpdate(int $profileUpdate)
     {
-        $this->profileUpdate = $profileUpdate;
+        $this->profileUpdate->setChanged(true);
+        $this->profileUpdate->setValue($profileUpdate);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

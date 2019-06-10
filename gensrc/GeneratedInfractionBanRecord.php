@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedInfractionBanRecord implements Record {
     
-    /** @var $infractionBanId int */
+    /** @var $infractionBanId RecordValue */
     protected $infractionBanId;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $banuserGroupId int */
+    /** @var $banuserGroupId RecordValue */
     protected $banuserGroupId;
     
-    /** @var $amount int */
+    /** @var $amount RecordValue */
     protected $amount;
     
-    /** @var $period string */
+    /** @var $period RecordValue */
     protected $period;
     
-    /** @var $method string */
+    /** @var $method RecordValue */
     protected $method;
+
+    public function __construct() {
+		$this->infractionBanId = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->banuserGroupId = new RecordValue();
+		$this->amount = new RecordValue();
+		$this->period = new RecordValue();
+		$this->method = new RecordValue();
+    }
     
     public function hasInfractionBanId(): bool
     {
-        return isset($this->infractionBanId);
+        return $this->infractionBanId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function getInfractionBanId() : int
     {
-        return $this->infractionBanId;
+        return $this->infractionBanId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function setInfractionBanId(int $infractionBanId)
     {
-        $this->infractionBanId = $infractionBanId;
+        $this->infractionBanId->setChanged(true);
+        $this->infractionBanId->setValue($infractionBanId);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasBanuserGroupId(): bool
     {
-        return isset($this->banuserGroupId);
+        return $this->banuserGroupId->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function getBanuserGroupId() : int
     {
-        return $this->banuserGroupId;
+        return $this->banuserGroupId->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function setBanuserGroupId(int $banuserGroupId)
     {
-        $this->banuserGroupId = $banuserGroupId;
+        $this->banuserGroupId->setChanged(true);
+        $this->banuserGroupId->setValue($banuserGroupId);
     }
     
     public function hasAmount(): bool
     {
-        return isset($this->amount);
+        return $this->amount->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function getAmount() : int
     {
-        return $this->amount;
+        return $this->amount->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function setAmount(int $amount)
     {
-        $this->amount = $amount;
+        $this->amount->setChanged(true);
+        $this->amount->setValue($amount);
     }
     
     public function hasPeriod(): bool
     {
-        return isset($this->period);
+        return $this->period->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function getPeriod() : string
     {
-        return $this->period;
+        return $this->period->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function setPeriod(string $period)
     {
-        $this->period = $period;
+        $this->period->setChanged(true);
+        $this->period->setValue($period);
     }
     
     public function hasMethod(): bool
     {
-        return isset($this->method);
+        return $this->method->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function getMethod() : string
     {
-        return $this->method;
+        return $this->method->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedInfractionBanRecord implements Record {
      */
     public function setMethod(string $method)
     {
-        $this->method = $method;
+        $this->method->setChanged(true);
+        $this->method->setValue($method);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

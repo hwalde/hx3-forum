@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPluginRecord implements Record {
     
-    /** @var $pluginId int */
+    /** @var $pluginId RecordValue */
     protected $pluginId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $hookName string */
+    /** @var $hookName RecordValue */
     protected $hookName;
     
-    /** @var $phpCode string */
+    /** @var $phpCode RecordValue */
     protected $phpCode;
     
-    /** @var $product string */
+    /** @var $product RecordValue */
     protected $product;
     
-    /** @var $devKey string */
+    /** @var $devKey RecordValue */
     protected $devKey;
     
-    /** @var $active int */
+    /** @var $active RecordValue */
     protected $active;
     
-    /** @var $executionOrder int */
+    /** @var $executionOrder RecordValue */
     protected $executionOrder;
+
+    public function __construct() {
+		$this->pluginId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->hookName = new RecordValue();
+		$this->phpCode = new RecordValue();
+		$this->product = new RecordValue();
+		$this->devKey = new RecordValue();
+		$this->active = new RecordValue();
+		$this->executionOrder = new RecordValue();
+    }
     
     public function hasPluginId(): bool
     {
-        return isset($this->pluginId);
+        return $this->pluginId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedPluginRecord implements Record {
      */
     public function getPluginId() : int
     {
-        return $this->pluginId;
+        return $this->pluginId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedPluginRecord implements Record {
      */
     public function setPluginId(int $pluginId)
     {
-        $this->pluginId = $pluginId;
+        $this->pluginId->setChanged(true);
+        $this->pluginId->setValue($pluginId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedPluginRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedPluginRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasHookName(): bool
     {
-        return isset($this->hookName);
+        return $this->hookName->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedPluginRecord implements Record {
      */
     public function getHookName() : string
     {
-        return $this->hookName;
+        return $this->hookName->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedPluginRecord implements Record {
      */
     public function setHookName(string $hookName)
     {
-        $this->hookName = $hookName;
+        $this->hookName->setChanged(true);
+        $this->hookName->setValue($hookName);
     }
     
     public function hasPhpCode(): bool
     {
-        return isset($this->phpCode);
+        return $this->phpCode->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedPluginRecord implements Record {
      */
     public function getPhpCode() : string
     {
-        return $this->phpCode;
+        return $this->phpCode->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedPluginRecord implements Record {
      */
     public function setPhpCode(string $phpCode)
     {
-        $this->phpCode = $phpCode;
+        $this->phpCode->setChanged(true);
+        $this->phpCode->setValue($phpCode);
     }
     
     public function hasProduct(): bool
     {
-        return isset($this->product);
+        return $this->product->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedPluginRecord implements Record {
      */
     public function getProduct() : string
     {
-        return $this->product;
+        return $this->product->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedPluginRecord implements Record {
      */
     public function setProduct(string $product)
     {
-        $this->product = $product;
+        $this->product->setChanged(true);
+        $this->product->setValue($product);
     }
     
     public function hasDevKey(): bool
     {
-        return isset($this->devKey);
+        return $this->devKey->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedPluginRecord implements Record {
      */
     public function getDevKey() : string
     {
-        return $this->devKey;
+        return $this->devKey->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedPluginRecord implements Record {
      */
     public function setDevKey(string $devKey)
     {
-        $this->devKey = $devKey;
+        $this->devKey->setChanged(true);
+        $this->devKey->setValue($devKey);
     }
     
     public function hasActive(): bool
     {
-        return isset($this->active);
+        return $this->active->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedPluginRecord implements Record {
      */
     public function getActive() : int
     {
-        return $this->active;
+        return $this->active->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedPluginRecord implements Record {
      */
     public function setActive(int $active)
     {
-        $this->active = $active;
+        $this->active->setChanged(true);
+        $this->active->setValue($active);
     }
     
     public function hasExecutionOrder(): bool
     {
-        return isset($this->executionOrder);
+        return $this->executionOrder->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedPluginRecord implements Record {
      */
     public function getExecutionOrder() : int
     {
-        return $this->executionOrder;
+        return $this->executionOrder->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedPluginRecord implements Record {
      */
     public function setExecutionOrder(int $executionOrder)
     {
-        $this->executionOrder = $executionOrder;
+        $this->executionOrder->setChanged(true);
+        $this->executionOrder->setValue($executionOrder);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

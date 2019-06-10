@@ -9,58 +9,77 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedEventRecord implements Record {
     
-    /** @var $eventId int */
+    /** @var $eventId RecordValue */
     protected $eventId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $event string */
+    /** @var $event RecordValue */
     protected $event;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $allowSmilies int */
+    /** @var $allowSmilies RecordValue */
     protected $allowSmilies;
     
-    /** @var $recurring int */
+    /** @var $recurring RecordValue */
     protected $recurring;
     
-    /** @var $recurOption string */
+    /** @var $recurOption RecordValue */
     protected $recurOption;
     
-    /** @var $calendarId int */
+    /** @var $calendarId RecordValue */
     protected $calendarId;
     
-    /** @var $customFields string */
+    /** @var $customFields RecordValue */
     protected $customFields;
     
-    /** @var $visible int */
+    /** @var $visible RecordValue */
     protected $visible;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $utc mixed */
+    /** @var $utc RecordValue */
     protected $utc;
     
-    /** @var $dateLineFrom int */
+    /** @var $dateLineFrom RecordValue */
     protected $dateLineFrom;
     
-    /** @var $dateLineTo int */
+    /** @var $dateLineTo RecordValue */
     protected $dateLineTo;
     
-    /** @var $dst int */
+    /** @var $dst RecordValue */
     protected $dst;
+
+    public function __construct() {
+		$this->eventId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->event = new RecordValue();
+		$this->title = new RecordValue();
+		$this->allowSmilies = new RecordValue();
+		$this->recurring = new RecordValue();
+		$this->recurOption = new RecordValue();
+		$this->calendarId = new RecordValue();
+		$this->customFields = new RecordValue();
+		$this->visible = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->utc = new RecordValue();
+		$this->dateLineFrom = new RecordValue();
+		$this->dateLineTo = new RecordValue();
+		$this->dst = new RecordValue();
+    }
     
     public function hasEventId(): bool
     {
-        return isset($this->eventId);
+        return $this->eventId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +87,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getEventId() : int
     {
-        return $this->eventId;
+        return $this->eventId->getValue();
     }
 
     /**
@@ -76,12 +95,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setEventId(int $eventId)
     {
-        $this->eventId = $eventId;
+        $this->eventId->setChanged(true);
+        $this->eventId->setValue($eventId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -89,7 +109,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -97,12 +117,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasEvent(): bool
     {
-        return isset($this->event);
+        return $this->event->hasBeenSet();
     }    
 
     /**
@@ -110,7 +131,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getEvent() : string
     {
-        return $this->event;
+        return $this->event->getValue();
     }
 
     /**
@@ -118,12 +139,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setEvent(string $event)
     {
-        $this->event = $event;
+        $this->event->setChanged(true);
+        $this->event->setValue($event);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -131,7 +153,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -139,12 +161,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasAllowSmilies(): bool
     {
-        return isset($this->allowSmilies);
+        return $this->allowSmilies->hasBeenSet();
     }    
 
     /**
@@ -152,7 +175,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getAllowSmilies() : int
     {
-        return $this->allowSmilies;
+        return $this->allowSmilies->getValue();
     }
 
     /**
@@ -160,12 +183,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setAllowSmilies(int $allowSmilies)
     {
-        $this->allowSmilies = $allowSmilies;
+        $this->allowSmilies->setChanged(true);
+        $this->allowSmilies->setValue($allowSmilies);
     }
     
     public function hasRecurring(): bool
     {
-        return isset($this->recurring);
+        return $this->recurring->hasBeenSet();
     }    
 
     /**
@@ -173,7 +197,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getRecurring() : int
     {
-        return $this->recurring;
+        return $this->recurring->getValue();
     }
 
     /**
@@ -181,12 +205,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setRecurring(int $recurring)
     {
-        $this->recurring = $recurring;
+        $this->recurring->setChanged(true);
+        $this->recurring->setValue($recurring);
     }
     
     public function hasRecurOption(): bool
     {
-        return isset($this->recurOption);
+        return $this->recurOption->hasBeenSet();
     }    
 
     /**
@@ -194,7 +219,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getRecurOption() : string
     {
-        return $this->recurOption;
+        return $this->recurOption->getValue();
     }
 
     /**
@@ -202,12 +227,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setRecurOption(string $recurOption)
     {
-        $this->recurOption = $recurOption;
+        $this->recurOption->setChanged(true);
+        $this->recurOption->setValue($recurOption);
     }
     
     public function hasCalendarId(): bool
     {
-        return isset($this->calendarId);
+        return $this->calendarId->hasBeenSet();
     }    
 
     /**
@@ -215,7 +241,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getCalendarId() : int
     {
-        return $this->calendarId;
+        return $this->calendarId->getValue();
     }
 
     /**
@@ -223,12 +249,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setCalendarId(int $calendarId)
     {
-        $this->calendarId = $calendarId;
+        $this->calendarId->setChanged(true);
+        $this->calendarId->setValue($calendarId);
     }
     
     public function hasCustomFields(): bool
     {
-        return isset($this->customFields);
+        return $this->customFields->hasBeenSet();
     }    
 
     /**
@@ -236,7 +263,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getCustomFields() : string
     {
-        return $this->customFields;
+        return $this->customFields->getValue();
     }
 
     /**
@@ -244,12 +271,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setCustomFields(string $customFields)
     {
-        $this->customFields = $customFields;
+        $this->customFields->setChanged(true);
+        $this->customFields->setValue($customFields);
     }
     
     public function hasVisible(): bool
     {
-        return isset($this->visible);
+        return $this->visible->hasBeenSet();
     }    
 
     /**
@@ -257,7 +285,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getVisible() : int
     {
-        return $this->visible;
+        return $this->visible->getValue();
     }
 
     /**
@@ -265,12 +293,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setVisible(int $visible)
     {
-        $this->visible = $visible;
+        $this->visible->setChanged(true);
+        $this->visible->setValue($visible);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -278,7 +307,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -286,12 +315,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasUtc(): bool
     {
-        return isset($this->utc);
+        return $this->utc->hasBeenSet();
     }    
 
     /**
@@ -299,7 +329,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getUtc()
     {
-        return $this->utc;
+        return $this->utc->getValue();
     }
 
     /**
@@ -307,12 +337,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setUtc($utc)
     {
-        $this->utc = $utc;
+        $this->utc->setChanged(true);
+        $this->utc->setValue($utc);
     }
     
     public function hasDateLineFrom(): bool
     {
-        return isset($this->dateLineFrom);
+        return $this->dateLineFrom->hasBeenSet();
     }    
 
     /**
@@ -320,7 +351,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getDateLineFrom() : int
     {
-        return $this->dateLineFrom;
+        return $this->dateLineFrom->getValue();
     }
 
     /**
@@ -328,12 +359,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setDateLineFrom(int $dateLineFrom)
     {
-        $this->dateLineFrom = $dateLineFrom;
+        $this->dateLineFrom->setChanged(true);
+        $this->dateLineFrom->setValue($dateLineFrom);
     }
     
     public function hasDateLineTo(): bool
     {
-        return isset($this->dateLineTo);
+        return $this->dateLineTo->hasBeenSet();
     }    
 
     /**
@@ -341,7 +373,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getDateLineTo() : int
     {
-        return $this->dateLineTo;
+        return $this->dateLineTo->getValue();
     }
 
     /**
@@ -349,12 +381,13 @@ class GeneratedEventRecord implements Record {
      */
     public function setDateLineTo(int $dateLineTo)
     {
-        $this->dateLineTo = $dateLineTo;
+        $this->dateLineTo->setChanged(true);
+        $this->dateLineTo->setValue($dateLineTo);
     }
     
     public function hasDst(): bool
     {
-        return isset($this->dst);
+        return $this->dst->hasBeenSet();
     }    
 
     /**
@@ -362,7 +395,7 @@ class GeneratedEventRecord implements Record {
      */
     public function getDst() : int
     {
-        return $this->dst;
+        return $this->dst->getValue();
     }
 
     /**
@@ -370,9 +403,9 @@ class GeneratedEventRecord implements Record {
      */
     public function setDst(int $dst)
     {
-        $this->dst = $dst;
+        $this->dst->setChanged(true);
+        $this->dst->setValue($dst);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

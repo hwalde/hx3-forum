@@ -9,26 +9,34 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedGroupMessageHashRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $postUserId int */
+    /** @var $postUserId RecordValue */
     protected $postUserId;
     
-    /** @var $groupId int */
+    /** @var $groupId RecordValue */
     protected $groupId;
     
-    /** @var $dupeHash string */
+    /** @var $dupeHash RecordValue */
     protected $dupeHash;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->postUserId = new RecordValue();
+		$this->groupId = new RecordValue();
+		$this->dupeHash = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasPostUserId(): bool
     {
-        return isset($this->postUserId);
+        return $this->postUserId->hasBeenSet();
     }    
 
     /**
@@ -36,7 +44,7 @@ class GeneratedGroupMessageHashRecord extends AbstractUpdateableRecord implement
      */
     public function getPostUserId() : int
     {
-        return $this->postUserId;
+        return $this->postUserId->getValue();
     }
 
     /**
@@ -44,12 +52,13 @@ class GeneratedGroupMessageHashRecord extends AbstractUpdateableRecord implement
      */
     public function setPostUserId(int $postUserId)
     {
-        $this->postUserId = $postUserId;
+        $this->postUserId->setChanged(true);
+        $this->postUserId->setValue($postUserId);
     }
     
     public function hasGroupId(): bool
     {
-        return isset($this->groupId);
+        return $this->groupId->hasBeenSet();
     }    
 
     /**
@@ -57,7 +66,7 @@ class GeneratedGroupMessageHashRecord extends AbstractUpdateableRecord implement
      */
     public function getGroupId() : int
     {
-        return $this->groupId;
+        return $this->groupId->getValue();
     }
 
     /**
@@ -65,12 +74,13 @@ class GeneratedGroupMessageHashRecord extends AbstractUpdateableRecord implement
      */
     public function setGroupId(int $groupId)
     {
-        $this->groupId = $groupId;
+        $this->groupId->setChanged(true);
+        $this->groupId->setValue($groupId);
     }
     
     public function hasDupeHash(): bool
     {
-        return isset($this->dupeHash);
+        return $this->dupeHash->hasBeenSet();
     }    
 
     /**
@@ -78,7 +88,7 @@ class GeneratedGroupMessageHashRecord extends AbstractUpdateableRecord implement
      */
     public function getDupeHash() : string
     {
-        return $this->dupeHash;
+        return $this->dupeHash->getValue();
     }
 
     /**
@@ -86,12 +96,13 @@ class GeneratedGroupMessageHashRecord extends AbstractUpdateableRecord implement
      */
     public function setDupeHash(string $dupeHash)
     {
-        $this->dupeHash = $dupeHash;
+        $this->dupeHash->setChanged(true);
+        $this->dupeHash->setValue($dupeHash);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -99,7 +110,7 @@ class GeneratedGroupMessageHashRecord extends AbstractUpdateableRecord implement
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -107,9 +118,9 @@ class GeneratedGroupMessageHashRecord extends AbstractUpdateableRecord implement
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

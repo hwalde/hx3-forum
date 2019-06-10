@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedStatisticSpiderRecord implements Record {
     
-    /** @var $id int */
+    /** @var $id RecordValue */
     protected $id;
     
-    /** @var $spiderName string */
+    /** @var $spiderName RecordValue */
     protected $spiderName;
     
-    /** @var $spiderLink string */
+    /** @var $spiderLink RecordValue */
     protected $spiderLink;
     
-    /** @var $balkenLink string */
+    /** @var $balkenLink RecordValue */
     protected $balkenLink;
     
-    /** @var $zaehler int */
+    /** @var $zaehler RecordValue */
     protected $zaehler;
+
+    public function __construct() {
+		$this->id = new RecordValue();
+		$this->spiderName = new RecordValue();
+		$this->spiderLink = new RecordValue();
+		$this->balkenLink = new RecordValue();
+		$this->zaehler = new RecordValue();
+    }
     
     public function hasId(): bool
     {
-        return isset($this->id);
+        return $this->id->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedStatisticSpiderRecord implements Record {
      */
     public function getId() : int
     {
-        return $this->id;
+        return $this->id->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedStatisticSpiderRecord implements Record {
      */
     public function setId(int $id)
     {
-        $this->id = $id;
+        $this->id->setChanged(true);
+        $this->id->setValue($id);
     }
     
     public function hasSpiderName(): bool
     {
-        return isset($this->spiderName);
+        return $this->spiderName->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedStatisticSpiderRecord implements Record {
      */
     public function getSpiderName() : string
     {
-        return $this->spiderName;
+        return $this->spiderName->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedStatisticSpiderRecord implements Record {
      */
     public function setSpiderName(string $spiderName)
     {
-        $this->spiderName = $spiderName;
+        $this->spiderName->setChanged(true);
+        $this->spiderName->setValue($spiderName);
     }
     
     public function hasSpiderLink(): bool
     {
-        return isset($this->spiderLink);
+        return $this->spiderLink->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedStatisticSpiderRecord implements Record {
      */
     public function getSpiderLink() : string
     {
-        return $this->spiderLink;
+        return $this->spiderLink->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedStatisticSpiderRecord implements Record {
      */
     public function setSpiderLink(string $spiderLink)
     {
-        $this->spiderLink = $spiderLink;
+        $this->spiderLink->setChanged(true);
+        $this->spiderLink->setValue($spiderLink);
     }
     
     public function hasBalkenLink(): bool
     {
-        return isset($this->balkenLink);
+        return $this->balkenLink->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedStatisticSpiderRecord implements Record {
      */
     public function getBalkenLink() : string
     {
-        return $this->balkenLink;
+        return $this->balkenLink->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedStatisticSpiderRecord implements Record {
      */
     public function setBalkenLink(string $balkenLink)
     {
-        $this->balkenLink = $balkenLink;
+        $this->balkenLink->setChanged(true);
+        $this->balkenLink->setValue($balkenLink);
     }
     
     public function hasZaehler(): bool
     {
-        return isset($this->zaehler);
+        return $this->zaehler->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedStatisticSpiderRecord implements Record {
      */
     public function getZaehler() : int
     {
-        return $this->zaehler;
+        return $this->zaehler->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedStatisticSpiderRecord implements Record {
      */
     public function setZaehler(int $zaehler)
     {
-        $this->zaehler = $zaehler;
+        $this->zaehler->setChanged(true);
+        $this->zaehler->setValue($zaehler);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

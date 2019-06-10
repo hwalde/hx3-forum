@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedCronLogRecord implements Record {
     
-    /** @var $cronLogId int */
+    /** @var $cronLogId RecordValue */
     protected $cronLogId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $description string */
+    /** @var $description RecordValue */
     protected $description;
     
-    /** @var $type int */
+    /** @var $type RecordValue */
     protected $type;
     
-    /** @var $varName string */
+    /** @var $varName RecordValue */
     protected $varName;
+
+    public function __construct() {
+		$this->cronLogId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->description = new RecordValue();
+		$this->type = new RecordValue();
+		$this->varName = new RecordValue();
+    }
     
     public function hasCronLogId(): bool
     {
-        return isset($this->cronLogId);
+        return $this->cronLogId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedCronLogRecord implements Record {
      */
     public function getCronLogId() : int
     {
-        return $this->cronLogId;
+        return $this->cronLogId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedCronLogRecord implements Record {
      */
     public function setCronLogId(int $cronLogId)
     {
-        $this->cronLogId = $cronLogId;
+        $this->cronLogId->setChanged(true);
+        $this->cronLogId->setValue($cronLogId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedCronLogRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedCronLogRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasDescription(): bool
     {
-        return isset($this->description);
+        return $this->description->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedCronLogRecord implements Record {
      */
     public function getDescription() : string
     {
-        return $this->description;
+        return $this->description->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedCronLogRecord implements Record {
      */
     public function setDescription(string $description)
     {
-        $this->description = $description;
+        $this->description->setChanged(true);
+        $this->description->setValue($description);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedCronLogRecord implements Record {
      */
     public function getType() : int
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedCronLogRecord implements Record {
      */
     public function setType(int $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
     
     public function hasVarName(): bool
     {
-        return isset($this->varName);
+        return $this->varName->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedCronLogRecord implements Record {
      */
     public function getVarName() : string
     {
-        return $this->varName;
+        return $this->varName->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedCronLogRecord implements Record {
      */
     public function setVarName(string $varName)
     {
-        $this->varName = $varName;
+        $this->varName->setChanged(true);
+        $this->varName->setValue($varName);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

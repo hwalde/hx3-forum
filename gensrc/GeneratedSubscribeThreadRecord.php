@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSubscribeThreadRecord implements Record {
     
-    /** @var $subscribeThreadId int */
+    /** @var $subscribeThreadId RecordValue */
     protected $subscribeThreadId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $emailUpdate int */
+    /** @var $emailUpdate RecordValue */
     protected $emailUpdate;
     
-    /** @var $folderId int */
+    /** @var $folderId RecordValue */
     protected $folderId;
     
-    /** @var $canView int */
+    /** @var $canView RecordValue */
     protected $canView;
+
+    public function __construct() {
+		$this->subscribeThreadId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->threadId = new RecordValue();
+		$this->emailUpdate = new RecordValue();
+		$this->folderId = new RecordValue();
+		$this->canView = new RecordValue();
+    }
     
     public function hasSubscribeThreadId(): bool
     {
-        return isset($this->subscribeThreadId);
+        return $this->subscribeThreadId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function getSubscribeThreadId() : int
     {
-        return $this->subscribeThreadId;
+        return $this->subscribeThreadId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function setSubscribeThreadId(int $subscribeThreadId)
     {
-        $this->subscribeThreadId = $subscribeThreadId;
+        $this->subscribeThreadId->setChanged(true);
+        $this->subscribeThreadId->setValue($subscribeThreadId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasEmailUpdate(): bool
     {
-        return isset($this->emailUpdate);
+        return $this->emailUpdate->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function getEmailUpdate() : int
     {
-        return $this->emailUpdate;
+        return $this->emailUpdate->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function setEmailUpdate(int $emailUpdate)
     {
-        $this->emailUpdate = $emailUpdate;
+        $this->emailUpdate->setChanged(true);
+        $this->emailUpdate->setValue($emailUpdate);
     }
     
     public function hasFolderId(): bool
     {
-        return isset($this->folderId);
+        return $this->folderId->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function getFolderId() : int
     {
-        return $this->folderId;
+        return $this->folderId->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function setFolderId(int $folderId)
     {
-        $this->folderId = $folderId;
+        $this->folderId->setChanged(true);
+        $this->folderId->setValue($folderId);
     }
     
     public function hasCanView(): bool
     {
-        return isset($this->canView);
+        return $this->canView->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function getCanView() : int
     {
-        return $this->canView;
+        return $this->canView->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedSubscribeThreadRecord implements Record {
      */
     public function setCanView(int $canView)
     {
-        $this->canView = $canView;
+        $this->canView->setChanged(true);
+        $this->canView->setValue($canView);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

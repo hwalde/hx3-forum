@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedReminderRecord implements Record {
     
-    /** @var $reminderId int */
+    /** @var $reminderId RecordValue */
     protected $reminderId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $text string */
+    /** @var $text RecordValue */
     protected $text;
     
-    /** @var $dueDate int */
+    /** @var $dueDate RecordValue */
     protected $dueDate;
     
-    /** @var $adminOnly int */
+    /** @var $adminOnly RecordValue */
     protected $adminOnly;
     
-    /** @var $completedBy int */
+    /** @var $completedBy RecordValue */
     protected $completedBy;
     
-    /** @var $completedTime int */
+    /** @var $completedTime RecordValue */
     protected $completedTime;
+
+    public function __construct() {
+		$this->reminderId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->text = new RecordValue();
+		$this->dueDate = new RecordValue();
+		$this->adminOnly = new RecordValue();
+		$this->completedBy = new RecordValue();
+		$this->completedTime = new RecordValue();
+    }
     
     public function hasReminderId(): bool
     {
-        return isset($this->reminderId);
+        return $this->reminderId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedReminderRecord implements Record {
      */
     public function getReminderId() : int
     {
-        return $this->reminderId;
+        return $this->reminderId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedReminderRecord implements Record {
      */
     public function setReminderId(int $reminderId)
     {
-        $this->reminderId = $reminderId;
+        $this->reminderId->setChanged(true);
+        $this->reminderId->setValue($reminderId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedReminderRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedReminderRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedReminderRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedReminderRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasText(): bool
     {
-        return isset($this->text);
+        return $this->text->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedReminderRecord implements Record {
      */
     public function getText() : string
     {
-        return $this->text;
+        return $this->text->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedReminderRecord implements Record {
      */
     public function setText(string $text)
     {
-        $this->text = $text;
+        $this->text->setChanged(true);
+        $this->text->setValue($text);
     }
     
     public function hasDueDate(): bool
     {
-        return isset($this->dueDate);
+        return $this->dueDate->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedReminderRecord implements Record {
      */
     public function getDueDate() : int
     {
-        return $this->dueDate;
+        return $this->dueDate->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedReminderRecord implements Record {
      */
     public function setDueDate(int $dueDate)
     {
-        $this->dueDate = $dueDate;
+        $this->dueDate->setChanged(true);
+        $this->dueDate->setValue($dueDate);
     }
     
     public function hasAdminOnly(): bool
     {
-        return isset($this->adminOnly);
+        return $this->adminOnly->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedReminderRecord implements Record {
      */
     public function getAdminOnly() : int
     {
-        return $this->adminOnly;
+        return $this->adminOnly->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedReminderRecord implements Record {
      */
     public function setAdminOnly(int $adminOnly)
     {
-        $this->adminOnly = $adminOnly;
+        $this->adminOnly->setChanged(true);
+        $this->adminOnly->setValue($adminOnly);
     }
     
     public function hasCompletedBy(): bool
     {
-        return isset($this->completedBy);
+        return $this->completedBy->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedReminderRecord implements Record {
      */
     public function getCompletedBy() : int
     {
-        return $this->completedBy;
+        return $this->completedBy->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedReminderRecord implements Record {
      */
     public function setCompletedBy(int $completedBy)
     {
-        $this->completedBy = $completedBy;
+        $this->completedBy->setChanged(true);
+        $this->completedBy->setValue($completedBy);
     }
     
     public function hasCompletedTime(): bool
     {
-        return isset($this->completedTime);
+        return $this->completedTime->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedReminderRecord implements Record {
      */
     public function getCompletedTime() : int
     {
-        return $this->completedTime;
+        return $this->completedTime->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedReminderRecord implements Record {
      */
     public function setCompletedTime(int $completedTime)
     {
-        $this->completedTime = $completedTime;
+        $this->completedTime->setChanged(true);
+        $this->completedTime->setValue($completedTime);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

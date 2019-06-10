@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedHvQuestionRecord implements Record {
     
-    /** @var $questionId int */
+    /** @var $questionId RecordValue */
     protected $questionId;
     
-    /** @var $regex string */
+    /** @var $regex RecordValue */
     protected $regex;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->questionId = new RecordValue();
+		$this->regex = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasQuestionId(): bool
     {
-        return isset($this->questionId);
+        return $this->questionId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedHvQuestionRecord implements Record {
      */
     public function getQuestionId() : int
     {
-        return $this->questionId;
+        return $this->questionId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedHvQuestionRecord implements Record {
      */
     public function setQuestionId(int $questionId)
     {
-        $this->questionId = $questionId;
+        $this->questionId->setChanged(true);
+        $this->questionId->setValue($questionId);
     }
     
     public function hasRegex(): bool
     {
-        return isset($this->regex);
+        return $this->regex->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedHvQuestionRecord implements Record {
      */
     public function getRegex() : string
     {
-        return $this->regex;
+        return $this->regex->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedHvQuestionRecord implements Record {
      */
     public function setRegex(string $regex)
     {
-        $this->regex = $regex;
+        $this->regex->setChanged(true);
+        $this->regex->setValue($regex);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedHvQuestionRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedHvQuestionRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

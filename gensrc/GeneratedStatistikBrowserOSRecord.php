@@ -9,23 +9,30 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedStatistikBrowserOSRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $typ string */
+    /** @var $typ RecordValue */
     protected $typ;
     
-    /** @var $system string */
+    /** @var $system RecordValue */
     protected $system;
     
-    /** @var $zaehler int */
+    /** @var $zaehler RecordValue */
     protected $zaehler;
+
+    public function __construct() {
+		$this->typ = new RecordValue();
+		$this->system = new RecordValue();
+		$this->zaehler = new RecordValue();
+    }
     
     public function hasTyp(): bool
     {
-        return isset($this->typ);
+        return $this->typ->hasBeenSet();
     }    
 
     /**
@@ -33,7 +40,7 @@ class GeneratedStatistikBrowserOSRecord extends AbstractUpdateableRecord impleme
      */
     public function getTyp() : string
     {
-        return $this->typ;
+        return $this->typ->getValue();
     }
 
     /**
@@ -41,12 +48,13 @@ class GeneratedStatistikBrowserOSRecord extends AbstractUpdateableRecord impleme
      */
     public function setTyp(string $typ)
     {
-        $this->typ = $typ;
+        $this->typ->setChanged(true);
+        $this->typ->setValue($typ);
     }
     
     public function hasSystem(): bool
     {
-        return isset($this->system);
+        return $this->system->hasBeenSet();
     }    
 
     /**
@@ -54,7 +62,7 @@ class GeneratedStatistikBrowserOSRecord extends AbstractUpdateableRecord impleme
      */
     public function getSystem() : string
     {
-        return $this->system;
+        return $this->system->getValue();
     }
 
     /**
@@ -62,12 +70,13 @@ class GeneratedStatistikBrowserOSRecord extends AbstractUpdateableRecord impleme
      */
     public function setSystem(string $system)
     {
-        $this->system = $system;
+        $this->system->setChanged(true);
+        $this->system->setValue($system);
     }
     
     public function hasZaehler(): bool
     {
-        return isset($this->zaehler);
+        return $this->zaehler->hasBeenSet();
     }    
 
     /**
@@ -75,7 +84,7 @@ class GeneratedStatistikBrowserOSRecord extends AbstractUpdateableRecord impleme
      */
     public function getZaehler() : int
     {
-        return $this->zaehler;
+        return $this->zaehler->getValue();
     }
 
     /**
@@ -83,9 +92,9 @@ class GeneratedStatistikBrowserOSRecord extends AbstractUpdateableRecord impleme
      */
     public function setZaehler(int $zaehler)
     {
-        $this->zaehler = $zaehler;
+        $this->zaehler->setChanged(true);
+        $this->zaehler->setValue($zaehler);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

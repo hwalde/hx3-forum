@@ -9,220 +9,293 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $memberGroupIds string */
+    /** @var $memberGroupIds RecordValue */
     protected $memberGroupIds;
     
-    /** @var $displayGroupId int */
+    /** @var $displayGroupId RecordValue */
     protected $displayGroupId;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
     
-    /** @var $password string */
+    /** @var $password RecordValue */
     protected $password;
     
-    /** @var $passwordDate \DateTime */
+    /** @var $passwordDate RecordValue */
     protected $passwordDate;
     
-    /** @var $email string */
+    /** @var $email RecordValue */
     protected $email;
     
-    /** @var $styleId int */
+    /** @var $styleId RecordValue */
     protected $styleId;
     
-    /** @var $parentEmail string */
+    /** @var $parentEmail RecordValue */
     protected $parentEmail;
     
-    /** @var $homePage string */
+    /** @var $homePage RecordValue */
     protected $homePage;
     
-    /** @var $icq string */
+    /** @var $icq RecordValue */
     protected $icq;
     
-    /** @var $aim string */
+    /** @var $aim RecordValue */
     protected $aim;
     
-    /** @var $yahoo string */
+    /** @var $yahoo RecordValue */
     protected $yahoo;
     
-    /** @var $showVbCode int */
+    /** @var $showVbCode RecordValue */
     protected $showVbCode;
     
-    /** @var $userTitle string */
+    /** @var $userTitle RecordValue */
     protected $userTitle;
     
-    /** @var $customTitle int */
+    /** @var $customTitle RecordValue */
     protected $customTitle;
     
-    /** @var $joinDate int */
+    /** @var $joinDate RecordValue */
     protected $joinDate;
     
-    /** @var $daysPrune int */
+    /** @var $daysPrune RecordValue */
     protected $daysPrune;
     
-    /** @var $lastVisit int */
+    /** @var $lastVisit RecordValue */
     protected $lastVisit;
     
-    /** @var $lastActivity int */
+    /** @var $lastActivity RecordValue */
     protected $lastActivity;
     
-    /** @var $lastPost int */
+    /** @var $lastPost RecordValue */
     protected $lastPost;
     
-    /** @var $posts int */
+    /** @var $posts RecordValue */
     protected $posts;
     
-    /** @var $reputation int */
+    /** @var $reputation RecordValue */
     protected $reputation;
     
-    /** @var $reputationLevelId int */
+    /** @var $reputationLevelId RecordValue */
     protected $reputationLevelId;
     
-    /** @var $timeZoneOffset string */
+    /** @var $timeZoneOffset RecordValue */
     protected $timeZoneOffset;
     
-    /** @var $pmPopup int */
+    /** @var $pmPopup RecordValue */
     protected $pmPopup;
     
-    /** @var $avatarId int */
+    /** @var $avatarId RecordValue */
     protected $avatarId;
     
-    /** @var $avatarRevision int */
+    /** @var $avatarRevision RecordValue */
     protected $avatarRevision;
     
-    /** @var $options int */
+    /** @var $options RecordValue */
     protected $options;
     
-    /** @var $birthday string */
+    /** @var $birthday RecordValue */
     protected $birthday;
     
-    /** @var $birthdaySearch \DateTime */
+    /** @var $birthdaySearch RecordValue */
     protected $birthdaySearch;
     
-    /** @var $maxPosts int */
+    /** @var $maxPosts RecordValue */
     protected $maxPosts;
     
-    /** @var $startOfWeek int */
+    /** @var $startOfWeek RecordValue */
     protected $startOfWeek;
     
-    /** @var $ipAddress string */
+    /** @var $ipAddress RecordValue */
     protected $ipAddress;
     
-    /** @var $referrerId int */
+    /** @var $referrerId RecordValue */
     protected $referrerId;
     
-    /** @var $languageId int */
+    /** @var $languageId RecordValue */
     protected $languageId;
     
-    /** @var $msn string */
+    /** @var $msn RecordValue */
     protected $msn;
     
-    /** @var $emailStamp int */
+    /** @var $emailStamp RecordValue */
     protected $emailStamp;
     
-    /** @var $threadedMode int */
+    /** @var $threadedMode RecordValue */
     protected $threadedMode;
     
-    /** @var $autoSubscribe int */
+    /** @var $autoSubscribe RecordValue */
     protected $autoSubscribe;
     
-    /** @var $pmTotal int */
+    /** @var $pmTotal RecordValue */
     protected $pmTotal;
     
-    /** @var $pmUnread int */
+    /** @var $pmUnread RecordValue */
     protected $pmUnread;
     
-    /** @var $salt string */
+    /** @var $salt RecordValue */
     protected $salt;
     
-    /** @var $importUserId int */
+    /** @var $importUserId RecordValue */
     protected $importUserId;
     
-    /** @var $profilePicRevision int */
+    /** @var $profilePicRevision RecordValue */
     protected $profilePicRevision;
     
-    /** @var $showBirthday int */
+    /** @var $showBirthday RecordValue */
     protected $showBirthday;
     
-    /** @var $skype string */
+    /** @var $skype RecordValue */
     protected $skype;
     
-    /** @var $adminOptions int */
+    /** @var $adminOptions RecordValue */
     protected $adminOptions;
     
-    /** @var $lastPostId int */
+    /** @var $lastPostId RecordValue */
     protected $lastPostId;
     
-    /** @var $sigPicRevision int */
+    /** @var $sigPicRevision RecordValue */
     protected $sigPicRevision;
     
-    /** @var $iPoints int */
+    /** @var $iPoints RecordValue */
     protected $iPoints;
     
-    /** @var $infractions int */
+    /** @var $infractions RecordValue */
     protected $infractions;
     
-    /** @var $warnings int */
+    /** @var $warnings RecordValue */
     protected $warnings;
     
-    /** @var $infractiongGoupids string */
+    /** @var $infractiongGoupids RecordValue */
     protected $infractiongGoupids;
     
-    /** @var $infractionGroupId int */
+    /** @var $infractionGroupId RecordValue */
     protected $infractionGroupId;
     
-    /** @var $nCodeImageResizerMode string|null */
+    /** @var $nCodeImageResizerMode RecordValue */
     protected $nCodeImageResizerMode;
     
-    /** @var $nCodeImageResizerMaxWidth int|null */
+    /** @var $nCodeImageResizerMaxWidth RecordValue */
     protected $nCodeImageResizerMaxWidth;
     
-    /** @var $nCodeImageResizerMaxHeight int|null */
+    /** @var $nCodeImageResizerMaxHeight RecordValue */
     protected $nCodeImageResizerMaxHeight;
     
-    /** @var $profileVisits int */
+    /** @var $profileVisits RecordValue */
     protected $profileVisits;
     
-    /** @var $friendCount int */
+    /** @var $friendCount RecordValue */
     protected $friendCount;
     
-    /** @var $friendReqCount int */
+    /** @var $friendReqCount RecordValue */
     protected $friendReqCount;
     
-    /** @var $vmUnreadCount int */
+    /** @var $vmUnreadCount RecordValue */
     protected $vmUnreadCount;
     
-    /** @var $vmModeratedcount int */
+    /** @var $vmModeratedcount RecordValue */
     protected $vmModeratedcount;
     
-    /** @var $socGroupInviteCount int */
+    /** @var $socGroupInviteCount RecordValue */
     protected $socGroupInviteCount;
     
-    /** @var $socGroupReqCount int */
+    /** @var $socGroupReqCount RecordValue */
     protected $socGroupReqCount;
     
-    /** @var $pcUnreadCount int */
+    /** @var $pcUnreadCount RecordValue */
     protected $pcUnreadCount;
     
-    /** @var $pcModeratedCount int */
+    /** @var $pcModeratedCount RecordValue */
     protected $pcModeratedCount;
     
-    /** @var $gmModeratedCount int */
+    /** @var $gmModeratedCount RecordValue */
     protected $gmModeratedCount;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->memberGroupIds = new RecordValue();
+		$this->displayGroupId = new RecordValue();
+		$this->userName = new RecordValue();
+		$this->password = new RecordValue();
+		$this->passwordDate = new RecordValue();
+		$this->email = new RecordValue();
+		$this->styleId = new RecordValue();
+		$this->parentEmail = new RecordValue();
+		$this->homePage = new RecordValue();
+		$this->icq = new RecordValue();
+		$this->aim = new RecordValue();
+		$this->yahoo = new RecordValue();
+		$this->showVbCode = new RecordValue();
+		$this->userTitle = new RecordValue();
+		$this->customTitle = new RecordValue();
+		$this->joinDate = new RecordValue();
+		$this->daysPrune = new RecordValue();
+		$this->lastVisit = new RecordValue();
+		$this->lastActivity = new RecordValue();
+		$this->lastPost = new RecordValue();
+		$this->posts = new RecordValue();
+		$this->reputation = new RecordValue();
+		$this->reputationLevelId = new RecordValue();
+		$this->timeZoneOffset = new RecordValue();
+		$this->pmPopup = new RecordValue();
+		$this->avatarId = new RecordValue();
+		$this->avatarRevision = new RecordValue();
+		$this->options = new RecordValue();
+		$this->birthday = new RecordValue();
+		$this->birthdaySearch = new RecordValue();
+		$this->maxPosts = new RecordValue();
+		$this->startOfWeek = new RecordValue();
+		$this->ipAddress = new RecordValue();
+		$this->referrerId = new RecordValue();
+		$this->languageId = new RecordValue();
+		$this->msn = new RecordValue();
+		$this->emailStamp = new RecordValue();
+		$this->threadedMode = new RecordValue();
+		$this->autoSubscribe = new RecordValue();
+		$this->pmTotal = new RecordValue();
+		$this->pmUnread = new RecordValue();
+		$this->salt = new RecordValue();
+		$this->importUserId = new RecordValue();
+		$this->profilePicRevision = new RecordValue();
+		$this->showBirthday = new RecordValue();
+		$this->skype = new RecordValue();
+		$this->adminOptions = new RecordValue();
+		$this->lastPostId = new RecordValue();
+		$this->sigPicRevision = new RecordValue();
+		$this->iPoints = new RecordValue();
+		$this->infractions = new RecordValue();
+		$this->warnings = new RecordValue();
+		$this->infractiongGoupids = new RecordValue();
+		$this->infractionGroupId = new RecordValue();
+		$this->nCodeImageResizerMode = new RecordValue();
+		$this->nCodeImageResizerMaxWidth = new RecordValue();
+		$this->nCodeImageResizerMaxHeight = new RecordValue();
+		$this->profileVisits = new RecordValue();
+		$this->friendCount = new RecordValue();
+		$this->friendReqCount = new RecordValue();
+		$this->vmUnreadCount = new RecordValue();
+		$this->vmModeratedcount = new RecordValue();
+		$this->socGroupInviteCount = new RecordValue();
+		$this->socGroupReqCount = new RecordValue();
+		$this->pcUnreadCount = new RecordValue();
+		$this->pcModeratedCount = new RecordValue();
+		$this->gmModeratedCount = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -230,7 +303,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -238,12 +311,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -251,7 +325,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -259,12 +333,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasMemberGroupIds(): bool
     {
-        return isset($this->memberGroupIds);
+        return $this->memberGroupIds->hasBeenSet();
     }    
 
     /**
@@ -272,7 +347,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getMemberGroupIds() : string
     {
-        return $this->memberGroupIds;
+        return $this->memberGroupIds->getValue();
     }
 
     /**
@@ -280,12 +355,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setMemberGroupIds(string $memberGroupIds)
     {
-        $this->memberGroupIds = $memberGroupIds;
+        $this->memberGroupIds->setChanged(true);
+        $this->memberGroupIds->setValue($memberGroupIds);
     }
     
     public function hasDisplayGroupId(): bool
     {
-        return isset($this->displayGroupId);
+        return $this->displayGroupId->hasBeenSet();
     }    
 
     /**
@@ -293,7 +369,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getDisplayGroupId() : int
     {
-        return $this->displayGroupId;
+        return $this->displayGroupId->getValue();
     }
 
     /**
@@ -301,12 +377,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setDisplayGroupId(int $displayGroupId)
     {
-        $this->displayGroupId = $displayGroupId;
+        $this->displayGroupId->setChanged(true);
+        $this->displayGroupId->setValue($displayGroupId);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -314,7 +391,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -322,12 +399,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
     
     public function hasPassword(): bool
     {
-        return isset($this->password);
+        return $this->password->hasBeenSet();
     }    
 
     /**
@@ -335,7 +413,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getPassword() : string
     {
-        return $this->password;
+        return $this->password->getValue();
     }
 
     /**
@@ -343,12 +421,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setPassword(string $password)
     {
-        $this->password = $password;
+        $this->password->setChanged(true);
+        $this->password->setValue($password);
     }
     
     public function hasPasswordDate(): bool
     {
-        return isset($this->passwordDate);
+        return $this->passwordDate->hasBeenSet();
     }    
 
     /**
@@ -356,7 +435,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getPasswordDate() : \DateTime
     {
-        return $this->passwordDate;
+        return $this->passwordDate->getValue();
     }
 
     /**
@@ -364,12 +443,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setPasswordDate(\DateTime $passwordDate)
     {
-        $this->passwordDate = $passwordDate;
+        $this->passwordDate->setChanged(true);
+        $this->passwordDate->setValue($passwordDate);
     }
     
     public function hasEmail(): bool
     {
-        return isset($this->email);
+        return $this->email->hasBeenSet();
     }    
 
     /**
@@ -377,7 +457,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getEmail() : string
     {
-        return $this->email;
+        return $this->email->getValue();
     }
 
     /**
@@ -385,12 +465,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setEmail(string $email)
     {
-        $this->email = $email;
+        $this->email->setChanged(true);
+        $this->email->setValue($email);
     }
     
     public function hasStyleId(): bool
     {
-        return isset($this->styleId);
+        return $this->styleId->hasBeenSet();
     }    
 
     /**
@@ -398,7 +479,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getStyleId() : int
     {
-        return $this->styleId;
+        return $this->styleId->getValue();
     }
 
     /**
@@ -406,12 +487,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setStyleId(int $styleId)
     {
-        $this->styleId = $styleId;
+        $this->styleId->setChanged(true);
+        $this->styleId->setValue($styleId);
     }
     
     public function hasParentEmail(): bool
     {
-        return isset($this->parentEmail);
+        return $this->parentEmail->hasBeenSet();
     }    
 
     /**
@@ -419,7 +501,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getParentEmail() : string
     {
-        return $this->parentEmail;
+        return $this->parentEmail->getValue();
     }
 
     /**
@@ -427,12 +509,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setParentEmail(string $parentEmail)
     {
-        $this->parentEmail = $parentEmail;
+        $this->parentEmail->setChanged(true);
+        $this->parentEmail->setValue($parentEmail);
     }
     
     public function hasHomePage(): bool
     {
-        return isset($this->homePage);
+        return $this->homePage->hasBeenSet();
     }    
 
     /**
@@ -440,7 +523,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getHomePage() : string
     {
-        return $this->homePage;
+        return $this->homePage->getValue();
     }
 
     /**
@@ -448,12 +531,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setHomePage(string $homePage)
     {
-        $this->homePage = $homePage;
+        $this->homePage->setChanged(true);
+        $this->homePage->setValue($homePage);
     }
     
     public function hasIcq(): bool
     {
-        return isset($this->icq);
+        return $this->icq->hasBeenSet();
     }    
 
     /**
@@ -461,7 +545,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getIcq() : string
     {
-        return $this->icq;
+        return $this->icq->getValue();
     }
 
     /**
@@ -469,12 +553,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setIcq(string $icq)
     {
-        $this->icq = $icq;
+        $this->icq->setChanged(true);
+        $this->icq->setValue($icq);
     }
     
     public function hasAim(): bool
     {
-        return isset($this->aim);
+        return $this->aim->hasBeenSet();
     }    
 
     /**
@@ -482,7 +567,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getAim() : string
     {
-        return $this->aim;
+        return $this->aim->getValue();
     }
 
     /**
@@ -490,12 +575,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setAim(string $aim)
     {
-        $this->aim = $aim;
+        $this->aim->setChanged(true);
+        $this->aim->setValue($aim);
     }
     
     public function hasYahoo(): bool
     {
-        return isset($this->yahoo);
+        return $this->yahoo->hasBeenSet();
     }    
 
     /**
@@ -503,7 +589,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getYahoo() : string
     {
-        return $this->yahoo;
+        return $this->yahoo->getValue();
     }
 
     /**
@@ -511,12 +597,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setYahoo(string $yahoo)
     {
-        $this->yahoo = $yahoo;
+        $this->yahoo->setChanged(true);
+        $this->yahoo->setValue($yahoo);
     }
     
     public function hasShowVbCode(): bool
     {
-        return isset($this->showVbCode);
+        return $this->showVbCode->hasBeenSet();
     }    
 
     /**
@@ -524,7 +611,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getShowVbCode() : int
     {
-        return $this->showVbCode;
+        return $this->showVbCode->getValue();
     }
 
     /**
@@ -532,12 +619,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setShowVbCode(int $showVbCode)
     {
-        $this->showVbCode = $showVbCode;
+        $this->showVbCode->setChanged(true);
+        $this->showVbCode->setValue($showVbCode);
     }
     
     public function hasUserTitle(): bool
     {
-        return isset($this->userTitle);
+        return $this->userTitle->hasBeenSet();
     }    
 
     /**
@@ -545,7 +633,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getUserTitle() : string
     {
-        return $this->userTitle;
+        return $this->userTitle->getValue();
     }
 
     /**
@@ -553,12 +641,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setUserTitle(string $userTitle)
     {
-        $this->userTitle = $userTitle;
+        $this->userTitle->setChanged(true);
+        $this->userTitle->setValue($userTitle);
     }
     
     public function hasCustomTitle(): bool
     {
-        return isset($this->customTitle);
+        return $this->customTitle->hasBeenSet();
     }    
 
     /**
@@ -566,7 +655,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getCustomTitle() : int
     {
-        return $this->customTitle;
+        return $this->customTitle->getValue();
     }
 
     /**
@@ -574,12 +663,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setCustomTitle(int $customTitle)
     {
-        $this->customTitle = $customTitle;
+        $this->customTitle->setChanged(true);
+        $this->customTitle->setValue($customTitle);
     }
     
     public function hasJoinDate(): bool
     {
-        return isset($this->joinDate);
+        return $this->joinDate->hasBeenSet();
     }    
 
     /**
@@ -587,7 +677,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getJoinDate() : int
     {
-        return $this->joinDate;
+        return $this->joinDate->getValue();
     }
 
     /**
@@ -595,12 +685,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setJoinDate(int $joinDate)
     {
-        $this->joinDate = $joinDate;
+        $this->joinDate->setChanged(true);
+        $this->joinDate->setValue($joinDate);
     }
     
     public function hasDaysPrune(): bool
     {
-        return isset($this->daysPrune);
+        return $this->daysPrune->hasBeenSet();
     }    
 
     /**
@@ -608,7 +699,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getDaysPrune() : int
     {
-        return $this->daysPrune;
+        return $this->daysPrune->getValue();
     }
 
     /**
@@ -616,12 +707,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setDaysPrune(int $daysPrune)
     {
-        $this->daysPrune = $daysPrune;
+        $this->daysPrune->setChanged(true);
+        $this->daysPrune->setValue($daysPrune);
     }
     
     public function hasLastVisit(): bool
     {
-        return isset($this->lastVisit);
+        return $this->lastVisit->hasBeenSet();
     }    
 
     /**
@@ -629,7 +721,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getLastVisit() : int
     {
-        return $this->lastVisit;
+        return $this->lastVisit->getValue();
     }
 
     /**
@@ -637,12 +729,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setLastVisit(int $lastVisit)
     {
-        $this->lastVisit = $lastVisit;
+        $this->lastVisit->setChanged(true);
+        $this->lastVisit->setValue($lastVisit);
     }
     
     public function hasLastActivity(): bool
     {
-        return isset($this->lastActivity);
+        return $this->lastActivity->hasBeenSet();
     }    
 
     /**
@@ -650,7 +743,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getLastActivity() : int
     {
-        return $this->lastActivity;
+        return $this->lastActivity->getValue();
     }
 
     /**
@@ -658,12 +751,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setLastActivity(int $lastActivity)
     {
-        $this->lastActivity = $lastActivity;
+        $this->lastActivity->setChanged(true);
+        $this->lastActivity->setValue($lastActivity);
     }
     
     public function hasLastPost(): bool
     {
-        return isset($this->lastPost);
+        return $this->lastPost->hasBeenSet();
     }    
 
     /**
@@ -671,7 +765,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getLastPost() : int
     {
-        return $this->lastPost;
+        return $this->lastPost->getValue();
     }
 
     /**
@@ -679,12 +773,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setLastPost(int $lastPost)
     {
-        $this->lastPost = $lastPost;
+        $this->lastPost->setChanged(true);
+        $this->lastPost->setValue($lastPost);
     }
     
     public function hasPosts(): bool
     {
-        return isset($this->posts);
+        return $this->posts->hasBeenSet();
     }    
 
     /**
@@ -692,7 +787,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getPosts() : int
     {
-        return $this->posts;
+        return $this->posts->getValue();
     }
 
     /**
@@ -700,12 +795,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setPosts(int $posts)
     {
-        $this->posts = $posts;
+        $this->posts->setChanged(true);
+        $this->posts->setValue($posts);
     }
     
     public function hasReputation(): bool
     {
-        return isset($this->reputation);
+        return $this->reputation->hasBeenSet();
     }    
 
     /**
@@ -713,7 +809,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getReputation() : int
     {
-        return $this->reputation;
+        return $this->reputation->getValue();
     }
 
     /**
@@ -721,12 +817,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setReputation(int $reputation)
     {
-        $this->reputation = $reputation;
+        $this->reputation->setChanged(true);
+        $this->reputation->setValue($reputation);
     }
     
     public function hasReputationLevelId(): bool
     {
-        return isset($this->reputationLevelId);
+        return $this->reputationLevelId->hasBeenSet();
     }    
 
     /**
@@ -734,7 +831,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getReputationLevelId() : int
     {
-        return $this->reputationLevelId;
+        return $this->reputationLevelId->getValue();
     }
 
     /**
@@ -742,12 +839,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setReputationLevelId(int $reputationLevelId)
     {
-        $this->reputationLevelId = $reputationLevelId;
+        $this->reputationLevelId->setChanged(true);
+        $this->reputationLevelId->setValue($reputationLevelId);
     }
     
     public function hasTimeZoneOffset(): bool
     {
-        return isset($this->timeZoneOffset);
+        return $this->timeZoneOffset->hasBeenSet();
     }    
 
     /**
@@ -755,7 +853,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getTimeZoneOffset() : string
     {
-        return $this->timeZoneOffset;
+        return $this->timeZoneOffset->getValue();
     }
 
     /**
@@ -763,12 +861,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setTimeZoneOffset(string $timeZoneOffset)
     {
-        $this->timeZoneOffset = $timeZoneOffset;
+        $this->timeZoneOffset->setChanged(true);
+        $this->timeZoneOffset->setValue($timeZoneOffset);
     }
     
     public function hasPmPopup(): bool
     {
-        return isset($this->pmPopup);
+        return $this->pmPopup->hasBeenSet();
     }    
 
     /**
@@ -776,7 +875,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getPmPopup() : int
     {
-        return $this->pmPopup;
+        return $this->pmPopup->getValue();
     }
 
     /**
@@ -784,12 +883,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setPmPopup(int $pmPopup)
     {
-        $this->pmPopup = $pmPopup;
+        $this->pmPopup->setChanged(true);
+        $this->pmPopup->setValue($pmPopup);
     }
     
     public function hasAvatarId(): bool
     {
-        return isset($this->avatarId);
+        return $this->avatarId->hasBeenSet();
     }    
 
     /**
@@ -797,7 +897,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getAvatarId() : int
     {
-        return $this->avatarId;
+        return $this->avatarId->getValue();
     }
 
     /**
@@ -805,12 +905,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setAvatarId(int $avatarId)
     {
-        $this->avatarId = $avatarId;
+        $this->avatarId->setChanged(true);
+        $this->avatarId->setValue($avatarId);
     }
     
     public function hasAvatarRevision(): bool
     {
-        return isset($this->avatarRevision);
+        return $this->avatarRevision->hasBeenSet();
     }    
 
     /**
@@ -818,7 +919,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getAvatarRevision() : int
     {
-        return $this->avatarRevision;
+        return $this->avatarRevision->getValue();
     }
 
     /**
@@ -826,12 +927,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setAvatarRevision(int $avatarRevision)
     {
-        $this->avatarRevision = $avatarRevision;
+        $this->avatarRevision->setChanged(true);
+        $this->avatarRevision->setValue($avatarRevision);
     }
     
     public function hasOptions(): bool
     {
-        return isset($this->options);
+        return $this->options->hasBeenSet();
     }    
 
     /**
@@ -839,7 +941,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getOptions() : int
     {
-        return $this->options;
+        return $this->options->getValue();
     }
 
     /**
@@ -847,12 +949,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setOptions(int $options)
     {
-        $this->options = $options;
+        $this->options->setChanged(true);
+        $this->options->setValue($options);
     }
     
     public function hasBirthday(): bool
     {
-        return isset($this->birthday);
+        return $this->birthday->hasBeenSet();
     }    
 
     /**
@@ -860,7 +963,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getBirthday() : string
     {
-        return $this->birthday;
+        return $this->birthday->getValue();
     }
 
     /**
@@ -868,12 +971,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setBirthday(string $birthday)
     {
-        $this->birthday = $birthday;
+        $this->birthday->setChanged(true);
+        $this->birthday->setValue($birthday);
     }
     
     public function hasBirthdaySearch(): bool
     {
-        return isset($this->birthdaySearch);
+        return $this->birthdaySearch->hasBeenSet();
     }    
 
     /**
@@ -881,7 +985,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getBirthdaySearch() : \DateTime
     {
-        return $this->birthdaySearch;
+        return $this->birthdaySearch->getValue();
     }
 
     /**
@@ -889,12 +993,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setBirthdaySearch(\DateTime $birthdaySearch)
     {
-        $this->birthdaySearch = $birthdaySearch;
+        $this->birthdaySearch->setChanged(true);
+        $this->birthdaySearch->setValue($birthdaySearch);
     }
     
     public function hasMaxPosts(): bool
     {
-        return isset($this->maxPosts);
+        return $this->maxPosts->hasBeenSet();
     }    
 
     /**
@@ -902,7 +1007,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getMaxPosts() : int
     {
-        return $this->maxPosts;
+        return $this->maxPosts->getValue();
     }
 
     /**
@@ -910,12 +1015,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setMaxPosts(int $maxPosts)
     {
-        $this->maxPosts = $maxPosts;
+        $this->maxPosts->setChanged(true);
+        $this->maxPosts->setValue($maxPosts);
     }
     
     public function hasStartOfWeek(): bool
     {
-        return isset($this->startOfWeek);
+        return $this->startOfWeek->hasBeenSet();
     }    
 
     /**
@@ -923,7 +1029,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getStartOfWeek() : int
     {
-        return $this->startOfWeek;
+        return $this->startOfWeek->getValue();
     }
 
     /**
@@ -931,12 +1037,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setStartOfWeek(int $startOfWeek)
     {
-        $this->startOfWeek = $startOfWeek;
+        $this->startOfWeek->setChanged(true);
+        $this->startOfWeek->setValue($startOfWeek);
     }
     
     public function hasIpAddress(): bool
     {
-        return isset($this->ipAddress);
+        return $this->ipAddress->hasBeenSet();
     }    
 
     /**
@@ -944,7 +1051,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getIpAddress() : string
     {
-        return $this->ipAddress;
+        return $this->ipAddress->getValue();
     }
 
     /**
@@ -952,12 +1059,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setIpAddress(string $ipAddress)
     {
-        $this->ipAddress = $ipAddress;
+        $this->ipAddress->setChanged(true);
+        $this->ipAddress->setValue($ipAddress);
     }
     
     public function hasReferrerId(): bool
     {
-        return isset($this->referrerId);
+        return $this->referrerId->hasBeenSet();
     }    
 
     /**
@@ -965,7 +1073,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getReferrerId() : int
     {
-        return $this->referrerId;
+        return $this->referrerId->getValue();
     }
 
     /**
@@ -973,12 +1081,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setReferrerId(int $referrerId)
     {
-        $this->referrerId = $referrerId;
+        $this->referrerId->setChanged(true);
+        $this->referrerId->setValue($referrerId);
     }
     
     public function hasLanguageId(): bool
     {
-        return isset($this->languageId);
+        return $this->languageId->hasBeenSet();
     }    
 
     /**
@@ -986,7 +1095,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getLanguageId() : int
     {
-        return $this->languageId;
+        return $this->languageId->getValue();
     }
 
     /**
@@ -994,12 +1103,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setLanguageId(int $languageId)
     {
-        $this->languageId = $languageId;
+        $this->languageId->setChanged(true);
+        $this->languageId->setValue($languageId);
     }
     
     public function hasMsn(): bool
     {
-        return isset($this->msn);
+        return $this->msn->hasBeenSet();
     }    
 
     /**
@@ -1007,7 +1117,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getMsn() : string
     {
-        return $this->msn;
+        return $this->msn->getValue();
     }
 
     /**
@@ -1015,12 +1125,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setMsn(string $msn)
     {
-        $this->msn = $msn;
+        $this->msn->setChanged(true);
+        $this->msn->setValue($msn);
     }
     
     public function hasEmailStamp(): bool
     {
-        return isset($this->emailStamp);
+        return $this->emailStamp->hasBeenSet();
     }    
 
     /**
@@ -1028,7 +1139,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getEmailStamp() : int
     {
-        return $this->emailStamp;
+        return $this->emailStamp->getValue();
     }
 
     /**
@@ -1036,12 +1147,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setEmailStamp(int $emailStamp)
     {
-        $this->emailStamp = $emailStamp;
+        $this->emailStamp->setChanged(true);
+        $this->emailStamp->setValue($emailStamp);
     }
     
     public function hasThreadedMode(): bool
     {
-        return isset($this->threadedMode);
+        return $this->threadedMode->hasBeenSet();
     }    
 
     /**
@@ -1049,7 +1161,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getThreadedMode() : int
     {
-        return $this->threadedMode;
+        return $this->threadedMode->getValue();
     }
 
     /**
@@ -1057,12 +1169,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setThreadedMode(int $threadedMode)
     {
-        $this->threadedMode = $threadedMode;
+        $this->threadedMode->setChanged(true);
+        $this->threadedMode->setValue($threadedMode);
     }
     
     public function hasAutoSubscribe(): bool
     {
-        return isset($this->autoSubscribe);
+        return $this->autoSubscribe->hasBeenSet();
     }    
 
     /**
@@ -1070,7 +1183,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getAutoSubscribe() : int
     {
-        return $this->autoSubscribe;
+        return $this->autoSubscribe->getValue();
     }
 
     /**
@@ -1078,12 +1191,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setAutoSubscribe(int $autoSubscribe)
     {
-        $this->autoSubscribe = $autoSubscribe;
+        $this->autoSubscribe->setChanged(true);
+        $this->autoSubscribe->setValue($autoSubscribe);
     }
     
     public function hasPmTotal(): bool
     {
-        return isset($this->pmTotal);
+        return $this->pmTotal->hasBeenSet();
     }    
 
     /**
@@ -1091,7 +1205,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getPmTotal() : int
     {
-        return $this->pmTotal;
+        return $this->pmTotal->getValue();
     }
 
     /**
@@ -1099,12 +1213,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setPmTotal(int $pmTotal)
     {
-        $this->pmTotal = $pmTotal;
+        $this->pmTotal->setChanged(true);
+        $this->pmTotal->setValue($pmTotal);
     }
     
     public function hasPmUnread(): bool
     {
-        return isset($this->pmUnread);
+        return $this->pmUnread->hasBeenSet();
     }    
 
     /**
@@ -1112,7 +1227,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getPmUnread() : int
     {
-        return $this->pmUnread;
+        return $this->pmUnread->getValue();
     }
 
     /**
@@ -1120,12 +1235,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setPmUnread(int $pmUnread)
     {
-        $this->pmUnread = $pmUnread;
+        $this->pmUnread->setChanged(true);
+        $this->pmUnread->setValue($pmUnread);
     }
     
     public function hasSalt(): bool
     {
-        return isset($this->salt);
+        return $this->salt->hasBeenSet();
     }    
 
     /**
@@ -1133,7 +1249,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getSalt() : string
     {
-        return $this->salt;
+        return $this->salt->getValue();
     }
 
     /**
@@ -1141,12 +1257,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setSalt(string $salt)
     {
-        $this->salt = $salt;
+        $this->salt->setChanged(true);
+        $this->salt->setValue($salt);
     }
     
     public function hasImportUserId(): bool
     {
-        return isset($this->importUserId);
+        return $this->importUserId->hasBeenSet();
     }    
 
     /**
@@ -1154,7 +1271,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getImportUserId() : int
     {
-        return $this->importUserId;
+        return $this->importUserId->getValue();
     }
 
     /**
@@ -1162,12 +1279,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setImportUserId(int $importUserId)
     {
-        $this->importUserId = $importUserId;
+        $this->importUserId->setChanged(true);
+        $this->importUserId->setValue($importUserId);
     }
     
     public function hasProfilePicRevision(): bool
     {
-        return isset($this->profilePicRevision);
+        return $this->profilePicRevision->hasBeenSet();
     }    
 
     /**
@@ -1175,7 +1293,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getProfilePicRevision() : int
     {
-        return $this->profilePicRevision;
+        return $this->profilePicRevision->getValue();
     }
 
     /**
@@ -1183,12 +1301,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setProfilePicRevision(int $profilePicRevision)
     {
-        $this->profilePicRevision = $profilePicRevision;
+        $this->profilePicRevision->setChanged(true);
+        $this->profilePicRevision->setValue($profilePicRevision);
     }
     
     public function hasShowBirthday(): bool
     {
-        return isset($this->showBirthday);
+        return $this->showBirthday->hasBeenSet();
     }    
 
     /**
@@ -1196,7 +1315,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getShowBirthday() : int
     {
-        return $this->showBirthday;
+        return $this->showBirthday->getValue();
     }
 
     /**
@@ -1204,12 +1323,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setShowBirthday(int $showBirthday)
     {
-        $this->showBirthday = $showBirthday;
+        $this->showBirthday->setChanged(true);
+        $this->showBirthday->setValue($showBirthday);
     }
     
     public function hasSkype(): bool
     {
-        return isset($this->skype);
+        return $this->skype->hasBeenSet();
     }    
 
     /**
@@ -1217,7 +1337,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getSkype() : string
     {
-        return $this->skype;
+        return $this->skype->getValue();
     }
 
     /**
@@ -1225,12 +1345,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setSkype(string $skype)
     {
-        $this->skype = $skype;
+        $this->skype->setChanged(true);
+        $this->skype->setValue($skype);
     }
     
     public function hasAdminOptions(): bool
     {
-        return isset($this->adminOptions);
+        return $this->adminOptions->hasBeenSet();
     }    
 
     /**
@@ -1238,7 +1359,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getAdminOptions() : int
     {
-        return $this->adminOptions;
+        return $this->adminOptions->getValue();
     }
 
     /**
@@ -1246,12 +1367,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setAdminOptions(int $adminOptions)
     {
-        $this->adminOptions = $adminOptions;
+        $this->adminOptions->setChanged(true);
+        $this->adminOptions->setValue($adminOptions);
     }
     
     public function hasLastPostId(): bool
     {
-        return isset($this->lastPostId);
+        return $this->lastPostId->hasBeenSet();
     }    
 
     /**
@@ -1259,7 +1381,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getLastPostId() : int
     {
-        return $this->lastPostId;
+        return $this->lastPostId->getValue();
     }
 
     /**
@@ -1267,12 +1389,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setLastPostId(int $lastPostId)
     {
-        $this->lastPostId = $lastPostId;
+        $this->lastPostId->setChanged(true);
+        $this->lastPostId->setValue($lastPostId);
     }
     
     public function hasSigPicRevision(): bool
     {
-        return isset($this->sigPicRevision);
+        return $this->sigPicRevision->hasBeenSet();
     }    
 
     /**
@@ -1280,7 +1403,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getSigPicRevision() : int
     {
-        return $this->sigPicRevision;
+        return $this->sigPicRevision->getValue();
     }
 
     /**
@@ -1288,12 +1411,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setSigPicRevision(int $sigPicRevision)
     {
-        $this->sigPicRevision = $sigPicRevision;
+        $this->sigPicRevision->setChanged(true);
+        $this->sigPicRevision->setValue($sigPicRevision);
     }
     
     public function hasIPoints(): bool
     {
-        return isset($this->iPoints);
+        return $this->iPoints->hasBeenSet();
     }    
 
     /**
@@ -1301,7 +1425,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getIPoints() : int
     {
-        return $this->iPoints;
+        return $this->iPoints->getValue();
     }
 
     /**
@@ -1309,12 +1433,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setIPoints(int $iPoints)
     {
-        $this->iPoints = $iPoints;
+        $this->iPoints->setChanged(true);
+        $this->iPoints->setValue($iPoints);
     }
     
     public function hasInfractions(): bool
     {
-        return isset($this->infractions);
+        return $this->infractions->hasBeenSet();
     }    
 
     /**
@@ -1322,7 +1447,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getInfractions() : int
     {
-        return $this->infractions;
+        return $this->infractions->getValue();
     }
 
     /**
@@ -1330,12 +1455,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setInfractions(int $infractions)
     {
-        $this->infractions = $infractions;
+        $this->infractions->setChanged(true);
+        $this->infractions->setValue($infractions);
     }
     
     public function hasWarnings(): bool
     {
-        return isset($this->warnings);
+        return $this->warnings->hasBeenSet();
     }    
 
     /**
@@ -1343,7 +1469,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getWarnings() : int
     {
-        return $this->warnings;
+        return $this->warnings->getValue();
     }
 
     /**
@@ -1351,12 +1477,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setWarnings(int $warnings)
     {
-        $this->warnings = $warnings;
+        $this->warnings->setChanged(true);
+        $this->warnings->setValue($warnings);
     }
     
     public function hasInfractiongGoupids(): bool
     {
-        return isset($this->infractiongGoupids);
+        return $this->infractiongGoupids->hasBeenSet();
     }    
 
     /**
@@ -1364,7 +1491,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getInfractiongGoupids() : string
     {
-        return $this->infractiongGoupids;
+        return $this->infractiongGoupids->getValue();
     }
 
     /**
@@ -1372,12 +1499,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setInfractiongGoupids(string $infractiongGoupids)
     {
-        $this->infractiongGoupids = $infractiongGoupids;
+        $this->infractiongGoupids->setChanged(true);
+        $this->infractiongGoupids->setValue($infractiongGoupids);
     }
     
     public function hasInfractionGroupId(): bool
     {
-        return isset($this->infractionGroupId);
+        return $this->infractionGroupId->hasBeenSet();
     }    
 
     /**
@@ -1385,7 +1513,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getInfractionGroupId() : int
     {
-        return $this->infractionGroupId;
+        return $this->infractionGroupId->getValue();
     }
 
     /**
@@ -1393,12 +1521,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setInfractionGroupId(int $infractionGroupId)
     {
-        $this->infractionGroupId = $infractionGroupId;
+        $this->infractionGroupId->setChanged(true);
+        $this->infractionGroupId->setValue($infractionGroupId);
     }
     
     public function hasNCodeImageResizerMode(): bool
     {
-        return isset($this->nCodeImageResizerMode);
+        return $this->nCodeImageResizerMode->hasBeenSet();
     }    
 
     /**
@@ -1406,7 +1535,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getNCodeImageResizerMode() : ?string
     {
-        return $this->nCodeImageResizerMode;
+        return $this->nCodeImageResizerMode->getValue();
     }
 
     /**
@@ -1414,12 +1543,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setNCodeImageResizerMode(?string $nCodeImageResizerMode)
     {
-        $this->nCodeImageResizerMode = $nCodeImageResizerMode;
+        $this->nCodeImageResizerMode->setChanged(true);
+        $this->nCodeImageResizerMode->setValue($nCodeImageResizerMode);
     }
     
     public function hasNCodeImageResizerMaxWidth(): bool
     {
-        return isset($this->nCodeImageResizerMaxWidth);
+        return $this->nCodeImageResizerMaxWidth->hasBeenSet();
     }    
 
     /**
@@ -1427,7 +1557,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getNCodeImageResizerMaxWidth() : ?int
     {
-        return $this->nCodeImageResizerMaxWidth;
+        return $this->nCodeImageResizerMaxWidth->getValue();
     }
 
     /**
@@ -1435,12 +1565,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setNCodeImageResizerMaxWidth(?int $nCodeImageResizerMaxWidth)
     {
-        $this->nCodeImageResizerMaxWidth = $nCodeImageResizerMaxWidth;
+        $this->nCodeImageResizerMaxWidth->setChanged(true);
+        $this->nCodeImageResizerMaxWidth->setValue($nCodeImageResizerMaxWidth);
     }
     
     public function hasNCodeImageResizerMaxHeight(): bool
     {
-        return isset($this->nCodeImageResizerMaxHeight);
+        return $this->nCodeImageResizerMaxHeight->hasBeenSet();
     }    
 
     /**
@@ -1448,7 +1579,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getNCodeImageResizerMaxHeight() : ?int
     {
-        return $this->nCodeImageResizerMaxHeight;
+        return $this->nCodeImageResizerMaxHeight->getValue();
     }
 
     /**
@@ -1456,12 +1587,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setNCodeImageResizerMaxHeight(?int $nCodeImageResizerMaxHeight)
     {
-        $this->nCodeImageResizerMaxHeight = $nCodeImageResizerMaxHeight;
+        $this->nCodeImageResizerMaxHeight->setChanged(true);
+        $this->nCodeImageResizerMaxHeight->setValue($nCodeImageResizerMaxHeight);
     }
     
     public function hasProfileVisits(): bool
     {
-        return isset($this->profileVisits);
+        return $this->profileVisits->hasBeenSet();
     }    
 
     /**
@@ -1469,7 +1601,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getProfileVisits() : int
     {
-        return $this->profileVisits;
+        return $this->profileVisits->getValue();
     }
 
     /**
@@ -1477,12 +1609,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setProfileVisits(int $profileVisits)
     {
-        $this->profileVisits = $profileVisits;
+        $this->profileVisits->setChanged(true);
+        $this->profileVisits->setValue($profileVisits);
     }
     
     public function hasFriendCount(): bool
     {
-        return isset($this->friendCount);
+        return $this->friendCount->hasBeenSet();
     }    
 
     /**
@@ -1490,7 +1623,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getFriendCount() : int
     {
-        return $this->friendCount;
+        return $this->friendCount->getValue();
     }
 
     /**
@@ -1498,12 +1631,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setFriendCount(int $friendCount)
     {
-        $this->friendCount = $friendCount;
+        $this->friendCount->setChanged(true);
+        $this->friendCount->setValue($friendCount);
     }
     
     public function hasFriendReqCount(): bool
     {
-        return isset($this->friendReqCount);
+        return $this->friendReqCount->hasBeenSet();
     }    
 
     /**
@@ -1511,7 +1645,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getFriendReqCount() : int
     {
-        return $this->friendReqCount;
+        return $this->friendReqCount->getValue();
     }
 
     /**
@@ -1519,12 +1653,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setFriendReqCount(int $friendReqCount)
     {
-        $this->friendReqCount = $friendReqCount;
+        $this->friendReqCount->setChanged(true);
+        $this->friendReqCount->setValue($friendReqCount);
     }
     
     public function hasVmUnreadCount(): bool
     {
-        return isset($this->vmUnreadCount);
+        return $this->vmUnreadCount->hasBeenSet();
     }    
 
     /**
@@ -1532,7 +1667,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getVmUnreadCount() : int
     {
-        return $this->vmUnreadCount;
+        return $this->vmUnreadCount->getValue();
     }
 
     /**
@@ -1540,12 +1675,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setVmUnreadCount(int $vmUnreadCount)
     {
-        $this->vmUnreadCount = $vmUnreadCount;
+        $this->vmUnreadCount->setChanged(true);
+        $this->vmUnreadCount->setValue($vmUnreadCount);
     }
     
     public function hasVmModeratedcount(): bool
     {
-        return isset($this->vmModeratedcount);
+        return $this->vmModeratedcount->hasBeenSet();
     }    
 
     /**
@@ -1553,7 +1689,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getVmModeratedcount() : int
     {
-        return $this->vmModeratedcount;
+        return $this->vmModeratedcount->getValue();
     }
 
     /**
@@ -1561,12 +1697,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setVmModeratedcount(int $vmModeratedcount)
     {
-        $this->vmModeratedcount = $vmModeratedcount;
+        $this->vmModeratedcount->setChanged(true);
+        $this->vmModeratedcount->setValue($vmModeratedcount);
     }
     
     public function hasSocGroupInviteCount(): bool
     {
-        return isset($this->socGroupInviteCount);
+        return $this->socGroupInviteCount->hasBeenSet();
     }    
 
     /**
@@ -1574,7 +1711,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getSocGroupInviteCount() : int
     {
-        return $this->socGroupInviteCount;
+        return $this->socGroupInviteCount->getValue();
     }
 
     /**
@@ -1582,12 +1719,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setSocGroupInviteCount(int $socGroupInviteCount)
     {
-        $this->socGroupInviteCount = $socGroupInviteCount;
+        $this->socGroupInviteCount->setChanged(true);
+        $this->socGroupInviteCount->setValue($socGroupInviteCount);
     }
     
     public function hasSocGroupReqCount(): bool
     {
-        return isset($this->socGroupReqCount);
+        return $this->socGroupReqCount->hasBeenSet();
     }    
 
     /**
@@ -1595,7 +1733,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getSocGroupReqCount() : int
     {
-        return $this->socGroupReqCount;
+        return $this->socGroupReqCount->getValue();
     }
 
     /**
@@ -1603,12 +1741,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setSocGroupReqCount(int $socGroupReqCount)
     {
-        $this->socGroupReqCount = $socGroupReqCount;
+        $this->socGroupReqCount->setChanged(true);
+        $this->socGroupReqCount->setValue($socGroupReqCount);
     }
     
     public function hasPcUnreadCount(): bool
     {
-        return isset($this->pcUnreadCount);
+        return $this->pcUnreadCount->hasBeenSet();
     }    
 
     /**
@@ -1616,7 +1755,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getPcUnreadCount() : int
     {
-        return $this->pcUnreadCount;
+        return $this->pcUnreadCount->getValue();
     }
 
     /**
@@ -1624,12 +1763,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setPcUnreadCount(int $pcUnreadCount)
     {
-        $this->pcUnreadCount = $pcUnreadCount;
+        $this->pcUnreadCount->setChanged(true);
+        $this->pcUnreadCount->setValue($pcUnreadCount);
     }
     
     public function hasPcModeratedCount(): bool
     {
-        return isset($this->pcModeratedCount);
+        return $this->pcModeratedCount->hasBeenSet();
     }    
 
     /**
@@ -1637,7 +1777,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getPcModeratedCount() : int
     {
-        return $this->pcModeratedCount;
+        return $this->pcModeratedCount->getValue();
     }
 
     /**
@@ -1645,12 +1785,13 @@ class GeneratedUserRecord implements Record {
      */
     public function setPcModeratedCount(int $pcModeratedCount)
     {
-        $this->pcModeratedCount = $pcModeratedCount;
+        $this->pcModeratedCount->setChanged(true);
+        $this->pcModeratedCount->setValue($pcModeratedCount);
     }
     
     public function hasGmModeratedCount(): bool
     {
-        return isset($this->gmModeratedCount);
+        return $this->gmModeratedCount->hasBeenSet();
     }    
 
     /**
@@ -1658,7 +1799,7 @@ class GeneratedUserRecord implements Record {
      */
     public function getGmModeratedCount() : int
     {
-        return $this->gmModeratedCount;
+        return $this->gmModeratedCount->getValue();
     }
 
     /**
@@ -1666,9 +1807,9 @@ class GeneratedUserRecord implements Record {
      */
     public function setGmModeratedCount(int $gmModeratedCount)
     {
-        $this->gmModeratedCount = $gmModeratedCount;
+        $this->gmModeratedCount->setChanged(true);
+        $this->gmModeratedCount->setValue($gmModeratedCount);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

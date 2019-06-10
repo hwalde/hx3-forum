@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedTachyThreadCounterRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $replyCount int */
+    /** @var $replyCount RecordValue */
     protected $replyCount;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->threadId = new RecordValue();
+		$this->replyCount = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedTachyThreadCounterRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedTachyThreadCounterRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedTachyThreadCounterRecord implements Record {
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedTachyThreadCounterRecord implements Record {
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasReplyCount(): bool
     {
-        return isset($this->replyCount);
+        return $this->replyCount->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedTachyThreadCounterRecord implements Record {
      */
     public function getReplyCount() : int
     {
-        return $this->replyCount;
+        return $this->replyCount->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedTachyThreadCounterRecord implements Record {
      */
     public function setReplyCount(int $replyCount)
     {
-        $this->replyCount = $replyCount;
+        $this->replyCount->setChanged(true);
+        $this->replyCount->setValue($replyCount);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

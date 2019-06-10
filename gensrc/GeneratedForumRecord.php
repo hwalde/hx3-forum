@@ -9,115 +9,153 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedForumRecord implements Record {
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $styleId int */
+    /** @var $styleId RecordValue */
     protected $styleId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $description string */
+    /** @var $description RecordValue */
     protected $description;
     
-    /** @var $options int */
+    /** @var $options RecordValue */
     protected $options;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $replyCount int */
+    /** @var $replyCount RecordValue */
     protected $replyCount;
     
-    /** @var $lastPost int */
+    /** @var $lastPost RecordValue */
     protected $lastPost;
     
-    /** @var $lastPoster string */
+    /** @var $lastPoster RecordValue */
     protected $lastPoster;
     
-    /** @var $lastThread string */
+    /** @var $lastThread RecordValue */
     protected $lastThread;
     
-    /** @var $lastThreadId int */
+    /** @var $lastThreadId RecordValue */
     protected $lastThreadId;
     
-    /** @var $lastIconId int */
+    /** @var $lastIconId RecordValue */
     protected $lastIconId;
     
-    /** @var $threadCount int */
+    /** @var $threadCount RecordValue */
     protected $threadCount;
     
-    /** @var $daysPrune int */
+    /** @var $daysPrune RecordValue */
     protected $daysPrune;
     
-    /** @var $newPostEmail string|null */
+    /** @var $newPostEmail RecordValue */
     protected $newPostEmail;
     
-    /** @var $newThreadEmail string|null */
+    /** @var $newThreadEmail RecordValue */
     protected $newThreadEmail;
     
-    /** @var $parentId int */
+    /** @var $parentId RecordValue */
     protected $parentId;
     
-    /** @var $parentList string */
+    /** @var $parentList RecordValue */
     protected $parentList;
     
-    /** @var $password string */
+    /** @var $password RecordValue */
     protected $password;
     
-    /** @var $link string */
+    /** @var $link RecordValue */
     protected $link;
     
-    /** @var $childList string|null */
+    /** @var $childList RecordValue */
     protected $childList;
     
-    /** @var $importForumId int */
+    /** @var $importForumId RecordValue */
     protected $importForumId;
     
-    /** @var $importCategoryId int */
+    /** @var $importCategoryId RecordValue */
     protected $importCategoryId;
     
-    /** @var $titleClean string */
+    /** @var $titleClean RecordValue */
     protected $titleClean;
     
-    /** @var $descriptionClean string */
+    /** @var $descriptionClean RecordValue */
     protected $descriptionClean;
     
-    /** @var $lastPostId int */
+    /** @var $lastPostId RecordValue */
     protected $lastPostId;
     
-    /** @var $showPrivate int */
+    /** @var $showPrivate RecordValue */
     protected $showPrivate;
     
-    /** @var $defaultSortField string */
+    /** @var $defaultSortField RecordValue */
     protected $defaultSortField;
     
-    /** @var $defaultSortOrder string */
+    /** @var $defaultSortOrder RecordValue */
     protected $defaultSortOrder;
     
-    /** @var $vbSeoModeratePingbacks int */
+    /** @var $vbSeoModeratePingbacks RecordValue */
     protected $vbSeoModeratePingbacks;
     
-    /** @var $vbSeoModerateTrackbacks int */
+    /** @var $vbSeoModerateTrackbacks RecordValue */
     protected $vbSeoModerateTrackbacks;
     
-    /** @var $vbSeoModerateRefbacks int */
+    /** @var $vbSeoModerateRefbacks RecordValue */
     protected $vbSeoModerateRefbacks;
     
-    /** @var $lastPrefixId string */
+    /** @var $lastPrefixId RecordValue */
     protected $lastPrefixId;
     
-    /** @var $imagePrefix string */
+    /** @var $imagePrefix RecordValue */
     protected $imagePrefix;
+
+    public function __construct() {
+		$this->forumId = new RecordValue();
+		$this->styleId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->description = new RecordValue();
+		$this->options = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->replyCount = new RecordValue();
+		$this->lastPost = new RecordValue();
+		$this->lastPoster = new RecordValue();
+		$this->lastThread = new RecordValue();
+		$this->lastThreadId = new RecordValue();
+		$this->lastIconId = new RecordValue();
+		$this->threadCount = new RecordValue();
+		$this->daysPrune = new RecordValue();
+		$this->newPostEmail = new RecordValue();
+		$this->newThreadEmail = new RecordValue();
+		$this->parentId = new RecordValue();
+		$this->parentList = new RecordValue();
+		$this->password = new RecordValue();
+		$this->link = new RecordValue();
+		$this->childList = new RecordValue();
+		$this->importForumId = new RecordValue();
+		$this->importCategoryId = new RecordValue();
+		$this->titleClean = new RecordValue();
+		$this->descriptionClean = new RecordValue();
+		$this->lastPostId = new RecordValue();
+		$this->showPrivate = new RecordValue();
+		$this->defaultSortField = new RecordValue();
+		$this->defaultSortOrder = new RecordValue();
+		$this->vbSeoModeratePingbacks = new RecordValue();
+		$this->vbSeoModerateTrackbacks = new RecordValue();
+		$this->vbSeoModerateRefbacks = new RecordValue();
+		$this->lastPrefixId = new RecordValue();
+		$this->imagePrefix = new RecordValue();
+    }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -125,7 +163,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -133,12 +171,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasStyleId(): bool
     {
-        return isset($this->styleId);
+        return $this->styleId->hasBeenSet();
     }    
 
     /**
@@ -146,7 +185,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getStyleId() : int
     {
-        return $this->styleId;
+        return $this->styleId->getValue();
     }
 
     /**
@@ -154,12 +193,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setStyleId(int $styleId)
     {
-        $this->styleId = $styleId;
+        $this->styleId->setChanged(true);
+        $this->styleId->setValue($styleId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -167,7 +207,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -175,12 +215,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasDescription(): bool
     {
-        return isset($this->description);
+        return $this->description->hasBeenSet();
     }    
 
     /**
@@ -188,7 +229,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getDescription() : string
     {
-        return $this->description;
+        return $this->description->getValue();
     }
 
     /**
@@ -196,12 +237,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setDescription(string $description)
     {
-        $this->description = $description;
+        $this->description->setChanged(true);
+        $this->description->setValue($description);
     }
     
     public function hasOptions(): bool
     {
-        return isset($this->options);
+        return $this->options->hasBeenSet();
     }    
 
     /**
@@ -209,7 +251,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getOptions() : int
     {
-        return $this->options;
+        return $this->options->getValue();
     }
 
     /**
@@ -217,12 +259,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setOptions(int $options)
     {
-        $this->options = $options;
+        $this->options->setChanged(true);
+        $this->options->setValue($options);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -230,7 +273,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -238,12 +281,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasReplyCount(): bool
     {
-        return isset($this->replyCount);
+        return $this->replyCount->hasBeenSet();
     }    
 
     /**
@@ -251,7 +295,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getReplyCount() : int
     {
-        return $this->replyCount;
+        return $this->replyCount->getValue();
     }
 
     /**
@@ -259,12 +303,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setReplyCount(int $replyCount)
     {
-        $this->replyCount = $replyCount;
+        $this->replyCount->setChanged(true);
+        $this->replyCount->setValue($replyCount);
     }
     
     public function hasLastPost(): bool
     {
-        return isset($this->lastPost);
+        return $this->lastPost->hasBeenSet();
     }    
 
     /**
@@ -272,7 +317,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getLastPost() : int
     {
-        return $this->lastPost;
+        return $this->lastPost->getValue();
     }
 
     /**
@@ -280,12 +325,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setLastPost(int $lastPost)
     {
-        $this->lastPost = $lastPost;
+        $this->lastPost->setChanged(true);
+        $this->lastPost->setValue($lastPost);
     }
     
     public function hasLastPoster(): bool
     {
-        return isset($this->lastPoster);
+        return $this->lastPoster->hasBeenSet();
     }    
 
     /**
@@ -293,7 +339,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getLastPoster() : string
     {
-        return $this->lastPoster;
+        return $this->lastPoster->getValue();
     }
 
     /**
@@ -301,12 +347,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setLastPoster(string $lastPoster)
     {
-        $this->lastPoster = $lastPoster;
+        $this->lastPoster->setChanged(true);
+        $this->lastPoster->setValue($lastPoster);
     }
     
     public function hasLastThread(): bool
     {
-        return isset($this->lastThread);
+        return $this->lastThread->hasBeenSet();
     }    
 
     /**
@@ -314,7 +361,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getLastThread() : string
     {
-        return $this->lastThread;
+        return $this->lastThread->getValue();
     }
 
     /**
@@ -322,12 +369,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setLastThread(string $lastThread)
     {
-        $this->lastThread = $lastThread;
+        $this->lastThread->setChanged(true);
+        $this->lastThread->setValue($lastThread);
     }
     
     public function hasLastThreadId(): bool
     {
-        return isset($this->lastThreadId);
+        return $this->lastThreadId->hasBeenSet();
     }    
 
     /**
@@ -335,7 +383,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getLastThreadId() : int
     {
-        return $this->lastThreadId;
+        return $this->lastThreadId->getValue();
     }
 
     /**
@@ -343,12 +391,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setLastThreadId(int $lastThreadId)
     {
-        $this->lastThreadId = $lastThreadId;
+        $this->lastThreadId->setChanged(true);
+        $this->lastThreadId->setValue($lastThreadId);
     }
     
     public function hasLastIconId(): bool
     {
-        return isset($this->lastIconId);
+        return $this->lastIconId->hasBeenSet();
     }    
 
     /**
@@ -356,7 +405,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getLastIconId() : int
     {
-        return $this->lastIconId;
+        return $this->lastIconId->getValue();
     }
 
     /**
@@ -364,12 +413,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setLastIconId(int $lastIconId)
     {
-        $this->lastIconId = $lastIconId;
+        $this->lastIconId->setChanged(true);
+        $this->lastIconId->setValue($lastIconId);
     }
     
     public function hasThreadCount(): bool
     {
-        return isset($this->threadCount);
+        return $this->threadCount->hasBeenSet();
     }    
 
     /**
@@ -377,7 +427,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getThreadCount() : int
     {
-        return $this->threadCount;
+        return $this->threadCount->getValue();
     }
 
     /**
@@ -385,12 +435,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setThreadCount(int $threadCount)
     {
-        $this->threadCount = $threadCount;
+        $this->threadCount->setChanged(true);
+        $this->threadCount->setValue($threadCount);
     }
     
     public function hasDaysPrune(): bool
     {
-        return isset($this->daysPrune);
+        return $this->daysPrune->hasBeenSet();
     }    
 
     /**
@@ -398,7 +449,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getDaysPrune() : int
     {
-        return $this->daysPrune;
+        return $this->daysPrune->getValue();
     }
 
     /**
@@ -406,12 +457,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setDaysPrune(int $daysPrune)
     {
-        $this->daysPrune = $daysPrune;
+        $this->daysPrune->setChanged(true);
+        $this->daysPrune->setValue($daysPrune);
     }
     
     public function hasNewPostEmail(): bool
     {
-        return isset($this->newPostEmail);
+        return $this->newPostEmail->hasBeenSet();
     }    
 
     /**
@@ -419,7 +471,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getNewPostEmail() : ?string
     {
-        return $this->newPostEmail;
+        return $this->newPostEmail->getValue();
     }
 
     /**
@@ -427,12 +479,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setNewPostEmail(?string $newPostEmail)
     {
-        $this->newPostEmail = $newPostEmail;
+        $this->newPostEmail->setChanged(true);
+        $this->newPostEmail->setValue($newPostEmail);
     }
     
     public function hasNewThreadEmail(): bool
     {
-        return isset($this->newThreadEmail);
+        return $this->newThreadEmail->hasBeenSet();
     }    
 
     /**
@@ -440,7 +493,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getNewThreadEmail() : ?string
     {
-        return $this->newThreadEmail;
+        return $this->newThreadEmail->getValue();
     }
 
     /**
@@ -448,12 +501,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setNewThreadEmail(?string $newThreadEmail)
     {
-        $this->newThreadEmail = $newThreadEmail;
+        $this->newThreadEmail->setChanged(true);
+        $this->newThreadEmail->setValue($newThreadEmail);
     }
     
     public function hasParentId(): bool
     {
-        return isset($this->parentId);
+        return $this->parentId->hasBeenSet();
     }    
 
     /**
@@ -461,7 +515,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getParentId() : int
     {
-        return $this->parentId;
+        return $this->parentId->getValue();
     }
 
     /**
@@ -469,12 +523,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setParentId(int $parentId)
     {
-        $this->parentId = $parentId;
+        $this->parentId->setChanged(true);
+        $this->parentId->setValue($parentId);
     }
     
     public function hasParentList(): bool
     {
-        return isset($this->parentList);
+        return $this->parentList->hasBeenSet();
     }    
 
     /**
@@ -482,7 +537,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getParentList() : string
     {
-        return $this->parentList;
+        return $this->parentList->getValue();
     }
 
     /**
@@ -490,12 +545,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setParentList(string $parentList)
     {
-        $this->parentList = $parentList;
+        $this->parentList->setChanged(true);
+        $this->parentList->setValue($parentList);
     }
     
     public function hasPassword(): bool
     {
-        return isset($this->password);
+        return $this->password->hasBeenSet();
     }    
 
     /**
@@ -503,7 +559,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getPassword() : string
     {
-        return $this->password;
+        return $this->password->getValue();
     }
 
     /**
@@ -511,12 +567,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setPassword(string $password)
     {
-        $this->password = $password;
+        $this->password->setChanged(true);
+        $this->password->setValue($password);
     }
     
     public function hasLink(): bool
     {
-        return isset($this->link);
+        return $this->link->hasBeenSet();
     }    
 
     /**
@@ -524,7 +581,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getLink() : string
     {
-        return $this->link;
+        return $this->link->getValue();
     }
 
     /**
@@ -532,12 +589,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setLink(string $link)
     {
-        $this->link = $link;
+        $this->link->setChanged(true);
+        $this->link->setValue($link);
     }
     
     public function hasChildList(): bool
     {
-        return isset($this->childList);
+        return $this->childList->hasBeenSet();
     }    
 
     /**
@@ -545,7 +603,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getChildList() : ?string
     {
-        return $this->childList;
+        return $this->childList->getValue();
     }
 
     /**
@@ -553,12 +611,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setChildList(?string $childList)
     {
-        $this->childList = $childList;
+        $this->childList->setChanged(true);
+        $this->childList->setValue($childList);
     }
     
     public function hasImportForumId(): bool
     {
-        return isset($this->importForumId);
+        return $this->importForumId->hasBeenSet();
     }    
 
     /**
@@ -566,7 +625,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getImportForumId() : int
     {
-        return $this->importForumId;
+        return $this->importForumId->getValue();
     }
 
     /**
@@ -574,12 +633,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setImportForumId(int $importForumId)
     {
-        $this->importForumId = $importForumId;
+        $this->importForumId->setChanged(true);
+        $this->importForumId->setValue($importForumId);
     }
     
     public function hasImportCategoryId(): bool
     {
-        return isset($this->importCategoryId);
+        return $this->importCategoryId->hasBeenSet();
     }    
 
     /**
@@ -587,7 +647,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getImportCategoryId() : int
     {
-        return $this->importCategoryId;
+        return $this->importCategoryId->getValue();
     }
 
     /**
@@ -595,12 +655,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setImportCategoryId(int $importCategoryId)
     {
-        $this->importCategoryId = $importCategoryId;
+        $this->importCategoryId->setChanged(true);
+        $this->importCategoryId->setValue($importCategoryId);
     }
     
     public function hasTitleClean(): bool
     {
-        return isset($this->titleClean);
+        return $this->titleClean->hasBeenSet();
     }    
 
     /**
@@ -608,7 +669,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getTitleClean() : string
     {
-        return $this->titleClean;
+        return $this->titleClean->getValue();
     }
 
     /**
@@ -616,12 +677,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setTitleClean(string $titleClean)
     {
-        $this->titleClean = $titleClean;
+        $this->titleClean->setChanged(true);
+        $this->titleClean->setValue($titleClean);
     }
     
     public function hasDescriptionClean(): bool
     {
-        return isset($this->descriptionClean);
+        return $this->descriptionClean->hasBeenSet();
     }    
 
     /**
@@ -629,7 +691,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getDescriptionClean() : string
     {
-        return $this->descriptionClean;
+        return $this->descriptionClean->getValue();
     }
 
     /**
@@ -637,12 +699,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setDescriptionClean(string $descriptionClean)
     {
-        $this->descriptionClean = $descriptionClean;
+        $this->descriptionClean->setChanged(true);
+        $this->descriptionClean->setValue($descriptionClean);
     }
     
     public function hasLastPostId(): bool
     {
-        return isset($this->lastPostId);
+        return $this->lastPostId->hasBeenSet();
     }    
 
     /**
@@ -650,7 +713,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getLastPostId() : int
     {
-        return $this->lastPostId;
+        return $this->lastPostId->getValue();
     }
 
     /**
@@ -658,12 +721,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setLastPostId(int $lastPostId)
     {
-        $this->lastPostId = $lastPostId;
+        $this->lastPostId->setChanged(true);
+        $this->lastPostId->setValue($lastPostId);
     }
     
     public function hasShowPrivate(): bool
     {
-        return isset($this->showPrivate);
+        return $this->showPrivate->hasBeenSet();
     }    
 
     /**
@@ -671,7 +735,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getShowPrivate() : int
     {
-        return $this->showPrivate;
+        return $this->showPrivate->getValue();
     }
 
     /**
@@ -679,12 +743,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setShowPrivate(int $showPrivate)
     {
-        $this->showPrivate = $showPrivate;
+        $this->showPrivate->setChanged(true);
+        $this->showPrivate->setValue($showPrivate);
     }
     
     public function hasDefaultSortField(): bool
     {
-        return isset($this->defaultSortField);
+        return $this->defaultSortField->hasBeenSet();
     }    
 
     /**
@@ -692,7 +757,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getDefaultSortField() : string
     {
-        return $this->defaultSortField;
+        return $this->defaultSortField->getValue();
     }
 
     /**
@@ -700,12 +765,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setDefaultSortField(string $defaultSortField)
     {
-        $this->defaultSortField = $defaultSortField;
+        $this->defaultSortField->setChanged(true);
+        $this->defaultSortField->setValue($defaultSortField);
     }
     
     public function hasDefaultSortOrder(): bool
     {
-        return isset($this->defaultSortOrder);
+        return $this->defaultSortOrder->hasBeenSet();
     }    
 
     /**
@@ -713,7 +779,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getDefaultSortOrder() : string
     {
-        return $this->defaultSortOrder;
+        return $this->defaultSortOrder->getValue();
     }
 
     /**
@@ -721,12 +787,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setDefaultSortOrder(string $defaultSortOrder)
     {
-        $this->defaultSortOrder = $defaultSortOrder;
+        $this->defaultSortOrder->setChanged(true);
+        $this->defaultSortOrder->setValue($defaultSortOrder);
     }
     
     public function hasVbSeoModeratePingbacks(): bool
     {
-        return isset($this->vbSeoModeratePingbacks);
+        return $this->vbSeoModeratePingbacks->hasBeenSet();
     }    
 
     /**
@@ -734,7 +801,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getVbSeoModeratePingbacks() : int
     {
-        return $this->vbSeoModeratePingbacks;
+        return $this->vbSeoModeratePingbacks->getValue();
     }
 
     /**
@@ -742,12 +809,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setVbSeoModeratePingbacks(int $vbSeoModeratePingbacks)
     {
-        $this->vbSeoModeratePingbacks = $vbSeoModeratePingbacks;
+        $this->vbSeoModeratePingbacks->setChanged(true);
+        $this->vbSeoModeratePingbacks->setValue($vbSeoModeratePingbacks);
     }
     
     public function hasVbSeoModerateTrackbacks(): bool
     {
-        return isset($this->vbSeoModerateTrackbacks);
+        return $this->vbSeoModerateTrackbacks->hasBeenSet();
     }    
 
     /**
@@ -755,7 +823,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getVbSeoModerateTrackbacks() : int
     {
-        return $this->vbSeoModerateTrackbacks;
+        return $this->vbSeoModerateTrackbacks->getValue();
     }
 
     /**
@@ -763,12 +831,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setVbSeoModerateTrackbacks(int $vbSeoModerateTrackbacks)
     {
-        $this->vbSeoModerateTrackbacks = $vbSeoModerateTrackbacks;
+        $this->vbSeoModerateTrackbacks->setChanged(true);
+        $this->vbSeoModerateTrackbacks->setValue($vbSeoModerateTrackbacks);
     }
     
     public function hasVbSeoModerateRefbacks(): bool
     {
-        return isset($this->vbSeoModerateRefbacks);
+        return $this->vbSeoModerateRefbacks->hasBeenSet();
     }    
 
     /**
@@ -776,7 +845,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getVbSeoModerateRefbacks() : int
     {
-        return $this->vbSeoModerateRefbacks;
+        return $this->vbSeoModerateRefbacks->getValue();
     }
 
     /**
@@ -784,12 +853,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setVbSeoModerateRefbacks(int $vbSeoModerateRefbacks)
     {
-        $this->vbSeoModerateRefbacks = $vbSeoModerateRefbacks;
+        $this->vbSeoModerateRefbacks->setChanged(true);
+        $this->vbSeoModerateRefbacks->setValue($vbSeoModerateRefbacks);
     }
     
     public function hasLastPrefixId(): bool
     {
-        return isset($this->lastPrefixId);
+        return $this->lastPrefixId->hasBeenSet();
     }    
 
     /**
@@ -797,7 +867,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getLastPrefixId() : string
     {
-        return $this->lastPrefixId;
+        return $this->lastPrefixId->getValue();
     }
 
     /**
@@ -805,12 +875,13 @@ class GeneratedForumRecord implements Record {
      */
     public function setLastPrefixId(string $lastPrefixId)
     {
-        $this->lastPrefixId = $lastPrefixId;
+        $this->lastPrefixId->setChanged(true);
+        $this->lastPrefixId->setValue($lastPrefixId);
     }
     
     public function hasImagePrefix(): bool
     {
-        return isset($this->imagePrefix);
+        return $this->imagePrefix->hasBeenSet();
     }    
 
     /**
@@ -818,7 +889,7 @@ class GeneratedForumRecord implements Record {
      */
     public function getImagePrefix() : string
     {
-        return $this->imagePrefix;
+        return $this->imagePrefix->getValue();
     }
 
     /**
@@ -826,9 +897,9 @@ class GeneratedForumRecord implements Record {
      */
     public function setImagePrefix(string $imagePrefix)
     {
-        $this->imagePrefix = $imagePrefix;
+        $this->imagePrefix->setChanged(true);
+        $this->imagePrefix->setValue($imagePrefix);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

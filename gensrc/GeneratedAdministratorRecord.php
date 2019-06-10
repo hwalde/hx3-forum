@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAdministratorRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $adminPermissions int */
+    /** @var $adminPermissions RecordValue */
     protected $adminPermissions;
     
-    /** @var $navPrefs string */
+    /** @var $navPrefs RecordValue */
     protected $navPrefs;
     
-    /** @var $cssPrefs string */
+    /** @var $cssPrefs RecordValue */
     protected $cssPrefs;
     
-    /** @var $notes string */
+    /** @var $notes RecordValue */
     protected $notes;
     
-    /** @var $languageId int */
+    /** @var $languageId RecordValue */
     protected $languageId;
     
-    /** @var $dismissedNews string|null */
+    /** @var $dismissedNews RecordValue */
     protected $dismissedNews;
     
-    /** @var $ptPermissions int */
+    /** @var $ptPermissions RecordValue */
     protected $ptPermissions;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->adminPermissions = new RecordValue();
+		$this->navPrefs = new RecordValue();
+		$this->cssPrefs = new RecordValue();
+		$this->notes = new RecordValue();
+		$this->languageId = new RecordValue();
+		$this->dismissedNews = new RecordValue();
+		$this->ptPermissions = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasAdminPermissions(): bool
     {
-        return isset($this->adminPermissions);
+        return $this->adminPermissions->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function getAdminPermissions() : int
     {
-        return $this->adminPermissions;
+        return $this->adminPermissions->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function setAdminPermissions(int $adminPermissions)
     {
-        $this->adminPermissions = $adminPermissions;
+        $this->adminPermissions->setChanged(true);
+        $this->adminPermissions->setValue($adminPermissions);
     }
     
     public function hasNavPrefs(): bool
     {
-        return isset($this->navPrefs);
+        return $this->navPrefs->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function getNavPrefs() : string
     {
-        return $this->navPrefs;
+        return $this->navPrefs->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function setNavPrefs(string $navPrefs)
     {
-        $this->navPrefs = $navPrefs;
+        $this->navPrefs->setChanged(true);
+        $this->navPrefs->setValue($navPrefs);
     }
     
     public function hasCssPrefs(): bool
     {
-        return isset($this->cssPrefs);
+        return $this->cssPrefs->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function getCssPrefs() : string
     {
-        return $this->cssPrefs;
+        return $this->cssPrefs->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function setCssPrefs(string $cssPrefs)
     {
-        $this->cssPrefs = $cssPrefs;
+        $this->cssPrefs->setChanged(true);
+        $this->cssPrefs->setValue($cssPrefs);
     }
     
     public function hasNotes(): bool
     {
-        return isset($this->notes);
+        return $this->notes->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function getNotes() : string
     {
-        return $this->notes;
+        return $this->notes->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function setNotes(string $notes)
     {
-        $this->notes = $notes;
+        $this->notes->setChanged(true);
+        $this->notes->setValue($notes);
     }
     
     public function hasLanguageId(): bool
     {
-        return isset($this->languageId);
+        return $this->languageId->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function getLanguageId() : int
     {
-        return $this->languageId;
+        return $this->languageId->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function setLanguageId(int $languageId)
     {
-        $this->languageId = $languageId;
+        $this->languageId->setChanged(true);
+        $this->languageId->setValue($languageId);
     }
     
     public function hasDismissedNews(): bool
     {
-        return isset($this->dismissedNews);
+        return $this->dismissedNews->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function getDismissedNews() : ?string
     {
-        return $this->dismissedNews;
+        return $this->dismissedNews->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function setDismissedNews(?string $dismissedNews)
     {
-        $this->dismissedNews = $dismissedNews;
+        $this->dismissedNews->setChanged(true);
+        $this->dismissedNews->setValue($dismissedNews);
     }
     
     public function hasPtPermissions(): bool
     {
-        return isset($this->ptPermissions);
+        return $this->ptPermissions->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function getPtPermissions() : int
     {
-        return $this->ptPermissions;
+        return $this->ptPermissions->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedAdministratorRecord implements Record {
      */
     public function setPtPermissions(int $ptPermissions)
     {
-        $this->ptPermissions = $ptPermissions;
+        $this->ptPermissions->setChanged(true);
+        $this->ptPermissions->setValue($ptPermissions);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

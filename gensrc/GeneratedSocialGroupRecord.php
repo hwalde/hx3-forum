@@ -9,64 +9,85 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSocialGroupRecord implements Record {
     
-    /** @var $groupId int */
+    /** @var $groupId RecordValue */
     protected $groupId;
     
-    /** @var $name string */
+    /** @var $name RecordValue */
     protected $name;
     
-    /** @var $description string|null */
+    /** @var $description RecordValue */
     protected $description;
     
-    /** @var $creatorUserId int */
+    /** @var $creatorUserId RecordValue */
     protected $creatorUserId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $members int */
+    /** @var $members RecordValue */
     protected $members;
     
-    /** @var $pictureCount int */
+    /** @var $pictureCount RecordValue */
     protected $pictureCount;
     
-    /** @var $lastPost int */
+    /** @var $lastPost RecordValue */
     protected $lastPost;
     
-    /** @var $lastPoster string */
+    /** @var $lastPoster RecordValue */
     protected $lastPoster;
     
-    /** @var $lastPosterId int */
+    /** @var $lastPosterId RecordValue */
     protected $lastPosterId;
     
-    /** @var $lastGmId int */
+    /** @var $lastGmId RecordValue */
     protected $lastGmId;
     
-    /** @var $visible int */
+    /** @var $visible RecordValue */
     protected $visible;
     
-    /** @var $deleted int */
+    /** @var $deleted RecordValue */
     protected $deleted;
     
-    /** @var $moderation int */
+    /** @var $moderation RecordValue */
     protected $moderation;
     
-    /** @var $type string */
+    /** @var $type RecordValue */
     protected $type;
     
-    /** @var $moderatedMembers int */
+    /** @var $moderatedMembers RecordValue */
     protected $moderatedMembers;
     
-    /** @var $options int */
+    /** @var $options RecordValue */
     protected $options;
+
+    public function __construct() {
+		$this->groupId = new RecordValue();
+		$this->name = new RecordValue();
+		$this->description = new RecordValue();
+		$this->creatorUserId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->members = new RecordValue();
+		$this->pictureCount = new RecordValue();
+		$this->lastPost = new RecordValue();
+		$this->lastPoster = new RecordValue();
+		$this->lastPosterId = new RecordValue();
+		$this->lastGmId = new RecordValue();
+		$this->visible = new RecordValue();
+		$this->deleted = new RecordValue();
+		$this->moderation = new RecordValue();
+		$this->type = new RecordValue();
+		$this->moderatedMembers = new RecordValue();
+		$this->options = new RecordValue();
+    }
     
     public function hasGroupId(): bool
     {
-        return isset($this->groupId);
+        return $this->groupId->hasBeenSet();
     }    
 
     /**
@@ -74,7 +95,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getGroupId() : int
     {
-        return $this->groupId;
+        return $this->groupId->getValue();
     }
 
     /**
@@ -82,12 +103,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setGroupId(int $groupId)
     {
-        $this->groupId = $groupId;
+        $this->groupId->setChanged(true);
+        $this->groupId->setValue($groupId);
     }
     
     public function hasName(): bool
     {
-        return isset($this->name);
+        return $this->name->hasBeenSet();
     }    
 
     /**
@@ -95,7 +117,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getName() : string
     {
-        return $this->name;
+        return $this->name->getValue();
     }
 
     /**
@@ -103,12 +125,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setName(string $name)
     {
-        $this->name = $name;
+        $this->name->setChanged(true);
+        $this->name->setValue($name);
     }
     
     public function hasDescription(): bool
     {
-        return isset($this->description);
+        return $this->description->hasBeenSet();
     }    
 
     /**
@@ -116,7 +139,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getDescription() : ?string
     {
-        return $this->description;
+        return $this->description->getValue();
     }
 
     /**
@@ -124,12 +147,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setDescription(?string $description)
     {
-        $this->description = $description;
+        $this->description->setChanged(true);
+        $this->description->setValue($description);
     }
     
     public function hasCreatorUserId(): bool
     {
-        return isset($this->creatorUserId);
+        return $this->creatorUserId->hasBeenSet();
     }    
 
     /**
@@ -137,7 +161,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getCreatorUserId() : int
     {
-        return $this->creatorUserId;
+        return $this->creatorUserId->getValue();
     }
 
     /**
@@ -145,12 +169,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setCreatorUserId(int $creatorUserId)
     {
-        $this->creatorUserId = $creatorUserId;
+        $this->creatorUserId->setChanged(true);
+        $this->creatorUserId->setValue($creatorUserId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -158,7 +183,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -166,12 +191,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasMembers(): bool
     {
-        return isset($this->members);
+        return $this->members->hasBeenSet();
     }    
 
     /**
@@ -179,7 +205,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getMembers() : int
     {
-        return $this->members;
+        return $this->members->getValue();
     }
 
     /**
@@ -187,12 +213,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setMembers(int $members)
     {
-        $this->members = $members;
+        $this->members->setChanged(true);
+        $this->members->setValue($members);
     }
     
     public function hasPictureCount(): bool
     {
-        return isset($this->pictureCount);
+        return $this->pictureCount->hasBeenSet();
     }    
 
     /**
@@ -200,7 +227,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getPictureCount() : int
     {
-        return $this->pictureCount;
+        return $this->pictureCount->getValue();
     }
 
     /**
@@ -208,12 +235,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setPictureCount(int $pictureCount)
     {
-        $this->pictureCount = $pictureCount;
+        $this->pictureCount->setChanged(true);
+        $this->pictureCount->setValue($pictureCount);
     }
     
     public function hasLastPost(): bool
     {
-        return isset($this->lastPost);
+        return $this->lastPost->hasBeenSet();
     }    
 
     /**
@@ -221,7 +249,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getLastPost() : int
     {
-        return $this->lastPost;
+        return $this->lastPost->getValue();
     }
 
     /**
@@ -229,12 +257,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setLastPost(int $lastPost)
     {
-        $this->lastPost = $lastPost;
+        $this->lastPost->setChanged(true);
+        $this->lastPost->setValue($lastPost);
     }
     
     public function hasLastPoster(): bool
     {
-        return isset($this->lastPoster);
+        return $this->lastPoster->hasBeenSet();
     }    
 
     /**
@@ -242,7 +271,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getLastPoster() : string
     {
-        return $this->lastPoster;
+        return $this->lastPoster->getValue();
     }
 
     /**
@@ -250,12 +279,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setLastPoster(string $lastPoster)
     {
-        $this->lastPoster = $lastPoster;
+        $this->lastPoster->setChanged(true);
+        $this->lastPoster->setValue($lastPoster);
     }
     
     public function hasLastPosterId(): bool
     {
-        return isset($this->lastPosterId);
+        return $this->lastPosterId->hasBeenSet();
     }    
 
     /**
@@ -263,7 +293,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getLastPosterId() : int
     {
-        return $this->lastPosterId;
+        return $this->lastPosterId->getValue();
     }
 
     /**
@@ -271,12 +301,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setLastPosterId(int $lastPosterId)
     {
-        $this->lastPosterId = $lastPosterId;
+        $this->lastPosterId->setChanged(true);
+        $this->lastPosterId->setValue($lastPosterId);
     }
     
     public function hasLastGmId(): bool
     {
-        return isset($this->lastGmId);
+        return $this->lastGmId->hasBeenSet();
     }    
 
     /**
@@ -284,7 +315,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getLastGmId() : int
     {
-        return $this->lastGmId;
+        return $this->lastGmId->getValue();
     }
 
     /**
@@ -292,12 +323,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setLastGmId(int $lastGmId)
     {
-        $this->lastGmId = $lastGmId;
+        $this->lastGmId->setChanged(true);
+        $this->lastGmId->setValue($lastGmId);
     }
     
     public function hasVisible(): bool
     {
-        return isset($this->visible);
+        return $this->visible->hasBeenSet();
     }    
 
     /**
@@ -305,7 +337,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getVisible() : int
     {
-        return $this->visible;
+        return $this->visible->getValue();
     }
 
     /**
@@ -313,12 +345,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setVisible(int $visible)
     {
-        $this->visible = $visible;
+        $this->visible->setChanged(true);
+        $this->visible->setValue($visible);
     }
     
     public function hasDeleted(): bool
     {
-        return isset($this->deleted);
+        return $this->deleted->hasBeenSet();
     }    
 
     /**
@@ -326,7 +359,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getDeleted() : int
     {
-        return $this->deleted;
+        return $this->deleted->getValue();
     }
 
     /**
@@ -334,12 +367,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setDeleted(int $deleted)
     {
-        $this->deleted = $deleted;
+        $this->deleted->setChanged(true);
+        $this->deleted->setValue($deleted);
     }
     
     public function hasModeration(): bool
     {
-        return isset($this->moderation);
+        return $this->moderation->hasBeenSet();
     }    
 
     /**
@@ -347,7 +381,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getModeration() : int
     {
-        return $this->moderation;
+        return $this->moderation->getValue();
     }
 
     /**
@@ -355,12 +389,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setModeration(int $moderation)
     {
-        $this->moderation = $moderation;
+        $this->moderation->setChanged(true);
+        $this->moderation->setValue($moderation);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -368,7 +403,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getType() : string
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -376,12 +411,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setType(string $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
     
     public function hasModeratedMembers(): bool
     {
-        return isset($this->moderatedMembers);
+        return $this->moderatedMembers->hasBeenSet();
     }    
 
     /**
@@ -389,7 +425,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getModeratedMembers() : int
     {
-        return $this->moderatedMembers;
+        return $this->moderatedMembers->getValue();
     }
 
     /**
@@ -397,12 +433,13 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setModeratedMembers(int $moderatedMembers)
     {
-        $this->moderatedMembers = $moderatedMembers;
+        $this->moderatedMembers->setChanged(true);
+        $this->moderatedMembers->setValue($moderatedMembers);
     }
     
     public function hasOptions(): bool
     {
-        return isset($this->options);
+        return $this->options->hasBeenSet();
     }    
 
     /**
@@ -410,7 +447,7 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function getOptions() : int
     {
-        return $this->options;
+        return $this->options->getValue();
     }
 
     /**
@@ -418,9 +455,9 @@ class GeneratedSocialGroupRecord implements Record {
      */
     public function setOptions(int $options)
     {
-        $this->options = $options;
+        $this->options->setChanged(true);
+        $this->options->setValue($options);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

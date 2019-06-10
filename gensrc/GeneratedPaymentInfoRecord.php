@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPaymentInfoRecord implements Record {
     
-    /** @var $paymentInfoId int */
+    /** @var $paymentInfoId RecordValue */
     protected $paymentInfoId;
     
-    /** @var $hash string */
+    /** @var $hash RecordValue */
     protected $hash;
     
-    /** @var $subscriptionId int */
+    /** @var $subscriptionId RecordValue */
     protected $subscriptionId;
     
-    /** @var $subscriptionSubId int */
+    /** @var $subscriptionSubId RecordValue */
     protected $subscriptionSubId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $completed int */
+    /** @var $completed RecordValue */
     protected $completed;
+
+    public function __construct() {
+		$this->paymentInfoId = new RecordValue();
+		$this->hash = new RecordValue();
+		$this->subscriptionId = new RecordValue();
+		$this->subscriptionSubId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->completed = new RecordValue();
+    }
     
     public function hasPaymentInfoId(): bool
     {
-        return isset($this->paymentInfoId);
+        return $this->paymentInfoId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function getPaymentInfoId() : int
     {
-        return $this->paymentInfoId;
+        return $this->paymentInfoId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function setPaymentInfoId(int $paymentInfoId)
     {
-        $this->paymentInfoId = $paymentInfoId;
+        $this->paymentInfoId->setChanged(true);
+        $this->paymentInfoId->setValue($paymentInfoId);
     }
     
     public function hasHash(): bool
     {
-        return isset($this->hash);
+        return $this->hash->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function getHash() : string
     {
-        return $this->hash;
+        return $this->hash->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function setHash(string $hash)
     {
-        $this->hash = $hash;
+        $this->hash->setChanged(true);
+        $this->hash->setValue($hash);
     }
     
     public function hasSubscriptionId(): bool
     {
-        return isset($this->subscriptionId);
+        return $this->subscriptionId->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function getSubscriptionId() : int
     {
-        return $this->subscriptionId;
+        return $this->subscriptionId->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function setSubscriptionId(int $subscriptionId)
     {
-        $this->subscriptionId = $subscriptionId;
+        $this->subscriptionId->setChanged(true);
+        $this->subscriptionId->setValue($subscriptionId);
     }
     
     public function hasSubscriptionSubId(): bool
     {
-        return isset($this->subscriptionSubId);
+        return $this->subscriptionSubId->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function getSubscriptionSubId() : int
     {
-        return $this->subscriptionSubId;
+        return $this->subscriptionSubId->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function setSubscriptionSubId(int $subscriptionSubId)
     {
-        $this->subscriptionSubId = $subscriptionSubId;
+        $this->subscriptionSubId->setChanged(true);
+        $this->subscriptionSubId->setValue($subscriptionSubId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasCompleted(): bool
     {
-        return isset($this->completed);
+        return $this->completed->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function getCompleted() : int
     {
-        return $this->completed;
+        return $this->completed->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedPaymentInfoRecord implements Record {
      */
     public function setCompleted(int $completed)
     {
-        $this->completed = $completed;
+        $this->completed->setChanged(true);
+        $this->completed->setValue($completed);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

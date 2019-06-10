@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSocialGroupMemberRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $groupId int */
+    /** @var $groupId RecordValue */
     protected $groupId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $type string */
+    /** @var $type RecordValue */
     protected $type;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->groupId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->type = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedSocialGroupMemberRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedSocialGroupMemberRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasGroupId(): bool
     {
-        return isset($this->groupId);
+        return $this->groupId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedSocialGroupMemberRecord implements Record {
      */
     public function getGroupId() : int
     {
-        return $this->groupId;
+        return $this->groupId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedSocialGroupMemberRecord implements Record {
      */
     public function setGroupId(int $groupId)
     {
-        $this->groupId = $groupId;
+        $this->groupId->setChanged(true);
+        $this->groupId->setValue($groupId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedSocialGroupMemberRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedSocialGroupMemberRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedSocialGroupMemberRecord implements Record {
      */
     public function getType() : string
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedSocialGroupMemberRecord implements Record {
      */
     public function setType(string $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

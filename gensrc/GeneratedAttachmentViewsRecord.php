@@ -9,17 +9,22 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedAttachmentViewsRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $attachmentId int */
+    /** @var $attachmentId RecordValue */
     protected $attachmentId;
+
+    public function __construct() {
+		$this->attachmentId = new RecordValue();
+    }
     
     public function hasAttachmentId(): bool
     {
-        return isset($this->attachmentId);
+        return $this->attachmentId->hasBeenSet();
     }    
 
     /**
@@ -27,7 +32,7 @@ class GeneratedAttachmentViewsRecord extends AbstractUpdateableRecord implements
      */
     public function getAttachmentId() : int
     {
-        return $this->attachmentId;
+        return $this->attachmentId->getValue();
     }
 
     /**
@@ -35,9 +40,9 @@ class GeneratedAttachmentViewsRecord extends AbstractUpdateableRecord implements
      */
     public function setAttachmentId(int $attachmentId)
     {
-        $this->attachmentId = $attachmentId;
+        $this->attachmentId->setChanged(true);
+        $this->attachmentId->setValue($attachmentId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

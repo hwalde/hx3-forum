@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUpgradeLogRecord implements Record {
     
-    /** @var $upgradeLogId int */
+    /** @var $upgradeLogId RecordValue */
     protected $upgradeLogId;
     
-    /** @var $script string */
+    /** @var $script RecordValue */
     protected $script;
     
-    /** @var $stepTitle string */
+    /** @var $stepTitle RecordValue */
     protected $stepTitle;
     
-    /** @var $step int */
+    /** @var $step RecordValue */
     protected $step;
     
-    /** @var $startAt int */
+    /** @var $startAt RecordValue */
     protected $startAt;
     
-    /** @var $perPage int */
+    /** @var $perPage RecordValue */
     protected $perPage;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->upgradeLogId = new RecordValue();
+		$this->script = new RecordValue();
+		$this->stepTitle = new RecordValue();
+		$this->step = new RecordValue();
+		$this->startAt = new RecordValue();
+		$this->perPage = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasUpgradeLogId(): bool
     {
-        return isset($this->upgradeLogId);
+        return $this->upgradeLogId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function getUpgradeLogId() : int
     {
-        return $this->upgradeLogId;
+        return $this->upgradeLogId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function setUpgradeLogId(int $upgradeLogId)
     {
-        $this->upgradeLogId = $upgradeLogId;
+        $this->upgradeLogId->setChanged(true);
+        $this->upgradeLogId->setValue($upgradeLogId);
     }
     
     public function hasScript(): bool
     {
-        return isset($this->script);
+        return $this->script->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function getScript() : string
     {
-        return $this->script;
+        return $this->script->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function setScript(string $script)
     {
-        $this->script = $script;
+        $this->script->setChanged(true);
+        $this->script->setValue($script);
     }
     
     public function hasStepTitle(): bool
     {
-        return isset($this->stepTitle);
+        return $this->stepTitle->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function getStepTitle() : string
     {
-        return $this->stepTitle;
+        return $this->stepTitle->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function setStepTitle(string $stepTitle)
     {
-        $this->stepTitle = $stepTitle;
+        $this->stepTitle->setChanged(true);
+        $this->stepTitle->setValue($stepTitle);
     }
     
     public function hasStep(): bool
     {
-        return isset($this->step);
+        return $this->step->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function getStep() : int
     {
-        return $this->step;
+        return $this->step->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function setStep(int $step)
     {
-        $this->step = $step;
+        $this->step->setChanged(true);
+        $this->step->setValue($step);
     }
     
     public function hasStartAt(): bool
     {
-        return isset($this->startAt);
+        return $this->startAt->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function getStartAt() : int
     {
-        return $this->startAt;
+        return $this->startAt->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function setStartAt(int $startAt)
     {
-        $this->startAt = $startAt;
+        $this->startAt->setChanged(true);
+        $this->startAt->setValue($startAt);
     }
     
     public function hasPerPage(): bool
     {
-        return isset($this->perPage);
+        return $this->perPage->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function getPerPage() : int
     {
-        return $this->perPage;
+        return $this->perPage->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function setPerPage(int $perPage)
     {
-        $this->perPage = $perPage;
+        $this->perPage->setChanged(true);
+        $this->perPage->setValue($perPage);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedUpgradeLogRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSigParsedRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $styleId int */
+    /** @var $styleId RecordValue */
     protected $styleId;
     
-    /** @var $languageId int */
+    /** @var $languageId RecordValue */
     protected $languageId;
     
-    /** @var $signatureParsed string|null */
+    /** @var $signatureParsed RecordValue */
     protected $signatureParsed;
     
-    /** @var $hasImages int */
+    /** @var $hasImages RecordValue */
     protected $hasImages;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->styleId = new RecordValue();
+		$this->languageId = new RecordValue();
+		$this->signatureParsed = new RecordValue();
+		$this->hasImages = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedSigParsedRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedSigParsedRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasStyleId(): bool
     {
-        return isset($this->styleId);
+        return $this->styleId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedSigParsedRecord implements Record {
      */
     public function getStyleId() : int
     {
-        return $this->styleId;
+        return $this->styleId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedSigParsedRecord implements Record {
      */
     public function setStyleId(int $styleId)
     {
-        $this->styleId = $styleId;
+        $this->styleId->setChanged(true);
+        $this->styleId->setValue($styleId);
     }
     
     public function hasLanguageId(): bool
     {
-        return isset($this->languageId);
+        return $this->languageId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedSigParsedRecord implements Record {
      */
     public function getLanguageId() : int
     {
-        return $this->languageId;
+        return $this->languageId->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedSigParsedRecord implements Record {
      */
     public function setLanguageId(int $languageId)
     {
-        $this->languageId = $languageId;
+        $this->languageId->setChanged(true);
+        $this->languageId->setValue($languageId);
     }
     
     public function hasSignatureParsed(): bool
     {
-        return isset($this->signatureParsed);
+        return $this->signatureParsed->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedSigParsedRecord implements Record {
      */
     public function getSignatureParsed() : ?string
     {
-        return $this->signatureParsed;
+        return $this->signatureParsed->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedSigParsedRecord implements Record {
      */
     public function setSignatureParsed(?string $signatureParsed)
     {
-        $this->signatureParsed = $signatureParsed;
+        $this->signatureParsed->setChanged(true);
+        $this->signatureParsed->setValue($signatureParsed);
     }
     
     public function hasHasImages(): bool
     {
-        return isset($this->hasImages);
+        return $this->hasImages->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedSigParsedRecord implements Record {
      */
     public function getHasImages() : int
     {
-        return $this->hasImages;
+        return $this->hasImages->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedSigParsedRecord implements Record {
      */
     public function setHasImages(int $hasImages)
     {
-        $this->hasImages = $hasImages;
+        $this->hasImages->setChanged(true);
+        $this->hasImages->setValue($hasImages);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

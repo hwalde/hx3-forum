@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAlbumPictureRecord implements Record {
     
-    /** @var $albumId int */
+    /** @var $albumId RecordValue */
     protected $albumId;
     
-    /** @var $pictureId int */
+    /** @var $pictureId RecordValue */
     protected $pictureId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->albumId = new RecordValue();
+		$this->pictureId = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasAlbumId(): bool
     {
-        return isset($this->albumId);
+        return $this->albumId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedAlbumPictureRecord implements Record {
      */
     public function getAlbumId() : int
     {
-        return $this->albumId;
+        return $this->albumId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedAlbumPictureRecord implements Record {
      */
     public function setAlbumId(int $albumId)
     {
-        $this->albumId = $albumId;
+        $this->albumId->setChanged(true);
+        $this->albumId->setValue($albumId);
     }
     
     public function hasPictureId(): bool
     {
-        return isset($this->pictureId);
+        return $this->pictureId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedAlbumPictureRecord implements Record {
      */
     public function getPictureId() : int
     {
-        return $this->pictureId;
+        return $this->pictureId->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedAlbumPictureRecord implements Record {
      */
     public function setPictureId(int $pictureId)
     {
-        $this->pictureId = $pictureId;
+        $this->pictureId->setChanged(true);
+        $this->pictureId->setValue($pictureId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedAlbumPictureRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedAlbumPictureRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

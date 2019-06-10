@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedRssLogRecord implements Record {
     
-    /** @var $rssFeedId int */
+    /** @var $rssFeedId RecordValue */
     protected $rssFeedId;
     
-    /** @var $itemId int */
+    /** @var $itemId RecordValue */
     protected $itemId;
     
-    /** @var $itemType string */
+    /** @var $itemType RecordValue */
     protected $itemType;
     
-    /** @var $uniqueHash string */
+    /** @var $uniqueHash RecordValue */
     protected $uniqueHash;
     
-    /** @var $contentHash string */
+    /** @var $contentHash RecordValue */
     protected $contentHash;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $threadActionTime int */
+    /** @var $threadActionTime RecordValue */
     protected $threadActionTime;
     
-    /** @var $threadActionComplete int */
+    /** @var $threadActionComplete RecordValue */
     protected $threadActionComplete;
+
+    public function __construct() {
+		$this->rssFeedId = new RecordValue();
+		$this->itemId = new RecordValue();
+		$this->itemType = new RecordValue();
+		$this->uniqueHash = new RecordValue();
+		$this->contentHash = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->threadActionTime = new RecordValue();
+		$this->threadActionComplete = new RecordValue();
+    }
     
     public function hasRssFeedId(): bool
     {
-        return isset($this->rssFeedId);
+        return $this->rssFeedId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedRssLogRecord implements Record {
      */
     public function getRssFeedId() : int
     {
-        return $this->rssFeedId;
+        return $this->rssFeedId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedRssLogRecord implements Record {
      */
     public function setRssFeedId(int $rssFeedId)
     {
-        $this->rssFeedId = $rssFeedId;
+        $this->rssFeedId->setChanged(true);
+        $this->rssFeedId->setValue($rssFeedId);
     }
     
     public function hasItemId(): bool
     {
-        return isset($this->itemId);
+        return $this->itemId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedRssLogRecord implements Record {
      */
     public function getItemId() : int
     {
-        return $this->itemId;
+        return $this->itemId->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedRssLogRecord implements Record {
      */
     public function setItemId(int $itemId)
     {
-        $this->itemId = $itemId;
+        $this->itemId->setChanged(true);
+        $this->itemId->setValue($itemId);
     }
     
     public function hasItemType(): bool
     {
-        return isset($this->itemType);
+        return $this->itemType->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedRssLogRecord implements Record {
      */
     public function getItemType() : string
     {
-        return $this->itemType;
+        return $this->itemType->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedRssLogRecord implements Record {
      */
     public function setItemType(string $itemType)
     {
-        $this->itemType = $itemType;
+        $this->itemType->setChanged(true);
+        $this->itemType->setValue($itemType);
     }
     
     public function hasUniqueHash(): bool
     {
-        return isset($this->uniqueHash);
+        return $this->uniqueHash->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedRssLogRecord implements Record {
      */
     public function getUniqueHash() : string
     {
-        return $this->uniqueHash;
+        return $this->uniqueHash->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedRssLogRecord implements Record {
      */
     public function setUniqueHash(string $uniqueHash)
     {
-        $this->uniqueHash = $uniqueHash;
+        $this->uniqueHash->setChanged(true);
+        $this->uniqueHash->setValue($uniqueHash);
     }
     
     public function hasContentHash(): bool
     {
-        return isset($this->contentHash);
+        return $this->contentHash->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedRssLogRecord implements Record {
      */
     public function getContentHash() : string
     {
-        return $this->contentHash;
+        return $this->contentHash->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedRssLogRecord implements Record {
      */
     public function setContentHash(string $contentHash)
     {
-        $this->contentHash = $contentHash;
+        $this->contentHash->setChanged(true);
+        $this->contentHash->setValue($contentHash);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedRssLogRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedRssLogRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasThreadActionTime(): bool
     {
-        return isset($this->threadActionTime);
+        return $this->threadActionTime->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedRssLogRecord implements Record {
      */
     public function getThreadActionTime() : int
     {
-        return $this->threadActionTime;
+        return $this->threadActionTime->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedRssLogRecord implements Record {
      */
     public function setThreadActionTime(int $threadActionTime)
     {
-        $this->threadActionTime = $threadActionTime;
+        $this->threadActionTime->setChanged(true);
+        $this->threadActionTime->setValue($threadActionTime);
     }
     
     public function hasThreadActionComplete(): bool
     {
-        return isset($this->threadActionComplete);
+        return $this->threadActionComplete->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedRssLogRecord implements Record {
      */
     public function getThreadActionComplete() : int
     {
-        return $this->threadActionComplete;
+        return $this->threadActionComplete->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedRssLogRecord implements Record {
      */
     public function setThreadActionComplete(int $threadActionComplete)
     {
-        $this->threadActionComplete = $threadActionComplete;
+        $this->threadActionComplete->setChanged(true);
+        $this->threadActionComplete->setValue($threadActionComplete);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

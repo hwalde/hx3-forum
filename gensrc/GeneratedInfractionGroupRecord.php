@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedInfractionGroupRecord implements Record {
     
-    /** @var $infractionGroupId int */
+    /** @var $infractionGroupId RecordValue */
     protected $infractionGroupId;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $oruserGroupId int */
+    /** @var $oruserGroupId RecordValue */
     protected $oruserGroupId;
     
-    /** @var $pointLevel int */
+    /** @var $pointLevel RecordValue */
     protected $pointLevel;
     
-    /** @var $override int */
+    /** @var $override RecordValue */
     protected $override;
+
+    public function __construct() {
+		$this->infractionGroupId = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->oruserGroupId = new RecordValue();
+		$this->pointLevel = new RecordValue();
+		$this->override = new RecordValue();
+    }
     
     public function hasInfractionGroupId(): bool
     {
-        return isset($this->infractionGroupId);
+        return $this->infractionGroupId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedInfractionGroupRecord implements Record {
      */
     public function getInfractionGroupId() : int
     {
-        return $this->infractionGroupId;
+        return $this->infractionGroupId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedInfractionGroupRecord implements Record {
      */
     public function setInfractionGroupId(int $infractionGroupId)
     {
-        $this->infractionGroupId = $infractionGroupId;
+        $this->infractionGroupId->setChanged(true);
+        $this->infractionGroupId->setValue($infractionGroupId);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedInfractionGroupRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedInfractionGroupRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasOruserGroupId(): bool
     {
-        return isset($this->oruserGroupId);
+        return $this->oruserGroupId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedInfractionGroupRecord implements Record {
      */
     public function getOruserGroupId() : int
     {
-        return $this->oruserGroupId;
+        return $this->oruserGroupId->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedInfractionGroupRecord implements Record {
      */
     public function setOruserGroupId(int $oruserGroupId)
     {
-        $this->oruserGroupId = $oruserGroupId;
+        $this->oruserGroupId->setChanged(true);
+        $this->oruserGroupId->setValue($oruserGroupId);
     }
     
     public function hasPointLevel(): bool
     {
-        return isset($this->pointLevel);
+        return $this->pointLevel->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedInfractionGroupRecord implements Record {
      */
     public function getPointLevel() : int
     {
-        return $this->pointLevel;
+        return $this->pointLevel->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedInfractionGroupRecord implements Record {
      */
     public function setPointLevel(int $pointLevel)
     {
-        $this->pointLevel = $pointLevel;
+        $this->pointLevel->setChanged(true);
+        $this->pointLevel->setValue($pointLevel);
     }
     
     public function hasOverride(): bool
     {
-        return isset($this->override);
+        return $this->override->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedInfractionGroupRecord implements Record {
      */
     public function getOverride() : int
     {
-        return $this->override;
+        return $this->override->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedInfractionGroupRecord implements Record {
      */
     public function setOverride(int $override)
     {
-        $this->override = $override;
+        $this->override->setChanged(true);
+        $this->override->setValue($override);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

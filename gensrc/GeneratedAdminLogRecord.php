@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAdminLogRecord implements Record {
     
-    /** @var $adminLogId int */
+    /** @var $adminLogId RecordValue */
     protected $adminLogId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $script string */
+    /** @var $script RecordValue */
     protected $script;
     
-    /** @var $action string */
+    /** @var $action RecordValue */
     protected $action;
     
-    /** @var $extraInfo string */
+    /** @var $extraInfo RecordValue */
     protected $extraInfo;
     
-    /** @var $ipAddress string */
+    /** @var $ipAddress RecordValue */
     protected $ipAddress;
+
+    public function __construct() {
+		$this->adminLogId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->script = new RecordValue();
+		$this->action = new RecordValue();
+		$this->extraInfo = new RecordValue();
+		$this->ipAddress = new RecordValue();
+    }
     
     public function hasAdminLogId(): bool
     {
-        return isset($this->adminLogId);
+        return $this->adminLogId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function getAdminLogId() : int
     {
-        return $this->adminLogId;
+        return $this->adminLogId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function setAdminLogId(int $adminLogId)
     {
-        $this->adminLogId = $adminLogId;
+        $this->adminLogId->setChanged(true);
+        $this->adminLogId->setValue($adminLogId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasScript(): bool
     {
-        return isset($this->script);
+        return $this->script->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function getScript() : string
     {
-        return $this->script;
+        return $this->script->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function setScript(string $script)
     {
-        $this->script = $script;
+        $this->script->setChanged(true);
+        $this->script->setValue($script);
     }
     
     public function hasAction(): bool
     {
-        return isset($this->action);
+        return $this->action->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function getAction() : string
     {
-        return $this->action;
+        return $this->action->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function setAction(string $action)
     {
-        $this->action = $action;
+        $this->action->setChanged(true);
+        $this->action->setValue($action);
     }
     
     public function hasExtraInfo(): bool
     {
-        return isset($this->extraInfo);
+        return $this->extraInfo->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function getExtraInfo() : string
     {
-        return $this->extraInfo;
+        return $this->extraInfo->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function setExtraInfo(string $extraInfo)
     {
-        $this->extraInfo = $extraInfo;
+        $this->extraInfo->setChanged(true);
+        $this->extraInfo->setValue($extraInfo);
     }
     
     public function hasIpAddress(): bool
     {
-        return isset($this->ipAddress);
+        return $this->ipAddress->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function getIpAddress() : string
     {
-        return $this->ipAddress;
+        return $this->ipAddress->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedAdminLogRecord implements Record {
      */
     public function setIpAddress(string $ipAddress)
     {
-        $this->ipAddress = $ipAddress;
+        $this->ipAddress->setChanged(true);
+        $this->ipAddress->setValue($ipAddress);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

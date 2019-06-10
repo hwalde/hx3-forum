@@ -9,29 +9,38 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedPostHashRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $dupeHash string */
+    /** @var $dupeHash RecordValue */
     protected $dupeHash;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->threadId = new RecordValue();
+		$this->postId = new RecordValue();
+		$this->dupeHash = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -39,7 +48,7 @@ class GeneratedPostHashRecord extends AbstractUpdateableRecord implements Update
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -47,12 +56,13 @@ class GeneratedPostHashRecord extends AbstractUpdateableRecord implements Update
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -60,7 +70,7 @@ class GeneratedPostHashRecord extends AbstractUpdateableRecord implements Update
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -68,12 +78,13 @@ class GeneratedPostHashRecord extends AbstractUpdateableRecord implements Update
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -81,7 +92,7 @@ class GeneratedPostHashRecord extends AbstractUpdateableRecord implements Update
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -89,12 +100,13 @@ class GeneratedPostHashRecord extends AbstractUpdateableRecord implements Update
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasDupeHash(): bool
     {
-        return isset($this->dupeHash);
+        return $this->dupeHash->hasBeenSet();
     }    
 
     /**
@@ -102,7 +114,7 @@ class GeneratedPostHashRecord extends AbstractUpdateableRecord implements Update
      */
     public function getDupeHash() : string
     {
-        return $this->dupeHash;
+        return $this->dupeHash->getValue();
     }
 
     /**
@@ -110,12 +122,13 @@ class GeneratedPostHashRecord extends AbstractUpdateableRecord implements Update
      */
     public function setDupeHash(string $dupeHash)
     {
-        $this->dupeHash = $dupeHash;
+        $this->dupeHash->setChanged(true);
+        $this->dupeHash->setValue($dupeHash);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -123,7 +136,7 @@ class GeneratedPostHashRecord extends AbstractUpdateableRecord implements Update
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -131,9 +144,9 @@ class GeneratedPostHashRecord extends AbstractUpdateableRecord implements Update
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

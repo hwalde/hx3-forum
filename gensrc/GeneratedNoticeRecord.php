@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedNoticeRecord implements Record {
     
-    /** @var $noticeId int */
+    /** @var $noticeId RecordValue */
     protected $noticeId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $persistent int */
+    /** @var $persistent RecordValue */
     protected $persistent;
     
-    /** @var $active int */
+    /** @var $active RecordValue */
     protected $active;
+
+    public function __construct() {
+		$this->noticeId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->persistent = new RecordValue();
+		$this->active = new RecordValue();
+    }
     
     public function hasNoticeId(): bool
     {
-        return isset($this->noticeId);
+        return $this->noticeId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedNoticeRecord implements Record {
      */
     public function getNoticeId() : int
     {
-        return $this->noticeId;
+        return $this->noticeId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedNoticeRecord implements Record {
      */
     public function setNoticeId(int $noticeId)
     {
-        $this->noticeId = $noticeId;
+        $this->noticeId->setChanged(true);
+        $this->noticeId->setValue($noticeId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedNoticeRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedNoticeRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedNoticeRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedNoticeRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasPersistent(): bool
     {
-        return isset($this->persistent);
+        return $this->persistent->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedNoticeRecord implements Record {
      */
     public function getPersistent() : int
     {
-        return $this->persistent;
+        return $this->persistent->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedNoticeRecord implements Record {
      */
     public function setPersistent(int $persistent)
     {
-        $this->persistent = $persistent;
+        $this->persistent->setChanged(true);
+        $this->persistent->setValue($persistent);
     }
     
     public function hasActive(): bool
     {
-        return isset($this->active);
+        return $this->active->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedNoticeRecord implements Record {
      */
     public function getActive() : int
     {
-        return $this->active;
+        return $this->active->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedNoticeRecord implements Record {
      */
     public function setActive(int $active)
     {
-        $this->active = $active;
+        $this->active->setChanged(true);
+        $this->active->setValue($active);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

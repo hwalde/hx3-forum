@@ -9,70 +9,93 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedProfileFieldRecord implements Record {
     
-    /** @var $profileFieldId int */
+    /** @var $profileFieldId RecordValue */
     protected $profileFieldId;
     
-    /** @var $required int */
+    /** @var $required RecordValue */
     protected $required;
     
-    /** @var $hidden int */
+    /** @var $hidden RecordValue */
     protected $hidden;
     
-    /** @var $maxLength int */
+    /** @var $maxLength RecordValue */
     protected $maxLength;
     
-    /** @var $size int */
+    /** @var $size RecordValue */
     protected $size;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $editable int */
+    /** @var $editable RecordValue */
     protected $editable;
     
-    /** @var $type string */
+    /** @var $type RecordValue */
     protected $type;
     
-    /** @var $data string */
+    /** @var $data RecordValue */
     protected $data;
     
-    /** @var $height int */
+    /** @var $height RecordValue */
     protected $height;
     
-    /** @var $def int */
+    /** @var $def RecordValue */
     protected $def;
     
-    /** @var $optional int */
+    /** @var $optional RecordValue */
     protected $optional;
     
-    /** @var $searchable int */
+    /** @var $searchable RecordValue */
     protected $searchable;
     
-    /** @var $memberList int */
+    /** @var $memberList RecordValue */
     protected $memberList;
     
-    /** @var $regex string */
+    /** @var $regex RecordValue */
     protected $regex;
     
-    /** @var $form int */
+    /** @var $form RecordValue */
     protected $form;
     
-    /** @var $html int */
+    /** @var $html RecordValue */
     protected $html;
     
-    /** @var $perLine int */
+    /** @var $perLine RecordValue */
     protected $perLine;
     
-    /** @var $profileFieldCategoryId int */
+    /** @var $profileFieldCategoryId RecordValue */
     protected $profileFieldCategoryId;
+
+    public function __construct() {
+		$this->profileFieldId = new RecordValue();
+		$this->required = new RecordValue();
+		$this->hidden = new RecordValue();
+		$this->maxLength = new RecordValue();
+		$this->size = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->editable = new RecordValue();
+		$this->type = new RecordValue();
+		$this->data = new RecordValue();
+		$this->height = new RecordValue();
+		$this->def = new RecordValue();
+		$this->optional = new RecordValue();
+		$this->searchable = new RecordValue();
+		$this->memberList = new RecordValue();
+		$this->regex = new RecordValue();
+		$this->form = new RecordValue();
+		$this->html = new RecordValue();
+		$this->perLine = new RecordValue();
+		$this->profileFieldCategoryId = new RecordValue();
+    }
     
     public function hasProfileFieldId(): bool
     {
-        return isset($this->profileFieldId);
+        return $this->profileFieldId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +103,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getProfileFieldId() : int
     {
-        return $this->profileFieldId;
+        return $this->profileFieldId->getValue();
     }
 
     /**
@@ -88,12 +111,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setProfileFieldId(int $profileFieldId)
     {
-        $this->profileFieldId = $profileFieldId;
+        $this->profileFieldId->setChanged(true);
+        $this->profileFieldId->setValue($profileFieldId);
     }
     
     public function hasRequired(): bool
     {
-        return isset($this->required);
+        return $this->required->hasBeenSet();
     }    
 
     /**
@@ -101,7 +125,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getRequired() : int
     {
-        return $this->required;
+        return $this->required->getValue();
     }
 
     /**
@@ -109,12 +133,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setRequired(int $required)
     {
-        $this->required = $required;
+        $this->required->setChanged(true);
+        $this->required->setValue($required);
     }
     
     public function hasHidden(): bool
     {
-        return isset($this->hidden);
+        return $this->hidden->hasBeenSet();
     }    
 
     /**
@@ -122,7 +147,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getHidden() : int
     {
-        return $this->hidden;
+        return $this->hidden->getValue();
     }
 
     /**
@@ -130,12 +155,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setHidden(int $hidden)
     {
-        $this->hidden = $hidden;
+        $this->hidden->setChanged(true);
+        $this->hidden->setValue($hidden);
     }
     
     public function hasMaxLength(): bool
     {
-        return isset($this->maxLength);
+        return $this->maxLength->hasBeenSet();
     }    
 
     /**
@@ -143,7 +169,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getMaxLength() : int
     {
-        return $this->maxLength;
+        return $this->maxLength->getValue();
     }
 
     /**
@@ -151,12 +177,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setMaxLength(int $maxLength)
     {
-        $this->maxLength = $maxLength;
+        $this->maxLength->setChanged(true);
+        $this->maxLength->setValue($maxLength);
     }
     
     public function hasSize(): bool
     {
-        return isset($this->size);
+        return $this->size->hasBeenSet();
     }    
 
     /**
@@ -164,7 +191,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getSize() : int
     {
-        return $this->size;
+        return $this->size->getValue();
     }
 
     /**
@@ -172,12 +199,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setSize(int $size)
     {
-        $this->size = $size;
+        $this->size->setChanged(true);
+        $this->size->setValue($size);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -185,7 +213,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -193,12 +221,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasEditable(): bool
     {
-        return isset($this->editable);
+        return $this->editable->hasBeenSet();
     }    
 
     /**
@@ -206,7 +235,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getEditable() : int
     {
-        return $this->editable;
+        return $this->editable->getValue();
     }
 
     /**
@@ -214,12 +243,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setEditable(int $editable)
     {
-        $this->editable = $editable;
+        $this->editable->setChanged(true);
+        $this->editable->setValue($editable);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -227,7 +257,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getType() : string
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -235,12 +265,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setType(string $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
     
     public function hasData(): bool
     {
-        return isset($this->data);
+        return $this->data->hasBeenSet();
     }    
 
     /**
@@ -248,7 +279,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getData() : string
     {
-        return $this->data;
+        return $this->data->getValue();
     }
 
     /**
@@ -256,12 +287,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setData(string $data)
     {
-        $this->data = $data;
+        $this->data->setChanged(true);
+        $this->data->setValue($data);
     }
     
     public function hasHeight(): bool
     {
-        return isset($this->height);
+        return $this->height->hasBeenSet();
     }    
 
     /**
@@ -269,7 +301,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getHeight() : int
     {
-        return $this->height;
+        return $this->height->getValue();
     }
 
     /**
@@ -277,12 +309,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setHeight(int $height)
     {
-        $this->height = $height;
+        $this->height->setChanged(true);
+        $this->height->setValue($height);
     }
     
     public function hasDef(): bool
     {
-        return isset($this->def);
+        return $this->def->hasBeenSet();
     }    
 
     /**
@@ -290,7 +323,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getDef() : int
     {
-        return $this->def;
+        return $this->def->getValue();
     }
 
     /**
@@ -298,12 +331,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setDef(int $def)
     {
-        $this->def = $def;
+        $this->def->setChanged(true);
+        $this->def->setValue($def);
     }
     
     public function hasOptional(): bool
     {
-        return isset($this->optional);
+        return $this->optional->hasBeenSet();
     }    
 
     /**
@@ -311,7 +345,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getOptional() : int
     {
-        return $this->optional;
+        return $this->optional->getValue();
     }
 
     /**
@@ -319,12 +353,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setOptional(int $optional)
     {
-        $this->optional = $optional;
+        $this->optional->setChanged(true);
+        $this->optional->setValue($optional);
     }
     
     public function hasSearchable(): bool
     {
-        return isset($this->searchable);
+        return $this->searchable->hasBeenSet();
     }    
 
     /**
@@ -332,7 +367,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getSearchable() : int
     {
-        return $this->searchable;
+        return $this->searchable->getValue();
     }
 
     /**
@@ -340,12 +375,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setSearchable(int $searchable)
     {
-        $this->searchable = $searchable;
+        $this->searchable->setChanged(true);
+        $this->searchable->setValue($searchable);
     }
     
     public function hasMemberList(): bool
     {
-        return isset($this->memberList);
+        return $this->memberList->hasBeenSet();
     }    
 
     /**
@@ -353,7 +389,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getMemberList() : int
     {
-        return $this->memberList;
+        return $this->memberList->getValue();
     }
 
     /**
@@ -361,12 +397,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setMemberList(int $memberList)
     {
-        $this->memberList = $memberList;
+        $this->memberList->setChanged(true);
+        $this->memberList->setValue($memberList);
     }
     
     public function hasRegex(): bool
     {
-        return isset($this->regex);
+        return $this->regex->hasBeenSet();
     }    
 
     /**
@@ -374,7 +411,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getRegex() : string
     {
-        return $this->regex;
+        return $this->regex->getValue();
     }
 
     /**
@@ -382,12 +419,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setRegex(string $regex)
     {
-        $this->regex = $regex;
+        $this->regex->setChanged(true);
+        $this->regex->setValue($regex);
     }
     
     public function hasForm(): bool
     {
-        return isset($this->form);
+        return $this->form->hasBeenSet();
     }    
 
     /**
@@ -395,7 +433,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getForm() : int
     {
-        return $this->form;
+        return $this->form->getValue();
     }
 
     /**
@@ -403,12 +441,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setForm(int $form)
     {
-        $this->form = $form;
+        $this->form->setChanged(true);
+        $this->form->setValue($form);
     }
     
     public function hasHtml(): bool
     {
-        return isset($this->html);
+        return $this->html->hasBeenSet();
     }    
 
     /**
@@ -416,7 +455,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getHtml() : int
     {
-        return $this->html;
+        return $this->html->getValue();
     }
 
     /**
@@ -424,12 +463,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setHtml(int $html)
     {
-        $this->html = $html;
+        $this->html->setChanged(true);
+        $this->html->setValue($html);
     }
     
     public function hasPerLine(): bool
     {
-        return isset($this->perLine);
+        return $this->perLine->hasBeenSet();
     }    
 
     /**
@@ -437,7 +477,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getPerLine() : int
     {
-        return $this->perLine;
+        return $this->perLine->getValue();
     }
 
     /**
@@ -445,12 +485,13 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setPerLine(int $perLine)
     {
-        $this->perLine = $perLine;
+        $this->perLine->setChanged(true);
+        $this->perLine->setValue($perLine);
     }
     
     public function hasProfileFieldCategoryId(): bool
     {
-        return isset($this->profileFieldCategoryId);
+        return $this->profileFieldCategoryId->hasBeenSet();
     }    
 
     /**
@@ -458,7 +499,7 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function getProfileFieldCategoryId() : int
     {
-        return $this->profileFieldCategoryId;
+        return $this->profileFieldCategoryId->getValue();
     }
 
     /**
@@ -466,9 +507,9 @@ class GeneratedProfileFieldRecord implements Record {
      */
     public function setProfileFieldCategoryId(int $profileFieldCategoryId)
     {
-        $this->profileFieldCategoryId = $profileFieldCategoryId;
+        $this->profileFieldCategoryId->setChanged(true);
+        $this->profileFieldCategoryId->setValue($profileFieldCategoryId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

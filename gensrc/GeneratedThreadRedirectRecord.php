@@ -9,19 +9,25 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedThreadRedirectRecord implements Record {
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
     
-    /** @var $expires int */
+    /** @var $expires RecordValue */
     protected $expires;
+
+    public function __construct() {
+		$this->threadId = new RecordValue();
+		$this->expires = new RecordValue();
+    }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -29,7 +35,7 @@ class GeneratedThreadRedirectRecord implements Record {
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -37,12 +43,13 @@ class GeneratedThreadRedirectRecord implements Record {
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
     
     public function hasExpires(): bool
     {
-        return isset($this->expires);
+        return $this->expires->hasBeenSet();
     }    
 
     /**
@@ -50,7 +57,7 @@ class GeneratedThreadRedirectRecord implements Record {
      */
     public function getExpires() : int
     {
-        return $this->expires;
+        return $this->expires->getValue();
     }
 
     /**
@@ -58,9 +65,9 @@ class GeneratedThreadRedirectRecord implements Record {
      */
     public function setExpires(int $expires)
     {
-        $this->expires = $expires;
+        $this->expires->setChanged(true);
+        $this->expires->setValue($expires);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueNoteHashRecord implements Record {
     
-    /** @var $issueNoteId int */
+    /** @var $issueNoteId RecordValue */
     protected $issueNoteId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $issueId int */
+    /** @var $issueId RecordValue */
     protected $issueId;
     
-    /** @var $dupeHash string */
+    /** @var $dupeHash RecordValue */
     protected $dupeHash;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->issueNoteId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->issueId = new RecordValue();
+		$this->dupeHash = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasIssueNoteId(): bool
     {
-        return isset($this->issueNoteId);
+        return $this->issueNoteId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedPtIssueNoteHashRecord implements Record {
      */
     public function getIssueNoteId() : int
     {
-        return $this->issueNoteId;
+        return $this->issueNoteId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedPtIssueNoteHashRecord implements Record {
      */
     public function setIssueNoteId(int $issueNoteId)
     {
-        $this->issueNoteId = $issueNoteId;
+        $this->issueNoteId->setChanged(true);
+        $this->issueNoteId->setValue($issueNoteId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedPtIssueNoteHashRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedPtIssueNoteHashRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasIssueId(): bool
     {
-        return isset($this->issueId);
+        return $this->issueId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedPtIssueNoteHashRecord implements Record {
      */
     public function getIssueId() : int
     {
-        return $this->issueId;
+        return $this->issueId->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedPtIssueNoteHashRecord implements Record {
      */
     public function setIssueId(int $issueId)
     {
-        $this->issueId = $issueId;
+        $this->issueId->setChanged(true);
+        $this->issueId->setValue($issueId);
     }
     
     public function hasDupeHash(): bool
     {
-        return isset($this->dupeHash);
+        return $this->dupeHash->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedPtIssueNoteHashRecord implements Record {
      */
     public function getDupeHash() : string
     {
-        return $this->dupeHash;
+        return $this->dupeHash->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedPtIssueNoteHashRecord implements Record {
      */
     public function setDupeHash(string $dupeHash)
     {
-        $this->dupeHash = $dupeHash;
+        $this->dupeHash->setChanged(true);
+        $this->dupeHash->setValue($dupeHash);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedPtIssueNoteHashRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedPtIssueNoteHashRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

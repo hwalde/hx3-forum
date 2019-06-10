@@ -9,23 +9,30 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedStrikesRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $strikeTime int */
+    /** @var $strikeTime RecordValue */
     protected $strikeTime;
     
-    /** @var $strikeIp string */
+    /** @var $strikeIp RecordValue */
     protected $strikeIp;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
+
+    public function __construct() {
+		$this->strikeTime = new RecordValue();
+		$this->strikeIp = new RecordValue();
+		$this->userName = new RecordValue();
+    }
     
     public function hasStrikeTime(): bool
     {
-        return isset($this->strikeTime);
+        return $this->strikeTime->hasBeenSet();
     }    
 
     /**
@@ -33,7 +40,7 @@ class GeneratedStrikesRecord extends AbstractUpdateableRecord implements Updatea
      */
     public function getStrikeTime() : int
     {
-        return $this->strikeTime;
+        return $this->strikeTime->getValue();
     }
 
     /**
@@ -41,12 +48,13 @@ class GeneratedStrikesRecord extends AbstractUpdateableRecord implements Updatea
      */
     public function setStrikeTime(int $strikeTime)
     {
-        $this->strikeTime = $strikeTime;
+        $this->strikeTime->setChanged(true);
+        $this->strikeTime->setValue($strikeTime);
     }
     
     public function hasStrikeIp(): bool
     {
-        return isset($this->strikeIp);
+        return $this->strikeIp->hasBeenSet();
     }    
 
     /**
@@ -54,7 +62,7 @@ class GeneratedStrikesRecord extends AbstractUpdateableRecord implements Updatea
      */
     public function getStrikeIp() : string
     {
-        return $this->strikeIp;
+        return $this->strikeIp->getValue();
     }
 
     /**
@@ -62,12 +70,13 @@ class GeneratedStrikesRecord extends AbstractUpdateableRecord implements Updatea
      */
     public function setStrikeIp(string $strikeIp)
     {
-        $this->strikeIp = $strikeIp;
+        $this->strikeIp->setChanged(true);
+        $this->strikeIp->setValue($strikeIp);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -75,7 +84,7 @@ class GeneratedStrikesRecord extends AbstractUpdateableRecord implements Updatea
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -83,9 +92,9 @@ class GeneratedStrikesRecord extends AbstractUpdateableRecord implements Updatea
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

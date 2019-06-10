@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedReputationRecord implements Record {
     
-    /** @var $reputationId int */
+    /** @var $reputationId RecordValue */
     protected $reputationId;
     
-    /** @var $postId int */
+    /** @var $postId RecordValue */
     protected $postId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $reputation int */
+    /** @var $reputation RecordValue */
     protected $reputation;
     
-    /** @var $whoAdded int */
+    /** @var $whoAdded RecordValue */
     protected $whoAdded;
     
-    /** @var $reason string|null */
+    /** @var $reason RecordValue */
     protected $reason;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->reputationId = new RecordValue();
+		$this->postId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->reputation = new RecordValue();
+		$this->whoAdded = new RecordValue();
+		$this->reason = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasReputationId(): bool
     {
-        return isset($this->reputationId);
+        return $this->reputationId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedReputationRecord implements Record {
      */
     public function getReputationId() : int
     {
-        return $this->reputationId;
+        return $this->reputationId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedReputationRecord implements Record {
      */
     public function setReputationId(int $reputationId)
     {
-        $this->reputationId = $reputationId;
+        $this->reputationId->setChanged(true);
+        $this->reputationId->setValue($reputationId);
     }
     
     public function hasPostId(): bool
     {
-        return isset($this->postId);
+        return $this->postId->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedReputationRecord implements Record {
      */
     public function getPostId() : int
     {
-        return $this->postId;
+        return $this->postId->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedReputationRecord implements Record {
      */
     public function setPostId(int $postId)
     {
-        $this->postId = $postId;
+        $this->postId->setChanged(true);
+        $this->postId->setValue($postId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedReputationRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedReputationRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasReputation(): bool
     {
-        return isset($this->reputation);
+        return $this->reputation->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedReputationRecord implements Record {
      */
     public function getReputation() : int
     {
-        return $this->reputation;
+        return $this->reputation->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedReputationRecord implements Record {
      */
     public function setReputation(int $reputation)
     {
-        $this->reputation = $reputation;
+        $this->reputation->setChanged(true);
+        $this->reputation->setValue($reputation);
     }
     
     public function hasWhoAdded(): bool
     {
-        return isset($this->whoAdded);
+        return $this->whoAdded->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedReputationRecord implements Record {
      */
     public function getWhoAdded() : int
     {
-        return $this->whoAdded;
+        return $this->whoAdded->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedReputationRecord implements Record {
      */
     public function setWhoAdded(int $whoAdded)
     {
-        $this->whoAdded = $whoAdded;
+        $this->whoAdded->setChanged(true);
+        $this->whoAdded->setValue($whoAdded);
     }
     
     public function hasReason(): bool
     {
-        return isset($this->reason);
+        return $this->reason->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedReputationRecord implements Record {
      */
     public function getReason() : ?string
     {
-        return $this->reason;
+        return $this->reason->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedReputationRecord implements Record {
      */
     public function setReason(?string $reason)
     {
-        $this->reason = $reason;
+        $this->reason->setChanged(true);
+        $this->reason->setValue($reason);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedReputationRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedReputationRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

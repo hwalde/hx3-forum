@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserTitleRecord implements Record {
     
-    /** @var $userTitleId int */
+    /** @var $userTitleId RecordValue */
     protected $userTitleId;
     
-    /** @var $minPosts int */
+    /** @var $minPosts RecordValue */
     protected $minPosts;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
+
+    public function __construct() {
+		$this->userTitleId = new RecordValue();
+		$this->minPosts = new RecordValue();
+		$this->title = new RecordValue();
+    }
     
     public function hasUserTitleId(): bool
     {
-        return isset($this->userTitleId);
+        return $this->userTitleId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedUserTitleRecord implements Record {
      */
     public function getUserTitleId() : int
     {
-        return $this->userTitleId;
+        return $this->userTitleId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedUserTitleRecord implements Record {
      */
     public function setUserTitleId(int $userTitleId)
     {
-        $this->userTitleId = $userTitleId;
+        $this->userTitleId->setChanged(true);
+        $this->userTitleId->setValue($userTitleId);
     }
     
     public function hasMinPosts(): bool
     {
-        return isset($this->minPosts);
+        return $this->minPosts->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedUserTitleRecord implements Record {
      */
     public function getMinPosts() : int
     {
-        return $this->minPosts;
+        return $this->minPosts->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedUserTitleRecord implements Record {
      */
     public function setMinPosts(int $minPosts)
     {
-        $this->minPosts = $minPosts;
+        $this->minPosts->setChanged(true);
+        $this->minPosts->setValue($minPosts);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedUserTitleRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedUserTitleRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

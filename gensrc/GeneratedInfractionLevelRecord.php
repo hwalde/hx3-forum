@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedInfractionLevelRecord implements Record {
     
-    /** @var $infractionLevelId int */
+    /** @var $infractionLevelId RecordValue */
     protected $infractionLevelId;
     
-    /** @var $points int */
+    /** @var $points RecordValue */
     protected $points;
     
-    /** @var $expires int */
+    /** @var $expires RecordValue */
     protected $expires;
     
-    /** @var $period string */
+    /** @var $period RecordValue */
     protected $period;
     
-    /** @var $warning int|null */
+    /** @var $warning RecordValue */
     protected $warning;
     
-    /** @var $extend int */
+    /** @var $extend RecordValue */
     protected $extend;
+
+    public function __construct() {
+		$this->infractionLevelId = new RecordValue();
+		$this->points = new RecordValue();
+		$this->expires = new RecordValue();
+		$this->period = new RecordValue();
+		$this->warning = new RecordValue();
+		$this->extend = new RecordValue();
+    }
     
     public function hasInfractionLevelId(): bool
     {
-        return isset($this->infractionLevelId);
+        return $this->infractionLevelId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function getInfractionLevelId() : int
     {
-        return $this->infractionLevelId;
+        return $this->infractionLevelId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function setInfractionLevelId(int $infractionLevelId)
     {
-        $this->infractionLevelId = $infractionLevelId;
+        $this->infractionLevelId->setChanged(true);
+        $this->infractionLevelId->setValue($infractionLevelId);
     }
     
     public function hasPoints(): bool
     {
-        return isset($this->points);
+        return $this->points->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function getPoints() : int
     {
-        return $this->points;
+        return $this->points->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function setPoints(int $points)
     {
-        $this->points = $points;
+        $this->points->setChanged(true);
+        $this->points->setValue($points);
     }
     
     public function hasExpires(): bool
     {
-        return isset($this->expires);
+        return $this->expires->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function getExpires() : int
     {
-        return $this->expires;
+        return $this->expires->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function setExpires(int $expires)
     {
-        $this->expires = $expires;
+        $this->expires->setChanged(true);
+        $this->expires->setValue($expires);
     }
     
     public function hasPeriod(): bool
     {
-        return isset($this->period);
+        return $this->period->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function getPeriod() : string
     {
-        return $this->period;
+        return $this->period->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function setPeriod(string $period)
     {
-        $this->period = $period;
+        $this->period->setChanged(true);
+        $this->period->setValue($period);
     }
     
     public function hasWarning(): bool
     {
-        return isset($this->warning);
+        return $this->warning->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function getWarning() : ?int
     {
-        return $this->warning;
+        return $this->warning->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function setWarning(?int $warning)
     {
-        $this->warning = $warning;
+        $this->warning->setChanged(true);
+        $this->warning->setValue($warning);
     }
     
     public function hasExtend(): bool
     {
-        return isset($this->extend);
+        return $this->extend->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function getExtend() : int
     {
-        return $this->extend;
+        return $this->extend->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedInfractionLevelRecord implements Record {
      */
     public function setExtend(int $extend)
     {
-        $this->extend = $extend;
+        $this->extend->setChanged(true);
+        $this->extend->setValue($extend);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedHolidayRecord implements Record {
     
-    /** @var $holidayId int */
+    /** @var $holidayId RecordValue */
     protected $holidayId;
     
-    /** @var $recurring int */
+    /** @var $recurring RecordValue */
     protected $recurring;
     
-    /** @var $recurOption string */
+    /** @var $recurOption RecordValue */
     protected $recurOption;
     
-    /** @var $allowSmilies int */
+    /** @var $allowSmilies RecordValue */
     protected $allowSmilies;
+
+    public function __construct() {
+		$this->holidayId = new RecordValue();
+		$this->recurring = new RecordValue();
+		$this->recurOption = new RecordValue();
+		$this->allowSmilies = new RecordValue();
+    }
     
     public function hasHolidayId(): bool
     {
-        return isset($this->holidayId);
+        return $this->holidayId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedHolidayRecord implements Record {
      */
     public function getHolidayId() : int
     {
-        return $this->holidayId;
+        return $this->holidayId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedHolidayRecord implements Record {
      */
     public function setHolidayId(int $holidayId)
     {
-        $this->holidayId = $holidayId;
+        $this->holidayId->setChanged(true);
+        $this->holidayId->setValue($holidayId);
     }
     
     public function hasRecurring(): bool
     {
-        return isset($this->recurring);
+        return $this->recurring->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedHolidayRecord implements Record {
      */
     public function getRecurring() : int
     {
-        return $this->recurring;
+        return $this->recurring->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedHolidayRecord implements Record {
      */
     public function setRecurring(int $recurring)
     {
-        $this->recurring = $recurring;
+        $this->recurring->setChanged(true);
+        $this->recurring->setValue($recurring);
     }
     
     public function hasRecurOption(): bool
     {
-        return isset($this->recurOption);
+        return $this->recurOption->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedHolidayRecord implements Record {
      */
     public function getRecurOption() : string
     {
-        return $this->recurOption;
+        return $this->recurOption->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedHolidayRecord implements Record {
      */
     public function setRecurOption(string $recurOption)
     {
-        $this->recurOption = $recurOption;
+        $this->recurOption->setChanged(true);
+        $this->recurOption->setValue($recurOption);
     }
     
     public function hasAllowSmilies(): bool
     {
-        return isset($this->allowSmilies);
+        return $this->allowSmilies->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedHolidayRecord implements Record {
      */
     public function getAllowSmilies() : int
     {
-        return $this->allowSmilies;
+        return $this->allowSmilies->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedHolidayRecord implements Record {
      */
     public function setAllowSmilies(int $allowSmilies)
     {
-        $this->allowSmilies = $allowSmilies;
+        $this->allowSmilies->setChanged(true);
+        $this->allowSmilies->setValue($allowSmilies);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

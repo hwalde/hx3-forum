@@ -9,20 +9,26 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedImageCategoryPermissionRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $imageCategoryId int */
+    /** @var $imageCategoryId RecordValue */
     protected $imageCategoryId;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
+
+    public function __construct() {
+		$this->imageCategoryId = new RecordValue();
+		$this->userGroupId = new RecordValue();
+    }
     
     public function hasImageCategoryId(): bool
     {
-        return isset($this->imageCategoryId);
+        return $this->imageCategoryId->hasBeenSet();
     }    
 
     /**
@@ -30,7 +36,7 @@ class GeneratedImageCategoryPermissionRecord extends AbstractUpdateableRecord im
      */
     public function getImageCategoryId() : int
     {
-        return $this->imageCategoryId;
+        return $this->imageCategoryId->getValue();
     }
 
     /**
@@ -38,12 +44,13 @@ class GeneratedImageCategoryPermissionRecord extends AbstractUpdateableRecord im
      */
     public function setImageCategoryId(int $imageCategoryId)
     {
-        $this->imageCategoryId = $imageCategoryId;
+        $this->imageCategoryId->setChanged(true);
+        $this->imageCategoryId->setValue($imageCategoryId);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -51,7 +58,7 @@ class GeneratedImageCategoryPermissionRecord extends AbstractUpdateableRecord im
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -59,9 +66,9 @@ class GeneratedImageCategoryPermissionRecord extends AbstractUpdateableRecord im
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

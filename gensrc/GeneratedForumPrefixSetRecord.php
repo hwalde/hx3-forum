@@ -9,19 +9,25 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedForumPrefixSetRecord implements Record {
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $prefixSetId string */
+    /** @var $prefixSetId RecordValue */
     protected $prefixSetId;
+
+    public function __construct() {
+		$this->forumId = new RecordValue();
+		$this->prefixSetId = new RecordValue();
+    }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -29,7 +35,7 @@ class GeneratedForumPrefixSetRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -37,12 +43,13 @@ class GeneratedForumPrefixSetRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasPrefixSetId(): bool
     {
-        return isset($this->prefixSetId);
+        return $this->prefixSetId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +57,7 @@ class GeneratedForumPrefixSetRecord implements Record {
      */
     public function getPrefixSetId() : string
     {
-        return $this->prefixSetId;
+        return $this->prefixSetId->getValue();
     }
 
     /**
@@ -58,9 +65,9 @@ class GeneratedForumPrefixSetRecord implements Record {
      */
     public function setPrefixSetId(string $prefixSetId)
     {
-        $this->prefixSetId = $prefixSetId;
+        $this->prefixSetId->setChanged(true);
+        $this->prefixSetId->setValue($prefixSetId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

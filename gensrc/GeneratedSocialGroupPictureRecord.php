@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSocialGroupPictureRecord implements Record {
     
-    /** @var $groupId int */
+    /** @var $groupId RecordValue */
     protected $groupId;
     
-    /** @var $pictureId int */
+    /** @var $pictureId RecordValue */
     protected $pictureId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->groupId = new RecordValue();
+		$this->pictureId = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasGroupId(): bool
     {
-        return isset($this->groupId);
+        return $this->groupId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedSocialGroupPictureRecord implements Record {
      */
     public function getGroupId() : int
     {
-        return $this->groupId;
+        return $this->groupId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedSocialGroupPictureRecord implements Record {
      */
     public function setGroupId(int $groupId)
     {
-        $this->groupId = $groupId;
+        $this->groupId->setChanged(true);
+        $this->groupId->setValue($groupId);
     }
     
     public function hasPictureId(): bool
     {
-        return isset($this->pictureId);
+        return $this->pictureId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedSocialGroupPictureRecord implements Record {
      */
     public function getPictureId() : int
     {
-        return $this->pictureId;
+        return $this->pictureId->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedSocialGroupPictureRecord implements Record {
      */
     public function setPictureId(int $pictureId)
     {
-        $this->pictureId = $pictureId;
+        $this->pictureId->setChanged(true);
+        $this->pictureId->setValue($pictureId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedSocialGroupPictureRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedSocialGroupPictureRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

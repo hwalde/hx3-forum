@@ -9,40 +9,53 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedVbFieldsRecord implements Record {
     
-    /** @var $fieldId int */
+    /** @var $fieldId RecordValue */
     protected $fieldId;
     
-    /** @var $fieldName string */
+    /** @var $fieldName RecordValue */
     protected $fieldName;
     
-    /** @var $fieldType string */
+    /** @var $fieldType RecordValue */
     protected $fieldType;
     
-    /** @var $isUnsigned string */
+    /** @var $isUnsigned RecordValue */
     protected $isUnsigned;
     
-    /** @var $tableName string */
+    /** @var $tableName RecordValue */
     protected $tableName;
     
-    /** @var $createSql string */
+    /** @var $createSql RecordValue */
     protected $createSql;
     
-    /** @var $vbMandatory string */
+    /** @var $vbMandatory RecordValue */
     protected $vbMandatory;
     
-    /** @var $defaultValue string|null */
+    /** @var $defaultValue RecordValue */
     protected $defaultValue;
     
-    /** @var $dictionary string */
+    /** @var $dictionary RecordValue */
     protected $dictionary;
+
+    public function __construct() {
+		$this->fieldId = new RecordValue();
+		$this->fieldName = new RecordValue();
+		$this->fieldType = new RecordValue();
+		$this->isUnsigned = new RecordValue();
+		$this->tableName = new RecordValue();
+		$this->createSql = new RecordValue();
+		$this->vbMandatory = new RecordValue();
+		$this->defaultValue = new RecordValue();
+		$this->dictionary = new RecordValue();
+    }
     
     public function hasFieldId(): bool
     {
-        return isset($this->fieldId);
+        return $this->fieldId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +63,7 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function getFieldId() : int
     {
-        return $this->fieldId;
+        return $this->fieldId->getValue();
     }
 
     /**
@@ -58,12 +71,13 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function setFieldId(int $fieldId)
     {
-        $this->fieldId = $fieldId;
+        $this->fieldId->setChanged(true);
+        $this->fieldId->setValue($fieldId);
     }
     
     public function hasFieldName(): bool
     {
-        return isset($this->fieldName);
+        return $this->fieldName->hasBeenSet();
     }    
 
     /**
@@ -71,7 +85,7 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function getFieldName() : string
     {
-        return $this->fieldName;
+        return $this->fieldName->getValue();
     }
 
     /**
@@ -79,12 +93,13 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function setFieldName(string $fieldName)
     {
-        $this->fieldName = $fieldName;
+        $this->fieldName->setChanged(true);
+        $this->fieldName->setValue($fieldName);
     }
     
     public function hasFieldType(): bool
     {
-        return isset($this->fieldType);
+        return $this->fieldType->hasBeenSet();
     }    
 
     /**
@@ -92,7 +107,7 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function getFieldType() : string
     {
-        return $this->fieldType;
+        return $this->fieldType->getValue();
     }
 
     /**
@@ -100,12 +115,13 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function setFieldType(string $fieldType)
     {
-        $this->fieldType = $fieldType;
+        $this->fieldType->setChanged(true);
+        $this->fieldType->setValue($fieldType);
     }
     
     public function hasIsUnsigned(): bool
     {
-        return isset($this->isUnsigned);
+        return $this->isUnsigned->hasBeenSet();
     }    
 
     /**
@@ -113,7 +129,7 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function getIsUnsigned() : string
     {
-        return $this->isUnsigned;
+        return $this->isUnsigned->getValue();
     }
 
     /**
@@ -121,12 +137,13 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function setIsUnsigned(string $isUnsigned)
     {
-        $this->isUnsigned = $isUnsigned;
+        $this->isUnsigned->setChanged(true);
+        $this->isUnsigned->setValue($isUnsigned);
     }
     
     public function hasTableName(): bool
     {
-        return isset($this->tableName);
+        return $this->tableName->hasBeenSet();
     }    
 
     /**
@@ -134,7 +151,7 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function getTableName() : string
     {
-        return $this->tableName;
+        return $this->tableName->getValue();
     }
 
     /**
@@ -142,12 +159,13 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function setTableName(string $tableName)
     {
-        $this->tableName = $tableName;
+        $this->tableName->setChanged(true);
+        $this->tableName->setValue($tableName);
     }
     
     public function hasCreateSql(): bool
     {
-        return isset($this->createSql);
+        return $this->createSql->hasBeenSet();
     }    
 
     /**
@@ -155,7 +173,7 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function getCreateSql() : string
     {
-        return $this->createSql;
+        return $this->createSql->getValue();
     }
 
     /**
@@ -163,12 +181,13 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function setCreateSql(string $createSql)
     {
-        $this->createSql = $createSql;
+        $this->createSql->setChanged(true);
+        $this->createSql->setValue($createSql);
     }
     
     public function hasVbMandatory(): bool
     {
-        return isset($this->vbMandatory);
+        return $this->vbMandatory->hasBeenSet();
     }    
 
     /**
@@ -176,7 +195,7 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function getVbMandatory() : string
     {
-        return $this->vbMandatory;
+        return $this->vbMandatory->getValue();
     }
 
     /**
@@ -184,12 +203,13 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function setVbMandatory(string $vbMandatory)
     {
-        $this->vbMandatory = $vbMandatory;
+        $this->vbMandatory->setChanged(true);
+        $this->vbMandatory->setValue($vbMandatory);
     }
     
     public function hasDefaultValue(): bool
     {
-        return isset($this->defaultValue);
+        return $this->defaultValue->hasBeenSet();
     }    
 
     /**
@@ -197,7 +217,7 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function getDefaultValue() : ?string
     {
-        return $this->defaultValue;
+        return $this->defaultValue->getValue();
     }
 
     /**
@@ -205,12 +225,13 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function setDefaultValue(?string $defaultValue)
     {
-        $this->defaultValue = $defaultValue;
+        $this->defaultValue->setChanged(true);
+        $this->defaultValue->setValue($defaultValue);
     }
     
     public function hasDictionary(): bool
     {
-        return isset($this->dictionary);
+        return $this->dictionary->hasBeenSet();
     }    
 
     /**
@@ -218,7 +239,7 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function getDictionary() : string
     {
-        return $this->dictionary;
+        return $this->dictionary->getValue();
     }
 
     /**
@@ -226,9 +247,9 @@ class GeneratedVbFieldsRecord implements Record {
      */
     public function setDictionary(string $dictionary)
     {
-        $this->dictionary = $dictionary;
+        $this->dictionary->setChanged(true);
+        $this->dictionary->setValue($dictionary);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

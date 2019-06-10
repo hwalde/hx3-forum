@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtProjectCategoryRecord implements Record {
     
-    /** @var $projectCategoryId int */
+    /** @var $projectCategoryId RecordValue */
     protected $projectCategoryId;
     
-    /** @var $projectId int */
+    /** @var $projectId RecordValue */
     protected $projectId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
+
+    public function __construct() {
+		$this->projectCategoryId = new RecordValue();
+		$this->projectId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->displayOrder = new RecordValue();
+    }
     
     public function hasProjectCategoryId(): bool
     {
-        return isset($this->projectCategoryId);
+        return $this->projectCategoryId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedPtProjectCategoryRecord implements Record {
      */
     public function getProjectCategoryId() : int
     {
-        return $this->projectCategoryId;
+        return $this->projectCategoryId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedPtProjectCategoryRecord implements Record {
      */
     public function setProjectCategoryId(int $projectCategoryId)
     {
-        $this->projectCategoryId = $projectCategoryId;
+        $this->projectCategoryId->setChanged(true);
+        $this->projectCategoryId->setValue($projectCategoryId);
     }
     
     public function hasProjectId(): bool
     {
-        return isset($this->projectId);
+        return $this->projectId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedPtProjectCategoryRecord implements Record {
      */
     public function getProjectId() : int
     {
-        return $this->projectId;
+        return $this->projectId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedPtProjectCategoryRecord implements Record {
      */
     public function setProjectId(int $projectId)
     {
-        $this->projectId = $projectId;
+        $this->projectId->setChanged(true);
+        $this->projectId->setValue($projectId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedPtProjectCategoryRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedPtProjectCategoryRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedPtProjectCategoryRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedPtProjectCategoryRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

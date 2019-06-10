@@ -9,52 +9,69 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedStyleRecord implements Record {
     
-    /** @var $styleId int */
+    /** @var $styleId RecordValue */
     protected $styleId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $parentId int */
+    /** @var $parentId RecordValue */
     protected $parentId;
     
-    /** @var $parentList string */
+    /** @var $parentList RecordValue */
     protected $parentList;
     
-    /** @var $templateList string */
+    /** @var $templateList RecordValue */
     protected $templateList;
     
-    /** @var $cssColors string */
+    /** @var $cssColors RecordValue */
     protected $cssColors;
     
-    /** @var $css string */
+    /** @var $css RecordValue */
     protected $css;
     
-    /** @var $styleVars string */
+    /** @var $styleVars RecordValue */
     protected $styleVars;
     
-    /** @var $replacements string */
+    /** @var $replacements RecordValue */
     protected $replacements;
     
-    /** @var $editorStyles string */
+    /** @var $editorStyles RecordValue */
     protected $editorStyles;
     
-    /** @var $userSelect int */
+    /** @var $userSelect RecordValue */
     protected $userSelect;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $importStyleId int */
+    /** @var $importStyleId RecordValue */
     protected $importStyleId;
+
+    public function __construct() {
+		$this->styleId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->parentId = new RecordValue();
+		$this->parentList = new RecordValue();
+		$this->templateList = new RecordValue();
+		$this->cssColors = new RecordValue();
+		$this->css = new RecordValue();
+		$this->styleVars = new RecordValue();
+		$this->replacements = new RecordValue();
+		$this->editorStyles = new RecordValue();
+		$this->userSelect = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->importStyleId = new RecordValue();
+    }
     
     public function hasStyleId(): bool
     {
-        return isset($this->styleId);
+        return $this->styleId->hasBeenSet();
     }    
 
     /**
@@ -62,7 +79,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getStyleId() : int
     {
-        return $this->styleId;
+        return $this->styleId->getValue();
     }
 
     /**
@@ -70,12 +87,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setStyleId(int $styleId)
     {
-        $this->styleId = $styleId;
+        $this->styleId->setChanged(true);
+        $this->styleId->setValue($styleId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -83,7 +101,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -91,12 +109,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasParentId(): bool
     {
-        return isset($this->parentId);
+        return $this->parentId->hasBeenSet();
     }    
 
     /**
@@ -104,7 +123,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getParentId() : int
     {
-        return $this->parentId;
+        return $this->parentId->getValue();
     }
 
     /**
@@ -112,12 +131,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setParentId(int $parentId)
     {
-        $this->parentId = $parentId;
+        $this->parentId->setChanged(true);
+        $this->parentId->setValue($parentId);
     }
     
     public function hasParentList(): bool
     {
-        return isset($this->parentList);
+        return $this->parentList->hasBeenSet();
     }    
 
     /**
@@ -125,7 +145,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getParentList() : string
     {
-        return $this->parentList;
+        return $this->parentList->getValue();
     }
 
     /**
@@ -133,12 +153,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setParentList(string $parentList)
     {
-        $this->parentList = $parentList;
+        $this->parentList->setChanged(true);
+        $this->parentList->setValue($parentList);
     }
     
     public function hasTemplateList(): bool
     {
-        return isset($this->templateList);
+        return $this->templateList->hasBeenSet();
     }    
 
     /**
@@ -146,7 +167,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getTemplateList() : string
     {
-        return $this->templateList;
+        return $this->templateList->getValue();
     }
 
     /**
@@ -154,12 +175,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setTemplateList(string $templateList)
     {
-        $this->templateList = $templateList;
+        $this->templateList->setChanged(true);
+        $this->templateList->setValue($templateList);
     }
     
     public function hasCssColors(): bool
     {
-        return isset($this->cssColors);
+        return $this->cssColors->hasBeenSet();
     }    
 
     /**
@@ -167,7 +189,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getCssColors() : string
     {
-        return $this->cssColors;
+        return $this->cssColors->getValue();
     }
 
     /**
@@ -175,12 +197,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setCssColors(string $cssColors)
     {
-        $this->cssColors = $cssColors;
+        $this->cssColors->setChanged(true);
+        $this->cssColors->setValue($cssColors);
     }
     
     public function hasCss(): bool
     {
-        return isset($this->css);
+        return $this->css->hasBeenSet();
     }    
 
     /**
@@ -188,7 +211,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getCss() : string
     {
-        return $this->css;
+        return $this->css->getValue();
     }
 
     /**
@@ -196,12 +219,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setCss(string $css)
     {
-        $this->css = $css;
+        $this->css->setChanged(true);
+        $this->css->setValue($css);
     }
     
     public function hasStyleVars(): bool
     {
-        return isset($this->styleVars);
+        return $this->styleVars->hasBeenSet();
     }    
 
     /**
@@ -209,7 +233,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getStyleVars() : string
     {
-        return $this->styleVars;
+        return $this->styleVars->getValue();
     }
 
     /**
@@ -217,12 +241,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setStyleVars(string $styleVars)
     {
-        $this->styleVars = $styleVars;
+        $this->styleVars->setChanged(true);
+        $this->styleVars->setValue($styleVars);
     }
     
     public function hasReplacements(): bool
     {
-        return isset($this->replacements);
+        return $this->replacements->hasBeenSet();
     }    
 
     /**
@@ -230,7 +255,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getReplacements() : string
     {
-        return $this->replacements;
+        return $this->replacements->getValue();
     }
 
     /**
@@ -238,12 +263,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setReplacements(string $replacements)
     {
-        $this->replacements = $replacements;
+        $this->replacements->setChanged(true);
+        $this->replacements->setValue($replacements);
     }
     
     public function hasEditorStyles(): bool
     {
-        return isset($this->editorStyles);
+        return $this->editorStyles->hasBeenSet();
     }    
 
     /**
@@ -251,7 +277,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getEditorStyles() : string
     {
-        return $this->editorStyles;
+        return $this->editorStyles->getValue();
     }
 
     /**
@@ -259,12 +285,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setEditorStyles(string $editorStyles)
     {
-        $this->editorStyles = $editorStyles;
+        $this->editorStyles->setChanged(true);
+        $this->editorStyles->setValue($editorStyles);
     }
     
     public function hasUserSelect(): bool
     {
-        return isset($this->userSelect);
+        return $this->userSelect->hasBeenSet();
     }    
 
     /**
@@ -272,7 +299,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getUserSelect() : int
     {
-        return $this->userSelect;
+        return $this->userSelect->getValue();
     }
 
     /**
@@ -280,12 +307,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setUserSelect(int $userSelect)
     {
-        $this->userSelect = $userSelect;
+        $this->userSelect->setChanged(true);
+        $this->userSelect->setValue($userSelect);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -293,7 +321,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -301,12 +329,13 @@ class GeneratedStyleRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasImportStyleId(): bool
     {
-        return isset($this->importStyleId);
+        return $this->importStyleId->hasBeenSet();
     }    
 
     /**
@@ -314,7 +343,7 @@ class GeneratedStyleRecord implements Record {
      */
     public function getImportStyleId() : int
     {
-        return $this->importStyleId;
+        return $this->importStyleId->getValue();
     }
 
     /**
@@ -322,9 +351,9 @@ class GeneratedStyleRecord implements Record {
      */
     public function setImportStyleId(int $importStyleId)
     {
-        $this->importStyleId = $importStyleId;
+        $this->importStyleId->setChanged(true);
+        $this->importStyleId->setValue($importStyleId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

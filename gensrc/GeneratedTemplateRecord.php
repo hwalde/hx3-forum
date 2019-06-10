@@ -9,43 +9,57 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedTemplateRecord implements Record {
     
-    /** @var $templateId int */
+    /** @var $templateId RecordValue */
     protected $templateId;
     
-    /** @var $styleId int */
+    /** @var $styleId RecordValue */
     protected $styleId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $template string */
+    /** @var $template RecordValue */
     protected $template;
     
-    /** @var $templateUn string */
+    /** @var $templateUn RecordValue */
     protected $templateUn;
     
-    /** @var $templateType string */
+    /** @var $templateType RecordValue */
     protected $templateType;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
     
-    /** @var $version string */
+    /** @var $version RecordValue */
     protected $version;
     
-    /** @var $product string */
+    /** @var $product RecordValue */
     protected $product;
+
+    public function __construct() {
+		$this->templateId = new RecordValue();
+		$this->styleId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->template = new RecordValue();
+		$this->templateUn = new RecordValue();
+		$this->templateType = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->userName = new RecordValue();
+		$this->version = new RecordValue();
+		$this->product = new RecordValue();
+    }
     
     public function hasTemplateId(): bool
     {
-        return isset($this->templateId);
+        return $this->templateId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +67,7 @@ class GeneratedTemplateRecord implements Record {
      */
     public function getTemplateId() : int
     {
-        return $this->templateId;
+        return $this->templateId->getValue();
     }
 
     /**
@@ -61,12 +75,13 @@ class GeneratedTemplateRecord implements Record {
      */
     public function setTemplateId(int $templateId)
     {
-        $this->templateId = $templateId;
+        $this->templateId->setChanged(true);
+        $this->templateId->setValue($templateId);
     }
     
     public function hasStyleId(): bool
     {
-        return isset($this->styleId);
+        return $this->styleId->hasBeenSet();
     }    
 
     /**
@@ -74,7 +89,7 @@ class GeneratedTemplateRecord implements Record {
      */
     public function getStyleId() : int
     {
-        return $this->styleId;
+        return $this->styleId->getValue();
     }
 
     /**
@@ -82,12 +97,13 @@ class GeneratedTemplateRecord implements Record {
      */
     public function setStyleId(int $styleId)
     {
-        $this->styleId = $styleId;
+        $this->styleId->setChanged(true);
+        $this->styleId->setValue($styleId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -95,7 +111,7 @@ class GeneratedTemplateRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -103,12 +119,13 @@ class GeneratedTemplateRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasTemplate(): bool
     {
-        return isset($this->template);
+        return $this->template->hasBeenSet();
     }    
 
     /**
@@ -116,7 +133,7 @@ class GeneratedTemplateRecord implements Record {
      */
     public function getTemplate() : string
     {
-        return $this->template;
+        return $this->template->getValue();
     }
 
     /**
@@ -124,12 +141,13 @@ class GeneratedTemplateRecord implements Record {
      */
     public function setTemplate(string $template)
     {
-        $this->template = $template;
+        $this->template->setChanged(true);
+        $this->template->setValue($template);
     }
     
     public function hasTemplateUn(): bool
     {
-        return isset($this->templateUn);
+        return $this->templateUn->hasBeenSet();
     }    
 
     /**
@@ -137,7 +155,7 @@ class GeneratedTemplateRecord implements Record {
      */
     public function getTemplateUn() : string
     {
-        return $this->templateUn;
+        return $this->templateUn->getValue();
     }
 
     /**
@@ -145,12 +163,13 @@ class GeneratedTemplateRecord implements Record {
      */
     public function setTemplateUn(string $templateUn)
     {
-        $this->templateUn = $templateUn;
+        $this->templateUn->setChanged(true);
+        $this->templateUn->setValue($templateUn);
     }
     
     public function hasTemplateType(): bool
     {
-        return isset($this->templateType);
+        return $this->templateType->hasBeenSet();
     }    
 
     /**
@@ -158,7 +177,7 @@ class GeneratedTemplateRecord implements Record {
      */
     public function getTemplateType() : string
     {
-        return $this->templateType;
+        return $this->templateType->getValue();
     }
 
     /**
@@ -166,12 +185,13 @@ class GeneratedTemplateRecord implements Record {
      */
     public function setTemplateType(string $templateType)
     {
-        $this->templateType = $templateType;
+        $this->templateType->setChanged(true);
+        $this->templateType->setValue($templateType);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -179,7 +199,7 @@ class GeneratedTemplateRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -187,12 +207,13 @@ class GeneratedTemplateRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -200,7 +221,7 @@ class GeneratedTemplateRecord implements Record {
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -208,12 +229,13 @@ class GeneratedTemplateRecord implements Record {
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
     
     public function hasVersion(): bool
     {
-        return isset($this->version);
+        return $this->version->hasBeenSet();
     }    
 
     /**
@@ -221,7 +243,7 @@ class GeneratedTemplateRecord implements Record {
      */
     public function getVersion() : string
     {
-        return $this->version;
+        return $this->version->getValue();
     }
 
     /**
@@ -229,12 +251,13 @@ class GeneratedTemplateRecord implements Record {
      */
     public function setVersion(string $version)
     {
-        $this->version = $version;
+        $this->version->setChanged(true);
+        $this->version->setValue($version);
     }
     
     public function hasProduct(): bool
     {
-        return isset($this->product);
+        return $this->product->hasBeenSet();
     }    
 
     /**
@@ -242,7 +265,7 @@ class GeneratedTemplateRecord implements Record {
      */
     public function getProduct() : string
     {
-        return $this->product;
+        return $this->product->getValue();
     }
 
     /**
@@ -250,9 +273,9 @@ class GeneratedTemplateRecord implements Record {
      */
     public function setProduct(string $product)
     {
-        $this->product = $product;
+        $this->product->setChanged(true);
+        $this->product->setValue($product);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

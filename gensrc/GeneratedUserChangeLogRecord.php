@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserChangeLogRecord implements Record {
     
-    /** @var $changeId int */
+    /** @var $changeId RecordValue */
     protected $changeId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $fieldName string */
+    /** @var $fieldName RecordValue */
     protected $fieldName;
     
-    /** @var $newValue string */
+    /** @var $newValue RecordValue */
     protected $newValue;
     
-    /** @var $oldValue string */
+    /** @var $oldValue RecordValue */
     protected $oldValue;
     
-    /** @var $adminId int */
+    /** @var $adminId RecordValue */
     protected $adminId;
     
-    /** @var $changeTime int */
+    /** @var $changeTime RecordValue */
     protected $changeTime;
     
-    /** @var $changeUnIq string */
+    /** @var $changeUnIq RecordValue */
     protected $changeUnIq;
+
+    public function __construct() {
+		$this->changeId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->fieldName = new RecordValue();
+		$this->newValue = new RecordValue();
+		$this->oldValue = new RecordValue();
+		$this->adminId = new RecordValue();
+		$this->changeTime = new RecordValue();
+		$this->changeUnIq = new RecordValue();
+    }
     
     public function hasChangeId(): bool
     {
-        return isset($this->changeId);
+        return $this->changeId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function getChangeId() : int
     {
-        return $this->changeId;
+        return $this->changeId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function setChangeId(int $changeId)
     {
-        $this->changeId = $changeId;
+        $this->changeId->setChanged(true);
+        $this->changeId->setValue($changeId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasFieldName(): bool
     {
-        return isset($this->fieldName);
+        return $this->fieldName->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function getFieldName() : string
     {
-        return $this->fieldName;
+        return $this->fieldName->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function setFieldName(string $fieldName)
     {
-        $this->fieldName = $fieldName;
+        $this->fieldName->setChanged(true);
+        $this->fieldName->setValue($fieldName);
     }
     
     public function hasNewValue(): bool
     {
-        return isset($this->newValue);
+        return $this->newValue->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function getNewValue() : string
     {
-        return $this->newValue;
+        return $this->newValue->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function setNewValue(string $newValue)
     {
-        $this->newValue = $newValue;
+        $this->newValue->setChanged(true);
+        $this->newValue->setValue($newValue);
     }
     
     public function hasOldValue(): bool
     {
-        return isset($this->oldValue);
+        return $this->oldValue->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function getOldValue() : string
     {
-        return $this->oldValue;
+        return $this->oldValue->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function setOldValue(string $oldValue)
     {
-        $this->oldValue = $oldValue;
+        $this->oldValue->setChanged(true);
+        $this->oldValue->setValue($oldValue);
     }
     
     public function hasAdminId(): bool
     {
-        return isset($this->adminId);
+        return $this->adminId->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function getAdminId() : int
     {
-        return $this->adminId;
+        return $this->adminId->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function setAdminId(int $adminId)
     {
-        $this->adminId = $adminId;
+        $this->adminId->setChanged(true);
+        $this->adminId->setValue($adminId);
     }
     
     public function hasChangeTime(): bool
     {
-        return isset($this->changeTime);
+        return $this->changeTime->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function getChangeTime() : int
     {
-        return $this->changeTime;
+        return $this->changeTime->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function setChangeTime(int $changeTime)
     {
-        $this->changeTime = $changeTime;
+        $this->changeTime->setChanged(true);
+        $this->changeTime->setValue($changeTime);
     }
     
     public function hasChangeUnIq(): bool
     {
-        return isset($this->changeUnIq);
+        return $this->changeUnIq->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function getChangeUnIq() : string
     {
-        return $this->changeUnIq;
+        return $this->changeUnIq->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedUserChangeLogRecord implements Record {
      */
     public function setChangeUnIq(string $changeUnIq)
     {
-        $this->changeUnIq = $changeUnIq;
+        $this->changeUnIq->setChanged(true);
+        $this->changeUnIq->setValue($changeUnIq);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

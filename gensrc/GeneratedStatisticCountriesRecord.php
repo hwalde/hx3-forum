@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedStatisticCountriesRecord implements Record {
     
-    /** @var $id int */
+    /** @var $id RecordValue */
     protected $id;
     
-    /** @var $countryCode string */
+    /** @var $countryCode RecordValue */
     protected $countryCode;
     
-    /** @var $countryName string */
+    /** @var $countryName RecordValue */
     protected $countryName;
     
-    /** @var $flagLink string */
+    /** @var $flagLink RecordValue */
     protected $flagLink;
     
-    /** @var $balkenLink string */
+    /** @var $balkenLink RecordValue */
     protected $balkenLink;
     
-    /** @var $hostCounter int */
+    /** @var $hostCounter RecordValue */
     protected $hostCounter;
     
-    /** @var $browserLanguageCounter int */
+    /** @var $browserLanguageCounter RecordValue */
     protected $browserLanguageCounter;
+
+    public function __construct() {
+		$this->id = new RecordValue();
+		$this->countryCode = new RecordValue();
+		$this->countryName = new RecordValue();
+		$this->flagLink = new RecordValue();
+		$this->balkenLink = new RecordValue();
+		$this->hostCounter = new RecordValue();
+		$this->browserLanguageCounter = new RecordValue();
+    }
     
     public function hasId(): bool
     {
-        return isset($this->id);
+        return $this->id->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function getId() : int
     {
-        return $this->id;
+        return $this->id->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function setId(int $id)
     {
-        $this->id = $id;
+        $this->id->setChanged(true);
+        $this->id->setValue($id);
     }
     
     public function hasCountryCode(): bool
     {
-        return isset($this->countryCode);
+        return $this->countryCode->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function getCountryCode() : string
     {
-        return $this->countryCode;
+        return $this->countryCode->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function setCountryCode(string $countryCode)
     {
-        $this->countryCode = $countryCode;
+        $this->countryCode->setChanged(true);
+        $this->countryCode->setValue($countryCode);
     }
     
     public function hasCountryName(): bool
     {
-        return isset($this->countryName);
+        return $this->countryName->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function getCountryName() : string
     {
-        return $this->countryName;
+        return $this->countryName->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function setCountryName(string $countryName)
     {
-        $this->countryName = $countryName;
+        $this->countryName->setChanged(true);
+        $this->countryName->setValue($countryName);
     }
     
     public function hasFlagLink(): bool
     {
-        return isset($this->flagLink);
+        return $this->flagLink->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function getFlagLink() : string
     {
-        return $this->flagLink;
+        return $this->flagLink->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function setFlagLink(string $flagLink)
     {
-        $this->flagLink = $flagLink;
+        $this->flagLink->setChanged(true);
+        $this->flagLink->setValue($flagLink);
     }
     
     public function hasBalkenLink(): bool
     {
-        return isset($this->balkenLink);
+        return $this->balkenLink->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function getBalkenLink() : string
     {
-        return $this->balkenLink;
+        return $this->balkenLink->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function setBalkenLink(string $balkenLink)
     {
-        $this->balkenLink = $balkenLink;
+        $this->balkenLink->setChanged(true);
+        $this->balkenLink->setValue($balkenLink);
     }
     
     public function hasHostCounter(): bool
     {
-        return isset($this->hostCounter);
+        return $this->hostCounter->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function getHostCounter() : int
     {
-        return $this->hostCounter;
+        return $this->hostCounter->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function setHostCounter(int $hostCounter)
     {
-        $this->hostCounter = $hostCounter;
+        $this->hostCounter->setChanged(true);
+        $this->hostCounter->setValue($hostCounter);
     }
     
     public function hasBrowserLanguageCounter(): bool
     {
-        return isset($this->browserLanguageCounter);
+        return $this->browserLanguageCounter->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function getBrowserLanguageCounter() : int
     {
-        return $this->browserLanguageCounter;
+        return $this->browserLanguageCounter->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedStatisticCountriesRecord implements Record {
      */
     public function setBrowserLanguageCounter(int $browserLanguageCounter)
     {
-        $this->browserLanguageCounter = $browserLanguageCounter;
+        $this->browserLanguageCounter->setChanged(true);
+        $this->browserLanguageCounter->setValue($browserLanguageCounter);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

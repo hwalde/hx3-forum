@@ -9,37 +9,49 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserTextFieldRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $subFolders string */
+    /** @var $subFolders RecordValue */
     protected $subFolders;
     
-    /** @var $pmFolders string */
+    /** @var $pmFolders RecordValue */
     protected $pmFolders;
     
-    /** @var $buddyList string */
+    /** @var $buddyList RecordValue */
     protected $buddyList;
     
-    /** @var $ignoreList string */
+    /** @var $ignoreList RecordValue */
     protected $ignoreList;
     
-    /** @var $signature string */
+    /** @var $signature RecordValue */
     protected $signature;
     
-    /** @var $searchPrefs string */
+    /** @var $searchPrefs RecordValue */
     protected $searchPrefs;
     
-    /** @var $rank string */
+    /** @var $rank RecordValue */
     protected $rank;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->subFolders = new RecordValue();
+		$this->pmFolders = new RecordValue();
+		$this->buddyList = new RecordValue();
+		$this->ignoreList = new RecordValue();
+		$this->signature = new RecordValue();
+		$this->searchPrefs = new RecordValue();
+		$this->rank = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -47,7 +59,7 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -55,12 +67,13 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasSubFolders(): bool
     {
-        return isset($this->subFolders);
+        return $this->subFolders->hasBeenSet();
     }    
 
     /**
@@ -68,7 +81,7 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function getSubFolders() : string
     {
-        return $this->subFolders;
+        return $this->subFolders->getValue();
     }
 
     /**
@@ -76,12 +89,13 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function setSubFolders(string $subFolders)
     {
-        $this->subFolders = $subFolders;
+        $this->subFolders->setChanged(true);
+        $this->subFolders->setValue($subFolders);
     }
     
     public function hasPmFolders(): bool
     {
-        return isset($this->pmFolders);
+        return $this->pmFolders->hasBeenSet();
     }    
 
     /**
@@ -89,7 +103,7 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function getPmFolders() : string
     {
-        return $this->pmFolders;
+        return $this->pmFolders->getValue();
     }
 
     /**
@@ -97,12 +111,13 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function setPmFolders(string $pmFolders)
     {
-        $this->pmFolders = $pmFolders;
+        $this->pmFolders->setChanged(true);
+        $this->pmFolders->setValue($pmFolders);
     }
     
     public function hasBuddyList(): bool
     {
-        return isset($this->buddyList);
+        return $this->buddyList->hasBeenSet();
     }    
 
     /**
@@ -110,7 +125,7 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function getBuddyList() : string
     {
-        return $this->buddyList;
+        return $this->buddyList->getValue();
     }
 
     /**
@@ -118,12 +133,13 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function setBuddyList(string $buddyList)
     {
-        $this->buddyList = $buddyList;
+        $this->buddyList->setChanged(true);
+        $this->buddyList->setValue($buddyList);
     }
     
     public function hasIgnoreList(): bool
     {
-        return isset($this->ignoreList);
+        return $this->ignoreList->hasBeenSet();
     }    
 
     /**
@@ -131,7 +147,7 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function getIgnoreList() : string
     {
-        return $this->ignoreList;
+        return $this->ignoreList->getValue();
     }
 
     /**
@@ -139,12 +155,13 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function setIgnoreList(string $ignoreList)
     {
-        $this->ignoreList = $ignoreList;
+        $this->ignoreList->setChanged(true);
+        $this->ignoreList->setValue($ignoreList);
     }
     
     public function hasSignature(): bool
     {
-        return isset($this->signature);
+        return $this->signature->hasBeenSet();
     }    
 
     /**
@@ -152,7 +169,7 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function getSignature() : string
     {
-        return $this->signature;
+        return $this->signature->getValue();
     }
 
     /**
@@ -160,12 +177,13 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function setSignature(string $signature)
     {
-        $this->signature = $signature;
+        $this->signature->setChanged(true);
+        $this->signature->setValue($signature);
     }
     
     public function hasSearchPrefs(): bool
     {
-        return isset($this->searchPrefs);
+        return $this->searchPrefs->hasBeenSet();
     }    
 
     /**
@@ -173,7 +191,7 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function getSearchPrefs() : string
     {
-        return $this->searchPrefs;
+        return $this->searchPrefs->getValue();
     }
 
     /**
@@ -181,12 +199,13 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function setSearchPrefs(string $searchPrefs)
     {
-        $this->searchPrefs = $searchPrefs;
+        $this->searchPrefs->setChanged(true);
+        $this->searchPrefs->setValue($searchPrefs);
     }
     
     public function hasRank(): bool
     {
-        return isset($this->rank);
+        return $this->rank->hasBeenSet();
     }    
 
     /**
@@ -194,7 +213,7 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function getRank() : string
     {
-        return $this->rank;
+        return $this->rank->getValue();
     }
 
     /**
@@ -202,9 +221,9 @@ class GeneratedUserTextFieldRecord implements Record {
      */
     public function setRank(string $rank)
     {
-        $this->rank = $rank;
+        $this->rank->setChanged(true);
+        $this->rank->setValue($rank);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

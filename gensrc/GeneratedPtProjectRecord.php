@@ -9,43 +9,57 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtProjectRecord implements Record {
     
-    /** @var $projectId int */
+    /** @var $projectId RecordValue */
     protected $projectId;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $titleClean string */
+    /** @var $titleClean RecordValue */
     protected $titleClean;
     
-    /** @var $summary string */
+    /** @var $summary RecordValue */
     protected $summary;
     
-    /** @var $summaryClean string */
+    /** @var $summaryClean RecordValue */
     protected $summaryClean;
     
-    /** @var $description string */
+    /** @var $description RecordValue */
     protected $description;
     
-    /** @var $options int */
+    /** @var $options RecordValue */
     protected $options;
     
-    /** @var $afterForumIds string */
+    /** @var $afterForumIds RecordValue */
     protected $afterForumIds;
     
-    /** @var $forumTitle string */
+    /** @var $forumTitle RecordValue */
     protected $forumTitle;
+
+    public function __construct() {
+		$this->projectId = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->title = new RecordValue();
+		$this->titleClean = new RecordValue();
+		$this->summary = new RecordValue();
+		$this->summaryClean = new RecordValue();
+		$this->description = new RecordValue();
+		$this->options = new RecordValue();
+		$this->afterForumIds = new RecordValue();
+		$this->forumTitle = new RecordValue();
+    }
     
     public function hasProjectId(): bool
     {
-        return isset($this->projectId);
+        return $this->projectId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +67,7 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function getProjectId() : int
     {
-        return $this->projectId;
+        return $this->projectId->getValue();
     }
 
     /**
@@ -61,12 +75,13 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function setProjectId(int $projectId)
     {
-        $this->projectId = $projectId;
+        $this->projectId->setChanged(true);
+        $this->projectId->setValue($projectId);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -74,7 +89,7 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -82,12 +97,13 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -95,7 +111,7 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -103,12 +119,13 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasTitleClean(): bool
     {
-        return isset($this->titleClean);
+        return $this->titleClean->hasBeenSet();
     }    
 
     /**
@@ -116,7 +133,7 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function getTitleClean() : string
     {
-        return $this->titleClean;
+        return $this->titleClean->getValue();
     }
 
     /**
@@ -124,12 +141,13 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function setTitleClean(string $titleClean)
     {
-        $this->titleClean = $titleClean;
+        $this->titleClean->setChanged(true);
+        $this->titleClean->setValue($titleClean);
     }
     
     public function hasSummary(): bool
     {
-        return isset($this->summary);
+        return $this->summary->hasBeenSet();
     }    
 
     /**
@@ -137,7 +155,7 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function getSummary() : string
     {
-        return $this->summary;
+        return $this->summary->getValue();
     }
 
     /**
@@ -145,12 +163,13 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function setSummary(string $summary)
     {
-        $this->summary = $summary;
+        $this->summary->setChanged(true);
+        $this->summary->setValue($summary);
     }
     
     public function hasSummaryClean(): bool
     {
-        return isset($this->summaryClean);
+        return $this->summaryClean->hasBeenSet();
     }    
 
     /**
@@ -158,7 +177,7 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function getSummaryClean() : string
     {
-        return $this->summaryClean;
+        return $this->summaryClean->getValue();
     }
 
     /**
@@ -166,12 +185,13 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function setSummaryClean(string $summaryClean)
     {
-        $this->summaryClean = $summaryClean;
+        $this->summaryClean->setChanged(true);
+        $this->summaryClean->setValue($summaryClean);
     }
     
     public function hasDescription(): bool
     {
-        return isset($this->description);
+        return $this->description->hasBeenSet();
     }    
 
     /**
@@ -179,7 +199,7 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function getDescription() : string
     {
-        return $this->description;
+        return $this->description->getValue();
     }
 
     /**
@@ -187,12 +207,13 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function setDescription(string $description)
     {
-        $this->description = $description;
+        $this->description->setChanged(true);
+        $this->description->setValue($description);
     }
     
     public function hasOptions(): bool
     {
-        return isset($this->options);
+        return $this->options->hasBeenSet();
     }    
 
     /**
@@ -200,7 +221,7 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function getOptions() : int
     {
-        return $this->options;
+        return $this->options->getValue();
     }
 
     /**
@@ -208,12 +229,13 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function setOptions(int $options)
     {
-        $this->options = $options;
+        $this->options->setChanged(true);
+        $this->options->setValue($options);
     }
     
     public function hasAfterForumIds(): bool
     {
-        return isset($this->afterForumIds);
+        return $this->afterForumIds->hasBeenSet();
     }    
 
     /**
@@ -221,7 +243,7 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function getAfterForumIds() : string
     {
-        return $this->afterForumIds;
+        return $this->afterForumIds->getValue();
     }
 
     /**
@@ -229,12 +251,13 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function setAfterForumIds(string $afterForumIds)
     {
-        $this->afterForumIds = $afterForumIds;
+        $this->afterForumIds->setChanged(true);
+        $this->afterForumIds->setValue($afterForumIds);
     }
     
     public function hasForumTitle(): bool
     {
-        return isset($this->forumTitle);
+        return $this->forumTitle->hasBeenSet();
     }    
 
     /**
@@ -242,7 +265,7 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function getForumTitle() : string
     {
-        return $this->forumTitle;
+        return $this->forumTitle->getValue();
     }
 
     /**
@@ -250,9 +273,9 @@ class GeneratedPtProjectRecord implements Record {
      */
     public function setForumTitle(string $forumTitle)
     {
-        $this->forumTitle = $forumTitle;
+        $this->forumTitle->setChanged(true);
+        $this->forumTitle->setValue($forumTitle);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

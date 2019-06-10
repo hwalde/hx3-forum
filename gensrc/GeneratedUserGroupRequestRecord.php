@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserGroupRequestRecord implements Record {
     
-    /** @var $usergrouprequestid int */
+    /** @var $usergrouprequestid RecordValue */
     protected $usergrouprequestid;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $reason string */
+    /** @var $reason RecordValue */
     protected $reason;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->usergrouprequestid = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->reason = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasUsergrouprequestid(): bool
     {
-        return isset($this->usergrouprequestid);
+        return $this->usergrouprequestid->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedUserGroupRequestRecord implements Record {
      */
     public function getUsergrouprequestid() : int
     {
-        return $this->usergrouprequestid;
+        return $this->usergrouprequestid->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedUserGroupRequestRecord implements Record {
      */
     public function setUsergrouprequestid(int $usergrouprequestid)
     {
-        $this->usergrouprequestid = $usergrouprequestid;
+        $this->usergrouprequestid->setChanged(true);
+        $this->usergrouprequestid->setValue($usergrouprequestid);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedUserGroupRequestRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedUserGroupRequestRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedUserGroupRequestRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedUserGroupRequestRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasReason(): bool
     {
-        return isset($this->reason);
+        return $this->reason->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedUserGroupRequestRecord implements Record {
      */
     public function getReason() : string
     {
-        return $this->reason;
+        return $this->reason->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedUserGroupRequestRecord implements Record {
      */
     public function setReason(string $reason)
     {
-        $this->reason = $reason;
+        $this->reason->setChanged(true);
+        $this->reason->setValue($reason);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedUserGroupRequestRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedUserGroupRequestRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

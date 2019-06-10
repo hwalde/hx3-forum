@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedStatisticRefererRecord implements Record {
     
-    /** @var $id int */
+    /** @var $id RecordValue */
     protected $id;
     
-    /** @var $referer string */
+    /** @var $referer RecordValue */
     protected $referer;
     
-    /** @var $zaehler int */
+    /** @var $zaehler RecordValue */
     protected $zaehler;
+
+    public function __construct() {
+		$this->id = new RecordValue();
+		$this->referer = new RecordValue();
+		$this->zaehler = new RecordValue();
+    }
     
     public function hasId(): bool
     {
-        return isset($this->id);
+        return $this->id->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedStatisticRefererRecord implements Record {
      */
     public function getId() : int
     {
-        return $this->id;
+        return $this->id->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedStatisticRefererRecord implements Record {
      */
     public function setId(int $id)
     {
-        $this->id = $id;
+        $this->id->setChanged(true);
+        $this->id->setValue($id);
     }
     
     public function hasReferer(): bool
     {
-        return isset($this->referer);
+        return $this->referer->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedStatisticRefererRecord implements Record {
      */
     public function getReferer() : string
     {
-        return $this->referer;
+        return $this->referer->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedStatisticRefererRecord implements Record {
      */
     public function setReferer(string $referer)
     {
-        $this->referer = $referer;
+        $this->referer->setChanged(true);
+        $this->referer->setValue($referer);
     }
     
     public function hasZaehler(): bool
     {
-        return isset($this->zaehler);
+        return $this->zaehler->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedStatisticRefererRecord implements Record {
      */
     public function getZaehler() : int
     {
-        return $this->zaehler;
+        return $this->zaehler->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedStatisticRefererRecord implements Record {
      */
     public function setZaehler(int $zaehler)
     {
-        $this->zaehler = $zaehler;
+        $this->zaehler->setChanged(true);
+        $this->zaehler->setValue($zaehler);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

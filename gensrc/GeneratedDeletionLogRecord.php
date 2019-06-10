@@ -9,31 +9,41 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedDeletionLogRecord implements Record {
     
-    /** @var $primaryId int */
+    /** @var $primaryId RecordValue */
     protected $primaryId;
     
-    /** @var $type string */
+    /** @var $type RecordValue */
     protected $type;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $userName string */
+    /** @var $userName RecordValue */
     protected $userName;
     
-    /** @var $reason string */
+    /** @var $reason RecordValue */
     protected $reason;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->primaryId = new RecordValue();
+		$this->type = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->userName = new RecordValue();
+		$this->reason = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasPrimaryId(): bool
     {
-        return isset($this->primaryId);
+        return $this->primaryId->hasBeenSet();
     }    
 
     /**
@@ -41,7 +51,7 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function getPrimaryId() : int
     {
-        return $this->primaryId;
+        return $this->primaryId->getValue();
     }
 
     /**
@@ -49,12 +59,13 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function setPrimaryId(int $primaryId)
     {
-        $this->primaryId = $primaryId;
+        $this->primaryId->setChanged(true);
+        $this->primaryId->setValue($primaryId);
     }
     
     public function hasType(): bool
     {
-        return isset($this->type);
+        return $this->type->hasBeenSet();
     }    
 
     /**
@@ -62,7 +73,7 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function getType() : string
     {
-        return $this->type;
+        return $this->type->getValue();
     }
 
     /**
@@ -70,12 +81,13 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function setType(string $type)
     {
-        $this->type = $type;
+        $this->type->setChanged(true);
+        $this->type->setValue($type);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -83,7 +95,7 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -91,12 +103,13 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasUserName(): bool
     {
-        return isset($this->userName);
+        return $this->userName->hasBeenSet();
     }    
 
     /**
@@ -104,7 +117,7 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function getUserName() : string
     {
-        return $this->userName;
+        return $this->userName->getValue();
     }
 
     /**
@@ -112,12 +125,13 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function setUserName(string $userName)
     {
-        $this->userName = $userName;
+        $this->userName->setChanged(true);
+        $this->userName->setValue($userName);
     }
     
     public function hasReason(): bool
     {
-        return isset($this->reason);
+        return $this->reason->hasBeenSet();
     }    
 
     /**
@@ -125,7 +139,7 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function getReason() : string
     {
-        return $this->reason;
+        return $this->reason->getValue();
     }
 
     /**
@@ -133,12 +147,13 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function setReason(string $reason)
     {
-        $this->reason = $reason;
+        $this->reason->setChanged(true);
+        $this->reason->setValue($reason);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -146,7 +161,7 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -154,9 +169,9 @@ class GeneratedDeletionLogRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

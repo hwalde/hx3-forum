@@ -9,17 +9,22 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedThreadViewsRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $threadId int */
+    /** @var $threadId RecordValue */
     protected $threadId;
+
+    public function __construct() {
+		$this->threadId = new RecordValue();
+    }
     
     public function hasThreadId(): bool
     {
-        return isset($this->threadId);
+        return $this->threadId->hasBeenSet();
     }    
 
     /**
@@ -27,7 +32,7 @@ class GeneratedThreadViewsRecord extends AbstractUpdateableRecord implements Upd
      */
     public function getThreadId() : int
     {
-        return $this->threadId;
+        return $this->threadId->getValue();
     }
 
     /**
@@ -35,9 +40,9 @@ class GeneratedThreadViewsRecord extends AbstractUpdateableRecord implements Upd
      */
     public function setThreadId(int $threadId)
     {
-        $this->threadId = $threadId;
+        $this->threadId->setChanged(true);
+        $this->threadId->setValue($threadId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

@@ -9,40 +9,53 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserBanRecord implements Record {
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $displayGroupId int */
+    /** @var $displayGroupId RecordValue */
     protected $displayGroupId;
     
-    /** @var $userTitle string */
+    /** @var $userTitle RecordValue */
     protected $userTitle;
     
-    /** @var $customTitle int */
+    /** @var $customTitle RecordValue */
     protected $customTitle;
     
-    /** @var $adminId int */
+    /** @var $adminId RecordValue */
     protected $adminId;
     
-    /** @var $bandate int */
+    /** @var $bandate RecordValue */
     protected $bandate;
     
-    /** @var $liftDate int */
+    /** @var $liftDate RecordValue */
     protected $liftDate;
     
-    /** @var $reason string */
+    /** @var $reason RecordValue */
     protected $reason;
+
+    public function __construct() {
+		$this->userId = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->displayGroupId = new RecordValue();
+		$this->userTitle = new RecordValue();
+		$this->customTitle = new RecordValue();
+		$this->adminId = new RecordValue();
+		$this->bandate = new RecordValue();
+		$this->liftDate = new RecordValue();
+		$this->reason = new RecordValue();
+    }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +63,7 @@ class GeneratedUserBanRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -58,12 +71,13 @@ class GeneratedUserBanRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -71,7 +85,7 @@ class GeneratedUserBanRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -79,12 +93,13 @@ class GeneratedUserBanRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasDisplayGroupId(): bool
     {
-        return isset($this->displayGroupId);
+        return $this->displayGroupId->hasBeenSet();
     }    
 
     /**
@@ -92,7 +107,7 @@ class GeneratedUserBanRecord implements Record {
      */
     public function getDisplayGroupId() : int
     {
-        return $this->displayGroupId;
+        return $this->displayGroupId->getValue();
     }
 
     /**
@@ -100,12 +115,13 @@ class GeneratedUserBanRecord implements Record {
      */
     public function setDisplayGroupId(int $displayGroupId)
     {
-        $this->displayGroupId = $displayGroupId;
+        $this->displayGroupId->setChanged(true);
+        $this->displayGroupId->setValue($displayGroupId);
     }
     
     public function hasUserTitle(): bool
     {
-        return isset($this->userTitle);
+        return $this->userTitle->hasBeenSet();
     }    
 
     /**
@@ -113,7 +129,7 @@ class GeneratedUserBanRecord implements Record {
      */
     public function getUserTitle() : string
     {
-        return $this->userTitle;
+        return $this->userTitle->getValue();
     }
 
     /**
@@ -121,12 +137,13 @@ class GeneratedUserBanRecord implements Record {
      */
     public function setUserTitle(string $userTitle)
     {
-        $this->userTitle = $userTitle;
+        $this->userTitle->setChanged(true);
+        $this->userTitle->setValue($userTitle);
     }
     
     public function hasCustomTitle(): bool
     {
-        return isset($this->customTitle);
+        return $this->customTitle->hasBeenSet();
     }    
 
     /**
@@ -134,7 +151,7 @@ class GeneratedUserBanRecord implements Record {
      */
     public function getCustomTitle() : int
     {
-        return $this->customTitle;
+        return $this->customTitle->getValue();
     }
 
     /**
@@ -142,12 +159,13 @@ class GeneratedUserBanRecord implements Record {
      */
     public function setCustomTitle(int $customTitle)
     {
-        $this->customTitle = $customTitle;
+        $this->customTitle->setChanged(true);
+        $this->customTitle->setValue($customTitle);
     }
     
     public function hasAdminId(): bool
     {
-        return isset($this->adminId);
+        return $this->adminId->hasBeenSet();
     }    
 
     /**
@@ -155,7 +173,7 @@ class GeneratedUserBanRecord implements Record {
      */
     public function getAdminId() : int
     {
-        return $this->adminId;
+        return $this->adminId->getValue();
     }
 
     /**
@@ -163,12 +181,13 @@ class GeneratedUserBanRecord implements Record {
      */
     public function setAdminId(int $adminId)
     {
-        $this->adminId = $adminId;
+        $this->adminId->setChanged(true);
+        $this->adminId->setValue($adminId);
     }
     
     public function hasBandate(): bool
     {
-        return isset($this->bandate);
+        return $this->bandate->hasBeenSet();
     }    
 
     /**
@@ -176,7 +195,7 @@ class GeneratedUserBanRecord implements Record {
      */
     public function getBandate() : int
     {
-        return $this->bandate;
+        return $this->bandate->getValue();
     }
 
     /**
@@ -184,12 +203,13 @@ class GeneratedUserBanRecord implements Record {
      */
     public function setBandate(int $bandate)
     {
-        $this->bandate = $bandate;
+        $this->bandate->setChanged(true);
+        $this->bandate->setValue($bandate);
     }
     
     public function hasLiftDate(): bool
     {
-        return isset($this->liftDate);
+        return $this->liftDate->hasBeenSet();
     }    
 
     /**
@@ -197,7 +217,7 @@ class GeneratedUserBanRecord implements Record {
      */
     public function getLiftDate() : int
     {
-        return $this->liftDate;
+        return $this->liftDate->getValue();
     }
 
     /**
@@ -205,12 +225,13 @@ class GeneratedUserBanRecord implements Record {
      */
     public function setLiftDate(int $liftDate)
     {
-        $this->liftDate = $liftDate;
+        $this->liftDate->setChanged(true);
+        $this->liftDate->setValue($liftDate);
     }
     
     public function hasReason(): bool
     {
-        return isset($this->reason);
+        return $this->reason->hasBeenSet();
     }    
 
     /**
@@ -218,7 +239,7 @@ class GeneratedUserBanRecord implements Record {
      */
     public function getReason() : string
     {
-        return $this->reason;
+        return $this->reason->getValue();
     }
 
     /**
@@ -226,9 +247,9 @@ class GeneratedUserBanRecord implements Record {
      */
     public function setReason(string $reason)
     {
-        $this->reason = $reason;
+        $this->reason->setChanged(true);
+        $this->reason->setValue($reason);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

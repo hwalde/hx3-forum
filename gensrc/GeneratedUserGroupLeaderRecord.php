@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedUserGroupLeaderRecord implements Record {
     
-    /** @var $usergroupleaderid int */
+    /** @var $usergroupleaderid RecordValue */
     protected $usergroupleaderid;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
+
+    public function __construct() {
+		$this->usergroupleaderid = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->userGroupId = new RecordValue();
+    }
     
     public function hasUsergroupleaderid(): bool
     {
-        return isset($this->usergroupleaderid);
+        return $this->usergroupleaderid->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedUserGroupLeaderRecord implements Record {
      */
     public function getUsergroupleaderid() : int
     {
-        return $this->usergroupleaderid;
+        return $this->usergroupleaderid->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedUserGroupLeaderRecord implements Record {
      */
     public function setUsergroupleaderid(int $usergroupleaderid)
     {
-        $this->usergroupleaderid = $usergroupleaderid;
+        $this->usergroupleaderid->setChanged(true);
+        $this->usergroupleaderid->setValue($usergroupleaderid);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedUserGroupLeaderRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedUserGroupLeaderRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedUserGroupLeaderRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedUserGroupLeaderRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

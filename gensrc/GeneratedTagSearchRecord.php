@@ -9,20 +9,26 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\AbstractUpdateableRecord;
 use POOQ\UpdateableRecord;
 
 class GeneratedTagSearchRecord extends AbstractUpdateableRecord implements UpdateableRecord {
     
-    /** @var $tagId int */
+    /** @var $tagId RecordValue */
     protected $tagId;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->tagId = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasTagId(): bool
     {
-        return isset($this->tagId);
+        return $this->tagId->hasBeenSet();
     }    
 
     /**
@@ -30,7 +36,7 @@ class GeneratedTagSearchRecord extends AbstractUpdateableRecord implements Updat
      */
     public function getTagId() : int
     {
-        return $this->tagId;
+        return $this->tagId->getValue();
     }
 
     /**
@@ -38,12 +44,13 @@ class GeneratedTagSearchRecord extends AbstractUpdateableRecord implements Updat
      */
     public function setTagId(int $tagId)
     {
-        $this->tagId = $tagId;
+        $this->tagId->setChanged(true);
+        $this->tagId->setValue($tagId);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -51,7 +58,7 @@ class GeneratedTagSearchRecord extends AbstractUpdateableRecord implements Updat
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -59,9 +66,9 @@ class GeneratedTagSearchRecord extends AbstractUpdateableRecord implements Updat
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

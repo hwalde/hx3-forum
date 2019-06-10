@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedCalendarPermissionRecord implements Record {
     
-    /** @var $calendarPermissionId int */
+    /** @var $calendarPermissionId RecordValue */
     protected $calendarPermissionId;
     
-    /** @var $calendarId int */
+    /** @var $calendarId RecordValue */
     protected $calendarId;
     
-    /** @var $userGroupId int */
+    /** @var $userGroupId RecordValue */
     protected $userGroupId;
     
-    /** @var $calendarPermissions int */
+    /** @var $calendarPermissions RecordValue */
     protected $calendarPermissions;
+
+    public function __construct() {
+		$this->calendarPermissionId = new RecordValue();
+		$this->calendarId = new RecordValue();
+		$this->userGroupId = new RecordValue();
+		$this->calendarPermissions = new RecordValue();
+    }
     
     public function hasCalendarPermissionId(): bool
     {
-        return isset($this->calendarPermissionId);
+        return $this->calendarPermissionId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedCalendarPermissionRecord implements Record {
      */
     public function getCalendarPermissionId() : int
     {
-        return $this->calendarPermissionId;
+        return $this->calendarPermissionId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedCalendarPermissionRecord implements Record {
      */
     public function setCalendarPermissionId(int $calendarPermissionId)
     {
-        $this->calendarPermissionId = $calendarPermissionId;
+        $this->calendarPermissionId->setChanged(true);
+        $this->calendarPermissionId->setValue($calendarPermissionId);
     }
     
     public function hasCalendarId(): bool
     {
-        return isset($this->calendarId);
+        return $this->calendarId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedCalendarPermissionRecord implements Record {
      */
     public function getCalendarId() : int
     {
-        return $this->calendarId;
+        return $this->calendarId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedCalendarPermissionRecord implements Record {
      */
     public function setCalendarId(int $calendarId)
     {
-        $this->calendarId = $calendarId;
+        $this->calendarId->setChanged(true);
+        $this->calendarId->setValue($calendarId);
     }
     
     public function hasUserGroupId(): bool
     {
-        return isset($this->userGroupId);
+        return $this->userGroupId->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedCalendarPermissionRecord implements Record {
      */
     public function getUserGroupId() : int
     {
-        return $this->userGroupId;
+        return $this->userGroupId->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedCalendarPermissionRecord implements Record {
      */
     public function setUserGroupId(int $userGroupId)
     {
-        $this->userGroupId = $userGroupId;
+        $this->userGroupId->setChanged(true);
+        $this->userGroupId->setValue($userGroupId);
     }
     
     public function hasCalendarPermissions(): bool
     {
-        return isset($this->calendarPermissions);
+        return $this->calendarPermissions->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedCalendarPermissionRecord implements Record {
      */
     public function getCalendarPermissions() : int
     {
-        return $this->calendarPermissions;
+        return $this->calendarPermissions->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedCalendarPermissionRecord implements Record {
      */
     public function setCalendarPermissions(int $calendarPermissions)
     {
-        $this->calendarPermissions = $calendarPermissions;
+        $this->calendarPermissions->setChanged(true);
+        $this->calendarPermissions->setValue($calendarPermissions);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

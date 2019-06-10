@@ -9,25 +9,33 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedSubscribeForumRecord implements Record {
     
-    /** @var $subscribeForumId int */
+    /** @var $subscribeForumId RecordValue */
     protected $subscribeForumId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $forumId int */
+    /** @var $forumId RecordValue */
     protected $forumId;
     
-    /** @var $emailUpdate int */
+    /** @var $emailUpdate RecordValue */
     protected $emailUpdate;
+
+    public function __construct() {
+		$this->subscribeForumId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->forumId = new RecordValue();
+		$this->emailUpdate = new RecordValue();
+    }
     
     public function hasSubscribeForumId(): bool
     {
-        return isset($this->subscribeForumId);
+        return $this->subscribeForumId->hasBeenSet();
     }    
 
     /**
@@ -35,7 +43,7 @@ class GeneratedSubscribeForumRecord implements Record {
      */
     public function getSubscribeForumId() : int
     {
-        return $this->subscribeForumId;
+        return $this->subscribeForumId->getValue();
     }
 
     /**
@@ -43,12 +51,13 @@ class GeneratedSubscribeForumRecord implements Record {
      */
     public function setSubscribeForumId(int $subscribeForumId)
     {
-        $this->subscribeForumId = $subscribeForumId;
+        $this->subscribeForumId->setChanged(true);
+        $this->subscribeForumId->setValue($subscribeForumId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +65,7 @@ class GeneratedSubscribeForumRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -64,12 +73,13 @@ class GeneratedSubscribeForumRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasForumId(): bool
     {
-        return isset($this->forumId);
+        return $this->forumId->hasBeenSet();
     }    
 
     /**
@@ -77,7 +87,7 @@ class GeneratedSubscribeForumRecord implements Record {
      */
     public function getForumId() : int
     {
-        return $this->forumId;
+        return $this->forumId->getValue();
     }
 
     /**
@@ -85,12 +95,13 @@ class GeneratedSubscribeForumRecord implements Record {
      */
     public function setForumId(int $forumId)
     {
-        $this->forumId = $forumId;
+        $this->forumId->setChanged(true);
+        $this->forumId->setValue($forumId);
     }
     
     public function hasEmailUpdate(): bool
     {
-        return isset($this->emailUpdate);
+        return $this->emailUpdate->hasBeenSet();
     }    
 
     /**
@@ -98,7 +109,7 @@ class GeneratedSubscribeForumRecord implements Record {
      */
     public function getEmailUpdate() : int
     {
-        return $this->emailUpdate;
+        return $this->emailUpdate->getValue();
     }
 
     /**
@@ -106,9 +117,9 @@ class GeneratedSubscribeForumRecord implements Record {
      */
     public function setEmailUpdate(int $emailUpdate)
     {
-        $this->emailUpdate = $emailUpdate;
+        $this->emailUpdate->setChanged(true);
+        $this->emailUpdate->setValue($emailUpdate);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

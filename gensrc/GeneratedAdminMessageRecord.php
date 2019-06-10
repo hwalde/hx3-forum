@@ -9,43 +9,57 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAdminMessageRecord implements Record {
     
-    /** @var $adminMessageId int */
+    /** @var $adminMessageId RecordValue */
     protected $adminMessageId;
     
-    /** @var $varName string */
+    /** @var $varName RecordValue */
     protected $varName;
     
-    /** @var $dismissable int */
+    /** @var $dismissable RecordValue */
     protected $dismissable;
     
-    /** @var $script string */
+    /** @var $script RecordValue */
     protected $script;
     
-    /** @var $action string */
+    /** @var $action RecordValue */
     protected $action;
     
-    /** @var $execUrl string */
+    /** @var $execUrl RecordValue */
     protected $execUrl;
     
-    /** @var $method string */
+    /** @var $method RecordValue */
     protected $method;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $status string */
+    /** @var $status RecordValue */
     protected $status;
     
-    /** @var $statusUserId int */
+    /** @var $statusUserId RecordValue */
     protected $statusUserId;
+
+    public function __construct() {
+		$this->adminMessageId = new RecordValue();
+		$this->varName = new RecordValue();
+		$this->dismissable = new RecordValue();
+		$this->script = new RecordValue();
+		$this->action = new RecordValue();
+		$this->execUrl = new RecordValue();
+		$this->method = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->status = new RecordValue();
+		$this->statusUserId = new RecordValue();
+    }
     
     public function hasAdminMessageId(): bool
     {
-        return isset($this->adminMessageId);
+        return $this->adminMessageId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +67,7 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function getAdminMessageId() : int
     {
-        return $this->adminMessageId;
+        return $this->adminMessageId->getValue();
     }
 
     /**
@@ -61,12 +75,13 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function setAdminMessageId(int $adminMessageId)
     {
-        $this->adminMessageId = $adminMessageId;
+        $this->adminMessageId->setChanged(true);
+        $this->adminMessageId->setValue($adminMessageId);
     }
     
     public function hasVarName(): bool
     {
-        return isset($this->varName);
+        return $this->varName->hasBeenSet();
     }    
 
     /**
@@ -74,7 +89,7 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function getVarName() : string
     {
-        return $this->varName;
+        return $this->varName->getValue();
     }
 
     /**
@@ -82,12 +97,13 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function setVarName(string $varName)
     {
-        $this->varName = $varName;
+        $this->varName->setChanged(true);
+        $this->varName->setValue($varName);
     }
     
     public function hasDismissable(): bool
     {
-        return isset($this->dismissable);
+        return $this->dismissable->hasBeenSet();
     }    
 
     /**
@@ -95,7 +111,7 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function getDismissable() : int
     {
-        return $this->dismissable;
+        return $this->dismissable->getValue();
     }
 
     /**
@@ -103,12 +119,13 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function setDismissable(int $dismissable)
     {
-        $this->dismissable = $dismissable;
+        $this->dismissable->setChanged(true);
+        $this->dismissable->setValue($dismissable);
     }
     
     public function hasScript(): bool
     {
-        return isset($this->script);
+        return $this->script->hasBeenSet();
     }    
 
     /**
@@ -116,7 +133,7 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function getScript() : string
     {
-        return $this->script;
+        return $this->script->getValue();
     }
 
     /**
@@ -124,12 +141,13 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function setScript(string $script)
     {
-        $this->script = $script;
+        $this->script->setChanged(true);
+        $this->script->setValue($script);
     }
     
     public function hasAction(): bool
     {
-        return isset($this->action);
+        return $this->action->hasBeenSet();
     }    
 
     /**
@@ -137,7 +155,7 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function getAction() : string
     {
-        return $this->action;
+        return $this->action->getValue();
     }
 
     /**
@@ -145,12 +163,13 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function setAction(string $action)
     {
-        $this->action = $action;
+        $this->action->setChanged(true);
+        $this->action->setValue($action);
     }
     
     public function hasExecUrl(): bool
     {
-        return isset($this->execUrl);
+        return $this->execUrl->hasBeenSet();
     }    
 
     /**
@@ -158,7 +177,7 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function getExecUrl() : string
     {
-        return $this->execUrl;
+        return $this->execUrl->getValue();
     }
 
     /**
@@ -166,12 +185,13 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function setExecUrl(string $execUrl)
     {
-        $this->execUrl = $execUrl;
+        $this->execUrl->setChanged(true);
+        $this->execUrl->setValue($execUrl);
     }
     
     public function hasMethod(): bool
     {
-        return isset($this->method);
+        return $this->method->hasBeenSet();
     }    
 
     /**
@@ -179,7 +199,7 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function getMethod() : string
     {
-        return $this->method;
+        return $this->method->getValue();
     }
 
     /**
@@ -187,12 +207,13 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function setMethod(string $method)
     {
-        $this->method = $method;
+        $this->method->setChanged(true);
+        $this->method->setValue($method);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -200,7 +221,7 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -208,12 +229,13 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasStatus(): bool
     {
-        return isset($this->status);
+        return $this->status->hasBeenSet();
     }    
 
     /**
@@ -221,7 +243,7 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function getStatus() : string
     {
-        return $this->status;
+        return $this->status->getValue();
     }
 
     /**
@@ -229,12 +251,13 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function setStatus(string $status)
     {
-        $this->status = $status;
+        $this->status->setChanged(true);
+        $this->status->setValue($status);
     }
     
     public function hasStatusUserId(): bool
     {
-        return isset($this->statusUserId);
+        return $this->statusUserId->hasBeenSet();
     }    
 
     /**
@@ -242,7 +265,7 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function getStatusUserId() : int
     {
-        return $this->statusUserId;
+        return $this->statusUserId->getValue();
     }
 
     /**
@@ -250,9 +273,9 @@ class GeneratedAdminMessageRecord implements Record {
      */
     public function setStatusUserId(int $statusUserId)
     {
-        $this->statusUserId = $statusUserId;
+        $this->statusUserId->setChanged(true);
+        $this->statusUserId->setValue($statusUserId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

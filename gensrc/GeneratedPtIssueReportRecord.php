@@ -9,46 +9,61 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueReportRecord implements Record {
     
-    /** @var $issueReportId int */
+    /** @var $issueReportId RecordValue */
     protected $issueReportId;
     
-    /** @var $title string */
+    /** @var $title RecordValue */
     protected $title;
     
-    /** @var $description string */
+    /** @var $description RecordValue */
     protected $description;
     
-    /** @var $public int */
+    /** @var $public RecordValue */
     protected $public;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $criteria string */
+    /** @var $criteria RecordValue */
     protected $criteria;
     
-    /** @var $sortBy string */
+    /** @var $sortBy RecordValue */
     protected $sortBy;
     
-    /** @var $sortOrder string */
+    /** @var $sortOrder RecordValue */
     protected $sortOrder;
     
-    /** @var $groupBy string */
+    /** @var $groupBy RecordValue */
     protected $groupBy;
     
-    /** @var $projectList string */
+    /** @var $projectList RecordValue */
     protected $projectList;
     
-    /** @var $issueTypeList string */
+    /** @var $issueTypeList RecordValue */
     protected $issueTypeList;
+
+    public function __construct() {
+		$this->issueReportId = new RecordValue();
+		$this->title = new RecordValue();
+		$this->description = new RecordValue();
+		$this->public = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->criteria = new RecordValue();
+		$this->sortBy = new RecordValue();
+		$this->sortOrder = new RecordValue();
+		$this->groupBy = new RecordValue();
+		$this->projectList = new RecordValue();
+		$this->issueTypeList = new RecordValue();
+    }
     
     public function hasIssueReportId(): bool
     {
-        return isset($this->issueReportId);
+        return $this->issueReportId->hasBeenSet();
     }    
 
     /**
@@ -56,7 +71,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getIssueReportId() : int
     {
-        return $this->issueReportId;
+        return $this->issueReportId->getValue();
     }
 
     /**
@@ -64,12 +79,13 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setIssueReportId(int $issueReportId)
     {
-        $this->issueReportId = $issueReportId;
+        $this->issueReportId->setChanged(true);
+        $this->issueReportId->setValue($issueReportId);
     }
     
     public function hasTitle(): bool
     {
-        return isset($this->title);
+        return $this->title->hasBeenSet();
     }    
 
     /**
@@ -77,7 +93,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getTitle() : string
     {
-        return $this->title;
+        return $this->title->getValue();
     }
 
     /**
@@ -85,12 +101,13 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setTitle(string $title)
     {
-        $this->title = $title;
+        $this->title->setChanged(true);
+        $this->title->setValue($title);
     }
     
     public function hasDescription(): bool
     {
-        return isset($this->description);
+        return $this->description->hasBeenSet();
     }    
 
     /**
@@ -98,7 +115,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getDescription() : string
     {
-        return $this->description;
+        return $this->description->getValue();
     }
 
     /**
@@ -106,12 +123,13 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setDescription(string $description)
     {
-        $this->description = $description;
+        $this->description->setChanged(true);
+        $this->description->setValue($description);
     }
     
     public function hasPublic(): bool
     {
-        return isset($this->public);
+        return $this->public->hasBeenSet();
     }    
 
     /**
@@ -119,7 +137,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getPublic() : int
     {
-        return $this->public;
+        return $this->public->getValue();
     }
 
     /**
@@ -127,12 +145,13 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setPublic(int $public)
     {
-        $this->public = $public;
+        $this->public->setChanged(true);
+        $this->public->setValue($public);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -140,7 +159,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -148,12 +167,13 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasCriteria(): bool
     {
-        return isset($this->criteria);
+        return $this->criteria->hasBeenSet();
     }    
 
     /**
@@ -161,7 +181,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getCriteria() : string
     {
-        return $this->criteria;
+        return $this->criteria->getValue();
     }
 
     /**
@@ -169,12 +189,13 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setCriteria(string $criteria)
     {
-        $this->criteria = $criteria;
+        $this->criteria->setChanged(true);
+        $this->criteria->setValue($criteria);
     }
     
     public function hasSortBy(): bool
     {
-        return isset($this->sortBy);
+        return $this->sortBy->hasBeenSet();
     }    
 
     /**
@@ -182,7 +203,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getSortBy() : string
     {
-        return $this->sortBy;
+        return $this->sortBy->getValue();
     }
 
     /**
@@ -190,12 +211,13 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setSortBy(string $sortBy)
     {
-        $this->sortBy = $sortBy;
+        $this->sortBy->setChanged(true);
+        $this->sortBy->setValue($sortBy);
     }
     
     public function hasSortOrder(): bool
     {
-        return isset($this->sortOrder);
+        return $this->sortOrder->hasBeenSet();
     }    
 
     /**
@@ -203,7 +225,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getSortOrder() : string
     {
-        return $this->sortOrder;
+        return $this->sortOrder->getValue();
     }
 
     /**
@@ -211,12 +233,13 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setSortOrder(string $sortOrder)
     {
-        $this->sortOrder = $sortOrder;
+        $this->sortOrder->setChanged(true);
+        $this->sortOrder->setValue($sortOrder);
     }
     
     public function hasGroupBy(): bool
     {
-        return isset($this->groupBy);
+        return $this->groupBy->hasBeenSet();
     }    
 
     /**
@@ -224,7 +247,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getGroupBy() : string
     {
-        return $this->groupBy;
+        return $this->groupBy->getValue();
     }
 
     /**
@@ -232,12 +255,13 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setGroupBy(string $groupBy)
     {
-        $this->groupBy = $groupBy;
+        $this->groupBy->setChanged(true);
+        $this->groupBy->setValue($groupBy);
     }
     
     public function hasProjectList(): bool
     {
-        return isset($this->projectList);
+        return $this->projectList->hasBeenSet();
     }    
 
     /**
@@ -245,7 +269,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getProjectList() : string
     {
-        return $this->projectList;
+        return $this->projectList->getValue();
     }
 
     /**
@@ -253,12 +277,13 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setProjectList(string $projectList)
     {
-        $this->projectList = $projectList;
+        $this->projectList->setChanged(true);
+        $this->projectList->setValue($projectList);
     }
     
     public function hasIssueTypeList(): bool
     {
-        return isset($this->issueTypeList);
+        return $this->issueTypeList->hasBeenSet();
     }    
 
     /**
@@ -266,7 +291,7 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function getIssueTypeList() : string
     {
-        return $this->issueTypeList;
+        return $this->issueTypeList->getValue();
     }
 
     /**
@@ -274,9 +299,9 @@ class GeneratedPtIssueReportRecord implements Record {
      */
     public function setIssueTypeList(string $issueTypeList)
     {
-        $this->issueTypeList = $issueTypeList;
+        $this->issueTypeList->setChanged(true);
+        $this->issueTypeList->setValue($issueTypeList);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

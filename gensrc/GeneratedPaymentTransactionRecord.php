@@ -9,43 +9,57 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPaymentTransactionRecord implements Record {
     
-    /** @var $paymentTransactionId int */
+    /** @var $paymentTransactionId RecordValue */
     protected $paymentTransactionId;
     
-    /** @var $paymentInfoId int */
+    /** @var $paymentInfoId RecordValue */
     protected $paymentInfoId;
     
-    /** @var $transactionId string */
+    /** @var $transactionId RecordValue */
     protected $transactionId;
     
-    /** @var $state int */
+    /** @var $state RecordValue */
     protected $state;
     
-    /** @var $amount mixed */
+    /** @var $amount RecordValue */
     protected $amount;
     
-    /** @var $currency string */
+    /** @var $currency RecordValue */
     protected $currency;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
     
-    /** @var $paymentApiId int */
+    /** @var $paymentApiId RecordValue */
     protected $paymentApiId;
     
-    /** @var $request string|null */
+    /** @var $request RecordValue */
     protected $request;
     
-    /** @var $reversed int */
+    /** @var $reversed RecordValue */
     protected $reversed;
+
+    public function __construct() {
+		$this->paymentTransactionId = new RecordValue();
+		$this->paymentInfoId = new RecordValue();
+		$this->transactionId = new RecordValue();
+		$this->state = new RecordValue();
+		$this->amount = new RecordValue();
+		$this->currency = new RecordValue();
+		$this->dateLine = new RecordValue();
+		$this->paymentApiId = new RecordValue();
+		$this->request = new RecordValue();
+		$this->reversed = new RecordValue();
+    }
     
     public function hasPaymentTransactionId(): bool
     {
-        return isset($this->paymentTransactionId);
+        return $this->paymentTransactionId->hasBeenSet();
     }    
 
     /**
@@ -53,7 +67,7 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function getPaymentTransactionId() : int
     {
-        return $this->paymentTransactionId;
+        return $this->paymentTransactionId->getValue();
     }
 
     /**
@@ -61,12 +75,13 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function setPaymentTransactionId(int $paymentTransactionId)
     {
-        $this->paymentTransactionId = $paymentTransactionId;
+        $this->paymentTransactionId->setChanged(true);
+        $this->paymentTransactionId->setValue($paymentTransactionId);
     }
     
     public function hasPaymentInfoId(): bool
     {
-        return isset($this->paymentInfoId);
+        return $this->paymentInfoId->hasBeenSet();
     }    
 
     /**
@@ -74,7 +89,7 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function getPaymentInfoId() : int
     {
-        return $this->paymentInfoId;
+        return $this->paymentInfoId->getValue();
     }
 
     /**
@@ -82,12 +97,13 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function setPaymentInfoId(int $paymentInfoId)
     {
-        $this->paymentInfoId = $paymentInfoId;
+        $this->paymentInfoId->setChanged(true);
+        $this->paymentInfoId->setValue($paymentInfoId);
     }
     
     public function hasTransactionId(): bool
     {
-        return isset($this->transactionId);
+        return $this->transactionId->hasBeenSet();
     }    
 
     /**
@@ -95,7 +111,7 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function getTransactionId() : string
     {
-        return $this->transactionId;
+        return $this->transactionId->getValue();
     }
 
     /**
@@ -103,12 +119,13 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function setTransactionId(string $transactionId)
     {
-        $this->transactionId = $transactionId;
+        $this->transactionId->setChanged(true);
+        $this->transactionId->setValue($transactionId);
     }
     
     public function hasState(): bool
     {
-        return isset($this->state);
+        return $this->state->hasBeenSet();
     }    
 
     /**
@@ -116,7 +133,7 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function getState() : int
     {
-        return $this->state;
+        return $this->state->getValue();
     }
 
     /**
@@ -124,12 +141,13 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function setState(int $state)
     {
-        $this->state = $state;
+        $this->state->setChanged(true);
+        $this->state->setValue($state);
     }
     
     public function hasAmount(): bool
     {
-        return isset($this->amount);
+        return $this->amount->hasBeenSet();
     }    
 
     /**
@@ -137,7 +155,7 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function getAmount()
     {
-        return $this->amount;
+        return $this->amount->getValue();
     }
 
     /**
@@ -145,12 +163,13 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function setAmount($amount)
     {
-        $this->amount = $amount;
+        $this->amount->setChanged(true);
+        $this->amount->setValue($amount);
     }
     
     public function hasCurrency(): bool
     {
-        return isset($this->currency);
+        return $this->currency->hasBeenSet();
     }    
 
     /**
@@ -158,7 +177,7 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function getCurrency() : string
     {
-        return $this->currency;
+        return $this->currency->getValue();
     }
 
     /**
@@ -166,12 +185,13 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function setCurrency(string $currency)
     {
-        $this->currency = $currency;
+        $this->currency->setChanged(true);
+        $this->currency->setValue($currency);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -179,7 +199,7 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -187,12 +207,13 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
     
     public function hasPaymentApiId(): bool
     {
-        return isset($this->paymentApiId);
+        return $this->paymentApiId->hasBeenSet();
     }    
 
     /**
@@ -200,7 +221,7 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function getPaymentApiId() : int
     {
-        return $this->paymentApiId;
+        return $this->paymentApiId->getValue();
     }
 
     /**
@@ -208,12 +229,13 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function setPaymentApiId(int $paymentApiId)
     {
-        $this->paymentApiId = $paymentApiId;
+        $this->paymentApiId->setChanged(true);
+        $this->paymentApiId->setValue($paymentApiId);
     }
     
     public function hasRequest(): bool
     {
-        return isset($this->request);
+        return $this->request->hasBeenSet();
     }    
 
     /**
@@ -221,7 +243,7 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function getRequest() : ?string
     {
-        return $this->request;
+        return $this->request->getValue();
     }
 
     /**
@@ -229,12 +251,13 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function setRequest(?string $request)
     {
-        $this->request = $request;
+        $this->request->setChanged(true);
+        $this->request->setValue($request);
     }
     
     public function hasReversed(): bool
     {
-        return isset($this->reversed);
+        return $this->reversed->hasBeenSet();
     }    
 
     /**
@@ -242,7 +265,7 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function getReversed() : int
     {
-        return $this->reversed;
+        return $this->reversed->getValue();
     }
 
     /**
@@ -250,9 +273,9 @@ class GeneratedPaymentTransactionRecord implements Record {
      */
     public function setReversed(int $reversed)
     {
-        $this->reversed = $reversed;
+        $this->reversed->setChanged(true);
+        $this->reversed->setValue($reversed);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

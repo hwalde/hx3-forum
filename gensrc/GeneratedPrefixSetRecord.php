@@ -9,19 +9,25 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPrefixSetRecord implements Record {
     
-    /** @var $prefixSetId string */
+    /** @var $prefixSetId RecordValue */
     protected $prefixSetId;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
+
+    public function __construct() {
+		$this->prefixSetId = new RecordValue();
+		$this->displayOrder = new RecordValue();
+    }
     
     public function hasPrefixSetId(): bool
     {
-        return isset($this->prefixSetId);
+        return $this->prefixSetId->hasBeenSet();
     }    
 
     /**
@@ -29,7 +35,7 @@ class GeneratedPrefixSetRecord implements Record {
      */
     public function getPrefixSetId() : string
     {
-        return $this->prefixSetId;
+        return $this->prefixSetId->getValue();
     }
 
     /**
@@ -37,12 +43,13 @@ class GeneratedPrefixSetRecord implements Record {
      */
     public function setPrefixSetId(string $prefixSetId)
     {
-        $this->prefixSetId = $prefixSetId;
+        $this->prefixSetId->setChanged(true);
+        $this->prefixSetId->setValue($prefixSetId);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -50,7 +57,7 @@ class GeneratedPrefixSetRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -58,9 +65,9 @@ class GeneratedPrefixSetRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

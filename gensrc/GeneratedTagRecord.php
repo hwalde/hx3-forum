@@ -9,22 +9,29 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedTagRecord implements Record {
     
-    /** @var $tagId int */
+    /** @var $tagId RecordValue */
     protected $tagId;
     
-    /** @var $tagText string */
+    /** @var $tagText RecordValue */
     protected $tagText;
     
-    /** @var $dateLine int */
+    /** @var $dateLine RecordValue */
     protected $dateLine;
+
+    public function __construct() {
+		$this->tagId = new RecordValue();
+		$this->tagText = new RecordValue();
+		$this->dateLine = new RecordValue();
+    }
     
     public function hasTagId(): bool
     {
-        return isset($this->tagId);
+        return $this->tagId->hasBeenSet();
     }    
 
     /**
@@ -32,7 +39,7 @@ class GeneratedTagRecord implements Record {
      */
     public function getTagId() : int
     {
-        return $this->tagId;
+        return $this->tagId->getValue();
     }
 
     /**
@@ -40,12 +47,13 @@ class GeneratedTagRecord implements Record {
      */
     public function setTagId(int $tagId)
     {
-        $this->tagId = $tagId;
+        $this->tagId->setChanged(true);
+        $this->tagId->setValue($tagId);
     }
     
     public function hasTagText(): bool
     {
-        return isset($this->tagText);
+        return $this->tagText->hasBeenSet();
     }    
 
     /**
@@ -53,7 +61,7 @@ class GeneratedTagRecord implements Record {
      */
     public function getTagText() : string
     {
-        return $this->tagText;
+        return $this->tagText->getValue();
     }
 
     /**
@@ -61,12 +69,13 @@ class GeneratedTagRecord implements Record {
      */
     public function setTagText(string $tagText)
     {
-        $this->tagText = $tagText;
+        $this->tagText->setChanged(true);
+        $this->tagText->setValue($tagText);
     }
     
     public function hasDateLine(): bool
     {
-        return isset($this->dateLine);
+        return $this->dateLine->hasBeenSet();
     }    
 
     /**
@@ -74,7 +83,7 @@ class GeneratedTagRecord implements Record {
      */
     public function getDateLine() : int
     {
-        return $this->dateLine;
+        return $this->dateLine->getValue();
     }
 
     /**
@@ -82,9 +91,9 @@ class GeneratedTagRecord implements Record {
      */
     public function setDateLine(int $dateLine)
     {
-        $this->dateLine = $dateLine;
+        $this->dateLine->setChanged(true);
+        $this->dateLine->setValue($dateLine);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

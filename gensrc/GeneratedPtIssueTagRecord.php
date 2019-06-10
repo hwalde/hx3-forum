@@ -9,19 +9,25 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPtIssueTagRecord implements Record {
     
-    /** @var $issueId int */
+    /** @var $issueId RecordValue */
     protected $issueId;
     
-    /** @var $tagId int */
+    /** @var $tagId RecordValue */
     protected $tagId;
+
+    public function __construct() {
+		$this->issueId = new RecordValue();
+		$this->tagId = new RecordValue();
+    }
     
     public function hasIssueId(): bool
     {
-        return isset($this->issueId);
+        return $this->issueId->hasBeenSet();
     }    
 
     /**
@@ -29,7 +35,7 @@ class GeneratedPtIssueTagRecord implements Record {
      */
     public function getIssueId() : int
     {
-        return $this->issueId;
+        return $this->issueId->getValue();
     }
 
     /**
@@ -37,12 +43,13 @@ class GeneratedPtIssueTagRecord implements Record {
      */
     public function setIssueId(int $issueId)
     {
-        $this->issueId = $issueId;
+        $this->issueId->setChanged(true);
+        $this->issueId->setValue($issueId);
     }
     
     public function hasTagId(): bool
     {
-        return isset($this->tagId);
+        return $this->tagId->hasBeenSet();
     }    
 
     /**
@@ -50,7 +57,7 @@ class GeneratedPtIssueTagRecord implements Record {
      */
     public function getTagId() : int
     {
-        return $this->tagId;
+        return $this->tagId->getValue();
     }
 
     /**
@@ -58,9 +65,9 @@ class GeneratedPtIssueTagRecord implements Record {
      */
     public function setTagId(int $tagId)
     {
-        $this->tagId = $tagId;
+        $this->tagId->setChanged(true);
+        $this->tagId->setValue($tagId);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

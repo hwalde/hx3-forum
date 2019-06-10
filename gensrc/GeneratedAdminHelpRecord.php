@@ -9,34 +9,45 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedAdminHelpRecord implements Record {
     
-    /** @var $adminHelpId int */
+    /** @var $adminHelpId RecordValue */
     protected $adminHelpId;
     
-    /** @var $script string */
+    /** @var $script RecordValue */
     protected $script;
     
-    /** @var $action string */
+    /** @var $action RecordValue */
     protected $action;
     
-    /** @var $optionName string */
+    /** @var $optionName RecordValue */
     protected $optionName;
     
-    /** @var $displayOrder int */
+    /** @var $displayOrder RecordValue */
     protected $displayOrder;
     
-    /** @var $volatile int */
+    /** @var $volatile RecordValue */
     protected $volatile;
     
-    /** @var $product string */
+    /** @var $product RecordValue */
     protected $product;
+
+    public function __construct() {
+		$this->adminHelpId = new RecordValue();
+		$this->script = new RecordValue();
+		$this->action = new RecordValue();
+		$this->optionName = new RecordValue();
+		$this->displayOrder = new RecordValue();
+		$this->volatile = new RecordValue();
+		$this->product = new RecordValue();
+    }
     
     public function hasAdminHelpId(): bool
     {
-        return isset($this->adminHelpId);
+        return $this->adminHelpId->hasBeenSet();
     }    
 
     /**
@@ -44,7 +55,7 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function getAdminHelpId() : int
     {
-        return $this->adminHelpId;
+        return $this->adminHelpId->getValue();
     }
 
     /**
@@ -52,12 +63,13 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function setAdminHelpId(int $adminHelpId)
     {
-        $this->adminHelpId = $adminHelpId;
+        $this->adminHelpId->setChanged(true);
+        $this->adminHelpId->setValue($adminHelpId);
     }
     
     public function hasScript(): bool
     {
-        return isset($this->script);
+        return $this->script->hasBeenSet();
     }    
 
     /**
@@ -65,7 +77,7 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function getScript() : string
     {
-        return $this->script;
+        return $this->script->getValue();
     }
 
     /**
@@ -73,12 +85,13 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function setScript(string $script)
     {
-        $this->script = $script;
+        $this->script->setChanged(true);
+        $this->script->setValue($script);
     }
     
     public function hasAction(): bool
     {
-        return isset($this->action);
+        return $this->action->hasBeenSet();
     }    
 
     /**
@@ -86,7 +99,7 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function getAction() : string
     {
-        return $this->action;
+        return $this->action->getValue();
     }
 
     /**
@@ -94,12 +107,13 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function setAction(string $action)
     {
-        $this->action = $action;
+        $this->action->setChanged(true);
+        $this->action->setValue($action);
     }
     
     public function hasOptionName(): bool
     {
-        return isset($this->optionName);
+        return $this->optionName->hasBeenSet();
     }    
 
     /**
@@ -107,7 +121,7 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function getOptionName() : string
     {
-        return $this->optionName;
+        return $this->optionName->getValue();
     }
 
     /**
@@ -115,12 +129,13 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function setOptionName(string $optionName)
     {
-        $this->optionName = $optionName;
+        $this->optionName->setChanged(true);
+        $this->optionName->setValue($optionName);
     }
     
     public function hasDisplayOrder(): bool
     {
-        return isset($this->displayOrder);
+        return $this->displayOrder->hasBeenSet();
     }    
 
     /**
@@ -128,7 +143,7 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function getDisplayOrder() : int
     {
-        return $this->displayOrder;
+        return $this->displayOrder->getValue();
     }
 
     /**
@@ -136,12 +151,13 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function setDisplayOrder(int $displayOrder)
     {
-        $this->displayOrder = $displayOrder;
+        $this->displayOrder->setChanged(true);
+        $this->displayOrder->setValue($displayOrder);
     }
     
     public function hasVolatile(): bool
     {
-        return isset($this->volatile);
+        return $this->volatile->hasBeenSet();
     }    
 
     /**
@@ -149,7 +165,7 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function getVolatile() : int
     {
-        return $this->volatile;
+        return $this->volatile->getValue();
     }
 
     /**
@@ -157,12 +173,13 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function setVolatile(int $volatile)
     {
-        $this->volatile = $volatile;
+        $this->volatile->setChanged(true);
+        $this->volatile->setValue($volatile);
     }
     
     public function hasProduct(): bool
     {
-        return isset($this->product);
+        return $this->product->hasBeenSet();
     }    
 
     /**
@@ -170,7 +187,7 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function getProduct() : string
     {
-        return $this->product;
+        return $this->product->getValue();
     }
 
     /**
@@ -178,9 +195,9 @@ class GeneratedAdminHelpRecord implements Record {
      */
     public function setProduct(string $product)
     {
-        $this->product = $product;
+        $this->product->setChanged(true);
+        $this->product->setValue($product);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

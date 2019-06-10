@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedProductCodeRecord implements Record {
     
-    /** @var $productCodeId int */
+    /** @var $productCodeId RecordValue */
     protected $productCodeId;
     
-    /** @var $productId string */
+    /** @var $productId RecordValue */
     protected $productId;
     
-    /** @var $version string */
+    /** @var $version RecordValue */
     protected $version;
     
-    /** @var $installCode string */
+    /** @var $installCode RecordValue */
     protected $installCode;
     
-    /** @var $uninstallCode string */
+    /** @var $uninstallCode RecordValue */
     protected $uninstallCode;
+
+    public function __construct() {
+		$this->productCodeId = new RecordValue();
+		$this->productId = new RecordValue();
+		$this->version = new RecordValue();
+		$this->installCode = new RecordValue();
+		$this->uninstallCode = new RecordValue();
+    }
     
     public function hasProductCodeId(): bool
     {
-        return isset($this->productCodeId);
+        return $this->productCodeId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedProductCodeRecord implements Record {
      */
     public function getProductCodeId() : int
     {
-        return $this->productCodeId;
+        return $this->productCodeId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedProductCodeRecord implements Record {
      */
     public function setProductCodeId(int $productCodeId)
     {
-        $this->productCodeId = $productCodeId;
+        $this->productCodeId->setChanged(true);
+        $this->productCodeId->setValue($productCodeId);
     }
     
     public function hasProductId(): bool
     {
-        return isset($this->productId);
+        return $this->productId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedProductCodeRecord implements Record {
      */
     public function getProductId() : string
     {
-        return $this->productId;
+        return $this->productId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedProductCodeRecord implements Record {
      */
     public function setProductId(string $productId)
     {
-        $this->productId = $productId;
+        $this->productId->setChanged(true);
+        $this->productId->setValue($productId);
     }
     
     public function hasVersion(): bool
     {
-        return isset($this->version);
+        return $this->version->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedProductCodeRecord implements Record {
      */
     public function getVersion() : string
     {
-        return $this->version;
+        return $this->version->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedProductCodeRecord implements Record {
      */
     public function setVersion(string $version)
     {
-        $this->version = $version;
+        $this->version->setChanged(true);
+        $this->version->setValue($version);
     }
     
     public function hasInstallCode(): bool
     {
-        return isset($this->installCode);
+        return $this->installCode->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedProductCodeRecord implements Record {
      */
     public function getInstallCode() : string
     {
-        return $this->installCode;
+        return $this->installCode->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedProductCodeRecord implements Record {
      */
     public function setInstallCode(string $installCode)
     {
-        $this->installCode = $installCode;
+        $this->installCode->setChanged(true);
+        $this->installCode->setValue($installCode);
     }
     
     public function hasUninstallCode(): bool
     {
-        return isset($this->uninstallCode);
+        return $this->uninstallCode->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedProductCodeRecord implements Record {
      */
     public function getUninstallCode() : string
     {
-        return $this->uninstallCode;
+        return $this->uninstallCode->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedProductCodeRecord implements Record {
      */
     public function setUninstallCode(string $uninstallCode)
     {
-        $this->uninstallCode = $uninstallCode;
+        $this->uninstallCode->setChanged(true);
+        $this->uninstallCode->setValue($uninstallCode);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */

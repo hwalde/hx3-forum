@@ -9,28 +9,37 @@
  */
 namespace generated;
 
+use POOQ\RecordValue;
 use POOQ\Record;
 
 class GeneratedPmRecord implements Record {
     
-    /** @var $pmId int */
+    /** @var $pmId RecordValue */
     protected $pmId;
     
-    /** @var $pmTextId int */
+    /** @var $pmTextId RecordValue */
     protected $pmTextId;
     
-    /** @var $userId int */
+    /** @var $userId RecordValue */
     protected $userId;
     
-    /** @var $folderId int */
+    /** @var $folderId RecordValue */
     protected $folderId;
     
-    /** @var $messageRead int */
+    /** @var $messageRead RecordValue */
     protected $messageRead;
+
+    public function __construct() {
+		$this->pmId = new RecordValue();
+		$this->pmTextId = new RecordValue();
+		$this->userId = new RecordValue();
+		$this->folderId = new RecordValue();
+		$this->messageRead = new RecordValue();
+    }
     
     public function hasPmId(): bool
     {
-        return isset($this->pmId);
+        return $this->pmId->hasBeenSet();
     }    
 
     /**
@@ -38,7 +47,7 @@ class GeneratedPmRecord implements Record {
      */
     public function getPmId() : int
     {
-        return $this->pmId;
+        return $this->pmId->getValue();
     }
 
     /**
@@ -46,12 +55,13 @@ class GeneratedPmRecord implements Record {
      */
     public function setPmId(int $pmId)
     {
-        $this->pmId = $pmId;
+        $this->pmId->setChanged(true);
+        $this->pmId->setValue($pmId);
     }
     
     public function hasPmTextId(): bool
     {
-        return isset($this->pmTextId);
+        return $this->pmTextId->hasBeenSet();
     }    
 
     /**
@@ -59,7 +69,7 @@ class GeneratedPmRecord implements Record {
      */
     public function getPmTextId() : int
     {
-        return $this->pmTextId;
+        return $this->pmTextId->getValue();
     }
 
     /**
@@ -67,12 +77,13 @@ class GeneratedPmRecord implements Record {
      */
     public function setPmTextId(int $pmTextId)
     {
-        $this->pmTextId = $pmTextId;
+        $this->pmTextId->setChanged(true);
+        $this->pmTextId->setValue($pmTextId);
     }
     
     public function hasUserId(): bool
     {
-        return isset($this->userId);
+        return $this->userId->hasBeenSet();
     }    
 
     /**
@@ -80,7 +91,7 @@ class GeneratedPmRecord implements Record {
      */
     public function getUserId() : int
     {
-        return $this->userId;
+        return $this->userId->getValue();
     }
 
     /**
@@ -88,12 +99,13 @@ class GeneratedPmRecord implements Record {
      */
     public function setUserId(int $userId)
     {
-        $this->userId = $userId;
+        $this->userId->setChanged(true);
+        $this->userId->setValue($userId);
     }
     
     public function hasFolderId(): bool
     {
-        return isset($this->folderId);
+        return $this->folderId->hasBeenSet();
     }    
 
     /**
@@ -101,7 +113,7 @@ class GeneratedPmRecord implements Record {
      */
     public function getFolderId() : int
     {
-        return $this->folderId;
+        return $this->folderId->getValue();
     }
 
     /**
@@ -109,12 +121,13 @@ class GeneratedPmRecord implements Record {
      */
     public function setFolderId(int $folderId)
     {
-        $this->folderId = $folderId;
+        $this->folderId->setChanged(true);
+        $this->folderId->setValue($folderId);
     }
     
     public function hasMessageRead(): bool
     {
-        return isset($this->messageRead);
+        return $this->messageRead->hasBeenSet();
     }    
 
     /**
@@ -122,7 +135,7 @@ class GeneratedPmRecord implements Record {
      */
     public function getMessageRead() : int
     {
-        return $this->messageRead;
+        return $this->messageRead->getValue();
     }
 
     /**
@@ -130,9 +143,9 @@ class GeneratedPmRecord implements Record {
      */
     public function setMessageRead(int $messageRead)
     {
-        $this->messageRead = $messageRead;
+        $this->messageRead->setChanged(true);
+        $this->messageRead->setValue($messageRead);
     }
-
     
     /** @noinspection PhpHierarchyChecksInspection */
     /** @noinspection PhpSignatureMismatchDuringInheritanceInspection */
